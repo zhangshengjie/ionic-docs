@@ -160,7 +160,6 @@ export class DocsHeader {
           </docs-dropdown>
           <a href="https://github.com/ionic-team/ionic" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
           <a href="https://twitter.com/ionicframework" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
-
         </nav>
       </header>
     );
