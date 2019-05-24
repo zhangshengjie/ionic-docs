@@ -1,43 +1,44 @@
 ---
-title: Welcome to Appflow
+title: Appflowへようこそ
 ---
 
-Appflow is a continuous integration (CI) and continuous deployment (CD) platform
-for Ionic development teams. Appflow helps development teams continuously build and ship
-their iOS, Android, and web apps faster than ever.
+Appflowは、イオン開発チーム向けの継続的インテグレーション（CI）
+および継続的デプロイメント（CD）プラットフォームです。
+Appflowは、開発チームがiOS、Android、およびWebアプリケーションを
+これまでにない速さで継続的に構築およびリリースするのに役立ちます。
 
 <docs-cards class="static-width">
   <docs-card header="Quickstart" href="/docs/appflow/quickstart/connect" img="/docs/assets/icons/guide-quickstart.png">
-    <p>Get your app set up with multiple environments that automatically build new binaries for
-    iOS and Android and provide real time updates for your users instantly every time your team commits
-    new code.</p>
+    <p>iOSとAndroid用の新しいバイナリーを自動的に構築し、
+    チームが新しいコードをコミットするたびにユーザーにリアルタイムの更新を
+    即座に提供する複数の環境でアプリをセットアップしましょう。</p>
   </docs-card>
 
   <docs-card header="Deploy" href="/docs/appflow/deploy/intro" icon="/docs/assets/icons/guide-deploy-icon.png">
-    <p>Provide live updates and hotfixes to user devices instantly without going through the app stores.</p>
+    <p>アプリストアを経由せずに、ユーザーデバイスにすぐにライブアップデートと即座の修正を提供します。</p>
   </docs-card>
 
   <docs-card header="Package" href="/docs/appflow/package/intro" icon="/docs/assets/icons/guide-package-icon.png">
-    <p>Build native iOS and Android binaries in the cloud without the headache of maintaining your own build servers.</p>
+    <p>独自のビルドサーバをメンテナンスしなくても、iOSとAndroidのネイティブバイナリをクラウドでビルドできます。</p>
   </docs-card>
 
   <docs-card header="Automate" href="/docs/appflow/automation/intro" icon="/docs/assets/icons/guide-automate-icon.png">
-    <p>Automate your Deploy and Package builds to help you team ship better updates faster.</p>
+    <p>導入とパッケージビルドを自動化して、チームがより優れたアップデートを迅速に配布できるようにします。</p>
   </docs-card>
 
   <docs-card header="News & Updates" href="https://ionic.zendesk.com/hc/en-us/categories/360000410554-Announcements" icon="/docs/assets/icons/guide-news-icon.png">
-    <p>Learn about recent Appflow updates & announcements.</p>
+    <p>Appflowの最近のアップデートとアナウンスについて学びます。</p>
   </docs-card>
 
   <docs-card header="Package FAQ" href="https://ionic.zendesk.com/hc/en-us/categories/360000410494-Package" icon="/docs/assets/icons/guide-faq-icon.png">
-    <p>Find answers to common questions about building native binaries.</p>
+    <p>ネイティブバイナリの構築に関してよく寄せられる質問への回答を調べます。</p>
   </docs-card>
 
   <docs-card header="Deploy FAQ" href="https://ionic.zendesk.com/hc/en-us/categories/360000409113-Deploy" icon="/docs/assets/icons/guide-faq-icon.png">
-    <p>Find answers to common questions about live updates.</p>
+    <p>ライブアップデートに関してよく寄せられる質問への回答を調べます。</p>
   </docs-card>
 
   <docs-card header="Billing FAQ" href="https://ionic.zendesk.com/hc/en-us/categories/360000410574-Billing-Support" icon="/docs/assets/icons/guide-faq-icon.png">
-    <p>Find answers to common billing questions.</p>
+    <p>請求に関するよくある質問。</p>
   </docs-card>
 </docs-cards>
