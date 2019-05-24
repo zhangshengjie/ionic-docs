@@ -1,8 +1,8 @@
 export default () => <docs-nav items={items}/>;
 
 const items = {
-  'Welcome to Appflow': '/docs/appflow',
-  'Quickstart': {
+  'Appflowへようこそ': '/docs/appflow',
+  'クイックスタート': {
     'Overview': '/docs/appflow/quickstart',
     'Connect your Repo': '/docs/appflow/quickstart/connect',
     '': {
