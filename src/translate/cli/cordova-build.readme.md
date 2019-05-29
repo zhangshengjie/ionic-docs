@@ -1,5 +1,5 @@
-Like running `cordova build` directly, but also builds web assets with configuration from `ionic build` and provides friendly checks.
+`cordova build` を直接実行するのと似ていますが、 `ionic build` を実行して構成を使用してWebアセットを構築してから、わかりやすいチェックを提供します。
 
-To pass additional options to the Cordova CLI, use the `--` separator after the Ionic CLI arguments.
+Cordova CLIに追加のオプションを渡すには、Ionic CLI引数の後に`--`セパレータを使用します。
 
-The Cordova CLI requires a separator for platform-specific arguments for Android [builds](https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html#using-flags), so an additional separator is required for the Ionic CLI, but it is not required for iOS [builds](https://cordova.apache.org/docs/en/latest/guide/platforms/ios/index.html#using-flags). See the example commands for usage with separators. To avoid using flags, consider using `--buildConfig` with a **build.json** file.
+Cordova CLIはAndroid[builds](https://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html#using-flags)のプラットフォーム固有の引数のためのセパレータを必要とするので、Ionic CLIには追加のセパレータが必要ですが、iOS[builds](https://cordova.apache.org/docs/en/latest/guide/platforms/ios/index.html#using-flags)には必要ありません。セパレータの使用方法については、コマンド例を参照してください。フラグの使用を避けるには、**build.json**ファイルを作成して、ビルドで`--buildConfig`を使用することを検討してください。
