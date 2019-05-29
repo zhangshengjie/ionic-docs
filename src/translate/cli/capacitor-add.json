@@ -4,7 +4,7 @@
     "ionic",
     "capacitor"
   ],
-  "summary": "Add a native platform to your Ionic project",
+  "summary": "ネイティブプラットフォームをIonicプロジェクトに追加します。",
   "description": "`ionic capacitor add` will do the following:\n- Add a new platform specific folder to your project (ios, android, or electron)",
   "footnotes": [],
   "groups": [

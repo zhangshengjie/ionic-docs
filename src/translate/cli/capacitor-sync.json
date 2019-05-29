@@ -4,7 +4,7 @@
     "ionic",
     "capacitor"
   ],
-  "summary": "Sync (copy + update) an Ionic project",
+  "summary": "IonicプロジェクトとSync (コピー + アップデート)します。",
   "description": "`ionic capacitor sync` will do the following:\n- Copy web assets to all Capacitor native platforms\n- Update each Capacitor native platforms, such as any dependencies that need updating.\n- Install any discovered Capacitor or Cordova plugins.",
   "footnotes": [],
   "groups": [

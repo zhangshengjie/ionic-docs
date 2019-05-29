@@ -4,7 +4,7 @@
     "ionic",
     "capacitor"
   ],
-  "summary": "Copy web assets to native platforms",
+  "summary": "Webアセットをネイティブプラットフォームにコピーします。",
   "description": "`ionic capacitor copy` will do the following:\n- Copy the **www/** directory into your native platforms.",
   "footnotes": [],
   "groups": [

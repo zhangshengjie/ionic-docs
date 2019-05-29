@@ -4,7 +4,7 @@
     "ionic",
     "cordova"
   ],
-  "summary": "Manage Cordova platform targets",
+  "summary": "Cordovaプラットフォームのターゲットを管理します。",
   "description": "Like running `cordova platform` directly, but adds default Ionic icons and splash screen resources (during `add`) and provides friendly checks.",
   "footnotes": [],
   "groups": [],

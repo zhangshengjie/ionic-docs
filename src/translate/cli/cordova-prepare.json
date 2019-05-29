@@ -4,7 +4,7 @@
     "ionic",
     "cordova"
   ],
-  "summary": "Copies assets to Cordova platforms, preparing them for native builds",
+  "summary": "アセットをCordovaプラットフォームにコピーして、ネイティブビルドの用意をします。",
   "description": "`ionic cordova prepare` will do the following:\n\n- Perform an Ionic build, which compiles web assets to **www/**.\n- Copy the **www/** directory into your Cordova platforms.\n- Transform **config.xml** into platform-specific manifest files.\n- Copy icons and splash screens from **resources/** to into your Cordova platforms.\n- Copy plugin files into specified platforms.\n\nYou may wish to use `ionic cordova prepare` if you run your project with Android Studio or Xcode.",
   "footnotes": [],
   "groups": [],
