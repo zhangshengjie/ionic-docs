@@ -1,4 +1,4 @@
-`ionic cordova prepare` will do the following:
+`ionic cordova prepare` は次のことをします:
 
 - Webアセットを **www/** にコンパイルするIonicビルドを実行します。
 - **www/** ディレクトリをCordovaプラットフォームにコピーします。

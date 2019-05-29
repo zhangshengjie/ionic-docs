@@ -1,2 +1,2 @@
-`ionic capacitor open` will do the following:
+`ionic capacitor open` は次のことをします:
 - あなたのネイティブプロジェクトをIDEで開きます (iOSではXcode, AndroidではAndroid )

@@ -1,2 +1,2 @@
-`ionic capacitor copy` will do the following:
+`ionic capacitor copy` は次のことをします:
 - **www/** ディレクトリを、ネイティブプラットフォームにコピーします。

@@ -1,4 +1,4 @@
-`ionic capacitor run` will do the following:
+`ionic capacitor run` は次のことをします:
 - `ionic build` (もしくは `--livereload` オプションを指定してdevサーバを起動)
 - Webアセットを指定したネイティブプラットフォームにコピー
 - ネイティブプロジェクトのIDEを開きます (iOSではXcode, AndroidではAndroid )
