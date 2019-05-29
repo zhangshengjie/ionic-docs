@@ -1,9 +1,9 @@
-This command writes configuration values to the project's **./ionic.config.json** file. It can also operate on the global CLI configuration (**~/.ionic/config.json**) using the `--global` option.
+このコマンドは、設定をプロジェクトの **./ionic.config.json** に書き込みます。また、`--global`オプションを使用して、グローバルCLIの設定 (**~/.ionic/config.json**) 上で動作することもできます。
 
-For nested properties, separate nest levels with dots. For example, the property name `integrations.cordova` will look in the **integrations** object for the **cordova** property.
+ネストされたプロパティの場合は、ネストレベルをドットで区切ります。たとえば、プロパティ名`integrations.cordova`は、**cordova** プロパティの **integrations** オブジェクトを検索します。
 
-For multi-app projects, this command is scoped to the current project by default. To operate at the root of the project configuration file instead, use the `--root` option.
+マルチアプリケーションプロジェクトの場合、このコマンドのスコープはデフォルトで現在のプロジェクトに設定されます。プロジェクト構成ファイルのルートで操作するには、`--root` オプションを使用します。
 
-This command will attempt to coerce `value` into a suitable JSON type. If it is JSON-parsable, such as `123`, `true`, `[]`, etc., then it takes the parsed result. Otherwise, the value is interpreted as a string. For stricter input, use `--json`, which will error with non-JSON values.
+このコマンドは`value`を適切なJSON型に強制しようとします。それが`123`、`true`、`[]`などのようにJSONで解析可能な場合、パースされた結果を受け取ります。それ以外の場合、値は文字列として解釈されます。より厳密な入力の場合は`--json`を使用すると、非JSON値ではエラーが発生します。
 
-By default, if `property` exists and is an object or an array, the value is not overwritten. To disable this check and always overwrite the property, use `--force`.
+デフォルトでは、 `property` が存在し、`property` がオブジェクトまたは配列の場合、値は上書きされません。このチェックを無効にし、常に`property`を上書きするには、`--force`を使用します。

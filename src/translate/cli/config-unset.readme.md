@@ -1,5 +1,5 @@
-This command deletes configuration values from the project's **./ionic.config.json** file. It can also operate on the global CLI configuration (**~/.ionic/config.json**) using the `--global` option.
+このコマンドは、プロジェクトの **./ionic.config.json** から構成値を削除します。また、`--global`オプションを使用して、グローバルCLIの設定(**~/.ionic/config.json**)上で動作することもできます。
 
-For nested properties, separate nest levels with dots. For example, the property name `integrations.cordova` will look in the **integrations** object for the **cordova** property.
+ネストされたプロパティの場合は、ネストレベルをドットで区切ります。たとえば、プロパティ名`integrations.cordova`は、**cordova** プロパティの **integrations** オブジェクトを検索します。
 
-For multi-app projects, this command is scoped to the current project by default. To operate at the root of the project configuration file instead, use the `--root` option.
+マルチアプリケーションプロジェクトの場合、このコマンドのスコープはデフォルトで現在のプロジェクトに設定されます。プロジェクト構成ファイルのルートで操作するには、`--root` オプションを使用します。
