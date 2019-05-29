@@ -3,7 +3,7 @@
   "namespace": [
     "ionic"
   ],
-  "summary": "Create a new project",
+  "summary": "新しいプロエジェクトを生成します。",
   "description": "This command creates a working Ionic app. It installs dependencies for you and sets up your project.\n\nRunning `ionic start` without any arguments will prompt you for information about your new project.\n\nThe first argument is your app's `name`. Don't worry--you can always change this later. The `--project-id` is generated from `name` unless explicitly specified.\n\nThe second argument is the `template` from which to generate your app. You can list all templates with the `--list` option. You can also specify a git repository URL for `template`, in which case the existing project will be cloned.\n\nUse the `--type` option to start projects using older versions of Ionic. For example, you can start an Ionic 3 project with `--type=ionic-angular`. Use `--list` to see all project types and templates.",
   "footnotes": [],
   "groups": [],

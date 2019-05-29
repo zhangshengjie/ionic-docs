@@ -4,7 +4,7 @@
     "ionic",
     "doctor"
   ],
-  "summary": "Attempt to fix issues in your Ionic project",
+  "summary": "Ionicプロジェクトの問題を解決しようとしています。",
   "description": "This command detects and attempts to fix common issues. Before a fix is attempted, the steps are printed and a confirmation prompt is displayed.\n\nOptionally supply the `id` argument to attempt to fix a single issue. Use `ionic doctor list` to list all known issues.",
   "footnotes": [],
   "groups": [],

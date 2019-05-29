@@ -4,7 +4,7 @@
     "ionic",
     "integrations"
   ],
-  "summary": "Add & enable integrations to your app",
+  "summary": "アプリにインテグレーションを追加・有効化します。",
   "description": "Integrations, such as Cordova, can be enabled with this command. If the integration has never been added to the project, `ionic integrations enable` will download and add the integration.\n\nIntegrations can be re-added with the `--add` option.",
   "footnotes": [],
   "groups": [],

@@ -4,7 +4,7 @@
     "ionic",
     "integrations"
   ],
-  "summary": "Disable an integration",
+  "summary": "インテグレーションを無効化します。",
   "description": "Integrations, such as Cordova, can be disabled with this command.",
   "footnotes": [],
   "groups": [],
