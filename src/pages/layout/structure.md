@@ -14,6 +14,12 @@ Ionic Frameworkは、アプリを構成するために、単一ページレイ�
 
 ### Header
 
+<aside>
+  <docs-card href="/docs/api/header" header="Learn More" icon="/docs/assets/icons/component-header-icon.png">
+    <code>ion-header</code> API docs
+  </docs-card>
+</aside>
+
 利用できる一番単純なレイアウトは、[header](/docs/api/header) と [content](/docs/api/content)で構成されています。通常、アプリ内のほとんどのページにこれらの両方がありますが、コンテンツを使用するためにヘッダーは必須ではありません。
 
 ```html
@@ -31,6 +37,12 @@ Ionic Frameworkは、アプリを構成するために、単一ページレイ�
 ```
 
 ### Footer
+
+<aside>
+  <docs-card href="/docs/api/footer" header="Learn More" icon="/docs/assets/icons/component-footer-icon.png">
+    <code>ion-footer</code> API docs
+  </docs-card>
+</aside>
 
 ご覧のとおり、Headerにあるツールバーがコンテンツ上に表示されます。アプリケーションのコンテンツの下にツールバーが必要な場合があります。これがFooterが使用されている場合です。
 
