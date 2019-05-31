@@ -1,1 +1,1 @@
-This command is an easy way to share information about your setup. If applicable, be sure to run `ionic info` within your project directory to display even more information.
+このコマンドを使用すると、セットアップに関する情報を簡単に共有できます。必要に応じて、プロジェクトディレクトリ内で `ionic info` を実行して、さらに詳しい情報を表示してください。

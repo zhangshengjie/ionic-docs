@@ -1,3 +1,3 @@
-This command will initialize the current directory with an **ionic.config.json** file.
+このコマンドはカレントディレクトリの**ionic.config.json**を初期化します。
 
-`ionic init` will prompt for a project name and then proceed to determine the type of your project. You can specify the `name` argument and `--type` option to provide these values via command-line.
+`ionic init`はプロジェクト名の入力を促し、プロジェクトのタイプを決定します。`name`引数と`--type`オプションを指定すれば、コマンドラインからこれらの値を指定できます。

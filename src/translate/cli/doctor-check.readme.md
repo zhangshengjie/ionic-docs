@@ -1,5 +1,5 @@
-This command detects and prints common issues and suggested steps to fix them.
+このコマンドは、一般的な問題とそれを解決するための推奨手順を検出して出力します。
 
-Some issues can be fixed automatically. See `ionic doctor treat --help`.
+一部の問題は自動的に修正できます。`ionic doctor treat --help`の結果をご覧ください。
 
-Optionally supply the `id` argument to check a single issue. Use `ionic doctor list` to list all known issues.
+1つの問題をチェックするには、オプションで `id` 引数を指定します。`ionic doctor list` を使用すると、既知の問題をすべて表示します。

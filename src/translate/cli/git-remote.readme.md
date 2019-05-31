@@ -1,3 +1,3 @@
-This command is used by `ionic link` when Ionic Appflow is used as the git host.
+このコマンドは、Ionic Appflowが git host として使用されるときに `ionic link`  によって使用されます。
 
-`ionic git remote` will check the local repository for whether or not the git remote is properly set up. This command operates on the **ionic** remote. For advanced configuration, see **Settings** => **Git** in the app settings of the [Dashboard](https://dashboard.ionicframework.com).
+`ionic git remote`は git remote が正しく設定されているかどうかローカルリポジトリをチェックします。このコマンドは**ionic** remoteで動作します。詳細な設定については、[Dashboard](https://dashboard.ionicframework.com)のアプリケーション設定の**Settings** => **Git**を参照してください。
