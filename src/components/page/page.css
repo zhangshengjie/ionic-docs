@@ -23,6 +23,7 @@ docs-page > main {
   grid-column: 2;
   margin-bottom: 3rem;
   padding: var(--page-padding, 2rem 3rem);
+  position: relative;
 }
 
 docs-page docs-demo {
@@ -84,8 +85,22 @@ docs-page h6 code {
   font-size: inherit;
 }
 
+docs-page aside {
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
 @media (min-width: 1500px) {
   docs-page aside {
+    position: absolute;
+    right: -240px;
+    width: 240px;
+    float: none;
+    margin-left: 0;
+  }
+
+  docs-page main.no-demo docs-table-of-contents {
     position: absolute;
     right: -240px;
     width: 240px;
