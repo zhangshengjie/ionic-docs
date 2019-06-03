@@ -7,8 +7,8 @@ import { Component } from '@stencil/core';
 export class DocsFooterAnnouncement {
   render() {
     return (
-      <section class="docs-footer-announcement"><strong>Ionic Meetup #11 Tokyo:</strong> 2019/06/02(日)に開催
-        <a href="https://ionic-jp.connpass.com/event/130785/" target="_blank">参加する</a>
+      <section class="docs-footer-announcement"><strong>Ionic Meetup #12 Tokyo:</strong> 2019/07/07(日)に開催
+        <a href="https://ionic-jp.connpass.com/event/133896/" target="_blank">参加する</a>
       </section>
     );
   }
