@@ -118,9 +118,13 @@ export class DocsHeader {
               </div>
             </div>
           </ionic-search>
-          <docs-dropdown label="Community" align="right">
+          <docs-dropdown label="コミュニティ" align="right">
             <section>
               <a href="https://ionicframework.com/community" target="_blank">Community Hub</a>
+            </section>
+            <section>
+              <a href="https://ionic-jp.herokuapp.com/" target="_blank">Slack（日本）</a>
+              <a href="https://twitter.com/ionic_japan" target="_blank">Twitter（日本）</a>
             </section>
             <section>
               <a href="https://forum.ionicframework.com/" target="_blank">Forum</a>
@@ -143,7 +147,8 @@ export class DocsHeader {
               <a href="https://ionicframework.com/advisory" target="_blank">Enterprise Advisory</a>
             </section>
           </docs-dropdown>
-          <a class="outbound" href="https://github.com/ionic-jp/ionic-docs" target="_blank">翻訳に協力する <Outbound/></a>
+          <a className="outbound" href="https://ionicframework.jp/case/" target="_blank">事例 <Outbound/></a>
+          <a class="outbound" href="https://github.com/ionic-jp/ionic-docs" target="_blank">翻訳に協力 <Outbound/></a>
           <docs-dropdown icon={Translation} align="right">
             <section>
               <a href="https://ionicframework.com/en/docs/">English</a>
