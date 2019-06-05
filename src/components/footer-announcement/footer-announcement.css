@@ -6,17 +6,17 @@
   bottom: 0;
   z-index: 100;
   text-align: center;
-  background-color: #f8fafc;
+  background-color: #333333;
   font-family: Inter,"Inter UI",Helvetica,Arial,sans-serif;
   box-shadow: 0 0 0 1px rgba(0,20,56,.06);
-  color: #73849a;
+  color: #f4f5f8;
   font-size: 0.8rem;
   letter-spacing: 1px;
   padding: 8px 0;
 }
 
 .docs-footer-announcement strong {
-  color: #333333;
+  color: #FFFFFF;
 }
 
 .docs-footer-announcement a {
@@ -32,6 +32,10 @@
   white-space: pre;
   letter-spacing: .02em;
   transition: .2s background-color,.2s box-shadow;
+}
+
+.docs-footer-announcement a:hover {
+  background-color: #4788ff;
 }
 
 @media (max-width: 768px) {
