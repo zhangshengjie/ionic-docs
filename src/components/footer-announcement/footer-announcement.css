@@ -1,4 +1,4 @@
-.docs-footer-announcement {
+docs-footer-announcement {
   display: block;
   width: 100%;
   position: fixed;
@@ -10,16 +10,28 @@
   font-family: Inter,"Inter UI",Helvetica,Arial,sans-serif;
   box-shadow: 0 0 0 1px rgba(0,20,56,.06);
   color: #f4f5f8;
+  transform: translateY(0);
+  transition: transform 200ms ease;
   font-size: 0.8rem;
   letter-spacing: 1px;
   padding: 8px 0;
 }
 
-.docs-footer-announcement strong {
+docs-footer-announcement.hidden {
+  transform: translateY(100%);
+}
+
+@media (max-width: 768px) {
+  docs-footer-announcement  {
+    display: none;
+  }
+}
+
+.footer-announcement strong {
   color: #FFFFFF;
 }
 
-.docs-footer-announcement a {
+.footer-announcement a {
   background-color: #73a5ff;
   color: #fff;
   border-radius: 16px;
@@ -34,12 +46,6 @@
   transition: .2s background-color,.2s box-shadow;
 }
 
-.docs-footer-announcement a:hover {
+.footer-announcement a:hover {
   background-color: #4788ff;
-}
-
-@media (max-width: 768px) {
-  .docs-footer-announcement  {
-    display: none;
-  }
 }
