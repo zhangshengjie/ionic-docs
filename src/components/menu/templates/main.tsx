@@ -4,7 +4,7 @@ const items = {
   '紹介': {
     'Ionic Frameworkとは': '/docs/intro',
     'コアコンセプト': '/docs/intro/concepts',
-    'Build your First App': '/docs/developer-resources/guides/first-app-v4/intro',
+    'Build your First App': '/docs/angular/your-first-app',
     'ブラウザサポート': '/docs/intro/browser-support',
     'バージョニング': '/docs/intro/versioning',
     'リリースノート': '/docs/release-notes',
@@ -43,11 +43,24 @@ const items = {
     'カラージェネレーター': '/docs/theming/color-generator',
     '高度なカスタマイズ': '/docs/theming/advanced',
   },
-  'ライフサイクル': {
-    'Angular': '/docs/lifecycle/angular'
+  'Angular': {
+    'Overview': '/docs/angular/overview',
+    'Build Your First App': '/docs/angular/your-first-app',
+    'Lifecycle': '/docs/angular/lifecycle',
+    'Navigation/Routing': '/docs/angular/navigation',
+    'Performance': '/docs/angular/performance'
   },
-  'ナビゲーション': {
-    'Angular': '/docs/navigation/angular'
+  'React': {
+    'Overview': '/docs/react/overview',
+    'Build Your First App': '/docs/react/your-first-app',
+    'Lifecycle': '/docs/react/lifecycle',
+    'Navigation/Routing': '/docs/react/navigation'
+  },
+  'Vue': {
+    'Overview': '/docs/vue/overview',
+    'Build Your First App': '/docs/vue/your-first-app',
+    'Lifecycle': '/docs/vue/lifecycle',
+    'Navigation/Routing': '/docs/vue/navigation'
   },
   'ユーティリティ': {
     'Config': '/docs/utilities/config',
