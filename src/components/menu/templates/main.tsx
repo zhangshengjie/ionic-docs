@@ -46,21 +46,21 @@ const items = {
   'Angular': {
     '概要': '/docs/angular/overview',
     'Build Your First App': '/docs/angular/your-first-app',
-    'Lifecycle': '/docs/angular/lifecycle',
-    'Navigation/Routing': '/docs/angular/navigation',
+    'ライフサイクル': '/docs/angular/lifecycle',
+    'ナビゲーション': '/docs/angular/navigation',
     'Performance': '/docs/angular/performance'
   },
   'React': {
     '概要': '/docs/react/overview',
     'Build Your First App': '/docs/react/your-first-app',
-    'Lifecycle': '/docs/react/lifecycle',
-    'Navigation/Routing': '/docs/react/navigation'
+    'ライフサイクル': '/docs/react/lifecycle',
+    'ナビゲーション': '/docs/react/navigation'
   },
   'Vue': {
     '概要': '/docs/vue/overview',
     'Build Your First App': '/docs/vue/your-first-app',
-    'Lifecycle': '/docs/vue/lifecycle',
-    'Navigation/Routing': '/docs/vue/navigation'
+    'ライフサイクル': '/docs/vue/lifecycle',
+    'ナビゲーション': '/docs/vue/navigation'
   },
   'ユーティリティ': {
     'Config': '/docs/utilities/config',
