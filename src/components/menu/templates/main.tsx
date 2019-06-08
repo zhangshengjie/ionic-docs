@@ -44,20 +44,20 @@ const items = {
     '高度なカスタマイズ': '/docs/theming/advanced',
   },
   'Angular': {
-    'Overview': '/docs/angular/overview',
+    '概要': '/docs/angular/overview',
     'Build Your First App': '/docs/angular/your-first-app',
     'Lifecycle': '/docs/angular/lifecycle',
     'Navigation/Routing': '/docs/angular/navigation',
     'Performance': '/docs/angular/performance'
   },
   'React': {
-    'Overview': '/docs/react/overview',
+    '概要': '/docs/react/overview',
     'Build Your First App': '/docs/react/your-first-app',
     'Lifecycle': '/docs/react/lifecycle',
     'Navigation/Routing': '/docs/react/navigation'
   },
   'Vue': {
-    'Overview': '/docs/vue/overview',
+    '概要': '/docs/vue/overview',
     'Build Your First App': '/docs/vue/your-first-app',
     'Lifecycle': '/docs/vue/lifecycle',
     'Navigation/Routing': '/docs/vue/navigation'

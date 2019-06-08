@@ -3,11 +3,11 @@ nextText: 'Build Your First App'
 nextUrl: '/docs/react/your-first-app'
 ---
 
-# Ionic React Overview
+# Ionic Reactの概要
 
-`@ionic/react` combines the core Ionic experience with the tooling and APIs that are tailored to React Developers.
+`@ionic/react` はcore Ionic experienceに、React開発者向けにカスタマイズされたツールとAPIを組み合わせたものです。
 
-Currently in beta, you can try it now. First, install the Ionic CLI:
+現在ベータ版だが、今すぐ試してみることができます。最初に、Ionic CLIをインストールします:
 
 ```shell
 $ npm install ionic -g
@@ -21,10 +21,10 @@ $ ionic start myApp --type=react
 
 Now, start building an app using some of the [Ionic UI components](/docs/components). 
 
-## React Version Support
+## Reactバージョンサポート
 
 Coming soon.
 
-## React Tooling
+## Reactツール
 
 Coming soon.
