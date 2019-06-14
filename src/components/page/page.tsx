@@ -101,7 +101,7 @@ export class DocsPage {
 
     // Description
     updateMeta(metaEls.description, () => meta.description ||
-      'Ionic is the app platform for web developers. Build amazing mobile, web, and desktop apps all with one shared code base and open web standards');
+      'Ionicは、Web開発者のためのアプリケーションプラットフォームです。 1つのベースとなるコードとWeb標準の技術によって、すばらしいモバイル、Web、デスクトップアプリケーションをすべて構築することができます。');
 
     // Sharing Image
     updateMeta(metaEls.image, () => meta.image ||
