@@ -82,6 +82,7 @@ export namespace Components {
     'open': () => Promise<void>;
     'toggle': () => Promise<void>;
   }
+  interface DocsFooterAnnouncement {}
   interface DocsHeader {
     'onToggleClick': (e: Event) => void;
   }
@@ -267,6 +268,12 @@ declare global {
     new (): HTMLDocsDropdownElement;
   };
 
+  interface HTMLDocsFooterAnnouncementElement extends Components.DocsFooterAnnouncement, HTMLStencilElement {}
+  var HTMLDocsFooterAnnouncementElement: {
+    prototype: HTMLDocsFooterAnnouncementElement;
+    new (): HTMLDocsFooterAnnouncementElement;
+  };
+
   interface HTMLDocsHeaderElement extends Components.DocsHeader, HTMLStencilElement {}
   var HTMLDocsHeaderElement: {
     prototype: HTMLDocsHeaderElement;
@@ -423,6 +430,7 @@ declare global {
     'docs-code': HTMLDocsCodeElement;
     'docs-demo': HTMLDocsDemoElement;
     'docs-dropdown': HTMLDocsDropdownElement;
+    'docs-footer-announcement': HTMLDocsFooterAnnouncementElement;
     'docs-header': HTMLDocsHeaderElement;
     'docs-menu': HTMLDocsMenuElement;
     'docs-menu-toggle': HTMLDocsMenuToggleElement;
@@ -513,6 +521,7 @@ declare namespace LocalJSX {
     'icon'?: (props: any) => JSX.Element;
     'label'?: string;
   }
+  interface DocsFooterAnnouncement extends JSXBase.HTMLAttributes<HTMLDocsFooterAnnouncementElement> {}
   interface DocsHeader extends JSXBase.HTMLAttributes<HTMLDocsHeaderElement> {
     'onToggleClick'?: (e: Event) => void;
   }
@@ -600,6 +609,7 @@ declare namespace LocalJSX {
     'docs-code': DocsCode;
     'docs-demo': DocsDemo;
     'docs-dropdown': DocsDropdown;
+    'docs-footer-announcement': DocsFooterAnnouncement;
     'docs-header': DocsHeader;
     'docs-menu': DocsMenu;
     'docs-menu-toggle': DocsMenuToggle;
