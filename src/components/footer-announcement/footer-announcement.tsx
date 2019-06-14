@@ -8,7 +8,7 @@ export class DocsFooterAnnouncement {
   private frameRequested = false;
   @State() hidden = false;
   private prevScroll = 0;
-  @Listen('window:scroll')
+  @Listen('scroll', { target: 'window' })
   handleScroll() {
     if (!this.frameRequested) {
       requestAnimationFrame(() => {
