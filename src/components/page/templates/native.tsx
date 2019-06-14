@@ -1,4 +1,6 @@
+import { h } from '@stencil/core';
 import { GitBranch } from '../../../icons';
+import { toHypertext } from '../to-hypertext';
 
 export default (props) => {
   const { page } = props;
@@ -6,7 +8,7 @@ export default (props) => {
   const repo = renderRepo(page.repo);
   const installation = renderInstallation(page.cordova, page.package);
   const platforms = renderPlatforms(page.platforms);
-  const usage = renderUsage(page.usage);
+  const usage = renderUsage(page.codeUsage);
 
   if (installation) {
     headings.push({
@@ -33,7 +35,9 @@ export default (props) => {
     <article>
       <h1>{ page.title }</h1>
       <docs-table-of-contents links={headings} basepath={page.path}/>
-      <section class="markdown-content" innerHTML={page.body}/>
+      <section class="markdown-content">
+        {toHypertext(h, page.body)}
+      </section>
       { repo }
       { installation }
       { platforms }
@@ -48,7 +52,7 @@ const renderRepo = (repo: string) => {
   }
 
   return (
-    <section>
+    <section hidden>
       <a href={repo} class="outbound" target="_blank"><GitBranch/> { repo }</a>
       <h2>Cordovaの問題で困っていますか？</h2>
       <docs-shadow-card class="cordova-ee-card" header="プラグインの問題で貴重な時間を無駄にしないでください." href="https://ionicframework.com/sales?product_of_interest=Ionic%20Enterprise%20Engine">
@@ -110,7 +114,7 @@ const renderPlatforms = (platforms: string[] = []) => {
   );
 };
 
-const renderUsage = (usage: string) => {
+const renderUsage = (usage: any) => {
   if (!usage) {
     return null;
   }
@@ -120,7 +124,7 @@ const renderUsage = (usage: string) => {
       <h2 id="usage">
         <a href="#usage">利用方法</a>
       </h2>
-      <div innerHTML={usage}/>
+      {toHypertext(h, usage)}
     </section>
   );
 };

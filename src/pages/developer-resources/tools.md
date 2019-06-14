@@ -22,3 +22,7 @@ TypeScriptでの作業を素晴らしいものにする機能を調べてくだ�
 ### [Glossary](/docs/faq/glossary)
 
 Ionicで開発中に利用される一般的な用語の一覧。
+
+### [Starter Apps](https://ionicthemes.com)
+
+Ionic Starter Apps to speed up and improve your app development.

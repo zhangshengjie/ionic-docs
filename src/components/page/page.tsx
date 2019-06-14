@@ -1,4 +1,4 @@
-import { Component, Prop, State, Watch } from '@stencil/core';
+import { Component, Prop, State, Watch, h } from '@stencil/core';
 import { RouterHistory } from '@stencil/router';
 import { Page } from '../../definitions';
 import templates from './templates';
@@ -11,7 +11,6 @@ export class DocsPage {
   @Prop() history: RouterHistory;
   @Prop() path: string;
   @Prop({ context: 'isServer' }) private isServer: boolean;
-  @Prop({ context: 'document' }) private document: HTMLDocument;
   @State() badFetch: Response = null;
   @State() page: Page = { title: null, body: null };
 
@@ -56,7 +55,7 @@ export class DocsPage {
       const { location } = this.history;
       const { scrollPosition = [0, 0] } = location;
       const [x, y] = scrollPosition;
-      this.document.documentElement.scrollTo(x, y);
+      document.documentElement.scrollTo(x, y);
     });
   }
 
@@ -64,34 +63,31 @@ export class DocsPage {
   setDocumentMeta(page: Page) {
     const { title, meta = {} } = page;
     const metaEls = {
-      title: document.querySelectorAll('head .meta-title'),
-      description: document.querySelectorAll('head .meta-description'),
-      url: document.querySelectorAll('head .meta-url'),
-      image: document.querySelectorAll('head .meta-image')
+      title: document.head.querySelectorAll('.meta-title'),
+      description: document.head.querySelectorAll('.meta-description'),
+      url: document.head.querySelectorAll('.meta-url'),
+      image: document.head.querySelectorAll('.meta-image')
     };
 
     function updateMeta(els, update) {
       els.forEach(el => {
         ['href', 'content'].forEach(attr => {
-          if (el[attr]) {
-            el[attr] = update(el[attr]);
-          }
-        });
-        ['title'].forEach(elType => {
-          if (el.nodeName === elType.toUpperCase()) {
-            el.text = update(el.text);
+          if (el.hasAttribute(attr)) {
+            el.setAttribute(attr, update(el.getAttribute(attr)));
           }
         });
       });
     }
 
     // Title
-    updateMeta(metaEls.title, () => {
+    const getTitle = () => {
       const suffix = /^\/docs\/pages\/appflow.*$/.test(this.path) ?
         'Ionic Appflow 日本語ドキュメンテーション' : 'Ionic Framework 日本語ドキュメンテーション';
       // Favor meta title, else go with auto-title. fallback to generic title
       return meta.title || title ? `${title} - ${suffix}` : suffix;
-    });
+    };
+    document.title = getTitle();
+    updateMeta(metaEls.title, getTitle);
 
     // Canonical URL
     updateMeta(metaEls.url, oldVal => {
