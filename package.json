@@ -8,7 +8,7 @@
   "scripts": {
     "start": "stencil build --dev --serve --watch",
     "prestart": "npm run -s build-all",
-    "build": "stencil build --prerender && echo '/ /docs/ 302'  >> www/_redirects && echo '/docs/* /docs/index.html 200' >> www/_redirects",
+    "build": "stencil build --prerender --ci && echo '/ /docs/ 302'  >> www/_redirects && echo '/docs/* /docs/index.html 200' >> www/_redirects",
     "build.ci": "npm run build-all && stencil build --prerender --ci",
     "prebuild": "npm run translate && npm run -s build-all",
     "lint": "tslint --config tslint.json --project tsconfig.json",
