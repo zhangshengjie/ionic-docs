@@ -27,7 +27,7 @@ const items = {
     'アプリ開発の概要': '/docs/building/running',
     'iOSでの開発': '/docs/building/ios',
     'Androidでの開発': '/docs/building/android',
-    'Testing': '/docs/building/testing',
+    'テスト': '/docs/building/testing',
     'Contributing': '/docs/building/contributing',
     'Web View': '/docs/building/webview',
     'Ionic Storage': '/docs/building/storage'
