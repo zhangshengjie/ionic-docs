@@ -37,9 +37,9 @@ Jasmine でモックオブジェクトを作成する一般的な方法は2つ�
 
 ### `jasmine.createSpy` と `jasmine.createSpyObj` の利用
 
-`jasmine.createSpyObj` creates a full mock object from scratch with a set of mock methods defined on creation. This is useful in that it is very simple. Nothing needs to be constructed or injected into the test. The disadvantage of using this function is that it allows the creation of objects that may not match the real objects.
+`jasmine.createSpyObj` は、作成時に定義された一連のモックメソッドを使用して、完全なモックオブジェクトをスクラッチで作成します。これはとてもシンプルで便利です。テストのために何かを組み立てたり注入したりする必要はありません。この関数の使用する欠点は、実際のオブジェクトと一致しないオブジェクトを生成できることです。
 
-`jasmine.createSpy` is similar but it creates a stand-alone mock function.
+`jasmine.createSpy` も似ていますが、スタンドアロンのモック関数を作成します。
 
 #### `spyOn()` と `spyOnProperty()` の利用
 
