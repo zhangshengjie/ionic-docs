@@ -7,27 +7,27 @@ contributors:
   - kensodemann
 ---
 
-# Testing
+# テスト
 
-When an `@ionic/angular` application is generated using the Ionic CLI, it is automatically set up for unit testing and end-to-end testing of the application. This is the same setup that is used by the Angular CLI. Refer to the <a href="https://angular.io/guide/testing" target="_blank">Angular Testing Guide</a> for detailed information on testing Angular applications.
+Ionic CLI を使用して `@ionic/angular` アプリケーションを生成すると、アプリケーションのユニットテストとエンドツーエンドのテスト用に自動的に準備されます。これは Angular CLI で使われる設定と同じものです。Angular で作られたアプリケーションのテストについての詳細は <a href="https://angular.io/guide/testing" target="_blank">Angular Testing Guide</a> ご参照ください。
 
-## Testing Principles
+## テストの原則
+アプリケーションをテストするときは、テストによってシステムに欠陥があるかどうかを確認できる、ということを覚えておくことが一番です。しかし、どんなささいなシステムも完全に欠陥のないことを証明することは不可能です。このため、テストの目的はコードが正しいことを確認することではなく、コードの中の問題を見つけることです。これは微妙ですが、重要な違いです。
 
-When testing an application, it is best to keep in mind that testing can show if defects are present in a system. However, it is impossible to prove that any non-trivial system is completely free of defects. For this reason, the goal of testing is not to verify that the code is correct but to find problems within the code. This is a subtle but important distinction.
+もし私たちがコードが正しいことを証明しようとするのであれば、私たちはコードを通じて幸せな道を歩み続けようとするでしょう。もし私が問題の発見しようとするのであれば、コードをより完全に実行し、そこに潜むバグを発見する可能性が高くなります。
 
-If we set out to prove that the code is correct, we are more likely to stick to the happy path through the code. If we set out to find problems, we are more likely to more fully exercise the code and find the bugs that are lurking there.
+最初からアプリケーションのテストを開始することも最良です。これにより、修正が容易な段階で早期に欠陥を発見できます。またこれにより、システムに新しい機能が追加されたときに、コードを確実にリファクタリングすることもできます。
 
-It is also best to begin testing an application from the very start. This allows defects to be found early in the process when they are easier to fix. This also allows code to be refactored with confidence as new features are added to the system.
 
-## Unit Testing
+## ユニットテスト
 
-Unit tests exercise a single unit of code (component, page, service, pipe, etc) in isolation from the rest of the system. Isolation is achieved through the injection of mock objects in place of the code's dependencies. The mock objects allow the test to have fine-grained control of the outputs of the dependencies. The mocks also allow the test to determine which dependencies have been called and what has been passed to them.
+ユニットテストでは、システムの他の部分から分離して、システムの他の部分から分離して、単一のコードユニット（コンポーネント、ページ、サービス、パイプなど）を実行します。分離は、コードの依存関係の代わりにモック・オブジェクトを注入することによって実現されます。モック・オブジェクトによって、テストは依存関係の切り出しをきめ細かく制御することができます。モックによって、どの依存関係が呼び出され、何が渡されたかをテストで判断することもできます。
 
-Well-written unit tests are structured such that the unit of code and the features it contains are described via `describe()` callbacks. The requirements for the unit of code and its features are tested via `it()` callbacks. When the descriptions for the `describe()` and `it()` callbacks are read, they make sense as a phrase. When the descriptions for nested `describe()`s and a final `it()` are concatenated together, they form a sentence that fully describes the test case.
+適切に記述されたユニットテストは、コードの単位とそれに含まれる機能が `describe()` コールバックによって記述されるように構成されています。コード単位とその機能の要件は、`it()` コールバックによってテストされます。`describe()` コールバックと `it()` コールバックの説明を読むと、フレーズとして意味がわかります。ネストされた `describe()` と最後の `it()` の記述をつなげると、テストケースを完全に記述する文が形成されます。
 
-Since unit tests exercise the code in isolation, they are fast, robust, and allow for a high degree of code coverage.
+ユニットテストはコードを分離して実行するため、高速で堅牢であり、高度なコードカバレッジが可能です。
 
-### Using Mocks
+### モックの利用
 
 Unit tests exercise a code module in isolation. To facilitate this, we recommend using Jasmine (https://jasmine.github.io/). Jasmine creates mock objects (which Jasmine calls "spies") to take the place of dependencies while testing. When a mock object is used, the test can control the values returned by calls to that dependency, making the current test independent of changes made to the dependency. This also makes the test setup easier, allowing the test to only be concerned with the code within the module under test.
 
@@ -35,19 +35,19 @@ Using mocks also allows the test to query the mock to determine if it was called
 
 There are two common ways to create mock objects in Jasmine. Mock objects can be constructed from scratch using `jasmine.createSpy` and `jasmine.createSpyObj` or spies can be installed onto existing objects using `spyOn()` and `spyOnProperty()`.
 
-#### Using `jasmine.createSpy` and `jasmine.createSpyObj`
+### `jasmine.createSpy` と `jasmine.createSpyObj` の利用
 
 `jasmine.createSpyObj` creates a full mock object from scratch with a set of mock methods defined on creation. This is useful in that it is very simple. Nothing needs to be constructed or injected into the test. The disadvantage of using this function is that it allows the creation of objects that may not match the real objects.
 
 `jasmine.createSpy` is similar but it creates a stand-alone mock function.
 
-#### Using `spyOn()` and `spyOnProperty()`
+#### `spyOn()` と `spyOnProperty()` の利用
 
 `spyOn()` installs the spy on an existing object. The advantage of using this technique is that if an attempt is made to spy on a method that does not exist on the object, an exception is raised. This prevents the test from mocking methods that do not exist. The disadvantage is that the test needs a fully formed object to begin with, which may increase the amount of test setup required.
 
 `spyOnProperty()` is similar with the difference being that it spies on a property and not a method.
 
-### General Testing Structure
+### 一般的なテストの構成
 
 Unit tests are contained in `spec` files with one `spec` file per entity (component, page, service, pipe, etc.). The `spec` files live side-by-side with and are named after the source that they are testing. For example, if the project has a service called WeatherService, the code for it is in a file named `weather.service.ts` with the tests in a file named `weather.service.spec.ts`. Both of those files are in the same folder.
 
