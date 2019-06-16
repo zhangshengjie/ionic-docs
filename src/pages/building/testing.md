@@ -21,7 +21,7 @@ Ionic CLI を使用して `@ionic/angular` アプリケーションを生成す�
 
 ## ユニットテスト
 
-ユニットテストでは、システムの他の部分から分離して、システムの他の部分から分離して、単一のコードユニット（Component、Page、Service、Pipeなど）を実行します。分離は、コードの依存関係の代わりにモック・オブジェクトを注入することによって実現されます。モック・オブジェクトによって、テストは依存関係の切り出しをきめ細かく制御することができます。モックによって、どの依存関係が呼び出され、何が渡されたかをテストで判断することもできます。
+ユニットテストでは、システムの他の部分から分離して、単一のコードユニット（Component、Page、Service、Pipeなど）を実行します。分離は、コードの依存関係の代わりにモック・オブジェクトを注入することによって実現されます。モックオブジェクトによって、テストは依存関係の切り出しをきめ細かく制御することができます。モックによって、どの依存関係が呼び出され、何が渡されたかをテストで判断することもできます。
 
 適切に記述されたユニットテストは、コードの単位とそれに含まれる機能が `describe()` コールバックによって記述されるように構成されています。コード単位とその機能の要件は、`it()` コールバックによってテストされます。`describe()` コールバックと `it()` コールバックの説明を読むと、フレーズとして意味がわかります。ネストされた `describe()` と最後の `it()` の記述をつなげると、テストケースを完全に記述する文が形成されます。
 
@@ -29,11 +29,11 @@ Ionic CLI を使用して `@ionic/angular` アプリケーションを生成す�
 
 ### モックの利用
 
-Unit tests exercise a code module in isolation. To facilitate this, we recommend using Jasmine (https://jasmine.github.io/). Jasmine creates mock objects (which Jasmine calls "spies") to take the place of dependencies while testing. When a mock object is used, the test can control the values returned by calls to that dependency, making the current test independent of changes made to the dependency. This also makes the test setup easier, allowing the test to only be concerned with the code within the module under test.
+ユニットテストでは、コードをコードをモジュールで分離して実行します。これを簡単にするには、Jasmine(https://jasmine.github.io/) を使用することをお勧めします。Jasmine は、テスト実行中に依存関係の代わりにモックオブジェクト(Jasmine は "スパイ" と呼んでいます)を作成します。モックオブジェクトを使用すると、テストはその依存関係への呼び出しによって返される値を制御できるため、依存関係に加えられた変更から現在のテストを独立させることができます。これにより、テストのセットアップも簡単になり、テスト対象のモジュール内のコードだけをテストすることができます。
 
-Using mocks also allows the test to query the mock to determine if it was called and how it was called via the `toHaveBeenCalled*` set of functions. Tests should be as specific as possible with these functions, favoring calls to `toHaveBeenCalledTimes` over calls to `toHaveBeenCalled` when testing that a method has been called. That is `expect(mock.foo).toHaveBeenCalledTimes(1)` is better than `expect(mock.foo).toHaveBeenCalled()`. The opposite advice should be followed when testing that something has not been called (`expect(mock.foo).not.toHaveBeenCalled()`).
+モックを使用すると、モックが呼び出されたかどうか、および `toHaveBeenCalled*` セットの関数を介してどのように呼び出されたかを判断するために、テストでモックを確認することもできます。これらの関数では、メソッドが呼び出されたことをテストするときに、`toHaveBeenCalled` メソッドの呼び出しよりも `toHaveBeenCalledTimes` の呼び出しを優先して、テストをできるだけ具体的に行う必要があります。つまり、`expect(mock.foo).toHaveBeenCalledTimes(1)` は `expect(mock.foo).toHaveBeenCalled()` よりも優れています。何かが呼ばれていないこと（`expect(mock.foo).not.toHaveBeenCalled()`）をテストする際は、逆のアドバイスに従うべきです。
 
-There are two common ways to create mock objects in Jasmine. Mock objects can be constructed from scratch using `jasmine.createSpy` and `jasmine.createSpyObj` or spies can be installed onto existing objects using `spyOn()` and `spyOnProperty()`.
+Jasmine でモックオブジェクトを作成する一般的な方法は2つあります。モックオブジェクトは、`jasmine.createSpy` と`jasmine.createSpyObj` を使ってスクラッチで作成することも、`spyOn()` と `spyOnProperty()` を使って既存のオブジェクトにスパイをインストールすることもできます。
 
 ### `jasmine.createSpy` と `jasmine.createSpyObj` の利用
 
