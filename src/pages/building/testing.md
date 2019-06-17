@@ -43,9 +43,9 @@ Jasmine でモックオブジェクトを作成する一般的な方法は2つ�
 
 #### `spyOn()` と `spyOnProperty()` の利用
 
-`spyOn()` installs the spy on an existing object. The advantage of using this technique is that if an attempt is made to spy on a method that does not exist on the object, an exception is raised. This prevents the test from mocking methods that do not exist. The disadvantage is that the test needs a fully formed object to begin with, which may increase the amount of test setup required.
+`spyOn()` は、既存のオブジェクトにスパイをインストールします。この手法を使用する利点は、オブジェクト上に存在しないメソッドをスパイしようとすると、例外が発生することです。これにより、テストが存在しないメソッドをモックすることを防ぎます。欠点は、テストが最初から完全に整形されたオブジェクトを必要とすることであり、これはテストに必要なセットアップの量を増加させるかと思います。
 
-`spyOnProperty()` is similar with the difference being that it spies on a property and not a method.
+`spyOnProperty()` は似ていますが、メソッドではなくプロパティに対してスパイするという点で異なります。
 
 ### 一般的なテストの構成
 
