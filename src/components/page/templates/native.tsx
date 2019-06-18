@@ -52,16 +52,16 @@ const renderRepo = (repo: string) => {
   }
 
   return (
-    <section hidden>
+    <section>
       <a href={repo} class="outbound" target="_blank"><GitBranch/> { repo }</a>
       <h2>Cordovaの問題で困っていますか？</h2>
-      <docs-shadow-card class="cordova-ee-card" header="プラグインの問題で貴重な時間を無駄にしないでください." href="https://ionicframework.com/sales?product_of_interest=Ionic%20Enterprise%20Engine">
+      <docs-card class="cordova-ee-card" header="プラグインの問題で貴重な時間を無駄にしないでください." href="https://ionicframework.com/sales?product_of_interest=Ionic%20Enterprise%20Engine">
         <div>
           <img src="/docs/assets/icons/native-cordova-bot.png" class="cordova-ee-img" />
           <p>本格的なプロジェクトを構築している場合、トラブルシューティングに時間を費やす余裕はありません。Ionicのエキスパートが、保守、サポート、統合に関する公式サポートを提供しています。</p>
           <docs-button class="native-ee-detail" href="https://ionicframework.com/sales?product_of_interest=Ionic%20Enterprise%20Engine">今日連絡ください！</docs-button>
         </div>
-      </docs-shadow-card>
+      </docs-card>
     </section>
   );
 };
