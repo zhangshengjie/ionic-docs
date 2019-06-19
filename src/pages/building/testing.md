@@ -49,13 +49,13 @@ Jasmine でモックオブジェクトを作成する一般的な方法は2つ�
 
 ### 一般的なテストの構成
 
-Unit tests are contained in `spec` files with one `spec` file per entity (component, page, service, pipe, etc.). The `spec` files live side-by-side with and are named after the source that they are testing. For example, if the project has a service called WeatherService, the code for it is in a file named `weather.service.ts` with the tests in a file named `weather.service.spec.ts`. Both of those files are in the same folder.
+ユニットテストは、エンティティ（Component、Page、Service、Pipe など）ごとに1つの `spec` ファイルを持つ `spec` ファイルに含まれています。`spec` ファイルは、テスト中のソースと一緒に存在し、かつその名前が付けられます。たとえば、プロジェクトに WeatherService という Service がある場合、そのコードは`weather.service.ts` という名前のファイルにあり、テストは `weather.service.spec.ts` という名前のファイルにあります。これらのファイルは両方とも同じフォルダにあります。
 
-The `spec` files themselves contain a single `describe` call that defines that overall test. Nested within it are other `describe` calls that define major areas of functionality. Each `describe` call can contain setup and teardown code (generally handled via `beforeEach` and `afterEach` calls), more `describe` calls forming a hierarchical breakdown of functionality, and `it` calls which define individual test cases.
+`spec` ファイル自体には、そのテスト全体を定義するただ一つの `describe` コールが含まれています。その中には、主要な機能領域を定義する他の `describe` コールがネストされています。各 `describe` コールには、setup コードと teardown コード（一般的に `beforeEach` と `afterEach` コールによって処理される）、機能を階層的に分解した `describe` コール、また個々のテストケースを定義する `it` コールが含まれます。
 
-The `describe` and `it` calls also contain a descriptive text label. In well-formed tests, the `describe` and `it` calls combine with their labels to perform proper phrases and the full label for each test case, formed by combining the `describe` and `it` labels, creates a full sentence.
+`describe` と `it` コールには、説明のテキストラベルも含まれます。適切な形式のテストでは、`describe` と `it` をコールすると、ラベルと組み合わせた適切なフレーズが実行され、各テストケースのすべてのラベルが `describe` と `it` ラベルを組み合わせて構成され、完全な文が作成されます。
 
-For example:
+例:
 
 ```TypeScript
 describe('Calculation', () => {
@@ -71,7 +71,7 @@ describe('Calculation', () => {
 });
 ```
 
-The outer `describe` call states that the `Calculation` service is being tested, the inner `describe` calls state exactly what functionality is being tested, and the `it` calls state what the test cases are. When run the full label for each test case is a sentence that makes sense (Calculation divide cowardly refuses to divide by zero).
+外側の `describe` コールは  `Calculation` Service がテストされていることを示し、内側の `describe` コールはテストされている機能を正確に示し、そして `it` コールはテストケースが何であるかを示しています。各テストケースの完全なラベルを実行すると、意味のある文になります(卑劣な 0 での除算という計算を拒否しました)。
 
 ### Pages and Components
 
