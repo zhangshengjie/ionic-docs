@@ -6,7 +6,7 @@ Ionic Native Community Edition(CE)はオープンソースのCordovaプラグイ
 
 Ionic Native CEのプラグインは、Ionicコミュニティによってサブミットされ、保守されます。コミュニティメンバーは一般的に問題をすばやく見つけて修正しますが、一部のプラグインは正しく機能しない場合があります。専用のネイティブプラグインのサポートが必要なチームは、Ionic Native Enterprise Editionを試し、無料の試用版をリクエストしてください。
 
-Note: これらのドキュメントはIonic Framework 4.0 .0以降で構築されたアプリ用です。以前のIonic v3プロジェクトについては、こちらをご覧ください。
+> Note: これらのドキュメントはIonic Framework 4.0 .0以降で構築されたアプリ用です。以前のIonic v3プロジェクトについては、 [see here](/docs/v3/native) をご覧ください。
 
 ## 利用方法
 すべてのプラグインには、ネイティブコード(Cordova)とJavaScriptコードの2つのコンポーネントがあります。

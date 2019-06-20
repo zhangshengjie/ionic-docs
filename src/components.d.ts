@@ -65,6 +65,7 @@ export namespace Components {
     'href': string;
     'icon': string;
     'img': string;
+    'ionicon': string;
   }
   interface DocsCards {}
   interface DocsCode {
@@ -113,12 +114,6 @@ export namespace Components {
     'onSelect': (option: string) => any;
     'optionRenderer': (option: string) => any;
     'options': string[];
-  }
-  interface DocsShadowCard {
-    'header': string;
-    'href': string;
-    'icon': string;
-    'img': string;
   }
   interface DocsTab {
     'selected': boolean;
@@ -334,12 +329,6 @@ declare global {
     new (): HTMLDocsSelectElement;
   };
 
-  interface HTMLDocsShadowCardElement extends Components.DocsShadowCard, HTMLStencilElement {}
-  var HTMLDocsShadowCardElement: {
-    prototype: HTMLDocsShadowCardElement;
-    new (): HTMLDocsShadowCardElement;
-  };
-
   interface HTMLDocsTabElement extends Components.DocsTab, HTMLStencilElement {}
   var HTMLDocsTabElement: {
     prototype: HTMLDocsTabElement;
@@ -441,7 +430,6 @@ declare global {
     'docs-reference': HTMLDocsReferenceElement;
     'docs-root': HTMLDocsRootElement;
     'docs-select': HTMLDocsSelectElement;
-    'docs-shadow-card': HTMLDocsShadowCardElement;
     'docs-tab': HTMLDocsTabElement;
     'docs-table-of-contents': HTMLDocsTableOfContentsElement;
     'docs-tabs': HTMLDocsTabsElement;
@@ -507,6 +495,7 @@ declare namespace LocalJSX {
     'href'?: string;
     'icon'?: string;
     'img'?: string;
+    'ionicon'?: string;
   }
   interface DocsCards extends JSXBase.HTMLAttributes<HTMLDocsCardsElement> {}
   interface DocsCode extends JSXBase.HTMLAttributes<HTMLDocsCodeElement> {
@@ -552,12 +541,6 @@ declare namespace LocalJSX {
     'onSelect'?: (option: string) => any;
     'optionRenderer'?: (option: string) => any;
     'options'?: string[];
-  }
-  interface DocsShadowCard extends JSXBase.HTMLAttributes<HTMLDocsShadowCardElement> {
-    'header'?: string;
-    'href'?: string;
-    'icon'?: string;
-    'img'?: string;
   }
   interface DocsTab extends JSXBase.HTMLAttributes<HTMLDocsTabElement> {
     'selected'?: boolean;
@@ -620,7 +603,6 @@ declare namespace LocalJSX {
     'docs-reference': DocsReference;
     'docs-root': DocsRoot;
     'docs-select': DocsSelect;
-    'docs-shadow-card': DocsShadowCard;
     'docs-tab': DocsTab;
     'docs-table-of-contents': DocsTableOfContents;
     'docs-tabs': DocsTabs;

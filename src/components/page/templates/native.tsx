@@ -59,7 +59,7 @@ const renderRepo = (repo: string) => {
         <div>
           <img src="/docs/assets/icons/native-cordova-bot.png" class="cordova-ee-img" />
           <p>本格的なプロジェクトを構築している場合、トラブルシューティングに時間を費やす余裕はありません。Ionicのエキスパートが、保守、サポート、統合に関する公式サポートを提供しています。</p>
-          <docs-button class="native-ee-detail" href="https://ionicframework.com/sales?product_of_interest=Ionic%20Enterprise%20Engine">今日連絡ください！</docs-button>
+          <docs-button class="native-ee-detail">今日連絡ください！</docs-button>
         </div>
       </docs-card>
     </section>

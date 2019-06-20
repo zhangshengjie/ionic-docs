@@ -11,13 +11,20 @@ const items = {
   '一般的なデバイス機能': {
     'Android Permissions': '/docs/enterprise/android-permissions',
     'App Version': '/docs/enterprise/appversion',
+    'Badge': '/docs/enterprise/badge',
     'Browser': '/docs/enterprise/inappbrowser',
     'Calendar': '/docs/enterprise/calendar',
     'Camera': '/docs/enterprise/camera',
     'Clipboard': '/docs/enterprise/clipboard',
     'Device': '/docs/enterprise/device',
+    'Dialogs': '/docs/enterprise/dialogs',
+    'Email Composer': '/docs/enterprise/email-composer',
     'Filesystem': '/docs/enterprise/filesystem',
+    'Geolocation': '/docs/enterprise/geolocation',
     'Haptics & Vibration': '/docs/enterprise/vibration',
+    'Media': '/docs/enterprise/media',
+    'Media Capture': '/docs/enterprise/media-capture',
+    'Native Storage': '/docs/enterprise/nativestorage',
     'Network Information': '/docs/enterprise/network-information',
     'Screen Orientation': '/docs/enterprise/screen-orientation',
     'Splashscreen': '/docs/enterprise/splashscreen',
@@ -27,25 +34,8 @@ const items = {
     'Active Directory': 'https://ionicframework.com/integrations/ms-activedirectory-ms-adal',
     'mParticle': '/docs/enterprise/mparticle',
   },
-  'アプリケーション間通信': {
-    'Email Composer': '/docs/enterprise/email-composer',
-  },
-  '地図とガイド': {
-    'Geolocation': '/docs/enterprise/geolocation',
-  },
-  'メディア': {
-    'Media': '/docs/enterprise/media',
-    'Media Capture': '/docs/enterprise/media-capture',
-  },
-  'ネイティブUI': {
-    'Dialogs': '/docs/enterprise/dialogs',
-  },
-  '通知': {
-    'Badge': '/docs/enterprise/badge',
-  },
   'オフラインデータ': {
     'Couchbase Lite': 'https://ionicframework.com/integrations/couchbase-lite',
-    'Native Storage': '/docs/enterprise/nativestorage',
     'Offline Support': 'https://ionicframework.com/integrations/couchbase-lite',
   },
   '支払い': {
