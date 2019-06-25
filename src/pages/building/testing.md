@@ -73,11 +73,11 @@ describe('Calculation', () => {
 
 外側の `describe` コールは  `Calculation` Service がテストされていることを示し、内側の `describe` コールはテストされている機能を正確に示し、そして `it` コールはテストケースが何であるかを示しています。各テストケースの完全なラベルを実行すると、意味のある文になります(卑劣な 0 での除算という計算を拒否しました)。
 
-### Pages and Components
+### ページとコンポーネント
 
-Pages are just Angular components. Thus, pages and components are both tested using <a href="https://angular.io/guide/testing#component-test-basics">Angular's Component Testing</a> guidelines.
+Pages は単なる Angular コンポーネントです。そのため、ページとコンポーネントは両方とも <a href="https://angular.jp/guide/testing#コンポーネントテストの基本">Angular のコンポーネントテストガイドライン</a> を使ってテストされます。
 
-Since pages and components contain both TypeScript code and HTML template markup it is possible to perform both component class testing and component DOM testing. When a page is created, the template test that is generated looks like this:
+ページとコンポーネントには TypeScript コードと HTML テンプレートマークアップの両方が含まれているため、コンポーネントクラスのテストとコンポーネント DOM のテストの両方を実行できます。ページが作成されると、生成されるテンプレートテストは次のようになります:
 
 ```TypeScript
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
@@ -108,7 +108,7 @@ describe('TabsPage', () => {
 });
 ```
 
-When doing component class testing, the component object is accessed using the component object defined via `component = fixture.componentInstance;`. This is an instance of the component class. When doing DOM testing, the `fixture.nativeElement` property is used. This is the actual `HTMLElement` for the component, which allows the test to use standard HTML API methods such as `HTMLElement.querySelector` in order to examine the DOM.
+コンポーネントクラスのテストを行う場合、コンポーネントオブジェクトは `component=fixture.componentInstance;` によって定義されたコンポーネントオブジェクトを使用してアクセスされます。これはコンポーネントクラスのインスタンスです。DOM テストを行う際には、`fixture.nativeElement` プロパティが使用されます。これはコンポーネントの実際の `HTMLElement`であり、テストで DOM を調べるために `HTMLElement.querySelector` などの標準の HTML API メソッドを使うことを可能にします。
 
 ## Services
 
