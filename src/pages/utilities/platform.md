@@ -17,7 +17,7 @@ contributors:
 import { Platform } from '@ionic/angular';
 
 @Component({...})
-export MyPage {
+export class MyPage {
   constructor(public plt: Platform) {
 
   }

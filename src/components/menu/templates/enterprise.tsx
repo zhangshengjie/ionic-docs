@@ -7,6 +7,7 @@ const items = {
   'Enterprise Edition': '/docs/enterprise',
   '認証とセキュリティ': {
     'Identity Vault': '/docs/enterprise/identity-vault',
+    'Auth Connect': '/docs/enterprise/auth-connect'
   },
   '一般的なデバイス機能': {
     'Android Permissions': '/docs/enterprise/android-permissions',

@@ -81,13 +81,29 @@ nextUrl: '/docs/building/android'
 
 Ionic CLIは、コマンドひとつで、Ionicアプリを作成、コピーし、iOSシミュレータやデバイスにデプロイできます。　`ionic serve`のような[ライブリロード](/docs/faq/glossary#livereload) 機能を利用するために、開発用のサーバを遅延することもできます。
 
-Cordovaの場合は、次のコマンドを実行して、ライブリロードのための開発サーバーを起動するCLIプロセスを起動します。
+With live-reload, changes made to the app's source files trigger a rebuild of web assets and the changes are reflected on the simulator or device without having to deploy again.
+
+> **Warning**: For iOS devices, the device and the computer need to be on the same Wi-Fi network. An external URL for the dev server is also required so the device can connect to it. Use `--address=0.0.0.0` to bind to external addresses.
+
+### Live-reload with Capacitor
+
+Capacitor does not yet have a way to build native projects. It relies on Xcode to build and deploy app binaries. However, the Ionic CLI can boot up a live-reload server and configure Capacitor to use it with a single command.
+
+Run the following, then select a target simulator or device and click the play button in Xcode:
 
 ```shell
-$ ionic cordova run ios -l
+$ ionic capacitor run ios -l --address=0.0.0.0
 ```
 
-これで、アプリのソースファイルに変更が加えられたときに、Webアセットが再構築され、再度デプロイすることなくシミュレータまたはデバイスに反映されます。
+### Live-reload with Cordova
+
+Cordova can build and deploy native projects programmatically.
+
+To boot up a live-reload server, build, and deploy the app, run the following:
+
+```shell
+$ ionic cordova run ios -l --address=0.0.0.0
+```
 
 ## Safari Web Inspectorを使う
 
