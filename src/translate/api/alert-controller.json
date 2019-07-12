@@ -14,7 +14,13 @@
         "docs": ""
       },
       "signature": "create(options: AlertOptions) => Promise<HTMLIonAlertElement>",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "options",
+          "type": "AlertOptions",
+          "docs": "The options to use to create the alert."
+        }
+      ],
       "docs": "Create an alert overlay with alert options.",
       "docsTags": [
         {
@@ -30,7 +36,23 @@
         "docs": ""
       },
       "signature": "dismiss(data?: any, role?: string | undefined, id?: string | undefined) => Promise<boolean>",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "data",
+          "type": "any",
+          "docs": "Any data to emit in the dismiss events."
+        },
+        {
+          "name": "role",
+          "type": "string | undefined",
+          "docs": "The role of the element that is dismissing the alert.\nThis can be useful in a button handler for determining which button was\nclicked to dismiss the alert.\nSome examples include: ``\"cancel\"`, `\"destructive\"`, \"selected\"`, and `\"backdrop\"`."
+        },
+        {
+          "name": "id",
+          "type": "string | undefined",
+          "docs": "The id of the alert to dismiss. If an id is not provided, it will dismiss the most recently opened alert."
+        }
+      ],
       "docs": "Dismiss the open alert overlay.",
       "docsTags": [
         {

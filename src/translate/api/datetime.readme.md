@@ -197,3 +197,9 @@ datetimeの値を特定の形式から解析したり、操作したり(たと�
 あるいは特定のロケールにデータをフォーマットしたりする必要がある場合は、
 [date-fns](https://date-fns.org) を使用してJavaScriptの日付を処理することを強くお勧めします。
 
+```html
+<ion-item>
+  <ion-label>Date</ion-label>
+  <ion-datetime display-format="MM/DD/YYYY"></ion-datetime>
+</ion-item>
+```

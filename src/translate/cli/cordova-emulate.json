@@ -37,45 +37,6 @@
   ],
   "options": [
     {
-      "name": "consolelogs",
-      "type": "boolean",
-      "summary": "Print app console logs to the terminal",
-      "groups": [
-        "advanced",
-        "cordova"
-      ],
-      "aliases": [],
-      "spec": {
-        "value": "true/false"
-      }
-    },
-    {
-      "name": "consolelogs-port",
-      "type": "string",
-      "summary": "Use specific port for console logs server",
-      "groups": [
-        "advanced",
-        "cordova"
-      ],
-      "aliases": [],
-      "spec": {
-        "value": "port"
-      }
-    },
-    {
-      "name": "ssl",
-      "type": "boolean",
-      "summary": "Use HTTPS for the dev server",
-      "groups": [
-        "experimental",
-        "cordova"
-      ],
-      "aliases": [],
-      "spec": {
-        "value": "true/false"
-      }
-    },
-    {
       "name": "list",
       "type": "boolean",
       "summary": "List all available targets",
@@ -104,7 +65,7 @@
       "name": "address",
       "type": "string",
       "summary": "Use specific address for the dev server",
-      "default": "localhost",
+      "default": "0.0.0.0",
       "groups": [
         "advanced"
       ],
@@ -126,19 +87,6 @@
       ],
       "spec": {
         "value": "port"
-      }
-    },
-    {
-      "name": "devapp",
-      "type": "boolean",
-      "summary": "Publish DevApp service",
-      "default": false,
-      "groups": [
-        "advanced"
-      ],
-      "aliases": [],
-      "spec": {
-        "value": "true/false"
       }
     },
     {
@@ -197,6 +145,19 @@
       ],
       "spec": {
         "value": "conf"
+      }
+    },
+    {
+      "name": "ssl",
+      "type": "boolean",
+      "summary": "Use HTTPS for the dev server",
+      "groups": [
+        "experimental",
+        "cordova"
+      ],
+      "aliases": [],
+      "spec": {
+        "value": "true/false"
       }
     },
     {
@@ -285,9 +246,9 @@
     {
       "name": "native-run",
       "type": "boolean",
-      "summary": "Do not use `native-run` to run the app; use Cordova instead",
-      "default": true,
+      "summary": "Use `native-run` instead of Cordova for running the app",
       "groups": [
+        "experimental",
         "native-run"
       ],
       "aliases": [],
@@ -301,6 +262,7 @@
       "summary": "Do not tie the running app to the process",
       "default": true,
       "groups": [
+        "experimental",
         "native-run"
       ],
       "aliases": [],
@@ -311,9 +273,9 @@
     {
       "name": "json",
       "type": "boolean",
-      "summary": "Output targets in JSON",
+      "summary": "Output `--list` targets in JSON",
       "groups": [
-        "advanced",
+        "experimental",
         "native-run"
       ],
       "aliases": [],
