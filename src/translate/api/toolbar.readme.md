@@ -17,6 +17,6 @@ Toolbarに配置するボタンは`<ion-buttons>`要素の中に配置しなけ�
 
 ### Borders
 
-`md` モードでは、`<ion-header>`は下側にボックスシャドウを表示し、`<ion-footer>`は上側にボックスシャドウを受け取ります。`ios` モードでは、`<ion-header>`は下側に境界線を表示し、`<ion-footer>`は上側に境界線を表示します。要素に `no-border` 属性を追加すると、`md` ボックスシャドウと `md` 境界線の両方を削除できます。
+In `md` mode, the `<ion-header>` will receive a box-shadow on the bottom, and the `<ion-footer>` will receive a box-shadow on the top.  In `ios` mode, the `<ion-header>` will receive a border on the bottom, and the `<ion-footer>` will receive a border on the top.
 
 

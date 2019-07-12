@@ -1,12 +1,11 @@
 # ion-router-outlet
 
-Router OutletはAngularアプリ内のルーティングに使われるコンポーネントです。
-Router OutletはAngularに組み込まれているRouter Outletコンポーネントと同じように動作しますが、スタックナビゲーションを提供したり、ビューをアニメーションしたりするロジックが含まれています。
+Router outlet is a component used in routing within an Angular app. It behaves in a similar way to Angular's built-in router outlet component, but contains the logic for providing a stacked navigation, and animating views in and out.
 
+> Note: this component should only be used with Angular projects. For vanilla or Stencil JavaScript projects, use [`ion-router`](../router) and [`ion-route`](../route).
 
-> Note: これはAngularプロジェクト専用です。JavaScript標準の場合は、代わりに `ion-router` と `ion-route` を使用します。
+Although router outlet has methods for navigating around, it's recommended to use the navigation methods in Angular's router.
 
-Router Outletにはナビゲートする方法がありますが、Angularルータのナビゲーション方法を使用することをお勧めします。
 
 
 ### ライフサイクルHook

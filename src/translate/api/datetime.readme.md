@@ -1,10 +1,11 @@
 # ion-datetime
 
-datetime はページの下部にピッカー・インターフェースを表示し、
-ユーザーが日付と時刻を簡単に選択できるようにします。
-ピッカーには、年、月、日、時間、分の値を個別に選択するためのスクロール可能な列が表示されます。
-日時は `datetime-local` 型のネイティブの `input` 要素に似ていますが、Ionicのdatetimeコンポーネントを使用すると、
-希望する形式で日付と時刻を表示したり、日時の値を管理したりすることが容易になります。
+Datetimes present a picker interface from the bottom of a page, making it easy for
+users to select dates and times. The picker displays scrollable columns that can be
+used to individually select years, months, days, hours and minute values. Datetimes
+are similar to the native `input` elements of type `datetime-local`, however, Ionic's
+Datetime component makes it easy to display the date and time in a preferred format,
+and manage the datetime values.
 
 
 ## Display and Picker Formats
@@ -46,40 +47,30 @@ Names](#month-names-and-day-of-the-week-names) をご覧ください。
 `displayFormat` の入力プロパティーは、datetimeコンポーネント内で
 datetimeの値を書式付きテキストとして出力する方法を指定します。
 
-次の例の `<ion-datetime>` では、月は `short name` 、日は先頭に0を付けた数字、
-カンマを置いて、年を4桁で仕様しています。
-日付のほかに、時刻も24時間表示と分を利用しています。
-区切り文字として任意の文字を使用できます。
-この書式を使用した表示例は、`Jun 17, 2005 11:06` となります。
+A few examples are provided in the chart below. The formats mentioned
+above can be passed in to the display format in any combination.
 
-```html
-<ion-item>
-  <ion-label>Date</ion-label>
-  <ion-datetime display-format="MMM DD, YYYY HH:mm"></ion-datetime>
-</ion-item>
-```
+| Display Format        | Example                 |
+| ----------------------| ----------------------- |
+| `M-YYYY`              | `6-2005`                |
+| `MM/YY`               | `06/05`                 |
+| `MMM YYYY`            | `Jun 2005`              |
+| `YYYY, MMMM`          | `2005, June`            |
+| `MMM DD, YYYY HH:mm`  | `Jun 17, 2005 11:06`    |
 
 **Important**: `ion-datetime` will always display values relative to the user's timezone.
 Given a value of `09:00:00+01:00`, the datetime component will
 display it as `04:00:00-04:00` for users in a `-04:00` timezone offset.
 
+
 ### Picker Format
 
-`pickerFormat` 入力プロパティは、ピッカー・インタフェースで表示する列、
-列の順序、および各列内で使用する形式を決定します。
-`pickerFormat` が指定されていない場合は、
-`displayFormat` がデフォルトになります。
+The `pickerFormat` property determines which columns should be shown in the picker
+interface, the order of the columns, and which format to use within each
+column. If `pickerFormat` is not provided then it will use the value of
+`displayFormat`. Refer to the chart in the [Display Format](#display-format) section
+for some formatting examples.
 
-次の例では、 `<ion-datetime>`コンポーネントの表示には `06/2020` のような
-`MM/YYYY` 形式が使用されます。
-ただし、ピッカー・インタフェースでは、月の `long name` 、4桁の年の列が表示されます。
-
-```html
-<ion-item>
-  <ion-label>Date</ion-label>
-  <ion-datetime display-format="MM/YYYY" picker-format="MMMM YYYY"></ion-datetime>
-</ion-item>
-```
 
 ### Datetime Data
 
@@ -132,58 +123,39 @@ Ionic はdatetime値が最初に指定されたのと同じISOフォーマット
 
 ## Min and Max Datetimes
 
-日付はどちらの方向（過去・未来）にも無限であるため、ユーザーが選択するには、
-選択できる日付を何らかの形で制限する必要があります。
-既定では、最大の日付は現在の年の終わりまでで、
-最小の日付は100年前の年の初めからです。
+Dates are infinite in either direction, so for a user's selection there should
+be at least some form of restricting the dates that can be selected. By default,
+the maximum date is to the end of the current year, and the minimum date is from
+the beginning of the year that was 100 years ago.
 
-日時の `min` と `max` をカスタマイズするために、
-過去100年のデフォルト値ではなく、アプリケーションのユースケースに
-適した最小値と最大値を入力できます。
-上の表と同じ IS0 8601 format に従って、
-各コンポーネントはユーザーが選択できる日付を制限できます。
-以下に、2016年の初めから2020年の10月31日までの日付選択を制限する例を示します。
+To customize the minimum and maximum datetime values, the `min` and `max`
+component properties can be provided which may make more sense for the app's
+use-case, rather than the default of the last 100 years. Following the same IS0
+8601 format listed in the table above, each component can restrict which dates
+can be selected by the user. By passing `2016` to the `min` property and `2020-10-31`
+to the `max` property, the datetime will restrict the date selection between the
+beginning of 2016, and October 31st of 2020.
 
-```html
-<ion-item>
-  <ion-label>Date</ion-label>
-  <ion-datetime display-format="MMMM YYYY" min="2016" max="2020-10-31"></ion-datetime>
-</ion-item>
-```
 
 ## Month Names and Day of the Week Names
 
-現時点では、言語またはロケールの設定ひとつで、
-月や曜日の名前を、正しい言語/スペルで自動的に
-選択することができる標準機能はありません。
+At this time, there is no one-size-fits-all standard to automatically choose the
+correct language/spelling for a month name, or day of the week name, depending
+on the language or locale.
 
-幸いなことに、 [Intl.DatetimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DatetimeFormat) を
-[ほとんどのブラウザが](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DatetimeFormat#Browser_compatibility) 採用しています。
+The good news is that there is an [Intl.DatetimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DatetimeFormat)
+standard which [most browsers](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DatetimeFormat#Browser_compatibility) have adopted.
 
-しかし現時点では、この標準はすべての一般的なブラウザーで完全に実装されているわけではないため、
-Ionicがこの標準を利用することはまだできません。
+However, at this time the standard has not been fully implemented by all popular browsers
+so Ionic is unavailable to take advantage of it yet.
 
-また、Angularは国際化サービスも提供しているが、まだ開発途中であるため、
-現時点ではIonicはこれに依存していません。
+Additionally, Angular also provides an internationalization service, but it is still
+under heavy development so Ionic does not depend on it at this time.
 
-現在のベスト・プラクティスは、デフォルトの英語バージョンの月名と曜日名以外の名前を使用する必要がある場合に
-一連の名前を指定することです。
-月名と日名は、アプリケーション・レベルまたは個別の `ion-datetime` レベルで構成できます。
+The current best practice is to provide an array of names if the app needs to use names other
+than the default English version of month and day names. The month names and day names can be
+either configured at the app level, or individual `ion-datetime` level.
 
-### Component Input Level
-
-```html
-<ion-item>
-  <ion-label>Período</ion-label>
-  <ion-datetime
-    display-format="DDDD MMM D, YYYY"
-    month-names="janeiro, fevereiro, mar\u00e7o, ..."
-    month-short-names="jan, fev, mar, ..."
-    day-names="domingo, segunda-feira, ter\u00e7a-feira, ..."
-    day-short-names="dom, seg, ter, ...">
-  </ion-datetime>
-</ion-item>
-```
 
 ### Advanced Datetime Validation and Manipulation
 
@@ -197,9 +169,3 @@ datetimeの値を特定の形式から解析したり、操作したり(たと�
 あるいは特定のロケールにデータをフォーマットしたりする必要がある場合は、
 [date-fns](https://date-fns.org) を使用してJavaScriptの日付を処理することを強くお勧めします。
 
-```html
-<ion-item>
-  <ion-label>Date</ion-label>
-  <ion-datetime display-format="MM/DD/YYYY"></ion-datetime>
-</ion-item>
-```
