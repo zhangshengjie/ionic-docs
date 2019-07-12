@@ -3,9 +3,15 @@
   "encapsulation": "shadow",
   "readme": "# ion-list-header\n\nListHeader a header component for a list.\nUnlike ItemDivider, ListHeaders are styled to be stand-out from the rest of the list items.\n\n",
   "docs": "ListHeader a header component for a list.\nUnlike ItemDivider, ListHeaders are styled to be stand-out from the rest of the list items.",
-  "docsTags": [],
+  "docsTags": [
+    {
+      "text": "{\"ios\" | \"md\"} mode - The mode determines which platform styles to use.",
+      "name": "virtualProp"
+    }
+  ],
   "usage": {
-    "javascript": "```html\n<ion-list>\n  <ion-list-header>\n    <ion-label>Items</ion-label>\n  </ion-list-header>\n  <ion-item>Item 1</ion-item>\n  <ion-item>Item 2</ion-item>\n  <ion-item>Item 3</ion-item>\n  <ion-item>Item 4</ion-item>\n  <ion-item>Item 5</ion-item>\n</ion-list>\n```\n"
+    "javascript": "```html\n<ion-list>\n  <ion-list-header>\n    <ion-label>Items</ion-label>\n  </ion-list-header>\n  <ion-item>Item 1</ion-item>\n  <ion-item>Item 2</ion-item>\n  <ion-item>Item 3</ion-item>\n  <ion-item>Item 4</ion-item>\n  <ion-item>Item 5</ion-item>\n</ion-list>\n```\n",
+    "react": "```tsx\nimport React from 'react';\nimport { IonList, IonItem, IonLabel, IonContent, IonListHeader } from '@ionic/react';\n\nexport const ListHeaderExample: React.FunctionComponent = () => (\n  <IonContent>\n    <IonList>\n      <IonListHeader>\n        <IonLabel>Items</IonLabel>\n      </IonListHeader>\n      <IonItem>Item 1</IonItem>\n      <IonItem>Item 2</IonItem>\n      <IonItem>Item 3</IonItem>\n      <IonItem>Item 4</IonItem>\n      <IonItem>Item 5</IonItem>\n    </IonList>\n  </IonContent>\n);\n```"
   },
   "props": [
     {
@@ -27,7 +33,7 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
-      "optional": false,
+      "optional": true,
       "required": false
     }
   ],

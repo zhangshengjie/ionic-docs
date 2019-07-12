@@ -16,13 +16,7 @@
         "docs": ""
       },
       "signature": "create<T extends ComponentRef>(options: PopoverOptions<T>) => Promise<HTMLIonPopoverElement>",
-      "parameters": [
-        {
-          "name": "options",
-          "type": "PopoverOptions<T>",
-          "docs": "The options to use to create the popover."
-        }
-      ],
+      "parameters": [],
       "docs": "Create a popover overlay with popover options.",
       "docsTags": [
         {
@@ -38,23 +32,7 @@
         "docs": ""
       },
       "signature": "dismiss(data?: any, role?: string | undefined, id?: string | undefined) => Promise<boolean>",
-      "parameters": [
-        {
-          "name": "data",
-          "type": "any",
-          "docs": "Any data to emit in the dismiss events."
-        },
-        {
-          "name": "role",
-          "type": "string | undefined",
-          "docs": "The role of the element that is dismissing the popover.\nThis can be useful in a button handler for determining which button was\nclicked to dismiss the popover.\nSome examples include: ``\"cancel\"`, `\"destructive\"`, \"selected\"`, and `\"backdrop\"`."
-        },
-        {
-          "name": "id",
-          "type": "string | undefined",
-          "docs": "The id of the popover to dismiss. If an id is not provided, it will dismiss the most recently opened popover."
-        }
-      ],
+      "parameters": [],
       "docs": "Dismiss the open popover overlay.",
       "docsTags": [
         {

@@ -16,13 +16,7 @@
         "docs": ""
       },
       "signature": "create(options?: LoadingOptions | undefined) => Promise<HTMLIonLoadingElement>",
-      "parameters": [
-        {
-          "name": "options",
-          "type": "LoadingOptions | undefined",
-          "docs": "The options to use to create the loading."
-        }
-      ],
+      "parameters": [],
       "docs": "Create a loading overlay with loading options.",
       "docsTags": [
         {
@@ -38,23 +32,7 @@
         "docs": ""
       },
       "signature": "dismiss(data?: any, role?: string | undefined, id?: string | undefined) => Promise<boolean>",
-      "parameters": [
-        {
-          "name": "data",
-          "type": "any",
-          "docs": "Any data to emit in the dismiss events."
-        },
-        {
-          "name": "role",
-          "type": "string | undefined",
-          "docs": "The role of the element that is dismissing the loading.\nThis can be useful in a button handler for determining which button was\nclicked to dismiss the loading.\nSome examples include: ``\"cancel\"`, `\"destructive\"`, \"selected\"`, and `\"backdrop\"`."
-        },
-        {
-          "name": "id",
-          "type": "string | undefined",
-          "docs": "The id of the loading to dismiss. If an id is not provided, it will dismiss the most recently opened loading."
-        }
-      ],
+      "parameters": [],
       "docs": "Dismiss the open loading overlay.",
       "docsTags": [
         {

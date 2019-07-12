@@ -3,11 +3,16 @@
   "encapsulation": "shadow",
   "readme": "# ion-toast\n\nA Toast is a subtle notification commonly used in modern applications. It can be used to provide feedback about an operation or to display a system message. The toast appears on top of the app's content, and can be dismissed by the app to resume user interaction with the app.\n\n### Creating\n\nAll of the toast options should be passed in the create method. The message to display should be passed in the `message` property. The `showCloseButton` option can be set to true in order to display a close button on the toast. See the properties below for all available options.\n\n### Positioning\n\nToasts can be positioned at the top, bottom or middle of the viewport. The position can be passed upon creation. The possible values are `top`, `bottom` and `middle`. If the position is not specified, the toast will be displayed at the bottom of the viewport.\n\n### Dismissing\n\nThe toast can be dismissed automatically after a specific amount of time by passing the number of milliseconds to display it in the `duration` of the toast options. If `showCloseButton` is set to true, then the close button will dismiss the toast. To dismiss the toast after creation, call the `dismiss()` method on the instance.\n\n",
   "docs": "A Toast is a subtle notification commonly used in modern applications. It can be used to provide feedback about an operation or to display a system message. The toast appears on top of the app's content, and can be dismissed by the app to resume user interaction with the app.",
-  "docsTags": [],
+  "docsTags": [
+    {
+      "text": "{\"ios\" | \"md\"} mode - The mode determines which platform styles to use.",
+      "name": "virtualProp"
+    }
+  ],
   "usage": {
     "angular": "```typescript\nimport { Component } from '@angular/core';\nimport { ToastController } from '@ionic/angular';\n\n@Component({\n  selector: 'toast-example',\n  templateUrl: 'toast-example.html',\n  styleUrls: ['./toast-example.css'],\n})\nexport class ToastExample {\n\n  constructor(public toastController: ToastController) {}\n\n  async presentToast() {\n    const toast = await this.toastController.create({\n      message: 'Your settings have been saved.',\n      duration: 2000\n    });\n    toast.present();\n  }\n\n  async presentToastWithOptions() {\n    const toast = await this.toastController.create({\n      header: 'Toast header',\n      message: 'Click to Close',\n      position: 'top',\n      buttons: [\n        {\n          side: 'start',\n          icon: 'star',\n          text: 'Favorite',\n          handler: () => {\n            console.log('Favorite clicked');\n          }\n        }, {\n          text: 'Done',\n          role: 'cancel',\n          handler: () => {\n            console.log('Cancel clicked');\n          }\n        }\n      ]\n    });\n    toast.present();\n  }\n\n}\n```\n",
     "javascript": "```javascript\nasync function presentToast() {\n  const toastController = document.querySelector('ion-toast-controller');\n  await toastController.componentOnReady();\n\n  const toast = await toastController.create({\n    message: 'Your settings have been saved.',\n    duration: 2000\n  });\n  return await toast.present();\n}\n\nasync function presentToastWithOptions() {\n  const toastController = document.querySelector('ion-toast-controller');\n  await toastController.componentOnReady();\n\n  const toast = await toastController.create({\n    header: 'Toast header',\n    message: 'Click to Close',\n    position: 'top',\n    buttons: [\n      {\n        side: 'start',\n        icon: 'star',\n        text: 'Favorite',\n        handler: () => {\n          console.log('Favorite clicked');\n        }\n      }, {\n        text: 'Done',\n        role: 'cancel',\n        handler: () => {\n          console.log('Cancel clicked');\n        }\n      }\n    ]\n  });\n\n  return await toast.present();\n}\n```\n",
-    "react": "```tsx\nimport React, { Component } from 'react'\nimport { IonToast } from '@ionic/react';\n\ntype Props = {}\ntype State = {\n  showToast1: boolean\n  showToast2: boolean\n}\n\nexport class Toast extends Component<Props, State> {\n\n  constructor(props: Props) {\n    super(props);\n    this.state = {\n      showToast1: false\n      showToast2: false\n    };\n  }\n\n  render() {\n    return (\n      <IonToast\n        isOpen={this.state.showToast1}\n        onDidDismiss={() => this.setState(() => ({ showToast1: false }))}\n        message='Your settings have been saved.'\n        duration={200}\n      >\n      </IonToast>\n\n      <IonToast\n        isOpen={this.state.showToast2}\n        onDidDismiss={() => this.setState(() => ({ showToast2: false }))}\n        message='Click to Close'\n        position='top'\n        buttons={[{\n          side: 'start',\n          icon: 'star',\n          text: 'Favorite',\n          handler: () => {\n            console.log('Favorite clicked');\n          }\n        }, {\n          text: 'Done',\n          role: 'cancel',\n          handler: () => {\n            console.log('Cancel clicked');\n          }\n        }]}\n      >\n      </IonToast>\n    );\n  }\n}\n```\n"
+    "react": "```tsx\nimport React, { useState } from 'react';\nimport { IonToast, IonContent, IonButton } from '@ionic/react';\n\nexport const ToastExample: React.FunctionComponent = () => {\n  const [showToast1, setShowToast1] = useState(false);\n  const [showToast2, setShowToast2] = useState(false);\n\n  return (\n    <IonContent>\n      <IonButton onClick={() => setShowToast1(true)} expand=\"block\">Show Toast 1</IonButton>\n      <IonButton onClick={() => setShowToast2(true)} expand=\"block\">Show Toast 2</IonButton>\n      <IonToast\n        isOpen={showToast1}\n        onDidDismiss={() => setShowToast1(false)}\n        message=\"Your settings have been saved.\"\n        duration={200}\n      />\n\n      <IonToast\n        isOpen={showToast2}\n        onDidDismiss={() => setShowToast2(false)}\n        message=\"Click to Close\"\n        position=\"top\"\n        buttons={[\n          {\n            side: 'start',\n            icon: 'star',\n            text: 'Favorite',\n            handler: () => {\n              console.log('Favorite clicked');\n            }\n          },\n          {\n            text: 'Done',\n            role: 'cancel',\n            handler: () => {\n              console.log('Cancel clicked');\n            }\n          }\n        ]}\n      />\n    </IonContent>\n  );\n};\n```\n"
   },
   "props": [
     {
@@ -139,7 +144,7 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
-      "optional": false,
+      "optional": true,
       "required": false
     },
     {
@@ -187,18 +192,7 @@
         "docs": ""
       },
       "signature": "dismiss(data?: any, role?: string | undefined) => Promise<boolean>",
-      "parameters": [
-        {
-          "name": "data",
-          "type": "any",
-          "docs": "Any data to emit in the dismiss events."
-        },
-        {
-          "name": "role",
-          "type": "string | undefined",
-          "docs": "The role of the element that is dismissing the toast.\nThis can be useful in a button handler for determining which button was\nclicked to dismiss the toast.\nSome examples include: ``\"cancel\"`, `\"destructive\"`, \"selected\"`, and `\"backdrop\"`."
-        }
-      ],
+      "parameters": [],
       "docs": "Dismiss the toast overlay after it has been presented.",
       "docsTags": [
         {
@@ -248,7 +242,7 @@
   "events": [
     {
       "event": "ionToastDidDismiss",
-      "detail": "OverlayEventDetail",
+      "detail": "OverlayEventDetail<any>",
       "bubbles": true,
       "cancelable": true,
       "composed": true,
@@ -266,7 +260,7 @@
     },
     {
       "event": "ionToastWillDismiss",
-      "detail": "OverlayEventDetail",
+      "detail": "OverlayEventDetail<any>",
       "bubbles": true,
       "cancelable": true,
       "composed": true,
@@ -327,7 +321,7 @@
     {
       "name": "--end",
       "annotation": "prop",
-      "docs": "Position from the end"
+      "docs": "Position from the right if direction is left-to-right, and from the left if direction is right-to-left"
     },
     {
       "name": "--height",
@@ -357,7 +351,7 @@
     {
       "name": "--start",
       "annotation": "prop",
-      "docs": "Position from the start"
+      "docs": "Position from the left if direction is left-to-right, and from the right if direction is right-to-left"
     },
     {
       "name": "--width",

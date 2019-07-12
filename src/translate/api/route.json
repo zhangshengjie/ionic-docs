@@ -1,8 +1,8 @@
 {
   "tag": "ion-route",
   "encapsulation": "none",
-  "readme": "# ion-route\n\nRouter is a component that can take a component, and render it when the Browser URl matches the url prop\n\n> Note: this is only meant for vanilla JavaScript project. For Angular projects, use `ion-router-outlet` and the Angular router.\n",
-  "docs": "Router is a component that can take a component, and render it when the Browser URl matches the url prop\n\n> Note: this is only meant for vanilla JavaScript project. For Angular projects, use `ion-router-outlet` and the Angular router.",
+  "readme": "# ion-route\n\nThe route component takes a component and renders it when the Browser URl matches the url property.\n\n> Note: this component should only be used with vanilla and Stencil JavaScript projects. For Angular projects, use [`ion-router-outlet`](../router-outlet) and the Angular router.\n",
+  "docs": "The route component takes a component and renders it when the Browser URl matches the url property.\n\n> Note: this component should only be used with vanilla and Stencil JavaScript projects. For Angular projects, use [`ion-router-outlet`](../router-outlet) and the Angular router.",
   "docsTags": [],
   "usage": {},
   "props": [

@@ -14,13 +14,7 @@
         "docs": ""
       },
       "signature": "create(options: ActionSheetOptions) => Promise<HTMLIonActionSheetElement>",
-      "parameters": [
-        {
-          "name": "options",
-          "type": "ActionSheetOptions",
-          "docs": "The options to use to create the action sheet."
-        }
-      ],
+      "parameters": [],
       "docs": "Create an action sheet overlay with action sheet options.",
       "docsTags": [
         {
@@ -36,23 +30,7 @@
         "docs": ""
       },
       "signature": "dismiss(data?: any, role?: string | undefined, id?: string | undefined) => Promise<boolean>",
-      "parameters": [
-        {
-          "name": "data",
-          "type": "any",
-          "docs": "Any data to emit in the dismiss events."
-        },
-        {
-          "name": "role",
-          "type": "string | undefined",
-          "docs": "The role of the element that is dismissing the action sheet.\nThis can be useful in a button handler for determining which button was\nclicked to dismiss the action sheet.\nSome examples include: ``\"cancel\"`, `\"destructive\"`, \"selected\"`, and `\"backdrop\"`."
-        },
-        {
-          "name": "id",
-          "type": "string | undefined",
-          "docs": "The id of the action sheet to dismiss. If an id is not provided, it will dismiss the most recently opened action sheet."
-        }
-      ],
+      "parameters": [],
       "docs": "Dismiss the open action sheet overlay.",
       "docsTags": [
         {

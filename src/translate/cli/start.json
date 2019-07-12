@@ -49,7 +49,7 @@
     {
       "name": "type",
       "type": "string",
-      "summary": "Type of project to start (e.g. `angular`, `ionic-angular`, `ionic1`)",
+      "summary": "Type of project to start (e.g. `angular`, `react`, `ionic-angular`, `ionic1`)",
       "groups": [],
       "aliases": [],
       "spec": {
@@ -107,8 +107,7 @@
     {
       "name": "link",
       "type": "boolean",
-      "summary": "Do not ask to connect the app to Ionic Appflow",
-      "default": true,
+      "summary": "Connect your new app to Ionic",
       "groups": [
         "advanced"
       ],
@@ -120,20 +119,8 @@
     {
       "name": "id",
       "type": "string",
-      "summary": "Specify an app ID from the Ionic Appflow to link",
+      "summary": "Specify an Ionic App ID to link",
       "groups": [],
-      "aliases": [],
-      "spec": {
-        "value": "id"
-      }
-    },
-    {
-      "name": "pro-id",
-      "type": "string",
-      "summary": "Use the `--id` option",
-      "groups": [
-        "deprecated"
-      ],
       "aliases": [],
       "spec": {
         "value": "id"
@@ -142,7 +129,7 @@
     {
       "name": "project-id",
       "type": "string",
-      "summary": "Specify a slug for your app (used for the directory name and npm/yarn package name)",
+      "summary": "Specify a slug for your app (used for the directory name and package name)",
       "groups": [
         "advanced"
       ],

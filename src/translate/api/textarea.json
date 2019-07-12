@@ -3,11 +3,16 @@
   "encapsulation": "scoped",
   "readme": "# ion-textarea\n\nThe textarea component is used for multi-line text input. A native textarea element is rendered inside of the component. The user experience and interactivity of the textarea component is improved by having control over the native textarea.\n\nUnlike the native textarea element, the Ionic textarea does not support loading its value from the inner content. The textarea value should be set in the `value` attribute.\n\nThe textarea component accepts the [native textarea attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea) in addition to the Ionic properties.\n\n\n",
   "docs": "The textarea component is used for multi-line text input. A native textarea element is rendered inside of the component. The user experience and interactivity of the textarea component is improved by having control over the native textarea.\n\nUnlike the native textarea element, the Ionic textarea does not support loading its value from the inner content. The textarea value should be set in the `value` attribute.\n\nThe textarea component accepts the [native textarea attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea) in addition to the Ionic properties.",
-  "docsTags": [],
+  "docsTags": [
+    {
+      "text": "{\"ios\" | \"md\"} mode - The mode determines which platform styles to use.",
+      "name": "virtualProp"
+    }
+  ],
   "usage": {
     "angular": "```html\n<!-- Default textarea -->\n<ion-textarea></ion-textarea>\n\n<!-- Textarea in an item with a placeholder -->\n<ion-item>\n  <ion-textarea placeholder=\"Enter more information here...\"></ion-textarea>\n</ion-item>\n\n<!-- Textarea in an item with a floating label -->\n<ion-item>\n  <ion-label position=\"floating\">Description</ion-label>\n  <ion-textarea></ion-textarea>\n</ion-item>\n\n<!-- Disabled and readonly textarea in an item with a stacked label -->\n<ion-item>\n  <ion-label position=\"stacked\">Summary</ion-label>\n  <ion-textarea\n    disabled\n    readonly\n    value=\"Ionic enables developers to build performant, high-quality mobile apps.\">\n  </ion-textarea>\n</ion-item>\n\n<!-- Textarea that clears the value on edit -->\n<ion-item>\n  <ion-label>Comment</ion-label>\n  <ion-textarea clearOnEdit=\"true\"></ion-textarea>\n</ion-item>\n\n<!-- Textarea with custom number of rows and cols -->\n<ion-item>\n  <ion-label>Notes</ion-label>\n  <ion-textarea rows=\"6\" cols=\"20\" placeholder=\"Enter any notes here...\"></ion-textarea>\n</ion-item>\n```\n",
     "javascript": "```html\n<!-- Default textarea -->\n<ion-textarea></ion-textarea>\n\n<!-- Textarea in an item with a placeholder -->\n<ion-item>\n  <ion-textarea placeholder=\"Enter more information here...\"></ion-textarea>\n</ion-item>\n\n<!-- Textarea in an item with a floating label -->\n<ion-item>\n  <ion-label position=\"floating\">Description</ion-label>\n  <ion-textarea></ion-textarea>\n</ion-item>\n\n<!-- Disabled and readonly textarea in an item with a stacked label -->\n<ion-item>\n  <ion-label position=\"stacked\">Summary</ion-label>\n  <ion-textarea\n    disabled\n    readonly\n    value=\"Ionic enables developers to build performant, high-quality mobile apps.\">\n  </ion-textarea>\n</ion-item>\n\n<!-- Textarea that clears the value on edit -->\n<ion-item>\n  <ion-label>Comment</ion-label>\n  <ion-textarea clear-on-edit=\"true\"></ion-textarea>\n</ion-item>\n\n<!-- Textarea with custom number of rows and cols -->\n<ion-item>\n  <ion-label>Notes</ion-label>\n  <ion-textarea rows=\"6\" cols=\"20\" placeholder=\"Enter any notes here...\"></ion-textarea>\n</ion-item>\n```\n",
-    "react": "```tsx\nimport React from 'react';\n\nimport { IonTextarea, IonItem, IonLabel } from '@ionic/react';\n\nconst Example: React.SFC<{}> = () => (\n  <>\n    {/*-- Default textarea --*/}\n    <IonTextarea></IonTextarea>\n\n    {/*-- Textarea in an item with a placeholder --*/}\n    <IonItem>\n      <IonTextarea placeholder=\"Enter more information here...\"></IonTextarea>\n    </IonItem>\n\n    {/*-- Textarea in an item with a floating label --*/}\n    <IonItem>\n      <IonLabel position=\"floating\">Description</IonLabel>\n      <IonTextarea></IonTextarea>\n    </IonItem>\n\n    {/*-- Disabled and readonly textarea in an item with a stacked label --*/}\n    <IonItem>\n      <IonLabel position=\"stacked\">Summary</IonLabel>\n      <IonTextarea\n        disabled\n        readonly\n        value=\"Ionic enables developers to build performant, high-quality mobile apps.\">\n      </IonTextarea>\n    </IonItem>\n\n    {/*-- Textarea that clears the value on edit --*/}\n    <IonItem>\n      <IonLabel>Comment</IonLabel>\n      <IonTextarea clearOnEdit={true}></IonTextarea>\n    </IonItem>\n\n    {/*-- Textarea with custom number of rows and cols --*/}\n    <IonItem>\n      <IonLabel>Notes</IonLabel>\n      <IonTextarea rows={6} cols={20} placeholder=\"Enter any notes here...\"></IonTextarea>\n    </IonItem>\n  </>\n);\n\nexport default Example;\n```\n",
+    "react": "```tsx\nimport React from 'react';\nimport { IonTextarea, IonItem, IonLabel, IonContent } from '@ionic/react';\n\nexport const TextAreaExample: React.FunctionComponent = () => (\n  <IonContent>\n    {/*-- Default textarea --*/}\n    <IonTextarea></IonTextarea>\n\n    {/*-- Textarea in an item with a placeholder --*/}\n    <IonItem>\n      <IonTextarea placeholder=\"Enter more information here...\"></IonTextarea>\n    </IonItem>\n\n    {/*-- Textarea in an item with a floating label --*/}\n    <IonItem>\n      <IonLabel position=\"floating\">Description</IonLabel>\n      <IonTextarea></IonTextarea>\n    </IonItem>\n\n    {/*-- Disabled and readonly textarea in an item with a stacked label --*/}\n    <IonItem>\n      <IonLabel position=\"stacked\">Summary</IonLabel>\n      <IonTextarea\n        disabled\n        readonly\n        value=\"Ionic enables developers to build performant, high-quality mobile apps.\">\n      </IonTextarea>\n    </IonItem>\n\n    {/*-- Textarea that clears the value on edit --*/}\n    <IonItem>\n      <IonLabel>Comment</IonLabel>\n      <IonTextarea clearOnEdit={true}></IonTextarea>\n    </IonItem>\n\n    {/*-- Textarea with custom number of rows and cols --*/}\n    <IonItem>\n      <IonLabel>Notes</IonLabel>\n      <IonTextarea rows={6} cols={20} placeholder=\"Enter any notes here...\"></IonTextarea>\n    </IonItem>\n  </IonContent>\n);\n```\n",
     "vue": "```html\n<template>\n  <!-- Default textarea -->\n  <ion-textarea></ion-textarea>\n\n  <!-- Textarea in an item with a placeholder -->\n  <ion-item>\n    <ion-textarea placeholder=\"Enter more information here...\"></ion-textarea>\n  </ion-item>\n\n  <!-- Textarea in an item with a floating label -->\n  <ion-item>\n    <ion-label position=\"floating\">Description</ion-label>\n    <ion-textarea></ion-textarea>\n  </ion-item>\n\n  <!-- Disabled and readonly textarea in an item with a stacked label -->\n  <ion-item>\n    <ion-label position=\"stacked\">Summary</ion-label>\n    <ion-textarea\n      disabled\n      readonly\n      value=\"Ionic enables developers to build performant, high-quality mobile apps.\">\n    </ion-textarea>\n  </ion-item>\n\n  <!-- Textarea that clears the value on edit -->\n  <ion-item>\n    <ion-label>Comment</ion-label>\n    <ion-textarea clearOnEdit=\"true\"></ion-textarea>\n  </ion-item>\n\n  <!-- Textarea with custom number of rows and cols -->\n  <ion-item>\n    <ion-label>Notes</ion-label>\n    <ion-textarea rows=\"6\" cols=\"20\" placeholder=\"Enter any notes here...\"></ion-textarea>\n  </ion-item>\n</template>\n```\n"
   },
   "props": [
@@ -135,7 +140,7 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
-      "optional": false,
+      "optional": true,
       "required": false
     },
     {
@@ -247,10 +252,10 @@
     {
       "name": "setFocus",
       "returns": {
-        "type": "void",
+        "type": "Promise<void>",
         "docs": ""
       },
-      "signature": "setFocus() => void",
+      "signature": "setFocus() => Promise<void>",
       "parameters": [],
       "docs": "Sets focus on the specified `ion-textarea`. Use this method instead of the global\n`input.focus()`.",
       "docsTags": []
@@ -318,12 +323,12 @@
     {
       "name": "--padding-end",
       "annotation": "prop",
-      "docs": "End padding of the textarea"
+      "docs": "Right padding if direction is left-to-right, and left padding if direction is right-to-left of the textarea"
     },
     {
       "name": "--padding-start",
       "annotation": "prop",
-      "docs": "Start padding of the textarea"
+      "docs": "Left padding if direction is left-to-right, and right padding if direction is right-to-left of the textarea"
     },
     {
       "name": "--padding-top",

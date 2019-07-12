@@ -29,18 +29,7 @@
         "docs": ""
       },
       "signature": "addRipple(x: number, y: number) => Promise<() => void>",
-      "parameters": [
-        {
-          "name": "x",
-          "type": "number",
-          "docs": "The horizontal coordinate of where the ripple should start."
-        },
-        {
-          "name": "y",
-          "type": "number",
-          "docs": "The vertical coordinate of where the ripple should start."
-        }
-      ],
+      "parameters": [],
       "docs": "Adds the ripple effect to the parent element.",
       "docsTags": [
         {

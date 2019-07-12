@@ -5,28 +5,32 @@
   "docs": "The option button for an `ion-item-sliding`. Must be placed inside of an `<ion-item-options>`.\nYou can combine the `ionSwipe` event and the `expandable` directive to create a full swipe\naction for the item.",
   "docsTags": [
     {
-      "name": "slot",
-      "text": "- Content is placed between the named slots if provided without a slot."
+      "text": "{\"ios\" | \"md\"} mode - The mode determines which platform styles to use.",
+      "name": "virtualProp"
     },
     {
-      "name": "slot",
-      "text": "start - Content is placed to the left of the option text in LTR, and to the right in RTL."
+      "text": "- Content is placed between the named slots if provided without a slot.",
+      "name": "slot"
     },
     {
-      "name": "slot",
-      "text": "top - Content is placed above the option text."
+      "text": "start - Content is placed to the left of the option text in LTR, and to the right in RTL.",
+      "name": "slot"
     },
     {
-      "name": "slot",
-      "text": "icon-only - Should be used on an icon in an option that has no text."
+      "text": "top - Content is placed above the option text.",
+      "name": "slot"
     },
     {
-      "name": "slot",
-      "text": "bottom - Content is placed below the option text."
+      "text": "icon-only - Should be used on an icon in an option that has no text.",
+      "name": "slot"
     },
     {
-      "name": "slot",
-      "text": "end - Content is placed to the right of the option text in LTR, and to the left in RTL."
+      "text": "bottom - Content is placed below the option text.",
+      "name": "slot"
+    },
+    {
+      "text": "end - Content is placed to the right of the option text in LTR, and to the left in RTL.",
+      "name": "slot"
     }
   ],
   "usage": {},
@@ -55,6 +59,17 @@
       "required": false
     },
     {
+      "name": "download",
+      "type": "string | undefined",
+      "mutable": false,
+      "attr": "download",
+      "reflectToAttr": false,
+      "docs": "This attribute instructs browsers to download a URL instead of navigating to\nit, so the user will be prompted to save it as a local file. If the attribute\nhas a value, it is used as the pre-filled file name in the Save prompt\n(the user can still change the file name if they want).",
+      "docsTags": [],
+      "optional": false,
+      "required": false
+    },
+    {
       "name": "expandable",
       "type": "boolean",
       "mutable": false,
@@ -74,7 +89,7 @@
       "reflectToAttr": false,
       "docs": "Contains a URL or a URL fragment that the hyperlink points to.\nIf this property is set, an anchor tag will be rendered.",
       "docsTags": [],
-      "optional": true,
+      "optional": false,
       "required": false
     },
     {
@@ -85,6 +100,40 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
+      "optional": true,
+      "required": false
+    },
+    {
+      "name": "rel",
+      "type": "string | undefined",
+      "mutable": false,
+      "attr": "rel",
+      "reflectToAttr": false,
+      "docs": "Specifies the relationship of the target object to the link object.\nThe value is a space-separated list of [link types](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types).",
+      "docsTags": [],
+      "optional": false,
+      "required": false
+    },
+    {
+      "name": "target",
+      "type": "string | undefined",
+      "mutable": false,
+      "attr": "target",
+      "reflectToAttr": false,
+      "docs": "Specifies where to display the linked URL.\nOnly applies when an `href` is provided.\nSpecial keywords: `\"_blank\"`, `\"_self\"`, `\"_parent\"`, `\"_top\"`.",
+      "docsTags": [],
+      "optional": false,
+      "required": false
+    },
+    {
+      "name": "type",
+      "type": "\"button\" | \"reset\" | \"submit\"",
+      "mutable": false,
+      "attr": "type",
+      "reflectToAttr": false,
+      "docs": "The type of the button.",
+      "docsTags": [],
+      "default": "'button'",
       "optional": false,
       "required": false
     }

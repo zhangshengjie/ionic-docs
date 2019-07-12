@@ -23,18 +23,6 @@
   ],
   "options": [
     {
-      "name": "force",
-      "type": "boolean",
-      "summary": "Force regeneration of resources",
-      "groups": [],
-      "aliases": [
-        "f"
-      ],
-      "spec": {
-        "value": "true/false"
-      }
-    },
-    {
       "name": "icon",
       "type": "boolean",
       "summary": "Generate icon resources",
@@ -61,11 +49,22 @@
     {
       "name": "cordova-res",
       "type": "boolean",
-      "summary": "Use `cordova-res` instead of Ionic resource server",
-      "groups": [
-        "experimental"
-      ],
+      "summary": "Do not generate resources locally; use Ionic servers",
+      "default": true,
+      "groups": [],
       "aliases": [],
+      "spec": {
+        "value": "true/false"
+      }
+    },
+    {
+      "name": "force",
+      "type": "boolean",
+      "summary": "Force regeneration of resources",
+      "groups": [],
+      "aliases": [
+        "f"
+      ],
       "spec": {
         "value": "true/false"
       }

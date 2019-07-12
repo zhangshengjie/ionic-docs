@@ -3,11 +3,16 @@
   "encapsulation": "shadow",
   "readme": "# ion-tab-bar\n\nThe tab bar is a UI component that contains a set of [tab buttons](../tab-button). A tab bar must be provided inside of [tabs](../tabs) to communicate with each [tab](../tab).\n\n",
   "docs": "The tab bar is a UI component that contains a set of [tab buttons](../tab-button). A tab bar must be provided inside of [tabs](../tabs) to communicate with each [tab](../tab).",
-  "docsTags": [],
+  "docsTags": [
+    {
+      "text": "{\"ios\" | \"md\"} mode - The mode determines which platform styles to use.",
+      "name": "virtualProp"
+    }
+  ],
   "usage": {
     "angular": "```html\n<ion-tabs>\n  <!-- Tab bar -->\n  <ion-tab-bar slot=\"bottom\">\n    <ion-tab-button tab=\"account\">\n      <ion-icon name=\"person\"></ion-icon>\n    </ion-tab-button>\n    <ion-tab-button tab=\"contact\">\n      <ion-icon name=\"call\"></ion-icon>\n    </ion-tab-button>\n    <ion-tab-button tab=\"settings\">\n      <ion-icon name=\"settings\"></ion-icon>\n    </ion-tab-button>\n  </ion-tab-bar>\n</ion-tabs>\n```",
     "javascript": "```html\n<ion-tabs>\n  <!-- Tab views -->\n  <ion-tab tab=\"account\"></ion-tab>\n  <ion-tab tab=\"contact\"></ion-tab>\n  <ion-tab tab=\"settings\"></ion-tab>\n\n  <!-- Tab bar -->\n  <ion-tab-bar slot=\"bottom\">\n    <ion-tab-button tab=\"account\">\n      <ion-icon name=\"person\"></ion-icon>\n    </ion-tab-button>\n    <ion-tab-button tab=\"contact\">\n      <ion-icon name=\"call\"></ion-icon>\n    </ion-tab-button>\n    <ion-tab-button tab=\"settings\">\n      <ion-icon name=\"settings\"></ion-icon>\n    </ion-tab-button>\n  </ion-tab-bar>\n</ion-tabs>\n```",
-    "react": "```tsx\nimport React from 'react';\n\nimport { IonTabs, IonTabBar, IonTabButton, IonIcon } from '@ionic/react';\n\nconst Example: React.SFC<{}> = () => (\n\n  <IonTabs>\n    {/*-- Tab bar --*/}\n    <IonTabBar slot=\"bottom\">\n      <IonTabButton tab=\"account\">\n        <IonIcon name=\"person\" />\n      </IonTabButton>\n      <IonTabButton tab=\"contact\">\n        <IonIcon name=\"call\" />\n      </IonTabButton>\n      <IonTabButton tab=\"settings\">\n        <IonIcon name=\"settings\" />\n      </IonTabButton>\n    </IonTabBar>\n  </IonTabs>\n);\n\nexport default Example;\n```\n",
+    "react": "```tsx\nimport React from 'react';\nimport { IonTabs, IonTabBar, IonTabButton, IonIcon, IonContent } from '@ionic/react';\n\nexport const TabBarExample: React.FunctionComponent = () => (\n  <IonContent>\n    <IonTabs>\n      {/*-- Tab bar --*/}\n      <IonTabBar slot=\"bottom\">\n        <IonTabButton tab=\"account\">\n          <IonIcon name=\"person\" />\n        </IonTabButton>\n        <IonTabButton tab=\"contact\">\n          <IonIcon name=\"call\" />\n        </IonTabButton>\n        <IonTabButton tab=\"settings\">\n          <IonIcon name=\"settings\" />\n        </IonTabButton>\n      </IonTabBar>\n    </IonTabs>\n  </IonContent>\n);\n```\n",
     "vue": "```html\n<template>\n  <ion-tabs>\n    <!-- Tab bar -->\n    <ion-tab-bar slot=\"bottom\">\n      <ion-tab-button tab=\"account\">\n        <ion-icon name=\"person\"></ion-icon>\n      </ion-tab-button>\n      <ion-tab-button tab=\"contact\">\n        <ion-icon name=\"call\"></ion-icon>\n      </ion-tab-button>\n      <ion-tab-button tab=\"settings\">\n        <ion-icon name=\"settings\"></ion-icon>\n      </ion-tab-button>\n    </ion-tab-bar>\n  </ion-tabs>\n</template>\n```"
   },
   "props": [
@@ -30,7 +35,7 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
-      "optional": false,
+      "optional": true,
       "required": false
     },
     {

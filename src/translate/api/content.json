@@ -1,22 +1,22 @@
 {
   "tag": "ion-content",
   "encapsulation": "shadow",
-  "readme": "# ion-content\n\nContent component provides an easy to use content area with some useful methods\nto control the scrollable area. There should only be one content in a single\nview component.\n",
-  "docs": "Content component provides an easy to use content area with some useful methods\nto control the scrollable area. There should only be one content in a single\nview component.",
+  "readme": "# ion-content\n\nThe content component provides an easy to use content area with some useful methods\nto control the scrollable area. There should only be one content in a single\nview.\n\nContent, along with many other Ionic components, can be customized to modify its padding, margin, and more using the global styles provided in the [CSS Utilities](/docs/layout/css-utilities) or by individually styling it using CSS and the available [CSS Custom Properties](#css-custom-properties).\n",
+  "docs": "The content component provides an easy to use content area with some useful methods\nto control the scrollable area. There should only be one content in a single\nview.\n\nContent, along with many other Ionic components, can be customized to modify its padding, margin, and more using the global styles provided in the [CSS Utilities](/docs/layout/css-utilities) or by individually styling it using CSS and the available [CSS Custom Properties](#css-custom-properties).",
   "docsTags": [
     {
-      "name": "slot",
-      "text": "- Content is placed in the scrollable area if provided without a slot."
+      "text": "- Content is placed in the scrollable area if provided without a slot.",
+      "name": "slot"
     },
     {
-      "name": "slot",
-      "text": "fixed - Should be used for fixed content that should not scroll."
+      "text": "fixed - Should be used for fixed content that should not scroll.",
+      "name": "slot"
     }
   ],
   "usage": {
     "angular": "```html\n<ion-content\n  [scrollEvents]=\"true\"\n  (ionScrollStart)=\"logScrollStart()\"\n  (ionScroll)=\"logScrolling($event)\"\n  (ionScrollEnd)=\"logScrollEnd()\">\n</ion-content>\n```\n\n",
     "javascript": "```html\n<ion-content></ion-content>\n```\n\n```javascript\nvar content = document.querySelector('ion-content');\ncontent.scrollEvents = true;\ncontent.addEventListener('ionScrollStart', () => console.log('scroll start'));\ncontent.addEventListener('ionScroll', (ev) => console.log('scroll', ev.detail));\ncontent.addEventListener('ionScrollEnd', () => console.log('scroll end'));\n```\n",
-    "react": "```tsx\nimport React from 'react';\n\nimport { IonContent } from '@ionic/react';\n\nconst Example: React.SFC<{}> = () => (\n  <IonContent\n    scrollEvents={true}\n    onIonScrollStart={() => {}}\n    onIonScroll={() => {}}\n    onIonScrollEnd={() => {}}>\n  </IonContent>\n);\n\nexport default Example;\n```\n",
+    "react": "```tsx\nimport React from 'react';\nimport { IonContent } from '@ionic/react';\n\nconst ContentExample: React.FunctionComponent = () => (\n  <IonContent\n    scrollEvents={true}\n    onIonScrollStart={() => {}}\n    onIonScroll={() => {}}\n    onIonScrollEnd={() => {}}>\n  </IonContent>\n);\n```\n",
     "vue": "```html\n<template>\n  <ion-content\n    :scrollEvents=\"true\"\n    @ionScrollStart=\"logScrollStart()\"\n    @ionScroll=\"logScrolling($event)\"\n    @ionScrollEnd=\"logScrollEnd()\">\n  </ion-content>\n</template>\n```\n\n"
   },
   "props": [
@@ -110,23 +110,7 @@
         "docs": ""
       },
       "signature": "scrollByPoint(x: number, y: number, duration: number) => Promise<void>",
-      "parameters": [
-        {
-          "name": "x",
-          "type": "number",
-          "docs": "The amount to scroll by on the horizontal axis."
-        },
-        {
-          "name": "y",
-          "type": "number",
-          "docs": "The amount to scroll by on the vertical axis."
-        },
-        {
-          "name": "duration",
-          "type": "number",
-          "docs": "The amount of time to take scrolling by that amount."
-        }
-      ],
+      "parameters": [],
       "docs": "Scroll by a specified X/Y distance in the component.",
       "docsTags": [
         {
@@ -150,13 +134,7 @@
         "docs": ""
       },
       "signature": "scrollToBottom(duration?: number) => Promise<void>",
-      "parameters": [
-        {
-          "name": "duration",
-          "type": "number",
-          "docs": "The amount of time to take scrolling to the bottom. Defaults to `0`."
-        }
-      ],
+      "parameters": [],
       "docs": "Scroll to the bottom of the component.",
       "docsTags": [
         {
@@ -172,23 +150,7 @@
         "docs": ""
       },
       "signature": "scrollToPoint(x: number | null | undefined, y: number | null | undefined, duration?: number) => Promise<void>",
-      "parameters": [
-        {
-          "name": "x",
-          "type": "null | number | undefined",
-          "docs": "The point to scroll to on the horizontal axis."
-        },
-        {
-          "name": "y",
-          "type": "null | number | undefined",
-          "docs": "The point to scroll to on the vertical axis."
-        },
-        {
-          "name": "duration",
-          "type": "number",
-          "docs": "The amount of time to take scrolling to that point. Defaults to `0`."
-        }
-      ],
+      "parameters": [],
       "docs": "Scroll to a specified X/Y location in the component.",
       "docsTags": [
         {
@@ -212,13 +174,7 @@
         "docs": ""
       },
       "signature": "scrollToTop(duration?: number) => Promise<void>",
-      "parameters": [
-        {
-          "name": "duration",
-          "type": "number",
-          "docs": "The amount of time to take scrolling to the top. Defaults to `0`."
-        }
-      ],
+      "parameters": [],
       "docs": "Scroll to the top of the component.",
       "docsTags": [
         {
@@ -261,47 +217,47 @@
     {
       "name": "--background",
       "annotation": "prop",
-      "docs": "Background of the Content"
+      "docs": "Background of the content"
     },
     {
       "name": "--color",
       "annotation": "prop",
-      "docs": "Color of the Content"
+      "docs": "Color of the content"
     },
     {
       "name": "--keyboard-offset",
       "annotation": "prop",
-      "docs": "Keyboard offset of the Content"
+      "docs": "Keyboard offset of the content"
     },
     {
       "name": "--offset-bottom",
       "annotation": "prop",
-      "docs": "Offset bottom of the Content"
+      "docs": "Offset bottom of the content"
     },
     {
       "name": "--offset-top",
       "annotation": "prop",
-      "docs": "Offset top of the Content"
+      "docs": "Offset top of the content"
     },
     {
       "name": "--padding-bottom",
       "annotation": "prop",
-      "docs": "Padding bottom of the Content"
+      "docs": "Bottom padding of the content"
     },
     {
       "name": "--padding-end",
       "annotation": "prop",
-      "docs": "Padding end of the Content"
+      "docs": "Right padding if direction is left-to-right, and left padding if direction is right-to-left of the content"
     },
     {
       "name": "--padding-start",
       "annotation": "prop",
-      "docs": "Padding start of the Content"
+      "docs": "Left padding if direction is left-to-right, and right padding if direction is right-to-left of the content"
     },
     {
       "name": "--padding-top",
       "annotation": "prop",
-      "docs": "Padding top of the Content"
+      "docs": "Top padding of the content"
     }
   ],
   "slots": [

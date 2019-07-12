@@ -6,7 +6,7 @@
   "platforms": [
     "Android"
   ],
-  "repo": "https://github.com/xUnholy/cordova-device-accounts",
+  "repo": "https://github.com/xUnholy/cordova-device-accounts-v2",
   "cordovaPlugin": {
     "name": "cordova-device-accounts-v2"
   }

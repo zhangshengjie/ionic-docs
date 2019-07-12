@@ -26,7 +26,7 @@
     {
       "name": "type",
       "type": "string",
-      "summary": "Type of project (e.g. `angular`, `ionic-angular`, `ionic1`, `custom`)",
+      "summary": "Type of project (e.g. `angular`, `ionic-angular`, `ionic1`, `custom`, `react`, `vue`)",
       "groups": [],
       "aliases": [],
       "spec": {

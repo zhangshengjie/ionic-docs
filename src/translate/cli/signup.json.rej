@@ -1,0 +1,19 @@
+***************
+*** 3,10 ****
+    "namespace": [
+      "ionic"
+    ],
+-   "summary": "Create an account for Ionic Appflow",
+-   "description": "Learn more about Ionic Appflow: **[https://ion.link/appflow](https://ion.link/appflow)**\n\nIf you are having issues signing up, please get in touch with our [Support](https://ion.link/support-request).",
+    "footnotes": [],
+    "groups": [],
+    "exampleCommands": [],
+--- 3,10 ----
+    "namespace": [
+      "ionic"
+    ],
++   "summary": "Create an Ionic account",
++   "description": "If you are having issues signing up, please get in touch with our [Support](https://ion.link/support-request).",
+    "footnotes": [],
+    "groups": [],
+    "exampleCommands": [],

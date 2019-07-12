@@ -14,13 +14,7 @@
         "docs": ""
       },
       "signature": "close(menu?: string | null | undefined) => Promise<boolean>",
-      "parameters": [
-        {
-          "name": "menu",
-          "type": "null | string | undefined",
-          "docs": "The menuId or side of the menu to close."
-        }
-      ],
+      "parameters": [],
       "docs": "Close the menu. If a menu is specified, it will close that menu.\nIf no menu is specified, then it will close any menu that is open.\nIf it does not find any open menus, it will return `false`.",
       "docsTags": [
         {
@@ -36,18 +30,7 @@
         "docs": ""
       },
       "signature": "enable(enable: boolean, menu?: string | null | undefined) => Promise<HTMLIonMenuElement | undefined>",
-      "parameters": [
-        {
-          "name": "enable",
-          "type": "boolean",
-          "docs": "If `true`, the menu should be enabled."
-        },
-        {
-          "name": "menu",
-          "type": "null | string | undefined",
-          "docs": "The menuId or side of the menu to enable or disable."
-        }
-      ],
+      "parameters": [],
       "docs": "Enable or disable a menu. Disabling a menu will not allow gestures\nfor that menu or any calls to open it. This is useful when there are\nmultiple menus on the same side and only one of them should be allowed\nto open. Enabling a menu will automatically disable all other menus\non that side.",
       "docsTags": [
         {
@@ -67,13 +50,7 @@
         "docs": ""
       },
       "signature": "get(menu?: string | null | undefined) => Promise<HTMLIonMenuElement | undefined>",
-      "parameters": [
-        {
-          "name": "menu",
-          "type": "null | string | undefined",
-          "docs": "The menuId or side of the menu."
-        }
-      ],
+      "parameters": [],
       "docs": "Get a menu instance. If a menu is not provided then it will return the first\nmenu found. If the specified menu is `start` or `end`, then it will return the\nenabled menu on that side. Otherwise, it will try to find the menu using the menu's\n`id` property. If a menu is not found then it will return `null`.",
       "docsTags": [
         {
@@ -122,13 +99,7 @@
         "docs": ""
       },
       "signature": "isEnabled(menu?: string | null | undefined) => Promise<boolean>",
-      "parameters": [
-        {
-          "name": "menu",
-          "type": "null | string | undefined",
-          "docs": "The menuId or side of the menu that is being checked."
-        }
-      ],
+      "parameters": [],
       "docs": "Get whether or not the menu is enabled. Returns `true` if the\nspecified menu is enabled. Returns `false` if a menu is disabled\nor not found.",
       "docsTags": [
         {
@@ -144,13 +115,7 @@
         "docs": ""
       },
       "signature": "isOpen(menu?: string | null | undefined) => Promise<boolean>",
-      "parameters": [
-        {
-          "name": "menu",
-          "type": "null | string | undefined",
-          "docs": "The menuId or side of the menu that is being checked."
-        }
-      ],
+      "parameters": [],
       "docs": "Get whether or not the menu is open. Returns `true` if the specified\nmenu is open. If a menu is not specified, it will return `true` if\nany menu is currently open.",
       "docsTags": [
         {
@@ -166,13 +131,7 @@
         "docs": ""
       },
       "signature": "open(menu?: string | null | undefined) => Promise<boolean>",
-      "parameters": [
-        {
-          "name": "menu",
-          "type": "null | string | undefined",
-          "docs": "The menuId or side of the menu to open."
-        }
-      ],
+      "parameters": [],
       "docs": "Open the menu. If a menu is not provided then it will open the first\nmenu found. If the specified menu is `start` or `end`, then it will open\nthe enabled menu on that side. Otherwise, it will try to find the menu\nusing the menu's `id` property. If a menu is not found then it will\nreturn `false`.",
       "docsTags": [
         {
@@ -184,22 +143,11 @@
     {
       "name": "registerAnimation",
       "returns": {
-        "type": "void",
+        "type": "Promise<void>",
         "docs": ""
       },
-      "signature": "registerAnimation(name: string, animation: AnimationBuilder) => void",
-      "parameters": [
-        {
-          "name": "name",
-          "type": "string",
-          "docs": "The name of the animation to register."
-        },
-        {
-          "name": "animation",
-          "type": "(Animation: Animation, baseEl: any, opts?: any) => Promise<Animation>",
-          "docs": "The animation function to register."
-        }
-      ],
+      "signature": "registerAnimation(name: string, animation: AnimationBuilder) => Promise<void>",
+      "parameters": [],
       "docs": "Registers a new animation that can be used with any `ion-menu` by\npassing the name of the animation in its `type` property.",
       "docsTags": [
         {
@@ -219,18 +167,7 @@
         "docs": ""
       },
       "signature": "swipeGesture(enable: boolean, menu?: string | null | undefined) => Promise<HTMLIonMenuElement | undefined>",
-      "parameters": [
-        {
-          "name": "enable",
-          "type": "boolean",
-          "docs": "If `true`, the menu swipe gesture should be enabled."
-        },
-        {
-          "name": "menu",
-          "type": "null | string | undefined",
-          "docs": "The menuId or side of the menu to enable or disable the swipe gesture on."
-        }
-      ],
+      "parameters": [],
       "docs": "Enable or disable the ability to swipe open the menu.",
       "docsTags": [
         {
@@ -250,13 +187,7 @@
         "docs": ""
       },
       "signature": "toggle(menu?: string | null | undefined) => Promise<boolean>",
-      "parameters": [
-        {
-          "name": "menu",
-          "type": "null | string | undefined",
-          "docs": "The menuId or side of the menu to toggle."
-        }
-      ],
+      "parameters": [],
       "docs": "Toggle the menu open or closed. If the menu is already open, it will try to\nclose the menu, otherwise it will try to open it. Returns `false` if\na menu is not found.",
       "docsTags": [
         {

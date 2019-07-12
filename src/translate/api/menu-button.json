@@ -30,6 +30,18 @@
       "required": false
     },
     {
+      "name": "disabled",
+      "type": "boolean",
+      "mutable": false,
+      "attr": "disabled",
+      "reflectToAttr": false,
+      "docs": "If `true`, the user cannot interact with the menu button.",
+      "docsTags": [],
+      "default": "false",
+      "optional": false,
+      "required": false
+    },
+    {
       "name": "menu",
       "type": "string | undefined",
       "mutable": false,
@@ -41,13 +53,14 @@
       "required": false
     },
     {
-      "name": "mode",
-      "type": "\"ios\" | \"md\"",
+      "name": "type",
+      "type": "\"button\" | \"reset\" | \"submit\"",
       "mutable": false,
-      "attr": "mode",
+      "attr": "type",
       "reflectToAttr": false,
-      "docs": "The mode determines which platform styles to use.",
+      "docs": "The type of the button.",
       "docsTags": [],
+      "default": "'button'",
       "optional": false,
       "required": false
     }
@@ -56,29 +69,59 @@
   "events": [],
   "styles": [
     {
+      "name": "--background",
+      "annotation": "prop",
+      "docs": "Background of the menu button"
+    },
+    {
+      "name": "--background-focused",
+      "annotation": "prop",
+      "docs": "Background of the menu button when focused with the tab key"
+    },
+    {
+      "name": "--background-hover",
+      "annotation": "prop",
+      "docs": "Background of the menu button on hover"
+    },
+    {
+      "name": "--border-radius",
+      "annotation": "prop",
+      "docs": "Border radius of the menu button"
+    },
+    {
       "name": "--color",
       "annotation": "prop",
       "docs": "Color of the menu button"
     },
     {
+      "name": "--color-focused",
+      "annotation": "prop",
+      "docs": "Color of the menu button when focused with the tab key"
+    },
+    {
+      "name": "--color-hover",
+      "annotation": "prop",
+      "docs": "Color of the menu button on hover"
+    },
+    {
       "name": "--padding-bottom",
       "annotation": "prop",
-      "docs": "Padding bottom of the button"
+      "docs": "Bottom padding of the button"
     },
     {
       "name": "--padding-end",
       "annotation": "prop",
-      "docs": "Padding end of the button"
+      "docs": "Right padding if direction is left-to-right, and left padding if direction is right-to-left of the button"
     },
     {
       "name": "--padding-start",
       "annotation": "prop",
-      "docs": "Padding start of the button"
+      "docs": "Left padding if direction is left-to-right, and right padding if direction is right-to-left of the button"
     },
     {
       "name": "--padding-top",
       "annotation": "prop",
-      "docs": "Padding top of the button"
+      "docs": "Top padding of the button"
     }
   ],
   "slots": []

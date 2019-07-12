@@ -3,7 +3,12 @@
   "encapsulation": "shadow",
   "readme": "# ion-card-header\n\n`ion-card-header` is a header component for `ion-card`.\n\n",
   "docs": "`ion-card-header` is a header component for `ion-card`.",
-  "docsTags": [],
+  "docsTags": [
+    {
+      "text": "{\"ios\" | \"md\"} mode - The mode determines which platform styles to use.",
+      "name": "virtualProp"
+    }
+  ],
   "usage": {},
   "props": [
     {
@@ -25,7 +30,7 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
-      "optional": false,
+      "optional": true,
       "required": false
     },
     {

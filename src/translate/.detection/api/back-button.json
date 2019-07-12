@@ -3,11 +3,16 @@
   "encapsulation": "scoped",
   "readme": "# ion-back-button\n\nThe back button navigates back in the app's history upon click. It is smart enough to know what to render based on the mode and when to show based on the navigation stack.\n\nTo change what is displayed in the back button, use the `text` and `icon` properties.\n\n",
   "docs": "The back button navigates back in the app's history upon click. It is smart enough to know what to render based on the mode and when to show based on the navigation stack.\n\nTo change what is displayed in the back button, use the `text` and `icon` properties.",
-  "docsTags": [],
+  "docsTags": [
+    {
+      "text": "{\"ios\" | \"md\"} mode - The mode determines which platform styles to use.",
+      "name": "virtualProp"
+    }
+  ],
   "usage": {
     "angular": "```html\n<!-- Default back button -->\n<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-back-button></ion-back-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<!-- Back button with a default href -->\n<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-back-button defaultHref=\"home\"></ion-back-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<!-- Back button with custom text and icon -->\n<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-back-button\n          [text]=\"buttonText\"\n          [icon]=\"buttonIcon\">\n      </ion-back-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<!-- Back button with no text and custom icon -->\n<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-back-button text=\"\" icon=\"add\"></ion-back-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<!-- Danger back button next to a menu button -->\n<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-menu-button></ion-menu-button>\n      <ion-back-button color=\"danger\"></ion-back-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n```",
     "javascript": "```html\n<!-- Default back button -->\n<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-back-button></ion-back-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<!-- Back button with a default href -->\n<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-back-button default-href=\"home\"></ion-back-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<!-- Back button with custom text and icon -->\n<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-back-button text=\"Volver\" icon=\"close\"></ion-back-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<!-- Back button with no text and custom icon -->\n<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-back-button text=\"\" icon=\"add\"></ion-back-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n\n<!-- Danger back button next to a menu button -->\n<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-menu-button></ion-menu-button>\n      <ion-back-button color=\"danger\"></ion-back-button>\n    </ion-buttons>\n  </ion-toolbar>\n</ion-header>\n```",
-    "react": "```tsx\nimport React from 'react';\n\nimport { IonBackButton, IonHeader, IonToolbar, IonButtons, IonMenuButton } from '@ionic/react';\n\nconst Example: React.SFC<{}> = () => (\n  <>\n    {/*-- Default back button --*/}\n    <IonHeader>\n      <IonToolbar>\n        <IonButtons slot=\"start\">\n          <IonBackButton goBack={() => {}} />\n        </IonButtons>\n      </IonToolbar>\n    </IonHeader>\n\n    {/*-- Back button with a default href --*/}\n    <IonHeader>\n      <IonToolbar>\n        <IonButtons slot=\"start\">\n          <IonBackButton goBack={() => {}} defaultHref=\"home\" />\n        </IonButtons>\n      </IonToolbar>\n    </IonHeader>\n\n    {/*-- Back button with custom text and icon --*/}\n    <IonHeader>\n      <IonToolbar>\n        <IonButtons slot=\"start\">\n          <IonBackButton\n            goBack={() => {}}\n            text=\"buttonText\"\n            icon=\"buttonIcon\"\n          />\n        </IonButtons>\n      </IonToolbar>\n    </IonHeader>\n\n    {/*-- Back button with no text and custom icon --*/}\n    <IonHeader>\n      <IonToolbar>\n        <IonButtons slot=\"start\">\n          <IonBackButton goBack={() => {}} text=\"\" icon=\"add\" />\n        </IonButtons>\n      </IonToolbar>\n    </IonHeader>\n\n    {/*-- Danger back button next to a menu button --*/}\n    <IonHeader>\n      <IonToolbar>\n        <IonButtons slot=\"start\">\n          <IonMenuButton />\n          <IonBackButton goBack={() => {}} color=\"danger\" />\n        </IonButtons>\n      </IonToolbar>\n    </IonHeader>\n  </>\n);\n\nexport default Example;\n```",
+    "react": "```tsx\nimport React from 'react';\nimport { IonBackButton, IonHeader, IonToolbar, IonButtons, IonMenuButton, IonContent } from '@ionic/react';\n\nexport const BackButtonExample: React.FunctionComponent = () => (\n  <IonContent>\n    {/*-- Default back button --*/}\n    <IonHeader>\n      <IonToolbar>\n        <IonButtons slot=\"start\">\n          <IonBackButton />\n        </IonButtons>\n      </IonToolbar>\n    </IonHeader>\n\n    {/*-- Back button with a default href --*/}\n    <IonHeader>\n      <IonToolbar>\n        <IonButtons slot=\"start\">\n          <IonBackButton defaultHref=\"home\" />\n        </IonButtons>\n      </IonToolbar>\n    </IonHeader>\n\n    {/*-- Back button with custom text and icon --*/}\n    <IonHeader>\n      <IonToolbar>\n        <IonButtons slot=\"start\">\n          <IonBackButton text=\"buttonText\" icon=\"buttonIcon\" />\n        </IonButtons>\n      </IonToolbar>\n    </IonHeader>\n\n    {/*-- Back button with no text and custom icon --*/}\n    <IonHeader>\n      <IonToolbar>\n        <IonButtons slot=\"start\">\n          <IonBackButton text=\"\" icon=\"add\" />\n        </IonButtons>\n      </IonToolbar>\n    </IonHeader>\n\n    {/*-- Danger back button next to a menu button --*/}\n    <IonHeader>\n      <IonToolbar>\n        <IonButtons slot=\"start\">\n          <IonMenuButton />\n          <IonBackButton color=\"danger\" />\n        </IonButtons>\n      </IonToolbar>\n    </IonHeader>\n  </IonContent>\n);\n```",
     "vue": "```html\n<template>\n  <!-- Default back button -->\n  <ion-header>\n    <ion-toolbar>\n      <ion-buttons slot=\"start\">\n        <ion-back-button></ion-back-button>\n      </ion-buttons>\n    </ion-toolbar>\n  </ion-header>\n\n  <!-- Back button with a default href -->\n  <ion-header>\n    <ion-toolbar>\n      <ion-buttons slot=\"start\">\n        <ion-back-button defaultHref=\"home\"></ion-back-button>\n      </ion-buttons>\n    </ion-toolbar>\n  </ion-header>\n\n  <!-- Back button with custom text and icon -->\n  <ion-header>\n    <ion-toolbar>\n      <ion-buttons slot=\"start\">\n        <ion-back-button\n            :text=\"buttonText\"\n            :icon=\"buttonIcon\">\n        </ion-back-button>\n      </ion-buttons>\n    </ion-toolbar>\n  </ion-header>\n\n  <!-- Back button with no text and custom icon -->\n  <ion-header>\n    <ion-toolbar>\n      <ion-buttons slot=\"start\">\n        <ion-back-button text=\"\" icon=\"add\"></ion-back-button>\n      </ion-buttons>\n    </ion-toolbar>\n  </ion-header>\n\n  <!-- Danger back button next to a menu button -->\n  <ion-header>\n    <ion-toolbar>\n      <ion-buttons slot=\"start\">\n        <ion-menu-button></ion-menu-button>\n        <ion-back-button color=\"danger\"></ion-back-button>\n      </ion-buttons>\n    </ion-toolbar>\n  </ion-header>\n</template>\n```"
   },
   "props": [
@@ -34,6 +39,18 @@
       "required": false
     },
     {
+      "name": "disabled",
+      "type": "boolean",
+      "mutable": false,
+      "attr": "disabled",
+      "reflectToAttr": true,
+      "docs": "If `true`, the user cannot interact with the button.",
+      "docsTags": [],
+      "default": "false",
+      "optional": false,
+      "required": false
+    },
+    {
       "name": "icon",
       "type": "null | string | undefined",
       "mutable": false,
@@ -52,7 +69,7 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
-      "optional": false,
+      "optional": true,
       "required": false
     },
     {
@@ -65,6 +82,18 @@
       "docsTags": [],
       "optional": true,
       "required": false
+    },
+    {
+      "name": "type",
+      "type": "\"button\" | \"reset\" | \"submit\"",
+      "mutable": false,
+      "attr": "type",
+      "reflectToAttr": false,
+      "docs": "The type of the button.",
+      "docsTags": [],
+      "default": "'button'",
+      "optional": false,
+      "required": false
     }
   ],
   "methods": [],
@@ -76,6 +105,16 @@
       "docs": "Background of the button"
     },
     {
+      "name": "--background-focused",
+      "annotation": "prop",
+      "docs": "Background of the button when focused with the tab key"
+    },
+    {
+      "name": "--background-hover",
+      "annotation": "prop",
+      "docs": "Background of the button when hover"
+    },
+    {
       "name": "--border-radius",
       "annotation": "prop",
       "docs": "Border radius of the button"
@@ -84,6 +123,16 @@
       "name": "--color",
       "annotation": "prop",
       "docs": "Text color of the button"
+    },
+    {
+      "name": "--color-focused",
+      "annotation": "prop",
+      "docs": "Text color of the button when focused with the tab key"
+    },
+    {
+      "name": "--color-hover",
+      "annotation": "prop",
+      "docs": "Text color of the button when hover"
     },
     {
       "name": "--icon-font-size",
@@ -98,62 +147,62 @@
     {
       "name": "--icon-margin-bottom",
       "annotation": "prop",
-      "docs": "Margin bottom of the button icon"
+      "docs": "Bottom margin of the button icon"
     },
     {
       "name": "--icon-margin-end",
       "annotation": "prop",
-      "docs": "Margin end of the button icon"
+      "docs": "Right margin if direction is left-to-right, and left margin if direction is right-to-left of the button icon"
     },
     {
       "name": "--icon-margin-start",
       "annotation": "prop",
-      "docs": "Margin start of the button icon"
+      "docs": "Left margin if direction is left-to-right, and right margin if direction is right-to-left of the button icon"
     },
     {
       "name": "--icon-margin-top",
       "annotation": "prop",
-      "docs": "Margin top of the button icon"
+      "docs": "Top margin of the button icon"
     },
     {
       "name": "--icon-padding-bottom",
       "annotation": "prop",
-      "docs": "Padding bottom of the button icon"
+      "docs": "Bottom padding of the button icon"
     },
     {
       "name": "--icon-padding-end",
       "annotation": "prop",
-      "docs": "Padding end of the button icon"
+      "docs": "Right padding if direction is left-to-right, and left padding if direction is right-to-left of the button icon"
     },
     {
       "name": "--icon-padding-start",
       "annotation": "prop",
-      "docs": "Padding start of the button icon"
+      "docs": "Left padding if direction is left-to-right, and right padding if direction is right-to-left of the button icon"
     },
     {
       "name": "--icon-padding-top",
       "annotation": "prop",
-      "docs": "Padding top of the button icon"
+      "docs": "Top padding of the button icon"
     },
     {
       "name": "--margin-bottom",
       "annotation": "prop",
-      "docs": "Margin bottom of the button"
+      "docs": "Bottom margin of the button"
     },
     {
       "name": "--margin-end",
       "annotation": "prop",
-      "docs": "Margin end of the button"
+      "docs": "Right margin if direction is left-to-right, and left margin if direction is right-to-left of the button"
     },
     {
       "name": "--margin-start",
       "annotation": "prop",
-      "docs": "Margin start of the button"
+      "docs": "Left margin if direction is left-to-right, and right margin if direction is right-to-left of the button"
     },
     {
       "name": "--margin-top",
       "annotation": "prop",
-      "docs": "Margin top of the button"
+      "docs": "Top margin of the button"
     },
     {
       "name": "--min-height",
@@ -173,22 +222,22 @@
     {
       "name": "--padding-bottom",
       "annotation": "prop",
-      "docs": "Padding bottom of the button"
+      "docs": "Bottom padding of the button"
     },
     {
       "name": "--padding-end",
       "annotation": "prop",
-      "docs": "Padding end of the button"
+      "docs": "Right padding if direction is left-to-right, and left padding if direction is right-to-left of the button"
     },
     {
       "name": "--padding-start",
       "annotation": "prop",
-      "docs": "Padding start of the button"
+      "docs": "Left padding if direction is left-to-right, and right padding if direction is right-to-left of the button"
     },
     {
       "name": "--padding-top",
       "annotation": "prop",
-      "docs": "Padding top of the button"
+      "docs": "Top padding of the button"
     },
     {
       "name": "--ripple-color",

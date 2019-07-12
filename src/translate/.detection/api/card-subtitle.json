@@ -3,7 +3,12 @@
   "encapsulation": "shadow",
   "readme": "# ion-card-subtitle\n\n`ion-card-subtitle` is a child component of `ion-card`\n",
   "docs": "`ion-card-subtitle` is a child component of `ion-card`",
-  "docsTags": [],
+  "docsTags": [
+    {
+      "text": "{\"ios\" | \"md\"} mode - The mode determines which platform styles to use.",
+      "name": "virtualProp"
+    }
+  ],
   "usage": {},
   "props": [
     {
@@ -25,7 +30,7 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
-      "optional": false,
+      "optional": true,
       "required": false
     }
   ],

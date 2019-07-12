@@ -1,0 +1,63 @@
+***************
+*** 5,54 ****
+  
+  ### Creating
+  
+- Modals can be created using a [Modal Controller](../modal-controller). They can be customized by passing modal options in the modal controller's create method.
+  
+  
+- ### Passing parameters
+  
+- When a modal is created, parameters might be passed to the newly created modal:
+  
+- ```ts
+- // Create a modal using MyModalComponent with some initial data
+- const modal = await modalController.create({
+-   component: MyModalComponent,
+-   componentProps: {
+-     'prop1': value,
+-     'prop2': value2
+-   }
+- });
+- ```
+- 
+- Under the hood, the controller creates a new `ion-modal` and attaches the specified component to it.
+- It also assigns the specified `componentProps` to the component's instance:
+- 
+- ```js
+- // pseudo-code
+- const instance = create(MyModalComponent);
+- instance.prop1 = value;
+- instance.prop2 = value2;
+- ```
+- 
+- This way, your component can access the passed params, check the "Usage" section for further code example for each frameworks.
+- 
+- 
+- ### Returning data
+- 
+- Modals can also return data back to the controller when they are dismissed.
+- 
+- ```js
+- const modal = await modalController.create({...});
+- const { data } = await modal.onDidDismiss();
+- console.log(data);
+- ```
+- 
+- ```js
+- // Dismiss the top modal returning some data object
+- modalController.dismiss({
+-   'result': value
+- })
+- ```
+--- 5,14 ----
+  
+  ### Creating
+  
++ Modals can be created using a [Modal Controller](../modal-controller). They can be customized by passing modal options in the modal controller's `create()` method.
+  
+  
++ ### Dismissing
+  
++ The modal can be dismissed after creation by calling the `dismiss()` method on the modal controller. The `onDidDismiss` function can be called to perform an action after the modal is dismissed.
+  

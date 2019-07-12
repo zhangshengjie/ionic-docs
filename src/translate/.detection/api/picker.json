@@ -3,7 +3,12 @@
   "encapsulation": "scoped",
   "readme": "# ion-picker\n\nA Picker is a dialog that displays a row of buttons and columns underneath. It appears on top of the app's content, and at the bottom of the viewport.\n\n\n",
   "docs": "A Picker is a dialog that displays a row of buttons and columns underneath. It appears on top of the app's content, and at the bottom of the viewport.",
-  "docsTags": [],
+  "docsTags": [
+    {
+      "text": "{\"ios\" | \"md\"} mode - The mode determines which platform styles to use.",
+      "name": "virtualProp"
+    }
+  ],
   "usage": {},
   "props": [
     {
@@ -115,7 +120,7 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
-      "optional": false,
+      "optional": true,
       "required": false
     },
     {
@@ -139,18 +144,7 @@
         "docs": ""
       },
       "signature": "dismiss(data?: any, role?: string | undefined) => Promise<boolean>",
-      "parameters": [
-        {
-          "name": "data",
-          "type": "any",
-          "docs": "Any data to emit in the dismiss events."
-        },
-        {
-          "name": "role",
-          "type": "string | undefined",
-          "docs": "The role of the element that is dismissing the picker.\nThis can be useful in a button handler for determining which button was\nclicked to dismiss the picker.\nSome examples include: ``\"cancel\"`, `\"destructive\"`, \"selected\"`, and `\"backdrop\"`."
-        }
-      ],
+      "parameters": [],
       "docs": "Dismiss the picker overlay after it has been presented.",
       "docsTags": [
         {
@@ -170,13 +164,7 @@
         "docs": ""
       },
       "signature": "getColumn(name: string) => Promise<PickerColumn | undefined>",
-      "parameters": [
-        {
-          "name": "name",
-          "type": "string",
-          "docs": "The name of the column."
-        }
-      ],
+      "parameters": [],
       "docs": "Get the column that matches the specified name.",
       "docsTags": [
         {
@@ -222,7 +210,7 @@
   "events": [
     {
       "event": "ionPickerDidDismiss",
-      "detail": "OverlayEventDetail",
+      "detail": "OverlayEventDetail<any>",
       "bubbles": true,
       "cancelable": true,
       "composed": true,
@@ -240,7 +228,7 @@
     },
     {
       "event": "ionPickerWillDismiss",
-      "detail": "OverlayEventDetail",
+      "detail": "OverlayEventDetail<any>",
       "bubbles": true,
       "cancelable": true,
       "composed": true,

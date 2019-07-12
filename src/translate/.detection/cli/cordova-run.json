@@ -5,11 +5,9 @@
     "cordova"
   ],
   "summary": "Run an Ionic project on a connected device",
-  "description": "Like running `cordova run` or `cordova emulate` directly, but performs `ionic build` before deploying to the device or emulator. Optionally specify the `--livereload` option to use the dev server from `ionic serve` for livereload functionality.\n\nFor Android and iOS, you can setup Remote Debugging on your device with browser development tools using these [docs](https://ionicframework.com/docs/developer-resources/developer-tips).\n\nJust like with `ionic cordova build`, you can pass additional options to the Cordova CLI using the `--` separator. To pass additional options to the dev server, consider using `ionic serve` and the `--livereload-url` option.\n\nWith the experimental `--native-run` flag, this command will first use Cordova to build your app, and then it will run it on a device using the `native-run` [utility](https://github.com/ionic-team/native-run) instead of Cordova.",
+  "description": "Build your app and deploy it to devices and emulators using this command. Optionally specify the `--livereload` option to use the dev server from `ionic serve` for livereload functionality.\n\nThis command will first use `ionic build` to build web assets (or `ionic serve` with the `--livereload` option). Then, `cordova build` is used to compile and prepare your app. Finally, the `native-run` [utility](https://github.com/ionic-team/native-run) is used to run your app on a device. To use Cordova for this process instead, use the `--no-native-run` option.\n\nIf you have multiple devices and emulators, you can target a specific one with the `--target` option. You can list targets with `--list`.\n\nFor Android and iOS, you can setup Remote Debugging on your device with browser development tools using these [docs](https://ionicframework.com/docs/developer-resources/developer-tips).\n\nJust like with `ionic cordova build`, you can pass additional options to the Cordova CLI using the `--` separator. To pass additional options to the dev server, consider using `ionic serve` separately and using the `--livereload-url` option.",
   "footnotes": [],
-  "groups": [
-    "beta"
-  ],
+  "groups": [],
   "exampleCommands": [
     "ionic cordova run android",
     "ionic cordova run android --buildConfig=build.json",
@@ -36,6 +34,45 @@
     }
   ],
   "options": [
+    {
+      "name": "consolelogs",
+      "type": "boolean",
+      "summary": "Print app console logs to the terminal",
+      "groups": [
+        "advanced",
+        "cordova"
+      ],
+      "aliases": [],
+      "spec": {
+        "value": "true/false"
+      }
+    },
+    {
+      "name": "consolelogs-port",
+      "type": "string",
+      "summary": "Use specific port for console logs server",
+      "groups": [
+        "advanced",
+        "cordova"
+      ],
+      "aliases": [],
+      "spec": {
+        "value": "port"
+      }
+    },
+    {
+      "name": "ssl",
+      "type": "boolean",
+      "summary": "Use HTTPS for the dev server",
+      "groups": [
+        "experimental",
+        "cordova"
+      ],
+      "aliases": [],
+      "spec": {
+        "value": "true/false"
+      }
+    },
     {
       "name": "list",
       "type": "boolean",
@@ -65,7 +102,7 @@
       "name": "address",
       "type": "string",
       "summary": "Use specific address for the dev server",
-      "default": "0.0.0.0",
+      "default": "localhost",
       "groups": [
         "advanced"
       ],
@@ -87,6 +124,19 @@
       ],
       "spec": {
         "value": "port"
+      }
+    },
+    {
+      "name": "devapp",
+      "type": "boolean",
+      "summary": "Publish DevApp service",
+      "default": false,
+      "groups": [
+        "advanced"
+      ],
+      "aliases": [],
+      "spec": {
+        "value": "true/false"
       }
     },
     {
@@ -145,19 +195,6 @@
       ],
       "spec": {
         "value": "conf"
-      }
-    },
-    {
-      "name": "ssl",
-      "type": "boolean",
-      "summary": "Use HTTPS for the dev server",
-      "groups": [
-        "experimental",
-        "cordova"
-      ],
-      "aliases": [],
-      "spec": {
-        "value": "true/false"
       }
     },
     {
@@ -246,9 +283,9 @@
     {
       "name": "native-run",
       "type": "boolean",
-      "summary": "Use `native-run` instead of Cordova for running the app",
+      "summary": "Do not use `native-run` to run the app; use Cordova instead",
+      "default": true,
       "groups": [
-        "experimental",
         "native-run"
       ],
       "aliases": [],
@@ -262,7 +299,6 @@
       "summary": "Do not tie the running app to the process",
       "default": true,
       "groups": [
-        "experimental",
         "native-run"
       ],
       "aliases": [],
@@ -273,9 +309,9 @@
     {
       "name": "json",
       "type": "boolean",
-      "summary": "Output `--list` targets in JSON",
+      "summary": "Output targets in JSON",
       "groups": [
-        "experimental",
+        "advanced",
         "native-run"
       ],
       "aliases": [],

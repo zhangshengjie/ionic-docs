@@ -5,18 +5,22 @@
   "docs": "The Range slider lets users select from a range of values by moving\nthe slider knob. It can accept dual knobs, but by default one knob\ncontrols the value of the range.",
   "docsTags": [
     {
-      "name": "slot",
-      "text": "start - Content is placed to the left of the range slider in LTR, and to the right in RTL."
+      "text": "{\"ios\" | \"md\"} mode - The mode determines which platform styles to use.",
+      "name": "virtualProp"
     },
     {
-      "name": "slot",
-      "text": "end - Content is placed to the right of the range slider in LTR, and to the left in RTL."
+      "text": "start - Content is placed to the left of the range slider in LTR, and to the right in RTL.",
+      "name": "slot"
+    },
+    {
+      "text": "end - Content is placed to the right of the range slider in LTR, and to the left in RTL.",
+      "name": "slot"
     }
   ],
   "usage": {
     "angular": "```html\n<ion-list>\n  <ion-item>\n    <ion-range color=\"danger\" pin=\"true\"></ion-range>\n  </ion-item>\n\n  <ion-item>\n    <ion-range min=\"-200\" max=\"200\" color=\"secondary\">\n      <ion-label slot=\"start\">-200</ion-label>\n      <ion-label slot=\"end\">200</ion-label>\n    </ion-range>\n  </ion-item>\n\n  <ion-item>\n    <ion-range min=\"20\" max=\"80\" step=\"2\">\n      <ion-icon size=\"small\" slot=\"start\" name=\"sunny\"></ion-icon>\n      <ion-icon slot=\"end\" name=\"sunny\"></ion-icon>\n    </ion-range>\n  </ion-item>\n\n  <ion-item>\n    <ion-range min=\"1000\" max=\"2000\" step=\"100\" snaps=\"true\" color=\"secondary\"></ion-range>\n  </ion-item>\n\n  <ion-item>\n    <ion-range min=\"1000\" max=\"2000\" step=\"100\" snaps=\"true\" ticks=\"false\" color=\"secondary\"></ion-range>\n  </ion-item>\n\n  <ion-item>\n    <ion-range dualKnobs=\"true\" min=\"21\" max=\"72\" step=\"3\" snaps=\"true\"></ion-range>\n  </ion-item>\n</ion-list>\n```\n",
     "javascript": "```html\n<ion-list>\n  <ion-item>\n    <ion-range color=\"danger\" pin=\"true\"></ion-range>\n  </ion-item>\n\n  <ion-item>\n    <ion-range min=\"-200\" max=\"200\" color=\"secondary\">\n      <ion-label slot=\"start\">-200</ion-label>\n      <ion-label slot=\"end\">200</ion-label>\n    </ion-range>\n  </ion-item>\n\n  <ion-item>\n    <ion-range min=\"20\" max=\"80\" step=\"2\">\n      <ion-icon size=\"small\" slot=\"start\" name=\"sunny\"></ion-icon>\n      <ion-icon slot=\"end\" name=\"sunny\"></ion-icon>\n    </ion-range>\n  </ion-item>\n\n  <ion-item>\n    <ion-range min=\"1000\" max=\"2000\" step=\"100\" snaps=\"true\" color=\"secondary\"></ion-range>\n  </ion-item>\n\n  <ion-item>\n    <ion-range min=\"1000\" max=\"2000\" step=\"100\" snaps=\"true\" ticks=\"false\" color=\"secondary\"></ion-range>\n  </ion-item>\n\n  <ion-item>\n    <ion-range dual-knobs=\"true\" min=\"21\" max=\"72\" step=\"3\" snaps=\"true\"></ion-range>\n  </ion-item>\n</ion-list>\n```\n",
-    "react": "```tsx\nimport React from 'react';\n\nimport { IonList, IonItem, IonRange, IonLabel, IonIcon } from '@ionic/react';\n\nconst Example: React.SFC<{}> = () => (\n\n  <IonList>\n    <IonItem>\n      <IonRange color=\"danger\" pin={true}></IonRange>\n    </IonItem>\n\n    <IonItem>\n      <IonRange min={-200} max={200} color=\"secondary\">\n        <IonLabel slot=\"start\">-200</IonLabel>\n        <IonLabel slot=\"end\">200</IonLabel>\n      </IonRange>\n    </IonItem>\n\n    <IonItem>\n      <IonRange min={20} max={80} step={2}>\n        <IonIcon size=\"small\" slot=\"start\" name=\"sunny\" />\n        <IonIcon slot=\"end\" name=\"sunny\" />\n      </IonRange>\n    </IonItem>\n\n    <IonItem>\n      <IonRange min={1000} max={2000} step={100} snaps={true} color=\"secondary\"></IonRange>\n    </IonItem>\n\n    <IonItem>\n      <IonRange min={1000} max={2000} step={100} snaps={true} ticks={false} color=\"secondary\"></IonRange>\n    </IonItem>\n\n    <IonItem>\n      <IonRange dualKnobs={true} min={21} max={72} step={3} snaps={true}></IonRange>\n    </IonItem>\n  </IonList>\n);\n\nexport default Example;\n```\n",
+    "react": "```tsx\nimport React from 'react';\nimport { IonList, IonItem, IonRange, IonLabel, IonIcon, IonContent } from '@ionic/react';\n\nexport const RangeExample: React.FunctionComponent = () => (\n  <IonContent>\n    <IonList>\n      <IonItem>\n        <IonRange color=\"danger\" pin={true} />\n      </IonItem>\n\n      <IonItem>\n        <IonRange min={-200} max={200} color=\"secondary\">\n          <IonLabel slot=\"start\">-200</IonLabel>\n          <IonLabel slot=\"end\">200</IonLabel>\n        </IonRange>\n      </IonItem>\n\n      <IonItem>\n        <IonRange min={20} max={80} step={2}>\n          <IonIcon size=\"small\" slot=\"start\" name=\"sunny\" />\n          <IonIcon slot=\"end\" name=\"sunny\" />\n        </IonRange>\n      </IonItem>\n\n      <IonItem>\n        <IonRange min={1000} max={2000} step={100} snaps={true} color=\"secondary\" />\n      </IonItem>\n\n      <IonItem>\n        <IonRange min={1000} max={2000} step={100} snaps={true} ticks={false} color=\"secondary\" />\n      </IonItem>\n\n      <IonItem>\n        <IonRange dualKnobs={true} min={21} max={72} step={3} snaps={true} />\n      </IonItem>\n    </IonList>\n  </IonContent>\n);\n```\n",
     "vue": "```html\n<template>\n  <ion-list>\n    <ion-item>\n      <ion-range color=\"danger\" pin=\"true\"></ion-range>\n    </ion-item>\n\n    <ion-item>\n      <ion-range min=\"-200\" max=\"200\" color=\"secondary\">\n        <ion-label slot=\"start\">-200</ion-label>\n        <ion-label slot=\"end\">200</ion-label>\n      </ion-range>\n    </ion-item>\n\n    <ion-item>\n      <ion-range min=\"20\" max=\"80\" step=\"2\">\n        <ion-icon size=\"small\" slot=\"start\" name=\"sunny\"></ion-icon>\n        <ion-icon slot=\"end\" name=\"sunny\"></ion-icon>\n      </ion-range>\n    </ion-item>\n\n    <ion-item>\n      <ion-range min=\"1000\" max=\"2000\" step=\"100\" snaps=\"true\" color=\"secondary\"></ion-range>\n    </ion-item>\n\n    <ion-item>\n      <ion-range min=\"1000\" max=\"2000\" step=\"100\" snaps=\"true\" ticks=\"false\" color=\"secondary\"></ion-range>\n    </ion-item>\n\n    <ion-item>\n      <ion-range ref=\"rangeDualKnobs\" dual-knobs=\"true\" min=\"21\" max=\"72\" step=\"3\" snaps=\"true\"></ion-range>\n    </ion-item>\n  </ion-list>\n</template>\n\n<script>\nexport default {\n  mounted() {\n    // Sets initial value for dual-knob ion-range\n    this.$refs.rangeDualKnobs.value = { lower: 24, upper: 42 };\n  }\n}\n</script>\n```\n"
   },
   "props": [
@@ -99,7 +103,7 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
-      "optional": false,
+      "optional": true,
       "required": false
     },
     {
