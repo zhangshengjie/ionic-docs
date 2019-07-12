@@ -5,7 +5,7 @@
 
 ### Creating
 
-ローディング・インジケータは、 [Loading Controller](../loading-controller) を使用して作成できます。これらは、Loading Controllersの作成メソッドにloadingのオプションを渡すことでカスタマイズできます。スピナー名は `spinner` プロパティに渡す必要があり、オプションのHTMLは `content` プロパティに渡すことができます。スピナーに値が渡されない場合、プラットフォームで指定されたスピナーがローディングインジケータで使用されます。
+ローディング・インジケータは、 [Loading Controller](../loading-controller) を使用して作成できます。これらは、Loading Controllersの `create()` メソッドにloadingのオプションを渡すことでカスタマイズできます。スピナー名は `spinner` プロパティに渡す必要があり、オプションのHTMLは `content` プロパティに渡すことができます。スピナーに値が渡されない場合、プラットフォームで指定されたスピナーがローディングインジケータで使用されます。
 
 
 ### Dismissing

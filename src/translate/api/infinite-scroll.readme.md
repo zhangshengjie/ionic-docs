@@ -11,3 +11,7 @@ Infinite Scrollコンポーネントは、ユーザーがページの下部ま�
 ## Custom Content
 
 `ion-infinite-scroll` と `ion-infinite-scroll-content` コンポーネントを分離することで、開発者は必要に応じて独自のコンテンツコンポーネントを作成できます。このコンテンツには、SVG要素から固有のCSSアニメーションを持つ要素まで、あらゆるものを含めることができます。
+
+## React
+
+Infinite ScrollはReactではサポートされていません。

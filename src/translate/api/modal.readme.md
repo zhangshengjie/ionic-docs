@@ -5,50 +5,10 @@ Modalは、アプリのコンテンツの上に表示されるダイアログで
 
 ### Creating
 
-Modalは、[Modal Controller](../modal-controller) を使用して作成できます。Modalオプションをmodal controllerの作成メソッドに渡すことでカスタマイズできます。
+Modalは、[Modal Controller](../modal-controller) を使用して作成できます。Modalオプションをmodal controllerの `create()` メソッドに渡すことでカスタマイズできます。
 
 
-### Passing parameters
+### Dismissing
+  
+The modal can be dismissed after creation by calling the `dismiss()` method on the modal controller. The `onDidDismiss` function can be called to perform an action after the modal is dismissed.
 
-Modalをつくる時は、新しくつくるModalにパラメーターを渡す必要があります:
-
-```ts
-// Create a modal using MyModalComponent with some initial data
-const modal = await modalController.create({
-  component: MyModalComponent,
-  componentProps: {
-    'prop1': value,
-    'prop2': value2
-  }
-});
-```
-
-内部では、コントローラが新しい `ion-modal` を作成し、指定されたComponentをそれにアタッチします。
-また、指定した `componentProps` をComponentのインスタンスに割り当てます:
-
-```js
-// pseudo-code
-const instance = create(MyModalComponent);
-instance.prop1 = value;
-instance.prop2 = value2;
-```
-
-このようにして、Componentは渡されたパラメーターにアクセスすることができます。"Usage" セクションで各フレームワークの詳細なコード例を調べてください。
-
-
-### Returning data
-
-また、Modalsを終了すると、コントローラにデータを返すこともできます。
-
-```js
-const modal = await modalController.create({...});
-const { data } = await modal.onDidDismiss();
-console.log(data);
-```
-
-```js
-// Dismiss the top modal returning some data object
-modalController.dismiss({
-  'result': value
-})
-```
