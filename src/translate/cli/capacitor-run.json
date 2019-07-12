@@ -7,7 +7,9 @@
   "summary": "Ionicプロジェクトをデバイスに紐つけて実行します。",
   "description": "`ionic capacitor run` will do the following:\n- Perform `ionic build` (or run the dev server from `ionic serve` with the `--livereload` option)\n- Copy web assets into the specified native platform\n- Open the IDE for your native project (Xcode for iOS, Android Studio for Android)\n\nOnce the web assets and configuration are copied into your native project, the app can run on devices and emulators/simulators using the native IDE. Unfortunately, programmatically building and launching the native project is not yet supported.\n\nFor Android and iOS, you can setup Remote Debugging on your device with browser development tools using these [docs](https://ionicframework.com/docs/developer-resources/developer-tips).",
   "footnotes": [],
-  "groups": [],
+  "groups": [
+    "beta"
+  ],
   "exampleCommands": [
     "ionic capacitor run ",
     "ionic capacitor run android",
@@ -25,45 +27,6 @@
   ],
   "options": [
     {
-      "name": "consolelogs",
-      "type": "boolean",
-      "summary": "Print app console logs to the terminal",
-      "groups": [
-        "advanced",
-        "cordova"
-      ],
-      "aliases": [],
-      "spec": {
-        "value": "true/false"
-      }
-    },
-    {
-      "name": "consolelogs-port",
-      "type": "string",
-      "summary": "Use specific port for console logs server",
-      "groups": [
-        "advanced",
-        "cordova"
-      ],
-      "aliases": [],
-      "spec": {
-        "value": "port"
-      }
-    },
-    {
-      "name": "ssl",
-      "type": "boolean",
-      "summary": "Use HTTPS for the dev server",
-      "groups": [
-        "experimental",
-        "cordova"
-      ],
-      "aliases": [],
-      "spec": {
-        "value": "true/false"
-      }
-    },
-    {
       "name": "build",
       "type": "boolean",
       "summary": "Do not invoke Ionic build",
@@ -78,7 +41,7 @@
       "name": "address",
       "type": "string",
       "summary": "Use specific address for the dev server",
-      "default": "localhost",
+      "default": "0.0.0.0",
       "groups": [
         "advanced"
       ],
@@ -100,19 +63,6 @@
       ],
       "spec": {
         "value": "port"
-      }
-    },
-    {
-      "name": "devapp",
-      "type": "boolean",
-      "summary": "Publish DevApp service",
-      "default": false,
-      "groups": [
-        "advanced"
-      ],
-      "aliases": [],
-      "spec": {
-        "value": "true/false"
       }
     },
     {
@@ -171,6 +121,32 @@
       ],
       "spec": {
         "value": "conf"
+      }
+    },
+    {
+      "name": "ssl",
+      "type": "boolean",
+      "summary": "Use HTTPS for the dev server",
+      "groups": [
+        "experimental",
+        "cordova"
+      ],
+      "aliases": [],
+      "spec": {
+        "value": "true/false"
+      }
+    },
+    {
+      "name": "devapp",
+      "type": "boolean",
+      "summary": "Publish DevApp service",
+      "default": false,
+      "groups": [
+        "advanced"
+      ],
+      "aliases": [],
+      "spec": {
+        "value": "true/false"
       }
     }
   ],
