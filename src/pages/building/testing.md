@@ -310,13 +310,13 @@ describe('NamePipe', () => {
 - `protractor.conf.js` - Protractor の設定ファイル
 - `tsconfig.e2e.json` - テストアプリケーション用の特定の TypeScript の設定
 - `src/app.po.ts` - アプリケーションをナビゲートするメソッド、DOM 内の要素を照会するメソッド、ページ上の要素を操作するメソッドを含むページオブジェクト
-- `src/app.e2e-spec.ts` - テスト用の script
+- `src/app.e2e-spec.ts` - テスト用のスクリプト
 
-#### Page Objects
+#### ページオブジェクト
 
-End-to-end tests operate by automating common user interactions with the application, waiting for the application to respond, and examining the DOM to determine the results of the interaction. This involves a lot of DOM manipulation and examination. If this were all done manually, the tests would be very brittle and difficult to read and maintain.
+エンドツーエンドのテストは、アプリケーションとの共通のユーザー対話を自動化し、アプリケーションが応答するのを待ち、対話の結果を判別するために DOM を検査します。これには、多くの DOM 操作と試験が必要です。これらをすべて手作業で行うと、テストは非常に脆くなり、見て理解することや保守が困難になります。
 
-Page objects encapsulate the HTML for a single page in a TypeScript class, providing an API that the test scripts use to interact with the application. The encapsulation of the DOM manipulation logic in page objects makes the tests more readable and far easier to reason about, lowering the maintenance costs of the test. Creating well-crafted page objects is the key to creating high quality and maintainable end-to-end tests.
+ページオブジェクトは、TypeScript クラスの単一ページの HTML をカプセル化し、テスト用のスクリプトがアプリケーションと対話するために使用するAPIを提供します。DOM 操作ロジックをページオブジェクト内にカプセル化することで、テストが読みやすくなり、かつ判断することがはるかに簡単になり、テストの保守コストが大幅に削減されます。洗練されたページオブジェクトを作成することは、高品質で保守しやすいエンドツーエンドのテストを作成するための鍵です。
 
 ##### Base Page Object
 
