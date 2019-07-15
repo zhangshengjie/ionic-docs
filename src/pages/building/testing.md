@@ -545,11 +545,11 @@ export const environment = {
 
 ```
 
-##### Modify the `angular.json` File
+##### `angular.json` ファイルを修正
 
-The `angular.json` file needs to be modified to use this file. This is a layered process. Follow the XPaths listed below to add the configuration that is required.
+`angular.json` ファイルを使用するには、このファイルを修正する必要があります。これは階層化プロセスです。以下の XPath リストに従って、必要な設定を追加しましょう。
 
-Add a configuration at `/projects/app/architect/build/configurations` called `test` that does the file replacement:
+`/projects/app/architect/build/configurations` にファイルの置換を行う `test` という名前の設定を追加します:
 
 ```JSON
             "test": {
@@ -562,7 +562,7 @@ Add a configuration at `/projects/app/architect/build/configurations` called `te
             }
 ```
 
-Add a configuration at `/projects/app/architect/serve/configurations` called `test` that points the browser target at the `test` build configuration that was defined above.
+`/projects/app/architect/serve/configurations` に、上記で定義した `test` というビルドの設定をブラウザターゲットに指定する `test` という名前の設定を追加します。
 
 ```JSON
             "test": {
@@ -571,6 +571,7 @@ Add a configuration at `/projects/app/architect/serve/configurations` called `te
 ```
 
 Add a configuration at `/projects/app-e2e/architect/e2e/configurations` called `test` that does points the dev server target at the `test` serve configuration defined above.
+`/projects/app-e2e/architect/e2e/configurations` に、上記で定義した `test` という起動設定で開発サーバーターゲットを指定する `test` という名前の設定を追加します。
 
 ```JSON
             "test": {
@@ -578,9 +579,9 @@ Add a configuration at `/projects/app-e2e/architect/e2e/configurations` called `
             }
 ```
 
-##### Modify the `package.json` File
+##### `package.json` ファイルを修正
 
-Modify the `package.json` file so that `npm run e2e` uses the `test` configuration.
+`npm run e2e` が `test` の設定を使うように `package.json` ファイルを修正します。
 
 ```JSON
   "scripts": {
@@ -594,14 +595,14 @@ Modify the `package.json` file so that `npm run e2e` uses the `test` configurati
   },
 ```
 
-#### Test Cleanup
+#### テストクリーンアップ
 
-If the end-to-end tests modify data in any way it is helpful to reset the data to a known state once the test completes. One way to do that is to:
+エンドツーエンドテストが何らかの方法でデータを変更する場合は、テストが完了したらデータを既知の状態に一度リセットすると便利です。そのための1つの方法は:
 
-1. Create an endpoint that performs the cleanup.
-1. Add a `onCleanUp()` function to the `config` object exported by the `protractor.conf.js` file.
+1. クリーンアップを実行するエンドポイントを生成する。
+1. `protractor.conf.js` ファイルによってエクスポートされる `config` オブジェクトに `onCleanUp()` 関数を追加する
 
-Here is an example:
+次に例を示します:
 
 ```JavaScript
   onCleanUp() {
