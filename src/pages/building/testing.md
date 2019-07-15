@@ -387,11 +387,12 @@ export class PageObjectBase {
 }
 ```
 
-##### Per-Page Abstractions
+##### ページ毎の要約
 
-Each page in the application will have its own page object class that abstracts the elements on that page. If a base page object class is used, creating the page object involves mostly creating custom methods for elements that are specific to that page. Often, these custom elements take advantage of methods in the base class in order to perform the work that is required.
+Often, these custom elements take advantage of methods in the base class in order to perform the work that is required.
+アプリケーションの各ページには、そのページの要素を抽象化する独自のページオブジェクトクラスがあります。ベースとなるページオブジェクトクラスを使用する場合、ページオブジェクトを作成するには、ほとんどの場合そのページに固有の要素のカスタムメソッドを作成する必要があります。多くの場合、これらのカスタム要素は、必要な作業を実行するためにベースクラスのメソッドの恩恵を受けます。
 
-Here is an example page object for a simple but typical login page. Notice that many of the methods, such as `enterEMail()`, call methods in the base class that perform the bulk of the work.
+次に、単純ですが典型的なログインページのページオブジェクトの例を示します。`enterEMail()` のような多くのメソッドは、作業の大部分を行うベースクラスのメソッドを呼び出すことに注意してください。
 
 ```TypeScript
 import { browser, by, element, ExpectedConditions } from 'protractor';
