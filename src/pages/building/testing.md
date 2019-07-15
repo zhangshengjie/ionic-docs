@@ -428,13 +428,13 @@ export class LoginPage extends PageObjectBase {
 }
 ```
 
-#### Testing Scripts
+#### テストスクリプト
 
-Similar to unit tests, end-to-end test scripts consist of nested `describe()` and `it()` functions. In the case of end-to-end tests, the `describe()` functions generally denote specific scenarios with the `it()` functions denoting specific behaviors that should be exhibited by the application as actions are performed within that scenario.
+ユニットテストと同様に、エンドツーエンドのテストスクリプトはネストされた `describe()` と `it()` 関数で構成されています。エンドツーエンドのテストの場合、`describe()` 関数は一般に、特定のシナリオを、そのシナリオ内でアクションが実行されるときにアプリケーションによって表されるべき特定の振る舞いを示す `it()` 関数とともに示します。
 
-Also similar to unit tests, the labels used in the `describe()` and `it()` functions should make sense both with the "describe" or "it" and when concatenated together to form the complete test case.
+また、ユニットテストと同様に、`describe()` および `it()` 関数で使用されるラベルは、"describe" または "it"と、完全なテストケースを形成するためにともに連結されるとき、両方とも意味をなします。
 
-Here is a sample end-to-end test script that exercises some typical login scenarios.
+典型的なログインシナリオを実行するエンドツーエンドのテストスクリプトの簡単な例を次に示します。
 
 ```TypeScript
 import { AppPage } from '../page-objects/pages/app.po';
