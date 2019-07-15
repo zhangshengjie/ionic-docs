@@ -303,14 +303,14 @@ describe('NamePipe', () => {
 エンドツーエンドのテストは、アプリケーションが全体として機能し、多くの場合、ライブデータへの接続を含むことを検証するために使用されます。一方で、ユニットテストは分離されたコードユニットに重点を置いているため、アプリケーションロジックの低レベルのテストが可能ですが、エンドツーエンドテストはさまざまなユーザーストーリーや使用・シナリオに重点を置いており、アプリケーション全体を通したデータフローの総合的な高レベルのテストを提供します。また一方で、ユニットテストではアプリケーションのロジックの問題を明らかにしようとしますが、エンドツーエンドテストでは、個々のユニットが一緒に使用される場合に発生する問題を明らかにしようとします。エンドツーエンドのテストにより、アプリケーションの全体的なアーキテクチャに関する問題が明らかになります。
 
 エンドツーエンドテストはユーザーストーリーを実行し、個々のコードモジュールではなくアプリケーション全体を対象とするため、エンドツーエンドテストは、メインアプリケーション自体のコードとは別に、プロジェクト内の独自のアプリケーションとして存在します。ほとんどのエンドツーエンドテストは、アプリケーションとの共通のユーザー対話を自動化し、それらの対話の結果を判別するために DOM を調査します。
-### Test Structure
+### テストの構成
 
-When an `@ionic/angular` application is generated, a default end-to-end test application is generated in the `e2e` folder. This application uses <a href="">Protractor</a> to control the browser and <a href="">Jasmine</a> to structure and execute the tests. The application initially consists of four files:
+`@ionic/angular` アプリケーションが作成されると、 デフォルトのエンドツーエンドのテストアプリケーションが `e2e` フォルダに生成されます。このアプリケーションは <a href="https://www.protractortest.org/" target="_blank">Protractor</a> を使用してブラウザを制御し、<a href="https://jasmine.github.io/" target="_blank">Jasmine</a> を使用してテストを構築し、実行します。アプリケーションは、初期時は次の4つのファイルで構成されています:
 
-- `protractor.conf.js` - the Protractor configuration file
-- `tsconfig.e2e.json` - specific TypeScript configuration for the testing application
-- `src/app.po.ts` - a page object containing methods that navigate the application, query elements in the DOM, and maninpulate elements on the page
-- `src/app.e2e-spec.ts` - a testing script
+- `protractor.conf.js` - Protractor の設定ファイル
+- `tsconfig.e2e.json` - テストアプリケーション用の特定の TypeScript の設定
+- `src/app.po.ts` - アプリケーションをナビゲートするメソッド、DOM 内の要素を照会するメソッド、ページ上の要素を操作するメソッドを含むページオブジェクト
+- `src/app.e2e-spec.ts` - テスト用の script
 
 #### Page Objects
 
