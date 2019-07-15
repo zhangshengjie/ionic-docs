@@ -110,15 +110,15 @@ describe('TabsPage', () => {
 
 コンポーネントクラスのテストを行う場合、コンポーネントオブジェクトは `component=fixture.componentInstance;` によって定義されたコンポーネントオブジェクトを使用してアクセスされます。これはコンポーネントクラスのインスタンスです。DOM テストを行う際には、`fixture.nativeElement` プロパティが使用されます。これはコンポーネントの実際の `HTMLElement`であり、テストで DOM を調べるために `HTMLElement.querySelector` などの標準の HTML API メソッドを使うことを可能にします。
 
-## Services
+## Service
 
-Services often fall into one of two broad categories: utility services that perform calculations and other operations, and data services that perform primarily HTTP operations and data manipulation.
+Service は、多くの場合、計算やその他の操作を実行するユーティリティの service と、主にHTTP操作やデータ操作を実行するデータの service の2つの大まかなカテゴリーのいずれかに分類されます。
 
-### Basic Service Testing
+### 基本的な Service のテスト
 
-The suggested way to test most services is to instantiate the service and manually inject mocks for any dependency the service has. This way, the code can be tested in isolation.
+ほとんどの service をテストするために推奨する方法は、service をインスタンス化し、service が持つ依存関係のモックを手動で注入することです。こうすることで、コードを分離してテストすることができます。
 
-Let's say that there is a service with a method that takes an array of timecards and calculates net pay. Let's also assume that the tax calculations are handled via another service that the current service depends on. This payroll service could be tested as such:
+たとえば、タイムカードの配列を取得して差引支給額を計算するメソッドを持つ service があるとします。また税金計算は、現在の service が依存しているもう一つの service を介して処理されるとします。この給与計算の service は、このようにテストすることができます:
 
 ```TypeScript
 import { PayrollService } from './payroll.service';
@@ -143,9 +143,9 @@ describe('PayrollService', () => {
 });
 ```
 
-This allows the test to control the values returned by the various tax calculations via mock setup such as `taxServiceSpy.federalIncomeTax.and.returnValue(73.24)`. This allows the "net pay" tests to be independent of the tax calculation logic. When the tax codes change, only the tax service related code and tests need to change. The tests for the net pay can continue to operate as they are since these tests do not care how the tax is calculated, just that the value is applied properly.
+これにより、テストでは `taxServiceSpy.federalIncomeTax.and.returnValue(73.24)` などのモックの設定を介して様々な税金計算から戻される値を制御できます。これにより、「差引支給額」のテストを税金計算ロジックから独立させることができます。税金のコードが変更された場合、修正する必要があるのは税金 service 関連のコードとテストのみです。差引支給額のテストは、税金がどのように計算されるかを考慮せず、値が適切に適用されるのみであるため、そのまま機能し続けることができます。
 
-The scaffolding that is used when a service is generated via `ionic g service name` uses Angular's testing utilities and sets up a testing module. Doing so is not strictly necessary. That code may be left in, however, allowing the service to be built manually or injected as such:
+`ionic g service name` で service を生成するときに使われる scaffold は Angular のテストユーティリティを使ってテストモジュールをセットアップします。必ずしもそうする必要はありません。ただし、このコードを残しておくことで、手動でサービスを構築したり、次のように注入したりすることができます:
 
 ```TypeScript
 import { TestBed, inject } from '@angular/core/testing';
