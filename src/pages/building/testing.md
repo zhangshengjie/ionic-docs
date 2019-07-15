@@ -524,17 +524,17 @@ describe('Login', () => {
 });
 ```
 
-### Configuration
+### 設定
 
-The default configuration uses the same `environment.ts` file that is used for development. In order to provide better control over the data used by the end-to-end tests, it is often useful to create a specific environment for testing and use that environment for the tests. This section shows one possible way to create this configuration.
+デフォルトの設定では、開発に使用される同じ `environment.ts` ファイルを使います。エンドツーエンドのテストで使用するデータをより適切に制御するには、テスト用の特定の環境を用意し、テストにその環境を使用すると便利なことが多いです。このセクションでは、この設定を作成する1つの方法を示します。
 
-#### Testing Environment
+#### テスト環境
 
-Setting up a testing environment involves creating a new environment file that uses a dedicated testing backend, updating the `angular.json` file to use that environment, and modifying the `e2e` script in the `package.json` to specify the `test` environment.
+テスト環境を設定するには、テスト専用のバックエンドを使用する新しい環境ファイルを作成し、その環境を使うために `angular.json` ファイルを更新し、`package.json` 中の `e2e` スクリプトを `test` 環境を指定するように修正します。
 
-##### Create the `environment.e2e.ts` File
+##### `environment.e2e.ts` ファイルを生成
 
-The Angular `environment.ts` and `environment.prod.ts` files are often used to store information such as the base URL for the application's backend data services. Create an `environment.e2e.ts` that provides the same information, only connecting to backend services that are dedicated to testing rather than the development or production backend services. Here is an example:
+Angular の `environment.ts` と `environment.prod.ts` ファイルは、アプリケーションのバックエンドのデータサービスのベース URL などの情報を格納するために度々使用されます。また、同じ情報を提供する `environment.e2e.ts` を作成してください。これは、開発または本番のバックエンドサービスではなく、テスト専用のバックエンドサービスにのみ接続します。以下に例を示します:
 
 ```TypeScript
 export const environment = {
