@@ -298,12 +298,11 @@ describe('NamePipe', () => {
 
 また、pipe を利用するコンポーネントおよびページでの DOM テストを介して pipe を実行することも有益です。
 
-## End-to-end Testing
+## エンドツーエンドテスト
 
-End-to-end testing is used to verify that an application works as a whole and often includes a connection to live data. Whereas unit tests focus on code units in isolation and thus allow for low-level testing of the application logic, end-to-end tests focus on various user stories or usage scenarios, providing high-level testing of the overall flow of data through the application. Whereas unit tests try to uncover problems with an application's logic, end-to-end tests try to uncover problems that occur when those individual units are used together. End-to-end tests uncover problems with the overall architecture of the application.
+エンドツーエンドのテストは、アプリケーションが全体として機能し、多くの場合、ライブデータへの接続を含むことを検証するために使用されます。一方で、ユニットテストは分離されたコードユニットに重点を置いているため、アプリケーションロジックの低レベルのテストが可能ですが、エンドツーエンドテストはさまざまなユーザーストーリーや使用・シナリオに重点を置いており、アプリケーション全体を通したデータフローの総合的な高レベルのテストを提供します。また一方で、ユニットテストではアプリケーションのロジックの問題を明らかにしようとしますが、エンドツーエンドテストでは、個々のユニットが一緒に使用される場合に発生する問題を明らかにしようとします。エンドツーエンドのテストにより、アプリケーションの全体的なアーキテクチャに関する問題が明らかになります。
 
-Since end-to-end tests exercise user stories and cover the application as a whole rather than individual code modules, end-to-end tests exist in their own application in the project apart from the code for the main application itself. Most end-to-end tests operate by automating common user interactions with the application and examining the DOM to determine the results of those interactions.
-
+エンドツーエンドテストはユーザーストーリーを実行し、個々のコードモジュールではなくアプリケーション全体を対象とするため、エンドツーエンドテストは、メインアプリケーション自体のコードとは別に、プロジェクト内の独自のアプリケーションとして存在します。ほとんどのエンドツーエンドテストは、アプリケーションとの共通のユーザー対話を自動化し、それらの対話の結果を判別するために DOM を調査します。
 ### Test Structure
 
 When an `@ionic/angular` application is generated, a default end-to-end test application is generated in the `e2e` folder. This application uses <a href="">Protractor</a> to control the browser and <a href="">Jasmine</a> to structure and execute the tests. The application initially consists of four files:
