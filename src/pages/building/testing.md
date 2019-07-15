@@ -318,11 +318,11 @@ describe('NamePipe', () => {
 
 ページオブジェクトは、TypeScript クラスの単一ページの HTML をカプセル化し、テスト用のスクリプトがアプリケーションと対話するために使用するAPIを提供します。DOM 操作ロジックをページオブジェクト内にカプセル化することで、テストが読みやすくなり、かつ判断することがはるかに簡単になり、テストの保守コストが大幅に削減されます。洗練されたページオブジェクトを作成することは、高品質で保守しやすいエンドツーエンドのテストを作成するための鍵です。
 
-##### Base Page Object
+##### ベースページオブジェクト
 
-A lot of tests rely on actions such as waiting for a page to be visible, entering text into an input, and clicking a button. The methods used to do this remain consistent with only the CSS selectors used to get the appropriate DOM element changing. Therefore it makes sense to abstract this logic into a base class that can be used by the other page objects.
+多くのテストは、ページが表示されるのを待ったり、input にテキストを入力したり、ボタンをクリックするなどのアクションに依存しています。これを行うために使用されるメソッドは、適切な DOM 要素の変更を取得するために使用されるCSSセレクターのみと一貫性があります。したがって、このロジックを、他のページオブジェクトが使用できるベースクラスに抽象化することは理にかなっています。
 
-Here is an example that implements a few basic methods that all page objects will need to support.
+すべてのページオブジェクトがサポートを必要とするいくつかのベースメソッドを実装する例を次に示します:
 
 ```TypeScript
 import { browser, by, element, ExpectedConditions } from 'protractor';
