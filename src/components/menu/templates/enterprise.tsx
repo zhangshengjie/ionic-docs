@@ -11,7 +11,7 @@ const items = {
   },
   '一般的なデバイス機能': {
     'Android Permissions': '/docs/enterprise/android-permissions',
-    'App Version': '/docs/enterprise/appversion',
+    'App Version': '/docs/enterprise/app-version',
     'Badge': '/docs/enterprise/badge',
     'Browser': '/docs/enterprise/inappbrowser',
     'Calendar': '/docs/enterprise/calendar',

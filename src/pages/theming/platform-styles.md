@@ -49,4 +49,4 @@ _Note: **platform** と **mode** は別物です。platformはアプリの [conf
 }
 ```
 
-上書きするすべてのグローバルCSS変数のリストについては、[Advanced Theming](/docs/theming/advanced) をご覧ください。
+上書きするすべてのグローバルCSS変数のリストについては、[Ionic's color variables](/docs/theming/colors), [theme variables](/docs/theming/themes) and [global component variables](/docs/theming/advanced) をご覧ください。

@@ -1,8 +1,8 @@
 ---
 previousText: 'Platform Styles'
 previousUrl: '/docs/theming/platform-styles'
-nextText: 'Color Generator'
-nextUrl: '/docs/theming/color-generator'
+nextText: 'Colors'
+nextUrl: '/docs/theming/colors'
 contributors:
   - brandyscarney
   - iget-master
@@ -97,4 +97,4 @@ Ionicは、`--background` や `--color` のようなコンポーネントレベ�
 
 ### グローバル変数
 
-アプリケーション全体のテーマを簡単に変更できるようにIonicが提供するグローバル変数がいくつかあります。すべてのグローバル変数のリストは [Advanced Theming](/docs/theming/advanced) をご覧ください。
+アプリケーション全体のテーマを簡単に変更できるようにIonicが提供するグローバル変数がいくつかあります。すべてのグローバル変数のリストは [Colors](/docs/theming/colors), [Themes](/docs/theming/themes) and [Advanced Theming](/docs/theming/advanced) をご覧ください。

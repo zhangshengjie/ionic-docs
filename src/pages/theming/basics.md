@@ -16,7 +16,7 @@ Ionic Frameworkは、さまざまなプラットフォームの標準デザイ�
 
 Ionicには、多くのコンポーネントの配色を変更するために使用できる9つのデフォルトカラーがあります。 それぞれの配色は、 `shade` と `tint` を含む複数のプロパティを持つコレクションであり、Ionic全体で利用されます。
 
-配色を変更するときは、関連するすべてのプロパティを設定することが重要です。[Color Generator](/docs/theming/color-generator) を使えば、これは簡単に設定できますし、必要に応じてこれらを手動で書き込むこともできます。Ionicの配色についての詳細は [Advanced Colors](/docs/theming/advanced#colors) をご覧ください。
+配色を変更するときは、関連するすべてのプロパティを設定することが重要です。[Color Generator](/docs/theming/color-generator) を使えば、これは簡単に設定できますし、必要に応じてこれらを手動で書き込むこともできます。Ionicの配色についての詳細は [Colors](/docs/theming/colors) をご覧ください。
 
 <color-accordion></color-accordion>
 
@@ -35,4 +35,4 @@ Ionicは、2つの **modes** をもっており、これらはプラットフォ
 
 ## ブランディング
 
-Ionicは、ブランディングや配色にあったテーマとなるアプリケーションの配色を提供します。デフォルトのテーマは明るい背景を使用しますが、背景色からテキストの色まですべてカスタマイズ可能です。ブランディングの詳細については、[Advanced Theming](/docs/theming/advanced) をご覧ください。
+Ionicは、ブランディングや配色にあったテーマとなるアプリケーションの配色を提供します。デフォルトのテーマは明るい背景を使用しますが、背景色からテキストの色まですべてカスタマイズ可能です。ブランディングの詳細については、[Themes](/docs/theming/themes) をご覧ください。

@@ -1,10 +1,10 @@
 ---
 initialTab: 'preview'
 inlineHtmlPreviews: true
-previousText: 'Color Generator'
-previousUrl: '/docs/theming/color-generator'
-nextText: 'Publishing an app'
-nextUrl: '/docs/publishing/app-store'
+previousText: 'Themes'
+previousUrl: '/docs/theming/themes'
+nextText: 'Color Generator'
+nextUrl: '/docs/theming/color-generator'
 contributors:
   - brandyscarney
   - marcjulian
@@ -13,152 +13,6 @@ contributors:
 # 高度なカスタマイズ
 
 CSSベースのテーマ設定では、CSSファイルをロードするか、いくつかのCSSプロパティ値を変更することで、アプリの配色をすばやくカスタマイズできます。
-
-## 配色
-
-Ionicには、多くのコンポーネントの配色を変更するために使用できる9つのデフォルトカラーがあります。 それぞれの配色は、 `shade` と `tint` を含む複数のプロパティを持つコレクションであり、Ionic全体で利用されます。
-
-デフォルトの配色を変更するために、 `color` 属性を使って任意の色をIonicのコンポーネントに適用できます。以下の buttons はテキストと背景が `color` 属性に基づいて変更されていることに注目してください。button に `color` 属性がない時は、デフォルト値として `primary` の配色が適用されます。
-
-```html
-<ion-button>Default</ion-button>
-<ion-button color="primary">Primary</ion-button>
-<ion-button color="secondary">Secondary</ion-button>
-<ion-button color="tertiary">Tertiary</ion-button>
-<ion-button color="success">Success</ion-button>
-<ion-button color="warning">Warning</ion-button>
-<ion-button color="danger">Danger</ion-button>
-<ion-button color="light">Light</ion-button>
-<ion-button color="medium">Medium</ion-button>
-<ion-button color="dark">Dark</ion-button>
-```
-
-### 配色のレイヤードスタイル
-
-それぞれの配色は、これらのプロパティで構成されています: `base`, `contrast`, `shade`, と `tint` です。`base` と `contrast` の配色は `rgb` プロパティと同一の配色が求められます。 <a href="https://developer.mozilla.org/en-US/docs/Glossary/RGB" target="_blank">rgb format</a> をご覧ください。この `rgb` の変数が必要な理由は [The Alpha Problem](#the-alpha-problem) をご覧ください。下のドロップダウンから選択することで、Ionicが提供するデフォルトの配色とそのバリエーションを確認することができます。
-
-<layered-colors-select mode="md" no-prerender></layered-colors-select>
-
-### 配色を変更する
-
-配色を変更するときは、その色についてリストされているすべてのバリエーションを変更する必要があります。例えば、`secondary color` を <code-color mode="md" value="#006600"></code-color> に変更する時、以下のCSSプロパティが必要です。
-
-```css
-:root {
-  --ion-color-secondary: #006600;
-  --ion-color-secondary-rgb: 0,102,0;
-  --ion-color-secondary-contrast: #ffffff;
-  --ion-color-secondary-contrast-rgb: 255,255,255;
-  --ion-color-secondary-shade: #005a00;
-  --ion-color-secondary-tint: #1a751a;
-}
-```
-
-`secondary` をボタンに適用した時、利用されるのはベースカラー <code-color mode="md" value="#006600"></code-color> だけではありません。`contrast color` <code-color mode="md" value="#ffffff"></code-color> はテキストに適用され、それに加えて `shade` <code-color mode="md" value="#005a00"></code-color> と `tint` <code-color mode="md" value="#1a751a"></code-color> はボタンのステータスが変更された時に利用されます。
-
-> ベースカラーからバリエーションカラーを取得する方法がわからない？その場合、 [Color Generator](/docs/theming/color-generator) をお試しください。これはすべてのバリエーションを計算し、アプリにコピー&ペーストできるコードを提供します！
-
-CSS変数についてもっと詳しく知りたい時は [CSS Variables documentation](/docs/theming/css-variables) をご覧ください。
-
-### 配色の追加
-
-新しい配色を追加する時は、CSS変数を利用してすべてのバリエーションを追加する必要があります。クラス名は `.ion-color-{COLOR}` というフォーマットに従い、 `{COLOR}` には新しい色の名前をつけてください。例えば、配色が `favorite` という名前なら、次のようなclassを追加します:
-
-```css
-.ion-color-favorite {
-  --ion-color-base: #69bb7b;
-  --ion-color-base-rgb: 105,187,123;
-  --ion-color-contrast: #ffffff;
-  --ion-color-contrast-rgb: 255,255,255;
-  --ion-color-shade: #5ca56c;
-  --ion-color-tint: #78c288;
-}
-```
-
-classが追加されると、Ionicのコンポーネントの `color` プロパティでその配色を利用することができます。 `favorite` をIonicのボタンで使う時は以下の通りになります。
-
-```html
-<ion-button color="favorite">Favorite</ion-button>
-```
-
-上記のクラスを追記しても、アプリケーションのスタイルシートで使用するためのIonic CSS変数が自動的に作成されないことに注意が必要です。`--ion-color-favorite` ではじまる変数は、`.ion-color-favorite` というclassを追加しただけでは、 **存在しません** 。 アプリケーションで利用するためには、別々に宣言する必要があります:
-
-```css
-:root {
-  --ion-color-favorite: #69bb7b;
-  --ion-color-favorite-rgb: 105,187,123;
-  --ion-color-favorite-contrast: #ffffff;
-  --ion-color-favorite-contrast-rgb: 255,255,255;
-  --ion-color-favorite-shade: #5ca56c;
-  --ion-color-favorite-tint: #78c288;
-}
-```
-
-これで、CSSで`div` の`background` と `color` で `favorite` を利用することができます。
-
-```css
-div {
-  background: var(--ion-color-favorite);
-  color: var(--ion-color-favorite-contrast);
-}
-```
-
-CSS変数についてもっと知りたい場合は [CSS Variables documentation](/docs/theming/css-variables) をご覧ください。
-
-## テーマ
-
-Ionicは、アプリケーション全体のデフォルトテーマを変更するために、コンポーネント全体で使用できるいくつかのグローバル変数を提供します。次のセクションでは、さまざまなテーマ変数を用途別に分類しています: [Application Colors](#application-colors), [Stepped Colors](#stepped-colors)
-
-### アプリケーションの配色
-
-アプリケーションの配色は、Ionicの複数の場所で使用されています。ダークテーマや、ブランディングにあったテーマを簡単に作成することができます。
-
-背景とテキストの色変数は、RGBである必要があります: <a href="https://developer.mozilla.org/en-US/docs/Glossary/RGB" target="_blank">rgb format</a>. なぜ `rgb` プロパティも必要であるかは [The Alpha Problem](#the-alpha-problem) をご覧ください。
-
-
-| Name                                     | Description                                         |
-| ---------------------------------------- | --------------------------------------------------- |
-| `--ion-background-color`                 | Background color of entire app                      |
-| `--ion-background-color-rgb`             | Background color of entire app, rgb format          |
-| `--ion-text-color`                       | Text color of entire app                            |
-| `--ion-text-color-rgb`                   | Text color of entire app, rgb format                |
-| `--ion-backdrop-color`                   | Color of the Backdrop component                     |
-| `--ion-overlay-background-color`         | Background color of the overlays                    |
-| `--ion-border-color`                     | Border color                                        |
-| `--ion-box-shadow-color`                 | Box shadow color                                    |
-| `--ion-tab-bar-background`               | Background of the Tab bar                           |
-| `--ion-tab-bar-background-focused`       | Background of the focused Tab bar                   |
-| `--ion-tab-bar-border-color`             | Border color of the Tab bar                         |
-| `--ion-tab-bar-color`                    | Color of the Tab bar                                |
-| `--ion-tab-bar-color-activated`          | Color of the activated Tab                          |
-| `--ion-toolbar-background`               | Background of the Toolbar                           |
-| `--ion-toolbar-border-color`             | Border color of the Toolbar                         |
-| `--ion-toolbar-color`                    | Color of the components in the Toolbar              |
-| `--ion-toolbar-color-activated`          | Color of the activated components in the Toolbar    |
-| `--ion-toolbar-color-unchecked`          | Color of the unchecked components in the Toolbar    |
-| `--ion-toolbar-color-checked`            | Color of the checked components in the Toolbar      |
-| `--ion-item-background`                  | Background of the Item                              |
-| `--ion-item-background-activated`        | Background of the activated Item                    |
-| `--ion-item-border-color`                | Border color of the Item                            |
-| `--ion-item-color`                       | Color of the components in the Item                 |
-| `--ion-placeholder-color`                | Color of the placeholder in inputs                  |
-
-
-### ステップカラー
-
-Ionicテーマをカスタマイズするためのさまざまな方法を検討した結果、1つの背景色またはテキスト色しか使用できないことがわかりました。デザイン全体を通して重要性と深度を暗示するためには、背景色とテキスト色の色合いを変える必要があります。このパターンに対応するために、ステップカラーを作成しました。
-
-背景色 (`--ion-background-color`) と テキストカラー (`--ion-text-color`) の変数を更新すると、ほとんどのアプリコンポーネントの外観が変わりますが、見逃したり壊れたりする可能性のある特定のIonicコンポーネントがあります。ダークテーマを適用するとき、これはより明白になります。
-
-一部のコンポーネントでは、背景よりも暗い、またはテキストよりも明るい色合いを使用しています。たとえば、item の見出しテキストは、私たちのデフォルトのテキストカラーよりも数段階明るい色である <code-color mode="md" value="#404040"></code-color> になります。一方、ローディングコンポーネントの背景は白よりも濃い色 <code-color mode="md" value="#f2f2f2"></code-color> になります。私達はこれらのわずかな変化を定義するために、ステップカラーを利用します。アプリケーションの背景色やテキストの色を更新するときは、ステップカラーを更新することが重要です。
-
-デフォルトでは、Ionicのステップカラーはデフォルトの背景色の値 <code-color mode="md" value="#ffffff"></code-color> で始まります。 そしてテキストカラー値 <code-color mode="md" value="#000000"></code-color> を混ぜるために使います。ステップカラーの完全なリストは、以下のジェネレータに表示されています。
-
-### ステップカラーの変数生成
-
-アプリのカスタム背景色とテキストの色のテーマを作成します。下記の背景色またはテキストカラーの16進値を更新してから、生成されたコードをコピーしてIonicプロジェクトに直接貼り付けます。
-
-<stepped-color-generator mode="md" no-prerender></stepped-color-generator>
 
 
 ## グローバル
@@ -289,6 +143,6 @@ After running through the Sass compiler, the colors will have the following valu
 
 However, because CSS variables can be set at runtime and are more dynamic, it is not currently possible to manipulate them using a simple function.
 
-This is normally not a problem, but when an application needs to have dynamic theming it presents issues. In Ionic, this is the reason that there are [variations to each color](#layered-colors), and it is also why [stepped colors](#stepped-colors) are necessary for theming.
+This is normally not a problem, but when an application needs to have dynamic theming it presents issues. In Ionic, this is the reason that there are [variations to each color](./colors#layered-colors), and it is also why [stepped colors](./themes/#stepped-colors) are necessary for theming.
 
 There are drafts and issues discussing [color modification proposals](https://github.com/w3c/csswg-drafts/issues/3187) that would make this possible.

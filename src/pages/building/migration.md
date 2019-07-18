@@ -185,7 +185,7 @@ v4では、ナビゲーションが最も多くの変更がありました。`Na
 
 ユーザーが慣れ親しんでいるプラットフォーム固有のアニメーションを提供するために、`ion-router-outlet`をAngularアプリ用に作成しました。これはAngularの場合と同様に`router-outlet`機能しますが、スタックベースのナビゲーション（tabs）とアニメーションを提供します。
 
-v4プロジェクトでのナビゲーション機能の詳細な説明は、[Angular navigation guide](/docs/navigation/angular)をご覧ください。
+v4プロジェクトでのナビゲーション機能の詳細な説明は、[Angular navigation guide](/docs/angular/navigation) をご覧ください。
 
 
 ## Lazy Loading
