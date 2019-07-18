@@ -42,8 +42,8 @@ const items = {
     'テーマの基本': '/docs/theming/basics',
     'プラットフォームの外観': '/docs/theming/platform-styles',
     'CSS変数': '/docs/theming/css-variables',
-    'Colors': '/docs/theming/colors',
-    'Themes': '/docs/theming/themes',
+    '配色': '/docs/theming/colors',
+    'テーマ': '/docs/theming/themes',
     '高度なカスタマイズ': '/docs/theming/advanced',
     'カラージェネレーター 🎨': '/docs/theming/color-generator'
   },
