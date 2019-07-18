@@ -1,11 +1,11 @@
 # ion-datetime
 
-Datetimes present a picker interface from the bottom of a page, making it easy for
-users to select dates and times. The picker displays scrollable columns that can be
-used to individually select years, months, days, hours and minute values. Datetimes
-are similar to the native `input` elements of type `datetime-local`, however, Ionic's
-Datetime component makes it easy to display the date and time in a preferred format,
-and manage the datetime values.
+Datetimeコンポーネントはページの下部にPickerインターフェースを表示し、
+ユーザーが日付と時刻を簡単に選択できるようにします。
+ピッカーには、年、月、日、時間、分の値を個別に選択するために使用できるスクロール可能な列が表示されます。
+日時は `datetime-local` 型のネイティブの `Input` 要素に似ていますが、IonicのDatetimeコンポーネントを使用すると、
+希望する形式で日付と時刻を表示したり、
+日時の値を管理したりすることが容易になります。
 
 
 ## Display and Picker Formats
@@ -47,8 +47,8 @@ Names](#month-names-and-day-of-the-week-names) をご覧ください。
 `displayFormat` の入力プロパティーは、datetimeコンポーネント内で
 datetimeの値を書式付きテキストとして出力する方法を指定します。
 
-A few examples are provided in the chart below. The formats mentioned
-above can be passed in to the display format in any combination.
+以下の表にいくつかの例を示します。記載されているフォーマット
+上記は、任意の組み合わせで表示フォーマットに渡すことができます。
 
 | Display Format        | Example                 |
 | ----------------------| ----------------------- |
@@ -58,18 +58,18 @@ above can be passed in to the display format in any combination.
 | `YYYY, MMMM`          | `2005, June`            |
 | `MMM DD, YYYY HH:mm`  | `Jun 17, 2005 11:06`    |
 
-**Important**: `ion-datetime` will always display values relative to the user's timezone.
-Given a value of `09:00:00+01:00`, the datetime component will
-display it as `04:00:00-04:00` for users in a `-04:00` timezone offset.
+**Important**: `ion-datetime` は常にユーザーのタイムゾーンに相対的な値を表示します。
+値 `09:00:00+01:00` が指定された場合、日時コンポーネントでは、
+ユーザーのタイムゾーン・オフセットが `-04:00` であった場合 `04:00:00-04:00` と表示されます。
 
 
 ### Picker Format
 
-The `pickerFormat` property determines which columns should be shown in the picker
-interface, the order of the columns, and which format to use within each
-column. If `pickerFormat` is not provided then it will use the value of
-`displayFormat`. Refer to the chart in the [Display Format](#display-format) section
-for some formatting examples.
+`pickerFormat` プロパティは、Pickerインタフェースに表示する列、
+列の順序、および各列内で使用する形式を決定します。
+`pickerFormat` が指定されていない場合は、
+`displayFormat` の値が使用されます。
+フォーマットの例については、 [Display Format](#display-format) セクションの図を参照してください。
 
 
 ### Datetime Data
@@ -121,27 +121,27 @@ Ionic はdatetime値が最初に指定されたのと同じISOフォーマット
 書式は単に値をテキストおよびピッカーのインタフェースとして表示するためのもので、
 日時の値は常に有効な ISO 8601 datetime の文字列として保持されます。
 
-## Min and Max Datetimes
+## Datetimesの最大値と最小値
 
-Dates are infinite in either direction, so for a user's selection there should
-be at least some form of restricting the dates that can be selected. By default,
-the maximum date is to the end of the current year, and the minimum date is from
-the beginning of the year that was 100 years ago.
+日付はどちらの方向にも無限であるため、
+ユーザーが選択するには、選択できる日付を何らかの形で制限する必要があります。
+デフォルトでは、最大の日付は現在の年の終わりまでで、
+最小の日付は100年前の年の初めからです。
 
-To customize the minimum and maximum datetime values, the `min` and `max`
-component properties can be provided which may make more sense for the app's
-use-case, rather than the default of the last 100 years. Following the same IS0
-8601 format listed in the table above, each component can restrict which dates
-can be selected by the user. By passing `2016` to the `min` property and `2020-10-31`
-to the `max` property, the datetime will restrict the date selection between the
-beginning of 2016, and October 31st of 2020.
+日時の最小値と最大値をカスタマイズするには、過去100年のデフォルト値ではなく、
+アプリケーションのユースケースに適した
+`min` および `max` コンポーネントプロパティを指定します。
+上の表と同じIS0 8601形式に従って、
+各コンポーネントはユーザーが選択できる日付を制限できます。
+minプロパティに `2016` を渡し、maxプロパティに `2020-10-31` を渡すことによって、
+datetimeは2016年の初めから2020年の10月31日までの間の日付の選択を制限します。
 
 
-## Month Names and Day of the Week Names
+## 月の名前と曜日名
 
-At this time, there is no one-size-fits-all standard to automatically choose the
-correct language/spelling for a month name, or day of the week name, depending
-on the language or locale.
+現時点では、言語またはロケールに応じて、
+月名または曜日名の正しい言語/スペルを
+自動的に選択するための標準規格はありません。
 
 The good news is that there is an [Intl.DatetimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DatetimeFormat)
 standard which [most browsers](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DatetimeFormat#Browser_compatibility) have adopted.
