@@ -389,7 +389,6 @@ export class PageObjectBase {
 
 ##### ページ毎の要約
 
-Often, these custom elements take advantage of methods in the base class in order to perform the work that is required.
 アプリケーションの各ページには、そのページの要素を抽象化する独自のページオブジェクトクラスがあります。ベースとなるページオブジェクトクラスを使用する場合、ページオブジェクトを作成するには、ほとんどの場合そのページに固有の要素のカスタムメソッドを作成する必要があります。多くの場合、これらのカスタム要素は、必要な作業を実行するためにベースクラスのメソッドの恩恵を受けます。
 
 次に、単純ですが典型的なログインページのページオブジェクトの例を示します。`enterEMail()` のような多くのメソッドは、作業の大部分を行うベースクラスのメソッドを呼び出すことに注意してください。
@@ -570,7 +569,6 @@ export const environment = {
             }
 ```
 
-Add a configuration at `/projects/app-e2e/architect/e2e/configurations` called `test` that does points the dev server target at the `test` serve configuration defined above.
 `/projects/app-e2e/architect/e2e/configurations` に、上記で定義した `test` という起動設定で開発サーバーターゲットを指定する `test` という名前の設定を追加します。
 
 ```JSON
