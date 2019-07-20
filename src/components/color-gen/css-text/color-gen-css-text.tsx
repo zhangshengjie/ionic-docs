@@ -7,13 +7,15 @@ import { convertCssToColors } from '../parse-css';
   styleUrl: 'color-gen-css-text.css'
 })
 export class CssText {
+  @Element() el: HTMLElement;
 
   @Prop({ mutable: true }) cssText = '';
-  @State() showCopyConfirmation = false;
-  @State() showShareConfirmation = false;
-  @Event() cssTextChange: EventEmitter;
 
-  @Element() el: HTMLElement;
+  @Prop() header = true;
+
+  @State() showCopyConfirmation = false;
+
+  @Event() cssTextChange: EventEmitter;
 
   onCssTextChange(ev: UIEvent) {
     if ((ev.target as HTMLTextAreaElement).value !== this.cssText) {
@@ -79,7 +81,10 @@ export class CssText {
     return [
       <div>
         <div class="css-text__header">
-          <h3>CSS Variables</h3>
+          {this.header
+            ? <h3>CSS Variables</h3>
+            : <h3></h3>
+          }
 
           <section class="css-text__header-buttons">
             <div class={{ 'css-text__copy': true, 'show-confirmation': this.showShareConfirmation }}>

@@ -55,26 +55,9 @@ CSS変数についてもっと詳しく知りたい時は [CSS Variables documen
 
 ### 配色の追加
 
-新しい配色を追加する時は、CSS変数を利用してすべてのバリエーションを追加する必要があります。クラス名は `.ion-color-{COLOR}` というフォーマットに従い、 `{COLOR}` には新しい色の名前をつけてください。例えば、配色が `favorite` という名前なら、次のようなclassを追加します:
+Colors can be added for use throughout an application by setting the `color` property on an Ionic component, or by styling with CSS. Read on to see how to manually add a new color, or use the [New Color Creator](#new-color-creator) below for a quick way to generate the code of a new color to be copy and pasted into an application.
 
-```css
-.ion-color-favorite {
-  --ion-color-base: #69bb7b;
-  --ion-color-base-rgb: 105,187,123;
-  --ion-color-contrast: #ffffff;
-  --ion-color-contrast-rgb: 255,255,255;
-  --ion-color-shade: #5ca56c;
-  --ion-color-tint: #78c288;
-}
-```
-
-classが追加されると、Ionicのコンポーネントの `color` プロパティでその配色を利用することができます。 `favorite` をIonicのボタンで使う時は以下の通りになります。
-
-```html
-<ion-button color="favorite">Favorite</ion-button>
-```
-
-上記のクラスを追記しても、アプリケーションのスタイルシートで使用するためのIonic CSS変数が自動的に作成されないことに注意が必要です。`--ion-color-favorite` ではじまる変数は、`.ion-color-favorite` というclassを追加しただけでは、 **存在しません** 。 アプリケーションで利用するためには、別々に宣言する必要があります:
+To add a new color, first define the CSS variables for all of the variations of the color at the root. For example, to add a new color called `favorite`, we can define the following variables:
 
 ```css
 :root {
@@ -87,7 +70,26 @@ classが追加されると、Ionicのコンポーネントの `color` プロパ�
 }
 ```
 
-これで、CSSで`div` の`background` と `color` で `favorite` を利用することができます。
+Then, create a new class that uses these CSS variables. The class **must** be written in the format `.ion-color-{COLOR}` where `{COLOR}` is the name of the color to add:
+
+```css
+.ion-color-favorite {
+  --ion-color-base: var(--ion-color-favorite);
+  --ion-color-base-rgb: var(--ion-color-favorite-rgb);
+  --ion-color-contrast: var(--ion-color-favorite-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-favorite-contrast-rgb);
+  --ion-color-shade: var(--ion-color-favorite-shade);
+  --ion-color-tint: var(--ion-color-favorite-tint);
+}
+```
+
+After the class is added, the color can be used on any Ionic component that supports the `color` property. An example of using the `favorite` color on an Ionic button is below.
+
+```html
+<ion-button color="favorite">Favorite</ion-button>
+```
+
+The CSS variables defined at the root can also be used to style any element using CSS:
 
 ```css
 div {
@@ -96,4 +98,11 @@ div {
 }
 ```
 
-CSS変数についてもっと知りたい場合は [CSS Variables documentation](/docs/theming/css-variables) をご覧ください。
+See the [CSS Variables documentation](/docs/theming/css-variables) for more information on setting and using CSS variables.
+
+
+## New Color Creator
+
+Create a new color below by changing the name and value, then copy and paste the code below into your project.
+
+<new-color-generator mode="md" no-prerender></new-color-generator>
