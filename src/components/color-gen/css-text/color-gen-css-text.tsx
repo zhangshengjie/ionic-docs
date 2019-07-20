@@ -13,6 +13,8 @@ export class CssText {
 
   @Prop() header = true;
 
+  @State() showShareConfirmation = false;
+
   @State() showCopyConfirmation = false;
 
   @Event() cssTextChange: EventEmitter;
