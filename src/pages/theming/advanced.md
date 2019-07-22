@@ -99,7 +99,7 @@ body {
 
 ### Variables in Media Queries
 
-CSS variables in [media queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries) are not currently supported, but there are open drafts to add [custom media queries](https://drafts.csswg.org/mediaqueries-5/#custom-mq) and [custom environment variables](https://drafts.csswg.org/css-env-1/) that would solve this problem! However, with the current state of support, the following will **not** work:
+[メディアクエリ](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries) のCSS変数は現在サポートされていませんが、この問題を解決する[custom media queries](https://drafts.csswg.org/mediaqueries-5/#custom-mq) と [custom environment variables](https://drafts.csswg.org/css-env-1/)を追加するためのオープンドラフトがあります。ただし、現在のサポート状態では、次の機能は動作しません。
 
 ```css
 :root {
@@ -112,11 +112,11 @@ CSS variables in [media queries](https://developer.mozilla.org/en-US/docs/Web/CS
 ```
 
 
-### Modifying CSS Color Variables
+### CSSカラー変数の変更
 
-While it is possible to easily alter a color in Sass using its built-in functions, it is currently not as easy to modify colors set in CSS Variables. This can be accomplished in CSS by splitting the [RGB](https://developer.mozilla.org/en-US/docs/Glossary/RGB) or [HSL](https://en.wikipedia.org/wiki/HSL_and_HSV) channels and modifying each value, but it is complex and has missing functionality.
+Sassの組み込み関数を使用して簡単に色を変更することは可能ですが、現在のところCSS変数で設定された色を変更するのはそれほど簡単ではありません。これは、CSSで [RGB](https://developer.mozilla.org/en-US/docs/Glossary/RGB) or [HSL](https://en.wikipedia.org/wiki/HSL_and_HSV) チャネルまたはHSLチャネルを分割してそれぞれの値を変更することで実現できますが、複雑で機能が不足しています。
 
-What exactly does this mean? Basically, using a CSS preprocessor, such as Sass, allows us to use functions to manipulate a single color. For example, we can create the following colors in Sass:
+正確に説明します。基本的に、SassなどのCSSプリプロセッサを使用すると、関数を使用して単一の色を操作できます。たとえば、Sassには次のカラーを作成できます:
 
 ```scss
 // Background color, shade, and tint
@@ -130,7 +130,7 @@ $text-darker: darken($text, 15);
 $text-lighter: lighten($text, 15);
 ```
 
-After running through the Sass compiler, the colors will have the following values:
+Sassコンパイラで実行すると、色の値は次のようになります:
 
 | Variable            | Value                                                     |
 | --------------------| ----------------------------------------------------------|
@@ -141,8 +141,8 @@ After running through the Sass compiler, the colors will have the following valu
 | `$text-darker`      | <code-color mode="md" value="#1e1e1e"></code-color>       |
 | `$text-lighter`     | <code-color mode="md" value="#6a6a6a"></code-color>       |
 
-However, because CSS variables can be set at runtime and are more dynamic, it is not currently possible to manipulate them using a simple function.
+ただし、CSS変数は実行時に設定でき、より動的であるため、現時点では単純な関数を使用して操作することはできません。
 
-This is normally not a problem, but when an application needs to have dynamic theming it presents issues. In Ionic, this is the reason that there are [variations to each color](./colors#layered-colors), and it is also why [stepped colors](./themes/#stepped-colors) are necessary for theming.
+これは通常は問題にはなりませんが、アプリケーションに動的なテーマカラーの設定が必要な場合は問題になります。Ionicでは、これが[各色にバリエーションがある](./colors#layered-colors)理由であり、テーマ設定に[stepped colors](./themes/#stepped-colors)が必要な理由でもあります。
 
-There are drafts and issues discussing [color modification proposals](https://github.com/w3c/csswg-drafts/issues/3187) that would make this possible.
+これを可能にする[color modification proposals](https://github.com/w3c/csswg-drafts/issues/3187)を議論している草案とIssuesはこちらからご覧いただけます。

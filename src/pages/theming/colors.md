@@ -55,9 +55,9 @@ CSS変数についてもっと詳しく知りたい時は [CSS Variables documen
 
 ### 配色の追加
 
-Colors can be added for use throughout an application by setting the `color` property on an Ionic component, or by styling with CSS. Read on to see how to manually add a new color, or use the [New Color Creator](#new-color-creator) below for a quick way to generate the code of a new color to be copy and pasted into an application.
+カラーは、Ionicコンポーネントの 「color」 プロパティを設定するか、CSSを使用してスタイル設定することで、アプリケーション全体で使用できるように追加できます。新しいカラーを手動で追加する方法については、この後の 「New Color Creator」 を参照してください。コピーしてアプリケーションに貼り付ける新しいカラーのコードを簡単に生成する方法については、次の 「New Color Creator」 を参照してください。
 
-To add a new color, first define the CSS variables for all of the variations of the color at the root. For example, to add a new color called `favorite`, we can define the following variables:
+新しいカラーを追加するには、最初にルートのカラーのすべてのバリエーションのCSS変数を定義します。たとえば、`favorite`という新しいカラーを追加するには、次の変数を定義します:
 
 ```css
 :root {
@@ -70,7 +70,7 @@ To add a new color, first define the CSS variables for all of the variations of 
 }
 ```
 
-Then, create a new class that uses these CSS variables. The class **must** be written in the format `.ion-color-{COLOR}` where `{COLOR}` is the name of the color to add:
+次に、これらのCSS変数を使用する新しいクラスを作成します。クラスは、`.ion-color-{COLOR}` の形式で記述する**必要があります**。 `{COLOR}` は追加するカラーの名前です:
 
 ```css
 .ion-color-favorite {
@@ -83,13 +83,13 @@ Then, create a new class that uses these CSS variables. The class **must** be wr
 }
 ```
 
-After the class is added, the color can be used on any Ionic component that supports the `color` property. An example of using the `favorite` color on an Ionic button is below.
+クラスを追加すると、colorプロパティーをサポートする任意のIonicコンポーネントでカラーを使用できるようになります。Ionicボタンに`favorite`の色を使用する例を以下に示します。
 
 ```html
 <ion-button color="favorite">Favorite</ion-button>
 ```
 
-The CSS variables defined at the root can also be used to style any element using CSS:
+ルートで定義されたCSS変数は、CSSを使用して任意のエレメントのスタイル設定にも使用できます:
 
 ```css
 div {
@@ -98,11 +98,11 @@ div {
 }
 ```
 
-See the [CSS Variables documentation](/docs/theming/css-variables) for more information on setting and using CSS variables.
+CSS変数の設定方法と使い方についての詳しい情報は [CSS Variables documentation](/docs/theming/css-variables) をご覧ください。
 
 
 ## New Color Creator
 
-Create a new color below by changing the name and value, then copy and paste the code below into your project.
+名前と値を変更して以下で新しい色を作成し、以下のコードをコピーしてプロジェクトに貼り付けることで、その配色をIonicプロジェクトで利用できます。
 
 <new-color-generator mode="md" no-prerender></new-color-generator>
