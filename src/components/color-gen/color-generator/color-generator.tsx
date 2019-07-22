@@ -52,7 +52,7 @@ export class ColorGenerator {
     }
   }
 
-  @Listen('demoMessage', { target: 'window' })
+  @Listen('demoModeChange', { target: 'window' })
   onModeChanged() {
     this.demoMessage.emit({ cssText: this.cssText });
   }

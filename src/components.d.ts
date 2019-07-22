@@ -513,6 +513,7 @@ declare namespace LocalJSX {
     'language'?: string;
   }
   interface DocsDemo extends JSXBase.HTMLAttributes<HTMLDocsDemoElement> {
+    'onDemoModeChange'?: (event: CustomEvent<any>) => void;
     'source'?: string;
     'url'?: string;
   }
