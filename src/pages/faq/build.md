@@ -171,26 +171,26 @@ class MyDir {
 }
 ```
 
-### Can't bind to 'propertyName' since it isn't a known property
+### 既知のプロパティではないため、`propertyName` にバインドできない
 
 ```shell
 Can't bind to 'propertyName' since it isn't a known property of the 'elementName' element and there are no matching directives with a corresponding property
 ```
 
-This happens when you try and bind a property on an element that doesn't have that property. If the element is a component or has one or more directives on it, neither the component nor the directives have that property either.
+これは、そのプロパティを持たない要素にプロパティをバインドしようとしたときに発生します。要素がコンポーネントの場合、または要素に1つ以上のディレクティブがある場合、コンポーネントもディレクティブもそのプロパティを持ちません。
 
 ```html
-<!-- div doesn't have a 'foo' property -->
+<!-- div には 'foo' というプロパティがない -->
 <div [foo]="bar"></div>
 ```
 
-### No provider for ControlContainer
+### ControlContainer の Provider がない
 
 ```shell
 No provider for ControlContainer! (NgControlName -> ControlContainer)
 ```
 
-This error is a more specific version of the `No provider` error above.  It happens when you use a form control like NgControlName without specifying a parent [NgForm](https://angular.io/docs/ts/latest/api/forms/index/NgForm-directive.html) or NgFormModel.  In most cases, this can be resolved by making sure your form control is within an actual form element.  NgForm uses `form` as a selector so this will instantiate a new NgForm:
+このエラーは、上記の `No provider` エラーのより具体的なバージョンです。これは、親の [NgForm](https://angular.jp/docs/ts/latest/api/forms/index/NgForm-directive.html) または NgFormModel を指定せずに NgControlName などのフォームコントロールを使用した場合に発生します。ほとんどの場合、これはフォームコントロールが実際のフォーム要素内にあることを確認することで解決できます。NgForm はセレクタとして `form` を使用するので、これは新しいNgFormをインスタンス化します:
 
 ```typescript
 @Component({
@@ -201,10 +201,10 @@ This error is a more specific version of the `No provider` error above.  It happ
 })
 ```
 
-### No Component Factory Found
+### コンポーネントファクトリがない
 
 ```shell
 No component factory found for <component name>
 ```
 
-This error happens when you are trying to use a component, provider pipe or directive that has not been imported and added to your ngModule. Whenever you add a new component, provider, pipe or directive to your app, you must add it to the `ngModule` in the `src/app/app.module.ts` file for Angular to be able to use it. To fix this error you can import the offending component, provider, pipe or directive into the app.module file and then if it is a provider add it to the `providers` array and for a component, pipe or directive add it to both the declarations array and `entryComponents` array.
+このエラーは、ngModule にインポートおよび追加されていない Component、Provider Pipe、ディレクティブを使用しようとしたときに発生します。新しい Component、Provider、Pipe、ディレクティブをアプリケーションに追加する場合は必ず、Angularがそれを使えるようにするために、`src/app/app.module.ts` ファイル内の `ngModule` に追加する必要があります。このエラーを修正するには、問題の Component、Provider、Pipe、ディレクティブを app.module ファイルにインポートし、Provider の場合は `providers` 配列に追加、Component、Pipe、ディレクティブの場合は宣言配列と `entryComponents` 配列の両方に追加します。
