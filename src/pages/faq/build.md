@@ -8,55 +8,54 @@ contributors:
   - brandyscarney
 ---
 
-# Build Errors
+# ビルドエラー
 
 
-## Common mistakes
+## 一般的な間違い
 
-### Forgetting Parentheses on a Decorator
+### デコレーターにて丸括弧を忘れる
 
-Decorators should have parentheses `()` after an annotation. Some examples include: `@Injectable()`, `@Optional()`, `@Input()`, etc.
+デコレーターはアノテーションの後に丸括弧 `()` を持つべきです。いくつか例を示します: `@Injectable()`, `@Optional()`, `@Input()`, など。
 
 ```typescript
 @Directive({
   selector: 'my-dir'
 })
 class MyDirective {
-  // Wrong, should be @Optional()
-  // @Optional does nothing here, so MyDirective will error if parent is undefined
+  // 誤り、@Optional() とすべき
+  // @Optional はここでは何もしないため、MyDirective は parent が undefined の場合にエラーになる
   constructor( @Optional parent: ParentComponent) { }
 }
 ```
 
-## Common Errors
+## 一般的なエラー
 
-### Cannot Resolve all Parameters
+### すべてのパラメータを解決できない
 
 ```shell
 Cannot resolve all parameters for 'YourClass'(?). Make sure that all the parameters are decorated with Inject or have valid type annotations and that 'YourClass' is decorated with Injectable.
 ```
 
-This exception means that Angular is confused about one or more of the parameters for `YourClass`'s constructor. In order to do [dependency injection](https://angular.io/docs/ts/latest/guide/dependency-injection.html) Angular needs to know the type of the parameter to inject. You let Angular know this by specifying the class of the parameter. Make sure:
+この例外は Angular が `YourClass` のコンストラクタの 1つ以上のパラメータについて困惑していることを意味します。[依存性を注入](https://angular.jp/docs/ts/latest/guide/dependency-injection.html) するため、Angular は 注入するパラメータの型を知る必要があります。パラメータのクラスを指定することで Angular にこのこと（タイプ）を知らせます。次の点を確認してください:
 
-- You are importing the parameter's class.
-- You have properly annotated the parameter or specified its type.
+- パラメータのクラスをインポートします。
+- パラメータに適切な注釈をつけるか、パラメータの型を指定します。
 
 ```typescript
-import { MyService } from 'my-service'; // Don't forget to import me!
+import { MyService } from 'my-service'; // 私をインポートすることを忘れないで！
 
 @Component({
   template: `Hello World`
 })
 export class MyClass {
-  // service is of type MyService
+  // service は MyService のタイプです
   constructor(service: MyService) {
 
   }
 }
 ```
 
-Sometimes circular references within your code can cause this error. Circular references mean that two objects depend on each other, and so there is no way to declare both of them before each other. To get around this, we can use the [`forwardRef`](https://angular.io/docs/ts/latest/api/core/index/forwardRef-function.html) function built in to Angular.
-
+コード内の循環参照がこのエラーの原因になることがあります。循環参照は、2つのオブジェクトが相互に依存していることを意味するため、両方を相互の前に宣言する方法はありません。この問題を回避するには、Angular に組み込まれている[`forwardRef`](https://angular.jp/docs/ts/latest/api/core/index/forwardRef-function.html) 関数を使用します。
 ```ts
 import { forwardRef } from '@angular/core';
 
@@ -66,8 +65,8 @@ import { forwardRef } from '@angular/core';
                <icon></icon>
                <input type="button" />
              </div>`,
-  directives: [forwardRef(() => MyIcon)] // MyIcon has not been defined yet
-})                                       // forwardRef resolves as MyIcon when MyIcon is needed
+  directives: [forwardRef(() => MyIcon)] // MyIcon はまだ定義されていません
+})                                       // forwardRef は MyIcon が必要なときに MyIcon として解決します
 class MyButton {
   constructor() { }
 }
@@ -76,20 +75,20 @@ class MyButton {
   selector: 'icon'
 })
 class MyIcon {
-  constructor(containerButton: MyButton) { } // MyButton has been defined
+  constructor(containerButton: MyButton) { } // MyButton が定義されました
 }
 ```
 
 
-### No provider for ParamType
+### ParamType の Provider がない
 
 ```shell
 No provider for ParamType! (MyClass -> ParamType)
 ```
 
-This means Angular knows the type of parameter it is supposed to inject, but it doesn't know how to inject it.
+これは、Angular は注入されるべきパラメータの型を知っているが、注入方法を知らないことを意味する。
 
-If the parameter is a service, make sure you have added the specified class to the list of providers available to your app:
+パラメータが Service の場合は、指定したクラスがアプリケーションで使用可能な providers のリストに追加されていることを確認します:
 
 
 ```typescript
@@ -97,12 +96,12 @@ import { MyService } from 'my-service';
 
 @Component({
   templateUrl: 'app/app.html',
-  providers: [MyService] // Don't forget me!
+  providers: [MyService] // 私を忘れないで！
 })
 class MyApp { }
 ```
 
-If the parameter is another component or directive (for example, a parent component), adding it to your list of providers will make the error go away, but this will have the same effect as the [Multiple instances of a provider](#multiple_instances) above. You'll be creating a new instance of the component class, and you won't get a reference to the component instance you want. Instead, make sure that the directive or component you expect to be injected is available to your component (e.g. that it is actually a parent if you are expecting it to be a parent). This is probably easiest understood with an example:
+パラメータが別のコンポーネントまたはディレクティブ（たとえば、親コンポーネント）である場合、パラメータを providers のリストに追加するとエラーはなくなりますが、これは前述の [provider の複数のインスタンス](/docs/faq/runtime#provider-) と同じ効果を持ちます。ここでは、コンポーネントクラスの新しいインスタンスを作成しますが、必要なコンポーネントインスタンスへの参照は取得しません。かわりに、注入されるであろうディレクティブまたはコンポーネントがコンポーネントで使用可能であることを確認します（たとえば、親であることを期待している場合は、実際に親であること）。これはおそらく、例を使用すると最も簡単に理解できます:
 
 ```typescript
 @Component({
@@ -120,25 +119,25 @@ class MyComp {
   selector: '[my-dir]'
 })
 class MyDir {
-  constructor(c: MyComp) { // <-- This is the line of interest
+  constructor(c: MyComp) { // <-- これは興味深い1行です
 
-    // Errors when directive is on regular div because there is no MyComp in the
-    // component tree so there is no MyComp to inject
+    // コンポーネントツリーにMyCompがなく、注入するMyCompがないため、
+    // ディレクティブが通常のdivにある場合のエラーのdivにある場合のエラー
     console.log('Host component\'s name: ' + c.name);
 
   }
 }
 
 @Component({
-  template: "<my-comp></my-comp>" + // No error in MyDir constructor, MyComp is parent of MyDir
-  "<my-comp my-dir></my-comp>" + // No error in MyDir constructor, MyComp is host of MyDir
-  "<div my-dir></div>", // Errors in MyDir constructor
+  template: "<my-comp></my-comp>" + // MyDir コンストラクタ内ではエラーなし、MyComp は MyDir の親
+  "<my-comp my-dir></my-comp>" + // MyDir コンストラクタ内ではエラーなし、MyComp は MyDir のホスト
+  "<div my-dir></div>", // MyDir コンストラクタ内でエラー
   directives: [MyComp, MyDir]
 })
 class MyApp { }
 ```
 
-Here's a diagram illustrating what injectors are available:
+以下に、使用可能な注入するものの図を示します:
 
 ```
                  +-------+
@@ -148,15 +147,15 @@ Here's a diagram illustrating what injectors are available:
        +-------------+------------+
        |                          |
 +------+------+          +--------+--------+
-| Div (MyDir) |          | MyComp (MyDir)  |  <- MyComp can be injected
+| Div (MyDir) |          | MyComp (MyDir)  |  <- MyComp は注入可能
 +-------------+          +--------+--------+
        ^                          |
-No MyComp to inject        +------+------+
-                           | P (MyDir)   | <- MyComp can be injected from parent
+MyComp の注入なし            +------+------+
+                           | P (MyDir)   | <- MyComp は親から注入可能
                            +-------------+
 ```
 
-To expand on the previous example, you can use the Angular `@Optional` annotation if you don't always expect a component/directive reference:
+前の例を拡張するために、コンポーネント/ディレクティブの参照を常に期待しているわけではない場合には、Angular の `@Option` アノテーションを使うことができます:
 
 ```typescript
 @Directive({
