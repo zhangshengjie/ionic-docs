@@ -46,10 +46,10 @@ export class DocsHeader {
         </section> : null}
       </docs-dropdown>,
       section === 'Framework' ? <div class="SectionNav-tabs">
-        <stencil-route-link url="/docs/" urlMatch={[/^\/docs(?!\/(api|components|cli|native|enterprise)).*$/]}>Guide</stencil-route-link>
-        <stencil-route-link url="/docs/components" urlMatch={['/docs/api', '/docs/components']}>Components</stencil-route-link>
+        <stencil-route-link url="/docs/" urlMatch={[/^\/docs(?!\/(api|components|cli|native|enterprise)).*$/]}>ガイド</stencil-route-link>
+        <stencil-route-link url="/docs/components" urlMatch={['/docs/api', '/docs/components']}>コンポーネント</stencil-route-link>
         <stencil-route-link url="/docs/cli">CLI</stencil-route-link>
-        <stencil-route-link url="/docs/native" urlMatch={['/docs/native', '/docs/enterprise']}>Native</stencil-route-link>
+        <stencil-route-link url="/docs/native" urlMatch={['/docs/native', '/docs/enterprise']}>ネイティブ</stencil-route-link>
       </div> : null,
     ];
   }

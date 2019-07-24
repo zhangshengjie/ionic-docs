@@ -17,10 +17,6 @@ docs-header {
   z-index: 2;
 }
 
-docs-header header {
-  overflow-y: scroll;
-}
-
 @media (min-width: 768px) {
   .Layout:not(.is-menu-toggled) docs-header.hidden {
     transform: translateY(-100%);
