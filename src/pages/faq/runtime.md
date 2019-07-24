@@ -127,7 +127,6 @@ provider の複数のインスタンスが生成されます。
 子コンポーネントで使用できるようにする場合は、親コンポーネントに一度だけ Provider を
 注入する必要があります。
 
-
 ```typescript
 let id = 0;
 export class MyService {
