@@ -3,23 +3,23 @@ nextText: 'Build Errors'
 nextUrl: '/docs/faq/build'
 ---
 
-# Glossary
+# 語彙集
 
 <div id="what-is">
 
   <section id="android-sdk">
     <a href="#android-sdk"><h3>Android SDK</h3></a>
-    <p>The <a href="http://developer.android.com/sdk/index.html" target="_blank">Android SDK</a> is a software development kit built for developers building for Google's Android Platform. It includes tools for building, testing, and debugging Android applications.</p>
+    <p><a href="http://developer.android.com/sdk/index.html" target="_blank">Android SDK</a>は、Google の Android Platform の開発をする開発者向けに作られたソフトウェア開発キットです。Android アプリケーションのビルド、テスト、デバッグ用のツールが含まれています。</p>
   </section>
 
   <section id="android-studio">
     <a href='#android-studio'><h3>Android Studio</h3></a>
-    <p><a href="https://developer.android.com/studio/" target="_blank">Android Studio</a> is the official Integrated Development Environment (IDE) for Native Android app development.</p>
+    <p><a href="https://developer.android.com/studio/" target="_blank">Android Studio</a> は、ネイティブ Android アプリ開発のための正式な統合開発環境（IDE）である。</p>
   </section>
 
   <section id="autoprefixer">
     <a href="#autoprefixer"><h3>Autoprefixer</h3></a>
-    <p><a href="https://github.com/postcss/autoprefixer" target="_blank">Autoprefixer</a> is a tool that adds vendor-specific-prefixes to hand-written Sass/CSS code. This ensures that standardized CSS rules you write will be applied across all supporting browsers. For example, instead of having to know every flexbox syntax used by various browsers, autoprefixer allows you to just write <code>display: flex;</code> and it'll automatically plug in the correct CSS.</p>
+    <p><a href="https://github.com/postcss/autoprefixer" target="_blank">Autoprefixer</a> は、ベンダー固有のプレフィックスを手書きの Sass/CSS コードに追加するツールです。これにより、作成する標準化された CSS ルールが、サポートするすべてのブラウザに確実に適用されます。たとえば、autoprefixer を使用すると、さまざまなブラウザで使用されるすべての flexbox 構文を知る必要がなく、<code>display: flex;</code> と記述するだけで済みます。また、自動的に正しくCSSに差し込まれます。</p>
   </section>
 
   <section id="bundling">
