@@ -78,7 +78,7 @@ const items = {
   },
   'よくある質問': {
     'Glossary': '/docs/faq/glossary',
-    'Build Errors': '/docs/faq/build',
+    'ビルドエラー': '/docs/faq/build',
     'ランタイムエラー': '/docs/faq/runtime',
     'ネイティブエラー': '/docs/faq/native',
     'CORS Errors': '/docs/faq/cors',
