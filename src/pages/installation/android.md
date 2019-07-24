@@ -89,8 +89,8 @@ Click **Create Virtual Device** and select a suitable device definition. If unsu
 
 AVDが作成されたら、AndroidエミュレータでAVDを起動します。エミュレータを実行し続けることは、Android用のIonicアプリケーションを開発しながら検出を確実にするための最良の方法です。
 
-<figure style="width: 300px; margin: 0 auto;">
-    <img alt="Android Emulator Booting" src="/docs/assets/img/installation/android-emulator-booting.png" />
+<figure class="device">
+  <img alt="Android Emulator Booting" src="/docs/assets/img/installation/android-emulator-booting.png" />
 </figure>
 
 ### Androidデバイスを設定する

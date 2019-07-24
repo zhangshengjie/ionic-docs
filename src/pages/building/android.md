@@ -64,7 +64,11 @@ $ ionic cordova run android -l
 
 これで、アプリのソースファイルに変更が加えられたときに、Webアセットが再構築され、再度デプロイすることなくシミュレータまたはデバイスに反映されます。
 
-## Chrome DevToolsを使う
+## Debugging Android Apps
+
+Once an app is running on an Android device or emulator, it can be debugged with Chrome DevTools.
+
+### Chrome DevToolsを使う
 
 Chromeは、Androidシミュレータおよびデバイス用のWeb開発者ツールをサポートしています。シミュレータが実行されているか、デバイスがコンピュータに接続されているのを確認した上、`chrome://inspect` をURLバーに入力するとアプリのデバッグができます。
 
@@ -74,8 +78,14 @@ Chromeは、Androidシミュレータおよびデバイス用のWeb開発者ツ�
 
 ## ネイティブログの表示
 
-ネイティブログは、Android Studioの **Logcat** にあります。
+Android Studioで実行している場合、ネイティブログは、Android Studioの **Logcat** にあります。
 
 > **Logcat** ウインドウが表示されていない場合、**View** &raquo; **Tool Windows** &raquo; **Logcat**から表示できます。
 
 ![Android Studio Logcat](/docs/assets/img/running/android-studio-logcat.png)
+
+You can also access **Logcat** with [ADB](https://developer.android.com/studio/command-line/adb).
+
+```shell
+$ adb logcat
+```

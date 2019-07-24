@@ -105,7 +105,11 @@ To boot up a live-reload server, build, and deploy the app, run the following:
 $ ionic cordova run ios -l --address=0.0.0.0
 ```
 
-## Safari Web Inspectorを使う
+## Debugging iOS Apps
+
+Once an app is running on an iOS device or simulator, it can be debugged in Safari.
+
+### Safari Web Inspectorを使う
 
 Safariは、iOSシミュレータとデバイスに対してWeb Inspectorをサポートしています。**Develop**メニューを開き、シミュレータまたはデバイスを選択してから、Ionicアプリを選択してWeb Inspectorを開きます。
 
@@ -115,7 +119,7 @@ Safariは、iOSシミュレータとデバイスに対してWeb Inspectorをサ�
 
 ## ネイティブログの表示
 
-ネイティブログはXcodeの **Console** にあります。
+Xcodeで実行している場合、ネイティブログはXcodeの **Console** にあります。
 
 > **Console** が表示されない場合, **View** &raquo; **Debug Area** &raquo; **Activate Console**を有効化してください。
 
