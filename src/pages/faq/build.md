@@ -101,7 +101,7 @@ import { MyService } from 'my-service';
 class MyApp { }
 ```
 
-パラメータが別のコンポーネントまたはディレクティブ（たとえば、親コンポーネント）である場合、パラメータを providers のリストに追加するとエラーはなくなりますが、これは前述の [provider の複数のインスタンス](/docs/faq/runtime#provider-) と同じ効果を持ちます。ここでは、コンポーネントクラスの新しいインスタンスを作成しますが、必要なコンポーネントインスタンスへの参照は取得しません。かわりに、注入されるであろうディレクティブまたはコンポーネントがコンポーネントで使用可能であることを確認します（たとえば、親であることを期待している場合は、実際に親であること）。これはおそらく、例を使用すると最も簡単に理解できます:
+パラメータが別のコンポーネントまたはDirective（たとえば、親コンポーネント）である場合、パラメータを providers のリストに追加するとエラーはなくなりますが、これは前述の [provider の複数のインスタンス](/docs/faq/runtime#provider-) と同じ効果を持ちます。ここでは、コンポーネントクラスの新しいインスタンスを作成しますが、必要なコンポーネントインスタンスへの参照は取得しません。かわりに、注入されるであろうDirectiveまたはコンポーネントがコンポーネントで使用可能であることを確認します（たとえば、親であることを期待している場合は、実際に親であること）。これはおそらく、例を使用すると最も簡単に理解できます:
 
 ```typescript
 @Component({
@@ -122,7 +122,7 @@ class MyDir {
   constructor(c: MyComp) { // <-- これは興味深い1行です
 
     // コンポーネントツリーにMyCompがなく、注入するMyCompがないため、
-    // ディレクティブが通常のdivにある場合のエラーのdivにある場合のエラー
+    // Directiveが通常のdivにある場合のエラーのdivにある場合のエラー
     console.log('Host component\'s name: ' + c.name);
 
   }
@@ -155,7 +155,7 @@ MyComp の注入なし            +------+------+
                            +-------------+
 ```
 
-前の例を拡張するために、コンポーネント/ディレクティブの参照を常に期待しているわけではない場合には、Angular の `@Option` アノテーションを使うことができます:
+前の例を拡張するために、コンポーネント/Directiveの参照を常に期待しているわけではない場合には、Angular の `@Option` アノテーションを使うことができます:
 
 ```typescript
 @Directive({
@@ -177,7 +177,7 @@ class MyDir {
 Can't bind to 'propertyName' since it isn't a known property of the 'elementName' element and there are no matching directives with a corresponding property
 ```
 
-これは、そのプロパティを持たない要素にプロパティをバインドしようとしたときに発生します。要素がコンポーネントの場合、または要素に1つ以上のディレクティブがある場合、コンポーネントもディレクティブもそのプロパティを持ちません。
+これは、そのプロパティを持たない要素にプロパティをバインドしようとしたときに発生します。要素がコンポーネントの場合、または要素に1つ以上のDirectiveがある場合、コンポーネントもDirectiveもそのプロパティを持ちません。
 
 ```html
 <!-- div には 'foo' というプロパティがない -->
@@ -207,4 +207,4 @@ No provider for ControlContainer! (NgControlName -> ControlContainer)
 No component factory found for <component name>
 ```
 
-このエラーは、ngModule にインポートおよび追加されていない Component、Provider Pipe、ディレクティブを使用しようとしたときに発生します。新しい Component、Provider、Pipe、ディレクティブをアプリケーションに追加する場合は必ず、Angularがそれを使えるようにするために、`src/app/app.module.ts` ファイル内の `ngModule` に追加する必要があります。このエラーを修正するには、問題の Component、Provider、Pipe、ディレクティブを app.module ファイルにインポートし、Provider の場合は `providers` 配列に追加、Component、Pipe、ディレクティブの場合は宣言配列と `entryComponents` 配列の両方に追加します。
+このエラーは、ngModule にインポートおよび追加されていない Component、Provider Pipe、Directiveを使用しようとしたときに発生します。新しい Component、Provider、Pipe、Directiveをアプリケーションに追加する場合は必ず、Angularがそれを使えるようにするために、`src/app/app.module.ts` ファイル内の `ngModule` に追加する必要があります。このエラーを修正するには、問題の Component、Provider、Pipe、Directiveを app.module ファイルにインポートし、Provider の場合は `providers` 配列に追加、Component、Pipe、Directiveの場合は宣言配列と `entryComponents` 配列の両方に追加します。
