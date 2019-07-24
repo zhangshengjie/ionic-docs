@@ -15,13 +15,13 @@ contributors:
 
 この事象が発生しうる理由がいくつかあります。もしあなたがフォーラム上で解決策を見つけられなかった場合、これらを確認して下さい:
 
-- Polyfills are not included for older browser/versions of android
+- ポリフィルには古い android のブラウザ/バージョンは含まれない
 
-For projects with `@angular/cli@7.3` or above, polyfills will automatically be included. For project created before that, polyfills need to be manually enabled.
+`@angular/cli@7.3` 以上のプロジェクトの場合、ポリフィルは自動的に含まれます。その前に作成されたプロジェクトでは、ポリフィルを手動で有効にする必要があります。
 
-In `src/polyfills.ts`, you must enabled all ES6 polyfills for Android 4.4 support.
+`src/polyfills.ts` にて、Android 4.4をサポートするために ES6ポリフィルをすべて有効にする必要があります。
 
-Alternatively, a project could be updated to use the latest release of the `@angular/cli` package & `@angular-devkit` packages and include the `es5BrowserSupport` option in the `angular.json`'s build options object:
+あるいは、プロジェクトを更新して、`@angular/cli` パッケージと `@angular-devkit` パッケージの最新リリースを使用し、`angular.json` のビルドオプションオブジェクトに `es5BrowserSupport` オプションを含めることもできます:
 
 ```diff
         "input": "src/global.scss"
@@ -35,7 +35,7 @@ Alternatively, a project could be updated to use the latest release of the `@ang
     "production": {
 ```
 
-This will automatically include the polyfills for older browsers that need them.
+これにより、古いブラウザに必要なポリフィルが自動的に追加されます。
 
 
 
@@ -45,12 +45,12 @@ This will automatically include the polyfills for older browsers that need them.
 
 あなたが確認できるものがいくつか存在します。
 
-- Your selector doesn't have any misspellings.
-- You're using the selector correctly as an attribute, element or class.
-- Your selector has the proper syntax:
-  - `[attr]` if it's an attribute selector
-  - `element` if it's an element selector
-  - `.class` if it's a class selector
+- セレクタにスペルミスがない
+- 属性、要素、クラスとして、セレクタを正確に使用している
+- セレクタの構文が適切:
+  - 属性セレクタの場合は `[attr]`
+  - 要素セレクタの場合は `element`
+  - クラスセレクタの場合は `.class`
 
 以下に、属性セレクタの例を挙げます:
 
@@ -123,9 +123,9 @@ EXCEPTION: Error: Uncaught (in promise): TypeError: undefined is not an object
 ## provider の複数のインスタンス
 
 あなたは provider をすべてのコンポーネントで利用可能にしたいので、すべてのコンポーネントに provider を注入した場合、
-provider の複数のインスタンスが生成されます。You should
-inject the provider once in the parent component if you want it to be available
-to the child components.
+provider の複数のインスタンスが生成されます。
+子コンポーネントで使用できるようにする場合は、親コンポーネントに一度だけ Provider を
+注入する必要があります。
 
 ```typescript
 let id = 0;
@@ -140,10 +140,10 @@ export class MyService {
 @Component({
   selector: 'my-component',
   template: 'Hello World',
-  providers: [MyService] // <-- Creates a new instance of MyService :(
-})                       // Unnecessary because MyService is in App's providers
+  providers: [MyService] // <-- MyService の新しいインスタンスの生成 :(
+})                       // 不要。なぜなら MyService は App の providers の中だらか
 class MyComp {
-  // id is 1, s is a different MyService instance than MyApp
+  // id は 1, s は MyApp とは異なる MyService インスタンス
   constructor(s: MyService) {
     console.log('MyService id is: ' + s.id);
   }
@@ -151,11 +151,11 @@ class MyComp {
 
 @Component({
   template: '<my-component></my-component>',
-  providers: [MyService], // MyService only needs to be here
+  providers: [MyService], // MyService はここのみ必要
   directives: [MyComp]
 })
 class MyApp {
-  // id is 0
+  // id は 0
   constructor(s: MyService) {
     console.log('MyService id is: ' + s.id);
   }
