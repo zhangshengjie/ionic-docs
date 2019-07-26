@@ -35,17 +35,17 @@ nextUrl: '/docs/faq/build'
 
   <section id="cli">
     <a href="#cli"><h3>CLI</h3></a>
-    <p>A CLI, or <strong>C</strong>ommand-<strong>L</strong>ine <strong>I</strong>nterface, is a text-based interface for interacting with a program. The common command-line app for a Mac user is the Terminal app, and Windows users often use Command Prompt. The Ionic community often uses this term to refer to <a href="https://ionicframework.com/docs/v1/cli/">Ionic's CLI</a>. Ionic's CLI can be used for a number of things, such as creating production builds of an app, running the development server, and accessing <a href="/pro/" target="_blank">Ionic commercial services</a>.</p>
+    <p>CLI、または <strong>C</strong>ommand-<strong>L</strong>ine <strong>I</strong>nterface はプログラムと互いに作用し合う、テキストベースのインターフェースです。Mac ユーザの共通のコマンドラインアプリケーションは Terminal アプリケーションであり、Windows ユーザによく使われるものはコマンドプロンプトです。Ionic コミュニティでよく使われるものは、次に示すこの <a href="https://ionicframework.com/docs/v1/cli/">Ionic's CLI</a> というターミナルです。Ionic's CLI は、アプリケーションのプロダクションビルドの生成や、開発用のサーバーの起動、<a href="/pro/" target="_blank">Ionic の商用サービス</a>へのアクセスなど、様々なことに使われています。</p>
   </section>
 
   <section id="commonjs">
     <a href="#commonjs"><h3>CommonJS</h3></a>
-    <p><a href="https://webpack.github.io/docs/commonjs.html" target="_blank">CommonJS</a> is a group that defines standard formats for JavaScript APIs. They have defined standards for JavaScript modules and packages.</p>
+    <p><a href="https://webpack.github.io/docs/commonjs.html" target="_blank">CommonJS</a> は JavaScript の標準化団体が定義した API の集合です。彼らは JavaScript のモジュールとパッケージの標準を定義しました。</p>
   </section>
 
   <section id="cordova">
     <a href="#cordova"><h3>Cordova</h3></a>
-    <p><a href="https://cordova.apache.org" target="_blank">Apache Cordova</a> is an open source mobile application development framework that transforms standard HTML/CSS/JS into full-fledged native apps. It provides a JavaScript API for accessing native device functionality, such as the camera or accelerometer. Cordova contains the necessary build tools for packaging webapps for iOS, Android, and Windows Phone.</p>
+    <p><a href="https://cordova.apache.org" target="_blank">Apache Cordova</a> は、標準の HTML/CSS/JS を本格的なネイティブアプリケーションに変換する、オープンソースのモバイルアプリケーション開発用フレームワークです。実機のカメラや加速度計などのネイティブの機能にアクセスする JavaScript API を提供します。Cordova は、ウェブアプリケーションを iOS、Android、Windows Phone にパッケージングするために必要なビルドツールを含みます。</p>
   </section>
 
   <section id="cors">
