@@ -19,17 +19,17 @@ nextUrl: '/docs/faq/build'
 
   <section id="autoprefixer">
     <a href="#autoprefixer"><h3>Autoprefixer</h3></a>
-    <p><a href="https://github.com/postcss/autoprefixer" target="_blank">Autoprefixer</a> は、ベンダー固有のプレフィックスを手書きの Sass/CSS コードに追加するツールです。これにより、作成する標準化された CSS ルールが、サポートするすべてのブラウザに確実に適用されます。たとえば、autoprefixer を使用すると、さまざまなブラウザで使用されるすべての flexbox 構文を知る必要がなく、<code>display: flex;</code> と記述するだけで済みます。また、自動的に正しくCSSに差し込まれます。</p>
+    <p><a href="https://github.com/postcss/autoprefixer" target="_blank">Autoprefixer</a> は、ベンダー固有のプレフィックスを手書きの Sass/CSS コードに追加するツールです。これにより、作成する標準化された CSS ルールが、サポートするすべてのブラウザに確実に適用されます。たとえば、autoprefixer を使用すると、さまざまなブラウザで使用されるすべての flexbox 構文を知る必要がなく、<code>display: flex;</code> と記述するだけで済み、かつ自動的に正しくCSSに差し込まれます。</p>
   </section>
 
   <section id="bundling">
     <a href="#bundling"><h3>Bundling</h3></a>
-    <p>Bundling is the process of taking an app's dependencies (code you've written plus any npm modules installed) and compiling/transpiling them down to one single file.</p>
+    <p>バンドルとは、アプリケーションの依存関係（自分で書いたコードと任意にインストールされている npm モジュール）を取得し、コンパイル/トランスパイルすることで一つのファイルに落とし込むプロセスです。</p>
   </section>
 
   <section id="capacitor">
     <a href="#capacitor"><h3>Capacitor</h3></a>
-    <p><a href="https://capacitor.ionicframework.com/" target="_blank">Capacitor</a> is an open source cross-platform app runtime that allows web-based apps to run natively on iOS, Android, Electron, and the web. It's helpful to refer to these apps "Native Progressive Web Apps" and they represent the next evolution beyond the traditional Hybrid app mentality. Capacitor was created and is actively developed/supported by Ionic, the company.
+    <p><a href="https://capacitor.ionicframework.com/" target="_blank">Capacitor</a> は、web ベースのアプリケーションをネイティブの iOS、Android、Electron、web上で実行できるようにするオープンソースのクロスプラットフォームアプリランタイムです。「ネイティブのプログレッシブ Web アプリケーション」を示すこれらのアプリはとても参考になり、それらは従来のハイブリッドアプリの考え方を超えた次の進化を表しています。Capacitor は Ionic 社によって作られ、活発に開発/サポートされています。
     </p>
   </section>
 
