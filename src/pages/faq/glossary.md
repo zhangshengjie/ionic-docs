@@ -50,53 +50,53 @@ nextUrl: '/docs/faq/build'
 
   <section id="cors">
     <a href="#cors"><h3>CORS</h3></a>
-    <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS" target="_blank">CORS</a> (Cross-Origin Resource Sharing) is a mechanism for servers to control client access to web assets.</p>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS" target="_blank">CORS</a> (Cross-Origin Resource Sharing) は、サーバがクライアントから Web 資産へのアクセスを制御するメカニズムです。</p>
   </section>
 
   <section id="decorators">
     <a href="#decorators"><h3>Decorators</h3></a>
-    <p>Decorators are expressions that return a function. They allow you to take an existing function, and extend its behavior. With TypeScript, you can also decorate <i>classes</i> and <i>parameters</i>. When you decorate a <strong>class</strong>, you are wrapping and extending the behavior of its constructor. In other words, the decorator will add some functionality when the constructor is called, and will then return the original constructor. When you decorate a <strong>parameter</strong>, you are wrapping the argument that gets passed in for that parameter. The decorator will add functionality when an argument is passed to the method, and then return the original argument.
+    <p>デコレータは、関数を返す式です。既存の関数を使用して、その動作を拡張できます。TypeScript では、<i>クラス</i> や <i>パラメータ</i> を装飾することもできます。<strong>クラス</strong> を装飾すると、そのコンストラクタの動作がラップおよび拡張されます。つまり、デコレータはコンストラクタが呼び出されるといくつかの機能を追加し、独自のコンストラクタを返します。<strong>パラメータ</strong> を修飾すると、そのパラメータに渡される引数がラップされます。デコレータは、引数がメソッドに渡されると機能を追加し、独自の引数を返します。
     </p>
   </section>
 
   <section id="es5">
     <a href="#es5"><h3>ES5</h3></a>
-    <p>ES5 refers to EcmaScript 5th Edition. A simple way to put it is that ES5 is the version of JavaScript which developers are most familiar with today.</p>
+    <p>ES5 とは EcmaScript 5th Edition のことです。簡単に言えば、ES5 は今日開発者が最もよく知っている JavaScript のバージョンのことです。</p>
   </section>
 
   <section id="es2015-es6">
     <a href="#es2015-es6"><h3>ES2015/ES6</h3></a>
-    <p>A wide range of new features were introduced in this version of JavaScript, including classes, modules, iterators, and promises. Evergreen browsers (Chrome, Safari, Firefox and Edge) have full support for ES6, but to use ES6 features in older browsers, tools such as <a href="#babel">Babel</a> and <a href="#typescript">TypeScript</a> have to <a href="#transpiler">transpile</a> ES6 code down to ES5.</p>
+    <p>このバージョンの JavaScript には、クラス、モジュール、イテレーター、Promise など、広範囲の新機能が導入されています。Evergreen のブラウザ(Chrome、Safari、Firefox、Edge)は ES6 を完全にサポートしていますが、古いブラウザで ES6 の機能を使うには、<a href="#babel">Babel</a> や <a href="#typescript">TypeScript</a> のようなツールが ES6 のコードを ES5 に<a href="#transpiler">変換</A>する必要があります。</p>
   </section>
 
   <section id="es2016-es7">
     <a href="#es2016-es7"><h3>ES2016/ES7</h3></a>
-    <p>This version of JavaScript added a number of new features to the language, including <code>Array.includes</code> and the exponentiation operator. This version of JavaScript is fully supported by all evergreen browsers (Chrome, Safari, Firefox and Edge)</p>
+    <p>このバージョンの JavaScript は、<code>Array.includes</code> や指数演算子を含む多くの新機能を言語に追加した。このバージョンのJavaScriptは、すべてのEvergreen のブラウザ(Chrome、Safari、Firefox、Edge)で完全にサポートされています。</p>
   </section>
 
   <section id="es2017-es8">
     <a href="#es2017-es8"><h3>ES2017/ES8</h3></a>
-    <p>This version of JavaScript is the latest standard. It is currently in the final stage before becoming the new official standard. This spec includes Async/Await (already in all evergreen browsers) and shared memory/atomics.</p>
+    <p>このバージョンの JavaScript は最新の標準です。これは新しい公式規格になる前の最終段階にある。この仕様には、Async/Await(既に全ての Evergreen のブラウザ上で可)と共有メモリ/アトミックが含まれています。</p>
   </section>
 
   <section id="genymotion">
     <a href="#genymotion"><h3>Genymotion</h3></a>
-    <p>Genymotion is a third-party Android emulator. It is extremely fast, and is useful for quickly testing your app on Android. Check out our <a href="/docs/resources/developer-tips/#using-genymotion-android">resource section</a> on Genymotion for more info.</p>
+    <p>Genymotion はサードパーティーの Android エミュレータです。非常に高速で、Android 上でアプリを素早くテストするのに便利だ。詳しくは、Genymotion の<a href="/docs/resources/developer-tips/#using-genymotion-android">リソースのセクション</a>を参照してください。</p>
   </section>
 
   <section id="git">
     <a href="#git"><h3>Git</h3></a>
-    <p><a href="https://git-scm.com/" target="_blank">Git</a> is a distributed version control system for managing code. It allows development teams to contribute code to the same project without causing code conflicts.</p>
+    <p><a href="https://git-scm.com/" target="_blank">Git</a> は、コードを管理するための分散バージョン管理システムです。これにより、開発チームはコードの競合を引き起こすことなく、同じプロジェクトのコードに貢献できます。</p>
   </section>
 
   <section id="gulp">
     <a href="#gulp"><h3>Gulp</h3></a>
-    <p><a href="http://gulpjs.com/" target="_blank">Gulp</a> is a tool for running tasks which can be used to build your app. Common build tasks include transpiling <a href="#es2015-es6">ES6</a> to <a href="#es5">ES5</a>, turning <a href="#sass">Sass</a> into CSS, minifying code, and concatenating files.</p>
   </section>
+    <p><a href="http://gulpjs.com/" target="_blank">Gulp</a> は、アプリケーションをビルドするためのタスクを実行するために使用されるツールです。一般的なビルドタスクには、<a href="#es2015-es6">ES6</a> から <a href="#es5">ES5</a> への変換、<a href="#sass">Sass</a> の CSSへの変換、コードの縮小、ファイルの連結などがあります。</p>
 
   <section id="es-modules">
     <a href="#es-modules"><h3>ES Modules</h3></a>
-    <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import" target="_blank">ES Modules</a> brings the concept of modules natively to JavaScript. With modules, classes and variables are no longer in the global scope and have to be explicitly imported into your project to be used. This makes it much easier to understand where your code is coming from and increases modularity and compartmentalization of functionality.</p>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import" target="_blank">ES Modules</a> はモジュールの概念を JavaScript にそのまま持ち込んだものになります。モジュールでは、クラスと変数はグローバルスコープ内にないため、使用するには明示的にプロジェクトにインポートする必要があります。これにより、コードがどこから来ているのかを理解しやすくなり、機能のモジュール化と区分化が進みます。</p>
   </section>
 
   <section id="ionicons">
