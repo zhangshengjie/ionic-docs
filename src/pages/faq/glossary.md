@@ -101,33 +101,33 @@ nextUrl: '/docs/faq/build'
 
   <section id="ionicons">
     <a href="#ionicons"><h3>Ionicons</h3></a>
-    <p><a href="http://ionicons.com/" target="_blank">Ionicons</a> is an open-source icon set used and created by Ionic. It includes 1:1 iOS and Material Design icons, as well as commonly used social/application icons. Ionicons is included by default in Ionic distributions, but they can also be used in any project.</p>
+    <p><a href="http://ionicons.com/" target="_blank">Ionicons</a> は Ionic社によって作成・利用されているオープンソースのアイコンのセットです。1:1 で iOS とマテリアルデザインのアイコンと、よく使われるソーシャル/アプリケーションのアイコンを含みます。Ionicons はデフォルトで Ionic ディストリビューションに含まれますが、任意のプロジェクトでも使うことが出来ます。</p>
   </section>
 
   <section id="karma">
     <a href="#karma"><h3>Karma</h3></a>
-    <p><a href="https://karma-runner.github.io/latest/index.html" target="_blank">Karma</a> is a test runner that will run an app's test inside a real browser. It executes test cases, written in any testing framework, in a real browser. Karma was originally written for use with Angular 1.</p>
+    <p><a href="https://karma-runner.github.io/latest/index.html" target="_blank">Karma</a> は、実際にブラウザ上でアプリケーションのテストを実行するテストランナーです。任意のテストフレームワークで書かれたテストケースを、実際にブラウザで実行します。Karma はもともと Angular 1 用に書かれたものです。</p>
   </section>
 
   <section id="module">
     <a href="#module"><h3>Module</h3></a>
-    <p>Modules in JavaScript are small, independent, and reusable pieces or code that are isolated from one another and the Global scope.</p>
+    <p>JavaScript のモジュールは、小さく独立しており、再利用可能なピースか互いに分離したコードであり、グローバルスコープです。</p>
   </section>
 
   <section id="monorepo">
     <a href="#monorepo"><h3>Monorepo</h3></a>
-    <p>A <strong>monorepo</strong> is a single git repository with multiple projects. Advantages include simpler organization, shared tooling and dependencies, and better collaboration with teammates.</p>
+    <p>A <strong>monorepo</strong> 複数のプロジェクトを持つ単一のgit リポジトリです。利点としては、よりシンプルな構成、ツールと依存関係の共有、チームメイトとのより良いコラボレーションが挙げられます。</p>
   </section>
 
   <section id="livereload">
     <a href="#livereload"><h3>Live Reload</h3></a>
-    <p><strong>Live Reload</strong> (or <strong>live-reload</strong>) is a tool that automatically reloads the browser or <a href="/docs/building/webview">Web View</a> when it detects changes in your app. In some cases, it can replace parts of your app without having to reload the entire window.</p>
-    <p>Since live-reload requires a running development server, thus requiring the Web View to load a URL instead of simply reading deployed files, using live-reload on a separate device can be tricky. This may require additional configuration. It can also cause issues such as <a href="#cors">CORS</a> errors.</p>
+    <p><strong>Live Reload</strong> (or <strong>live-reload</strong>) は、アプリケーションの変更を検出すると、自動的にブラウザまたは <a href="/docs/building/webview"> をリロードするツールです。場合によっては、ウィンドウ全体をリロードしなくても、アプリケーションの一部を置き換えることができます。</p>
+    <p>ライブリロード には実行中の開発サーバーが必要なので、Web View にはデプロイされたファイルを単に読むのではなく、URLをロードする必要があるため、別のデバイスでライブリロードを使用するのは難しいかもしれません。追加の設定が必要になる場合があります。また、<a href="#cors">CORS</a> エラーなどの問題が発生する可能性もあります。</p>
   </section>
 
   <section id="node">
     <a href="#node"><h3>Node</h3></a>
-    <p><a href="https://nodejs.org/" target="_blank">Node</a> is a runtime environment that allows JavaScript to be written on the server-side. In addition to being used for web services, node is often used to build developer tools, such as the <a href="#cli">Ionic CLI</a>.</p>
+    <p><a href="https://nodejs.org/" target="_blank">Node</a> は、サーバサイドで JavaScript を書くことができるランタイム環境です。加えて、Node は Web サービスに使用されるだけでなく、<a href="#cli">Ionic CLI</a>などの開発者ツールの構築にもよく使用されます。</p>
   </section>
 
   <section id="npm">
