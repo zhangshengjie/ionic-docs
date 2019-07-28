@@ -14,7 +14,7 @@ Ionic Studioの最新版のダウンロードはこちらです。 [Ionic Dashbo
 
 * macOS あるいは Windows 10
 * [Node &amp; npm](/docs/installation/environment#node-npm) がセットアップされている必要があります。
-* オプションとして [Git](/docs/installation/environment#git) のバージョンコントロールがインストールされている必要があります。
+* オプションとして、バージョン管理のために [Git](/docs/installation/environment#git) をインストール
 
 ## インストール
 
