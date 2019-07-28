@@ -132,82 +132,79 @@ nextUrl: '/docs/faq/build'
 
   <section id="npm">
     <a href="#npm"><h3>npm</h3></a>
-    <p><a href="https://www.npmjs.com/" target="_blank">npm</a> is the package manager for <a href="#node">node</a>. It allows developers to install, share, and package node modules. Ionic can be installed with npm, along with a number of its dependencies.
+    <p><a href="https://www.npmjs.com/" target="_blank">npm</a> は <a href="#node">node</a> のパッケージマネージャです。これにより、開発者はノードモジュールをインストール、共有、およびパッケージ化できます。Ionic は npm からいくつかの依存関係と一緒にインストールすることができます。
     </p>
   </section>
 
   <section id="observable">
     <a href="#observable"><h3>Observable</h3></a>
-    <p>An observable is an object that emits events (or notifications). An observer is an object that listens for these events, and does something when an event is received. Together, they create a pattern that can be used for programming asynchronously.
+    <p>Observable はイベントを発生(または通知)させるオブジェクトです。オブザーバは、これらのイベントを監視し、イベントが受信されたときに何かを実行するオブジェクトです。これらが一緒になって、非同期プログラミングに使用できるパターンを作成します。
     </p>
   </section>
 
   <section id="package-id">
     <a href="#package-id"><h3>Package ID</h3></a>
-    <p>Referred to by Apple as <strong>Bundle ID</strong> and by Android as <strong>Application ID</strong>, the <strong>Package ID</strong> is used for identifying apps published to the App Store/Play Store. It is a string formatted in <a href="https://en.wikipedia.org/wiki/Reverse_domain_name_notation" target="_blank">reverse-DNS notation</a>.</p>
+    <p>Apple 社が <strong>Bundle ID</strong> と呼び、Android 社が <strong>Application ID</strong> と呼ぶ <strong>Package ID</strong> は、App Store/Play Store に公開されたアプリを識別するために使用されます。これは<a href="https://en.wikipedia.org/wiki/Reverse_domain_name_notation" target="_blank">逆 DNS 表記</a>でフォーマットされた文字列です。</p>
   </section>
 
   <section id="polyfill">
     <a href="#polyfill"><h3>Polyfill</h3></a>
-    <p>A <a href="https://remysharp.com/2010/10/08/what-is-a-polyfill" target="_blank">polyfill</a> is a bit of code that adds functionality to the browser and normalizes browser differences. This is similar to a <a href="#shim">shim</a>, but where a shim has it's own API, a polyfill let's the expect API of the browser be used.</p>
+    <p><a href="https://remysharp.com/2010/10/08/what-is-a-polyfill" target="_blank">polyfill</a> は、ブラウザに機能を追加し、ブラウザの違いを標準化する少しのコードです。これは <a href="#shim">shim</a> と似ていますが、shim に独自の API がある場合には、ブラウザに実装されていることを期待する API として polyfill を使用します。</p>
   </section>
 
   <section id="protractor">
     <a href="#protractor"><h3>Protractor</h3></a>
-    <p><a href="https://angular.github.io/protractor/#/" target="_blank">Protractor</a> is a testing framework written for and by the Angular team. Protractor can be used with test runners, like Karma, for end-to-end testing. Test runners allow you to quickly and programmatically verify code quality.</p>
+    <p><a href="https://angular.github.io/protractor/#/" target="_blank">Protractor</a> Angular チームが開発したテストフレームワークです。Protractor は、エンドツーエンドのテストのために、Karma のようなテストランナーと一緒に使うことができます。テストランナーを使用すると、コードの品質を高速かつプログラム的に検証できます。</p>
   </section>
 
   <section id="css-variables">
     <a href="#css-variables"><h3>CSS Variables</h3></a>
-    <p>You may be familiar with variables from Sass. <a href="https://developers.google.com/web/updates/2016/02/css-variables-why-should-you-care" target="_blank">CSS Variables</a> enable the same functionality but are built into the browser. CSS Variables are available in all evergreen browsers.</p>
+    <p>Sass の変数に慣れているかもしれません。<a href="https://developers.google.com/web/updates/2016/02/css-variables-why-should-you-care" target="_blank">CSS 変数</a>は機能の共通化を可能にしますが、ブラウザに組み込まれています。CSS 変数は、すべての evergreen なブラウザで使用できます。 </p>
   </section>
 
   <section id="sass">
     <a href="#sass"><h3>Sass</h3></a>
-    <p>Sass is a stylesheet language that compiles to CSS and is used by Ionic. Sass is like CSS, but with extra features such as <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#variables_" target="_blank">variables</a>, <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#mixins" target="_blank">mixins</a>, and <a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#_10" target="_blank">loops</a>.</p>
+    <p>Sass は CSS にコンパイルされるスタイルシート言語で、Ionicで使用されています。Sass は CSS に似ていますが、<a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#variables_" target="_blank">変数</a>、<a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#mixins" target="_blank">ミックスイン</a>、<a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#_10" target="_blank">ループ</a>などの追加機能があります。</p>
   </section>
 
   <section id="shim">
     <a href="#shim"><h3>Shim</h3></a>
-    <p>A shim is a piece of code that normalizes an APIs across browsers. A shim can have it's own API that hides the browser specific implementation from the end user.</p>
+    <p>Shim は、ブラウザ間で API を正規化するコードです。Shim は、エンドユーザーからブラウザ固有の実装を隠すような独自の API を持つことができます。</p>
   </section>
 
   <section id="transpiler">
     <a href="#transpiler"><h3>Transpiler</h3></a>
     <p>
-    Transpilation is the process of converting code from one language to another language prior to execution. Typically, a transpiler will convert a high-level language to another high-level language. The most common type of <em>transpilation</em> in Ionic Framework is converting <a href="#es2015-es6">ES2015/ES6</a> (<a href="#typescript">TypeScript</a>) to <a href="#es5">ES5</a> (traditional JavaScript).
+    トランスパイル は、実行前にコードをある言語から別の言語に変換するプロセスです。一般的に、トランスパイルは高級言語を別の高級言語に変換します。Ionic Framework の最も一般的な<em>トランスパイル</em>は、<a href="#es2015-es6">ES2015/ES6</a>(<a href="#typescript">TypeScript</a>) から <a href="#es5">ES5</a>(従来のJavaScript)への変換です。
     </p>
   </section>
 
   <section id="typescript">
     <a href="#typescript"><h3>TypeScript</h3></a>
     <p>
-    <a href="http://www.typescriptlang.org" target="_blank">TypeScript</a> is a superset of JavaScript, which means it gives you JavaScript, along with a number of extra features such as <a href="http://www.typescriptlang.org/Handbook#basic-types" target="_blank">type declarations</a> and <a href="http://www.typescriptlang.org/Handbook#interfaces" target="_blank">interfaces</a>. Although Ionic is built with TypeScript, using it to build an Ionic app is completely optional.
+    <a href="http://www.typescriptlang.org" target="_blank">TypeScript</a> は JavaScript のスーパーセットであり、<a href="http://www.typescriptlang.org/Handbook#basic-types" target="_blank">型宣言</a>や<a href="http://www.typescriptlang.org/Handbook#interfaces" target="_blank">インターフェース</a>などの多くの機能を追加した JavaScript を提供することを意味します。Ionic は TypeScript で構築されていますが、Ionic アプリの構築において TypeScript の使用は完全にオプショナルです。
     </p>
   </section>
 
   <section id="unit-tests">
     <a href="#unit-tests"><h3>Unit Tests</h3></a>
-    <p>Unit Tests and unit testing are a way to test small pieces of code to see if they behave as expected. Unit testing frameworks include Jasmine, Mocha, QUnit, and many others.</p>
+    <p>ユニットテストとその実行は、小さなコードをテストして、それらが期待どおりに動作するかどうかを確認する方法です。ユニットテストのフレームワークには、Jasmine、Mocha、QUnit など、数多く存在します。</p>
   </section>
 
   <section id="webpack">
     <a href="#webpack"><h3>Webpack</h3></a>
-    <p><a href="https://webpack.github.io/" target="_blank">Webpack</a> bundles together JavaScript modules and other assets. It can be used to create single or multiple "chunks" that are only loaded when needed. Webpack can be used to take many files and dependencies and bundle them into one file, or other types.</p>
+    <p><a href="https://webpack.github.io/" target="_blank">Webpack</a> は、JavaScript モジュールとその他のアセットを一緒にバンドルします。これを使用して、必要なときにのみ読み込まれる単一の、または複数の「チャンク」を作成できます。Webpack を使うと、多くのファイルや依存関係を1つのファイルか、他のタイプにまとめることができます。</p>
   </section>
 
   <section id="web-standards">
     <a href="#web-standards"><h3>Web Standards</h3></a>
-    <p>The <a href="https://www.w3.org/" target="_blank">World Wide Web Consortium</a> (W3C) is the standards organization for the Web. Together, industry leaders and the public work together to develop <a href="https://www.w3.org/standards/" target="_blank">web standards</a>, which are a set of protocols, specifications, and technologies that define the Web Platform.</p>
+    <p><a href="https://www.w3.org/" target="_blank">World Wide Web Consortium</a> (W3C) は Web の標準化団体です。業界のリーダーと一般市民が協力して <a href="https://www.w3.org/standards/" target="_blank">Web 標準</a>を開発します。Web 標準とは、Web プラットフォームを定義するプロトコル、仕様、および技術のセットです。</p>
   </section>
 
   <section id="xcode">
-    <a href="#protractor"><h3>Xcode</h3></a>
+    <a href="#xcode"><h3>Xcode</h3></a>
     <p>
-      <a href="https://developer.apple.com/xcode/" target="_blank">Xcode</a> is an Apple IDE (integrated
-      development environment) for software development on Apple operating systems
-      (macOS, iOS, watchOS and tvOS), with extensions available for other languages
-      and platforms.
+      <a href="https://developer.apple.com/xcode/" target="_blank">Xcode</a> は Apple 社のオペレーティングシステム(macOS、iOS、watchOS、tvOS) 上でソフトウェア開発を行うための Apple IDE(統合開発環境)であり、他の言語やプラットフォーム用の拡張機能を備えています。
     </p>
   </section>
 
