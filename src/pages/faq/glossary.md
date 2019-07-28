@@ -204,7 +204,10 @@ nextUrl: '/docs/faq/build'
   <section id="xcode">
     <a href="#xcode"><h3>Xcode</h3></a>
     <p>
-      <a href="https://developer.apple.com/xcode/" target="_blank">Xcode</a> は Apple 社のオペレーティングシステム(macOS、iOS、watchOS、tvOS) 上でソフトウェア開発を行うための Apple IDE(統合開発環境)であり、他の言語やプラットフォーム用の拡張機能を備えています。
+      <a href="https://developer.apple.com/xcode/" target="_blank">Xcode</a> は Apple 社のオペレーティングシステム(macOS、iOS、watchOS、tvOS) 上で
+      ソフトウェア開発を行うための Apple IDE(統合開発環境)であり、
+      他の言語やプラットフォーム用の
+      拡張機能を備えています。
     </p>
   </section>
 
