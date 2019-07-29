@@ -30,8 +30,8 @@ $ npm install -g ionic cordova
 
 > `-g` オプションは、_グローバルにインストールすること_ を意味します。パッケージをグローバルにインストールすると、権限エラーが発生する可能性があります。管理者特権を使用せずにグローバルに動作するように [npm を設定する](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally)ことを検討してください。Npm を使用して管理者(または Mac および Linux で `sudo` を使用)としてコマンドプロンプトを実行することはお勧めできません。
 
-## アプリケーションの生成
-次に、"Tabs" というアプリケーションテンプレートを使用して Ionic Angular アプリケーションを生成します:
+## アプリの作成
+次に、"Tabs" というアプリテンプレートを使用して Ionic Angular アプリを生成します:
 
 ```shell
 $ ionic start photo-gallery tabs
@@ -39,29 +39,29 @@ $ ionic start photo-gallery tabs
 
 このスタータープロジェクトには、Ionic 開発のために事前に構成された3つのページとベストプラクティスが用意されています。共通の構成要素がすでに配置されているため、機能を簡単に追加できます！
 
-次に、アプリケーションのフォルダに移動します:
+次に、アプリのフォルダに移動します:
 
 ```shell
 $ cd photo-gallery
 ```
 
-以上です！それでは、このアプリケーションの動作を見てみましょう。
+以上です！それでは、このアプリの動作を見てみましょう。
 
-## Run the App
-Run this command next:
+## アプリを起動
+次のコマンドを実行してください:
 
 ```shell
 ionic serve
 ```
 
-And voilà! Your Ionic app is now running in a web browser. Most of your app can be built right in the browser, greatly increasing development speed.
+さぁ、見て！あなたの Ionic アプリはウェブブラウザで動いています。ほとんどのアプリはブラウザ上で直接ビルドできるので、開発速度が大幅に向上します。
 
-## Photo Gallery!!!
-There are three tabs. Click on the Tab2 tab. It’s a blank canvas, aka the perfect spot to add camera functionality. Let’s begin to transform this page into a Photo Gallery. Ionic features LiveReload, so when you make changes and save them, the app is updated immediately!
+## フォトギャラリー!!!
+3つのタブがあります。タブ2をクリックしてください。これは空白のキャンバスで、カメラ機能を追加するのに最適なスポットです。このページをフォトギャラリーに変換してみましょう。Ionic は LiveReload をサポートしているので、変更を加えて保存すると、アプリはすぐに更新されます。
 
-![Before and after going through this tutorial](/docs/assets/img/guides/first-app-v3/email-photogallery.gif)
+![このチュートリアルを実行する前と後](/docs/assets/img/guides/first-app-v3/email-photogallery.gif)
 
-Open the photo-gallery app folder in your favorite code editor of choice, then navigate to `/src/app/tab2/tab2.page.html`. We see:
+お気に入りのコードエディタで photo-gallery アプリフォルダを開き、`/src/app/tab2/tab2.page.html` に移動します。見てみましょう:
 
 ```html
 <ion-header>
@@ -73,13 +73,13 @@ Open the photo-gallery app folder in your favorite code editor of choice, then n
 <ion-content padding></ion-content>
 ```
 
-`ion-header` represents the top navigation and toolbar, with "Tab 2" as the title. We put our app code into `ion-content`. In this case, it’s where we’ll add a button that opens the device’s camera and shows the image captured by the camera. But first, let’s start with something obvious: renaming the Tab Two page:
+`ion-header` はトップナビゲーションおよびツールバーを表し、タイトルは「タブ2」です。アプリのコードを `ion-content` に入れます。この例では、デバイスのカメラを開くボタンを追加し、カメラでキャプチャしたイメージを表示します。しかし、まず明らかなことから始めましょう: Tab Two のページの名前を変更してみます:
 
 ```html
 <ion-title>Photo Gallery</ion-title>
 ```
 
-Next, open `src/app/tabs/tabs.page.html`. Change the label to “Gallery” and the icon name to “images”:
+次に、`src/app/tabs/tabs.page.html` を開きます。ラベルを「Gallery」に、アイコンの名前を「images」に変更します。
 
 ```html
 <ion-tab-button tab="tab2">
@@ -88,8 +88,8 @@ Next, open `src/app/tabs/tabs.page.html`. Change the label to “Gallery” and 
 </ion-tab-button>
 ```
 
-That’s just the start of all the cool things we can do with Ionic. Up next, we’ll deploy the app to your iOS or Android device, then continue building the photo gallery.
+これは Ionic でできるクールなことの始まりにすぎません。この次に、iOS または Android デバイスにアプリをデプロイし、フォトギャラリーの構築を続けます。
 
 <div style="text-align:right;">
-  <docs-button href="/docs/angular/your-first-app/ios-android-camera">Continue <svg viewBox="0 0 512 512"><path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path></svg></docs-button>
+  <docs-button href="/docs/angular/your-first-app/ios-android-camera">続く <svg viewBox="0 0 512 512"><path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path></svg></docs-button>
 </div>
