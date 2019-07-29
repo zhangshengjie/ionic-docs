@@ -5,47 +5,47 @@ nextText: 'iOS, Android, and the Camera'
 nextUrl: '/docs/angular/your-first-app/ios-android-camera'
 ---
 
-# Your First Ionic App: Angular
+# 初めての Ionic アプリ: Angular
 
-The great thing about Ionic is that with one codebase, you can build for any platform using familiar web tools and languages. Follow along as we create a working Photo Gallery. Here’s the before and after:
+Ionic の素晴らしいところは、1つのコードベースで、使い慣れた Web ツールと言語を使用して任意のプラットフォーム用にビルドできることです。我々にならって動作しているフォトギャラリーを作成してみましょう。これが導入前と導入後です:
 
 ![Before and after going through this tutorial](/docs/assets/img/guides/first-app-v3/gallery-combined.png)
 
-It’s easy to get started. Note that all code referenced in this guide can be [found on GitHub](https://github.com/ionic-team/photo-gallery-tutorial-ionic4/).
+使い始めるのは簡単です。このガイドで参照されているコードはすべて [GitHubにある](https://github.com/ionic-team/photo-gallery-tutorial-ionic4/) ことに注意してください。
 
-## Required Tools
-Download/install these right away to ensure an optimal Ionic development experience:
-* [Git](https://git-scm.com/downloads) for version control.
-* <strong>SSH client</strong>, such as [PuTTy](https://www.putty.org/), for secure login to Ionic Appflow.
-* <strong>Node.js</strong> for interacting with the Ionic ecosystem. [Download the LTS version here](https://nodejs.org/en/).
-* <strong>A code editor</strong> for... writing code! We are fans of [Visual Studio Code](https://code.visualstudio.com/).
-* <strong>Command-line terminal (CLI)</strong>: FYI <strong>Windows</strong> users, for the best Ionic experience, we recommend the built-in command line (cmd) or the Powershell CLI, running in Administrator mode. For <strong>Mac/Linux</strong> users, virtually any terminal will work.
+## 必要なツール
+最適な Ionic 開発環境を実現するには、次のものをすぐにダウンロード/インストールしてください:
+* バージョン管理のための [Git](https://git-scm.com/downloads)
+* Ionic Appflow にセキュアにログインするための <strong>SSHクライアント</strong>([PuTTy](https://www.putty.org/) など)。
+* Ionic のエコシステムとやり取りするための <strong>Node.js</strong>。[LTSのバージョンはこちらからダウンロードできます](https://nodejs.org/ja/)。
+* <strong>コードエディタ</strong>は...コードを書きます！我々は [Visual Studio Code](https://code.visualstudio.com/) のファンです。
+* <strong>コマンドラインターミナル(CLI)</strong>: <strong>Windows</strong> ユーザの場合、Ionicを最大限に活用するには、ビルトインコマンドライン(cmd)か、または Powershell CLI を管理者モードで実行することをお勧めします。<strong>Mac/Linux</strong> ユーザの場合、事実上どの端末でも動作するでしょう。
 
-## Install Ionic and Cordova
-Run the following in the command line:
+## Ionic と Cordova のインストール
+コマンドラインで次のコマンドを実行してください:
 
 ```shell
 $ npm install -g ionic cordova
 ```
 
-> The `-g` option means _install globally_. When packages are installed globally, permission errors can occur. Consider [setting up npm](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) to operate globally without elevated permissions. Running the command prompt as an Admin (or using `sudo` on Mac & Linux) with npm is not recommended.
+> `-g` オプションは、_グローバルにインストールすること_ を意味します。パッケージをグローバルにインストールすると、権限エラーが発生する可能性があります。管理者特権を使用せずにグローバルに動作するように [npm を設定する](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally)ことを検討してください。Npm を使用して管理者(または Mac および Linux で `sudo` を使用)としてコマンドプロンプトを実行することはお勧めできません。
 
-## Create an App
-Next, create an Ionic Angular app using our “Tabs” app template:
+## アプリケーションの生成
+次に、"Tabs" というアプリケーションテンプレートを使用して Ionic Angular アプリケーションを生成します:
 
 ```shell
 $ ionic start photo-gallery tabs
 ```
 
-This starter project comes complete with three pre-built pages and best practices for Ionic development. With common building blocks already in place, we can add more features easily!
+このスタータープロジェクトには、Ionic 開発のために事前に構成された3つのページとベストプラクティスが用意されています。共通の構成要素がすでに配置されているため、機能を簡単に追加できます！
 
-Next, change into the app folder:
+次に、アプリケーションのフォルダに移動します:
 
 ```shell
 $ cd photo-gallery
 ```
 
-That’s it! Now for the fun part - let’s see the app in action.
+以上です！それでは、このアプリケーションの動作を見てみましょう。
 
 ## Run the App
 Run this command next:
