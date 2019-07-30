@@ -77,7 +77,7 @@ const items = {
     'Electron Desktop App': '/docs/publishing/desktop-app'
   },
   'よくある質問': {
-    'Glossary': '/docs/faq/glossary',
+    '用語集': '/docs/faq/glossary',
     'ビルドエラー': '/docs/faq/build',
     'ランタイムエラー': '/docs/faq/runtime',
     'ネイティブエラー': '/docs/faq/native',
