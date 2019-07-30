@@ -49,7 +49,7 @@ const items = {
   },
   'Angular': {
     '概要': '/docs/angular/overview',
-    'Build Your First App': '/docs/angular/your-first-app',
+    '初めてのアプリ構築': '/docs/angular/your-first-app',
     'ライフサイクル': '/docs/angular/lifecycle',
     'ナビゲーション': '/docs/angular/navigation',
     'Performance': '/docs/angular/performance'

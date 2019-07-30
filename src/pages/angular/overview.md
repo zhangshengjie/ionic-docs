@@ -1,5 +1,5 @@
 ---
-nextText: 'Build Your First App'
+nextText: '初めてのアプリ構築'
 nextUrl: '/docs/angular/your-first-app'
 ---
 
