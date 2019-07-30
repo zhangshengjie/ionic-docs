@@ -1,17 +1,17 @@
 ---
-previousText: 'Your First Ionic App'
+previousText: '初めての Ionic アプリ'
 previousUrl: '/docs/angular/your-first-app'
-nextText: 'Creating a Photo Gallery'
+nextText: 'Photo Gallery の作成'
 nextUrl: '/docs/angular/your-first-app/creating-photo-gallery-device-storage'
 ---
 
-# Android, iOS, and the Camera - Oh My!
+# Android、iOS、Camera - Oh My!
 
-Previously, we got an Ionic app up and running locally in a web browser. Now, let’s get it onto your iOS or Android device, then start building the photo gallery feature. 
+以前は、Ionic アプリを立ち上げて、ウェブブラウザでローカルに実行していました。さて、自分の iOS または Android デバイスにインストールして、フォトギャラリー機能の構築を始めましょう。
 
-## Add Cordova iOS and Android Platforms
+## Cordova の iOS および Android プラットフォームを追加
 
-Ionic leverages the open source [Cordova project](https://cordova.apache.org/docs/en/latest/guide/overview/) to provide native hardware support. We begin by adding the iOS and Android _platforms_ then will add specific _plugins_ like the Camera afterwards:
+Ionic はオープンソースの [Cordova プロジェクト](https://cordova.apache.org/docs/ja/latest/guide/overview/)を活用して、ネイティブなハードウェアサポートを提供しています。まず iOS と Android の _プラットフォーム_ を追加し、その後 Camera のような特定の _プラグイン_ を追加します。
 
 ```shell
 $ ionic cordova platform add ios
@@ -29,7 +29,7 @@ To run your app on DevApp, you will first need to add a reference to `cordova.js
   <script src="cordova.js"></script>
 </head>
 ```
-> Note: Usually, building the app with Cordova will add this script tag into the index.html file for us. Since we are skipping that step and using DevApp instead, we have to do it manually ourselves. 
+> Note: Usually, building the app with Cordova will add this script tag into the index.html file for us. Since we are skipping that step and using DevApp instead, we have to do it manually ourselves.
 
 ## Install DevApp
 
@@ -43,7 +43,7 @@ The Ionic DevApp is a free app that makes it easy to run your Ionic app directly
 
 <a href="https://play.google.com/store/apps/details?id=io.ionic.devapp&hl=en" ><img src="/docs/assets/img/guides/first-app-v3/playstore.png"></a>
 
-Next, sign into your Ionic account. 
+Next, sign into your Ionic account.
 
 > Don't have an Ionic account? Tap the `Sign Up` link at the bottom of the screen. Creating an account not only gives you access to DevApp, but also the latest Ionic news, live events, and tutorials. Also, it unlocks access to live code updates (deliver bug fixes and new features faster) and native cloud builds (skip complicated build steps).
 
