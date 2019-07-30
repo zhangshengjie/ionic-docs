@@ -3,7 +3,7 @@ nextText: 'Build Errors'
 nextUrl: '/docs/faq/build'
 ---
 
-# 語彙集
+# 用語集
 
 <div id="what-is">
 
