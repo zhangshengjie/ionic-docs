@@ -11,7 +11,13 @@ iOSをターゲットにするには、追加の環境設定が必要です。�
 
 ## Xcode
 
-<a href="https://developer.apple.com/xcode/" target="_blank">Xcode</a>は、ネイティブiOSアプリを作成するためのIDEです。iOS SDKとXcodeのコマンドラインツールが含まれています。XcodeはAppleアカウントをつかって<a href="https://developer.apple.com/download/" target="_blank">無料でダウンロード</a>できます。App Storeからもインストールできます。
+[Xcode](https://developer.apple.com/xcode/) ネイティブiOSアプリを作成するためのIDEです。iOS SDKとXcodeのコマンドラインツールが含まれています。XcodeはAppleアカウントをつかって [無料ダウンロード](https://developer.apple.com/download/) できます。App Storeからもインストールできます。
+
+Once Xcode is installed, make sure the command-line tools are selected for use:
+
+```shell
+$ xcode-select --install
+```
 
 ### Development Team の設定
 
@@ -23,7 +29,7 @@ Xcodeを開き、 **Xcode** &raquo; **Preferences** &raquo; **Accounts** に移�
 
 ### iOS Simulator の作成
 
-iOSシミュレータは、Mac上でiOSデバイスをエミュレートします。次のドキュメントはiOSシミュレータをセットアップするための簡単な方法です。詳しくは、 <a href="https://developer.apple.com/library/content/documentation/IDEs/Conceptual/simulator_help_topics/Chapter/Chapter.html" target="_blank">Apple's documentation</a> を参照してください。
+iOSシミュレータは、Mac上でiOSデバイスをエミュレートします。次のドキュメントはiOSシミュレータをセットアップするための簡単な方法です。詳しくは、 [Apple's documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/simulator_help_topics/Chapter/Chapter.html) を参照してください。.
 
 Xcodeを開き、**Window** &raquo; **Devices and Simulators** に移動します。**iPhone X** のシュミレーターがまだ存在しない場合は作成します。
 
@@ -31,7 +37,7 @@ Xcodeを開き、**Window** &raquo; **Devices and Simulators** に移動しま�
 
 ## ios-sim & ios-deploy
 
-<a href="https://github.com/phonegap/ios-sim" target="_blank">`ios-sim`</a> と <a href="https://github.com/phonegap/ios-deploy" target="_blank">`ios-deploy`</a> は開発中のiOSシミュレータとiOSデバイスにアプリケーションを配備するユーティリティです。それらは [npm](/docs/faq/glossary#npm) を使って、グローバルにインストールすることができます
+[`ios-sim`](https://github.com/phonegap/ios-sim) と [`ios-deploy`](https://github.com/phonegap/ios-deploy) は開発中のiOSシミュレータとiOSデバイスにアプリケーションを配備するユーティリティです。それらは [npm](/docs/faq/glossary#npm) を使って、グローバルにインストールすることができます。
 
 ```shell
 $ npm install -g ios-sim

@@ -14,7 +14,7 @@ Ionic Frameworkをはじめるためには、[Node と npm](#anchor-node-npm)が
 もちろん、エディタも必要でしょう:
 
 <ul class="intro">
-  <li><a href="https://ionicframework.com/studio">Ionic Studio</a>: Ionicアプリを高速かつ簡単に開発できます</li>
+  <li><a href="https://ionicframework.com/studio?utm_source=docs&utm_medium=website&utm_campaign=studio%20launch">Ionic Studio</a>: Ionicアプリを高速かつ簡単に開発できます</li>
   <li><a href="https://code.visualstudio.com/">VS Code</a>: Microsoft製の有名で無料のテキストエディタです</li>
 </ul>
 
@@ -30,6 +30,8 @@ NodeにはJavaScriptパッケージマネージャーである[npm](/docs/faq/gl
 $ node --version
 $ npm --version
 ```
+
+> Permission errors are common on macOS when installing global packages with `npm`. If you get an `EACCES` error, see [Resolving Permission Errors](/docs/faq/tips#resolving-permission-errors).
 
 ## Git
 
