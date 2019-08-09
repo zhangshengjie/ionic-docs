@@ -18,24 +18,24 @@ $ ionic cordova platform add ios
 $ ionic cordova platform add android
 ```
 
-These commands will create a `config.xml` file, which is used to define Cordova iOS and Android settings. Cordova reads this file and applies each setting as it builds each native app binary.
+これらのコマンドは `config.xml` ファイルを作成します。これは Cordova iOS と Android の設定を定義するために使われます。Cordova はこのファイルを読み込み、各ネイティブアプリのバイナリをビルドする際に各設定を適用します。
 
-To run your app on DevApp, you will first need to add a reference to `cordova.js` in your `index.html` file. Open up the file at `src/index.html` and add the following tag into the `head` section:
+DevApp でアプリを実行するには、まず `index.html` ファイル内に `cordova.js` への参照を追加する必要があります。`src/index.html` ファイルを開き、次のタグを `head` セクションに追加します。
 
 ```html
 <head>
-  <!-- ... Other HTML tags... -->
+  <!-- ... 他の HTML タグ... -->
 
   <script src="cordova.js"></script>
 </head>
 ```
-> Note: Usually, building the app with Cordova will add this script tag into the index.html file for us. Since we are skipping that step and using DevApp instead, we have to do it manually ourselves.
+> 注意：通常、Cordova でアプリをビルドすると、この script タグが index.html ファイルに追加されます。私たちはそのステップをスキップして代わりに DevApp を使用しているので、手動で行う必要があります。
 
-## Install DevApp
+## DevApp のインストール
 
-There are more steps to configure [iOS](/docs/installation/ios) and [Android](/docs/installation/android) native tooling. Let's skip that for now. Fortunately, Ionic provides a way to bypass the frustration of dealing with native SDK tooling: Ionic DevApp!
+[iOS](/docs/installation/ios) と [Android](/docs/installation/android) のネイティブツールを設定するためのステップは他にもあります。ここでは省略します。幸いなことに、Ionic にはネイティブ SDK ツールを扱う際のフラストレーションを回避する方法が用意されています: それが Ionic DevAppです！
 
-The Ionic DevApp is a free app that makes it easy to run your Ionic app directly on your iOS or Android device. Download it from one of the app stores, then open it on your device:
+Ionic DevApp は Ionic アプリを iOS や Android デバイス上で簡単に動的に実行できる無料のアプリです。App Storeからダウンロードし、デバイスで開きます:
 
 <a href="https://itunes.apple.com/us/app/ionic-devapp/id1233447133?ls=1&mt=8" ><img src="/docs/assets/img/guides/first-app-v3/appstore.png"></a>
 
@@ -43,23 +43,23 @@ The Ionic DevApp is a free app that makes it easy to run your Ionic app directly
 
 <a href="https://play.google.com/store/apps/details?id=io.ionic.devapp&hl=en" ><img src="/docs/assets/img/guides/first-app-v3/playstore.png"></a>
 
-Next, sign into your Ionic account.
+次に、Ionic アカウントにサインインします。
 
-> Don't have an Ionic account? Tap the `Sign Up` link at the bottom of the screen. Creating an account not only gives you access to DevApp, but also the latest Ionic news, live events, and tutorials. Also, it unlocks access to live code updates (deliver bug fixes and new features faster) and native cloud builds (skip complicated build steps).
+> Ionic アカウントを持っていませんか？画面下部の `サインアップ`  リンクをタップします。アカウントを作成すると、DevApp にアクセスできるだけでなく、最新の Ionic ニュース、ライブイベント、チュートリアルにもアクセスできます。また、ライブコードの更新(バグ修正と新機能の迅速な提供)やネイティブなクラウドビルド(複雑な構築手順をスキップする)へのアクセスも開放します。
 
-Afterwards, open a terminal and navigate to your Ionic project. Execute the following:
+その後、ターミナルを開き Ionic プロジェクトに移動します。次のコマンドを実行します:
 
 ```shell
 $ ionic serve --devapp
 ```
 
-In DevApp, you should now see the app appear. Tap on it to load the app.
+DevApp で、アプリケーションが表示されることを確認してください。タップするとアプリが起動します。
 
-> If it doesn't appear, or you have any issues throughout creating this app, [see here](https://ionicframework.com/docs/appflow/devapp/).
+> 表示されない場合、またはこのアプリケーションの作成中に問題が発生した場合は、[ここを参照](https://ionicframework.jp/docs/appflow/devapp/)してください。
 
-Much better! Now we can add the camera functionality. By the way, you can find reference code for this [on GitHub](https://github.com/ionic-team/photo-gallery-tutorial-ionic4).
+とてもいいよ！これで、カメラ機能を追加できます。ちなみに、このリファレンスコードは [GitHub](https://github.com/ionic-team/photo-gallery-tutorial-ionic4) にあります。
 
-Back in `tab2.page.html`, add the following:
+`tab2.page.html` に戻り、以下を追加します:
 
 ```html
 <ion-content>
@@ -73,7 +73,7 @@ Back in `tab2.page.html`, add the following:
 </ion-content>
 ```
 
-Save the file and watch - a camera button appears! Tap on it and notice that it doesn’t do anything. Let’s fix that next.
+ファイルを保存して監視 - カメラボタンが表示されます！これをタップすると、何も実行されないことに気付きます。次に、これを修正します。
 
 ## Add the Camera Dependencies via the CLI
 
