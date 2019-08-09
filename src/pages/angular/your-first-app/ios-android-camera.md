@@ -75,48 +75,48 @@ DevApp で、アプリケーションが表示されることを確認してく�
 
 ファイルを保存して監視 - カメラボタンが表示されます！これをタップすると、何も実行されないことに気付きます。次に、これを修正します。
 
-## Add the Camera Dependencies via the CLI
+## CLI を介してカメラの依存関係の追加
 
-In order to use the Camera, we need to bring in its JavaScript and native library dependencies. Back over in your Terminal window, run the following command, which adds the JavaScript library to the project, thus exposing the Camera API in TypeScript code:
+Camera を使用するためには、その JavaScript とネイティブライブラリの依存関係を取り込む必要があります。ターミナルウィンドウに戻り、次のコマンドを実行して JavaScript ライブラリをプロジェクトに追加し、TypeScript コードに Camera API を公開します:
 
 ```shell
 $ npm install @ionic-native/camera
 ```
 
-In `package.json`, you’ll notice a new JavaScript dependency has been added, with a version number similar to the following:
+`package.json` 内に、次のようなバージョン番号の新しい JavaScript 依存関係が追加されていることがわかります。
 
 `"@ionic-native/camera": "^5.4.0"`
 
-Next, run this command to add the native iOS and Android code, effectively allowing the Camera to work on a mobile device. For more info on how this works, read up on [Cordova](https://cordova.apache.org/docs/en/latest/guide/overview/) and [Ionic Native](https://ionicframework.com/docs/native).
+次に、このコマンドを実行して iOS と Android のネイティブコードを追加し、実際にカメラをモバイルデバイスで動作させます。こちらのより詳細な情報は、[Cordova](https://cordova.apache.org/docs/en/latest/guide/overview/) と [Ionic Native](https://cordova.apache.org/docs/en/latest/guide/overview/) を御覧ください。
 
 ```shell
 $ ionic cordova plugin add cordova-plugin-camera
 ```
 
-The `config.xml` file is now updated with an entry similar to the following for the native camera code:
+`config.xml` ファイルが更新され、ネイティブカメラコードに次のようなエントリが追加されます。
 
 ```xml
 <plugin name="cordova-plugin-camera" spec="^4.0.3" />
 ```
 
-The next step is only required for iOS users. As of iOS 10, developers must provide a reason for why the app wishes to access the device camera. Add this to the bottom of `config.xml`:
+次のステップは iOS ユーザーのみ必要です。iOS10では、開発者はなぜアプリがデバイスカメラにアクセスしたいのか理由を示さなければなりません。これを `config.xml` の最後に追加します:
 
 ```xml
-<!-- Required for iOS 10: Camera permission prompt -->
+<!-- iOS 10 で必須: Camera 許可プロンプト -->
 <edit-config file="*-Info.plist" mode="merge" target="NSCameraUsageDescription">
     <string>Used to take pictures</string>
 </edit-config>
 ```
 
-## Add Camera plugin to Angular App Module
+## Angular アプリの Module に Camera プラグインを追加
 
-There’s one more step we need to do since this is an Angular project: register the Camera in the App Module (`src/app/app.module.ts`). First, import the Camera module:
+これは Angular プロジェクトなので、もうひとつやるべきことがあります: App Module(`src/app/app.module.ts`) に Camera を登録します。まず、カメラモジュールをインポートします:
 
 ```Javascript
 import { Camera } from '@ionic-native/camera/ngx';
 ```
 
-Then, add it as a Provider:
+では、これを Provider として追加します:
 
 ```Javascript
 providers: [
@@ -127,7 +127,7 @@ providers: [
   ],
 ```
 
-It can now be used on any of our App pages.
+これでアプリ内のどのページでも利用できます。
 
 ## Add the Camera to the Gallery page
 
