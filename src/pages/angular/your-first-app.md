@@ -1,7 +1,7 @@
 ---
 previousText: '概要'
 previousUrl: '/docs/angular/overview'
-nextText: 'iOS、Android、Camera'
+nextText: 'iOS、Android、Camera - Oh My!'
 nextUrl: '/docs/angular/your-first-app/ios-android-camera'
 ---
 
