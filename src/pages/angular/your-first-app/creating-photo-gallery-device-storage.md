@@ -149,19 +149,16 @@ export class AppModule {}
 
 これで、PhotoService クラスで使用できるようになりました。これをインポートします:
 
-
 ```Javascript
 import { Storage } from '@ionic/storage';
 ```
 
 次に、コンストラクタを使用して挿入します:
 
-
 ```Javascript
 constructor(private camera: Camera, private storage: Storage) { }
 ```
 
-Update the `takePicture()` method to save the entire photos array after each photo is taken using the storage.set method:
 写真を保存する機能を追加するには、あとたった2、3ステップのみです。`takePicture()` メソッドを更新し、各写真を撮影した後、storage.set メソッドを使用して photos 配列全体を保存します:
 
 ```Javascript
@@ -179,7 +176,6 @@ this.camera.getPicture(options).then((imageData) => {
 });
 ```
 
- This is simple enough - retrieve the “photos” key then assign its value to the photos array:
 アプリを最初に開いたときに、保存された写真をロードする必要があります。これは非常に単純で、"photos" キーを取得し、その値を photos 配列に割り当てます:
 
 ```Javascript
