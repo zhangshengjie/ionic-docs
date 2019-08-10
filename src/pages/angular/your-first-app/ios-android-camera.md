@@ -129,9 +129,10 @@ providers: [
 
 これでアプリ内のどのページでも利用できます。
 
-## Add the Camera to the Gallery page
+## ギャラリーページへの Camera の追加
 
 Our camera button doesn’t do anything yet. Over in `tab2.page.html`, add a click handler to the button:
+カメラボタンはまだ何もしていません。`tab2.page.html` では、ボタンにクリックハンドラを追加します。
 
 ```html
 <ion-fab vertical="bottom" horizontal="center" slot="fixed">
@@ -141,19 +142,19 @@ Our camera button doesn’t do anything yet. Over in `tab2.page.html`, add a cli
 </ion-fab>
 ```
 
-Then, update the image placeholder. The following binds the “currentImage” variable (which we’ll work on next) to the image to display to the user.
+次に、イメージプレースホルダーを更新します。次の例では、"currentImage" 変数(次に取り組んでいきます)がイメージにバインドされ、ユーザに表示されます。
 
 ```html
 <img [src]="currentImage" *ngIf="currentImage">
 ```
 
-Open `tab2.page.ts` next and import the Camera library:
+次に、`tab2.page.ts` を開き、Camera ライブラリをインポートします:
 
 ```Javascript
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
 ```
 
-Next, define the “currentImage” variable and inject the Camera into this class via the constructor:
+次に、"currentImage” 変数を定義し、コンストラクタを使用して Camera をこのクラスに挿入します:
 
 ```Javascript
 export class Tab2Page {
@@ -163,7 +164,7 @@ export class Tab2Page {
 }
 ```
 
-Finally, add the “takePicture” method, already wired up to execute once the camera button has been tapped:
+最後に、カメラボタンをタップした後に実行するように既に設定されている "takePicture" メソッドを追加します。
 
 ```Javascript
 takePicture() {
@@ -183,12 +184,12 @@ takePicture() {
   }
 ```
 
-Take notice: there’s no mention of iOS or Android! This is the awesome power of plugins: you use one API (`camera.getPicture()` in this case) and the plugin takes care of the platform differences for you. Write once, run everywhere. 😀
+注意: iOS や Android には言及されていません！これはプラグインの素晴らしい能力です: ある API(この場合は `camera.getPicture()`)を使い、プラグインがプラットフォームの違いを処理してくれます。一度書けば、どこでも実行できます。😀
 
-Save this file then tap the Camera button in DevApp. Voila! The camera should open on your device. Once a photo has been taken, it displays on the Photo Gallery page.
+このファイルを保存し、DevApp の Camera ボタンをタップします。ほら見て！デバイスでカメラが起動します。撮影した写真は、フォトギャラリーページに表示されます。
 
-Next, we’ll look at how to transform the app into a photo gallery, as well as how to save the photos to your device!
+次に、このアプリをフォトギャラリーに変換する方法と、写真をデバイスに保存する方法についても見ていきます。
 
 <div style="text-align:right;">
-  <docs-button href="/docs/angular/your-first-app/creating-photo-gallery-device-storage">Continue <svg viewBox="0 0 512 512"><path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path></svg></docs-button>
+  <docs-button href="/docs/angular/your-first-app/creating-photo-gallery-device-storage">続く <svg viewBox="0 0 512 512"><path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path></svg></docs-button>
 </div>
