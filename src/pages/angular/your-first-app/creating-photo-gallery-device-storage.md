@@ -109,23 +109,23 @@ export class Tab2Page {
 
 素晴らしい！現在、基本的なフォトギャラリーが動いています。
 
-## Saving photos to the device
+## 写真をデバイスに保存する
 
-Having a working photo gallery is pretty cool, but you’ll likely notice that when the app is closed, the photos are lost forever. That’s no good, so let’s add the [Ionic Storage plugin](https://ionicframework.com/docs/storage/), as easy way to store key/value pairs and JSON objects. When running in a native app context, Storage will prioritize using SQLite, one of the most stable and widely used file-based databases. When running on the web or as a Progressive Web App, Storage will attempt to use IndexedDB, WebSQL, and localstorage, in that order.
+機能しているフォトギャラリーを持っているのはとてもクールですが、アプリを閉じると写真が永久に失われることに気付くでしょう。それは良くないので、[Ionic Storage](https://ionicframework.com/docs/storage/) プラグインを追加して、キーと値のペアと JSON オブジェクトを簡単に保存できるようにしましょう。ネイティブアプリのコンテキストで実行する場合、Storage は最も安定し、かつ広く使用されているファイルベースのデータベースの1つである、SQLite を優先します。Web上で、または Progressive Web App として実行する場合、Storage は IndexedDB、WebSQL、localstorage をこの順序で使用しようとします。
 
-The Storage plugin works perfectly for our base64 image data. To begin, add the SQLite plugin for native:
+Storage プラグインは、base64 イメージデータに対して完璧に動作します。まず、ネイティブの SQLite プラグインを追加します:
 
 ```shell
 $ ionic cordova plugin add cordova-sqlite-storage
 ```
 
-Next, add the JavaScript library for the web:
+次に、web 用の JavaScript ライブラリを追加します:
 
 ```shell
 $ npm install --save @ionic/storage
 ```
 
-Last, import the Storage module and add it to the imports list in `app.module.ts`:
+最後に、Storage モジュールをインポートし、`app.module.ts` のインポートリストに追加します:
 
 ```Javascript
 import { IonicStorageModule } from '@ionic/storage';
@@ -147,19 +147,22 @@ import { IonicStorageModule } from '@ionic/storage';
 export class AppModule {}
 ```
 
-It’s now ready to be used in our PhotoService class. Import it:
+これで、PhotoService クラスで使用できるようになりました。これをインポートします:
+
 
 ```Javascript
 import { Storage } from '@ionic/storage';
 ```
 
-Then inject it via the constructor:
+次に、コンストラクタを使用して挿入します:
+
 
 ```Javascript
 constructor(private camera: Camera, private storage: Storage) { }
 ```
 
-To add the capability to save photos, there’s only a couple steps left. Update the `takePicture()` method to save the entire photos array after each photo is taken using the storage.set method:
+Update the `takePicture()` method to save the entire photos array after each photo is taken using the storage.set method:
+写真を保存する機能を追加するには、あとたった2、3ステップのみです。`takePicture()` メソッドを更新し、各写真を撮影した後、storage.set メソッドを使用して photos 配列全体を保存します:
 
 ```Javascript
 this.camera.getPicture(options).then((imageData) => {
@@ -176,7 +179,8 @@ this.camera.getPicture(options).then((imageData) => {
 });
 ```
 
-We still need to load the saved photos when the app is first opened. This is simple enough - retrieve the “photos” key then assign its value to the photos array:
+ This is simple enough - retrieve the “photos” key then assign its value to the photos array:
+アプリを最初に開いたときに、保存された写真をロードする必要があります。これは非常に単純で、"photos" キーを取得し、その値を photos 配列に割り当てます:
 
 ```Javascript
 loadSaved() {
@@ -186,7 +190,7 @@ loadSaved() {
 }
 ```
 
-Over in the Tab2 page, call the loadSaved method once it begins loading:
+Tab2 ページで、ロードが開始されたら loadSaved メソッドを呼び出します:
 
 ```Javascript
 ngOnInit() {
@@ -194,10 +198,10 @@ ngOnInit() {
 }
 ```
 
-Sweet! Photos are now saved to your device. To demonstrate that they are indeed being saved, force close DevApp, reopen it, and open the Tab2 page.  Or, shake your device to have the Control Menu pop up, then tap “Exit preview.” Afterwards, reload this app to view the photos.
+優しい！写真がデバイスに保存されます。写真が実際に保存されていることを示すには、DevApp を強制的に閉じ、再度開き、Tab2 ページを開きます。または、デバイスをシェイクしてコントロールメニューをポップアップで表示し、「プレビューを終了します。」をタップしてから、このアプリをリロードして写真を表示します。
 
-Next up, we’ll look at how to apply a custom theme to an Ionic app.
+次に、Ionic アプリにカスタムテーマを適用する方法を見ていきましょう。
 
 <div style="text-align:right;">
-  <docs-button href="/docs/angular/your-first-app/theming">Continue <svg viewBox="0 0 512 512"><path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path></svg></docs-button>
+  <docs-button href="/docs/angular/your-first-app/theming">続く <svg viewBox="0 0 512 512"><path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path></svg></docs-button>
 </div>
