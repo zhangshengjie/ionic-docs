@@ -1,7 +1,7 @@
 ---
-previousText: 'Android, iOS, and the Camera - Oh My!'
+previousText: 'iOS、Android、Camera - Oh My!'
 previousUrl: '/docs/angular/your-first-app/ios-android-camera'
-nextText: 'Theming'
+nextText: 'テーマ'
 nextUrl: '/docs/angular/your-first-app/theming'
 contributors:
   - jsonMartin
