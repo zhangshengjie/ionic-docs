@@ -75,7 +75,7 @@ DevApp で、アプリケーションが表示されることを確認してく�
 
 ファイルを保存して監視 - カメラボタンが表示されます！これをタップすると、何も実行されないことに気付きます。次に、これを修正します。
 
-## CLI を介してカメラの依存関係の追加
+## CLI を介してカメラの依存関係を追加
 
 Camera を使用するためには、その JavaScript とネイティブライブラリの依存関係を取り込む必要があります。ターミナルウィンドウに戻り、次のコマンドを実行して JavaScript ライブラリをプロジェクトに追加し、TypeScript コードに Camera API を公開します:
 
@@ -131,8 +131,7 @@ providers: [
 
 ## ギャラリーページへの Camera の追加
 
-Our camera button doesn’t do anything yet. Over in `tab2.page.html`, add a click handler to the button:
-カメラボタンはまだ何もしていません。`tab2.page.html` では、ボタンにクリックハンドラを追加します。
+カメラボタンはまだ何もしていません。`tab2.page.html` では、ボタンにクリックハンドラを追加します:
 
 ```html
 <ion-fab vertical="bottom" horizontal="center" slot="fixed">
