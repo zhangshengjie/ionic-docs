@@ -6,7 +6,7 @@ const items = {
   '紹介': {
     'Ionic Frameworkとは': '/docs/intro',
     'コアコンセプト': '/docs/intro/concepts',
-    'Build your First App': '/docs/angular/your-first-app',
+    '初めてのアプリ構築': '/docs/angular/your-first-app',
     'ブラウザサポート': '/docs/intro/browser-support',
     'バージョニング': '/docs/intro/versioning',
     'リリースノート': '/docs/release-notes',
@@ -49,7 +49,7 @@ const items = {
   },
   'Angular': {
     '概要': '/docs/angular/overview',
-    'Build Your First App': '/docs/angular/your-first-app',
+    '初めてのアプリ構築': '/docs/angular/your-first-app',
     'ライフサイクル': '/docs/angular/lifecycle',
     'ナビゲーション': '/docs/angular/navigation',
     'Performance': '/docs/angular/performance'
