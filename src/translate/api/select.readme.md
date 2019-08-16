@@ -31,12 +31,17 @@ Note: `action-sheet` と `popover` インターフェイスでは、複数選択
 
 ## SelectのButton
 
-デフォルトでは、Alertには `Cancel` と `OK` の2つのボタンがあります。各ボタンのテキストは、`cancelText` と `okText` プロパティを使用してカスタマイズできます。
+alertはふたつのボタンをサポートしています: `Cancel` と `OK` です。それぞれのボタンは、 `cancelText` と `okText`  プロパティを使ってカスタマイズできます。
 
 `action-sheet` と `popover` インタフェースには `OK` ボタンがありません。いずれかのオプションをクリックすると、自動的にオーバーレイが閉じ、その値が選択されます。`popover` インターフェースには`Cancel`ボタンがないので、backdropをクリックするとオーバーレイが閉じます。
 
 
 ## インターフェイスオプション
 
-selectはalert, action sheet と popover インタフェースを使用するため、`interfaceOptions` プロパティを介してこれらのコンポーネントにオプションを渡すことができます。これは、custom header, subheader, css classなどを渡すために使用できます。各インタフェースが受け付けるプロパティについては、[AlertController API docs](../alert-controller), [ActionSheetController API docs](../action-sheet-controller), と [PopoverController API docs](../popover-controller)を参照してください。
+Since select uses the alert, action sheet and popover interfaces, options can be passed to these components through the `interfaceOptions` property. This can be used to pass a custom header, subheader, css class, and more. 
+  
+See the [AlertController API docs](../alert-controller), [ActionSheetController API docs](../action-sheet-controller), and [PopoverController API docs](../popover-controller) for the properties that each interface accepts.
+
+Note: `interfaceOptions` will not override `inputs` or `buttons` with the `alert` interface.
+
 

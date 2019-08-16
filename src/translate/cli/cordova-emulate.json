@@ -257,8 +257,7 @@
     {
       "name": "connect",
       "type": "boolean",
-      "summary": "Do not tie the running app to the process",
-      "default": true,
+      "summary": "Tie the running app to the process",
       "groups": [
         "experimental",
         "native-run"

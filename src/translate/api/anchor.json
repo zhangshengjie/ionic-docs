@@ -1,8 +1,9 @@
 {
   "tag": "ion-anchor",
   "encapsulation": "shadow",
-  "readme": "# ion-anchor\n\n> [DEPRECATED]. Use [ion-router-link](../router-link) instead.\n",
-  "docs": "> [DEPRECATED]. Use [ion-router-link](../router-link) instead.",
+  "readme": "# ion-anchor\n",
+  "deprecation": "Use `ion-router-link` instead.",
+  "docs": "",
   "docsTags": [
     {
       "text": "Use `ion-router-link` instead.",
