@@ -147,7 +147,7 @@
       "mutable": false,
       "attr": "translucent",
       "reflectToAttr": false,
-      "docs": "If `true`, the fab button will be translucent.\nOnly applies to `ios` mode on devices that support\n[`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter#Browser_compatibility).",
+      "docs": "If `true`, the fab button will be translucent.\nOnly applies when the mode is `\"ios\"` and the device supports\n[`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter#Browser_compatibility).",
       "docsTags": [],
       "default": "false",
       "optional": false,

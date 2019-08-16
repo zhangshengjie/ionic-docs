@@ -39,7 +39,7 @@
       "mutable": false,
       "attr": "translucent",
       "reflectToAttr": false,
-      "docs": "If `true`, the card header will be translucent.",
+      "docs": "If `true`, the card header will be translucent.\nOnly applies when the mode is `\"ios\"` and the device supports\n[`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter#Browser_compatibility).",
       "docsTags": [],
       "default": "false",
       "optional": false,

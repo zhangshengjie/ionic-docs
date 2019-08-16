@@ -11,7 +11,7 @@
   ],
   "usage": {
     "angular": "```typescript\nimport { Component } from '@angular/core';\nimport { ToastController } from '@ionic/angular';\n\n@Component({\n  selector: 'toast-example',\n  templateUrl: 'toast-example.html',\n  styleUrls: ['./toast-example.css'],\n})\nexport class ToastExample {\n\n  constructor(public toastController: ToastController) {}\n\n  async presentToast() {\n    const toast = await this.toastController.create({\n      message: 'Your settings have been saved.',\n      duration: 2000\n    });\n    toast.present();\n  }\n\n  async presentToastWithOptions() {\n    const toast = await this.toastController.create({\n      header: 'Toast header',\n      message: 'Click to Close',\n      position: 'top',\n      buttons: [\n        {\n          side: 'start',\n          icon: 'star',\n          text: 'Favorite',\n          handler: () => {\n            console.log('Favorite clicked');\n          }\n        }, {\n          text: 'Done',\n          role: 'cancel',\n          handler: () => {\n            console.log('Cancel clicked');\n          }\n        }\n      ]\n    });\n    toast.present();\n  }\n\n}\n```\n",
-    "javascript": "```javascript\nasync function presentToast() {\n  const toastController = document.querySelector('ion-toast-controller');\n  await toastController.componentOnReady();\n\n  const toast = await toastController.create({\n    message: 'Your settings have been saved.',\n    duration: 2000\n  });\n  return await toast.present();\n}\n\nasync function presentToastWithOptions() {\n  const toastController = document.querySelector('ion-toast-controller');\n  await toastController.componentOnReady();\n\n  const toast = await toastController.create({\n    header: 'Toast header',\n    message: 'Click to Close',\n    position: 'top',\n    buttons: [\n      {\n        side: 'start',\n        icon: 'star',\n        text: 'Favorite',\n        handler: () => {\n          console.log('Favorite clicked');\n        }\n      }, {\n        text: 'Done',\n        role: 'cancel',\n        handler: () => {\n          console.log('Cancel clicked');\n        }\n      }\n    ]\n  });\n\n  return await toast.present();\n}\n```\n",
+    "javascript": "```javascript\nasync function presentToast() {\n  const toastController = document.querySelector('ion-toast-controller');\n\n  const toast = await toastController.create({\n    message: 'Your settings have been saved.',\n    duration: 2000\n  });\n  return await toast.present();\n}\n\nasync function presentToastWithOptions() {\n  const toastController = document.querySelector('ion-toast-controller');\n\n  const toast = await toastController.create({\n    header: 'Toast header',\n    message: 'Click to Close',\n    position: 'top',\n    buttons: [\n      {\n        side: 'start',\n        icon: 'star',\n        text: 'Favorite',\n        handler: () => {\n          console.log('Favorite clicked');\n        }\n      }, {\n        text: 'Done',\n        role: 'cancel',\n        handler: () => {\n          console.log('Cancel clicked');\n        }\n      }\n    ]\n  });\n\n  return await toast.present();\n}\n```\n",
     "react": "```tsx\nimport React, { useState } from 'react';\nimport { IonToast, IonContent, IonButton } from '@ionic/react';\n\nexport const ToastExample: React.FunctionComponent = () => {\n  const [showToast1, setShowToast1] = useState(false);\n  const [showToast2, setShowToast2] = useState(false);\n\n  return (\n    <IonContent>\n      <IonButton onClick={() => setShowToast1(true)} expand=\"block\">Show Toast 1</IonButton>\n      <IonButton onClick={() => setShowToast2(true)} expand=\"block\">Show Toast 2</IonButton>\n      <IonToast\n        isOpen={showToast1}\n        onDidDismiss={() => setShowToast1(false)}\n        message=\"Your settings have been saved.\"\n        duration={200}\n      />\n\n      <IonToast\n        isOpen={showToast2}\n        onDidDismiss={() => setShowToast2(false)}\n        message=\"Click to Close\"\n        position=\"top\"\n        buttons={[\n          {\n            side: 'start',\n            icon: 'star',\n            text: 'Favorite',\n            handler: () => {\n              console.log('Favorite clicked');\n            }\n          },\n          {\n            text: 'Done',\n            role: 'cancel',\n            handler: () => {\n              console.log('Cancel clicked');\n            }\n          }\n        ]}\n      />\n    </IonContent>\n  );\n};\n```\n"
   },
   "props": [
@@ -43,8 +43,14 @@
       "mutable": false,
       "attr": "close-button-text",
       "reflectToAttr": false,
-      "docs": "Text to display in the close button.",
-      "docsTags": [],
+      "docs": "",
+      "docsTags": [
+        {
+          "text": "Use `buttons` instead. Text to display in the close button.",
+          "name": "deprecated"
+        }
+      ],
+      "deprecation": "Use `buttons` instead. Text to display in the close button.",
       "optional": true,
       "required": false
     },
@@ -165,9 +171,15 @@
       "mutable": false,
       "attr": "show-close-button",
       "reflectToAttr": false,
-      "docs": "If `true`, the close button will be displayed.",
-      "docsTags": [],
+      "docs": "",
+      "docsTags": [
+        {
+          "text": "Use `buttons` instead. If `true`, the close button will be displayed.",
+          "name": "deprecated"
+        }
+      ],
       "default": "false",
+      "deprecation": "Use `buttons` instead. If `true`, the close button will be displayed.",
       "optional": false,
       "required": false
     },
@@ -177,7 +189,7 @@
       "mutable": false,
       "attr": "translucent",
       "reflectToAttr": false,
-      "docs": "If `true`, the toast will be translucent.",
+      "docs": "If `true`, the toast will be translucent.\nOnly applies when the mode is `\"ios\"` and the device supports\n[`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter#Browser_compatibility).",
       "docsTags": [],
       "default": "false",
       "optional": false,
