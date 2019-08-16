@@ -58,7 +58,9 @@ const items = {
     '概要': '/docs/react/overview',
     'Build Your First App': '/docs/react/your-first-app',
     'ライフサイクル': '/docs/react/lifecycle',
-    'ナビゲーション': '/docs/react/navigation'
+    'ナビゲーション': '/docs/react/navigation',
+    'Config': '/docs/react/config',
+    'Platform Utils': '/docs/react/platform'
   },
   'Vue': {
     '概要': '/docs/vue/overview',
