@@ -1,8 +1,8 @@
 {
   "tag": "ion-nav-set-root",
   "encapsulation": "none",
-  "readme": "# ion-nav-set-root\n\n`NavSetRoot` is an element that allows you to set the root of the current navigation stack.\nIt is the element form a calling `NavController.setRoot()`\n\n",
-  "docs": "`NavSetRoot` is an element that allows you to set the root of the current navigation stack.\nIt is the element form a calling `NavController.setRoot()`",
+  "readme": "# ion-nav-set-root\n\n`NavSetRoot` is a component that allows you to set the root of the current navigation stack.\nIt is the component form of calling `NavController.setRoot()`\n\n",
+  "docs": "`NavSetRoot` is a component that allows you to set the root of the current navigation stack.\nIt is the component form of calling `NavController.setRoot()`",
   "docsTags": [],
   "usage": {},
   "props": [

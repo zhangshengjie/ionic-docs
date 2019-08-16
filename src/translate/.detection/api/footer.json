@@ -31,7 +31,7 @@
       "mutable": false,
       "attr": "translucent",
       "reflectToAttr": false,
-      "docs": "If `true`, the footer will be translucent. Only applies to `ios` mode.\nNote: In order to scroll content behind the footer, the `fullscreen`\nattribute needs to be set on the content.",
+      "docs": "If `true`, the footer will be translucent.\nOnly applies when the mode is `\"ios\"` and the device supports\n[`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter#Browser_compatibility).\n\nNote: In order to scroll content behind the footer, the `fullscreen`\nattribute needs to be set on the content.",
       "docsTags": [],
       "default": "false",
       "optional": false,
