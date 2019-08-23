@@ -163,24 +163,30 @@ export class Tab2Page {
 }
 ```
 
-最後に、カメラボタンをタップした後に実行するように既に設定されている "takePicture" メソッドを追加します。
+最後に、 `tab2.page.ts` の "takePicture" メソッドを追加します。カメラボタンをタップした後に実行するように既に設定されています。
 
 ```Javascript
-takePicture() {
+export class Tab2Page {
+  currentImage: any;
+
+  constructor(private camera: Camera) { }
+
+  takePicture() {
     const options: CameraOptions = {
       quality: 100,
       destinationType: this.camera.DestinationType.DATA_URL,
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE
-    }
+    };
 
     this.camera.getPicture(options).then((imageData) => {
       this.currentImage = 'data:image/jpeg;base64,' + imageData;
     }, (err) => {
-     // Handle error
-     console.log("Camera issue:" + err);
+      // Handle error
+      console.log("Camera issue:" + err);
     });
   }
+}
 ```
 
 注意: iOS や Android には言及されていません！これはプラグインの素晴らしい能力です: ある API(この場合は `camera.getPicture()`)を使い、プラグインがプラットフォームの違いを処理してくれます。一度書けば、どこでも実行できます。😀
