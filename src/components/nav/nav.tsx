@@ -52,7 +52,7 @@ export class DocsNav {
 
     const prefix = /^\/docs(\/[a-z]{2})?\//;
     const language = l10n.getLocale();
-    const url = language !== 'en'
+    const url = language !== 'ja'
       ? `/docs/${language}/${href.replace(prefix, '')}`
       : href;
 

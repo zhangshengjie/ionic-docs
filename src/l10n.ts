@@ -1,4 +1,5 @@
 import en from './assets/locales/en/messages.json';
+import ja from './assets/locales/ja/messages.json';
 import es from './assets/locales/es/messages.json';
 import fr from './assets/locales/fr/messages.json';
 import pt from './assets/locales/pt/messages.json';
@@ -6,6 +7,7 @@ import zh from './assets/locales/zh/messages.json';
 
 const MESSAGES_ALL = {
   'en': en,
+  'ja': ja,
   'es': es,
   'fr': fr,
   'pt': pt,
@@ -20,13 +22,13 @@ export class DocsLocalization {
     const prefix = /^\/docs\/([a-z]{2}\b)?/;
     const regexRes = prefix.exec(window.location.pathname);
     const language = regexRes ? regexRes[1] : null;
-    this.locale = language && MESSAGES_ALL.hasOwnProperty(language) ? language : 'en';
+    this.locale = language && MESSAGES_ALL.hasOwnProperty(language) ? language : 'ja';
     this.bundle = MESSAGES_ALL[this.locale];
   }
 
   getLocale = () => this.locale;
 
-  getString = (id: string) => this.bundle[id] || en[id];
+  getString = (id: string) => this.bundle[id] || ja[id];
 }
 
 export const l10n = new DocsLocalization();
