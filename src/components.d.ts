@@ -137,6 +137,9 @@ export namespace Components {
   interface FileTreeFile {
     'name': string;
   }
+  interface HeaderMobileCollapse {
+    'darkMode': boolean;
+  }
   interface HubspotForm {
     'formId': string;
   }
@@ -365,6 +368,12 @@ declare global {
     new (): HTMLFileTreeFileElement;
   };
 
+  interface HTMLHeaderMobileCollapseElement extends Components.HeaderMobileCollapse, HTMLStencilElement {}
+  var HTMLHeaderMobileCollapseElement: {
+    prototype: HTMLHeaderMobileCollapseElement;
+    new (): HTMLHeaderMobileCollapseElement;
+  };
+
   interface HTMLHubspotFormElement extends Components.HubspotForm, HTMLStencilElement {}
   var HTMLHubspotFormElement: {
     prototype: HTMLHubspotFormElement;
@@ -442,6 +451,7 @@ declare global {
     'file-tree': HTMLFileTreeElement;
     'file-tree-directory': HTMLFileTreeDirectoryElement;
     'file-tree-file': HTMLFileTreeFileElement;
+    'header-mobile-collapse': HTMLHeaderMobileCollapseElement;
     'hubspot-form': HTMLHubspotFormElement;
     'ionic-search': HTMLIonicSearchElement;
     'layered-colors-select': HTMLLayeredColorsSelectElement;
@@ -546,7 +556,9 @@ declare namespace LocalJSX {
     'data'?: any[];
     'keys'?: ReferenceKeys;
   }
-  interface DocsRoot extends JSXBase.HTMLAttributes<HTMLDocsRootElement> {}
+  interface DocsRoot extends JSXBase.HTMLAttributes<HTMLDocsRootElement> {
+    'onPageChanged'?: (event: CustomEvent<any>) => void;
+  }
   interface DocsSelect extends JSXBase.HTMLAttributes<HTMLDocsSelectElement> {
     'initializer'?: (options: string[]) => string;
     'onSelection'?: (event: CustomEvent<string>) => void;
@@ -570,6 +582,9 @@ declare namespace LocalJSX {
   }
   interface FileTreeFile extends JSXBase.HTMLAttributes<HTMLFileTreeFileElement> {
     'name'?: string;
+  }
+  interface HeaderMobileCollapse extends JSXBase.HTMLAttributes<HTMLHeaderMobileCollapseElement> {
+    'darkMode'?: boolean;
   }
   interface HubspotForm extends JSXBase.HTMLAttributes<HTMLHubspotFormElement> {
     'formId'?: string;
@@ -621,6 +636,7 @@ declare namespace LocalJSX {
     'file-tree': FileTree;
     'file-tree-directory': FileTreeDirectory;
     'file-tree-file': FileTreeFile;
+    'header-mobile-collapse': HeaderMobileCollapse;
     'hubspot-form': HubspotForm;
     'ionic-search': IonicSearch;
     'layered-colors-select': LayeredColorsSelect;
