@@ -6,9 +6,7 @@
 
 Ionic Studioの最新版のダウンロードはこちらです。 [Ionic Dashboard](https://dashboard.ionicframework.com/personal/downloads).
 
-<blockquote>
-🚧 These docs are a work-in-progress. Check back frequently for updates!
-</blockquote>
+> 🚧 These docs are a work-in-progress. Check back frequently for updates!
 
 ## 必要環境
 
