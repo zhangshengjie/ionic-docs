@@ -9,7 +9,7 @@ nextUrl: '/docs/release-notes'
 
 <!-- TOC goes here -->
 
-Ionic Frameworkは<a href="https://semver.org/" target="_blank">Semantic Versioning (SemVer)</a>の形式: <code>メジャー.マイナー.パッチ.</code>に従います。互換性のないAPIの変更は<code>メジャー</code>バージョン、広報互換性のある機能を追加する時は<code>マイナー</code>バージョン、後方互換性のあるバグ修正は<code>パッチ</code>バージョンをあげます。
+Ionic Frameworkは<a href="https://semver.org/" target="_blank">Semantic Versioning (SemVer)</a>の形式: <code>メジャー.マイナー.パッチ.</code>に従います。互換性のないAPIの変更は<code>メジャー</code>バージョン、後方互換性のある機能を追加する時は<code>マイナー</code>バージョン、後方互換性のあるバグ修正は<code>パッチ</code>バージョンをあげます。
 
 ## リリーススケジュール
 
