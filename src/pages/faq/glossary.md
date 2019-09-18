@@ -121,8 +121,7 @@ nextUrl: '/docs/faq/build'
 
   <section id="livereload">
     <a href="#livereload"><h3>Live Reload</h3></a>
-    <p><strong>Live Reload</strong> (or <strong>live-reload</strong>) は、アプリケーションの変更を検出すると、自動的にブラウザまたは <a href="/docs/building/webview"> をリロードするツールです。場合によっては、ウィンドウ全体をリロードしなくても、アプリケーションの一部を置き換えることができます。</p>
-    <p>ライブリロード には実行中の開発サーバーが必要なので、Web View にはデプロイされたファイルを単に読むのではなく、URLをロードする必要があるため、別のデバイスでライブリロードを使用するのは難しいかもしれません。追加の設定が必要になる場合があります。また、<a href="#cors">CORS</a> エラーなどの問題が発生する可能性もあります。</p>
+    <p><strong>Live Reload</strong> (or <strong>live-reload</strong>) は、アプリケーションの変更を検出すると、自動的にブラウザまたは <a href="/docs/building/webview"> をリロードするツールです。場合によっては、ウィンドウ全体をリロードしなくても、アプリケーションの一部を置き換えることができます。ライブリロード には実行中の開発サーバーが必要なので、Web View にはデプロイされたファイルを単に読むのではなく、URLをロードする必要があるため、別のデバイスでライブリロードを使用するのは難しいかもしれません。 詳しくは <a href="/docs/cli/livereload">Live Reload docs</a> を御覧ください。</p>
   </section>
 
   <section id="node">
