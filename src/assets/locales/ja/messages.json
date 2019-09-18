@@ -147,6 +147,7 @@
   "menu-cli": "CLIドキュメンテーション",
   "menu-cli-overview": "概要",
   "menu-cli-configuration": "設定",
+  "menu-cli-livereload": "Live Reload",
   "menu-cli-using-a-proxy": "Proxyの利用",
   "menu-cli-changelog": "変更履歴",
 
