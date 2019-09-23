@@ -33,7 +33,5 @@ Ionicはモバイルデバイスで正常に動作するだけでなく、ウェ
 | **Safari**  | ✔         |
 | **Edge**    | ✔         |
 | **Firefox** | ✔         |
-| **IE**      | 11+       |
-
 
 > IonicはStencilで作成されているため、より詳細なブラウザサポートについては [Stencil's browser support](https://stenciljs.com/docs/browser-support) をご覧ください。
