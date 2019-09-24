@@ -7,7 +7,7 @@ contributors:
   - elylucas
 ---
 
-# IonicのPage Life Cycle
+# Ionicの Page Life Cycle
 
 このガイドでは、IonicとAngularを使用して構築されたアプリでのPage Life Cycleのしくみについて説明します。（追記：Life Cycleとは、表示をはじめてから破棄するまでを指します。この間の特定のタイミングに設定されているイベントをLife Cycle Eventsといいます）
 
