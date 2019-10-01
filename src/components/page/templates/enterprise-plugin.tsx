@@ -9,7 +9,7 @@ export default (props) => {
   let variables = '';
   if (pluginId === 'auth-connect') {
     pluginId = 'auth';
-    variables = '--variable AUTH_URL_SCHEME =mycustomscheme';
+    variables = '--variable AUTH_URL_SCHEME=mycustomscheme';
   }
   const otherVersions = page.otherVersions || [];
 
@@ -55,20 +55,10 @@ const renderInstallation = (pluginId: string, variables?: string) => {
         <a href="#installation">インストール</a>
       </h2>
       <p>
-        <a href="https://ionicframework.com/enterprise-edition">
-        Ionic Enterprise Edition</a>のプラグインを利用する場合は、
-        通常のバージョンでスコープ指定されたプラグインに問題がある可能性があるため、
-        Ionic Enterprise Cordova CLIを使用していることを確認する必要があります。
+        最初に（一度限りの） <stencil-route-link url="/docs/enterprise/setup">セットアップ手順を実行したら</stencil-route-link>,
+        プラグインをインストールします。
       </p>
       <command-line>
-        <command-prompt>{'npm uninstall -g cordova'}</command-prompt>
-        <command-prompt>{'npm install -g @ionic-enterprise/cordova'}</command-prompt>
-      </command-line>
-      <p>
-        Ionic Enterprise Cordova CLIをインストールしたら、プラグインをインストールできます。
-      </p>
-      <command-line>
-        <command-prompt>{`ionic enterprise register --key=YOURPRODUCTKEY`}</command-prompt>
         <command-prompt>{`ionic cordova plugin add @ionic-enterprise/${pluginId} ${variables}`}</command-prompt>
       </command-line>
     </section>

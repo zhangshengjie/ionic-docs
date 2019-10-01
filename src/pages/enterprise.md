@@ -2,12 +2,9 @@
 title: Ionic Native
 ---
 
-一般的なエンタープライズ・ユース・ケースに対する強力なソリューションを使用して、開発を迅速化するためにIonicチームが構築し、サポートします。Ionicの増え続けるソリューションライブラリは、Native Enterprise Editionで構築するあらゆるアプリケーションにすぐに導入できます。
+ミッションクリティカルなアプリを開発するチームにとって、Ionic Nativeはプラグインを統合するためのキュレートされたコレクションで、安定性の保証とすべての主要なプラットフォームとバージョンでの動作保証を備えています。Ionicによって構築、サポートが行われています。
 
-Ionic Native Enterprise Editionには、Ionicアプリで使用できる信頼性の高いネイティブAPIと機能のセットが含まれています。
-Ionicチームによって品質管理され、維持されます。
-
-## Ionic Native Enterprise Editionとは
+## What is Ionic Native?
 <div class="native-ee-pricing">
   <div class="table-wrap">
     <table>
@@ -95,43 +92,9 @@ Ionicチームによって品質管理され、維持されます。
 
 <hubspot-form form-id="7c2c6529-48c0-4d17-86a0-bfd40c849bb1"></hubspot-form>
 
-## Setup
+## Plugin List
 
-In order to use the Ionic Native plugins you need to install
-the Ionic Enterprise Cordova CLI. Ionic Native plugins use scoped
-packages and the regular Cordova CLI does not work with scoped packages.
-
-<command-line>
-<command-prompt>npm uninstall -g cordova</command-prompt>
-<command-prompt>npm install -g @ionic-enterprise/cordova</command-prompt>
-</command-line>
-
-The Ionic Enterprise Cordova CLI should be installed on each developer's machine.
-This is also true for any development build servers that you may use.
-
-## Register Your Product Key
-
-In order to use the Ionic Native plugins in your application you will need to register your key
-with the application. Each application that you create will need to have its own key.
-
-Register the product key for your application using the Ionic CLI. Follow the provided prompts. This only needs to
-be run once per application.
-
-<command-line>
-<command-prompt># in your app root</command-prompt>
-<command-prompt>ionic enterprise register</command-prompt>
-</command-line>
-
-Running the register command will generate a `.npmrc` file in you app directory and update your `ionic.config.json`. Both of these
-changes should be committed to version control so that CI and other team members can restore the plugins from a fresh clone of the
-repo. Now you are able to install Ionic Enterprise plugins that you have access to by following the instructions on the plugin
-docs page.
-
-<command-line>
-<command-prompt>ionic cordova plugin add @ionic-enterprise/plugin-name</command-prompt>
-</command-line>
-
-## Plugins
+Accelerate your app development with powerful solutions to common enterprise use cases. Ionic’s growing library are ready to deploy into any of the apps you build.
 
 ### Authentication & Security
 - [Auth Connect](/docs/enterprise/auth-connect)

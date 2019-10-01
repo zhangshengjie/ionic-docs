@@ -1,7 +1,7 @@
 ---
-title: Ionic Native
+title: Native Plugins
 ---
-<p class='intro'>Ionic NativeはCordovaプラグインと統合するためのライブラリで、Ionicアプリ、Cordovaプロジェクト、WebViewにネイティブ機能を簡単に追加することができます。Ionicは2種類のネイティブプラグインを提供しています：Ionic Nativeとコミュニティプラグイン</p>
+<p class='intro'>Ionicアプリ、Cordovaプロジェクト、WebViewにネイティブデバイスの機能を簡単に追加できるように、オープンソースとプレミアムのプラグインと統合で、ネイティブのアプリ体験を構築できます。</p>
 
 <docs-cards class="static-width">
   <docs-card header="Community Plugins" href="/docs/native/overview" img="/docs/assets/img/native/community-edition.png">
