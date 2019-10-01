@@ -153,18 +153,17 @@
 
   "menu-cli-commands": "コマンドリファレンス",
 
-  "menu-native-ce": "Community Edition",
-  "menu-native-ce-overview": "概要",
-  "menu-native-ce-show-all": "すべてのCE plugins...",
-  "menu-native-ee": "Enterprise Edition",
-  "menu-native-ee-overview": "概要",
-  "menu-native-ee-show-all": "すべてのEE plugins...",
-
-  "menu-native-plugins": "コミュニティプラグイン",
+  "menu-native-community": "Community Plugins",
+  "menu-native-community-overview": "概要",
+  "menu-native-community-all": "すべての Community Plugins",
+  "menu-native-community-show-all": "すべての Community plugins...",
+  "menu-native-paid": "Ionic Native",
+  "menu-native-paid-overview": "概要",
+  "menu-native-paid-show-all": "すべての Ionic Native plugins...",
 
   "menu-appflow": "Appflowへようこそ",
 
-  "menu-appflow-quickstart": "クイックスタート",
+  "menu-appflow-quickstart": "Quickstart",
   "menu-appflow-quickstart-overview": "Overview",
   "menu-appflow-quickstart-connect": "Connect your Repo",
   "menu-appflow-quickstart-github": "GitHub",
@@ -210,13 +209,14 @@
 
   "menu-appflow-devapp": "DevApp: Local Development",
 
-  "menu-enterprise-authentication-security": "認証とセキュリティ",
-  "menu-enterprise-common-device-features": "一般的なデバイス機能",
-  "menu-enterprise-integrated-services": "統合サービス",
-  "menu-enterprise-offline-data": "オフラインデータ",
-  "menu-enterprise-payments": "支払い",
+  "menu-enterprise-getting-started": "Getting Started",
+  "menu-enterprise-guides": "Guides",
+  "menu-enterprise-authentication-security": "Authentication, Security, Storage",
+  "menu-enterprise-common-device-features": "Common Device Features",
+  "menu-enterprise-integrated-services": "Integrated Services",
+  "menu-enterprise-payments": "Payments",
 
-  "menu-studio-introduction": "概要",
+  "menu-studio-introduction": "Introduction",
   "menu-studio-introduction-welcome": "Welcome",
   "menu-studio-introduction-support": "Support",
   "menu-studio-setup": "Setup",
