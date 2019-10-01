@@ -3,23 +3,37 @@ previousText: 'Web View'
 previousUrl: '/docs/building/webview'
 ---
 
-# Storage
+# データストレージ
 
-Storage は、key/valueのペアとJSONオブジェクトを保存するための簡単な方法です。
-Storage はデバイス上の様々なStorageエンジンを利用し、
-プラットフォームに応じて利用できる最善のものを選択します。
+Ionicアプリ内にデータを保存するためのさまざまなオプションを用意しています。
 
-ネイティブアプリケーション上で実行する場合、
-Storageはもっとも安定して広く使用されているファイルベースのデータベースの1つである
-SQLiteを使用することを優先し、ディスク容量が少ない状況ではOSがデータを削除することのある 
-localstorage や IndexedDB といった落とし穴を避けます。
+## Ionicオフラインストレージ
 
-WebであったりProgressive Web Appとして実行している時は、
-Storageは IndexedDB、WebSQL、およびlocalstorageの順に使用しようとします。
+[Ionic Offline Storage](/docs/enterprise/offline-storage) is a cross-platform data
+storage system that works on iOS and Android.
+It makes it easy to add offline storage to Ionic apps that is secure (encrypted on device),
+highly performant, and provides advanced NoSQL data querying.
 
+Created for teams building complex, data-driven apps, apps managing sensitive data, or apps used in
+areas with unreliable cell service/internet connections.
+Interested? [Start here.](https://ionicframework.com/offline-storage#get-started)
 
-## Usage
+## Ionic Storage
 
+Ionic Storageは無料で使える、独立系の開発者や学生、ホビイスト向けのオープンソースです。
+キー/値ペアとJSONオブジェクトを保存する簡単な方法を提供します。
+
+さまざまなストレージエンジンを使用し、プラットフォームに応じて
+最適なものを選択します。
+
+* ネイティブアプリのコンテキストで実行する場合、StorageはSQLiteを優先的に使用します。
+これは、SQLiteが最も安定し、広く使用されているファイルベースのデータベースの1つであり、
+OSがそのようなものを排除することを決定するようなlocalstorageやIndexedDBのような
+いくつかの落とし穴を避けるためです。
+* WebまたはProgressive Web Appとして実行されている場合、StorageはIndexedDB、WebSQL、
+およびlocalstorageをこの順序で使用しようとします。
+
+### Usage
 
 もしSQLiteを使いたいときは、まずcordova-sqlite-storage プラグインをインストールします:
 ```bash
@@ -102,15 +116,15 @@ export class AppModule { }
 ```
 
 
-## Instance Members
+### Instance Members
 
 
-### constructor
+#### constructor
 
 LocalForageに渡すドライバの順序とその他の設定オプションを使用して、
 新しいStorageインスタンスを作成します。
 
-利用可能なドライバオプション: ['sqlite', 'indexeddb', 'websql', 'localstorage'] 
+利用可能なドライバオプション: ['sqlite', 'indexeddb', 'websql', 'localstorage']
 そして、これはデフォルトの優先順です。
 
 <br><br>
@@ -120,7 +134,7 @@ LocalForageに渡すドライバの順序とその他の設定オプションを
 
 
 
-### driver
+#### driver
 
 使用されているドライバの名前を取得します。
 
@@ -129,8 +143,13 @@ LocalForageに渡すドライバの順序とその他の設定オプションを
 
 
 
+<<<<<<< HEAD
 ### clear()
 保存されているすべてのデータを削除します。 WARNING: HOT!
+=======
+#### clear()
+Clear the entire key value store. WARNING: HOT!
+>>>>>>> fabb0ab6809429056e7c738038c060433e172efa
 
 __Returns:__ Returns a promise that resolves when the store is cleared
 
@@ -141,8 +160,13 @@ __Returns:__ Returns a promise that resolves when the store is cleared
 
 
 
+<<<<<<< HEAD
 ### forEach()
 key, valueの値を順に取得します。
+=======
+#### forEach()
+Iterate through each key,value pair.
+>>>>>>> fabb0ab6809429056e7c738038c060433e172efa
 
 __Returns:__ Returns a promise that resolves when the iteration has finished.
 
@@ -154,8 +178,13 @@ __Returns:__ Returns a promise that resolves when the iteration has finished.
 
 
 
+<<<<<<< HEAD
 ### get()
 keyを引数にいれることによって、valueを取得します。
+=======
+#### get()
+Get the value associated with the given key.
+>>>>>>> fabb0ab6809429056e7c738038c060433e172efa
 
 __Returns:__ Returns a promise with the value of the given key
 
@@ -167,7 +196,7 @@ __Returns:__ Returns a promise with the value of the given key
 
 
 
-### keys()
+#### keys()
 
 
 __Returns:__ Returns a promise that resolves with the keys in the store.
@@ -179,7 +208,7 @@ __Returns:__ Returns a promise that resolves with the keys in the store.
 
 
 
-### length()
+#### length()
 
 
 __Returns:__ Returns a promise that resolves with the number of keys stored.
@@ -191,8 +220,13 @@ __Returns:__ Returns a promise that resolves with the number of keys stored.
 
 
 
+<<<<<<< HEAD
 ### ready()
 storeが利用可能になったことを反映します。
+=======
+#### ready()
+Reflect the readiness of the store.
+>>>>>>> fabb0ab6809429056e7c738038c060433e172efa
 
 __Returns:__ Returns a promise that resolves when the store is ready
 
@@ -203,8 +237,13 @@ __Returns:__ Returns a promise that resolves when the store is ready
 
 
 
+<<<<<<< HEAD
 ### remove()
 keyを引数にわたすことで、valueを削除します。
+=======
+#### remove()
+Remove any value associated with this key.
+>>>>>>> fabb0ab6809429056e7c738038c060433e172efa
 
 __Returns:__ Returns a promise that resolves when the value is removed
 
@@ -216,8 +255,13 @@ __Returns:__ Returns a promise that resolves when the value is removed
 
 
 
+<<<<<<< HEAD
 ### set()
 keyを引数にわたすことでvalueを保存します。
+=======
+#### set()
+Set the value for the given key.
+>>>>>>> fabb0ab6809429056e7c738038c060433e172efa
 
 __Returns:__ Returns a promise that resolves when the key and value are set
 
