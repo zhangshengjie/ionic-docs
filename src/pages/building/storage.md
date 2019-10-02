@@ -143,13 +143,8 @@ LocalForageに渡すドライバの順序とその他の設定オプションを
 
 
 
-<<<<<<< HEAD
-### clear()
-保存されているすべてのデータを削除します。 WARNING: HOT!
-=======
 #### clear()
-Clear the entire key value store. WARNING: HOT!
->>>>>>> fabb0ab6809429056e7c738038c060433e172efa
+保存されているすべてのデータを削除します。 WARNING: HOT!
 
 __Returns:__ Returns a promise that resolves when the store is cleared
 
@@ -160,13 +155,8 @@ __Returns:__ Returns a promise that resolves when the store is cleared
 
 
 
-<<<<<<< HEAD
-### forEach()
-key, valueの値を順に取得します。
-=======
 #### forEach()
-Iterate through each key,value pair.
->>>>>>> fabb0ab6809429056e7c738038c060433e172efa
+key, valueの値を順に取得します。
 
 __Returns:__ Returns a promise that resolves when the iteration has finished.
 
@@ -178,13 +168,8 @@ __Returns:__ Returns a promise that resolves when the iteration has finished.
 
 
 
-<<<<<<< HEAD
-### get()
-keyを引数にいれることによって、valueを取得します。
-=======
 #### get()
-Get the value associated with the given key.
->>>>>>> fabb0ab6809429056e7c738038c060433e172efa
+keyを引数にいれることによって、valueを取得します。
 
 __Returns:__ Returns a promise with the value of the given key
 
@@ -220,13 +205,8 @@ __Returns:__ Returns a promise that resolves with the number of keys stored.
 
 
 
-<<<<<<< HEAD
-### ready()
-storeが利用可能になったことを反映します。
-=======
 #### ready()
-Reflect the readiness of the store.
->>>>>>> fabb0ab6809429056e7c738038c060433e172efa
+storeが利用可能になったことを反映します。
 
 __Returns:__ Returns a promise that resolves when the store is ready
 
@@ -237,13 +217,8 @@ __Returns:__ Returns a promise that resolves when the store is ready
 
 
 
-<<<<<<< HEAD
-### remove()
-keyを引数にわたすことで、valueを削除します。
-=======
 #### remove()
-Remove any value associated with this key.
->>>>>>> fabb0ab6809429056e7c738038c060433e172efa
+keyを引数にわたすことで、valueを削除します。
 
 __Returns:__ Returns a promise that resolves when the value is removed
 
@@ -255,13 +230,8 @@ __Returns:__ Returns a promise that resolves when the value is removed
 
 
 
-<<<<<<< HEAD
-### set()
-keyを引数にわたすことでvalueを保存します。
-=======
 #### set()
-Set the value for the given key.
->>>>>>> fabb0ab6809429056e7c738038c060433e172efa
+keyを引数にわたすことでvalueを保存します。
 
 __Returns:__ Returns a promise that resolves when the key and value are set
 
