@@ -12,5 +12,6 @@
   "repo": "https://github.com/apache/cordova-plugin-splashscreen",
   "cordovaPlugin": {
     "name": "cordova-plugin-splashscreen"
-  }
+  },
+  "capacitorIncompatible": true
 }

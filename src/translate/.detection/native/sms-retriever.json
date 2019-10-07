@@ -7,6 +7,9 @@
     "Android"
   ],
   "repo": "https://github.com/hanatharesh2712/ionic-native-sms-retriever-plugin-master",
+  "installVariables": [
+    "PLAY_SERVICES_VERSION"
+  ],
   "cordovaPlugin": {
     "name": "cordova-plugin-sms-retriever-manager"
   }
