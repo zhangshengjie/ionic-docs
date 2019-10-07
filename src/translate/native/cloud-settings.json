@@ -8,6 +8,9 @@
     "iOS"
   ],
   "repo": "https://github.com/dpa99c/cordova-plugin-cloud-settings",
+  "installVariables": [
+    "ANDROID_BACKUP_SERVICE_KEY"
+  ],
   "cordovaPlugin": {
     "name": "cordova-plugin-cloud-settings"
   }

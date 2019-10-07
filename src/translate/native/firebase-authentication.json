@@ -8,6 +8,9 @@
     "iOS"
   ],
   "repo": "https://github.com/chemerisuk/cordova-plugin-firebase-authentication",
+  "installVariables": [
+    "FIREBASE_AUTH_VERSION"
+  ],
   "cordovaPlugin": {
     "name": "cordova-plugin-firebase-authentication"
   }

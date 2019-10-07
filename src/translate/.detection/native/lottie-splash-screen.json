@@ -8,6 +8,7 @@
     "iOS"
   ],
   "repo": "https://github.com/timbru31/cordova-plugin-lottie-splashscreen",
+  "installVariables": [],
   "cordovaPlugin": {
     "name": "cordova-plugin-lottie-splashscreen"
   }

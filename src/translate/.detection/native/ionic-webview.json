@@ -10,5 +10,6 @@
   "repo": "https://github.com/ionic-team/cordova-plugin-ionic-webview",
   "cordovaPlugin": {
     "name": "cordova-plugin-ionic-webview"
-  }
+  },
+  "capacitorIncompatible": true
 }

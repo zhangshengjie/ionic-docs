@@ -10,5 +10,6 @@
   "repo": "https://github.com/ionic-team/cordova-plugin-ionic-keyboard",
   "cordovaPlugin": {
     "name": "cordova-plugin-ionic-keyboard"
-  }
+  },
+  "capacitorIncompatible": true
 }

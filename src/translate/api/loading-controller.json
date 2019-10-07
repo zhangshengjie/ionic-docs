@@ -2,11 +2,15 @@
   "tag": "ion-loading-controller",
   "encapsulation": "none",
   "readme": "# ion-loading-controller\n\nLoading controllers programmatically control the loading component. Loadings can be created and dismissed from the loading controller. View the [Loading](../loading) documentation for a full list of options to pass upon creation.\n\n\n\n",
+  "deprecation": "Use the `loadingController` exported from core.",
   "docs": "Loading controllers programmatically control the loading component. Loadings can be created and dismissed from the loading controller. View the [Loading](../loading) documentation for a full list of options to pass upon creation.",
-  "docsTags": [],
-  "usage": {
-    "javascript": "```javascript\nasync function presentLoading() {\n  const loadingController = document.querySelector('ion-loading-controller');\n\n  const loadingElement = await loadingController.create({\n    message: 'Please wait...',\n    spinner: 'crescent',\n    duration: 2000\n  });\n  return await loadingElement.present();\n}\n```\n"
-  },
+  "docsTags": [
+    {
+      "text": "Use the `loadingController` exported from core.",
+      "name": "deprecated"
+    }
+  ],
+  "usage": {},
   "props": [],
   "methods": [
     {

@@ -8,6 +8,9 @@
     "iOS"
   ],
   "repo": "https://github.com/iVanPan/Cordova_QQ",
+  "installVariables": [
+    "QQ_APP_ID"
+  ],
   "cordovaPlugin": {
     "name": "cordova-plugin-qqsdk"
   }

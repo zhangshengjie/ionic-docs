@@ -7,6 +7,10 @@
     "iOS"
   ],
   "repo": "https://github.com/GEDYSIntraWare/cordova-plugin-call-directory",
+  "installVariables": [
+    "EXT_NAME",
+    "ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES"
+  ],
   "cordovaPlugin": {
     "name": "cordova-plugin-call-directory"
   }

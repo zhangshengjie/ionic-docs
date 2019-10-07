@@ -2,8 +2,14 @@
   "tag": "ion-toast-controller",
   "encapsulation": "none",
   "readme": "# ion-toast-controller\n\nToastController is a component used to create Toast components. Please see the docs for [Toast](../toast).\n\n",
+  "deprecation": "Use the `toastController` exported from core.",
   "docs": "ToastController is a component used to create Toast components. Please see the docs for [Toast](../toast).",
-  "docsTags": [],
+  "docsTags": [
+    {
+      "text": "Use the `toastController` exported from core.",
+      "name": "deprecated"
+    }
+  ],
   "usage": {},
   "props": [],
   "methods": [

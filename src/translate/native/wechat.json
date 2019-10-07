@@ -8,6 +8,9 @@
     "iOS"
   ],
   "repo": "https://github.com/xu-li/cordova-plugin-wechat.git",
+  "installVariables": [
+    "wechatappid"
+  ],
   "cordovaPlugin": {
     "name": "cordova-plugin-wechat"
   }

@@ -10,5 +10,6 @@
   "repo": "https://github.com/arnesson/cordova-plugin-firebase",
   "cordovaPlugin": {
     "name": "cordova-plugin-firebase"
-  }
+  },
+  "capacitorIncompatible": true
 }

@@ -9,6 +9,10 @@
     "Browser"
   ],
   "repo": "https://github.com/jeduan/cordova-plugin-facebook4",
+  "installVariables": [
+    "APP_ID",
+    "APP_NAME"
+  ],
   "cordovaPlugin": {
     "name": "cordova-plugin-facebook4"
   }

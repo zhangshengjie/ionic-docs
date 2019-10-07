@@ -8,6 +8,9 @@
     "iOS"
   ],
   "repo": "https://github.com/EddyVerbruggen/cordova-plugin-googleplus",
+  "installVariables": [
+    "REVERSED_CLIENT_ID"
+  ],
   "cordovaPlugin": {
     "name": "cordova-plugin-googleplus"
   }

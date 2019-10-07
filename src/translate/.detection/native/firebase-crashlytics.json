@@ -8,6 +8,9 @@
     "iOS"
   ],
   "repo": "https://github.com/ReallySmallSoftware/cordova-plugin-firebase-crashlytics",
+  "installVariables": [
+    "ANDROID_FIREBASE_CORE_VERSION"
+  ],
   "cordovaPlugin": {
     "name": "cordova-plugin-firebase-crashlytics"
   }

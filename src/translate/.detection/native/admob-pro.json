@@ -11,5 +11,6 @@
   "repo": "https://github.com/floatinghotpot/cordova-admob-pro",
   "cordovaPlugin": {
     "name": "cordova-plugin-admobpro"
-  }
+  },
+  "capacitorIncompatible": true
 }

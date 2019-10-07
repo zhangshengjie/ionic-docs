@@ -8,6 +8,9 @@
     "iOS"
   ],
   "repo": "https://github.com/jpush/cordova-plugin-janalytics",
+  "installVariables": [
+    "APP_KEY"
+  ],
   "cordovaPlugin": {
     "name": "cordova-plugin-janalytics"
   }

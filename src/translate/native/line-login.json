@@ -8,6 +8,9 @@
     "iOS"
   ],
   "repo": "https://github.com/nrikiji/cordova-line-login-plugin",
+  "installVariables": [
+    "LINE_CHANNEL_ID"
+  ],
   "cordovaPlugin": {
     "name": "cordova-line-login-plugin"
   }

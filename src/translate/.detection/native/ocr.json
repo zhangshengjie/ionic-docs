@@ -1,8 +1,8 @@
 {
   "packageName": "@ionic-native/ocr",
-  "displayName": "MobileOCR",
+  "displayName": "OCR",
   "description": "\nThis plugin attempts to identify and extract text from an image.\n",
-  "usage": "\n```typescript\nimport { MobileOCR, OCRSourceType } from '@ionic-native/ocr/ngx';\n\n\nconstructor(private ocr: MobileOCR) { }\n\n...\n\nthis.ocr.recText(OCRSourceType.NORMFILEURL, \"file://path/to/image.png\")\n  .then((res: OCRResult) => console.log(JSON.stringify(res)))\n  .catch((error: any) => console.error(error));\n\n```\n",
+  "usage": "\n```typescript\nimport { OCR, OCRSourceType } from '@ionic-native/ocr/ngx';\n\n\nconstructor(private ocr: OCR) { }\n\n...\n\nthis.ocr.recText(OCRSourceType.NORMFILEURL, \"file://path/to/image.png\")\n  .then((res: OCRResult) => console.log(JSON.stringify(res)))\n  .catch((error: any) => console.error(error));\n\n```\n",
   "platforms": [
     "Android",
     "iOS"

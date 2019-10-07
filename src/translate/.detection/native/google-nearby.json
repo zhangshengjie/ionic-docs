@@ -7,6 +7,9 @@
     "Android"
   ],
   "repo": "https://github.com/hahahannes/cordova-plugin-google-nearby",
+  "installVariables": [
+    "API_KEY"
+  ],
   "cordovaPlugin": {
     "name": "cordova-plugin-google-nearby"
   }

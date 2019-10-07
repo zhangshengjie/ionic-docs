@@ -111,13 +111,18 @@
       }
     },
     {
-      "name": "prod",
-      "type": "boolean",
-      "summary": "Flag to use the `production` configuration",
-      "groups": [],
-      "aliases": [],
+      "name": "configuration",
+      "type": "string",
+      "summary": "Specify the configuration to use.",
+      "groups": [
+        "advanced",
+        "cordova"
+      ],
+      "aliases": [
+        "c"
+      ],
       "spec": {
-        "value": "true/false"
+        "value": "conf"
       }
     },
     {
@@ -125,25 +130,12 @@
       "type": "boolean",
       "summary": "Output source maps",
       "groups": [
-        "advanced"
+        "advanced",
+        "cordova"
       ],
       "aliases": [],
       "spec": {
         "value": "true/false"
-      }
-    },
-    {
-      "name": "configuration",
-      "type": "string",
-      "summary": "Specify the configuration to use.",
-      "groups": [
-        "advanced"
-      ],
-      "aliases": [
-        "c"
-      ],
-      "spec": {
-        "value": "conf"
       }
     }
   ],

@@ -9,6 +9,9 @@
     "iOS"
   ],
   "repo": "https://github.com/terikon/cordova-plugin-photo-library",
+  "installVariables": [
+    "PHOTO_LIBRARY_USAGE_DESCRIPTION"
+  ],
   "cordovaPlugin": {
     "name": "cordova-plugin-photo-library"
   }

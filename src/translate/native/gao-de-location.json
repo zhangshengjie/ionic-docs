@@ -8,6 +8,10 @@
     "iOS"
   ],
   "repo": "https://github.com/waliu/cordova-plugin-gaodelocation-chenyu.git",
+  "installVariables": [
+    "ANDROID_API_KEY",
+    "IOS_API_KEY"
+  ],
   "cordovaPlugin": {
     "name": "cordova-plugin-gaodelocation-chenyu"
   }

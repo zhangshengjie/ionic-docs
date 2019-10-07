@@ -11,5 +11,6 @@
   "repo": "https://github.com/homerours/cordova-music-controls-plugin",
   "cordovaPlugin": {
     "name": "cordova-plugin-music-controls"
-  }
+  },
+  "capacitorIncompatible": true
 }

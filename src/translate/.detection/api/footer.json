@@ -11,7 +11,7 @@
   ],
   "usage": {
     "javascript": "```html\n<ion-content></ion-content>\n\n<ion-footer>\n  <ion-toolbar>\n    <ion-title>Footer</ion-title>\n  </ion-toolbar>\n</ion-footer>\n```\n",
-    "react": "```tsx\nimport React from 'react';\nimport { IonContent, IonFooter, IonToolbar, IonTitle } from '@ionic/react';\n\nexport const FooterExample: React.FunctionComponent = () => (\n  <>\n    <IonContent />\n\n    <IonFooter>\n      <IonToolbar>\n        <IonTitle>Footer</IonTitle>\n      </IonToolbar>\n    </IonFooter>\n  </>\n);\n```\n"
+    "react": "```tsx\nimport React from 'react';\nimport { IonContent, IonFooter, IonToolbar, IonTitle } from '@ionic/react';\n\nexport const FooterExample: React.FC = () => (\n  <>\n    <IonContent />\n\n    <IonFooter>\n      <IonToolbar>\n        <IonTitle>Footer</IonTitle>\n      </IonToolbar>\n    </IonFooter>\n  </>\n);\n```\n"
   },
   "props": [
     {

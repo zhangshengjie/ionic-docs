@@ -8,6 +8,10 @@
     "iOS"
   ],
   "repo": "https://www.npmjs.com/package/cordova-fabric-plugin",
+  "installVariables": [
+    "FABRIC_API_KEY",
+    "FABRIC_API_SECRET"
+  ],
   "cordovaPlugin": {
     "name": "cordova-fabric-plugin"
   }

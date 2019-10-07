@@ -30,7 +30,7 @@
     },
     {
       "name": "refreshingSpinner",
-      "type": "\"bubbles\" | \"circles\" | \"crescent\" | \"dots\" | \"lines\" | \"lines-small\" | null | undefined",
+      "type": "\"bubbles\" | \"circles\" | \"circular\" | \"crescent\" | \"dots\" | \"lines\" | \"lines-small\" | null | undefined",
       "mutable": true,
       "attr": "refreshing-spinner",
       "reflectToAttr": false,

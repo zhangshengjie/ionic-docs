@@ -11,5 +11,6 @@
   "repo": "https://github.com/apache/cordova-plugin-statusbar",
   "cordovaPlugin": {
     "name": "cordova-plugin-statusbar"
-  }
+  },
+  "capacitorIncompatible": true
 }

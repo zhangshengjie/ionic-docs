@@ -8,6 +8,10 @@
     "iOS"
   ],
   "repo": "https://github.com/chemerisuk/cordova-plugin-firebase-dynamiclinks",
+  "installVariables": [
+    "APP_DOMAIN",
+    "APP_PATH"
+  ],
   "cordovaPlugin": {
     "name": " cordova-plugin-firebase-dynamiclinks"
   }

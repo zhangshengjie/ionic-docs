@@ -8,6 +8,10 @@
     "iOS"
   ],
   "repo": "https://github.com/Resgrid/cordova-plugins-rollbar",
+  "installVariables": [
+    "ROLLBAR_ACCESS_TOKEN",
+    "ROLLBAR_ENVIRONMENT"
+  ],
   "cordovaPlugin": {
     "name": "resgrid-cordova-plugins-rollbar"
   }

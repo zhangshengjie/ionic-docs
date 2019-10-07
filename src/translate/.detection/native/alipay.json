@@ -8,6 +8,9 @@
     "iOS"
   ],
   "repo": "https://github.com/jing-zhou/cordova-plugin-alipay",
+  "installVariables": [
+    "APP_ID"
+  ],
   "cordovaPlugin": {
     "name": "cordova-plugin-gubnoi-alipay"
   }

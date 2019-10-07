@@ -7,6 +7,11 @@
     "iOS"
   ],
   "repo": "https://github.com/chroa/twitter-connect-plugin",
+  "installVariables": [
+    "FABRIC_KEY",
+    "TWITTER_KEY",
+    "TWITTER_SECRET"
+  ],
   "cordovaPlugin": {
     "name": "twitter-connect-plugin"
   }

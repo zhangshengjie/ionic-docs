@@ -8,6 +8,7 @@
     "iOS"
   ],
   "repo": "https://github.com/randdusing/cordova-plugin-bluetoothle",
+  "installVariables": [],
   "cordovaPlugin": {
     "name": "cordova-plugin-bluetoothle"
   }

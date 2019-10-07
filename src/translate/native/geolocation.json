@@ -11,6 +11,9 @@
     "Windows"
   ],
   "repo": "https://github.com/apache/cordova-plugin-geolocation",
+  "installVariables": [
+    "GEOLOCATION_USAGE_DESCRIPTION"
+  ],
   "cordovaPlugin": {
     "name": "cordova-plugin-geolocation"
   }

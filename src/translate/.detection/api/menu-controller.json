@@ -146,7 +146,7 @@
         "type": "Promise<void>",
         "docs": ""
       },
-      "signature": "registerAnimation(name: string, animation: AnimationBuilder) => Promise<void>",
+      "signature": "registerAnimation(name: string, animation: AnimationBuilder | ((menu: MenuI) => IonicAnimation)) => Promise<void>",
       "parameters": [],
       "docs": "Registers a new animation that can be used with any `ion-menu` by\npassing the name of the animation in its `type` property.",
       "docsTags": [

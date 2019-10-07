@@ -7,6 +7,9 @@
     "Android"
   ],
   "repo": "https://github.com/don/cordova-plugin-hce",
+  "installVariables": [
+    "AID_FILTER"
+  ],
   "cordovaPlugin": {
     "name": "cordova-plugin-hce"
   }

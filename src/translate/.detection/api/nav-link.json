@@ -1,0 +1,47 @@
+{
+  "tag": "ion-nav-link",
+  "encapsulation": "none",
+  "readme": "# ion-nav-link\n\nA navigation link is used to navigate to a specified component. The component can be navigated to by going `forward`, `back` or as a `root` component.\n\nIt is the element form of calling the `push()`, `pop()`, and `setRoot()` methods on the navigation controller.\n\n",
+  "docs": "A navigation link is used to navigate to a specified component. The component can be navigated to by going `forward`, `back` or as a `root` component.\n\nIt is the element form of calling the `push()`, `pop()`, and `setRoot()` methods on the navigation controller.",
+  "docsTags": [],
+  "usage": {},
+  "props": [
+    {
+      "name": "component",
+      "type": "Function | HTMLElement | ViewController | null | string | undefined",
+      "mutable": false,
+      "attr": "component",
+      "reflectToAttr": false,
+      "docs": "Component to navigate to. Only used if the `routerDirection` is `\"forward\"` or `\"root\"`.",
+      "docsTags": [],
+      "optional": true,
+      "required": false
+    },
+    {
+      "name": "componentProps",
+      "type": "undefined | { [key: string]: any; }",
+      "mutable": false,
+      "reflectToAttr": false,
+      "docs": "Data you want to pass to the component as props. Only used if the `\"routerDirection\"` is `\"forward\"` or `\"root\"`.",
+      "docsTags": [],
+      "optional": true,
+      "required": false
+    },
+    {
+      "name": "routerDirection",
+      "type": "\"back\" | \"forward\" | \"root\"",
+      "mutable": false,
+      "attr": "router-direction",
+      "reflectToAttr": false,
+      "docs": "The transition direction when navigating to another page.",
+      "docsTags": [],
+      "default": "'forward'",
+      "optional": false,
+      "required": false
+    }
+  ],
+  "methods": [],
+  "events": [],
+  "styles": [],
+  "slots": []
+}

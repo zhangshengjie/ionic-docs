@@ -2,8 +2,14 @@
   "tag": "ion-picker-controller",
   "encapsulation": "none",
   "readme": "# ion-picker-controller\n\n\n",
+  "deprecation": "Use the `pickerController` exported from core.",
   "docs": "",
-  "docsTags": [],
+  "docsTags": [
+    {
+      "text": "Use the `pickerController` exported from core.",
+      "name": "deprecated"
+    }
+  ],
   "usage": {},
   "props": [],
   "methods": [

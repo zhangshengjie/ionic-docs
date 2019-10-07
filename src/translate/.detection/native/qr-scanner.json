@@ -12,5 +12,6 @@
   "repo": "https://github.com/bitpay/cordova-plugin-qrscanner",
   "cordovaPlugin": {
     "name": "cordova-plugin-qrscanner"
-  }
+  },
+  "capacitorIncompatible": true
 }

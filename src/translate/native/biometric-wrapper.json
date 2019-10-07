@@ -7,6 +7,7 @@
     "Android"
   ],
   "repo": "",
+  "installVariables": [],
   "cordovaPlugin": {
     "name": "cordova-plugin-biometric"
   }

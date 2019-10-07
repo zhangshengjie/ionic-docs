@@ -2,10 +2,16 @@
   "tag": "ion-popover-controller",
   "encapsulation": "none",
   "readme": "# ion-popover-controller\n\nPopover controllers programmatically control the popover component. Popovers can be created and dismissed from the popover controller. View the [Popover](../popover) documentation for a full list of options to pass upon creation.\n\n",
+  "deprecation": "Use the `popoverController` exported from core.",
   "docs": "Popover controllers programmatically control the popover component. Popovers can be created and dismissed from the popover controller. View the [Popover](../popover) documentation for a full list of options to pass upon creation.",
-  "docsTags": [],
+  "docsTags": [
+    {
+      "text": "Use the `popoverController` exported from core.",
+      "name": "deprecated"
+    }
+  ],
   "usage": {
-    "javascript": "```javascript\nasync function presentPopover() {\n  const popoverController = document.querySelector('ion-popover-controller');\n\n  const popoverElement = await popoverController.create({\n    component: 'profile-page',\n    event: event\n  });\n  return await popoverElement.present();\n}\n```\n"
+    "javascript": "```javascript\nasync function presentPopover() {\n  const popoverElement = Object.assing(document.createElement('ion-popover'), {\n    component: 'profile-page',\n    event: event\n  });\n  document.body.appendChild(popoverElement);\n  return await popoverElement.present();\n}\n```\n"
   },
   "props": [],
   "methods": [

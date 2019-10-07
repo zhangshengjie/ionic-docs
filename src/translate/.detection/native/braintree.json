@@ -8,7 +8,9 @@
     "iOS"
   ],
   "repo": "https://github.com/taracque/cordova-plugin-braintree",
+  "installVariables": [],
   "cordovaPlugin": {
     "name": "cordova-plugin-braintree"
-  }
+  },
+  "capacitorIncompatible": true
 }
