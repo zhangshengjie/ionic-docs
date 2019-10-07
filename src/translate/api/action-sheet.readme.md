@@ -4,7 +4,7 @@ Action Sheetは複数の選択肢を表示するダイアログです。アプ�
 
 ### Creating
 
-Action Sheetは、 [Action Sheet Controller](../action-sheet-controller) を使って、 `buttons` とそれぞれのボタンごとに `text` とオプションで `handler` と `role` をつけて作成します。handlerの返り値が `false` の場合、Action Sheetは破棄されません。Action Sheetはオプションで `title`, `subTitle` と `icon` を持つことができます。.
+Action Sheetは、 [Action Sheet Controller](../action-sheet-controller) を使って、 `buttons` とそれぞれのボタンごとに `text` とオプションで `handler` と `role` をつけて作成します。handlerの返り値が `false` の場合、Action Sheetは破棄されません。Action Sheetはオプションで `header`, `subHeader` を持つことができます。.
 
 ### Buttons
 

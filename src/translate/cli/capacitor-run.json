@@ -38,6 +38,16 @@
       }
     },
     {
+      "name": "external",
+      "type": "boolean",
+      "summary": "Host dev server on all network interfaces (i.e. `--address=0.0.0.0`)",
+      "groups": [],
+      "aliases": [],
+      "spec": {
+        "value": "true/false"
+      }
+    },
+    {
       "name": "address",
       "type": "string",
       "summary": "Use specific address for the dev server",
@@ -98,11 +108,27 @@
       }
     },
     {
+      "name": "configuration",
+      "type": "string",
+      "summary": "Specify the configuration to use.",
+      "groups": [
+        "advanced",
+        "cordova"
+      ],
+      "aliases": [
+        "c"
+      ],
+      "spec": {
+        "value": "conf"
+      }
+    },
+    {
       "name": "source-map",
       "type": "boolean",
       "summary": "Output source maps",
       "groups": [
-        "advanced"
+        "advanced",
+        "cordova"
       ],
       "aliases": [],
       "spec": {
@@ -110,17 +136,15 @@
       }
     },
     {
-      "name": "configuration",
-      "type": "string",
-      "summary": "Specify the configuration to use.",
+      "name": "watch",
+      "type": "boolean",
+      "summary": "Rebuild when files change",
       "groups": [
         "advanced"
       ],
-      "aliases": [
-        "c"
-      ],
+      "aliases": [],
       "spec": {
-        "value": "conf"
+        "value": "true/false"
       }
     },
     {
