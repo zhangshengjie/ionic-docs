@@ -70,7 +70,7 @@ ionic serve
   </ion-toolbar>
 </ion-header>
 
-<ion-content padding></ion-content>
+<ion-content class="ion-padding"></ion-content>
 ```
 
 `ion-header` はトップナビゲーションおよびツールバーを表し、タイトルは「タブ2」です。アプリのコードを `ion-content` に入れます。この例では、デバイスのカメラを開くボタンを追加し、カメラでキャプチャしたイメージを表示します。しかし、まず明らかなことから始めましょう: Tab Two のページの名前を変更してみます:
