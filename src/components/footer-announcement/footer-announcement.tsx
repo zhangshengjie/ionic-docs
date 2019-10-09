@@ -27,8 +27,13 @@ export class DocsFooterAnnouncement {
   }
   render() {
     return (
-      <footer class="footer-announcement"><strong>Ionic Meetup #12 Tokyo:</strong> 最新の情報を手に入れよう。2019/07/07(日)に開催。
-        <a href="https://ionic-jp.connpass.com/event/133896/" target="_blank">参加する</a>
+      <footer class="footer-announcement">
+        <img src="https://2019.kfug.jp/_nuxt/img/c3436b7.svg" alt="" />
+        <p>
+          <strong>FRONTEND CONFERENCE 2019:</strong><br />
+          大阪で開催されるカンファレンスにコミュニティ出展します。2019年11月02日(土)。<br />
+          <a href="https://2019.kfug.jp/" target="_blank">参加する</a>
+        </p>
       </footer>
     );
   }
