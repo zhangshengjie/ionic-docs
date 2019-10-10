@@ -7,34 +7,34 @@ nextUrl: '/docs/react/lifecycle'
 
 # Ionic React
 
-## What is Ionic Framework?
+## Ionic Frameworkとは
 
-First off, if you're new here, welcome! Ionic is a free and open source component library for building apps that run on iOS, Android, Electron, and the Web. You write your app once using familiar technologies (HTML, CSS, JavaScript) and deploy to any platform.
+はじめてIonic Frameworkを試す人がいるならようこそ！ Ionicは、iOS、Android、Electron、およびWebで実行するアプリを構築するための無料のオープンソースコンポーネントライブラリです。 使い慣れたテクノロジー（HTML、CSS、JavaScript）を使用してアプリを一度に作成し、任意のプラットフォームにデプロイします。
 
-Along with the UI components, Ionic also provides a command line tool for creating new apps, as well as deploying to the various platforms we support.
+Ionicは、UIコンポーネントに加えて、新しいアプリを作成したり、さまざまなプラットフォームに展開したりするためのコマンドラインツールも提供しています。
 
-In this guide, we'll go over the basics of both React and Ionic, including any Ionic specific features. If you're familiar with React, enjoy the guide and learn something new about Ionic. If you're not familiar with either, no worries! This guide will cover the basics and provide enough information to get an app up and running.
+このガイドでは、ReactとIonicの両方の基本（Ionic固有の機能を含む）について説明します。 Reactに精通している場合は、ガイドを楽しんで、Ionicについて新しいことを学んでください。 どちらにも慣れていない場合でも、心配いりません！ このガイドでは、基本を説明し、アプリを起動して実行するための十分な情報を提供します。
 
-## Creating a project with the Ionic CLI
+## プロジェクトをIonic CLIで作成する
 
-To begin, let's install the latest version of the Ionic CLI.
+最初に、最新バージョンのIonic CLIをインストールしましょう。
 
 ```shell
 npm install -g ionic@latest
 ```
 
-From here, the global command `ionic` will allow for the creation of a React project with Ionic and any other dependencies. To create a new project, run the following command:
+グローバルコマンドの `ionic` を使用すると、Ionicおよびその他の依存関係を持つReactプロジェクトを作成できます。 新しいプロジェクトを作成するには、次のコマンドを実行します:
 
 ```shell
 ionic start myApp blank --type=react
 cd myApp
 ```
 
-From here, we run `ionic serve` and have our project running in the browser.
+そして、 `ionic serve` コマンドを実行するとプロジェクトをブラウザで実行することができます。
 
-## A look at a React Component
+## React Componentを俯瞰する
 
-The base of our app will be in the `src` directory, and the main entry point will be our `index.tsx`. If we open our project in a code editor and open `src/index.tsx`, we should see the following:
+アプリのベースは `src` ディレクトリにあり、メインのエントリーポイントは `index.tsx` です。 コードエディタでプロジェクトを開き、 `src/index.tsx` を開くと、次のように表示されます:
 
 ```tsx
 import React from 'react';
@@ -44,13 +44,13 @@ import App from './App';
 ReactDOM.render(<App />, document.getElementById('root'));
 ```
 
-So what's going on here? Well, the first three lines are pulling in some dependencies. The first being React itself. This allows us to write components in an HTML-like syntax called JSX. We'll talk about JSX a bit later on.
+ここでは何をしてるでしょう。まず、最初の3行はいくつかの依存関係を呼び出しています。最初はReact本体です。これにより、JSXと呼ばれるHTMLのような構文でコンポーネントを記述できます。JSXについては後ほど説明します。
 
-The second import is for ReactDOM. The `ReactDOM.render` method is the browser/DOM specific way of taking our components and rendering it to a specified DOM node.
+2番目のインポートは ReactDOM のためのものです。 `ReactDOM.render` メソッドは、コンポーネントを取得し、指定されたDOMノードにレンダリングするbrowser/DOM固有の方法です。
 
-The last import is the root component for our app, simply named `App`. This is our first React component and will be used in the bootstrapping process for our React app.
+最後のインポートは、単に `App` という名前のアプリのルートコンポーネントです。 これは最初に表示されるReactコンポーネントであり、Reactアプリの起動に使用します。
 
-If we open `App.tsx`, we should see the following.
+`App.tsx` を開くと、次のように表示されます。
 
 ```typescript
 import React from 'react';
@@ -74,7 +74,7 @@ const App: React.FC = () => (
 );
 ```
 
-At first glance, it may look like a lot is going on, so let's break it down, starting with the first group of imports.
+一見、多くのことが行われているように見えるかもしれませんので、最初の import のグループから確認します。
 
 ```typescript
 import React from 'react';
@@ -84,19 +84,19 @@ import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
 ```
 
-Similar to `index.tsx`, we first must import React to use JSX.
+`index.tsx` と同様に、JSXを使用するには、まずReactをインポートする必要があります。
 
-The next import is from `react-router-dom`. We're importing Route, which is how we’ll match the app’s URL with the components we want to render
+次のインポートでは、 `react-router-dom` から Routeをインポートします。これは、アプリのURLとレンダリングしたいコンポーネントを一致させるためのメソッドです。
 
-Following ReactRouter, we next have our first imports for Ionic. To use a component in React, you must first import it. So for Ionic, this means anytime we want to use a Button or a Card, it must be added to our imports. In the case of our App component, we're only using `IonApp`, `IonRouterOutlet`, and `IonReactRouter`.
+ReactRouterに続いて、Ionicのインポートを行います。 Reactでコンポーネントを使用するには、最初に使いたいコンポーネントをインポートする必要があります。つまり、ボタンコンポーネントやカードコンポーネントを使用する場合でもいつでもインポートする必要があります。 Appコンポーネントの場合、`IonApp` 、 `IonRouterOutlet` と `IonReactRouter` のみを使用しています。
 
-`IonReactRouter` is a component that wraps ReactRouter’s BrowserRouter component. It more or less behaves the same as BrowserRouter with a few differences. We have a deeper guide that goes over these differences in our [React Navigation Docs](/docs/react/navigation).
+`IonReactRouter` は、ReactRouterのBrowserRouterコンポーネントをラップするコンポーネントです。多少の違いはありますが、BrowserRouterとほぼ同じように動作します。[React Navigation Docs](/docs/react/navigation) に、これらの違いについての詳細なガイドがあります。
 
-The last important import is the `Home` component import. This is a component that we will be able to navigate to in our app. We'll look at the navigation part a bit later.
+最後の重要なインポートは、 `Home` コンポーネントのインポートです。これは、アプリ内でナビゲートするコンポーネントです。ナビゲーション部分については少し後で説明します。
 
-The CSS import is pulling in the utility styles from Ionic for things like padding, typography, etc.
+CSSインポートは、padding、typographyなどのようなもののために、Ionicからユーティリティスタイルを取り込みます。
 
-After reviewing all of the imports, we now get to our first look at a React Component:
+続いて、Reactコンポーネントを確認します:
 
 ```typescript
 const App: React.FC = () => (
@@ -111,15 +111,15 @@ const App: React.FC = () => (
 );
 ```
 
-This React component sets up the initial routing for our app, as well as include some core Ionic components for animations and layout (IonRouterOutlet and IonApp). One thing that stands out is that in React, to do data-binding, the value is passed in curly braces (`{}`). So in the `Route` component, we can set the value of `component` to the `Home` component from earlier. This is how React will know that that value is not a string, but a reference to a component.
+このReactコンポーネントは、アプリの初期ルーティングを設定し、アニメーションとレイアウト用のコアIonicコンポーネント（ `IonRouterOutlet` と `IonApp` ）を内包しています。特徴のひとつに、Reactでは、データバインディングを行うために、値が中括弧（ `{}` ）で渡されることがあります。 したがって、 `Route` コンポーネントでは、手軽に `component` の値を `Home` コンポーネントに設定できます。 これは、Reactがその値が文字列ではなく、コンポーネントへの参照であることを認識する方法です。
 
-> What's important to note here is that these are all standard React DOM libraries, meaning there's no custom integration layer or transpilation step.
+> ここで重要なのは、これらはすべて標準のReact DOMライブラリであるということです。つまり、カスタム統合レイヤーや変換のための手順はありません。
 
-## A component with style
+## コンポーネントスタイル
 
-Now the `App` does not really have a lot to modify here. It's a basic example of a container component. With the Router logic set, all it's responsible for is to render a component that matches the given URL route. Since we already have one component/router setup, let's go ahead and modify our `Home` component.
+今回、ここでは `App` を変更する必要はありません。これは、コンテナコンポーネントの基本的な例です。 Routerロジックを設定すると、指定されたURLルートに一致するコンポーネントをレンダリングするだけです。 すでに1つのcomponent/routerがセットアップされているので、先に進み、 `Home` コンポーネントを変更しましょう。
 
-Currently, the `Home` component looks like so:
+現在、 `Home`コンポーネントは次のようになっています:
 
 ![React home component](/docs/assets/img/guides/react/first-app/home-route.png)
 
@@ -154,19 +154,19 @@ const Home: React.FC = () => {
 };
 ```
 
-Much like the `App` component we started with, we have some imports for specific Ionic components, an import for React, and then our React component itself. 
+`App` コンポーネントと同様に、特定のIonicコンポーネントのインポート、Reactのインポート、Reactコンポーネント自体が用意されています。
 
-`IonPage` is the base component for all pages (a component with a route/URL), and includes some common building blocks of a full-screen component, like header, title, and content components.
+`IonPage` は、すべてのページの基本コンポーネント（route/URLを持つコンポーネント）であり、ヘッダー、タイトル、コンテンツコンポーネントなど、フルスクリーンコンポーネントの一般的な構成要素が含まれています。
 
-> When creating your own pages, don't forget to have `IonPage` be the root component for them. Having `IonPage` be the root component is important because it helps ensure transitions work properly as well as provides the base CSS the Ionic components rely on.
+> 独自のページを作成するときは、 `IonPage` をそれらのルートコンポーネントにすることを忘れないことが重要です。 `IonPage` をルートコンポーネントにすることにより、トランジションが適切に機能することを保証し、Ionicコンポーネントが依存するベースCSSを提供することができます。
 
-`IonHeader` is a bit self explanatory. It's a component that is meant to exist at the top of the page. `IonHeader` itself doesn't do much by itself, aside from handling some flexbox-based layout. It's meant to hold other components, like `IonToolbar` or `IonSearchbar`.
+`IonHeader` については少し説明が必要です。これは、ページの上部に存在することを意図したコンポーネントです。 `IonHeader` 自体は、フレックスボックスベースのレイアウトを処理することを除けば、単独ではあまり機能しません。 `IonToolbar` や `IonSearchbar` などの他のコンポーネントを保持するためのものです。
 
-`IonContent` is, as its name suggests, the main content area for our page. It's responsible for providing the scrollable content that users will interact with, plus any scroll events that could be used in an app.
+`IonContent` は、その名前が示すように、ページのメインコンテンツ領域です。ユーザーが操作するスクロール可能なコンテンツと、アプリで使用できるスクロールイベントを提供します。
 
-Our current content is relatively simple but does not contain anything that could be used in a real app, so let's change that.
+現在のコンテンツは比較的単純ですが、実際のアプリで使用するようなコンポーネントが含まれていないので、変更してみましょう。
 
-> Note: For brevity, we're excluding repeating part of our component, like the function declaration or import statements for other components.
+> Note: わかりやすくするために、関数宣言や他のコンポーネントのimportステートメントなど、コンポーネントの繰り返し部分は除外しています。
 
 ```typescript
 <IonPage>
@@ -188,7 +188,7 @@ Our current content is relatively simple but does not contain anything that coul
 </IonPage>
 ```
 
-Here in our `IonContent`, we're adding an `IonList` and a much more involved `IonItem` component. Let's look at `IonItem`, as it's the centerpiece here.
+ここでは、 `IonContent` で、 `IonList` と、より複雑な `IonItem` コンポーネントを追加しています。 `IonItem` の中身を見てみましょう。
 
 ```typescript
 <IonItem>
@@ -203,11 +203,11 @@ Here in our `IonContent`, we're adding an `IonList` and a much more involved `Io
 </IonItem>
 ```
 
-Item is important as it clearly shows the mix of React concepts and Web Component concepts. The first clear example of a React concept is self-closing tags for React Components in `IonCheckbox`. This is just a simpler way of writing components that do not contain any child content.
+Item は、Reactの概念とWeb Componentsのコンセプトの組み合わせを明確に示すため、重要です。 Ionic Reactコンセプトの最初の明確な例は、 `IonCheckbox` のReactコンポーネントの自己完結型のタグです。 これは、子コンテンツを含まないコンポーネントを記述する、より単純な方法です。
 
-From the Web Components side, we have a special attribute called `slot`. This is key for letting the `IonItem` know where to place the `IonCheckbox` when it renders. This is not a React API, but a web standards API.
+Web Componentsには、 `slot` と呼ばれる特別な属性があります。 これは、レンダリング時に `IonCheckbox` を配置する場所を `IonItem` に知らせるためのキーです。 これはReact APIではなく、Web標準のAPIです。
 
-Let's look at another component from Ionic, FAB. Floating Action Buttons are a nice way to provide a main action that is elevated from the rest of an app. For this FAB, we'll need three components: a FAB, a FAB Button, and an Icon.
+Ionicの別のコンポーネント、FABを見てみましょう。 Floating Action Buttons（フローティングアクションボタン）は、アプリの他の部分よりも上位のメインアクションを提供するための便利な方法です。 FABには、FAB、FABボタン、アイコンの3つのコンポーネントが必要です。
 
 ```typescript
 import { add } from ‘ionicons/icons’;
@@ -227,9 +227,9 @@ import { add } from ‘ionicons/icons’;
 </IonContent>
 ```
 
-On our main `IonFab`, we're setting its positioning with the vertical and horizontal attributes. We're also setting the render location to "fixed" with the slot attribute. This will tell `IonFab` to render outside of the scrollable content in `IonContent`.
+メインの `IonFab` では、 vertical と horizontal 属性で位置を設定しています。 また、slot属性を使用して、レンダリングの場所を "fixed" に設定しています。 これにより、 `IonFab` にスクロール可能な `IonContent` のコンテンツの外側にレンダリングするよう指示します。
 
-Now let's wire up a click handler to this. What we want to do is when we click the button, we'll navigate to a new page (which we'll create in a moment). To do this, we'll need to get access to React Router's navigation API. Thankfully since this is rendered in a Router/Route context, we have access to React Routers APIs via Props passed to our Home component.
+次に、これにClickハンドラーを接続しましょう。 やりたいことは、ボタンをクリックすると、新しいページに移動します（このあとすぐにページを作成します）。 これを行うには、React RouterのナビゲーションAPIにアクセスする必要があります。 すばらしいことに、これは Router/Route コンテキストでレンダリングされるため、Homeコンポーネントに渡されたPropsを介してReact Routers APIにアクセスできます。
 
 ```typescript
 const Home: React.FC<RouteComponentProps> = (props) => {
@@ -250,15 +250,15 @@ const Home: React.FC<RouteComponentProps> = (props) => {
 export default Home;
 ```
 
-In our component declaration, we're passing in `props` which is of type `RouteComponentProps` (imported from `react-router`). This `props` object gives us access to the history API from React Router, allowing us to push a new route onto the navigation stack. On our `IonFabButton`, we can add a click handler, and just call `props.history.push` and pass in the new route. In this case, we'll navigate to `new`.
+コンポーネントの型定義では、 `RouteComponentProps` 型（ `react-router` からインポート）の `props` を渡します。 この `props` オブジェクトは、React Routerから history API へのアクセスを提供し、ナビゲーションスタックに新しいルートをプッシュするようにします。 `IonFabButton` にClickハンドラーを追加し、 `props.history.push` を呼び出して新しいルートを渡すだけです。 この場合、 `/new` に移動します。
 
 ```typescript
 <IonFabButton onClick={() => props.history.push('/new')} >
 ```
 
-## Creating a new Route
+## 新しいRouteの作成
 
-Now that we have the pieces in place to navigate in our app, we need to create a new component and add the new route to our router declaration. Let's open our `App.tsx` file and add the new route.
+アプリ内を移動するためのピースが用意できたので、新しいコンポーネントを作成し、新しいルートをルーター宣言に追加しましょう。 `App.tsx` ファイルを開いて、新しいRouteを追加します。
 
 ````typescript
 ...
@@ -283,9 +283,9 @@ const App: React.FC = () => {
 export default App;
 ````
 
-With our router now having an entry for the route `/new`, we'll create the component needed, `NewItem`. This will exist in `src/pages/NewItem.tsx`
+ルーターにRoute `/new` のエントリができたので、必要な `NewItem` コンポーネントを作成します。 これは `src/pages/NewItem.tsx` に作成します。
 
-Let's fill the `NewItem.tsx` with some placeholder content for the moment.
+とりあえず、いくつかのプレースホルダーコンテンツで `NewItem.tsx` を埋めましょう。
 
 ```typescript
 import {
@@ -317,9 +317,9 @@ const NewItem: React.FC = () => {
 export default NewItem;
 ```
 
-The content here is pretty straight forward and should look similar to the `Home` component. What is new is the `IonBackButton` component. This is used to navigate back to the previous route. Pretty straight forward? Ok, but what if we reload the page?
+ここのコンテンツは非常に単純で、 `Home` コンポーネントに似ているはずです。 新しく追加されたのは `IonBackButton` コンポーネントです。 これは、前のRouteに戻るために使用されます。 かなり簡単ですか？ わかりやすいですが、ページをリロードするとどうなりますか？
 
-Well, in this case, the in-memory history is lost, so the back button disappears. To address this, we can set the `defaultHref` attribute value to the URL we want to navigate to if there is no history.
+さて、この場合、メモリ内の履歴は失われるため、戻るボタンは消えます。 これに対処するために、 `defaultHref` 属性を追加し、履歴がない場合にナビゲートするURLを設定します。
 
 ```typescript
 return (
@@ -337,8 +337,8 @@ return (
 );
 ```
 
-Here, when we reload, if there is no app history present, we'll be able to navigate back to our home route.
+ここで、リロードするときにアプリの履歴が存在しない場合、home Routeに戻ることができます。
 
-## Where to go from here
+## 次にどうしますか？
 
-This guide covers the basics of creating an Ionic React app and adding some basic navigation. For a more detailed look at Ionic’s components, check out the [component API pages](/docs/components). For more details on React, review the [React Docs](https://reactjs.org).
+このガイドでは、Ionic Reactアプリの作成と基本的なナビゲーションの追加の基本について説明しました。 Ionicのコンポーネントの詳細については、[component API pages](/docs/components) をご覧ください。 Reactの詳細については、[React Docs](https://reactjs.org)をご覧ください。

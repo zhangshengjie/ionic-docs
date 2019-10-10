@@ -7,11 +7,11 @@ nextUrl: '/docs/react/platform'
 
 # Config
 
-Ionic Config provides a way to change the properties of components globally across an app. It can set the app mode, tab button layout, animations, and more.
+Ionic Configは、アプリ全体でコンポーネントのプロパティをグローバルに変更する方法を提供します。 アプリのモード、Tabボタンのレイアウト、アニメーションなどを設定できます。
 
-## Usage
+## 使い方
 
-To override the initial Ionic config for the app, import the `setupConfig` method from `@ionic/react` and call it before you render any Ionic components:
+アプリのIonicの初期設定をオーバーライドするには、Ionicコンポーネントをレンダリングする前に、`@ionic/react` から `setupConfig` メソッドをインポートして呼び出します:
 
 ```typescript
 setupConfig({
@@ -24,11 +24,11 @@ setupConfig({
 </IonApp>
 ```
 
-In the above example, we are disabling the Material Design ripple effect across the app, as well as forcing the mode to be Material Design.
+上記の例では、アプリ全体でマテリアルデザインのリップル効果を無効にし、modeをマテリアルデザインに強制しています。
 
-## Config Options
+## Configオプション
 
-Below is a list of config options that Ionic uses.
+以下は、Ionicで使用できる設定オプションのリストです。
 
 | Config                   | Type               | Description                                                                                              |
 |--------------------------|--------------------|----------------------------------------------------------------------------------------------------------|
