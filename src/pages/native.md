@@ -1,14 +1,26 @@
 ---
 title: Native Plugins
 ---
-<p class='intro'>Ionicアプリ、Cordovaプロジェクト、WebViewにネイティブデバイスの機能を簡単に追加できるように、オープンソースとプレミアムのプラグインと統合で、ネイティブのアプリ体験を構築できます。</p>
+<p class='intro'>オープンソースとプレミアムプラグイン、Ionicアプリケーション、Cordovaプロジェクト、またはCapacitorプロジェクトにネイティブデバイス機能を簡単に追加できる統合機能を使用して、ネイティブアプリケーションのエクスペリエンスを構築します。</p>
 
 <docs-cards class="static-width">
-  <docs-card header="Community Plugins" href="/docs/native/overview" img="/docs/assets/img/native/community-edition.png">
-    <p>TypeScriptラッパー、一貫したAPI、開発を容易にする命名規則を備えた、OSSコミュニティによって構築され維持される無料のCordovaプラグインのコレクション。</p>
+  <docs-card header="Biometric Authentication" href="/docs/enterprise/identity-vault" icon="/docs/assets/icons/logo-identity-vault.png">
+    <p>Secure token storage, session management, and data at-rest encryption.</p>
   </docs-card>
 
-  <docs-card header="Ionic Native" href="/docs/enterprise" img="/docs/assets/img/native/enterprise-edition.png">
-    <p>ミッションクリティカルなアプリを開発するチームのためのプラグインと統合のキュレートされたコレクション。Ionic Native EEは安定性の保証とすべての主要なプラットフォームとバージョンでの動作保証を備えた上で、Ionicが構築とサポートを行います。</p>
+  <docs-card header="Offline Storage" href="/docs/enterprise/offline-storage" icon="/docs/assets/icons/logo-offline-storage.png">
+    <p>High-performance on-device database with advanced querying features.</p>
+  </docs-card>
+
+  <docs-card header="Single Sign-on" href="/docs/enterprise/auth-connect" icon="/docs/assets/icons/logo-auth-connect.png">
+    <p>Login, logout, and user registration, backed by Auth0, Azure AD, or AWS Cognito.</p>
+  </docs-card>
+
+  <docs-card header="Premier Plugins" href="/docs/enterprise" icon="/docs/assets/icons/native-enterprise.png">
+    <p>A curated collection of plugins for teams building mission-critical apps.</p>
+  </docs-card>
+
+  <docs-card header="Community Plugins" href="/docs/native/overview" icon="/docs/assets/icons/native-community.png">
+    <p>A collection of free Cordova plugins, built and maintained by the OSS community.</p>
   </docs-card>
 </docs-cards>

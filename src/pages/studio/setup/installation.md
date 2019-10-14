@@ -6,9 +6,7 @@
 
 Ionic Studioの最新版のダウンロードはこちらです。 [Ionic Dashboard](https://dashboard.ionicframework.com/personal/downloads).
 
-> 🚧 These docs are a work-in-progress. Check back frequently for updates!
-
-## 必要環境
+## 必要な環境
 
 * macOS あるいは Windows 10
 * [Node &amp; npm](/docs/installation/environment#node-npm) がセットアップされている必要があります。
