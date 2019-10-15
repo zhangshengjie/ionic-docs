@@ -1,5 +1,6 @@
 {
   "tag": "ion-label",
+  "filePath": "src/components/label/label.tsx",
   "encapsulation": "scoped",
   "readme": "# ion-label\n\nLabel is a wrapper element that can be used in combination with `ion-item`, `ion-input`, `ion-toggle`, and more. The position of the label inside of an item can be inline, fixed, stacked, or floating.\n\n",
   "docs": "Label is a wrapper element that can be used in combination with `ion-item`, `ion-input`, `ion-toggle`, and more. The position of the label inside of an item can be inline, fixed, stacked, or floating.",

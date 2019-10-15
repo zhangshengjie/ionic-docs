@@ -1,5 +1,6 @@
 {
   "tag": "ion-tab-bar",
+  "filePath": "src/components/tab-bar/tab-bar.tsx",
   "encapsulation": "shadow",
   "readme": "# ion-tab-bar\n\nThe tab bar is a UI component that contains a set of [tab buttons](../tab-button). A tab bar must be provided inside of [tabs](../tabs) to communicate with each [tab](../tab).\n\n",
   "docs": "The tab bar is a UI component that contains a set of [tab buttons](../tab-button). A tab bar must be provided inside of [tabs](../tabs) to communicate with each [tab](../tab).",

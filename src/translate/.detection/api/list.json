@@ -1,5 +1,6 @@
 {
   "tag": "ion-list",
+  "filePath": "src/components/list/list.tsx",
   "encapsulation": "none",
   "readme": "# ion-list\n\nLists are made up of multiple rows of items which can contain text, buttons, toggles,\nicons, thumbnails, and much more. Lists generally contain items with similar data content, such as images and text.\n\nLists support several interactions including swiping items to reveal options, dragging to reorder items within the list, and deleting items.\n\n",
   "docs": "Lists are made up of multiple rows of items which can contain text, buttons, toggles,\nicons, thumbnails, and much more. Lists generally contain items with similar data content, such as images and text.\n\nLists support several interactions including swiping items to reveal options, dragging to reorder items within the list, and deleting items.",

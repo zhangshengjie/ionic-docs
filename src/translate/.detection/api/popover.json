@@ -1,5 +1,6 @@
 {
   "tag": "ion-popover",
+  "filePath": "src/components/popover/popover.tsx",
   "encapsulation": "scoped",
   "readme": "# ion-popover\n\nA Popover is a dialog that appears on top of the current page. It can be used for anything, but generally it is used for overflow actions that don't fit in the navigation bar.\n\n### Creating\n\nPopovers can be created using a [Popover Controller](../popover-controller). They can be customized by passing popover options in the popover controller's create method.\n\n### Presenting\n\nTo present a popover, call the `present` method on a popover instance. In order to position the popover relative to the element clicked, a click event needs to be passed into the options of the the `present` method. If the event is not passed, the popover will be positioned in the center of the viewport.\n\n",
   "docs": "A Popover is a dialog that appears on top of the current page. It can be used for anything, but generally it is used for overflow actions that don't fit in the navigation bar.",
@@ -11,7 +12,7 @@
   ],
   "usage": {
     "angular": "```typescript\nimport { Component } from '@angular/core';\nimport { PopoverController } from '@ionic/angular';\nimport { PopoverComponent } from '../../component/popover/popover.component';\n\n@Component({\n  selector: 'popover-example',\n  templateUrl: 'popover-example.html',\n  styleUrls: ['./popover-example.css']\n})\nexport class PopoverExample {\n  constructor(public popoverController: PopoverController) {}\n\n  async presentPopover(ev: any) {\n    const popover = await this.popoverController.create({\n      component: PopoverComponent,\n      event: ev,\n      translucent: true\n    });\n    return await popover.present();\n  }\n}\n```\n",
-    "javascript": "```javascript\nfunction presentPopover(ev) {\n  const popover = Object.assing(document.createElement('ion-popover'), {\n    component: 'popover-example-page',\n    event: ev,\n    translucent: true\n  });\n  document.body.appendChild(popover);\n  return popover.present();\n}\n```\n",
+    "javascript": "```javascript\nfunction presentPopover(ev) {\n  const popover = Object.assign(document.createElement('ion-popover'), {\n    component: 'popover-example-page',\n    event: ev,\n    translucent: true\n  });\n  document.body.appendChild(popover);\n  return popover.present();\n}\n```\n",
     "react": "```tsx\nimport React, { useState } from 'react';\nimport { IonPopover, IonButton } from '@ionic/react';\n\nexport const PopoverExample: React.FC = () => {\n  const [showPopover, setShowPopover] = useState(false);\n\n  return (\n    <>\n      <IonPopover\n        isOpen={showPopover}\n        onDidDismiss={e => setShowPopover(false)}\n      >\n        <p>This is popover content</p>\n      </IonPopover>\n      <IonButton onClick={() => setShowPopover(true)}>Show Popover</IonButton>\n    </>\n  );\n};\n```"
   },
   "props": [

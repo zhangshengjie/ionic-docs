@@ -1,5 +1,6 @@
 {
   "tag": "ion-text",
+  "filePath": "src/components/text/text.tsx",
   "encapsulation": "shadow",
   "readme": "# ion-text\n\nThe text component is a simple component that can be used to style the text color of any element. The `ion-text` element should wrap the element in order to change the text color of that element.\n\n",
   "docs": "The text component is a simple component that can be used to style the text color of any element. The `ion-text` element should wrap the element in order to change the text color of that element.",

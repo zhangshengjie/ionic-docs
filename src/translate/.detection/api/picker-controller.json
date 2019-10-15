@@ -1,5 +1,6 @@
 {
   "tag": "ion-picker-controller",
+  "filePath": "src/components/picker-controller/picker-controller.tsx",
   "encapsulation": "none",
   "readme": "# ion-picker-controller\n\n\n",
   "deprecation": "Use the `pickerController` exported from core.",

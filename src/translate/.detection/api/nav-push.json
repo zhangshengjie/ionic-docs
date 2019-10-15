@@ -1,9 +1,10 @@
 {
   "tag": "ion-nav-push",
+  "filePath": "src/components/nav-push/nav-push.tsx",
   "encapsulation": "none",
-  "readme": "# ion-nav-push\n\n`NavPush` is a component used to navigate to the specified component.\nIt is the element form of `NavController.push()`\n\n",
+  "readme": "# ion-nav-push\n\nNav Push is a component used to navigate to the specified component.\n\nIt is the component form of `NavController.push()`\n\n",
   "deprecation": "Use `<ion-nav-link component=\"MyComponent\">` instead.",
-  "docs": "`NavPush` is a component used to navigate to the specified component.\nIt is the element form of `NavController.push()`",
+  "docs": "Nav Push is a component used to navigate to the specified component.\n\nIt is the component form of `NavController.push()`",
   "docsTags": [
     {
       "text": "Use `<ion-nav-link component=\"MyComponent\">` instead.",

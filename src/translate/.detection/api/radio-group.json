@@ -1,5 +1,6 @@
 {
   "tag": "ion-radio-group",
+  "filePath": "src/components/radio-group/radio-group.tsx",
   "encapsulation": "none",
   "readme": "# ion-radio-group\n\nA radio group is a group of [radio buttons](../radio). It allows\na user to select at most one radio button from a set. Checking one radio\nbutton that belongs to a radio group unchecks any previous checked\nradio button within the same group.\n\n\n\n",
   "docs": "A radio group is a group of [radio buttons](../radio). It allows\na user to select at most one radio button from a set. Checking one radio\nbutton that belongs to a radio group unchecks any previous checked\nradio button within the same group.",

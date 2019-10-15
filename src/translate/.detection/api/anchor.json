@@ -1,5 +1,6 @@
 {
   "tag": "ion-anchor",
+  "filePath": "src/components/anchor/anchor.tsx",
   "encapsulation": "shadow",
   "readme": "# ion-anchor\n",
   "deprecation": "Use `ion-router-link` instead.",

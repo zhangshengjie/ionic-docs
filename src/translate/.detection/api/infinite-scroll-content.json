@@ -1,5 +1,6 @@
 {
   "tag": "ion-infinite-scroll-content",
+  "filePath": "src/components/infinite-scroll-content/infinite-scroll-content.tsx",
   "encapsulation": "none",
   "readme": "# ion-infinite-scroll-content\n\nThe `ion-infinite-scroll-content` component is the default child used by the `ion-infinite-scroll`. It displays an infinite scroll spinner that looks best based on the platform and changes the look depending on the infinite scroll's state. The default spinner can be changed and text can be added by setting the `loadingSpinner` and `loadingText` properties.\n\n## React\n\nThe `ion-infinite-scroll-content` component is not supported in React.\n",
   "docs": "The `ion-infinite-scroll-content` component is the default child used by the `ion-infinite-scroll`. It displays an infinite scroll spinner that looks best based on the platform and changes the look depending on the infinite scroll's state. The default spinner can be changed and text can be added by setting the `loadingSpinner` and `loadingText` properties.",
