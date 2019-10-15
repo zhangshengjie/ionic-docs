@@ -1,5 +1,6 @@
 {
   "tag": "ion-action-sheet-controller",
+  "filePath": "src/components/action-sheet-controller/action-sheet-controller.tsx",
   "encapsulation": "none",
   "readme": "# ion-action-sheet-controller\n\nAction Sheet controllers programmatically control the action sheet component. Action Sheets can be created and dismissed from the action sheet controller. View the [Action Sheet](../action-sheet) documentation for a full list of options to pass upon creation.\n",
   "deprecation": "Use the `actionSheetController` exported from core.",

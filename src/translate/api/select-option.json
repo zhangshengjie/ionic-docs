@@ -1,5 +1,6 @@
 {
   "tag": "ion-select-option",
+  "filePath": "src/components/select-option/select-option.tsx",
   "encapsulation": "shadow",
   "readme": "# ion-select-option\n\nSelectOption is a component that is a child element of Select. For more information, see the [Select docs](../select).\n\n",
   "docs": "SelectOption is a component that is a child element of Select. For more information, see the [Select docs](../select).",

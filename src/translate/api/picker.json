@@ -1,5 +1,6 @@
 {
   "tag": "ion-picker",
+  "filePath": "src/components/picker/picker.tsx",
   "encapsulation": "scoped",
   "readme": "# ion-picker\n\nA Picker is a dialog that displays a row of buttons and columns underneath. It appears on top of the app's content, and at the bottom of the viewport.\n\n\n",
   "docs": "A Picker is a dialog that displays a row of buttons and columns underneath. It appears on top of the app's content, and at the bottom of the viewport.",

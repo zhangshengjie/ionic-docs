@@ -1,5 +1,6 @@
 {
   "tag": "ion-refresher",
+  "filePath": "src/components/refresher/refresher.tsx",
   "encapsulation": "none",
   "readme": "# ion-refresher\n\nThe refresher provides pull-to-refresh functionality on a content component.\nThe pull-to-refresh pattern lets a user pull down on a list of data using touch\nin order to retrieve more data.\n\nData should be modified during the refresher's output events. Once the async\noperation has completed and the refreshing should end, call `complete()` on the\nrefresher.\n\n\n",
   "docs": "The refresher provides pull-to-refresh functionality on a content component.\nThe pull-to-refresh pattern lets a user pull down on a list of data using touch\nin order to retrieve more data.\n\nData should be modified during the refresher's output events. Once the async\noperation has completed and the refreshing should end, call `complete()` on the\nrefresher.",

@@ -1,5 +1,6 @@
 {
   "tag": "ion-menu-button",
+  "filePath": "src/components/menu-button/menu-button.tsx",
   "encapsulation": "shadow",
   "readme": "# ion-menu-button\n\nMenu Button is component that automatically creates the icon and functionality to open a menu on a page.\n\n",
   "docs": "Menu Button is component that automatically creates the icon and functionality to open a menu on a page.",

@@ -1,5 +1,6 @@
 {
   "tag": "ion-footer",
+  "filePath": "src/components/footer/footer.tsx",
   "encapsulation": "none",
   "readme": "# ion-footer\n\nFooter is a root component of a page that sits at the bottom of the page.\nFooter can be a wrapper for ion-toolbar to make sure the content area is sized correctly.\n",
   "docs": "Footer is a root component of a page that sits at the bottom of the page.\nFooter can be a wrapper for ion-toolbar to make sure the content area is sized correctly.",

@@ -1,5 +1,6 @@
 {
   "tag": "ion-card",
+  "filePath": "src/components/card/card.tsx",
   "encapsulation": "scoped",
   "readme": "# ion-card\n\nCards are a standard piece of UI that serves as an entry point to more detailed\ninformation. A card can be a single component, but is often made up of some\nheader, title, subtitle, and content. `ion-card` is broken up into several\nsub-components to reflect this. Please see `ion-card-content`,\n`ion-card-header`, `ion-card-title`, `ion-card-subtitle`.\n",
   "docs": "Cards are a standard piece of UI that serves as an entry point to more detailed\ninformation. A card can be a single component, but is often made up of some\nheader, title, subtitle, and content. `ion-card` is broken up into several\nsub-components to reflect this. Please see `ion-card-content`,\n`ion-card-header`, `ion-card-title`, `ion-card-subtitle`.",

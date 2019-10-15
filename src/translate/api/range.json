@@ -1,5 +1,6 @@
 {
   "tag": "ion-range",
+  "filePath": "src/components/range/range.tsx",
   "encapsulation": "shadow",
   "readme": "# ion-range\n\nThe Range slider lets users select from a range of values by moving\nthe slider knob. It can accept dual knobs, but by default one knob\ncontrols the value of the range.\n\n### Range Labels\n\nLabels can be placed on either side of the range by adding the\n`slot=\"start\"` or `slot=\"end\"` to the element. The element doesn't have to\nbe an `ion-label`, it can be added to any element to place it to the\nleft or right of the range.\n\n",
   "docs": "The Range slider lets users select from a range of values by moving\nthe slider knob. It can accept dual knobs, but by default one knob\ncontrols the value of the range.",

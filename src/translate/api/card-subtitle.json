@@ -1,5 +1,6 @@
 {
   "tag": "ion-card-subtitle",
+  "filePath": "src/components/card-subtitle/card-subtitle.tsx",
   "encapsulation": "shadow",
   "readme": "# ion-card-subtitle\n\n`ion-card-subtitle` is a child component of `ion-card`\n",
   "docs": "`ion-card-subtitle` is a child component of `ion-card`",

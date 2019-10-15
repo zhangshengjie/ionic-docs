@@ -1,5 +1,6 @@
 {
   "tag": "ion-backdrop",
+  "filePath": "src/components/backdrop/backdrop.tsx",
   "encapsulation": "shadow",
   "readme": "# ion-backdrop\n\nBackdrops are full screen components that overlay other components. They are useful behind components that transition in on top of other content and can be used to dismiss that component.\n\n",
   "docs": "Backdrops are full screen components that overlay other components. They are useful behind components that transition in on top of other content and can be used to dismiss that component.",

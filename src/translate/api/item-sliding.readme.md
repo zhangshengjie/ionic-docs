@@ -12,7 +12,7 @@ item-slidingには、Buttonを表示するためにドラッグできるItemを�
 
 デフォルトでは、iconを [item option](../item-option)内にtextとともに配置すると、iconはtextの上に表示されますが、icon slotを次のいずれかに変更してオプション内に配置することができます。
 
-| Slot        | description                                                              |
+| Slot        | Description                                                              |
 | ----------- | ------------------------------------------------------------------------ |
 | `start`     | In LTR, start is the left side of the button, and in RTL it is the right |
 | `top`       | The icon is above the text                                               |

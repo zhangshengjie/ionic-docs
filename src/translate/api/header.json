@@ -1,5 +1,6 @@
 {
   "tag": "ion-header",
+  "filePath": "src/components/header/header.tsx",
   "encapsulation": "none",
   "readme": "# ion-header\n\nHeader is a parent component that holds the toolbar component.\nIt's important to note that ion-header needs to be the one of the three root elements of a page\n\n\n",
   "docs": "Header is a parent component that holds the toolbar component.\nIt's important to note that ion-header needs to be the one of the three root elements of a page",
@@ -10,10 +11,23 @@
     }
   ],
   "usage": {
-    "javascript": "```html\n<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-back-button></ion-back-button>\n    </ion-buttons>\n    <ion-title>My Navigation Bar</ion-title>\n  </ion-toolbar>\n\n  <ion-toolbar>\n    <ion-title>Subheader</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content></ion-content>\n```\n",
-    "react": "```tsx\nimport React from 'react';\nimport { IonHeader, IonContent, IonToolbar, IonButtons, IonBackButton, IonTitle } from '@ionic/react';\n\nexport const HeaderExample: React.FC = () => (\n  <>\n    <IonHeader>\n      <IonToolbar>\n        <IonButtons slot=\"start\">\n          <IonBackButton defaultHref=\"/\" />\n        </IonButtons>\n        <IonTitle>My Navigation Bar</IonTitle>\n      </IonToolbar>\n\n      <IonToolbar>\n        <IonTitle>Subheader</IonTitle>\n      </IonToolbar>\n    </IonHeader>\n\n    <IonContent />\n  </>\n);\n```"
+    "angular": "```html\n<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-back-button></ion-back-button>\n    </ion-buttons>\n    <ion-title>My Navigation Bar</ion-title>\n  </ion-toolbar>\n\n  <ion-toolbar>\n    <ion-title>Subheader</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-header collapse=\"condense\">\n    <ion-toolbar>\n      <ion-title size=\"large\">My Navigation Bar</ion-title>\n    </ion-toolbar>\n  </ion-header>\n</ion-content>\n```\n",
+    "javascript": "```html\n<ion-header>\n  <ion-toolbar>\n    <ion-buttons slot=\"start\">\n      <ion-back-button></ion-back-button>\n    </ion-buttons>\n    <ion-title>My Navigation Bar</ion-title>\n  </ion-toolbar>\n\n  <ion-toolbar>\n    <ion-title>Subheader</ion-title>\n  </ion-toolbar>\n</ion-header>\n\n<ion-content>\n  <ion-header collapse=\"condense\">\n    <ion-toolbar>\n      <ion-title size=\"large\">My Navigation Bar</ion-title>\n    </ion-toolbar>\n  </ion-header>\n</ion-content>\n```\n",
+    "react": "```tsx\nimport React from 'react';\nimport { IonHeader, IonContent, IonToolbar, IonButtons, IonBackButton, IonTitle } from '@ionic/react';\n\nexport const HeaderExample: React.FC = () => (\n  <>\n    <IonHeader>\n      <IonToolbar>\n        <IonButtons slot=\"start\">\n          <IonBackButton defaultHref=\"/\" />\n        </IonButtons>\n        <IonTitle>My Navigation Bar</IonTitle>\n      </IonToolbar>\n    \n      <IonToolbar>\n        <IonTitle>Subheader</IonTitle>\n      </IonToolbar>\n    </IonHeader>\n    \n    <IonContent>\n      <IonHeader collapse=\"condense\">\n        <IonToolbar>\n          <IonTitle size=\"large\">My Navigation Bar</IonTitle>\n        </IonToolbar>\n      </IonHeader>\n    </IonContent>\n  </>\n);\n```",
+    "vue": "```html\n<template>\n  <ion-header>\n    <ion-toolbar>\n      <ion-buttons slot=\"start\">\n        <ion-back-button></ion-back-button>\n      </ion-buttons>\n      <ion-title>My Navigation Bar</ion-title>\n    </ion-toolbar>\n  \n    <ion-toolbar>\n      <ion-title>Subheader</ion-title>\n    </ion-toolbar>\n  </ion-header>\n  \n  <ion-content>\n    <ion-header collapse=\"condense\">\n      <ion-toolbar>\n        <ion-title size=\"large\">My Navigation Bar</ion-title>\n      </ion-toolbar>\n    </ion-header>\n  </ion-content>\n</template>\n```\n"
   },
   "props": [
+    {
+      "name": "collapse",
+      "type": "\"condense\" | undefined",
+      "mutable": false,
+      "attr": "collapse",
+      "reflectToAttr": false,
+      "docs": "Describes the scroll effect that will be applied to the header\n`condense` only applies in iOS mode.\n\nTypically used for [Collapsible Large Titles](https://ionicframework.com/docs/api/title#collapsible-large-titles)",
+      "docsTags": [],
+      "optional": true,
+      "required": false
+    },
     {
       "name": "mode",
       "type": "\"ios\" | \"md\"",
