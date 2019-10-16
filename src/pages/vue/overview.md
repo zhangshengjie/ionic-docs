@@ -5,7 +5,7 @@ nextUrl: '/docs/vue/your-first-app'
 
 # Ionic Vueの概要
 
-`@ionic/vue` はcore Ionic experienceに、Vue開発者向けにカスタマイズされたツールとAPIを組み合わせたものです。
+`@ionic/vue` はcore Ionic experienceに、Vue開発者向けにカスタマイズされたツールとAPIを組み合わせたものです。現在ベータ版です。
 
 ## Vueバージョンサポート
 

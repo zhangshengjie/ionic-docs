@@ -11,7 +11,7 @@ Ionic Frameworkは、Webテクノロジー（HTML、CSS、JavaScript）を使っ
 
 Ionic Frameworkは、フロントエンドにおけるUXと、アプリケーションにおけるUIインタラクション（操作性、インタラクション、ジェスチャー、アニメーション)に特化しています。学びやすく、Angularをはじめとしたライブラリ・フレームワークと一緒に使うことができます。また、フレームワークなしで簡単なJavaScriptのコードだけでIonic Frameworkを利用することもできます。
 
-現在、Ionic Frameworkは<a href="https://angular.io/" target="_blank">Angular</a>を公式サポートしていますが、<strong>Vue</strong>と<strong>React</strong>のサポートも開発中です。 もし使い始める前にIonic Frameworkを詳しく知りたいなら、<a href="https://youtu.be/p3AN3igqiRc" target="_blank">基本を紹介した映像</a>をご覧ください。
+現在、Ionic Frameworkは<a href="https://angular.io/" target="_blank">Angular</a>と<a href="https://reactjs.org" target="_blank">React</a>を公式サポートしていますが、<strong>Vue</strong>のサポートも開発中です。 もし使い始める前にIonic Frameworkを詳しく知りたいなら、<a href="https://youtu.be/p3AN3igqiRc" target="_blank">基本を紹介した映像</a>をご覧ください。
 
 ## ゴール
 
@@ -70,7 +70,7 @@ v4がWeb標準に移行したことで、Ionicコアはフレームワーク固�
 
 To help manage Ionic apps throughout their lifecycle, we also offer a commercial app platform for production apps called <a href="https://ionicframework.com/appflow" target="_blank">Ionic Appflow</a>, which is <strong>separate from the open source Framework.</strong>
 
-Ionic Appflow helps developers and teams compile native app builds and deploy live code updates to Ionic apps from a centralized dashboard. Optional paid upgrades are available for more advanced capabilities like workflow automation, single sign-on (SSO) and access to connected services and integrations. 
+Ionic Appflow helps developers and teams compile native app builds and deploy live code updates to Ionic apps from a centralized dashboard. Optional paid upgrades are available for more advanced capabilities like workflow automation, single sign-on (SSO) and access to connected services and integrations.
 
 Appflow requires an <a href="https://dashboard.ionicframework.com/signup" target="_blank">Ionic Account</a> and comes with a free “Starter” plan for those interested in playing around with some of its features.
 
