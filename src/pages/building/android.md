@@ -48,7 +48,7 @@ CapacitorはAndroid Studioを使用して、シミュレータやデバイス向
     $ ionic capacitor copy android
     ```
 
-2. **Android StudioでRun牡丹をクリックしてから、ターゲットのシミュレータまたはデバイスを選択します。**
+2. **Android StudioでRunボタンをクリックしてから、ターゲットのシミュレータまたはデバイスを選択します。**
 
 ![Android Studio Run Button Area](/docs/assets/img/running/android-studio-run-button-area.png)
 
