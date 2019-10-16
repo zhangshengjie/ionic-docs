@@ -111,8 +111,6 @@ export class DocsHeader {
                 <a href="https://ionicframework.com/advisory" target="_blank">Enterprise Advisory</a>
               </section>
             </docs-dropdown>
-            <a class="outbound" href="https://ionicframework.jp/case/" target="_blank">事例</a>
-            <a class="outbound" href="https://github.com/ionic-jp/ionic-docs" target="_blank">翻訳に協力</a>
             <docs-dropdown icon={Translation} align="right" label="Translations" class="label-sm-only">
               <section>
                 <a href="https://ionicframework.com/en/docs/" target="_blank">English</a>
@@ -134,6 +132,14 @@ export class DocsHeader {
                 <a href="/docs/es">Spanish</a>
               </div>
             </docs-dropdown>
+            <a href="https://ionicframework.jp/case/" target="_blank">
+              <span class="lg-only">事例</span>
+              <span class="sm-only">事例 <ForwardArrow class="Dropdown-arrow"/></span>
+            </a>
+            <a href="https://github.com/ionic-jp/ionic-docs" target="_blank">
+              <span class="lg-only">翻訳に協力</span>
+              <span class="sm-only">翻訳に協力 <ForwardArrow class="Dropdown-arrow"/></span>
+            </a>
             <a href="https://github.com/ionic-team/ionic" target="_blank">
               <ion-icon name="logo-github" class="lg-only"></ion-icon>
               <span class="sm-only">GitHub <ForwardArrow class="Dropdown-arrow"/></span>
