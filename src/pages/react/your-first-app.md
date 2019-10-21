@@ -5,7 +5,7 @@ nextText: 'Lifecycle'
 nextUrl: '/docs/react/lifecycle'
 ---
 
-# Ionic React
+# Build Your First Ionic React App
 
 ## Ionic Frameworkとは
 

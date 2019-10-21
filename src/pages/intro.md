@@ -56,9 +56,15 @@ Ionic 4の大きな目標のひとつに、UIコンポーネントを動作さ�
 
 AngularはいつもIonicをよりよくしてくれます。コアコンポーネントはWeb Componentsライブラリ単体として利用できますが、`@ionic/angular`パッケージを使うことで簡単にAngularのエコシステムと統合できます。`@ionic/angular`は、Angular開発者がIonic 2/3から期待してきた機能や、AngularルーターなどのAngularのコアライブラリとの統合といったすべての機能が含まれています。
 
+### React
+
+Ionicは現在、人気のReactライブラリを公式サポートしています。 Ionic Reactを利用すると、React開発者は既存のWeb技術を利用して、
+Ionicは現在、人気のあるReactライブラリを公式にサポートしています。 Ionic Reactを使用すると、React開発者は既存のWebスキルを使用して、iOS、Android、Web、およびデスクトップをターゲットとするアプリを構築できます。  `@ionic/react` を利用すると、すべてのコアIonicコンポーネントをまるでネイティブのReactコンポーネントのように利用することができます。
+
 ### 今後のサポート
 
-今後のリリースでは、他のフレームワークのサポートも予定されています。現在、VueとReactの公式バインディングが開発中ですが、一部のコンポーネントはこれらのフレームワークの枠組みの外で動作しますす。
+今後のリリースでは、他のフレームワークのサポートも予定されています。現在、Vueの公式バインディングが開発中ですが、一部のコンポーネントはこれらのフレームワークの枠組みの外で動作しますす。
+Support for other frameworks are expected in future release. Currently official bindings for Vue are being developed, though some components just work out of the box in those frameworks.
 
 ## Ionic Framework v4+
 

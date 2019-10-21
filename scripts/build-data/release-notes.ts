@@ -38,7 +38,12 @@ async function getReleases() {
     // Check that the response is an array in case it was
     // successful but returned an object
     if (Array.isArray(releases)) {
-      return releases.map(release => {
+      return releases.filter(release => {
+        const releasePattern = /^v(\d+)\.(\d+)\.(\d+)$/;
+
+        // All non-prerelease, non-alpha, non-beta, non-rc release
+        return releasePattern.test(release.tag_name);
+      }).map(release => {
         const body = parseMarkdown(release.body);
         const published_at = parseDate(release.published_at);
         const version = release.tag_name.replace('v', '');
@@ -59,11 +64,6 @@ async function getReleases() {
         };
       }).sort((a, b) => {
         return -semver.compare(a.tag_name, b.tag_name);
-      }).filter((release) => {
-        const releasePattern = /^v(\d+)\.(\d+)\.(\d+)$/;
-
-        // All non-prerelease, non-alpha, non-beta, non-rc release
-        return releasePattern.test(release.tag_name);
       });
     } else {
       return [];
@@ -110,6 +110,7 @@ function getVersionSymbol(version) {
   const filteredVersions = versions.filter(
     v => version.startsWith(`${v.minor}.`)
   );
+  filteredVersions.unshift(fallbackVersion);
 
   return filteredVersions[filteredVersions.length - 1].symbol;
 }
@@ -119,6 +120,7 @@ function getVersionElement(version) {
   const filteredVersions = versions.filter(
     v => version.startsWith(`${v.minor}.`)
   );
+  filteredVersions.unshift(fallbackVersion);
 
   return filteredVersions[filteredVersions.length - 1].element;
 }
@@ -275,3 +277,5 @@ const versions = [
     'element': 'Copper'
   }
 ];
+
+const fallbackVersion = { 'minor': '9201', 'symbol': 'Uo', 'element': 'Unobtainium' };

@@ -30,7 +30,7 @@ Ionic Frameworkは、アプリを構成するために、単一ページレイ�
     </ion-toolbar>
   </ion-header>
 
-  <ion-content padding>
+  <ion-content class="ion-padding">
     <h1>Main Content</h1>
   </ion-content>
 </ion-app>
@@ -48,7 +48,7 @@ Ionic Frameworkは、アプリを構成するために、単一ページレイ�
 
 ```html
 <ion-app>
-  <ion-content padding>
+  <ion-content class="ion-padding">
     <h1>Main Content</h1>
   </ion-content>
 
@@ -72,7 +72,7 @@ Ionic Frameworkは、アプリを構成するために、単一ページレイ�
     </ion-toolbar>
   </ion-header>
 
-  <ion-content padding>
+  <ion-content class="ion-padding">
     <h1>Main Content</h1>
   </ion-content>
 
@@ -155,7 +155,7 @@ Ionic Frameworkは、アプリを構成するために、単一ページレイ�
         <ion-title>Header</ion-title>
       </ion-toolbar>
     </ion-header>
-    <ion-content padding>
+    <ion-content class="ion-padding">
       <h1>Main Content</h1>
       <p>Click the icon in the top left to toggle the menu.</p>
     </ion-content>
@@ -200,7 +200,7 @@ Ionic Frameworkは、アプリを構成するために、単一ページレイ�
       </ion-content>
     </ion-menu>
 
-    <ion-page class="ion-page" main>
+    <div class="ion-page" main>
       <ion-header>
         <ion-toolbar>
           <ion-buttons slot="start">
@@ -213,10 +213,10 @@ Ionic Frameworkは、アプリを構成するために、単一ページレイ�
           <ion-title>Header</ion-title>
         </ion-toolbar>
       </ion-header>
-      <ion-content padding>
+      <ion-content class="ion-padding">
         <h1>Main Content</h1>
       </ion-content>
-    </ion-page>
+    </div>
 
   </ion-split-pane>
 </ion-app>

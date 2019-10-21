@@ -393,7 +393,7 @@ async performAutomaticUpdate() {
     const resp = await Deploy.sync({updateMethod: 'auto'}, percentDone => {
       console.log(`Update is ${percentDone}% done!`);
     });
-    if (currentVersion.versionId !== resp.versionId){
+    if (!currentVersion || currentVersion.versionId !== resp.versionId){
       // We found an update, and are in process of redirecting you since you put auto!
     }else{
       // No update available
@@ -897,13 +897,13 @@ You can set these values when you add the plugin using flags (if using the `ioni
 
 ### App ID
 * **Required**
-* The app id is required to recieve updates for an app in the Appflow dashboard.
+* The app id is required to receive updates for an app in the Appflow dashboard.
 * `ionic deploy add --app-id=abcdef12`
 * `ionic cordova plugin add cordova-plugin-ionic --variable APP_ID=abcdef12`
 
 ### Channel Name
 * **Required**
-* The channel name is required to recieve updates for an app in the Appflow dashboard and indicates the channel from which the device will recieve updates. Note this can also be updated programatically at runtime for advanced use cases.
+* The channel name is required to receive updates for an app in the Appflow dashboard and indicates the channel from which the device will receive updates. Note this can also be updated programatically at runtime for advanced use cases.
 * `ionic deploy add --channel-name=Production`
 * `ionic cordova plugin add cordova-plugin-ionic --variable CHANNEL_NAME=Production`
 
@@ -919,8 +919,8 @@ You can set these values when you add the plugin using flags (if using the `ioni
 ### Max Versions
 * **Default** `2`
 * This tells the plugin the number of previous updates it should keep on the device in order to speed up the rollback process if ever needed.
-* `ionic deploy add --max-versions=Production`
-* `ionic cordova plugin add cordova-plugin-ionic --variable MAX_VERSIONS=Production`
+* `ionic deploy add --max-versions=2`
+* `ionic cordova plugin add cordova-plugin-ionic --variable MAX_STORE=2`
 
 ### Min Background Duration
 * **Default** `30`

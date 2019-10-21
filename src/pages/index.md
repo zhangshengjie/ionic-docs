@@ -19,7 +19,7 @@ meta:
   </docs-card>
 
   <docs-card header="CLI" href="/docs/cli" icon="/docs/assets/icons/guide-cli-icon.png">
-    <p>Ionic CLIは、Ionicアプリを開発するための便利なツールです。</p>
+    <p>Ionic command-line interfaceはIonicアプリを構築するための便利なツールです。</p>
   </docs-card>
 
   <docs-card header="ネイティブ" href="/docs/native" icon="/docs/assets/icons/guide-nativeapis-icon.png">
