@@ -9,5 +9,6 @@
   "repo": "https://github.com/NeoLSN/cordova-plugin-android-permissions",
   "cordovaPlugin": {
     "name": "cordova-plugin-android-permissions"
-  }
+  },
+  "premierSlug": "android-permissions"
 }

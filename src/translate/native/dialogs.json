@@ -13,5 +13,6 @@
   "repo": "https://github.com/apache/cordova-plugin-dialogs",
   "cordovaPlugin": {
     "name": "cordova-plugin-dialogs"
-  }
+  },
+  "premierSlug": "dialogs"
 }

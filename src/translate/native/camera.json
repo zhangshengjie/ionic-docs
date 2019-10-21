@@ -12,5 +12,6 @@
   "repo": "https://github.com/apache/cordova-plugin-camera",
   "cordovaPlugin": {
     "name": "cordova-plugin-camera"
-  }
+  },
+  "premierSlug": "camera"
 }

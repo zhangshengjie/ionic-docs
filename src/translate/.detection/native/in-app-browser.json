@@ -14,5 +14,6 @@
   "repo": "https://github.com/apache/cordova-plugin-inappbrowser",
   "cordovaPlugin": {
     "name": "cordova-plugin-inappbrowser"
-  }
+  },
+  "premierSlug": "inappbrowser"
 }

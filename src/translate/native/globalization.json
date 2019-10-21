@@ -13,5 +13,6 @@
   "repo": "https://github.com/apache/cordova-plugin-globalization",
   "cordovaPlugin": {
     "name": "cordova-plugin-globalization"
-  }
+  },
+  "premierSlug": "globalization"
 }

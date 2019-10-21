@@ -13,5 +13,6 @@
   "repo": "https://github.com/apache/cordova-plugin-device",
   "cordovaPlugin": {
     "name": "cordova-plugin-device"
-  }
+  },
+  "premierSlug": "device"
 }

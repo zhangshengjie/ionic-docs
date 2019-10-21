@@ -10,5 +10,6 @@
   "repo": "https://github.com/EddyVerbruggen/Calendar-PhoneGap-Plugin",
   "cordovaPlugin": {
     "name": "cordova-plugin-calendar"
-  }
+  },
+  "premierSlug": "calendar"
 }

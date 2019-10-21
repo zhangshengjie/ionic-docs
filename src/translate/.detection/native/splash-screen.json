@@ -13,5 +13,6 @@
   "cordovaPlugin": {
     "name": "cordova-plugin-splashscreen"
   },
-  "capacitorIncompatible": true
+  "capacitorIncompatible": true,
+  "premierSlug": "splashscreen"
 }

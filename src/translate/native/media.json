@@ -12,5 +12,6 @@
   "repo": "https://github.com/apache/cordova-plugin-media",
   "cordovaPlugin": {
     "name": "cordova-plugin-media"
-  }
+  },
+  "premierSlug": "media"
 }

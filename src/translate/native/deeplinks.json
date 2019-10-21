@@ -17,5 +17,6 @@
   ],
   "cordovaPlugin": {
     "name": "ionic-plugin-deeplinks"
-  }
+  },
+  "premierSlug": "deeplinks"
 }

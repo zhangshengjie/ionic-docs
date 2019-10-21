@@ -9,5 +9,6 @@
   "repo": "https://github.com/hiddentao/cordova-plugin-filepath",
   "cordovaPlugin": {
     "name": "cordova-plugin-filepath"
-  }
+  },
+  "premierSlug": "filesystem"
 }

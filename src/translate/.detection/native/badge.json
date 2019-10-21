@@ -12,5 +12,6 @@
   "repo": "https://github.com/katzer/cordova-plugin-badge",
   "cordovaPlugin": {
     "name": "cordova-plugin-badge"
-  }
+  },
+  "premierSlug": "badge"
 }

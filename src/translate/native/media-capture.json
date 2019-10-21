@@ -12,5 +12,6 @@
   "repo": "https://github.com/apache/cordova-plugin-media-capture",
   "cordovaPlugin": {
     "name": "cordova-plugin-media-capture"
-  }
+  },
+  "premierSlug": "media-capture"
 }

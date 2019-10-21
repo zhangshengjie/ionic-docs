@@ -12,5 +12,6 @@
   "repo": "https://github.com/pushandplay/cordova-plugin-apprate",
   "cordovaPlugin": {
     "name": "cordova-plugin-apprate"
-  }
+  },
+  "premierSlug": "app-rate"
 }

@@ -12,5 +12,6 @@
   "repo": "https://github.com/apache/cordova-plugin-file",
   "cordovaPlugin": {
     "name": "cordova-plugin-file"
-  }
+  },
+  "premierSlug": "filesystem"
 }

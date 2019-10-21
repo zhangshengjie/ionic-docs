@@ -13,5 +13,6 @@
   "repo": "https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin",
   "cordovaPlugin": {
     "name": "cordova-plugin-x-socialsharing"
-  }
+  },
+  "premierSlug": "social-sharing"
 }

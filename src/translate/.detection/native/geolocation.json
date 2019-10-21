@@ -16,5 +16,6 @@
   ],
   "cordovaPlugin": {
     "name": "cordova-plugin-geolocation"
-  }
+  },
+  "premierSlug": "geolocation"
 }

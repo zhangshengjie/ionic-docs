@@ -14,5 +14,6 @@
   "repo": "https://github.com/katzer/cordova-plugin-email-composer",
   "cordovaPlugin": {
     "name": "cordova-plugin-email-composer"
-  }
+  },
+  "premierSlug": "email-composer"
 }

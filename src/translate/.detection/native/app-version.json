@@ -11,5 +11,6 @@
   "repo": "https://github.com/whiteoctober/cordova-plugin-app-version",
   "cordovaPlugin": {
     "name": "cordova-plugin-app-version"
-  }
+  },
+  "premierSlug": "app-version"
 }

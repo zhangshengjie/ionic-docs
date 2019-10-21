@@ -11,5 +11,6 @@
   "repo": "https://github.com/ihadeed/cordova-clipboard",
   "cordovaPlugin": {
     "name": "cordova-clipboard"
-  }
+  },
+  "premierSlug": "clipboard"
 }

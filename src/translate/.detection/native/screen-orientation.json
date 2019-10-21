@@ -11,5 +11,6 @@
   "repo": "https://github.com/apache/cordova-plugin-screen-orientation",
   "cordovaPlugin": {
     "name": "cordova-plugin-screen-orientation"
-  }
+  },
+  "premierSlug": "screen-orientation"
 }

@@ -9,5 +9,6 @@
   "repo": "https://github.com/VVelda/device-feedback",
   "cordovaPlugin": {
     "name": "cordova-plugin-velda-devicefeedback"
-  }
+  },
+  "premierSlug": "vibration"
 }

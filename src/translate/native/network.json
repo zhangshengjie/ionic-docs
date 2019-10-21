@@ -13,5 +13,6 @@
   "repo": "https://github.com/apache/cordova-plugin-network-information",
   "cordovaPlugin": {
     "name": "cordova-plugin-network-information"
-  }
+  },
+  "premierSlug": "network-information"
 }

@@ -17,5 +17,6 @@
   "repo": "https://github.com/apache/cordova-plugin-contacts",
   "cordovaPlugin": {
     "name": "cordova-plugin-contacts"
-  }
+  },
+  "premierSlug": "contacts"
 }
