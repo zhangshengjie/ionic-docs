@@ -115,18 +115,9 @@ const renderInstallation = (cordova: string, npm: string) => {
             <command-prompt>{`npm install ${npm}`}</command-prompt>
           </command-line>
         </docs-tab>
-<<<<<<< HEAD
         <docs-tab tab="エンタープライズ">
-          <blockquote>Ionic EEでは、Ionic Teamが完全にサポートしメンテナンスしているプラグインを利用できます。 <a class="btn" href="/docs/native#enterprise-edition">詳しくみる</a> か <a class="btn" href="https://ionicframework.com/sales?product_of_interest=Ionic%20Enterprise%20Engine">連絡ください。</a></blockquote>
-          <command-line>
-            <command-prompt>{`ionic enterprise register --key=YOURPRODUCTKEY`}</command-prompt>
-            <command-prompt>{`npm install @ionic-enterprise/${npm.split('/')[1]}`}</command-prompt>
-          </command-line>
-=======
-        <docs-tab tab="Enterprise">
-          <blockquote>Ionic Native Enterprise comes with fully supported and maintained plugins from the Ionic Team. &nbsp;
-            <a class="btn" href="/docs/enterprise">Learn More</a> or if you're interested in an enterprise version of this plugin <a class="btn" href="https://ionicframework.com/sales?product_of_interest=Ionic%20Enterprise%20Engine">Contact Us</a></blockquote>
->>>>>>> 15781cceeee7cdb011b8da9d848984cedb5cc1f5
+          <blockquote>Ionic Native Enterprise はIonic Teamが完全にサポートしメンテナンスしているプラグインを利用できます。 &nbsp;
+            <a class="btn" href="/docs/enterprise">詳しくみる</a> か、エンタープライズプラグインに興味があれば <a class="btn" href="https://ionicframework.com/sales?product_of_interest=Ionic%20Enterprise%20Engine">連絡ください</a></blockquote>
         </docs-tab>
       </docs-tabs>
     </section>
