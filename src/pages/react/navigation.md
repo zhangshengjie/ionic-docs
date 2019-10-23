@@ -101,7 +101,7 @@ const DashboardPage: React.FC<RouteComponentProps> = ({match}) => {
 
 ## Navigation
 
-Ionic Reactアプリでさまざまなビューにルーティングする場合、いくつかのオプションを使用できます。 ここで、 `UsersListPageはIonItem` は `IonItem` の `href` prop を使用して、タップ/クリックされたときに移動するルートを指定します:
+Ionic Reactアプリでさまざまなビューにルーティングする場合、いくつかのオプションを使用できます。 ここで、 `UsersListPageはIonItem` は `IonItem` の `routerLink` prop を使用して、タップ/クリックされたときに移動するルートを指定します:
 
 **UsersListPage.tsx**
 
@@ -116,10 +116,10 @@ const UsersListPage: React.FC = () => {
       </IonHeader>
       <IonContent>
         <IonList>
-          <IonItem href="/dashboard/users/1">
+          <IonItem routerLink="/dashboard/users/1">
             <IonLabel>User 1</IonLabel>
           </IonItem>
-          <IonItem href="/dashboard/users/2">
+          <IonItem routerLink="/dashboard/users/2">
             <IonLabel>User 2</IonLabel>
           </IonItem>
         </IonList>
@@ -129,7 +129,11 @@ const UsersListPage: React.FC = () => {
 };
 ```
 
-`IonItem` の外部では、React Router [`Link`](https://reacttraining.com/react-router/web/api/Link) コンポーネントを使用してビュー間を移動することもできます:
+Other components that have the `routerLink` prop are `IonButton`, `IonCard`, `IonRouterLink`, `IonFabButton`, and `IonItemOption`.
+
+Each of these components also have a `routerDirection` prop to explicitly set the type of page transition to use ("back", "forward", or "none").
+
+Outside of these components that have the `routerLink` prop, you can also use React Routers [`Link`](https://reacttraining.com/react-router/web/api/Link) component to navigate between views:
 
 ```html
 <Link to="/dashboard/users/1">User 1</Link>
@@ -214,4 +218,3 @@ React Routerを使用したReactでのルーティングの詳細については
 ## From the Community
 
 [Ionic 4 and React: Navigation](https://alligator.io/ionic/ionic-4-react-navigation) - Paul Halliday
-
