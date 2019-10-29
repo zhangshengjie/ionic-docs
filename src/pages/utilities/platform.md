@@ -7,6 +7,7 @@ contributors:
   - liamdebeasi
 ---
 
+
 # Platform
 
 プラットフォームサービスは、現在のデバイスに関する情報を取得するために使用できます。`platforms` メソッドを利用することでデバイスに関連付けられているすべてのプラットフォームを取得できます。例えば、アプリがタブレットから表示されているかどうか（モバイルデバイスまたはブラウザ上にある場合）、および正確なプラットフォーム（iOS、Androidなど）などです。右から左への言語の向きなどを使用すれば、デバイスの向きもわかります。この情報を使用して、あらゆるデバイスに合わせてアプリを完全にカスタマイズできます。
@@ -98,3 +99,41 @@ export class MyPage {
 | Name       | Type   | Description                           |
 |------------|--------|---------------------------------------|
 | expression | string | The string to check in the user agent |
+
+## Events
+
+### `pause`
+
+The `pause` event emits when the native platform puts the application into the background, typically when the user switches to a different application. This event emits when a Cordova/Capacitor app is put into the background but doesn't fire in a standard web browser.
+
+#### Usage
+
+```typescript
+this.platform.pause.subscribe(async () => {
+  alert('Pause event detected');
+});
+```
+
+### `resize`
+
+The `resize` event emits when the browser window has changed dimensions. This could be from a browser window being physically resized, or from a device changing orientation.
+
+#### Usage
+
+```typescript
+this.platform.resize.subscribe(async () => {
+  alert('Resize event detected');
+});
+```
+
+### `resume`
+
+The `resume` event fires when the native platform pulls the application out from the background. This event emits when a Cordova/Capacitor app comes out from the background but doesn't fire in a standard web browser.
+
+#### Usage
+
+```typescript
+this.platform.resume.subscribe(async () => {
+  alert('Resume event detected');
+});
+```

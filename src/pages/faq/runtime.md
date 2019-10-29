@@ -7,7 +7,7 @@ contributors:
   - brandyscarney
 ---
 
-# ランタイムエラー
+# ランタイムの問題
 
 ## 真っ白なアプリケーション
 
@@ -95,6 +95,43 @@ class MyPage { }
 ```html
  <div tappable (click)="doClick()">I am clickable!</div>
 ```
+
+## Angular Change Detection
+
+> Why does Angular change detection run very frequently when my components are initializing?
+
+Angular uses a library called [zone.js](https://github.com/angular/angular/tree/master/packages/zone.js/)
+which helps it determine when to run change detection.
+
+As of zone.js `0.8.27`, certain APIs for Web Components also cause change
+detection to run. This can have the undesirable side effect of your app
+slowing down when a large number of components are initializing.
+
+To prevent this from happening, the zone.js flag that manages this portion of
+change detection can be disabled. In the `src` directory of your application,
+create a file called `zone-flags.ts`. Place the following code into the file:
+
+```typescript
+(window as any).__Zone_disable_customElements = true;
+```
+
+The `zone-flags.ts` file then needs to be imported into your application's
+`polyfills.ts` file. Be sure to import it _before_ `zone.js` is imported:
+
+```typescript
+...
+
+import './zone-flags.ts';
+import 'zone.js/dist/zone'; // Included with Angular CLI
+
+...
+```
+
+This change will only affect applications that depend on zone.js `0.8.27` or
+newer. Older versions will not be affected by this change.
+
+> Note: This flag is automatically included when creating an Ionic app via
+the Ionic CLI.
 
 ## Cordova プラグインがブラウザ上で動作しない
 
