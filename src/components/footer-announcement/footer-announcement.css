@@ -2,7 +2,7 @@ docs-footer-announcement {
   display: block;
   width: 100%;
   position: fixed;
-  left: 0;
+  left: 239px;
   bottom: 0;
   z-index: 100;
   text-align: center;
@@ -27,6 +27,28 @@ docs-footer-announcement.hidden {
   }
 }
 
+.footer-announcement {
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+}
+
+.footer-announcement .footer-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: #ffffff;
+}
+
+.footer-announcement p {
+  text-align: left;
+}
+
+.footer-announcement img {
+  height: 100px;
+  margin-right: 16px;
+}
+
 .footer-announcement strong {
   color: #FFFFFF;
 }
@@ -35,7 +57,8 @@ docs-footer-announcement.hidden {
   background-color: #73a5ff;
   color: #fff;
   border-radius: 16px;
-  margin-left: 12px;
+  /*margin-left: 12px;*/
+  position: relative; top: 12px;
   padding: 5px 10px;
   font-weight: 600;
   font-size: 9px;
