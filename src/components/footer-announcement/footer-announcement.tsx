@@ -32,7 +32,7 @@ export class DocsFooterAnnouncement {
         <p>
           <strong>FRONTEND CONFERENCE 2019:</strong><br />
           大阪で開催されるカンファレンスにコミュニティ出展します。2019年11月02日(土)。<br />
-          <a href="https://2019.kfug.jp/" target="_blank">参加する</a>
+          <a href="https://2019.kfug.jp/group/ionic/" target="_blank">参加する</a>
         </p>
       </footer>
     );
