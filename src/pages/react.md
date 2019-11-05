@@ -9,13 +9,13 @@ meta:
 
 <div class='flex main-flex'>
   <div class="pull-left">
-  <h3>One Codebase <br/> Any Platform <br/> <strong>Just React</strong></h3>
+  <h3>ひとつのコードベースで <br/> あらゆるプラットフォームが <br/> <strong>Reactする</strong></h3>
 
- - ✓ 100+ mobile optimized React UI components
- - ✓ Standard React tooling with react-dom
+ - ✓ 100以上のモバイルUIに特化したReactコンポーネント
+ - ✓ React DOMを利用したReact標準ツール
  - ✓ iOS / Android / Electron / PWA
 
-  [Get Started](#installation)
+  [はじめ方](#installation)
 
   </div>
 
@@ -25,23 +25,23 @@ meta:
 </div>
 
 
-### Build awesome apps across mobile, desktop, and web, with the React you know and love.
+### 著名で多くのユーザに愛されているReactを使って、モバイル、デスクトップ、ウェブのすべてを通してすばらしいアプリを構築
 
 
-Ionic React is native React version of Ionic Framework, the free, open source SDK powering millions of mission-critical apps all over the world.
+Ionic Reactは、Ionic FrameworkのネイティブReactバージョンです。IonicFrameworkは、世界中の数百万ものミッションクリティカルなアプリケーションを強化する無料のオープンソースSDKです。
 
-It's everything you need to ship award-winning apps for any platform, with React.
+Reactを使用して、あらゆるプラットフォーム向けの `award-winning` アプリをリリースするために必要なものはすべて揃っています。
 
 
 <div class="flex" >
 
 <div class="pull-left">
 
-## Fast, beautiful apps
+## 高速で美しいアプリ
 
-Choose from over 100 beautiful, mobile-ready UI components, animations, and gestures, lightweight and customized to fit your brand.
+100を超える美しいモバイル対応のUIコンポーネント、アニメーション、ジェスチャーの中から選択し、軽量で、ブランディングに合わせてカスタマイズします。
 
-[Explore UI components](/docs/components)
+[UIコンポーネントを調べる](/docs/components)
 
 </div>
 
@@ -57,9 +57,9 @@ Choose from over 100 beautiful, mobile-ready UI components, animations, and gest
 
 <div class="pull-left">
 
-## Familiar tooling
+## 使い慣れたツール
 
-Ionic React projects are just like React projects, leveraging [react-dom](https://reactjs.org/docs/react-dom.html) and with setup normally found in a [Create React App (CRA)](https://github.com/facebook/create-react-app) app. For [routing and navigation](/docs/react/navigation), React Router is used under the hood.
+Ionic Reactプロジェクトは、Reactプロジェクトと同じように、 [react-dom](https://reactjs.org/docs/react-dom.html) を活用し、通常は [Create React App (CRA)](https://github.com/facebook/create-react-app) を利用してセットアップします。 [ルーティングとナビゲーション](/docs/react/navigation) は、React Router下に構築されます。
 
 </div>
 
@@ -73,9 +73,9 @@ Ionic React projects are just like React projects, leveraging [react-dom](https:
 
 <div class="pull-left">
 
-## More than mobile
+## モバイル以上のものを
 
-Deploy your Ionic React projects to native iOS, Android, Electron, and the web as a Progressive Web App, using [Capacitor](https://capacitor.ionicframework.com), a modern native runtime. All with one shared codebase.
+最新のネイティブライブラリである [Capacitor](https://capacitor.ionicframework.com) を使用して、Ionic ReactプロジェクトをネイティブiOS、Android、Electron、およびWebでProgressive Web Appとしてデプロイします。すべて1つのコードベースを共有します。
 
 </div>
 
@@ -89,9 +89,9 @@ Deploy your Ionic React projects to native iOS, Android, Electron, and the web a
 
   <div class="pull-left">
 
-## Just React
+## Reactそのままに
 
-At the end of the day, it's just React. Ionic React uses open web standards and built-in browser capabilities, so it's compatible with any of the millions of web libraries out there.
+結局のところ、これはただのReactです。Ionic ReactはオープンなWeb標準と組み込みのブラウザ機能を使用しているため、何百万ものWebライブラリと互換性があります。
 
   </div>
 
@@ -101,7 +101,7 @@ At the end of the day, it's just React. Ionic React uses open web standards and 
 
 </div>
 
-## Installation
+## インストール
 
 <command-line>
     <command-prompt>npm install -g ionic@latest</command-prompt>
@@ -111,19 +111,19 @@ At the end of the day, it's just React. Ionic React uses open web standards and 
 </command-line>
 
 
-## Resources
+## リソース
 
 <docs-cards>
-  <docs-card header="Getting Started" href="/docs/react/your-first-app" icon="/docs/assets/icons/feature-component-actionsheet-icon.png">
-    <p>Learn the fundamentals you need to know to start building amazing apps with Ionic Framework.</p>
+  <docs-card header="はじめ方" href="/docs/react/your-first-app" icon="/docs/assets/icons/feature-component-actionsheet-icon.png">
+    <p>Ionic Frameworkですばらしいアプリをつくるために知るべき基礎を学びます。</p>
   </docs-card>
 
-  <docs-card header="Navigation" href="/docs/react/navigation" icon="/docs/assets/icons/feature-component-navigation-icon.png">
-    <p>Learn the basics of navigation inside your app with Ionic and React Router</p>
+  <docs-card header="ナビゲーション" href="/docs/react/navigation" icon="/docs/assets/icons/feature-component-navigation-icon.png">
+    <p>IonicとReact Routerを利用したアプリ内のナビゲーションの基礎を学びます。</p>
   </docs-card>
 
-  <docs-card header="Lifecycle" href="/docs/react/lifecycle" icon="/docs/assets/icons/feature-guide-components-icon.png">
-    <p>Learn about using Ionic lifecycle events in class components and with hooks</p>
+  <docs-card header="ライフサイクル" href="/docs/react/lifecycle" icon="/docs/assets/icons/feature-guide-components-icon.png">
+    <p>クラスコンポーネントのフックを利用したIonicのライフサイクルの使い方を学びます。</p>
   </docs-card>
 
 
