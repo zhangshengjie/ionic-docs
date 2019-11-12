@@ -28,11 +28,10 @@ export class DocsFooterAnnouncement {
   render() {
     return (
       <footer class="footer-announcement">
-        <img src="https://2019.kfug.jp/_nuxt/img/c3436b7.svg" alt="" />
         <p>
-          <strong>FRONTEND CONFERENCE 2019:</strong><br />
-          大阪で開催されるカンファレンスにコミュニティ出展します。2019年11月02日(土)。<br />
-          <a href="https://2019.kfug.jp/group/ionic/" target="_blank">参加する</a>
+          <strong>Ionic Meetup</strong>Ionicの知見をリアルで共有しよう。初参加・初登壇歓迎。
+          <a href="https://ionic-jp.connpass.com/event/155092/" target="_blank">12/7 兵庫</a>
+          <a href="https://ionic-jp.connpass.com/event/155536/" target="_blank">12/14 東京</a>
         </p>
       </footer>
     );
