@@ -74,11 +74,11 @@ v4がWeb標準に移行したことで、Ionicコアはフレームワーク固�
 
 ## Ionic Appflow
 
-To help manage Ionic apps throughout their lifecycle, we also offer a commercial app platform for production apps called <a href="https://ionicframework.com/appflow" target="_blank">Ionic Appflow</a>, which is <strong>separate from the open source Framework.</strong>
+Ionicアプリの開発全体を支援するために、 <a href="https://ionicframework.com/appflow" target="_blank">Ionic Appflow</a> という本番アプリ用の商用アプリプラットフォームを提供しています。これは <strong>オープンソースのフレームワークから分離しています。</strong>
 
-Ionic Appflow helps developers and teams compile native app builds and deploy live code updates to Ionic apps from a centralized dashboard. Optional paid upgrades are available for more advanced capabilities like workflow automation, single sign-on (SSO) and access to connected services and integrations.
+Ionic Appflowは、開発者とチームがネイティブアプリのビルドをコンパイルし、ダッシュボードからIonicアプリにコードプッシュするのに役立ちます。オプションの有料アップグレードは、ワークフローの自動化、シングルサインオン（SSO）、接続されたサービスおよび統合へのアクセスなどのより高度な機能に利用できます。
 
-Appflow requires an <a href="https://dashboard.ionicframework.com/signup" target="_blank">Ionic Account</a> and comes with a free “Starter” plan for those interested in playing around with some of its features.
+Appflowには <a href="https://dashboard.ionicframework.com/signup" target="_blank">Ionic Account</a> が必要で、一部の機能を試したい人のための無料の「スターター」プランが付属しています。
 
 ## 開発体制
 
