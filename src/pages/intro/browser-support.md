@@ -12,7 +12,7 @@ Ionicの本来の目標は、HTML、CSS、JavaScriptといったWeb技術を使�
 
 ## モバイル
 
-[プラットフォームの継続性](/docs/intro/concepts#platform-continuity)を追求するために, Ionicは以下のモバイルプラットフォームを完全にサポート、テストしています。:
+[プラットフォームの互換性](/docs/intro/concepts#platform-continuity)を追求するために, Ionicは以下のモバイルプラットフォームを完全にサポート、テストしています。:
 
 | Platform     | Supported Versions |
 | ------------ | ------------------ |
