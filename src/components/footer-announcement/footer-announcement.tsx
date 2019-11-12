@@ -29,7 +29,7 @@ export class DocsFooterAnnouncement {
     return (
       <footer class="footer-announcement">
         <p>
-          <strong>Ionic Meetup</strong>Ionicの知見をリアルで共有しよう。初参加・初登壇歓迎。
+          <strong>Ionic Meetup</strong>Ionicについての知識を共有するためのイベント。初参加・初登壇歓迎。
           <a href="https://ionic-jp.connpass.com/event/155092/" target="_blank">12/7 兵庫</a>
           <a href="https://ionic-jp.connpass.com/event/155536/" target="_blank">12/14 東京</a>
         </p>
