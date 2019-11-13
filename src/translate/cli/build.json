@@ -21,7 +21,9 @@
       "name": "prod",
       "type": "boolean",
       "summary": "Flag to use the `production` configuration",
-      "groups": [],
+      "groups": [
+        "cordova"
+      ],
       "aliases": [],
       "spec": {
         "value": "true/false"
