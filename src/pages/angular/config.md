@@ -1,8 +1,8 @@
 ---
-previousText: ''
-previousUrl: ''
+previousText: 'Navigation/Routing'
+previousUrl: '/docs/angular/navigation'
 nextText: 'Platform'
-nextUrl: '/docs/utilities/platform'
+nextUrl: '/docs/angular/platform'
 contributors:
   - liamdebeasi
   - mhartington
@@ -10,13 +10,13 @@ contributors:
 
 # Config
 
-Config service provides は、アプリケーション全体でコンポーネントのプロパティをグローバルに変更する方法を提供します。アプリのmode、タブボタンのレイアウト、アニメーションなどを設定できます。
+Ionic Config provides は、アプリケーション全体でコンポーネントのプロパティをグローバルに変更する方法を提供します。アプリのmode、タブボタンのレイアウト、アニメーションなどを設定できます。
 
 ## Usage
 
 ### Global
 
-#### Basic example
+To override the initial Ionic config for the app, provide a config in `IonicModule.forRoot` in the `app.module.ts` file.
 
 ```typescript
 import { IonicModule } from '@ionic/angular';
@@ -37,7 +37,10 @@ import { IonicModule } from '@ionic/angular';
 
 上記の例では、アプリ全体でマテリアルデザインのripple effectを無効にし、同時にmodeをマテリアルデザインに統一しています。
 
-#### Customizing Animations
+
+### By Component
+
+Ionic Config is not reactive, so it is recommended to use a component's properties when you want to override its default behavior rather than set its config globally.
 
 ```typescript
 import { IonicModule } from '@ionic/angular';
@@ -47,43 +50,7 @@ import { IonicModule } from '@ionic/angular';
   imports: [
     BrowserModule,
     IonicModule.forRoot({
-      toastEnter: (AnimationC: Animation, baseEl: ShadowRoot, position: string): Promise<Animation> => {
-        const baseAnimation = new AnimationC();
-
-        const wrapperAnimation = new AnimationC();
-
-        const hostEl = (baseEl.host || baseEl) as HTMLElement;
-        const wrapperEl = baseEl.querySelector('.toast-wrapper') as HTMLElement;
-
-        wrapperAnimation.addElement(wrapperEl);
-
-        const bottom = `calc(8px + var(--ion-safe-area-bottom, 0px))`;
-        const top = `calc(8px + var(--ion-safe-area-top, 0px))`;
-
-        switch (position) {
-          case 'top':
-            wrapperEl.style.top = top;
-            wrapperEl.style.opacity = 1;
-            wrapperAnimation.fromTo('transform', `translateY(-${hostEl.clientHeight}px)`, 'translateY(10px)')
-            break;
-          case 'middle':
-            const topPosition = Math.floor(
-              hostEl.clientHeight / 2 - wrapperEl.clientHeight / 2
-            );
-            wrapperEl.style.top = `${topPosition}px`;
-            wrapperAnimation.fromTo('opacity', 0.01, 1);
-            break;
-          default:
-            wrapperEl.style.bottom = bottom;
-            wrapperAnimation.fromTo('opacity', 0.01, 1);
-            break;
-        }
-        return Promise.resolve(baseAnimation
-          .addElement(hostEl)
-          .easing('cubic-bezier(.36,.66,.04,1)')
-          .duration(400)
-          .add(wrapperAnimation));
-      },
+      backButtonText: 'Go Back'
     }),
     AppRoutingModule
   ],
@@ -91,25 +58,20 @@ import { IonicModule } from '@ionic/angular';
 })
 ```
 
+<<<<<<< HEAD:src/pages/utilities/config.md
 上記の例では、 `ion-toast` コンポーネントの"enter"アニメーションをカスタマイズしています。この場合、`ion-toast` コンポーネントはフェードインの代わりに上からスライドインして表示されます。
 
 
+=======
+This will set the default text for `ion-back-button` to `Go Back`. However, if you were to change the value of the `backButtonText` config to `Do Not Go Back`, the `ion-back-button` default text would still default to `Go Back` as the component has already been initialized and rendered. Instead, it is recommended to use the `text` property on `ion-back-button`.
+>>>>>>> cbc9eea358aa584366af2b4b74e16b4bbfc3d2ef:src/pages/angular/config.md
 
-### By Component
-
-#### Basic Example
-
-```typescript
-import { Component } from '@angular/core';
-import { Config } from '@ionic/angular';
-@Component({...})
-export class HomePage {
-  constructor(private config: Config) {
-    const text = this.config.get('backButtonText');
-    this.config.set('backButtonIcon', 'home');
-  }
-}
+```html
+<ion-back-button [text]="getBackButtonText()"></ion-back-button>
 ```
+
+In this example we have used our `ion-back-button` in such a way that the text can be dynamically updated if there were to be a change that warranted it, such as a language or locale change. The `getBackButtonText` method would be responsible for returning the correct text.
+
 
 ## Config Options
 
