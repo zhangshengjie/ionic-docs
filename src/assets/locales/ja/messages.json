@@ -14,6 +14,7 @@
   "menu-intro-what-is": "Ionic Frameworkとは",
   "menu-intro-concepts": "コアコンセプト",
   "menu-intro-your-first-app": "初めてのアプリ構築",
+  "menu-intro-what-are-progressive-web-apps": "PWAとは",
   "menu-intro-browser-support": "ブラウザサポート",
   "menu-intro-versioning": "バージョニング",
   "menu-intro-release-notes": "リリースノート",
@@ -63,6 +64,7 @@
   "menu-angular-config": "Config",
   "menu-angular-platform": "Platform",
   "menu-angular-performance": "Performance",
+  "menu-angular-pwa": "Progressive Web Apps",
 
   "menu-react": "React",
   "menu-react-overview": "概要",
@@ -71,6 +73,7 @@
   "menu-react-navigation": "ナビゲーション",
   "menu-react-config": "Config",
   "menu-react-platform": "Platform Utils",
+  "menu-react-pwa": "Progressive Web Apps",
 
   "menu-vue": "Vue (beta)",
   "menu-vue-overview": "概要",
