@@ -232,6 +232,8 @@ import { add } from ‘ionicons/icons’;
 次に、これにClickハンドラーを接続しましょう。 やりたいことは、ボタンをクリックすると、新しいページに移動します（このあとすぐにページを作成します）。 これを行うには、React RouterのナビゲーションAPIにアクセスする必要があります。 すばらしいことに、これは Router/Route コンテキストでレンダリングされるため、Homeコンポーネントに渡されたPropsを介してReact Routers APIにアクセスできます。
 
 ```typescript
+import { add } from 'ionicons/icons';
+...
 const Home: React.FC<RouteComponentProps> = (props) => {
   return (
     <IonPage>
