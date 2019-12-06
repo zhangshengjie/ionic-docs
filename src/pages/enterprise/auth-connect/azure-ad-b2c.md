@@ -2,7 +2,7 @@
 
 ## Demo App
 
-For reference, a [complete demo app](https://github.com/ionic-team/cs-demo-iv/tree/identity-vault-with-auth-connect) is available. To view the Azure AD configuration details, see `authentication.service.ts` [here](https://github.com/ionic-team/cs-demo-iv/blob/identity-vault-with-auth-connect/src/app/services/authentication/authentication.service.ts).
+For reference, a [complete demo app](https://github.com/ionic-team/cs-demo-ac-iv) is available. To view the Azure AD configuration details, see `authentication.service.ts` [here](https://github.com/ionic-team/cs-demo-ac-iv/blob/master/src/app/services/authentication/authentication.service.ts).
 
 ## Configuration Details
 
@@ -44,7 +44,7 @@ Azure AD B2C is now ready to use with Auth Connect.
 
 Run the following command to install the Auth Connect plugin. For the `AUTH_URL_SCHEME` variable, use the globally unique App Id (ex: `com.company.app`) you decided on when configuring the Azure AD app above.
 
-<native-ent-install plugin-id="auth-connect" variables="--variable AUTH_URL_SCHEME=com.company.app"></native-ent-install>
+<native-ent-install plugin-id="auth" variables="--variable AUTH_URL_SCHEME=com.company.app"></native-ent-install>
 
 ### Configure Auth Connect
 
