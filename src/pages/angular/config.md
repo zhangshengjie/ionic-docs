@@ -58,13 +58,7 @@ import { IonicModule } from '@ionic/angular';
 })
 ```
 
-<<<<<<< HEAD:src/pages/utilities/config.md
-上記の例では、 `ion-toast` コンポーネントの"enter"アニメーションをカスタマイズしています。この場合、`ion-toast` コンポーネントはフェードインの代わりに上からスライドインして表示されます。
-
-
-=======
 This will set the default text for `ion-back-button` to `Go Back`. However, if you were to change the value of the `backButtonText` config to `Do Not Go Back`, the `ion-back-button` default text would still default to `Go Back` as the component has already been initialized and rendered. Instead, it is recommended to use the `text` property on `ion-back-button`.
->>>>>>> cbc9eea358aa584366af2b4b74e16b4bbfc3d2ef:src/pages/angular/config.md
 
 ```html
 <ion-back-button [text]="getBackButtonText()"></ion-back-button>
