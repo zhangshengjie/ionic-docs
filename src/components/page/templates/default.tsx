@@ -11,7 +11,7 @@ export default props => {
         <docs-table-of-contents links={page.headings} basepath={page.path} />
       ) : null}
       <section class="markdown-content">{toHypertext(h, page.body)}</section>
-      {/*<docs-page-footer page={page} />*/}
+      <docs-page-footer page={page} />
     </article>
   );
 };
