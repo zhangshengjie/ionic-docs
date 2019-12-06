@@ -1,6 +1,6 @@
 import { Component, Prop, h } from '@stencil/core';
 import { Page } from '../../definitions';
-import { ForwardArrow } from '../../icons';
+// import { ForwardArrow } from '../../icons';
 
 @Component({
   tag: 'docs-page-footer',
@@ -22,19 +22,19 @@ export class DocsPageFooter {
       return null;
     }
 
-    const {
-      path,
-      lastUpdated
-    } = page.github;
+    // const {
+    //   path,
+    //   lastUpdated
+    // } = page.github;
 
     // merge and dedupe contributor data
     // const contributors = Array.from(
     //   new Set([...page.github.contributors || [], ...page.contributors || []])
     // );
 
-    const editHref = `https://github.com/ionic-jp/ionic-docs/edit/master/${path}`;
-    const updatedHref = `https://github.com/ionic-jp/ionic-docs/commits/master/${path}`;
-    const updatedText = lastUpdated ? new Date(lastUpdated).toISOString().slice(0, 10) : null;
+    // const editHref = `https://github.com/ionic-jp/ionic-docs/edit/master/${path}`;
+    // const updatedHref = `https://github.com/ionic-jp/ionic-docs/commits/master/${path}`;
+    // const updatedText = lastUpdated ? new Date(lastUpdated).toISOString().slice(0, 10) : null;
     // const contributorHref = (contributor) => `${updatedHref}?author=${contributor}`;
 
     const paggination = (
@@ -45,11 +45,11 @@ export class DocsPageFooter {
 
     return [
       paggination,
-      <div class="page-footer__row">
-        {/*{contributors.length ? <contributor-list contributors={contributors} link={contributorHref}/> : null}*/}
-        <docs-button round href={editHref}>翻訳する <ForwardArrow/></docs-button>
-        {updatedText ? <a class="last-updated" href={updatedHref}>Updated {updatedText}</a> : ''}
-      </div>
+      // <div class="page-footer__row">
+      //  {/*{contributors.length ? <contributor-list contributors={contributors} link={contributorHref}/> : null}*/}
+      //  <docs-button round href={editHref}>翻訳する <ForwardArrow/></docs-button>
+      //  {updatedText ? <a class="last-updated" href={updatedHref}>Updated {updatedText}</a> : ''}
+      // </div>
     ];
   }
 }
