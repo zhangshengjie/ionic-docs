@@ -1,7 +1,7 @@
 {
-  "tag": "ion-fab-list",
   "filePath": "src/components/fab-list/fab-list.tsx",
   "encapsulation": "shadow",
+  "tag": "ion-fab-list",
   "readme": "# ion-fab-list\n\nThe `ion-fab-list` element is a container for multiple fab buttons. This collection of fab buttons contains actions related to the main fab button and is flung out on click. To specify what side the buttons should appear on, set the `side` property to 'start', 'end', 'top', 'bottom'\n",
   "docs": "The `ion-fab-list` element is a container for multiple fab buttons. This collection of fab buttons contains actions related to the main fab button and is flung out on click. To specify what side the buttons should appear on, set the `side` property to 'start', 'end', 'top', 'bottom'",
   "docsTags": [],
@@ -21,6 +21,11 @@
       "docs": "If `true`, the fab list will show all fab buttons in the list.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -33,6 +38,24 @@
       "docs": "The side the fab list will show on relative to the main fab button.",
       "docsTags": [],
       "default": "'bottom'",
+      "values": [
+        {
+          "value": "bottom",
+          "type": "string"
+        },
+        {
+          "value": "end",
+          "type": "string"
+        },
+        {
+          "value": "start",
+          "type": "string"
+        },
+        {
+          "value": "top",
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     }
@@ -40,5 +63,8 @@
   "methods": [],
   "events": [],
   "styles": [],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [],
+  "dependencyGraph": {}
 }

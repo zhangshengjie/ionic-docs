@@ -1,7 +1,7 @@
 {
-  "tag": "ion-ripple-effect",
   "filePath": "src/components/ripple-effect/ripple-effect.tsx",
   "encapsulation": "shadow",
+  "tag": "ion-ripple-effect",
   "readme": "# ion-ripple-effect\n\nThe ripple effect component adds the [Material Design ink ripple interaction effect](https://material.io/develop/web/components/ripples/). This component can only be used inside of an `<ion-app>` and can be added to any component.\n\nIt's important to note that the parent should have [relative positioning](https://developer.mozilla.org/en-US/docs/Web/CSS/position) because the ripple effect is absolutely positioned and will cover the closest parent with relative positioning. The parent element should also be given the `ion-activatable` class, which tells the ripple effect that the element is clickable. It's recommended to add `overflow: hidden` to the parent element, as well, to avoid the ripple overflowing its container.\n\nThe default type, `\"bounded\"`, will expand the ripple effect from the click position outwards. To add a ripple effect that always starts in the center of the element and expands in a circle, add an `\"unbounded\"` type.\n",
   "docs": "The ripple effect component adds the [Material Design ink ripple interaction effect](https://material.io/develop/web/components/ripples/). This component can only be used inside of an `<ion-app>` and can be added to any component.\n\nIt's important to note that the parent should have [relative positioning](https://developer.mozilla.org/en-US/docs/Web/CSS/position) because the ripple effect is absolutely positioned and will cover the closest parent with relative positioning. The parent element should also be given the `ion-activatable` class, which tells the ripple effect that the element is clickable. It's recommended to add `overflow: hidden` to the parent element, as well, to avoid the ripple overflowing its container.\n\nThe default type, `\"bounded\"`, will expand the ripple effect from the click position outwards. To add a ripple effect that always starts in the center of the element and expands in a circle, add an `\"unbounded\"` type.",
   "docsTags": [],
@@ -21,6 +21,16 @@
       "docs": "Sets the type of ripple-effect:\n\n- `bounded`: the ripple effect expands from the user's click position\n- `unbounded`: the ripple effect expands from the center of the button and overflows the container.\n\nNOTE: Surfaces for bounded ripples should have the overflow property set to hidden,\nwhile surfaces for unbounded ripples should have it set to visible.",
       "docsTags": [],
       "default": "'bounded'",
+      "values": [
+        {
+          "value": "bounded",
+          "type": "string"
+        },
+        {
+          "value": "unbounded",
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     }
@@ -49,5 +59,62 @@
   ],
   "events": [],
   "styles": [],
-  "slots": []
+  "slots": [],
+  "dependents": [
+    "ion-action-sheet",
+    "ion-alert",
+    "ion-back-button",
+    "ion-button",
+    "ion-card",
+    "ion-chip",
+    "ion-fab-button",
+    "ion-item",
+    "ion-item-option",
+    "ion-menu-button",
+    "ion-segment-button",
+    "ion-tab-button",
+    "ion-toast"
+  ],
+  "dependencies": [],
+  "dependencyGraph": {
+    "ion-action-sheet": [
+      "ion-ripple-effect"
+    ],
+    "ion-alert": [
+      "ion-ripple-effect"
+    ],
+    "ion-back-button": [
+      "ion-ripple-effect"
+    ],
+    "ion-button": [
+      "ion-ripple-effect"
+    ],
+    "ion-card": [
+      "ion-ripple-effect"
+    ],
+    "ion-chip": [
+      "ion-ripple-effect"
+    ],
+    "ion-fab-button": [
+      "ion-ripple-effect"
+    ],
+    "ion-item": [
+      "ion-ripple-effect"
+    ],
+    "ion-item-option": [
+      "ion-ripple-effect"
+    ],
+    "ion-menu-button": [
+      "ion-ripple-effect"
+    ],
+    "ion-segment-button": [
+      "ion-ripple-effect"
+    ],
+    "ion-tab-button": [
+      "ion-ripple-effect"
+    ],
+    "ion-toast": [
+      "ion-ripple-effect"
+    ]
+  }
 }

@@ -1,7 +1,7 @@
 {
-  "tag": "ion-searchbar",
   "filePath": "src/components/searchbar/searchbar.tsx",
   "encapsulation": "scoped",
+  "tag": "ion-searchbar",
   "readme": "# ion-searchbar\n\nSearchbars represent a text field that can be used to search through a collection. They can be displayed inside of a toolbar or the main content.\n\nA Searchbar should be used instead of an input to search lists. A clear button is displayed upon entering input in the searchbar's text field. Clicking on the clear button will erase the text field and the input will remain focused. A cancel button can be enabled which will clear the input and lose the focus upon click.\n\n\n",
   "docs": "Searchbars represent a text field that can be used to search through a collection. They can be displayed inside of a toolbar or the main content.\n\nA Searchbar should be used instead of an input to search lists. A clear button is displayed upon entering input in the searchbar's text field. Clicking on the clear button will erase the text field and the input will remain focused. A cancel button can be enabled which will clear the input and lose the focus upon click.",
   "docsTags": [
@@ -26,6 +26,11 @@
       "docs": "If `true`, enable searchbar animation.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -38,6 +43,16 @@
       "docs": "Set the input's autocomplete property.",
       "docsTags": [],
       "default": "'off'",
+      "values": [
+        {
+          "value": "off",
+          "type": "string"
+        },
+        {
+          "value": "on",
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -50,6 +65,16 @@
       "docs": "Set the input's autocorrect property.",
       "docsTags": [],
       "default": "'off'",
+      "values": [
+        {
+          "value": "off",
+          "type": "string"
+        },
+        {
+          "value": "on",
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -62,6 +87,11 @@
       "docs": "Set the cancel button icon. Only applies to `md` mode.",
       "docsTags": [],
       "default": "'md-arrow-back'",
+      "values": [
+        {
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -74,6 +104,11 @@
       "docs": "Set the the cancel button text. Only applies to `ios` mode.",
       "docsTags": [],
       "default": "'Cancel'",
+      "values": [
+        {
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -85,6 +120,14 @@
       "reflectToAttr": false,
       "docs": "Set the clear icon. Defaults to `\"close-circle\"` for `ios` and `\"close\"` for `md`.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -96,6 +139,14 @@
       "reflectToAttr": false,
       "docs": "The color to use from your application's color palette.\nDefault options are: `\"primary\"`, `\"secondary\"`, `\"tertiary\"`, `\"success\"`, `\"warning\"`, `\"danger\"`, `\"light\"`, `\"medium\"`, and `\"dark\"`.\nFor more information on colors, see [theming](/docs/theming/basics).",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -108,6 +159,11 @@
       "docs": "Set the amount of time, in milliseconds, to wait to trigger the `ionChange` event after each keystroke.",
       "docsTags": [],
       "default": "250",
+      "values": [
+        {
+          "type": "number"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -120,6 +176,11 @@
       "docs": "If `true`, the user cannot interact with the input.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -132,6 +193,40 @@
       "docs": "A hint to the browser for which keyboard to display.\nPossible values: `\"none\"`, `\"text\"`, `\"tel\"`, `\"url\"`,\n`\"email\"`, `\"numeric\"`, `\"decimal\"`, and `\"search\"`.",
       "docsTags": [],
       "default": "'search'",
+      "values": [
+        {
+          "value": "decimal",
+          "type": "string"
+        },
+        {
+          "value": "email",
+          "type": "string"
+        },
+        {
+          "value": "none",
+          "type": "string"
+        },
+        {
+          "value": "numeric",
+          "type": "string"
+        },
+        {
+          "value": "search",
+          "type": "string"
+        },
+        {
+          "value": "tel",
+          "type": "string"
+        },
+        {
+          "value": "text",
+          "type": "string"
+        },
+        {
+          "value": "url",
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -143,6 +238,16 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "ios",
+          "type": "string"
+        },
+        {
+          "value": "md",
+          "type": "string"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -155,6 +260,11 @@
       "docs": "Set the input's placeholder.\n`placeholder` can accept either plaintext or HTML as a string.\nTo display characters normally reserved for HTML, they\nmust be escaped. For example `<Ionic>` would become\n`&lt;Ionic&gt;`\n\nFor more information: [Security Documentation](https://ionicframework.com/docs/faq/security)",
       "docsTags": [],
       "default": "'Search'",
+      "values": [
+        {
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -167,6 +277,11 @@
       "docs": "The icon to use as the search icon.",
       "docsTags": [],
       "default": "'search'",
+      "values": [
+        {
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -179,6 +294,14 @@
       "docs": "Sets the behavior for the cancel button. Defaults to `\"never\"`.\nSetting to `\"focus\"` shows the cancel button on focus.\nSetting to `\"never\"` hides the cancel button.\nSetting to `\"always\"` shows the cancel button regardless\nof focus state.",
       "docsTags": [],
       "default": "'never'",
+      "values": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -191,6 +314,11 @@
       "docs": "If `true`, enable spellcheck on the input.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -203,6 +331,36 @@
       "docs": "Set the type of the input.",
       "docsTags": [],
       "default": "'search'",
+      "values": [
+        {
+          "value": "email",
+          "type": "string"
+        },
+        {
+          "value": "number",
+          "type": "string"
+        },
+        {
+          "value": "password",
+          "type": "string"
+        },
+        {
+          "value": "search",
+          "type": "string"
+        },
+        {
+          "value": "tel",
+          "type": "string"
+        },
+        {
+          "value": "text",
+          "type": "string"
+        },
+        {
+          "value": "url",
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -215,6 +373,17 @@
       "docs": "the value of the searchbar.",
       "docsTags": [],
       "default": "''",
+      "values": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     }
@@ -346,5 +515,14 @@
       "docs": "Opacity of the searchbar placeholder"
     }
   ],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [
+    "ion-icon"
+  ],
+  "dependencyGraph": {
+    "ion-searchbar": [
+      "ion-icon"
+    ]
+  }
 }

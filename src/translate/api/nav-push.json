@@ -1,9 +1,8 @@
 {
-  "tag": "ion-nav-push",
   "filePath": "src/components/nav-push/nav-push.tsx",
   "encapsulation": "none",
+  "tag": "ion-nav-push",
   "readme": "# ion-nav-push\n\nNav Push is a component used to navigate to the specified component.\n\nIt is the component form of `NavController.push()`\n\n",
-  "deprecation": "Use `<ion-nav-link component=\"MyComponent\">` instead.",
   "docs": "Nav Push is a component used to navigate to the specified component.\n\nIt is the component form of `NavController.push()`",
   "docsTags": [
     {
@@ -21,6 +20,26 @@
       "reflectToAttr": false,
       "docs": "Component to navigate to",
       "docsTags": [],
+      "values": [
+        {
+          "type": "Function"
+        },
+        {
+          "type": "HTMLElement"
+        },
+        {
+          "type": "ViewController"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -31,6 +50,14 @@
       "reflectToAttr": false,
       "docs": "Data you want to pass to the component as props",
       "docsTags": [],
+      "values": [
+        {
+          "type": "undefined"
+        },
+        {
+          "type": "{ [key: string]: any; }"
+        }
+      ],
       "optional": true,
       "required": false
     }
@@ -38,5 +65,9 @@
   "methods": [],
   "events": [],
   "styles": [],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [],
+  "dependencyGraph": {},
+  "deprecation": "Use `<ion-nav-link component=\"MyComponent\">` instead."
 }

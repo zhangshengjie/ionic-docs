@@ -1,7 +1,7 @@
 {
-  "tag": "ion-card-content",
   "filePath": "src/components/card-content/card-content.tsx",
   "encapsulation": "none",
+  "tag": "ion-card-content",
   "readme": "# ion-card-content\n\n`ion-card-content` is child component of `ion-card` that adds some content padding.\nIt is recommended that any text content for a card should be placed in an `ion-card-content`.\n\n",
   "docs": "`ion-card-content` is child component of `ion-card` that adds some content padding.\nIt is recommended that any text content for a card should be placed in an `ion-card-content`.",
   "docsTags": [
@@ -20,6 +20,16 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "ios",
+          "type": "string"
+        },
+        {
+          "value": "md",
+          "type": "string"
+        }
+      ],
       "optional": true,
       "required": false
     }
@@ -27,5 +37,8 @@
   "methods": [],
   "events": [],
   "styles": [],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [],
+  "dependencyGraph": {}
 }

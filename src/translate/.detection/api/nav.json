@@ -1,7 +1,7 @@
 {
-  "tag": "ion-nav",
   "filePath": "src/components/nav/nav.tsx",
   "encapsulation": "shadow",
+  "tag": "ion-nav",
   "readme": "# ion-nav\n\nNav is a standalone component for loading arbitrary components and pushing new components on to the stack.\n\nUnlike Router Outlet, Nav is not tied to a particular router. This means that if we load a Nav component, and push other components to the stack, they will not affect the app's overall router. This fits use cases where you could have a modal, which needs its own sub-navigation, without making it tied to the apps URL.\n\n",
   "docs": "Nav is a standalone component for loading arbitrary components and pushing new components on to the stack.\n\nUnlike Router Outlet, Nav is not tied to a particular router. This means that if we load a Nav component, and push other components to the stack, they will not affect the app's overall router. This fits use cases where you could have a modal, which needs its own sub-navigation, without making it tied to the apps URL.",
   "docsTags": [],
@@ -16,6 +16,11 @@
       "docs": "If `true`, the nav should animate the transition of components.",
       "docsTags": [],
       "default": "true",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -26,6 +31,14 @@
       "reflectToAttr": false,
       "docs": "By default `ion-nav` animates transition between pages based in the mode (ios or material design).\nHowever, this property allows to create custom transition using `AnimateBuilder` functions.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "((Animation: Animation, baseEl: any, opts?: any) => Promise<Animation>)"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -37,6 +50,26 @@
       "reflectToAttr": false,
       "docs": "Root NavComponent to load",
       "docsTags": [],
+      "values": [
+        {
+          "type": "Function"
+        },
+        {
+          "type": "HTMLElement"
+        },
+        {
+          "type": "ViewController"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -47,6 +80,14 @@
       "reflectToAttr": false,
       "docs": "Any parameters for the root component",
       "docsTags": [],
+      "values": [
+        {
+          "type": "undefined"
+        },
+        {
+          "type": "{ [key: string]: any; }"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -58,6 +99,14 @@
       "reflectToAttr": false,
       "docs": "If the nav component should allow for swipe-to-go-back.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     }
@@ -376,5 +425,8 @@
     }
   ],
   "styles": [],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [],
+  "dependencyGraph": {}
 }

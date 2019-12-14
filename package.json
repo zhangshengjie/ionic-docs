@@ -8,9 +8,9 @@
   "scripts": {
     "start": "stencil build --dev --serve --watch",
     "prestart": "npm run -s build-all",
-    "build": "stencil build --prerender && echo '/ /docs/ 302'  >> www/_redirects && echo '/docs/* /docs/index.html 200' >> www/_redirects",
+    "build": "stencil build --prerender --ci && echo '/ /docs/ 302'  >> www/_redirects && echo '/docs/* /docs/index.html 200' >> www/_redirects",
     "build.ci": "npm run prebuild && stencil build --prerender --ci",
-    "prebuild": "npm run translate && npm run -s build-all",
+    "prebuild": "npm run translate && npm run build-all",
     "lint": "tslint --config tslint.json --project tsconfig.json",
     "build-all": "ts-node -P scripts/tsconfig.json scripts/build-all",
     "build-data": "ts-node -P scripts/tsconfig.json scripts/build-data",
@@ -32,6 +32,8 @@
     "helmet": "^3.21.2",
     "ionicons": "^4.6.1",
     "moment": "^2.24.0",
+    "prismic-dom": "^2.1.0",
+    "prismic-javascript": "^2.1.3",
     "simple-git": "^1.126.0",
     "throng": "^4.0.0"
   },

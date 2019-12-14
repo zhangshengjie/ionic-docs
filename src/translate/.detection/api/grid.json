@@ -1,7 +1,7 @@
 {
-  "tag": "ion-grid",
   "filePath": "src/components/grid/grid.tsx",
   "encapsulation": "shadow",
+  "tag": "ion-grid",
   "readme": "# ion-grid\n\n\nThe grid is a powerful mobile-first flexbox system for building custom layouts.\n\nIt is composed of three units — a grid, [row(s)](../row) and [column(s)](../col). Columns will expand to fill the row, and will resize to fit additional columns. It is based on a 12 column layout with different breakpoints based on the screen size. The number of columns can be customized using CSS.\n\nSee [Grid Layout](/docs/layout/grid) for more information.\n",
   "docs": "The grid is a powerful mobile-first flexbox system for building custom layouts.\n\nIt is composed of three units — a grid, [row(s)](../row) and [column(s)](../col). Columns will expand to fill the row, and will resize to fit additional columns. It is based on a 12 column layout with different breakpoints based on the screen size. The number of columns can be customized using CSS.\n\nSee [Grid Layout](/docs/layout/grid) for more information.",
   "docsTags": [],
@@ -21,6 +21,11 @@
       "docs": "If `true`, the grid will have a fixed width based on the screen size.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     }
@@ -89,5 +94,8 @@
       "docs": "Width of the fixed Grid on xs screens"
     }
   ],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [],
+  "dependencyGraph": {}
 }

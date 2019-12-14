@@ -1,9 +1,8 @@
 {
-  "tag": "ion-loading-controller",
   "filePath": "src/components/loading-controller/loading-controller.tsx",
   "encapsulation": "none",
+  "tag": "ion-loading-controller",
   "readme": "# ion-loading-controller\n\nLoading controllers programmatically control the loading component. Loadings can be created and dismissed from the loading controller. View the [Loading](../loading) documentation for a full list of options to pass upon creation.\n\n\n\n",
-  "deprecation": "Use the `loadingController` exported from core.",
   "docs": "Loading controllers programmatically control the loading component. Loadings can be created and dismissed from the loading controller. View the [Loading](../loading) documentation for a full list of options to pass upon creation.",
   "docsTags": [
     {
@@ -68,5 +67,9 @@
   ],
   "events": [],
   "styles": [],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [],
+  "dependencyGraph": {},
+  "deprecation": "Use the `loadingController` exported from core."
 }

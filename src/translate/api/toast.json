@@ -1,7 +1,7 @@
 {
-  "tag": "ion-toast",
   "filePath": "src/components/toast/toast.tsx",
   "encapsulation": "shadow",
+  "tag": "ion-toast",
   "readme": "# ion-toast\n\nA Toast is a subtle notification commonly used in modern applications. It can be used to provide feedback about an operation or to display a system message. The toast appears on top of the app's content, and can be dismissed by the app to resume user interaction with the app.\n\n### Creating\n\nAll of the toast options should be passed in the create method. The message to display should be passed in the `message` property. The `showCloseButton` option can be set to true in order to display a close button on the toast. See the properties below for all available options.\n\n### Positioning\n\nToasts can be positioned at the top, bottom or middle of the viewport. The position can be passed upon creation. The possible values are `top`, `bottom` and `middle`. If the position is not specified, the toast will be displayed at the bottom of the viewport.\n\n### Dismissing\n\nThe toast can be dismissed automatically after a specific amount of time by passing the number of milliseconds to display it in the `duration` of the toast options. If `showCloseButton` is set to true, then the close button will dismiss the toast. To dismiss the toast after creation, call the `dismiss()` method on the instance.\n\n",
   "docs": "A Toast is a subtle notification commonly used in modern applications. It can be used to provide feedback about an operation or to display a system message. The toast appears on top of the app's content, and can be dismissed by the app to resume user interaction with the app.",
   "docsTags": [
@@ -25,6 +25,11 @@
       "docs": "If `true`, the toast will animate.",
       "docsTags": [],
       "default": "true",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -35,6 +40,17 @@
       "reflectToAttr": false,
       "docs": "An array of buttons for the toast.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "(string"
+        },
+        {
+          "type": "ToastButton)[]"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -52,6 +68,14 @@
         }
       ],
       "deprecation": "Use `buttons` instead. Text to display in the close button.",
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -63,6 +87,14 @@
       "reflectToAttr": false,
       "docs": "The color to use from your application's color palette.\nDefault options are: `\"primary\"`, `\"secondary\"`, `\"tertiary\"`, `\"success\"`, `\"warning\"`, `\"danger\"`, `\"light\"`, `\"medium\"`, and `\"dark\"`.\nFor more information on colors, see [theming](/docs/theming/basics).",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -74,6 +106,17 @@
       "reflectToAttr": false,
       "docs": "Additional classes to apply for custom CSS. If multiple classes are\nprovided they should be separated by spaces.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "string[]"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -86,6 +129,11 @@
       "docs": "How many milliseconds to wait before hiding the toast. By default, it will show\nuntil `dismiss()` is called.",
       "docsTags": [],
       "default": "0",
+      "values": [
+        {
+          "type": "number"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -96,6 +144,14 @@
       "reflectToAttr": false,
       "docs": "Animation to use when the toast is presented.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "((Animation: Animation, baseEl: any, opts?: any) => Promise<Animation>)"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -107,6 +163,14 @@
       "reflectToAttr": false,
       "docs": "Header to be shown in the toast.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -119,6 +183,11 @@
       "docs": "If `true`, the keyboard will be automatically dismissed when the overlay is presented.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -129,6 +198,14 @@
       "reflectToAttr": false,
       "docs": "Animation to use when the toast is dismissed.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "((Animation: Animation, baseEl: any, opts?: any) => Promise<Animation>)"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -140,6 +217,14 @@
       "reflectToAttr": false,
       "docs": "Message to be shown in the toast.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -151,6 +236,16 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "ios",
+          "type": "string"
+        },
+        {
+          "value": "md",
+          "type": "string"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -163,6 +258,20 @@
       "docs": "The position of the toast on the screen.",
       "docsTags": [],
       "default": "'bottom'",
+      "values": [
+        {
+          "value": "bottom",
+          "type": "string"
+        },
+        {
+          "value": "middle",
+          "type": "string"
+        },
+        {
+          "value": "top",
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -181,6 +290,11 @@
       ],
       "default": "false",
       "deprecation": "Use `buttons` instead. If `true`, the close button will be displayed.",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -193,6 +307,11 @@
       "docs": "If `true`, the toast will be translucent.\nOnly applies when the mode is `\"ios\"` and the device supports\n[`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter#Browser_compatibility).",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     }
@@ -372,5 +491,16 @@
       "docs": "Width of the toast"
     }
   ],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [
+    "ion-icon",
+    "ion-ripple-effect"
+  ],
+  "dependencyGraph": {
+    "ion-toast": [
+      "ion-icon",
+      "ion-ripple-effect"
+    ]
+  }
 }

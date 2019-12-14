@@ -1,7 +1,7 @@
 {
-  "tag": "ion-select",
   "filePath": "src/components/select/select.tsx",
   "encapsulation": "shadow",
+  "tag": "ion-select",
   "readme": "# ion-select\n\nSelects are form controls to select an option, or options, from a set of options, similar to a native `<select>` element. When a user taps the select, a dialog appears with all of the options in a large, easy to select list.\n\nA select should be used with child `<ion-select-option>` elements. If the child option is not given a `value` attribute then its text will be used as the value.\n\nIf `value` is set on the `<ion-select>`, the selected option will be chosen based on that value. Otherwise, the `selected` attribute can be used on the `<ion-select-option>`.\n\n\n## Interfaces\n\nBy default, select uses the [AlertController API](../alert-controller) to open up the overlay of options in an alert. The interface can be changed to use the [ActionSheetController API](../action-sheet-controller) or [PopoverController API](../popover-controller) by passing `action-sheet` or `popover`, respectively, to the `interface` property. Read on to the other sections for the limitations of the different interfaces.\n\n\n## Single Selection\n\nBy default, the select allows the user to select only one option. The alert interface presents users with a radio button styled list of options. The action sheet interface can only be used with a single value select. The select component's value receives the value of the selected option's value.\n\n\n### Multiple Selection\n\nBy adding the `multiple` attribute to select, users are able to select multiple options. When multiple options can be selected, the alert overlay presents users with a checkbox styled list of options. The select component's value receives an array of all of the selected option values.\n\nNote: the `action-sheet` and `popover` interfaces will not work with multiple selection.\n\n## Object Value References\n\nWhen using objects for select values, it is possible for the identities of these objects to change if they are coming from a server or database, while the selected value's identity remains the same. For example, this can occur when an existing record with the desired object value is loaded into the select, but the newly retrieved select options now have different identities. This will result in the select appearing to have no value at all, even though the original selection in still intact.\n\nBy default, the select uses object equality (`===`) to determine if an option is selected. This can be overridden by providing a property name or a function to the `compareWith` property.\n\n## Select Buttons\n\nThe alert supports two buttons: `Cancel` and `OK`. Each button's text can be customized using the `cancelText` and `okText` properties.\n\nThe `action-sheet` and `popover` interfaces do not have an `OK` button, clicking on any of the options will automatically close the overlay and select that value. The `popover` interface does not have a `Cancel` button, clicking on the backdrop will close the overlay.\n\n\n## Interface Options\n\nSince select uses the alert, action sheet and popover interfaces, options can be passed to these components through the `interfaceOptions` property. This can be used to pass a custom header, subheader, css class, and more. \n\nSee the [AlertController API docs](../alert-controller), [ActionSheetController API docs](../action-sheet-controller), and [PopoverController API docs](../popover-controller) for the properties that each interface accepts.\n\nNote: `interfaceOptions` will not override `inputs` or `buttons` with the `alert` interface.\n",
   "docs": "Selects are form controls to select an option, or options, from a set of options, similar to a native `<select>` element. When a user taps the select, a dialog appears with all of the options in a large, easy to select list.\n\nA select should be used with child `<ion-select-option>` elements. If the child option is not given a `value` attribute then its text will be used as the value.\n\nIf `value` is set on the `<ion-select>`, the selected option will be chosen based on that value. Otherwise, the `selected` attribute can be used on the `<ion-select-option>`.",
   "docsTags": [
@@ -26,6 +26,11 @@
       "docs": "The text to display on the cancel button.",
       "docsTags": [],
       "default": "'Cancel'",
+      "values": [
+        {
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -37,6 +42,20 @@
       "reflectToAttr": false,
       "docs": "A property name or function used to compare object values",
       "docsTags": [],
+      "values": [
+        {
+          "type": "((currentValue: any, compareValue: any) => boolean)"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -49,6 +68,11 @@
       "docs": "If `true`, the user cannot interact with the select.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -61,6 +85,20 @@
       "docs": "The interface the select should use: `action-sheet`, `popover` or `alert`.",
       "docsTags": [],
       "default": "'alert'",
+      "values": [
+        {
+          "value": "action-sheet",
+          "type": "string"
+        },
+        {
+          "value": "alert",
+          "type": "string"
+        },
+        {
+          "value": "popover",
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -73,6 +111,11 @@
       "docs": "Any additional options that the `alert`, `action-sheet` or `popover` interface\ncan take. See the [AlertController API docs](../../alert/AlertController/#create), the\n[ActionSheetController API docs](../../action-sheet/ActionSheetController/#create) and the\n[PopoverController API docs](../../popover/PopoverController/#create) for the\ncreate options for each interface.",
       "docsTags": [],
       "default": "{}",
+      "values": [
+        {
+          "type": "any"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -84,6 +127,16 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "ios",
+          "type": "string"
+        },
+        {
+          "value": "md",
+          "type": "string"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -96,6 +149,11 @@
       "docs": "If `true`, the select can accept multiple values.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -108,6 +166,11 @@
       "docs": "The name of the control, which is submitted with the form data.",
       "docsTags": [],
       "default": "this.inputId",
+      "values": [
+        {
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -120,6 +183,11 @@
       "docs": "The text to display on the ok button.",
       "docsTags": [],
       "default": "'OK'",
+      "values": [
+        {
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -131,6 +199,17 @@
       "reflectToAttr": false,
       "docs": "The text to display when the select is empty.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -142,6 +221,17 @@
       "reflectToAttr": false,
       "docs": "The text to display instead of the selected option's value.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -153,6 +243,11 @@
       "reflectToAttr": false,
       "docs": "the value of the select.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "any"
+        }
+      ],
       "optional": true,
       "required": false
     }
@@ -235,5 +330,8 @@
       "docs": "Top padding of the select"
     }
   ],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [],
+  "dependencyGraph": {}
 }

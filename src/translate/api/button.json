@@ -1,7 +1,7 @@
 {
-  "tag": "ion-button",
   "filePath": "src/components/button/button.tsx",
   "encapsulation": "shadow",
+  "tag": "ion-button",
   "readme": "# ion-button\n\nButtons provide a clickable element, which can be used in forms, or anywhere that needs simple, standard button functionality. They may display text, icons, or both. Buttons can be styled with several attributes to look a specific way.\n\n## Expand\n\nThis attribute lets you specify how wide the button should be. By default, buttons are inline blocks, but setting this attribute will change the button to a full-width block element.\n\n| Value          | Details                                                                      |\n|----------------|------------------------------------------------------------------------------|\n| `block`        | Full-width button with rounded corners.                                      |\n| `full`         | Full-width button with square corners and no border on the left or right.    |\n\n## Fill\n\nThis attributes determines the background and border color of the button. By default, buttons have a solid background unless the button is inside of a toolbar, in which case it has a transparent background.\n\n| Value          | Details                                                                      |\n|----------------|------------------------------------------------------------------------------|\n| `clear`        | Button with a transparent background that resembles a flat button.           |\n| `outline`      | Button with a transparent background and a visible border.                   |\n| `solid`        | Button with a filled background. Useful for buttons in a toolbar.            |\n\n## Size\n\nThis attribute specifies the size of the button. Setting this attribute will change the height and padding of a button.\n\n| Value          | Details                                                                      |\n|----------------|------------------------------------------------------------------------------|\n| `small`        | Button with less height and padding. Default for buttons in an item.         |\n| `default`      | Button with the default height and padding. Useful for buttons in an item.   |\n| `large`        | Button with more height and padding.                                         |\n\n",
   "docs": "Buttons provide a clickable element, which can be used in forms, or anywhere that needs simple, standard button functionality. They may display text, icons, or both. Buttons can be styled with several attributes to look a specific way.",
   "docsTags": [
@@ -42,6 +42,11 @@
       "docs": "The type of button.",
       "docsTags": [],
       "default": "'button'",
+      "values": [
+        {
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -53,6 +58,14 @@
       "reflectToAttr": false,
       "docs": "The color to use from your application's color palette.\nDefault options are: `\"primary\"`, `\"secondary\"`, `\"tertiary\"`, `\"success\"`, `\"warning\"`, `\"danger\"`, `\"light\"`, `\"medium\"`, and `\"dark\"`.\nFor more information on colors, see [theming](/docs/theming/basics).",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -65,6 +78,11 @@
       "docs": "If `true`, the user cannot interact with the button.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -76,6 +94,14 @@
       "reflectToAttr": false,
       "docs": "This attribute instructs browsers to download a URL instead of navigating to\nit, so the user will be prompted to save it as a local file. If the attribute\nhas a value, it is used as the pre-filled file name in the Save prompt\n(the user can still change the file name if they want).",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -87,6 +113,19 @@
       "reflectToAttr": true,
       "docs": "Set to `\"block\"` for a full-width button or to `\"full\"` for a full-width button\nwithout left and right borders.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "block",
+          "type": "string"
+        },
+        {
+          "value": "full",
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -98,6 +137,27 @@
       "reflectToAttr": true,
       "docs": "Set to `\"clear\"` for a transparent button, to `\"outline\"` for a transparent\nbutton with a border, or to `\"solid\"`. The default style is `\"solid\"` except inside of\na toolbar, where the default is `\"clear\"`.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "clear",
+          "type": "string"
+        },
+        {
+          "value": "default",
+          "type": "string"
+        },
+        {
+          "value": "outline",
+          "type": "string"
+        },
+        {
+          "value": "solid",
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -109,6 +169,14 @@
       "reflectToAttr": false,
       "docs": "Contains a URL or a URL fragment that the hyperlink points to.\nIf this property is set, an anchor tag will be rendered.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -120,6 +188,16 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "ios",
+          "type": "string"
+        },
+        {
+          "value": "md",
+          "type": "string"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -131,6 +209,14 @@
       "reflectToAttr": false,
       "docs": "Specifies the relationship of the target object to the link object.\nThe value is a space-separated list of [link types](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types).",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -143,6 +229,20 @@
       "docs": "When using a router, it specifies the transition direction when navigating to\nanother page using `href`.",
       "docsTags": [],
       "default": "'forward'",
+      "values": [
+        {
+          "value": "back",
+          "type": "string"
+        },
+        {
+          "value": "forward",
+          "type": "string"
+        },
+        {
+          "value": "root",
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -154,6 +254,15 @@
       "reflectToAttr": true,
       "docs": "The button shape.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "round",
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -165,6 +274,23 @@
       "reflectToAttr": true,
       "docs": "The button size.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "default",
+          "type": "string"
+        },
+        {
+          "value": "large",
+          "type": "string"
+        },
+        {
+          "value": "small",
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -177,6 +303,11 @@
       "docs": "If `true`, activates a button with a heavier font weight.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -188,6 +319,14 @@
       "reflectToAttr": false,
       "docs": "Specifies where to display the linked URL.\nOnly applies when an `href` is provided.\nSpecial keywords: `\"_blank\"`, `\"_self\"`, `\"_parent\"`, `\"_top\"`.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -200,6 +339,20 @@
       "docs": "The type of the button.",
       "docsTags": [],
       "default": "'button'",
+      "values": [
+        {
+          "value": "button",
+          "type": "string"
+        },
+        {
+          "value": "reset",
+          "type": "string"
+        },
+        {
+          "value": "submit",
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     }
@@ -344,5 +497,14 @@
       "name": "start",
       "docs": "Content is placed to the left of the button text in LTR, and to the right in RTL."
     }
-  ]
+  ],
+  "dependents": [],
+  "dependencies": [
+    "ion-ripple-effect"
+  ],
+  "dependencyGraph": {
+    "ion-button": [
+      "ion-ripple-effect"
+    ]
+  }
 }

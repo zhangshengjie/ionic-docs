@@ -1,7 +1,7 @@
 {
-  "tag": "ion-item",
   "filePath": "src/components/item/item.tsx",
   "encapsulation": "shadow",
+  "tag": "ion-item",
   "readme": "# ion-item\n\nItems are elements that can contain text, icons, avatars, images, inputs, and any other native or custom elements. Generally they are placed in a list with other items. Items can be swiped, deleted, reordered, edited, and more.\n\n## Clickable Items\n\nAn item is considered \"clickable\" if it has an `href` or `button` property set. Clickable items have a few visual differences that indicate they can be interacted with. For example, a clickable item receives the ripple effect upon activation in `md` mode, has a highlight when activated in `ios` mode, and has a [detail arrow](#detail-arrows) by default in `ios` mode.\n\n## Detail Arrows\n\nBy default [clickable items](#clickable-items) will display a right arrow icon on `ios` mode. To hide the right arrow icon on clickable elements, set the `detail` property to `false`. To show the right arrow icon on an item that doesn't display it naturally, set the `detail` property to `true`.\n\n<!--\n\nTODO add this functionality back as a css variable\n\nThis feature is not enabled by default on clickable items for the `md` mode, but it can be enabled by setting the following CSS variable:\n\n```css\n--item-detail-push-show: true;\n```\n\nSee the [theming documentation](/docs/theming/css-variables) for more information.\n\n-->\n\n\n## Item Placement\n\nItem uses named [slots](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot) in order to position content. This logic makes it possible to write a complex item with simple, understandable markup without having to worry about styling and positioning the elements.\n\nThe below chart details the item slots and where it will place the element inside of the item:\n\n| Slot    | Description                                                                 |\n|---------|-----------------------------------------------------------------------------|\n| `start` | Placed to the left of all other content in LTR, and to the `right` in RTL.  |\n| `end`   | Placed to the right of all other content in LTR, and to the `left` in RTL.  |\n| none    | Placed inside of the input wrapper.                                         |\n\n\n### Text Alignment\n\nItems left align text and add an ellipsis when the text is wider than the item. See the [Utility Attributes Documentation](/docs/layout/css-utilities) for attributes that can be added to `<ion-item>` to transform the text.\n\n\n## Input Highlight\n\n### Highlight Height\n\nItems containing an input will highlight the bottom border of the input with a different color when focused, valid, or invalid. By default, `md` items have a highlight with a height set to `2px` and `ios` has no highlight (technically the height is set to `0`). The height can be changed using the `--highlight-height` CSS property. To turn off the highlight, set this variable to `0`. For more information on setting CSS properties, see the [theming documentation](/docs/theming/css-variables).\n\n### Highlight Color\n\nThe highlight color changes based on the item state, but all of the states use Ionic colors by default. When focused, the input highlight will use the `primary` color. If the input is valid it will use the `success` color, and invalid inputs will use the `danger` color. See the [CSS Custom Properties](#css-custom-properties) section below for the highlight color variables.\n\n",
   "docs": "Items are elements that can contain text, icons, avatars, images, inputs, and any other native or custom elements. Generally they are placed in a list with other items. Items can be swiped, deleted, reordered, edited, and more.",
   "docsTags": [
@@ -38,6 +38,11 @@
       "docs": "If `true`, a button tag will be rendered and the item will be tappable.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -49,6 +54,14 @@
       "reflectToAttr": false,
       "docs": "The color to use from your application's color palette.\nDefault options are: `\"primary\"`, `\"secondary\"`, `\"tertiary\"`, `\"success\"`, `\"warning\"`, `\"danger\"`, `\"light\"`, `\"medium\"`, and `\"dark\"`.\nFor more information on colors, see [theming](/docs/theming/basics).",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -60,6 +73,14 @@
       "reflectToAttr": false,
       "docs": "If `true`, a detail arrow will appear on the item. Defaults to `false` unless the `mode`\nis `ios` and an `href` or `button` property is present.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -72,6 +93,11 @@
       "docs": "The icon to use when `detail` is set to `true`.",
       "docsTags": [],
       "default": "'ios-arrow-forward'",
+      "values": [
+        {
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -84,6 +110,11 @@
       "docs": "If `true`, the user cannot interact with the item.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -95,6 +126,14 @@
       "reflectToAttr": false,
       "docs": "This attribute instructs browsers to download a URL instead of navigating to\nit, so the user will be prompted to save it as a local file. If the attribute\nhas a value, it is used as the pre-filled file name in the Save prompt\n(the user can still change the file name if they want).",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -106,6 +145,14 @@
       "reflectToAttr": false,
       "docs": "Contains a URL or a URL fragment that the hyperlink points to.\nIf this property is set, an anchor tag will be rendered.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -117,6 +164,23 @@
       "reflectToAttr": false,
       "docs": "How the bottom border should be displayed on the item.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "full",
+          "type": "string"
+        },
+        {
+          "value": "inset",
+          "type": "string"
+        },
+        {
+          "value": "none",
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -128,6 +192,16 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "ios",
+          "type": "string"
+        },
+        {
+          "value": "md",
+          "type": "string"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -139,6 +213,14 @@
       "reflectToAttr": false,
       "docs": "Specifies the relationship of the target object to the link object.\nThe value is a space-separated list of [link types](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types).",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -151,6 +233,20 @@
       "docs": "When using a router, it specifies the transition direction when navigating to\nanother page using `href`.",
       "docsTags": [],
       "default": "'forward'",
+      "values": [
+        {
+          "value": "back",
+          "type": "string"
+        },
+        {
+          "value": "forward",
+          "type": "string"
+        },
+        {
+          "value": "root",
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -162,6 +258,14 @@
       "reflectToAttr": false,
       "docs": "Specifies where to display the linked URL.\nOnly applies when an `href` is provided.\nSpecial keywords: `\"_blank\"`, `\"_self\"`, `\"_parent\"`, `\"_top\"`.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -174,6 +278,20 @@
       "docs": "The type of the button. Only used when an `onclick` or `button` property is present.",
       "docsTags": [],
       "default": "'button'",
+      "values": [
+        {
+          "value": "button",
+          "type": "string"
+        },
+        {
+          "value": "reset",
+          "type": "string"
+        },
+        {
+          "value": "submit",
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     }
@@ -360,5 +478,21 @@
       "name": "start",
       "docs": "Content is placed to the left of the item text in LTR, and to the right in RTL."
     }
-  ]
+  ],
+  "dependents": [
+    "ion-select-popover"
+  ],
+  "dependencies": [
+    "ion-icon",
+    "ion-ripple-effect"
+  ],
+  "dependencyGraph": {
+    "ion-item": [
+      "ion-icon",
+      "ion-ripple-effect"
+    ],
+    "ion-select-popover": [
+      "ion-item"
+    ]
+  }
 }

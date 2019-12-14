@@ -1,7 +1,7 @@
 {
-  "tag": "ion-buttons",
   "filePath": "src/components/buttons/buttons.tsx",
   "encapsulation": "scoped",
+  "tag": "ion-buttons",
   "readme": "# ion-buttons\n\nThe Buttons component is a container element. Buttons placed in a toolbar should be placed inside of the `<ion-buttons>` element.\n\nThe `<ion-buttons>` element can be positioned inside of the toolbar using a named slot. The below chart has a description of each slot.\n\n| Slot         | Description                                                                                              |\n|--------------|----------------------------------------------------------------------------------------------------------|\n| `secondary`  | Positions element to the `left` of the content in `ios` mode, and directly to the `right` in `md` mode.  |\n| `primary`    | Positions element to the `right` of the content in `ios` mode, and to the far `right` in `md` mode.      |\n| `start`      | Positions to the `left` of the content in LTR, and to the `right` in RTL.                                |\n| `end`        | Positions to the `right` of the content in LTR, and to the `left` in RTL.                                |\n\n",
   "docs": "The Buttons component is a container element. Buttons placed in a toolbar should be placed inside of the `<ion-buttons>` element.\n\nThe `<ion-buttons>` element can be positioned inside of the toolbar using a named slot. The below chart has a description of each slot.\n\n| Slot         | Description                                                                                              |\n|--------------|----------------------------------------------------------------------------------------------------------|\n| `secondary`  | Positions element to the `left` of the content in `ios` mode, and directly to the `right` in `md` mode.  |\n| `primary`    | Positions element to the `right` of the content in `ios` mode, and to the far `right` in `md` mode.      |\n| `start`      | Positions to the `left` of the content in LTR, and to the `right` in RTL.                                |\n| `end`        | Positions to the `right` of the content in LTR, and to the `left` in RTL.                                |",
   "docsTags": [],
@@ -21,6 +21,11 @@
       "docs": "If true, buttons will disappear when its\nparent toolbar has fully collapsed if the toolbar\nis not the first toolbar. If the toolbar is the\nfirst toolbar, the buttons will be hidden and will\nonly be shown once all toolbars have fully collapsed.\n\nOnly applies in `ios` mode with `collapse` set to\n`true` on `ion-header`.\n\nTypically used for [Collapsible Large Titles](https://ionicframework.com/docs/api/title#collapsible-large-titles)",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     }
@@ -28,5 +33,8 @@
   "methods": [],
   "events": [],
   "styles": [],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [],
+  "dependencyGraph": {}
 }

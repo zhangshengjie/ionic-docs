@@ -14,8 +14,8 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v2-dependencies-{{ checksum "package.json" }}
-            - v2-dependencies-
+            - v4-dependencies-{{ checksum "package.json" }}
+            - v4-dependencies-
       - run: npm install
       - run: npm run build
       - run: npm run build-case

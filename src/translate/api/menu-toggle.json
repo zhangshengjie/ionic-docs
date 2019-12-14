@@ -1,7 +1,7 @@
 {
-  "tag": "ion-menu-toggle",
   "filePath": "src/components/menu-toggle/menu-toggle.tsx",
   "encapsulation": "shadow",
+  "tag": "ion-menu-toggle",
   "readme": "# ion-menu-toggle\n\nThe MenuToggle component can be used to toggle a menu open or closed.\n\nBy default, it's only visible when the selected menu is active. A menu is active when it can be opened/closed. If the menu is disabled or it's being presented as a split-pane, the menu is marked as non-active and ion-menu-toggle hides itself.\n\nIn case it's desired to keep `ion-menu-toggle` always visible, the `autoHide` property can be set to `false`.\n",
   "docs": "The MenuToggle component can be used to toggle a menu open or closed.\n\nBy default, it's only visible when the selected menu is active. A menu is active when it can be opened/closed. If the menu is disabled or it's being presented as a split-pane, the menu is marked as non-active and ion-menu-toggle hides itself.\n\nIn case it's desired to keep `ion-menu-toggle` always visible, the `autoHide` property can be set to `false`.",
   "docsTags": [],
@@ -16,6 +16,11 @@
       "docs": "Automatically hides the content when the corresponding menu is not active.\n\nBy default, it's `true`. Change it to `false` in order to\nkeep `ion-menu-toggle` always visible regardless the state of the menu.",
       "docsTags": [],
       "default": "true",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -27,6 +32,14 @@
       "reflectToAttr": false,
       "docs": "Optional property that maps to a Menu's `menuId` prop.\nCan also be `start` or `end` for the menu side.\nThis is used to find the correct menu to toggle.\n\nIf this property is not used, `ion-menu-toggle` will toggle the\nfirst menu that is active.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     }
@@ -34,5 +47,8 @@
   "methods": [],
   "events": [],
   "styles": [],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [],
+  "dependencyGraph": {}
 }

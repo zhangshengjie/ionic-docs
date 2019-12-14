@@ -1,7 +1,7 @@
 {
-  "tag": "ion-skeleton-text",
   "filePath": "src/components/skeleton-text/skeleton-text.tsx",
   "encapsulation": "shadow",
+  "tag": "ion-skeleton-text",
   "readme": "# ion-skeleton-text\n\nSkeleton Text is a component for rendering placeholder content. The element will render a gray block at the specified width.\n\n",
   "docs": "Skeleton Text is a component for rendering placeholder content. The element will render a gray block at the specified width.",
   "docsTags": [],
@@ -21,6 +21,11 @@
       "docs": "If `true`, the skeleton text will animate.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -38,6 +43,14 @@
         }
       ],
       "deprecation": "Use CSS instead. The width of the skeleton text. If supplied, it will override the CSS style.",
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     }
@@ -61,5 +74,8 @@
       "docs": "Border radius of the skeleton text"
     }
   ],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [],
+  "dependencyGraph": {}
 }

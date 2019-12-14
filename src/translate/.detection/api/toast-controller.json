@@ -1,9 +1,8 @@
 {
-  "tag": "ion-toast-controller",
   "filePath": "src/components/toast-controller/toast-controller.tsx",
   "encapsulation": "none",
+  "tag": "ion-toast-controller",
   "readme": "# ion-toast-controller\n\nToastController is a component used to create Toast components. Please see the docs for [Toast](../toast).\n\n",
-  "deprecation": "Use the `toastController` exported from core.",
   "docs": "ToastController is a component used to create Toast components. Please see the docs for [Toast](../toast).",
   "docsTags": [
     {
@@ -68,5 +67,9 @@
   ],
   "events": [],
   "styles": [],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [],
+  "dependencyGraph": {},
+  "deprecation": "Use the `toastController` exported from core."
 }

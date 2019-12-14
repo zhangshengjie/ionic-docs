@@ -1,7 +1,7 @@
 {
-  "tag": "ion-segment-button",
   "filePath": "src/components/segment-button/segment-button.tsx",
   "encapsulation": "shadow",
+  "tag": "ion-segment-button",
   "readme": "# ion-segment-button\n\nSegment buttons are groups of related buttons inside of a [Segment](../segment). They are displayed in a horizontal row. A segment button can be checked by default by adding the `checked` attribute or by setting the `value` of the segment to the `value` of the segment button. Only one segment button should be selected at a time.\n\n",
   "docs": "Segment buttons are groups of related buttons inside of a [Segment](../segment). They are displayed in a horizontal row. A segment button can be checked by default by adding the `checked` attribute or by setting the `value` of the segment to the `value` of the segment button. Only one segment button should be selected at a time.",
   "docsTags": [
@@ -26,6 +26,11 @@
       "docs": "If `true`, the segment button is selected.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -38,6 +43,11 @@
       "docs": "If `true`, the user cannot interact with the segment button.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -50,6 +60,35 @@
       "docs": "Set the layout of the text and icon in the segment.",
       "docsTags": [],
       "default": "'icon-top'",
+      "values": [
+        {
+          "value": "icon-bottom",
+          "type": "string"
+        },
+        {
+          "value": "icon-end",
+          "type": "string"
+        },
+        {
+          "value": "icon-hide",
+          "type": "string"
+        },
+        {
+          "value": "icon-start",
+          "type": "string"
+        },
+        {
+          "value": "icon-top",
+          "type": "string"
+        },
+        {
+          "value": "label-hide",
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -61,6 +100,16 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "ios",
+          "type": "string"
+        },
+        {
+          "value": "md",
+          "type": "string"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -73,6 +122,20 @@
       "docs": "The type of the button.",
       "docsTags": [],
       "default": "'button'",
+      "values": [
+        {
+          "value": "button",
+          "type": "string"
+        },
+        {
+          "value": "reset",
+          "type": "string"
+        },
+        {
+          "value": "submit",
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -85,6 +148,11 @@
       "docs": "The value of the segment button.",
       "docsTags": [],
       "default": "'ion-sb-' + (ids++)",
+      "values": [
+        {
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     }
@@ -223,5 +291,14 @@
       "docs": "Transition of the segment button"
     }
   ],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [
+    "ion-ripple-effect"
+  ],
+  "dependencyGraph": {
+    "ion-segment-button": [
+      "ion-ripple-effect"
+    ]
+  }
 }

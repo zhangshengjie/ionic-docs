@@ -1,7 +1,7 @@
 {
-  "tag": "ion-route",
   "filePath": "src/components/route/route.tsx",
   "encapsulation": "none",
+  "tag": "ion-route",
   "readme": "# ion-route\n\nThe route component takes a component and renders it when the Browser URl matches the url property.\n\n> Note: this component should only be used with vanilla and Stencil JavaScript projects. For Angular projects, use [`ion-router-outlet`](../router-outlet) and the Angular router.\n",
   "docs": "The route component takes a component and renders it when the Browser URl matches the url property.\n\n> Note: this component should only be used with vanilla and Stencil JavaScript projects. For Angular projects, use [`ion-router-outlet`](../router-outlet) and the Angular router.",
   "docsTags": [],
@@ -15,6 +15,11 @@
       "reflectToAttr": false,
       "docs": "Name of the component to load/select in the navigation outlet (`ion-tabs`, `ion-nav`)\nwhen the route matches.\n\nThe value of this property is not always the tagname of the component to load,\nin `ion-tabs` it actually refers to the name of the `ion-tab` to select.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": true
     },
@@ -25,6 +30,14 @@
       "reflectToAttr": false,
       "docs": "A key value `{ 'red': true, 'blue': 'white'}` containing props that should be passed\nto the defined component when rendered.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "undefined"
+        },
+        {
+          "type": "{ [key: string]: any; }"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -37,6 +50,11 @@
       "docs": "Relative path that needs to match in order for this route to apply.\n\nAccepts paths similar to expressjs so that you can define parameters\nin the url /foo/:bar where bar would be available in incoming props.",
       "docsTags": [],
       "default": "''",
+      "values": [
+        {
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     }
@@ -54,5 +72,8 @@
     }
   ],
   "styles": [],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [],
+  "dependencyGraph": {}
 }
