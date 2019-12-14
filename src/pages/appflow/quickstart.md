@@ -4,6 +4,7 @@ previousText: 'Welcome'
 previousUrl: '/docs/appflow'
 nextText: 'Connect Your Repo'
 nextUrl: '/docs/appflow/quickstart/connect'
+tableOfContents: false
 ---
 
 クイックスタートチュートリアルでは、Ionic Appflowを使用してアプリケーションをセットアップするプロセスについて、アプリケーションをAppflowに接続する方法、ライブアップデート用にAppflow SDK(Deploy plugin)をセットアップする方法、ネイティブビルド環境を使用してAndroidとiOSの最初の自動ビルドを設定する方法など、順を追って説明しています。ガイドの手順に従うか、目的のコンポーネントのマニュアルに直接移動してください。

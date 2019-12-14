@@ -1,5 +1,6 @@
 ---
 title: Ionic Native
+tableOfContents: false
 ---
 <p class='intro'>オープンソースとプレミアムプラグイン、Ionicアプリケーション、Cordovaプロジェクト、またはCapacitorプロジェクトにネイティブデバイス機能を簡単に追加できる統合機能を使用して、ネイティブアプリケーションのエクスペリエンスを構築します。</p>
 

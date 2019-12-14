@@ -60,6 +60,7 @@ Reactを使用して、あらゆるプラットフォーム向けの `award-winn
 ## 使い慣れたツール
 
 Ionic Reactプロジェクトは、Reactプロジェクトと同じように、 [react-dom](https://reactjs.org/docs/react-dom.html) を活用し、通常は [Create React App (CRA)](https://github.com/facebook/create-react-app) を利用してセットアップします。 [ルーティングとナビゲーション](/docs/react/navigation) は、React Router下に構築されます。
+Compatible with React version 16.8 and above.
 
 </div>
 
@@ -118,8 +119,12 @@ Ionic Reactプロジェクトは、Reactプロジェクトと同じように、 
     <p>Ionic Frameworkですばらしいアプリをつくるために知るべき基礎を学びます。</p>
   </docs-card>
 
-  <docs-card header="ナビゲーション" href="/docs/react/navigation" icon="/docs/assets/icons/feature-component-navigation-icon.png">
-    <p>IonicとReact Routerを利用したアプリ内のナビゲーションの基礎を学びます。</p>
+  <docs-card header="Add Ionic to Existing React App" href="https://dev.to/ionic/adding-ionic-react-to-an-existing-react-project-4kib" icon="/docs/assets/icons/logo-react-icon.png">
+    <p>Use individual components or the complete app experience.</p>
+  </docs-card>
+
+  <docs-card header="Navigation" href="/docs/react/navigation" icon="/docs/assets/icons/feature-component-navigation-icon.png">
+    <p>Learn the basics of navigation inside your app with Ionic and React Router</p>
   </docs-card>
 
   <docs-card header="ライフサイクル" href="/docs/react/lifecycle" icon="/docs/assets/icons/feature-guide-components-icon.png">
