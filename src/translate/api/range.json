@@ -1,7 +1,7 @@
 {
-  "tag": "ion-range",
   "filePath": "src/components/range/range.tsx",
   "encapsulation": "shadow",
+  "tag": "ion-range",
   "readme": "# ion-range\n\nThe Range slider lets users select from a range of values by moving\nthe slider knob. It can accept dual knobs, but by default one knob\ncontrols the value of the range.\n\n### Range Labels\n\nLabels can be placed on either side of the range by adding the\n`slot=\"start\"` or `slot=\"end\"` to the element. The element doesn't have to\nbe an `ion-label`, it can be added to any element to place it to the\nleft or right of the range.\n\n",
   "docs": "The Range slider lets users select from a range of values by moving\nthe slider knob. It can accept dual knobs, but by default one knob\ncontrols the value of the range.",
   "docsTags": [
@@ -33,6 +33,14 @@
       "reflectToAttr": false,
       "docs": "The color to use from your application's color palette.\nDefault options are: `\"primary\"`, `\"secondary\"`, `\"tertiary\"`, `\"success\"`, `\"warning\"`, `\"danger\"`, `\"light\"`, `\"medium\"`, and `\"dark\"`.\nFor more information on colors, see [theming](/docs/theming/basics).",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -45,6 +53,11 @@
       "docs": "How long, in milliseconds, to wait to trigger the\n`ionChange` event after each change in the range value.",
       "docsTags": [],
       "default": "0",
+      "values": [
+        {
+          "type": "number"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -57,6 +70,11 @@
       "docs": "If `true`, the user cannot interact with the range.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -69,6 +87,11 @@
       "docs": "Show two knobs.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -81,6 +104,11 @@
       "docs": "Maximum integer value of the range.",
       "docsTags": [],
       "default": "100",
+      "values": [
+        {
+          "type": "number"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -93,6 +121,11 @@
       "docs": "Minimum integer value of the range.",
       "docsTags": [],
       "default": "0",
+      "values": [
+        {
+          "type": "number"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -104,6 +137,16 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "ios",
+          "type": "string"
+        },
+        {
+          "value": "md",
+          "type": "string"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -116,6 +159,11 @@
       "docs": "The name of the control, which is submitted with the form data.",
       "docsTags": [],
       "default": "''",
+      "values": [
+        {
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -128,6 +176,11 @@
       "docs": "If `true`, a pin with integer value is shown when the knob\nis pressed.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -140,6 +193,11 @@
       "docs": "If `true`, the knob snaps to tick marks evenly spaced based\non the step property value.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -152,6 +210,11 @@
       "docs": "Specifies the value granularity.",
       "docsTags": [],
       "default": "1",
+      "values": [
+        {
+          "type": "number"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -164,6 +227,11 @@
       "docs": "If `true`, tick marks are displayed based on the step value.\nOnly applies when `snaps` is `true`.",
       "docsTags": [],
       "default": "true",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -176,6 +244,14 @@
       "docs": "the value of the range.",
       "docsTags": [],
       "default": "0",
+      "values": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "{ lower: number; upper: number; }"
+        }
+      ],
       "optional": false,
       "required": false
     }
@@ -255,6 +331,16 @@
       "name": "--knob-size",
       "annotation": "prop",
       "docs": "Size of the range knob"
+    },
+    {
+      "name": "--pin-background",
+      "annotation": "prop",
+      "docs": "Background of the range pin"
+    },
+    {
+      "name": "--pin-color",
+      "annotation": "prop",
+      "docs": "Color of the range pin"
     }
   ],
   "slots": [
@@ -266,5 +352,8 @@
       "name": "start",
       "docs": "Content is placed to the left of the range slider in LTR, and to the right in RTL."
     }
-  ]
+  ],
+  "dependents": [],
+  "dependencies": [],
+  "dependencyGraph": {}
 }

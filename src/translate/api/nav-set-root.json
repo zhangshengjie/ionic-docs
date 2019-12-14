@@ -1,9 +1,8 @@
 {
-  "tag": "ion-nav-set-root",
   "filePath": "src/components/nav-set-root/nav-set-root.tsx",
   "encapsulation": "none",
+  "tag": "ion-nav-set-root",
   "readme": "# ion-nav-set-root\n\n`NavSetRoot` is a component that allows you to set the root of the current navigation stack.\nIt is the component form of calling `NavController.setRoot()`\n\n",
-  "deprecation": "Use `<ion-nav-link component=\"MyComponent\" routerDirection=\"root\">` instead.",
   "docs": "`NavSetRoot` is a component that allows you to set the root of the current navigation stack.\nIt is the component form of calling `NavController.setRoot()`",
   "docsTags": [
     {
@@ -21,6 +20,26 @@
       "reflectToAttr": false,
       "docs": "Component you want to make root for the navigation stack",
       "docsTags": [],
+      "values": [
+        {
+          "type": "Function"
+        },
+        {
+          "type": "HTMLElement"
+        },
+        {
+          "type": "ViewController"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -31,6 +50,14 @@
       "reflectToAttr": false,
       "docs": "Data you want to pass to the component as props",
       "docsTags": [],
+      "values": [
+        {
+          "type": "undefined"
+        },
+        {
+          "type": "{ [key: string]: any; }"
+        }
+      ],
       "optional": true,
       "required": false
     }
@@ -38,5 +65,9 @@
   "methods": [],
   "events": [],
   "styles": [],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [],
+  "dependencyGraph": {},
+  "deprecation": "Use `<ion-nav-link component=\"MyComponent\" routerDirection=\"root\">` instead."
 }

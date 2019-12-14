@@ -1,7 +1,7 @@
 {
-  "tag": "ion-select-option",
   "filePath": "src/components/select-option/select-option.tsx",
   "encapsulation": "shadow",
+  "tag": "ion-select-option",
   "readme": "# ion-select-option\n\nSelectOption is a component that is a child element of Select. For more information, see the [Select docs](../select).\n\n",
   "docs": "SelectOption is a component that is a child element of Select. For more information, see the [Select docs](../select).",
   "docsTags": [],
@@ -16,6 +16,11 @@
       "docs": "If `true`, the user cannot interact with the select option.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -28,6 +33,11 @@
       "docs": "If `true`, the element is selected.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -39,6 +49,11 @@
       "reflectToAttr": false,
       "docs": "The text value of the option.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "any"
+        }
+      ],
       "optional": true,
       "required": false
     }
@@ -46,5 +61,8 @@
   "methods": [],
   "events": [],
   "styles": [],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [],
+  "dependencyGraph": {}
 }

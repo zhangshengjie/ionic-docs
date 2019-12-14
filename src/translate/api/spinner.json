@@ -1,7 +1,7 @@
 {
-  "tag": "ion-spinner",
   "filePath": "src/components/spinner/spinner.tsx",
   "encapsulation": "shadow",
+  "tag": "ion-spinner",
   "readme": "# ion-spinner\n\nThe Spinner component provides a variety of animated SVG spinners. Spinners are visual indicators that the app is loading content or performing another process that the user needs to wait on.\n\nThe default spinner to use is based on the platform. The default spinner for `ios` is `\"lines\"`, and the default for `android` is `\"crescent\"`. If the platform is not `ios` or `android`, the spinner will default to `crescent`. If the `name` property is set, then that spinner will be used instead of the platform specific spinner.\n\n\n",
   "docs": "The Spinner component provides a variety of animated SVG spinners. Spinners are visual indicators that the app is loading content or performing another process that the user needs to wait on.\n\nThe default spinner to use is based on the platform. The default spinner for `ios` is `\"lines\"`, and the default for `android` is `\"crescent\"`. If the platform is not `ios` or `android`, the spinner will default to `crescent`. If the `name` property is set, then that spinner will be used instead of the platform specific spinner.",
   "docsTags": [],
@@ -20,6 +20,14 @@
       "reflectToAttr": false,
       "docs": "The color to use from your application's color palette.\nDefault options are: `\"primary\"`, `\"secondary\"`, `\"tertiary\"`, `\"success\"`, `\"warning\"`, `\"danger\"`, `\"light\"`, `\"medium\"`, and `\"dark\"`.\nFor more information on colors, see [theming](/docs/theming/basics).",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -31,6 +39,14 @@
       "reflectToAttr": false,
       "docs": "Duration of the spinner animation in milliseconds. The default varies based on the spinner.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -42,6 +58,39 @@
       "reflectToAttr": false,
       "docs": "The name of the SVG spinner to use. If a name is not provided, the platform's default\nspinner will be used.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "bubbles",
+          "type": "string"
+        },
+        {
+          "value": "circles",
+          "type": "string"
+        },
+        {
+          "value": "circular",
+          "type": "string"
+        },
+        {
+          "value": "crescent",
+          "type": "string"
+        },
+        {
+          "value": "dots",
+          "type": "string"
+        },
+        {
+          "value": "lines",
+          "type": "string"
+        },
+        {
+          "value": "lines-small",
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -54,6 +103,11 @@
       "docs": "If `true`, the spinner's animation will be paused.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     }
@@ -67,5 +121,22 @@
       "docs": "Color of the spinner"
     }
   ],
-  "slots": []
+  "slots": [],
+  "dependents": [
+    "ion-infinite-scroll-content",
+    "ion-loading",
+    "ion-refresher-content"
+  ],
+  "dependencies": [],
+  "dependencyGraph": {
+    "ion-infinite-scroll-content": [
+      "ion-spinner"
+    ],
+    "ion-loading": [
+      "ion-spinner"
+    ],
+    "ion-refresher-content": [
+      "ion-spinner"
+    ]
+  }
 }

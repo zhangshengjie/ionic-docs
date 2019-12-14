@@ -1,7 +1,7 @@
 {
-  "tag": "ion-modal",
   "filePath": "src/components/modal/modal.tsx",
   "encapsulation": "scoped",
+  "tag": "ion-modal",
   "readme": "# ion-modal\n\nA Modal is a dialog that appears on top of the app's content, and must be dismissed by the app before interaction can resume. It is useful as a select component when there are a lot of options to choose from, or when filtering items in a list, as well as many other use cases.\n\n\n### Creating\n\nModals can be created using a [Modal Controller](../modal-controller). They can be customized by passing modal options in the modal controller's `create()` method.\n\n\n### Dismissing\n\nThe modal can be dismissed after creation by calling the `dismiss()` method on the modal controller. The `onDidDismiss` function can be called to perform an action after the modal is dismissed.\n\n",
   "docs": "A Modal is a dialog that appears on top of the app's content, and must be dismissed by the app before interaction can resume. It is useful as a select component when there are a lot of options to choose from, or when filtering items in a list, as well as many other use cases.",
   "docsTags": [
@@ -26,6 +26,11 @@
       "docs": "If `true`, the modal will animate.",
       "docsTags": [],
       "default": "true",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -38,6 +43,11 @@
       "docs": "If `true`, the modal will be dismissed when the backdrop is clicked.",
       "docsTags": [],
       "default": "true",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -49,6 +59,20 @@
       "reflectToAttr": false,
       "docs": "The component to display inside of the modal.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "Function"
+        },
+        {
+          "type": "HTMLElement"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": true
     },
@@ -59,6 +83,14 @@
       "reflectToAttr": false,
       "docs": "The data to pass to the modal component.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "undefined"
+        },
+        {
+          "type": "{ [key: string]: any; }"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -70,6 +102,17 @@
       "reflectToAttr": false,
       "docs": "Additional classes to apply for custom CSS. If multiple classes are\nprovided they should be separated by spaces.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "string[]"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -80,6 +123,14 @@
       "reflectToAttr": false,
       "docs": "Animation to use when the modal is presented.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "((Animation: Animation, baseEl: any, opts?: any) => Promise<Animation>)"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -92,6 +143,11 @@
       "docs": "If `true`, the keyboard will be automatically dismissed when the overlay is presented.",
       "docsTags": [],
       "default": "true",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -102,6 +158,14 @@
       "reflectToAttr": false,
       "docs": "Animation to use when the modal is dismissed.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "((Animation: Animation, baseEl: any, opts?: any) => Promise<Animation>)"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -113,6 +177,16 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "ios",
+          "type": "string"
+        },
+        {
+          "value": "md",
+          "type": "string"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -125,6 +199,11 @@
       "docs": "If `true`, a backdrop will be displayed behind the modal.",
       "docsTags": [],
       "default": "true",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     }
@@ -279,5 +358,14 @@
       "docs": "Width of the modal"
     }
   ],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [
+    "ion-backdrop"
+  ],
+  "dependencyGraph": {
+    "ion-modal": [
+      "ion-backdrop"
+    ]
+  }
 }

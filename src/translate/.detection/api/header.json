@@ -1,7 +1,7 @@
 {
-  "tag": "ion-header",
   "filePath": "src/components/header/header.tsx",
   "encapsulation": "none",
+  "tag": "ion-header",
   "readme": "# ion-header\n\nHeader is a parent component that holds the toolbar component.\nIt's important to note that ion-header needs to be the one of the three root elements of a page\n\n\n",
   "docs": "Header is a parent component that holds the toolbar component.\nIt's important to note that ion-header needs to be the one of the three root elements of a page",
   "docsTags": [
@@ -25,6 +25,15 @@
       "reflectToAttr": false,
       "docs": "Describes the scroll effect that will be applied to the header\n`condense` only applies in iOS mode.\n\nTypically used for [Collapsible Large Titles](https://ionicframework.com/docs/api/title#collapsible-large-titles)",
       "docsTags": [],
+      "values": [
+        {
+          "value": "condense",
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -36,6 +45,16 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "ios",
+          "type": "string"
+        },
+        {
+          "value": "md",
+          "type": "string"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -48,6 +67,11 @@
       "docs": "If `true`, the header will be translucent.\nOnly applies when the mode is `\"ios\"` and the device supports\n[`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter#Browser_compatibility).\n\nNote: In order to scroll content behind the header, the `fullscreen`\nattribute needs to be set on the content.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     }
@@ -55,5 +79,8 @@
   "methods": [],
   "events": [],
   "styles": [],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [],
+  "dependencyGraph": {}
 }

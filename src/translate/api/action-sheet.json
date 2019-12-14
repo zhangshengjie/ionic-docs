@@ -1,7 +1,7 @@
 {
-  "tag": "ion-action-sheet",
   "filePath": "src/components/action-sheet/action-sheet.tsx",
   "encapsulation": "scoped",
+  "tag": "ion-action-sheet",
   "readme": "# ion-action-sheet\n\nAn Action Sheet is a dialog that displays a set of options. It appears on top of the app's content, and must be manually dismissed by the user before they can resume interaction with the app. Destructive options are made obvious in `ios` mode. There are multiple ways to dismiss the action sheet, including tapping the backdrop or hitting the escape key on desktop.\n\n### Creating\n\nAn action sheet can be created by the [Action Sheet Controller](../action-sheet-controller) from an array of `buttons`, with each button including properties for its `text`, and optionally a `handler` and `role`. If a handler returns `false` then the action sheet will not be dismissed. An action sheet can also optionally have a `header` and a `subHeader`.\n\n### Buttons\n\nA button's `role` property can either be `destructive` or `cancel`. Buttons without a role property will have the default look for the platform. Buttons with the `cancel` role will always load as the bottom button, no matter where they are in the array. All other buttons will be displayed in the order they have been added to the `buttons` array. Note: We recommend that `destructive` buttons are always the first button in the array, making them the top button. Additionally, if the action sheet is dismissed by tapping the backdrop, then it will fire the handler from the button with the cancel role.\n\n",
   "docs": "An Action Sheet is a dialog that displays a set of options. It appears on top of the app's content, and must be manually dismissed by the user before they can resume interaction with the app. Destructive options are made obvious in `ios` mode. There are multiple ways to dismiss the action sheet, including tapping the backdrop or hitting the escape key on desktop.",
   "docsTags": [
@@ -26,6 +26,11 @@
       "docs": "If `true`, the action sheet will animate.",
       "docsTags": [],
       "default": "true",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -38,6 +43,11 @@
       "docs": "If `true`, the action sheet will be dismissed when the backdrop is clicked.",
       "docsTags": [],
       "default": "true",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -49,6 +59,14 @@
       "docs": "An array of buttons for the action sheet.",
       "docsTags": [],
       "default": "[]",
+      "values": [
+        {
+          "type": "(string"
+        },
+        {
+          "type": "ActionSheetButton)[]"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -60,6 +78,17 @@
       "reflectToAttr": false,
       "docs": "Additional classes to apply for custom CSS. If multiple classes are\nprovided they should be separated by spaces.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "string[]"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -70,6 +99,14 @@
       "reflectToAttr": false,
       "docs": "Animation to use when the action sheet is presented.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "((Animation: Animation, baseEl: any, opts?: any) => Promise<Animation>)"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -81,6 +118,14 @@
       "reflectToAttr": false,
       "docs": "Title for the action sheet.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -93,6 +138,11 @@
       "docs": "If `true`, the keyboard will be automatically dismissed when the overlay is presented.",
       "docsTags": [],
       "default": "true",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -103,6 +153,14 @@
       "reflectToAttr": false,
       "docs": "Animation to use when the action sheet is dismissed.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "((Animation: Animation, baseEl: any, opts?: any) => Promise<Animation>)"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -114,6 +172,16 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "ios",
+          "type": "string"
+        },
+        {
+          "value": "md",
+          "type": "string"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -125,6 +193,14 @@
       "reflectToAttr": false,
       "docs": "Subtitle for the action sheet.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -137,6 +213,11 @@
       "docs": "If `true`, the action sheet will be translucent.\nOnly applies when the mode is `\"ios\"` and the device supports\n[`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter#Browser_compatibility).",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     }
@@ -286,5 +367,18 @@
       "docs": "Width of the action sheet"
     }
   ],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [
+    "ion-backdrop",
+    "ion-icon",
+    "ion-ripple-effect"
+  ],
+  "dependencyGraph": {
+    "ion-action-sheet": [
+      "ion-backdrop",
+      "ion-icon",
+      "ion-ripple-effect"
+    ]
+  }
 }

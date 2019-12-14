@@ -1,7 +1,7 @@
 {
-  "tag": "ion-text",
   "filePath": "src/components/text/text.tsx",
   "encapsulation": "shadow",
+  "tag": "ion-text",
   "readme": "# ion-text\n\nThe text component is a simple component that can be used to style the text color of any element. The `ion-text` element should wrap the element in order to change the text color of that element.\n\n",
   "docs": "The text component is a simple component that can be used to style the text color of any element. The `ion-text` element should wrap the element in order to change the text color of that element.",
   "docsTags": [
@@ -22,6 +22,14 @@
       "reflectToAttr": false,
       "docs": "The color to use from your application's color palette.\nDefault options are: `\"primary\"`, `\"secondary\"`, `\"tertiary\"`, `\"success\"`, `\"warning\"`, `\"danger\"`, `\"light\"`, `\"medium\"`, and `\"dark\"`.\nFor more information on colors, see [theming](/docs/theming/basics).",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -33,6 +41,16 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "ios",
+          "type": "string"
+        },
+        {
+          "value": "md",
+          "type": "string"
+        }
+      ],
       "optional": true,
       "required": false
     }
@@ -40,5 +58,8 @@
   "methods": [],
   "events": [],
   "styles": [],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [],
+  "dependencyGraph": {}
 }

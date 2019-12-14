@@ -1,7 +1,7 @@
 {
-  "tag": "ion-picker",
   "filePath": "src/components/picker/picker.tsx",
   "encapsulation": "scoped",
+  "tag": "ion-picker",
   "readme": "# ion-picker\n\nA Picker is a dialog that displays a row of buttons and columns underneath. It appears on top of the app's content, and at the bottom of the viewport.\n\n\n",
   "docs": "A Picker is a dialog that displays a row of buttons and columns underneath. It appears on top of the app's content, and at the bottom of the viewport.",
   "docsTags": [
@@ -21,6 +21,11 @@
       "docs": "If `true`, the picker will animate.",
       "docsTags": [],
       "default": "true",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -33,6 +38,11 @@
       "docs": "If `true`, the picker will be dismissed when the backdrop is clicked.",
       "docsTags": [],
       "default": "true",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -44,6 +54,11 @@
       "docs": "Array of buttons to be displayed at the top of the picker.",
       "docsTags": [],
       "default": "[]",
+      "values": [
+        {
+          "type": "PickerButton[]"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -55,6 +70,11 @@
       "docs": "Array of columns to be displayed in the picker.",
       "docsTags": [],
       "default": "[]",
+      "values": [
+        {
+          "type": "PickerColumn[]"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -66,6 +86,17 @@
       "reflectToAttr": false,
       "docs": "Additional classes to apply for custom CSS. If multiple classes are\nprovided they should be separated by spaces.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "string[]"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -78,6 +109,11 @@
       "docs": "Number of milliseconds to wait before dismissing the picker.",
       "docsTags": [],
       "default": "0",
+      "values": [
+        {
+          "type": "number"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -88,6 +124,14 @@
       "reflectToAttr": false,
       "docs": "Animation to use when the picker is presented.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "((Animation: Animation, baseEl: any, opts?: any) => Promise<Animation>)"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -100,6 +144,11 @@
       "docs": "If `true`, the keyboard will be automatically dismissed when the overlay is presented.",
       "docsTags": [],
       "default": "true",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -110,6 +159,14 @@
       "reflectToAttr": false,
       "docs": "Animation to use when the picker is dismissed.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "((Animation: Animation, baseEl: any, opts?: any) => Promise<Animation>)"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -121,6 +178,16 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "ios",
+          "type": "string"
+        },
+        {
+          "value": "md",
+          "type": "string"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -133,6 +200,11 @@
       "docs": "If `true`, a backdrop will be displayed behind the picker.",
       "docsTags": [],
       "default": "true",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     }
@@ -308,5 +380,16 @@
       "docs": "Width of the picker"
     }
   ],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [
+    "ion-backdrop",
+    "ion-picker-column"
+  ],
+  "dependencyGraph": {
+    "ion-picker": [
+      "ion-backdrop",
+      "ion-picker-column"
+    ]
+  }
 }

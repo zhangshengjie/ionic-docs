@@ -1,7 +1,7 @@
 {
-  "tag": "ion-label",
   "filePath": "src/components/label/label.tsx",
   "encapsulation": "scoped",
+  "tag": "ion-label",
   "readme": "# ion-label\n\nLabel is a wrapper element that can be used in combination with `ion-item`, `ion-input`, `ion-toggle`, and more. The position of the label inside of an item can be inline, fixed, stacked, or floating.\n\n",
   "docs": "Label is a wrapper element that can be used in combination with `ion-item`, `ion-input`, `ion-toggle`, and more. The position of the label inside of an item can be inline, fixed, stacked, or floating.",
   "docsTags": [
@@ -25,6 +25,14 @@
       "reflectToAttr": false,
       "docs": "The color to use from your application's color palette.\nDefault options are: `\"primary\"`, `\"secondary\"`, `\"tertiary\"`, `\"success\"`, `\"warning\"`, `\"danger\"`, `\"light\"`, `\"medium\"`, and `\"dark\"`.\nFor more information on colors, see [theming](/docs/theming/basics).",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -36,6 +44,16 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "ios",
+          "type": "string"
+        },
+        {
+          "value": "md",
+          "type": "string"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -47,6 +65,23 @@
       "reflectToAttr": false,
       "docs": "The position determines where and how the label behaves inside an item.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "fixed",
+          "type": "string"
+        },
+        {
+          "value": "floating",
+          "type": "string"
+        },
+        {
+          "value": "stacked",
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     }
@@ -60,5 +95,14 @@
       "docs": "Color of the label"
     }
   ],
-  "slots": []
+  "slots": [],
+  "dependents": [
+    "ion-select-popover"
+  ],
+  "dependencies": [],
+  "dependencyGraph": {
+    "ion-select-popover": [
+      "ion-label"
+    ]
+  }
 }

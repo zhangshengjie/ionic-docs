@@ -1,7 +1,7 @@
 {
-  "tag": "ion-checkbox",
   "filePath": "src/components/checkbox/checkbox.tsx",
   "encapsulation": "shadow",
+  "tag": "ion-checkbox",
   "readme": "# ion-checkbox\n\nCheckboxes allow the selection of multiple options from a set of options. They appear as checked (ticked) when activated. Clicking on a checkbox will toggle the `checked` property. They can also be checked programmatically by setting the `checked` property.\n\n\n\n",
   "docs": "Checkboxes allow the selection of multiple options from a set of options. They appear as checked (ticked) when activated. Clicking on a checkbox will toggle the `checked` property. They can also be checked programmatically by setting the `checked` property.",
   "docsTags": [
@@ -26,6 +26,11 @@
       "docs": "If `true`, the checkbox is selected.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -37,6 +42,14 @@
       "reflectToAttr": false,
       "docs": "The color to use from your application's color palette.\nDefault options are: `\"primary\"`, `\"secondary\"`, `\"tertiary\"`, `\"success\"`, `\"warning\"`, `\"danger\"`, `\"light\"`, `\"medium\"`, and `\"dark\"`.\nFor more information on colors, see [theming](/docs/theming/basics).",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -49,6 +62,11 @@
       "docs": "If `true`, the user cannot interact with the checkbox.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -61,6 +79,11 @@
       "docs": "If `true`, the checkbox will visually appear as indeterminate.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -72,6 +95,16 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "ios",
+          "type": "string"
+        },
+        {
+          "value": "md",
+          "type": "string"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -84,6 +117,11 @@
       "docs": "The name of the control, which is submitted with the form data.",
       "docsTags": [],
       "default": "this.inputId",
+      "values": [
+        {
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -96,6 +134,11 @@
       "docs": "The value of the toggle does not mean if it's checked or not, use the `checked`\nproperty for that.\n\nThe value of a toggle is analogous to the value of a `<input type=\"checkbox\">`,\nit's only used when the toggle participates in a native `<form>`.",
       "docsTags": [],
       "default": "'on'",
+      "values": [
+        {
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     }
@@ -182,5 +225,8 @@
       "docs": "Transition of the checkbox icon"
     }
   ],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [],
+  "dependencyGraph": {}
 }

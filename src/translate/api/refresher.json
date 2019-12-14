@@ -1,7 +1,7 @@
 {
-  "tag": "ion-refresher",
   "filePath": "src/components/refresher/refresher.tsx",
   "encapsulation": "none",
+  "tag": "ion-refresher",
   "readme": "# ion-refresher\n\nThe refresher provides pull-to-refresh functionality on a content component.\nThe pull-to-refresh pattern lets a user pull down on a list of data using touch\nin order to retrieve more data.\n\nData should be modified during the refresher's output events. Once the async\noperation has completed and the refreshing should end, call `complete()` on the\nrefresher.\n\n\n",
   "docs": "The refresher provides pull-to-refresh functionality on a content component.\nThe pull-to-refresh pattern lets a user pull down on a list of data using touch\nin order to retrieve more data.\n\nData should be modified during the refresher's output events. Once the async\noperation has completed and the refreshing should end, call `complete()` on the\nrefresher.",
   "docsTags": [],
@@ -21,6 +21,11 @@
       "docs": "Time it takes to close the refresher.",
       "docsTags": [],
       "default": "'280ms'",
+      "values": [
+        {
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -33,6 +38,11 @@
       "docs": "If `true`, the refresher will be hidden.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -45,6 +55,11 @@
       "docs": "How much to multiply the pull speed by. To slow the pull animation down,\npass a number less than `1`. To speed up the pull, pass a number greater\nthan `1`. The default value is `1` which is equal to the speed of the cursor.\nIf a negative value is passed in, the factor will be `1` instead.\n\nFor example: If the value passed is `1.2` and the content is dragged by\n`10` pixels, instead of `10` pixels the content will be pulled by `12` pixels\n(an increase of 20 percent). If the value passed is `0.8`, the dragged amount\nwill be `8` pixels, less than the amount the cursor has moved.",
       "docsTags": [],
       "default": "1",
+      "values": [
+        {
+          "type": "number"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -57,6 +72,11 @@
       "docs": "The maximum distance of the pull until the refresher\nwill automatically go into the `refreshing` state.\nDefaults to the result of `pullMin + 60`.",
       "docsTags": [],
       "default": "this.pullMin + 60",
+      "values": [
+        {
+          "type": "number"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -69,6 +89,11 @@
       "docs": "The minimum distance the user must pull down until the\nrefresher will go into the `refreshing` state.",
       "docsTags": [],
       "default": "60",
+      "values": [
+        {
+          "type": "number"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -81,6 +106,11 @@
       "docs": "Time it takes the refresher to to snap back to the `refreshing` state.",
       "docsTags": [],
       "default": "'280ms'",
+      "values": [
+        {
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     }
@@ -150,5 +180,8 @@
     }
   ],
   "styles": [],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [],
+  "dependencyGraph": {}
 }

@@ -1,7 +1,7 @@
 {
-  "tag": "ion-list-header",
   "filePath": "src/components/list-header/list-header.tsx",
   "encapsulation": "shadow",
+  "tag": "ion-list-header",
   "readme": "# ion-list-header\n\nListHeader a header component for a list.\nUnlike ItemDivider, ListHeaders are styled to be stand-out from the rest of the list items.\n\n",
   "docs": "ListHeader a header component for a list.\nUnlike ItemDivider, ListHeaders are styled to be stand-out from the rest of the list items.",
   "docsTags": [
@@ -23,6 +23,14 @@
       "reflectToAttr": false,
       "docs": "The color to use from your application's color palette.\nDefault options are: `\"primary\"`, `\"secondary\"`, `\"tertiary\"`, `\"success\"`, `\"warning\"`, `\"danger\"`, `\"light\"`, `\"medium\"`, and `\"dark\"`.\nFor more information on colors, see [theming](/docs/theming/basics).",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -34,6 +42,16 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "ios",
+          "type": "string"
+        },
+        {
+          "value": "md",
+          "type": "string"
+        }
+      ],
       "optional": true,
       "required": false
     }
@@ -52,5 +70,14 @@
       "docs": "Color of the list header text"
     }
   ],
-  "slots": []
+  "slots": [],
+  "dependents": [
+    "ion-select-popover"
+  ],
+  "dependencies": [],
+  "dependencyGraph": {
+    "ion-select-popover": [
+      "ion-list-header"
+    ]
+  }
 }

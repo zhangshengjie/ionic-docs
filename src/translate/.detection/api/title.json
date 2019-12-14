@@ -1,7 +1,7 @@
 {
-  "tag": "ion-title",
   "filePath": "src/components/title/title.tsx",
   "encapsulation": "shadow",
+  "tag": "ion-title",
   "readme": "# ion-title\n\n`ion-title` is a component that sets the title of the `Toolbar`.\n",
   "docs": "`ion-title` is a component that sets the title of the `Toolbar`.",
   "docsTags": [],
@@ -20,6 +20,14 @@
       "reflectToAttr": false,
       "docs": "The color to use from your application's color palette.\nDefault options are: `\"primary\"`, `\"secondary\"`, `\"tertiary\"`, `\"success\"`, `\"warning\"`, `\"danger\"`, `\"light\"`, `\"medium\"`, and `\"dark\"`.\nFor more information on colors, see [theming](/docs/theming/basics).",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -31,6 +39,19 @@
       "reflectToAttr": false,
       "docs": "The size of the toolbar title.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "large",
+          "type": "string"
+        },
+        {
+          "value": "small",
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     }
@@ -44,5 +65,8 @@
       "docs": "Text color of the title"
     }
   ],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [],
+  "dependencyGraph": {}
 }

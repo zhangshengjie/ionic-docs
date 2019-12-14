@@ -1,7 +1,7 @@
 {
-  "tag": "ion-fab",
   "filePath": "src/components/fab/fab.tsx",
   "encapsulation": "shadow",
+  "tag": "ion-fab",
   "readme": "# ion-fab\n\nFabs are container elements that contain one or more fab buttons. They should be placed in a fixed position that does not scroll with the content. Fab should have one main fab-button. Fabs can also contain fab-lists which contain related buttons that show when the main fab button is clicked. The same fab container can contain several [fab-list](../fab-list) elements with different side values.\n",
   "docs": "Fabs are container elements that contain one or more fab buttons. They should be placed in a fixed position that does not scroll with the content. Fab should have one main fab-button. Fabs can also contain fab-lists which contain related buttons that show when the main fab button is clicked. The same fab container can contain several [fab-list](../fab-list) elements with different side values.",
   "docsTags": [],
@@ -21,6 +21,11 @@
       "docs": "If `true`, both the `ion-fab-button` and all `ion-fab-list` inside `ion-fab` will become active.\nThat means `ion-fab-button` will become a `close` icon and `ion-fab-list` will become visible.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -33,6 +38,11 @@
       "docs": "If `true`, the fab will display on the edge of the header if\n`vertical` is `\"top\"`, and on the edge of the footer if\nit is `\"bottom\"`. Should be used with a `fixed` slot.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -44,6 +54,23 @@
       "reflectToAttr": false,
       "docs": "Where to align the fab horizontally in the viewport.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "center",
+          "type": "string"
+        },
+        {
+          "value": "end",
+          "type": "string"
+        },
+        {
+          "value": "start",
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -55,6 +82,23 @@
       "reflectToAttr": false,
       "docs": "Where to align the fab vertically in the viewport.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "bottom",
+          "type": "string"
+        },
+        {
+          "value": "center",
+          "type": "string"
+        },
+        {
+          "value": "top",
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     }
@@ -74,5 +118,8 @@
   ],
   "events": [],
   "styles": [],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [],
+  "dependencyGraph": {}
 }

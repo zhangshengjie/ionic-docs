@@ -1,7 +1,7 @@
 {
-  "tag": "ion-router",
   "filePath": "src/components/router/router.tsx",
   "encapsulation": "none",
+  "tag": "ion-router",
   "readme": "# ion-router\n\nThe router is a component for handling routing inside vanilla and Stencil JavaScript projects.\n\n> Note: this component should only be used with vanilla and Stencil JavaScript projects. For Angular projects, use [`ion-router-outlet`](../router-outlet) and the Angular router.\n\nApps should have a single `ion-router` component in the codebase.\nThis component controls all interactions with the browser history and it aggregates updates through an event system.\n\n`ion-router` is just a URL coordinator for the navigation outlets of ionic: `ion-nav` and `ion-tabs`.\n\nThat means the `ion-router` never touches the DOM, it does NOT show the components or emit any kind of lifecycle events, it just tells `ion-nav` and `ion-tabs` what and when to \"show\" based on the browser's URL.\n\nIn order to configure this relationship between components (to load/select) and URLs, `ion-router` uses a declarative syntax using JSX/HTML to define a tree of routes.\n\n",
   "docs": "The router is a component for handling routing inside vanilla and Stencil JavaScript projects.\n\n> Note: this component should only be used with vanilla and Stencil JavaScript projects. For Angular projects, use [`ion-router-outlet`](../router-outlet) and the Angular router.\n\nApps should have a single `ion-router` component in the codebase.\nThis component controls all interactions with the browser history and it aggregates updates through an event system.\n\n`ion-router` is just a URL coordinator for the navigation outlets of ionic: `ion-nav` and `ion-tabs`.\n\nThat means the `ion-router` never touches the DOM, it does NOT show the components or emit any kind of lifecycle events, it just tells `ion-nav` and `ion-tabs` what and when to \"show\" based on the browser's URL.\n\nIn order to configure this relationship between components (to load/select) and URLs, `ion-router` uses a declarative syntax using JSX/HTML to define a tree of routes.",
   "docsTags": [],
@@ -18,6 +18,11 @@
       "docs": "By default `ion-router` will match the routes at the root path (\"/\").\nThat can be changed when",
       "docsTags": [],
       "default": "'/'",
+      "values": [
+        {
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -30,6 +35,11 @@
       "docs": "The router can work in two \"modes\":\n- With hash: `/index.html#/path/to/page`\n- Without hash: `/path/to/page`\n\nUsing one or another might depend in the requirements of your app and/or where it's deployed.\n\nUsually \"hash-less\" navigation works better for SEO and it's more user friendly too, but it might\nrequires additional server-side configuration in order to properly work.\n\nOn the otherside hash-navigation is much easier to deploy, it even works over the file protocol.\n\nBy default, this property is `true`, change to `false` to allow hash-less URLs.",
       "docsTags": [],
       "default": "true",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     }
@@ -88,5 +98,8 @@
     }
   ],
   "styles": [],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [],
+  "dependencyGraph": {}
 }

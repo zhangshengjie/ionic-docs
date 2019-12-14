@@ -1,7 +1,7 @@
 {
-  "tag": "ion-footer",
   "filePath": "src/components/footer/footer.tsx",
   "encapsulation": "none",
+  "tag": "ion-footer",
   "readme": "# ion-footer\n\nFooter is a root component of a page that sits at the bottom of the page.\nFooter can be a wrapper for ion-toolbar to make sure the content area is sized correctly.\n",
   "docs": "Footer is a root component of a page that sits at the bottom of the page.\nFooter can be a wrapper for ion-toolbar to make sure the content area is sized correctly.",
   "docsTags": [
@@ -23,6 +23,16 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "ios",
+          "type": "string"
+        },
+        {
+          "value": "md",
+          "type": "string"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -35,6 +45,11 @@
       "docs": "If `true`, the footer will be translucent.\nOnly applies when the mode is `\"ios\"` and the device supports\n[`backdrop-filter`](https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter#Browser_compatibility).\n\nNote: In order to scroll content behind the footer, the `fullscreen`\nattribute needs to be set on the content.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     }
@@ -42,5 +57,8 @@
   "methods": [],
   "events": [],
   "styles": [],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [],
+  "dependencyGraph": {}
 }

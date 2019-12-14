@@ -1,7 +1,7 @@
 {
-  "tag": "ion-radio-group",
   "filePath": "src/components/radio-group/radio-group.tsx",
   "encapsulation": "none",
+  "tag": "ion-radio-group",
   "readme": "# ion-radio-group\n\nA radio group is a group of [radio buttons](../radio). It allows\na user to select at most one radio button from a set. Checking one radio\nbutton that belongs to a radio group unchecks any previous checked\nradio button within the same group.\n\n\n\n",
   "docs": "A radio group is a group of [radio buttons](../radio). It allows\na user to select at most one radio button from a set. Checking one radio\nbutton that belongs to a radio group unchecks any previous checked\nradio button within the same group.",
   "docsTags": [],
@@ -21,6 +21,11 @@
       "docs": "If `true`, the radios can be deselected.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -33,6 +38,11 @@
       "docs": "The name of the control, which is submitted with the form data.",
       "docsTags": [],
       "default": "this.inputId",
+      "values": [
+        {
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -44,6 +54,11 @@
       "reflectToAttr": false,
       "docs": "the value of the radio group.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "any"
+        }
+      ],
       "optional": true,
       "required": false
     }
@@ -61,5 +76,14 @@
     }
   ],
   "styles": [],
-  "slots": []
+  "slots": [],
+  "dependents": [
+    "ion-select-popover"
+  ],
+  "dependencies": [],
+  "dependencyGraph": {
+    "ion-select-popover": [
+      "ion-radio-group"
+    ]
+  }
 }

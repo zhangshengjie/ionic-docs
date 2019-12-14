@@ -1,7 +1,7 @@
 {
-  "tag": "ion-route-redirect",
   "filePath": "src/components/route-redirect/route-redirect.tsx",
   "encapsulation": "none",
+  "tag": "ion-route-redirect",
   "readme": "# ion-route-redirect\n\nA route redirect can only be used with an `ion-router` as a direct child of it.\n\n> Note: this component should only be used with vanilla and Stencil JavaScript projects. For Angular projects, use [`ion-router-outlet`](../router-outlet) and the Angular router.\n\nThe route redirect has two configurable properties:\n - `from`\n - `to`\n\nIt redirects \"from\" a URL \"to\" another URL. When the defined `ion-route-redirect` rule matches, the router will redirect from the path specified in the `from` property to the path in the `to` property. In order for a redirect to occur the `from` path needs to be an exact match to the navigated URL.\n\n\n## Multiple Route Redirects\n\nAn arbitrary number of redirect routes can be defined inside an `ion-router`, but only one can match.\n\nA route redirect will never call another redirect after its own redirect, since this could lead to infinite loops.\n\nTake the following two redirects:\n\n```html\n<ion-router>\n  <ion-route-redirect from=\"/admin\" to=\"/login\"></ion-route-redirect>\n  <ion-route-redirect from=\"/login\" to=\"/admin\"></ion-route-redirect>\n</ion-router>\n```\n\nIf the user navigates to `/admin` the router will redirect to `/login` and stop there. It will never evaluate more than one redirect.\n\n",
   "docs": "A route redirect can only be used with an `ion-router` as a direct child of it.\n\n> Note: this component should only be used with vanilla and Stencil JavaScript projects. For Angular projects, use [`ion-router-outlet`](../router-outlet) and the Angular router.\n\nThe route redirect has two configurable properties:\n - `from`\n - `to`\n\nIt redirects \"from\" a URL \"to\" another URL. When the defined `ion-route-redirect` rule matches, the router will redirect from the path specified in the `from` property to the path in the `to` property. In order for a redirect to occur the `from` path needs to be an exact match to the navigated URL.",
   "docsTags": [],
@@ -17,6 +17,11 @@
       "reflectToAttr": false,
       "docs": "A redirect route, redirects \"from\" a URL \"to\" another URL. This property is that \"from\" URL.\nIt needs to be an exact match of the navigated URL in order to apply.\n\nThe path specified in this value is always an absolute path, even if the initial `/` slash\nis not specified.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": true
     },
@@ -28,6 +33,17 @@
       "reflectToAttr": false,
       "docs": "A redirect route, redirects \"from\" a URL \"to\" another URL. This property is that \"to\" URL.\nWhen the defined `ion-route-redirect` rule matches, the router will redirect to the path\nspecified in this property.\n\nThe value of this property is always an absolute path inside the scope of routes defined in\n`ion-router` it can't be used with another router or to perform a redirection to a different domain.\n\nNote that this is a virtual redirect, it will not cause a real browser refresh, again, it's\na redirect inside the context of ion-router.\n\nWhen this property is not specified or his value is `undefined` the whole redirect route is noop,\neven if the \"from\" value matches.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": false,
       "required": true
     }
@@ -45,5 +61,8 @@
     }
   ],
   "styles": [],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [],
+  "dependencyGraph": {}
 }

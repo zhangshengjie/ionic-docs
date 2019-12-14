@@ -1,7 +1,7 @@
 {
-  "tag": "ion-tab",
   "filePath": "src/components/tab/tab.tsx",
   "encapsulation": "shadow",
+  "tag": "ion-tab",
   "readme": "# ion-tab\n\nThe tab component is a child component of [tabs](../tabs). Each tab can contain a top level navigation stack for an app or a single view. An app can have many tabs, all with their own independent navigation.\n\nSee the [tabs documentation](../tabs/) for more details on configuring tabs.\n\n",
   "docs": "The tab component is a child component of [tabs](../tabs). Each tab can contain a top level navigation stack for an app or a single view. An app can have many tabs, all with their own independent navigation.\n\nSee the [tabs documentation](../tabs/) for more details on configuring tabs.",
   "docsTags": [],
@@ -15,6 +15,23 @@
       "reflectToAttr": false,
       "docs": "The component to display inside of the tab.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "Function"
+        },
+        {
+          "type": "HTMLElement"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -26,6 +43,11 @@
       "reflectToAttr": false,
       "docs": "A tab id must be provided for each `ion-tab`. It's used internally to reference\nthe selected tab or by the router to switch between them.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": true
     }
@@ -45,5 +67,8 @@
   ],
   "events": [],
   "styles": [],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [],
+  "dependencyGraph": {}
 }

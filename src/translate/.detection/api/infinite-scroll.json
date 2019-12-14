@@ -1,7 +1,7 @@
 {
-  "tag": "ion-infinite-scroll",
   "filePath": "src/components/infinite-scroll/infinite-scroll.tsx",
   "encapsulation": "none",
+  "tag": "ion-infinite-scroll",
   "readme": "# ion-infinite-scroll\n\nThe Infinite Scroll component calls an action to be performed when the user scrolls a specified distance from the bottom or top of the page.\n\nThe expression assigned to the `ionInfinite` event is called when the user reaches that defined distance. When this expression has finished any and all tasks, it should call the `complete()` method on the infinite scroll instance.\n\n## Infinite Scroll Content\n\nThe `ion-infinite-scroll` component has the infinite scroll logic. It requires a child component in order to display content. Ionic uses its `ion-infinite-scroll-content` component by default. This component displays the infinite scroll and changes the look depending on the infinite scroll's state. It displays a spinner that looks best based on the platform the user is on. However, the default spinner can be changed and text can be added by setting properties on the `ion-infinite-scroll-content` component.\n\n## Custom Content\n\nSeparating the `ion-infinite-scroll` and `ion-infinite-scroll-content` components allows developers to create their own content components, if desired. This content can contain anything, from an SVG element to elements with unique CSS animations.\n\n## React\n\nThe Infinite Scroll component is not supported in React.\n",
   "docs": "The Infinite Scroll component calls an action to be performed when the user scrolls a specified distance from the bottom or top of the page.\n\nThe expression assigned to the `ionInfinite` event is called when the user reaches that defined distance. When this expression has finished any and all tasks, it should call the `complete()` method on the infinite scroll instance.",
   "docsTags": [],
@@ -19,6 +19,11 @@
       "docs": "If `true`, the infinite scroll will be hidden and scroll event listeners\nwill be removed.\n\nSet this to true to disable the infinite scroll from actively\ntrying to receive new data while scrolling. This is useful\nwhen it is known that there is no more data that can be added, and\nthe infinite scroll is no longer needed.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -31,6 +36,16 @@
       "docs": "The position of the infinite scroll element.\nThe value can be either `top` or `bottom`.",
       "docsTags": [],
       "default": "'bottom'",
+      "values": [
+        {
+          "value": "bottom",
+          "type": "string"
+        },
+        {
+          "value": "top",
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -43,6 +58,11 @@
       "docs": "The threshold distance from the bottom\nof the content to call the `infinite` output event when scrolled.\nThe threshold value can be either a percent, or\nin pixels. For example, use the value of `10%` for the `infinite`\noutput event to get called when the user has scrolled 10%\nfrom the bottom of the page. Use the value `100px` when the\nscroll is within 100 pixels from the bottom of the page.",
       "docsTags": [],
       "default": "'15%'",
+      "values": [
+        {
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     }
@@ -72,5 +92,8 @@
     }
   ],
   "styles": [],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [],
+  "dependencyGraph": {}
 }

@@ -1,7 +1,7 @@
 {
-  "tag": "ion-back-button",
   "filePath": "src/components/back-button/back-button.tsx",
   "encapsulation": "scoped",
+  "tag": "ion-back-button",
   "readme": "# ion-back-button\n\nThe back button navigates back in the app's history upon click. It is smart enough to know what to render based on the mode and when to show based on the navigation stack.\n\nTo change what is displayed in the back button, use the `text` and `icon` properties.\n\n",
   "docs": "The back button navigates back in the app's history upon click. It is smart enough to know what to render based on the mode and when to show based on the navigation stack.\n\nTo change what is displayed in the back button, use the `text` and `icon` properties.",
   "docsTags": [
@@ -25,6 +25,14 @@
       "reflectToAttr": false,
       "docs": "The color to use from your application's color palette.\nDefault options are: `\"primary\"`, `\"secondary\"`, `\"tertiary\"`, `\"success\"`, `\"warning\"`, `\"danger\"`, `\"light\"`, `\"medium\"`, and `\"dark\"`.\nFor more information on colors, see [theming](/docs/theming/basics).",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -36,6 +44,14 @@
       "reflectToAttr": false,
       "docs": "The url to navigate back to by default when there is no history.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -48,6 +64,11 @@
       "docs": "If `true`, the user cannot interact with the button.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -59,6 +80,17 @@
       "reflectToAttr": false,
       "docs": "The icon name to use for the back button.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -70,6 +102,16 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "ios",
+          "type": "string"
+        },
+        {
+          "value": "md",
+          "type": "string"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -81,6 +123,17 @@
       "reflectToAttr": false,
       "docs": "The text to display in the back button.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -93,6 +146,20 @@
       "docs": "The type of the button.",
       "docsTags": [],
       "default": "'button'",
+      "values": [
+        {
+          "value": "button",
+          "type": "string"
+        },
+        {
+          "value": "reset",
+          "type": "string"
+        },
+        {
+          "value": "submit",
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     }
@@ -251,5 +318,16 @@
       "docs": "Transition of the button"
     }
   ],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [
+    "ion-icon",
+    "ion-ripple-effect"
+  ],
+  "dependencyGraph": {
+    "ion-back-button": [
+      "ion-icon",
+      "ion-ripple-effect"
+    ]
+  }
 }

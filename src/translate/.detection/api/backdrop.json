@@ -1,7 +1,7 @@
 {
-  "tag": "ion-backdrop",
   "filePath": "src/components/backdrop/backdrop.tsx",
   "encapsulation": "shadow",
+  "tag": "ion-backdrop",
   "readme": "# ion-backdrop\n\nBackdrops are full screen components that overlay other components. They are useful behind components that transition in on top of other content and can be used to dismiss that component.\n\n",
   "docs": "Backdrops are full screen components that overlay other components. They are useful behind components that transition in on top of other content and can be used to dismiss that component.",
   "docsTags": [],
@@ -21,6 +21,11 @@
       "docs": "If `true`, the backdrop will stop propagation on tap.",
       "docsTags": [],
       "default": "true",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -33,6 +38,11 @@
       "docs": "If `true`, the backdrop will can be clicked and will emit the `ionBackdropTap` event.",
       "docsTags": [],
       "default": "true",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -45,6 +55,11 @@
       "docs": "If `true`, the backdrop will be visible.",
       "docsTags": [],
       "default": "true",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     }
@@ -62,5 +77,38 @@
     }
   ],
   "styles": [],
-  "slots": []
+  "slots": [],
+  "dependents": [
+    "ion-action-sheet",
+    "ion-alert",
+    "ion-loading",
+    "ion-menu",
+    "ion-modal",
+    "ion-picker",
+    "ion-popover"
+  ],
+  "dependencies": [],
+  "dependencyGraph": {
+    "ion-action-sheet": [
+      "ion-backdrop"
+    ],
+    "ion-alert": [
+      "ion-backdrop"
+    ],
+    "ion-loading": [
+      "ion-backdrop"
+    ],
+    "ion-menu": [
+      "ion-backdrop"
+    ],
+    "ion-modal": [
+      "ion-backdrop"
+    ],
+    "ion-picker": [
+      "ion-backdrop"
+    ],
+    "ion-popover": [
+      "ion-backdrop"
+    ]
+  }
 }

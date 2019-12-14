@@ -1,7 +1,7 @@
 {
-  "tag": "ion-card-title",
   "filePath": "src/components/card-title/card-title.tsx",
   "encapsulation": "shadow",
+  "tag": "ion-card-title",
   "readme": "# ion-card-title\n\n`ion-card-title` is a child component of `ion-card`\n\n",
   "docs": "`ion-card-title` is a child component of `ion-card`",
   "docsTags": [
@@ -20,6 +20,14 @@
       "reflectToAttr": false,
       "docs": "The color to use from your application's color palette.\nDefault options are: `\"primary\"`, `\"secondary\"`, `\"tertiary\"`, `\"success\"`, `\"warning\"`, `\"danger\"`, `\"light\"`, `\"medium\"`, and `\"dark\"`.\nFor more information on colors, see [theming](/docs/theming/basics).",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -31,6 +39,16 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "ios",
+          "type": "string"
+        },
+        {
+          "value": "md",
+          "type": "string"
+        }
+      ],
       "optional": true,
       "required": false
     }
@@ -44,5 +62,8 @@
       "docs": "Color of the card title"
     }
   ],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [],
+  "dependencyGraph": {}
 }

@@ -1,7 +1,7 @@
 {
-  "tag": "ion-toolbar",
   "filePath": "src/components/toolbar/toolbar.tsx",
   "encapsulation": "shadow",
+  "tag": "ion-toolbar",
   "readme": "# ion-toolbar\n\nToolbars are positioned above or below content. When a toolbar is placed in an `<ion-header>` it will appear fixed at the top of the content, and when it is in an `<ion-footer>` it will appear fixed at the bottom. Fullscreen content will scroll behind a toolbar in a header or footer. When placed within an `<ion-content>`, toolbars will scroll with the content.\n\n\n### Buttons\n\nButtons placed in a toolbar should be placed inside of the `<ion-buttons>` element. The `<ion-buttons>` element can be positioned inside of the toolbar using a named slot. The below chart has a description of each slot.\n\n| Slot         | Description                                                                                              |\n|--------------|----------------------------------------------------------------------------------------------------------|\n| `secondary`  | Positions element to the `left` of the content in `ios` mode, and directly to the `right` in `md` mode.  |\n| `primary`    | Positions element to the `right` of the content in `ios` mode, and to the far `right` in `md` mode.      |\n| `start`      | Positions to the `left` of the content in LTR, and to the `right` in RTL.                                |\n| `end`        | Positions to the `right` of the content in LTR, and to the `left` in RTL.                                |\n\n\n### Borders\n\nIn `md` mode, the `<ion-header>` will receive a box-shadow on the bottom, and the `<ion-footer>` will receive a box-shadow on the top.  In `ios` mode, the `<ion-header>` will receive a border on the bottom, and the `<ion-footer>` will receive a border on the top.\n\n\n",
   "docs": "Toolbars are positioned above or below content. When a toolbar is placed in an `<ion-header>` it will appear fixed at the top of the content, and when it is in an `<ion-footer>` it will appear fixed at the bottom. Fullscreen content will scroll behind a toolbar in a header or footer. When placed within an `<ion-content>`, toolbars will scroll with the content.",
   "docsTags": [
@@ -45,6 +45,14 @@
       "reflectToAttr": false,
       "docs": "The color to use from your application's color palette.\nDefault options are: `\"primary\"`, `\"secondary\"`, `\"tertiary\"`, `\"success\"`, `\"warning\"`, `\"danger\"`, `\"light\"`, `\"medium\"`, and `\"dark\"`.\nFor more information on colors, see [theming](/docs/theming/basics).",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -56,6 +64,16 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "ios",
+          "type": "string"
+        },
+        {
+          "value": "md",
+          "type": "string"
+        }
+      ],
       "optional": true,
       "required": false
     }
@@ -140,5 +158,8 @@
       "name": "start",
       "docs": "Content is placed to the left of the toolbar text in LTR, and to the right in RTL."
     }
-  ]
+  ],
+  "dependents": [],
+  "dependencies": [],
+  "dependencyGraph": {}
 }

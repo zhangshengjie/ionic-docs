@@ -1,7 +1,7 @@
 {
-  "tag": "ion-tab-button",
   "filePath": "src/components/tab-button/tab-button.tsx",
   "encapsulation": "shadow",
+  "tag": "ion-tab-button",
   "readme": "# ion-tab-button\n\nA tab button is a UI component that is placed inside of a [tab bar](../tab-bar). The tab button can specify the layout of the icon and label and connect to a [tab view](../tab).\n\nSee the [tabs documentation](../tabs) for more details on configuring tabs.\n\n",
   "docs": "A tab button is a UI component that is placed inside of a [tab bar](../tab-bar). The tab button can specify the layout of the icon and label and connect to a [tab view](../tab).\n\nSee the [tabs documentation](../tabs) for more details on configuring tabs.",
   "docsTags": [
@@ -26,6 +26,11 @@
       "docs": "If `true`, the user cannot interact with the tab button.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -37,6 +42,14 @@
       "reflectToAttr": false,
       "docs": "This attribute instructs browsers to download a URL instead of navigating to\nit, so the user will be prompted to save it as a local file. If the attribute\nhas a value, it is used as the pre-filled file name in the Save prompt\n(the user can still change the file name if they want).",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -48,6 +61,14 @@
       "reflectToAttr": false,
       "docs": "Contains a URL or a URL fragment that the hyperlink points to.\nIf this property is set, an anchor tag will be rendered.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -59,6 +80,35 @@
       "reflectToAttr": false,
       "docs": "Set the layout of the text and icon in the tab bar.\nIt defaults to `'icon-top'`.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "icon-bottom",
+          "type": "string"
+        },
+        {
+          "value": "icon-end",
+          "type": "string"
+        },
+        {
+          "value": "icon-hide",
+          "type": "string"
+        },
+        {
+          "value": "icon-start",
+          "type": "string"
+        },
+        {
+          "value": "icon-top",
+          "type": "string"
+        },
+        {
+          "value": "label-hide",
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -70,6 +120,16 @@
       "reflectToAttr": false,
       "docs": "The mode determines which platform styles to use.",
       "docsTags": [],
+      "values": [
+        {
+          "value": "ios",
+          "type": "string"
+        },
+        {
+          "value": "md",
+          "type": "string"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -81,6 +141,14 @@
       "reflectToAttr": false,
       "docs": "Specifies the relationship of the target object to the link object.\nThe value is a space-separated list of [link types](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types).",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -93,6 +161,11 @@
       "docs": "The selected tab component",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -104,6 +177,14 @@
       "reflectToAttr": false,
       "docs": "A tab id must be provided for each `ion-tab`. It's used internally to reference\nthe selected tab or by the router to switch between them.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -115,6 +196,14 @@
       "reflectToAttr": false,
       "docs": "Specifies where to display the linked URL.\nOnly applies when an `href` is provided.\nSpecial keywords: `\"_blank\"`, `\"_self\"`, `\"_parent\"`, `\"_top\"`.",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": false,
       "required": false
     }
@@ -168,5 +257,14 @@
       "docs": "Color of the button ripple effect"
     }
   ],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [
+    "ion-ripple-effect"
+  ],
+  "dependencyGraph": {
+    "ion-tab-button": [
+      "ion-ripple-effect"
+    ]
+  }
 }

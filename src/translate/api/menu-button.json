@@ -1,7 +1,7 @@
 {
-  "tag": "ion-menu-button",
   "filePath": "src/components/menu-button/menu-button.tsx",
   "encapsulation": "shadow",
+  "tag": "ion-menu-button",
   "readme": "# ion-menu-button\n\nMenu Button is component that automatically creates the icon and functionality to open a menu on a page.\n\n",
   "docs": "Menu Button is component that automatically creates the icon and functionality to open a menu on a page.",
   "docsTags": [],
@@ -16,6 +16,11 @@
       "docs": "Automatically hides the menu button when the corresponding menu is not active",
       "docsTags": [],
       "default": "true",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -27,6 +32,14 @@
       "reflectToAttr": false,
       "docs": "The color to use from your application's color palette.\nDefault options are: `\"primary\"`, `\"secondary\"`, `\"tertiary\"`, `\"success\"`, `\"warning\"`, `\"danger\"`, `\"light\"`, `\"medium\"`, and `\"dark\"`.\nFor more information on colors, see [theming](/docs/theming/basics).",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -39,6 +52,11 @@
       "docs": "If `true`, the user cannot interact with the menu button.",
       "docsTags": [],
       "default": "false",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
       "optional": false,
       "required": false
     },
@@ -50,6 +68,14 @@
       "reflectToAttr": false,
       "docs": "Optional property that maps to a Menu's `menuId` prop. Can also be `start` or `end` for the menu side. This is used to find the correct menu to toggle",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -62,6 +88,20 @@
       "docs": "The type of the button.",
       "docsTags": [],
       "default": "'button'",
+      "values": [
+        {
+          "value": "button",
+          "type": "string"
+        },
+        {
+          "value": "reset",
+          "type": "string"
+        },
+        {
+          "value": "submit",
+          "type": "string"
+        }
+      ],
       "optional": false,
       "required": false
     }
@@ -125,5 +165,16 @@
       "docs": "Top padding of the button"
     }
   ],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [
+    "ion-icon",
+    "ion-ripple-effect"
+  ],
+  "dependencyGraph": {
+    "ion-menu-button": [
+      "ion-icon",
+      "ion-ripple-effect"
+    ]
+  }
 }

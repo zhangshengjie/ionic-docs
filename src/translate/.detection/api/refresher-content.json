@@ -1,7 +1,7 @@
 {
-  "tag": "ion-refresher-content",
   "filePath": "src/components/refresher-content/refresher-content.tsx",
   "encapsulation": "none",
+  "tag": "ion-refresher-content",
   "readme": "# ion-refresher-content\n\nThe refresher content contains the text, icon and spinner to display during a pull-to-refresh. Ionic provides the pulling icon and refreshing spinner based on the platform. However, the default icon, spinner, and text can be customized based on the state of the refresher.\n\n\n",
   "docs": "The refresher content contains the text, icon and spinner to display during a pull-to-refresh. Ionic provides the pulling icon and refreshing spinner based on the platform. However, the default icon, spinner, and text can be customized based on the state of the refresher.",
   "docsTags": [],
@@ -15,6 +15,17 @@
       "reflectToAttr": false,
       "docs": "A static icon to display when you begin to pull down",
       "docsTags": [],
+      "values": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -26,6 +37,14 @@
       "reflectToAttr": false,
       "docs": "The text you want to display when you begin to pull down.\n`pullingText` can accept either plaintext or HTML as a string.\nTo display characters normally reserved for HTML, they\nmust be escaped. For example `<Ionic>` would become\n`&lt;Ionic&gt;`\n\nFor more information: [Security Documentation](https://ionicframework.com/docs/faq/security)",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -37,6 +56,42 @@
       "reflectToAttr": false,
       "docs": "An animated SVG spinner that shows when refreshing begins",
       "docsTags": [],
+      "values": [
+        {
+          "value": "bubbles",
+          "type": "string"
+        },
+        {
+          "value": "circles",
+          "type": "string"
+        },
+        {
+          "value": "circular",
+          "type": "string"
+        },
+        {
+          "value": "crescent",
+          "type": "string"
+        },
+        {
+          "value": "dots",
+          "type": "string"
+        },
+        {
+          "value": "lines",
+          "type": "string"
+        },
+        {
+          "value": "lines-small",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     },
@@ -48,6 +103,14 @@
       "reflectToAttr": false,
       "docs": "The text you want to display when performing a refresh.\n`refreshingText` can accept either plaintext or HTML as a string.\nTo display characters normally reserved for HTML, they\nmust be escaped. For example `<Ionic>` would become\n`&lt;Ionic&gt;`\n\nFor more information: [Security Documentation](https://ionicframework.com/docs/faq/security)",
       "docsTags": [],
+      "values": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
       "optional": true,
       "required": false
     }
@@ -55,5 +118,16 @@
   "methods": [],
   "events": [],
   "styles": [],
-  "slots": []
+  "slots": [],
+  "dependents": [],
+  "dependencies": [
+    "ion-icon",
+    "ion-spinner"
+  ],
+  "dependencyGraph": {
+    "ion-refresher-content": [
+      "ion-icon",
+      "ion-spinner"
+    ]
+  }
 }
