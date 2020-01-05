@@ -31,7 +31,7 @@ Xcodeを開き、 **Xcode** &raquo; **Preferences** &raquo; **Accounts** に移�
 
 iOSシミュレータは、Mac上でiOSデバイスをエミュレートします。次のドキュメントはiOSシミュレータをセットアップするための簡単な方法です。詳しくは、 [Apple's documentation](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/simulator_help_topics/Chapter/Chapter.html) を参照してください。.
 
-Xcodeを開き、**Window** &raquo; **Devices and Simulators** に移動します。**iPhone X** のシュミレーターがまだ存在しない場合は作成します。
+Xcodeを開き、**Window** &raquo; **Devices and Simulators** に移動します。**iPhone 11** のシュミレーターがまだ存在しない場合は作成します。
 
 ![iOS Simulators](/docs/assets/img/installation/ios-xcode-simulators-setup.png)
 
