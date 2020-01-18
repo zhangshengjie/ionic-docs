@@ -70,8 +70,10 @@ export namespace Components {
     'header': string;
     'href': string;
     'icon': string;
+    'iconset': string;
     'img': string;
     'ionicon': string;
+    'size': 'md' | 'lg';
   }
   interface DocsCards {}
   interface DocsCode {
@@ -102,8 +104,22 @@ export namespace Components {
   interface DocsHeader {
     'onToggleClick': (e: Event) => void;
   }
+  interface DocsItem {
+    'header': string;
+    'href': string;
+    'icon': string;
+    'ionicon': string;
+    'rounded': boolean;
+  }
+  interface DocsItemList {}
   interface DocsMenu {
     'onToggleClick': (e: Event) => void;
+  }
+  interface DocsMenuCollapsible {
+    'heading': string;
+  }
+  interface DocsMenuNative {
+    'category': 'community' | 'premier';
   }
   interface DocsMenuToggle {}
   interface DocsNav {
@@ -169,7 +185,6 @@ export namespace Components {
     'variables'?: string;
   }
   interface NewColorGenerator {}
-  interface SmsForm {}
   interface SteppedColorGenerator {}
   interface WistiaVideo {
     'videoId': string;
@@ -305,10 +320,34 @@ declare global {
     new (): HTMLDocsHeaderElement;
   };
 
+  interface HTMLDocsItemElement extends Components.DocsItem, HTMLStencilElement {}
+  var HTMLDocsItemElement: {
+    prototype: HTMLDocsItemElement;
+    new (): HTMLDocsItemElement;
+  };
+
+  interface HTMLDocsItemListElement extends Components.DocsItemList, HTMLStencilElement {}
+  var HTMLDocsItemListElement: {
+    prototype: HTMLDocsItemListElement;
+    new (): HTMLDocsItemListElement;
+  };
+
   interface HTMLDocsMenuElement extends Components.DocsMenu, HTMLStencilElement {}
   var HTMLDocsMenuElement: {
     prototype: HTMLDocsMenuElement;
     new (): HTMLDocsMenuElement;
+  };
+
+  interface HTMLDocsMenuCollapsibleElement extends Components.DocsMenuCollapsible, HTMLStencilElement {}
+  var HTMLDocsMenuCollapsibleElement: {
+    prototype: HTMLDocsMenuCollapsibleElement;
+    new (): HTMLDocsMenuCollapsibleElement;
+  };
+
+  interface HTMLDocsMenuNativeElement extends Components.DocsMenuNative, HTMLStencilElement {}
+  var HTMLDocsMenuNativeElement: {
+    prototype: HTMLDocsMenuNativeElement;
+    new (): HTMLDocsMenuNativeElement;
   };
 
   interface HTMLDocsMenuToggleElement extends Components.DocsMenuToggle, HTMLStencilElement {}
@@ -443,12 +482,6 @@ declare global {
     new (): HTMLNewColorGeneratorElement;
   };
 
-  interface HTMLSmsFormElement extends Components.SmsForm, HTMLStencilElement {}
-  var HTMLSmsFormElement: {
-    prototype: HTMLSmsFormElement;
-    new (): HTMLSmsFormElement;
-  };
-
   interface HTMLSteppedColorGeneratorElement extends Components.SteppedColorGenerator, HTMLStencilElement {}
   var HTMLSteppedColorGeneratorElement: {
     prototype: HTMLSteppedColorGeneratorElement;
@@ -482,7 +515,11 @@ declare global {
     'docs-dropdown': HTMLDocsDropdownElement;
     'docs-footer-announcement': HTMLDocsFooterAnnouncementElement;
     'docs-header': HTMLDocsHeaderElement;
+    'docs-item': HTMLDocsItemElement;
+    'docs-item-list': HTMLDocsItemListElement;
     'docs-menu': HTMLDocsMenuElement;
+    'docs-menu-collapsible': HTMLDocsMenuCollapsibleElement;
+    'docs-menu-native': HTMLDocsMenuNativeElement;
     'docs-menu-toggle': HTMLDocsMenuToggleElement;
     'docs-nav': HTMLDocsNavElement;
     'docs-page': HTMLDocsPageElement;
@@ -505,7 +542,6 @@ declare global {
     'layered-colors-select': HTMLLayeredColorsSelectElement;
     'native-ent-install': HTMLNativeEntInstallElement;
     'new-color-generator': HTMLNewColorGeneratorElement;
-    'sms-form': HTMLSmsFormElement;
     'stepped-color-generator': HTMLSteppedColorGeneratorElement;
     'wistia-video': HTMLWistiaVideoElement;
   }
@@ -563,8 +599,10 @@ declare namespace LocalJSX {
     'header'?: string;
     'href'?: string;
     'icon'?: string;
+    'iconset'?: string;
     'img'?: string;
     'ionicon'?: string;
+    'size'?: 'md' | 'lg';
   }
   interface DocsCards {}
   interface DocsCode {
@@ -593,8 +631,22 @@ declare namespace LocalJSX {
   interface DocsHeader {
     'onToggleClick'?: (e: Event) => void;
   }
+  interface DocsItem {
+    'header'?: string;
+    'href'?: string;
+    'icon'?: string;
+    'ionicon'?: string;
+    'rounded'?: boolean;
+  }
+  interface DocsItemList {}
   interface DocsMenu {
     'onToggleClick'?: (e: Event) => void;
+  }
+  interface DocsMenuCollapsible {
+    'heading'?: string;
+  }
+  interface DocsMenuNative {
+    'category'?: 'community' | 'premier';
   }
   interface DocsMenuToggle {}
   interface DocsNav {
@@ -663,7 +715,6 @@ declare namespace LocalJSX {
     'variables'?: string;
   }
   interface NewColorGenerator {}
-  interface SmsForm {}
   interface SteppedColorGenerator {}
   interface WistiaVideo {
     'videoId'?: string;
@@ -691,7 +742,11 @@ declare namespace LocalJSX {
     'docs-dropdown': DocsDropdown;
     'docs-footer-announcement': DocsFooterAnnouncement;
     'docs-header': DocsHeader;
+    'docs-item': DocsItem;
+    'docs-item-list': DocsItemList;
     'docs-menu': DocsMenu;
+    'docs-menu-collapsible': DocsMenuCollapsible;
+    'docs-menu-native': DocsMenuNative;
     'docs-menu-toggle': DocsMenuToggle;
     'docs-nav': DocsNav;
     'docs-page': DocsPage;
@@ -714,7 +769,6 @@ declare namespace LocalJSX {
     'layered-colors-select': LayeredColorsSelect;
     'native-ent-install': NativeEntInstall;
     'new-color-generator': NewColorGenerator;
-    'sms-form': SmsForm;
     'stepped-color-generator': SteppedColorGenerator;
     'wistia-video': WistiaVideo;
   }
@@ -747,7 +801,11 @@ declare module "@stencil/core" {
       'docs-dropdown': LocalJSX.DocsDropdown & JSXBase.HTMLAttributes<HTMLDocsDropdownElement>;
       'docs-footer-announcement': LocalJSX.DocsFooterAnnouncement & JSXBase.HTMLAttributes<HTMLDocsFooterAnnouncementElement>;
       'docs-header': LocalJSX.DocsHeader & JSXBase.HTMLAttributes<HTMLDocsHeaderElement>;
+      'docs-item': LocalJSX.DocsItem & JSXBase.HTMLAttributes<HTMLDocsItemElement>;
+      'docs-item-list': LocalJSX.DocsItemList & JSXBase.HTMLAttributes<HTMLDocsItemListElement>;
       'docs-menu': LocalJSX.DocsMenu & JSXBase.HTMLAttributes<HTMLDocsMenuElement>;
+      'docs-menu-collapsible': LocalJSX.DocsMenuCollapsible & JSXBase.HTMLAttributes<HTMLDocsMenuCollapsibleElement>;
+      'docs-menu-native': LocalJSX.DocsMenuNative & JSXBase.HTMLAttributes<HTMLDocsMenuNativeElement>;
       'docs-menu-toggle': LocalJSX.DocsMenuToggle & JSXBase.HTMLAttributes<HTMLDocsMenuToggleElement>;
       'docs-nav': LocalJSX.DocsNav & JSXBase.HTMLAttributes<HTMLDocsNavElement>;
       'docs-page': LocalJSX.DocsPage & JSXBase.HTMLAttributes<HTMLDocsPageElement>;
@@ -770,7 +828,6 @@ declare module "@stencil/core" {
       'layered-colors-select': LocalJSX.LayeredColorsSelect & JSXBase.HTMLAttributes<HTMLLayeredColorsSelectElement>;
       'native-ent-install': LocalJSX.NativeEntInstall & JSXBase.HTMLAttributes<HTMLNativeEntInstallElement>;
       'new-color-generator': LocalJSX.NewColorGenerator & JSXBase.HTMLAttributes<HTMLNewColorGeneratorElement>;
-      'sms-form': LocalJSX.SmsForm & JSXBase.HTMLAttributes<HTMLSmsFormElement>;
       'stepped-color-generator': LocalJSX.SteppedColorGenerator & JSXBase.HTMLAttributes<HTMLSteppedColorGeneratorElement>;
       'wistia-video': LocalJSX.WistiaVideo & JSXBase.HTMLAttributes<HTMLWistiaVideoElement>;
     }

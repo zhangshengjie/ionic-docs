@@ -1,8 +1,8 @@
 ---
-previousText: '初めての Ionic アプリ'
-previousUrl: '/docs/angular/your-first-app'
-nextText: 'Photo Gallery の作成'
-nextUrl: '/docs/angular/your-first-app/creating-photo-gallery-device-storage'
+previousText: 'Your First Ionic App'
+previousUrl: '/docs/developer-resources/guides/first-app-v4/your-first-app'
+nextText: 'Creating a Photo Gallery'
+nextUrl: '/docs/developer-resources/guides/first-app-v4/creating-photo-gallery-device-storage'
 ---
 
 # Android、iOS、Camera - Oh My!
@@ -20,42 +20,9 @@ $ ionic cordova platform add android
 
 これらのコマンドは `config.xml` ファイルを作成します。これは Cordova iOS と Android の設定を定義するために使われます。Cordova はこのファイルを読み込み、各ネイティブアプリのバイナリをビルドする際に各設定を適用します。
 
-DevApp でアプリを実行するには、まず `index.html` ファイル内に `cordova.js` への参照を追加する必要があります。`src/index.html` ファイルを開き、次のタグを `head` セクションに追加します。
+There are more steps to configure [iOS](/docs/installation/ios) and [Android](/docs/installation/android) native tooling.
 
-```html
-<head>
-  <!-- ... 他の HTML タグ... -->
 
-  <script src="cordova.js"></script>
-</head>
-```
-> 注意：通常、Cordova でアプリをビルドすると、この script タグが index.html ファイルに追加されます。私たちはそのステップをスキップして代わりに DevApp を使用しているので、手動で行う必要があります。
-
-## DevApp のインストール
-
-[iOS](/docs/installation/ios) と [Android](/docs/installation/android) のネイティブツールを設定するためのステップは他にもあります。ここでは省略します。幸いなことに、Ionic にはネイティブ SDK ツールを扱う際のフラストレーションを回避する方法が用意されています: それが Ionic DevAppです！
-
-Ionic DevApp は Ionic アプリを iOS や Android デバイス上で簡単に動的に実行できる無料のアプリです。App Storeからダウンロードし、デバイスで開きます:
-
-<a href="https://itunes.apple.com/us/app/ionic-devapp/id1233447133?ls=1&mt=8" ><img src="/docs/assets/img/guides/first-app-v3/appstore.png"></a>
-
-<p></p>
-
-<a href="https://play.google.com/store/apps/details?id=io.ionic.devapp&hl=en" ><img src="/docs/assets/img/guides/first-app-v3/playstore.png"></a>
-
-次に、Ionic アカウントにサインインします。
-
-> Ionic アカウントを持っていませんか？画面下部の `サインアップ`  リンクをタップします。アカウントを作成すると、DevApp にアクセスできるだけでなく、最新の Ionic ニュース、ライブイベント、チュートリアルにもアクセスできます。また、ライブコードの更新(バグ修正と新機能の迅速な提供)やネイティブなクラウドビルド(複雑な構築手順をスキップする)へのアクセスも開放します。
-
-その後、ターミナルを開き Ionic プロジェクトに移動します。次のコマンドを実行します:
-
-```shell
-$ ionic serve --devapp
-```
-
-DevApp で、アプリケーションが表示されることを確認してください。タップするとアプリが起動します。
-
-> 表示されない場合、またはこのアプリケーションの作成中に問題が発生した場合は、[ここを参照](https://ionicframework.jp/docs/appflow/devapp/)してください。
 
 とてもいいよ！これで、カメラ機能を追加できます。ちなみに、このリファレンスコードは [GitHub](https://github.com/ionic-team/photo-gallery-tutorial-ionic4) にあります。
 
@@ -193,8 +160,4 @@ export class Tab2Page {
 
 このファイルを保存し、DevApp の Camera ボタンをタップします。ほら見て！デバイスでカメラが起動します。撮影した写真は、フォトギャラリーページに表示されます。
 
-次に、このアプリをフォトギャラリーに変換する方法と、写真をデバイスに保存する方法についても見ていきます。
-
-<div style="text-align:right;">
-  <docs-button href="/docs/angular/your-first-app/creating-photo-gallery-device-storage">続く <svg viewBox="0 0 512 512"><path d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"></path></svg></docs-button>
-</div>
+Next, we’ll look at how to transform the app into a photo gallery, as well as how to save the photos to your device!

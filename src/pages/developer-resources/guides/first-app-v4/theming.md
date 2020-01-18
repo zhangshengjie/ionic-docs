@@ -1,8 +1,6 @@
 ---
-previousText: 'デバイスストレージを使用してフォトギャラリーを作成'
-previousUrl: '/docs/angular/your-first-app/creating-photo-gallery-device-storage'
-nextText: 'ライフサイクル'
-nextUrl: '/docs/angular/lifecycle'
+previousText: 'Creating a Photo Gallery with Device Storage'
+previousUrl: '/docs/developer-resources/guides/first-app-v4/creating-photo-gallery-device-storage'
 ---
 
 # 自分らしさを！Ionic テーマ
