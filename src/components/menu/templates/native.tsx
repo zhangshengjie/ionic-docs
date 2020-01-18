@@ -51,6 +51,7 @@ intro = {
 
 nativeSolutions = {
   '': {
+    'Overview': '/docs/enterprise/solutions',
     'Identity Vault': '/docs/enterprise/identity-vault',
     'Auth Connect': '/docs/enterprise/auth-connect',
     '': {
@@ -58,13 +59,14 @@ nativeSolutions = {
       'Azure AD B2C': '/docs/enterprise/auth-connect/azure-ad-b2c',
       'AWS Cognito': '/docs/enterprise/auth-connect/aws-cognito'
     },
-    'Secure Storage': '/docs/enterprise/offline-storage'
+    'Offline Storage': '/docs/enterprise/offline-storage'
   }
 };
 
 communityPlugins = {
   'menu-native-getting-started': {
-    'menu-native-quickstart': '/docs/native/community'
+    'menu-native-quickstart': '/docs/native/community',
+    'menu-native-faq': '/docs/native/faq'
   },
   'menu-native-plugins': Object.entries(communityPlugins).sort()
 };

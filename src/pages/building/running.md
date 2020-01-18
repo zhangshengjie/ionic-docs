@@ -12,34 +12,12 @@ nextUrl: '/docs/building/ios'
 * ネイティブ機能を開発するために、[Platformを検出する](/docs/building/cross-platform) `ionic serve` でテストします。
 * [iOSへのデプロイ](/docs/building/ios)
 * [Androidへのデプロイ](/docs/building/android)
-* [Ionic DevApp](/docs/building/running#ionic-devapp)を使って瞬時にiOS、Androidにデプロイ
 
-本稿では、デバイス上でネイティブ機能をテストする、Ionic DevAppをご紹介します。
+## Run Locally in a Web Browser
 
-## Ionic DevApp
+One of the most powerful features of Ionic is that the majority of your app development can happen right in a browser on your desktop. With full access to traditional web development tools (Chrome/Safari/Firefox dev tools), you can write code then test/debug it quickly without having to recompile or deploy to a simulator or device.
 
-Ionic DevAppは、Ionic Frameworkを使って簡単にデバイス上で直接アプリをテストすることあできます。DevAppは、アプリケーションのネイティブ機能をテストするための、プリインストールされた豊富なネイティブプラグインのライブラリを使用することができ、またリアルタイムの変更検知を利用することができます。
-
-複雑なNative SDKをインストールする必要はありません。 `ionic serve`をいう1つの簡単なコマンドで実行できます。実行されているアプリは、DevAppがインストールされているデバイスですぐにプレビューできます。LiveReloadで、変更が反映されます。
-
-### はじめかた
-
-まず、Ionic DevAppをダウンロードしてください。iOS App StoreとGoogle Playで利用できます。
-
-<a href="https://itunes.apple.com/us/app/ionic-devapp/id1233447133?ls=1&amp;mt=8" target="_blank">
-  <img style="width: 160px" src="/docs/assets/img/appstore.png" id="appstore-image">
-</a>
-<a href="https://play.google.com/store/apps/details?id=io.ionic.devapp&amp;hl=en" target="_blank">
-  <img style="width: 160px" alt="Get it on Google Play" src="/docs/assets/img/playstore.png" id="playstore-image">
-</a>
-
-DevAppをインストールしたら、Ionicアカウントを登録するか、ログインします。
-
-> DevAppは、すべてのIonicアカウントに付いてる無料サービスです。
-
-## アプリの実行
-
-DevAppを実行しているデバイスとコンピュータが同じネットワーク上にあることを確認して、`ionic serve`をプロジェクトのディレクトリのコマンドラインから実行します。
+To do so, run `ionic serve` from the command line in the project's directory:
 
 <command-line>
     <command-prompt>ionic serve</command-prompt>
@@ -54,8 +32,6 @@ DevAppを実行しているデバイスとコンピュータが同じネット�
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;External: <span class="bold">http://192.168.1.169:8100</span>
         <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DevApp: <span class="bold">StarTrack-ng@8100</span> on <span class="bold">ionic-home-router.network</span>
-        <br />
         <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="yellow">Use Ctrl+C to quit this process</span>
         <br />
@@ -64,10 +40,7 @@ DevAppを実行しているデバイスとコンピュータが同じネット�
     </command-output>
 </command-line>
 
-`ionic serve` 実行後にDevAppを開いて、現在実行中のアプリ一覧からアプリを選択します。
+With `ionic serve` running, continue developing your app. As you save changes, the app reloads with those changes applied.
 
-![dev app with running app](/docs/assets/img/guides/running/dev-app-preview.png)
-
-アプリがネイティブ機能を呼び出す場合場合、DevAppは呼び出しを処理して、実際に正しいネイティブ実装を返すことができます。
-
-DevAppがサポートするプラグインのリストがあるので、詳細については [DevApp docs](https://ionicframework.com/docs/pro/devapp/) をご覧ください。
+When implementing native functionality, use [Platform Detection](/docs/building/cross-platform).
+When you're ready to test on a real device, see here for [iOS](/docs/building/ios) and [Android](/docs/building/android).

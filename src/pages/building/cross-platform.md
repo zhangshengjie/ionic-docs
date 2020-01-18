@@ -26,7 +26,8 @@ Ionicアプリ内では、ネイティブAPIを呼び出す際はいつでも、
 
 ```typescript
 this.platform.ready().then(() => {
-  if (this.platform.is('cordova')) {
+  // 'hybrid' detects both Cordova and Capacitor
+  if (this.platform.is('hybrid')) {
     // make your native API calls
   } else {
     // fallback to browser APIs
