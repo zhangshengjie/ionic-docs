@@ -1,15 +1,8 @@
 ---
-<<<<<<< HEAD:src/pages/angular/your-first-app/creating-photo-gallery-device-storage.md
-previousText: 'iOS、Android、Camera - Oh My!'
-previousUrl: '/docs/angular/your-first-app/ios-android-camera'
-nextText: 'テーマ'
-nextUrl: '/docs/angular/your-first-app/theming'
-=======
 previousText: 'Android, iOS, and the Camera - Oh My!'
 previousUrl: '/docs/developer-resources/guides/first-app-v4/ios-android-camera'
 nextText: 'Theming'
 nextUrl: '/docs/developer-resources/guides/first-app-v4/theming'
->>>>>>> ab1ed9228685e04d2e10d68ff1ec3ba30257b077:src/pages/developer-resources/guides/first-app-v4/creating-photo-gallery-device-storage.md
 contributors:
   - jsonMartin
 ---
