@@ -75,17 +75,6 @@ Both packages are separate dependencies, so install them next:
 $ npm install @ionic/react-hooks @ionic/pwa-elements
 ```
 
-<<<<<<< HEAD
-このReactコンポーネントは、アプリの初期ルーティングを設定し、アニメーションとレイアウト用のコアIonicコンポーネント（ `IonRouterOutlet` と `IonApp` ）を内包しています。特徴のひとつに、Reactでは、データバインディングを行うために、値が中括弧（ `{}` ）で渡されることがあります。 したがって、 `Route` コンポーネントでは、手軽に `component` の値を `Home` コンポーネントに設定できます。 これは、Reactがその値が文字列ではなく、コンポーネントへの参照であることを認識する方法です。
-
-> ここで重要なのは、これらはすべて標準のReact DOMライブラリであるということです。つまり、カスタム統合レイヤーや変換のための手順はありません。
-
-## コンポーネントスタイル
-
-今回、ここでは `App` を変更する必要はありません。これは、コンテナコンポーネントの基本的な例です。 Routerロジックを設定すると、指定されたURLルートに一致するコンポーネントをレンダリングするだけです。 すでに1つのcomponent/routerがセットアップされているので、先に進み、 `Home` コンポーネントを変更しましょう。
-
-現在、 `Home`コンポーネントは次のようになっています:
-=======
 After installation, open up the project in your code editor of choice.
 
 Next, import `@ionic/pwa-elements` by editing `src/index.tsx`.
@@ -98,7 +87,6 @@ defineCustomElements(window);
 ```
 
 That’s it! Now for the fun part - let’s see the app in action.
->>>>>>> ab1ed9228685e04d2e10d68ff1ec3ba30257b077
 
 ## Run the App
 Run this command in your shell:
@@ -130,11 +118,7 @@ Open `/src/pages/Tab2.tsx	`. We see:
 </IonPage>
 ```
 
-<<<<<<< HEAD
-ここでは、 `IonContent` で、 `IonList` と、より複雑な `IonItem` コンポーネントを追加しています。 `IonItem` の中身を見てみましょう。
-=======
 `IonHeader` represents the top navigation and toolbar, with "Tab 2" as the title. Let’s rename it:
->>>>>>> ab1ed9228685e04d2e10d68ff1ec3ba30257b077
 
 ```typescript
 <IonTitle>Photo Gallery</IonTitle>
