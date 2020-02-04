@@ -50,7 +50,7 @@ nextUrl: '/docs/faq/build'
 
   <section id="cors">
     <a href="#cors"><h3>CORS</h3></a>
-    <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS" target="_blank">CORS</a> (Cross-Origin Resource Sharing) は、サーバがクライアントから Web 資産へのアクセスを制御するメカニズムです。</p>
+    <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS" target="_blank">CORS</a> (Cross-Origin Resource Sharing) は、サーバがクライアントから Web 資産へのアクセスを制御するメカニズムです。See the <a href="/docs/faq/cors">CORS FAQs</a> for more information.</p>
   </section>
 
   <section id="decorators">

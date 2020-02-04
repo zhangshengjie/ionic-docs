@@ -5,10 +5,13 @@ nextText: 'Ionic Storage'
 nextUrl: '/docs/building/storage'
 ---
 
-
 # Web View
 
-Web Viewは、ネイティブデバイスでWebアプリケーションを表示することができます。Ionicは、[Cordova](/docs/faq/glossary#cordova)と統合された<a href="https://github.com/ionic-team/cordova-plugin-ionic-webview" target="_blank">Web View plugin</a>をメンテナンスしています。Ionic CLIを使用すると、プラグインがデフォルトで提供されます。[Capacitor](/docs/faq/glossary#capacitor)を利用している場合、Web Viewは自動的に提供されます。
+Web Views power web apps on native devices.
+
+The Web View is automatically provided for apps integrated with [Capacitor](/docs/faq/glossary#capacitor).
+
+For [Cordova](/docs/faq/glossary#cordova), Ionic maintains a <a href="https://github.com/ionic-team/cordova-plugin-ionic-webview" target="_blank">Web View plugin</a>. The plugin is provided by default when using the Ionic CLI.
 
 ## Web Viewとは
 
@@ -22,32 +25,21 @@ Ionic Web Viewプラグインは、最新のJavaScriptアプリケーション�
 
 ### CORS
 
-Web Viewsは [CORS](/docs/faq/glossary#cors) を強制するため、外部サービスがcross-originリクエストを正しく処理することが重要です。詳しくは <a href="https://enable-cors.org/" target="_blank">enable-cors.org</a> と <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS" target="_blank">MDN</a> をご利用ください。
-
-CORSがサーバーに実装されていない場合は、 CORSをバイパスするネイティブ層でHTTP要求を実行する[a native plugin](/docs/native/http/)があります。
-
-#### サーバーチェックリスト
-
-多くのWebフレームワークは、CORSをサポートするか、公式のアドオンがあります。例えば、Expressは <a href="https://github.com/expressjs/cors" target="_blank">`cors`</a> パッケージが提供されています。これがもし存在しない場合、CORSのために以下を設定する必要があります。
-
-1. `http://localhost:8080` をオリジンとして許可 (<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin" target="_blank">`Access-Control-Allow-Origin`</a>参照)
-1. HTTP methodsを許可する必要があります (<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Methods" target="_blank">`Access-Control-Allow-Methods`</a>参照)
-1. HTTP headersを許可する必要があります (<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers" target="_blank">`Access-Control-Allow-Headers`</a>参照)
-1. サーバが <a href="https://developer.mozilla.org/en-US/docs/Glossary/Preflight_request" target="_blank">preflight requests</a> を処理できるようにする
+Web Views enforce [CORS](/docs/faq/glossary#cors), so it's important that external services properly handle cross-origin requests. See the [CORS FAQs](/docs/faq/cors) for information on dealing with CORS in Ionic apps.
 
 ### Fileプロトコル
 
 CordovaとCapacitorのアプリはローカルのHTTPサーバーでホストされており、`http://` プロトコルとして提供されます。ただし、一部のプラグインは `file://` プロトコルを利用してデバイスファイルにアクセスしようとします。`http://` と `file://` プロトコルの間にある問題を回避するためには、ファイルアクセスするパスをローカルのHTTPサーバに書き換える必要がありあす。例えば、 `file:///path/to/device/file` はアプリがレンダリングする前に `http://<host>:<port>/<prefix>/path/to/device/file` に書き換えなければなりません。
 
-Cordovaアプリの場合、[Ionic Web View plugin](https://github.com/ionic-team/cordova-plugin-ionic-webview) はファイルURLを変換するためのユーティリティ `window.Ionic.WebView.convertFileSrc()` があります。対応する [`@ionic-native/ionic-webview`](/docs/native/ionic-webview/) というIonic Nativeのプラグインもあります。
-
-Capacitorアプリの場合、ファイルURIは自動的に変換されます:
+For Capacitor apps, convert file URIs like so:
 
 ```javascript
 import { Capacitor } from '@capacitor/core';
 
 Capacitor.convertFileSrc(filePath);
 ```
+
+For Cordova apps, the [Ionic Web View plugin](https://github.com/ionic-team/cordova-plugin-ionic-webview) provides a utility function for converting File URIs: `window.Ionic.WebView.convertFileSrc()`. There is also a corresponding Ionic Native plugin: [`@ionic-native/ionic-webview`](/docs/native/ionic-webview/).
 
 ### Implementations
 

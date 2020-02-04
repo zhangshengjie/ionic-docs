@@ -11,18 +11,6 @@ contributors:
 
 Androidアプリを開発するためには、追加の環境設定が必要です。Androidアプリは、Windows、macOS、およびLinux上で作成できます。
 
-## Java
-
-ネイティブAndroidアプリは<a href="https://java.com/en/" target="_blank">Java</a>でコンパイルされています。<a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">ダウンロードページ</a>からJDK 8をダウンロードしてください。
-
-<blockquote>
-  <p>Cordova は最新のJavaでは動きません。Androidアプリをビルドするために、JDK8をインストールする必要があります。</p>
-</blockquote>
-
-## Gradle
-
-<a href="https://gradle.org/" target="_blank">Gradle</a>はAndroidアプリで使用するビルドツールで個別にインストールしなければなりません。詳しくは<a href="https://gradle.org/install/" target="_blank">インストールページ</a>をご覧ください。
-
 ## Android Studio
 
 <a href="https://developer.android.com/studio/" target="_blank">Android Studio</a>はNativeなAndroidアプリを開発するためのIDEです。これには[Android SDK](/docs/faq/glossary#android-sdk)が含まれています。これをコマンドラインで利用するためには、設定が必要です。
@@ -106,4 +94,18 @@ USBケーブルでデバイスをコンピュータに接続し、次のコマ�
 $ adb devices
 ```
 
-デバイスが一覧表示されます。トラブルシューティングや詳細情報については、<a href="https://developer.android.com/studio/command-line/adb" target="_blank">`adb` documentation</a>をご確認ください。
+The device should be listed. See the full <a href="https://developer.android.com/studio/command-line/adb" target="_blank">`adb` documentation</a> for troubleshooting and detailed information.
+
+## Cordova Setup
+
+Additional setup is required for Cordova to support programmatic builds. This section is not necessary for Capacitor.
+
+### Java
+
+Native Android apps are compiled with the <a href="https://java.com/en/" target="_blank">Java</a> programming language. Download JDK8 from the <a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank">download page</a>.
+
+> Unfortunately, Cordova is not compatible with the latest version of Java.
+
+### Gradle
+
+<a href="https://gradle.org/" target="_blank">Gradle</a> is the build tool used in Android apps and must be installed separately. See the <a href="https://gradle.org/install/" target="_blank">install page</a> for details.

@@ -11,7 +11,7 @@ The Ionic command-line interface ([CLI](/docs/faq/glossary#cli)) は、Ionicア�
 Ionic CLI はnpmでグローバルにインストールできます:
 
 ```shell
-$ npm install -g ionic
+$ npm install -g @ionic/cli
 ```
 
 ## Help
@@ -19,21 +19,27 @@ $ npm install -g ionic
 Ionic CLIでは `--help` フラグをつけることでコマンドのドキュメントを利用できます。
 
 ```shell
+$ ionic --help
 $ ionic <command> --help
+$ ionic <command> <subcommand> --help
 ```
+
+> Be sure to run `ionic <command> --help` in your project directory.
+>
+> For some commands, such as `ionic serve`, the help documentation is contextual to the type of your project, e.g. React vs Angular.
 
 <!-- TODO: image? -->
 
 ## 構成
 
-Ionic CLI は、[TypeScript](/docs/faq/glossary#typescript)と [Node.js](/docs/faq/glossary#node)で構築されています。Node 6+をサポートしていますが、最新のNode LTSが推奨です。Follow development on the open source <a href="https://github.com/ionic-team/ionic-cli" target="_blank">Github repository</a>.
+Ionic CLI は、[TypeScript](/docs/faq/glossary#typescript)と [Node.js](/docs/faq/glossary#node)で構築されています。Node 10.3+をサポートしていますが、最新のNode LTSが推奨です。Follow development on the open source <a href="https://github.com/ionic-team/ionic-cli" target="_blank">Github repository</a>.
 
 ## トラブルシューティング
 
 Ionic CLIの問題をトラブルシューティングするには、以下の方法が役立ちます:
 
-- 最新バージョンのIonic CLIがインストールされていることを確認してください。 `npm install -g ionic@latest` で更新してください。
-- 最新のNode LTSがインストールされていることを確認してください。 [Node & npm](/docs/installation/environment#node-npm) の環境設定をご覧ください。
-- `--verbose` フラグをつけると、問題を絞り込むためのデバッグメッセージが表示されます。
-- 接続の問題は、不適切に設定されたプロキシ設定が原因である可能性があります。必要なプロキシ設定を行うときは、 [Using a Proxy](/docs/cli/using-a-proxy) をご覧ください。
-- グローバルなIonic CLIの設定ディレクトリは、すべてのプラットフォームで `~/.ionic` にあります。これは安全に削除することができ、Ionic CLIはそれを再読込します。しかし、すべての設定（ユーザセッションを含む）は失われます。ディレクトリの設定は [CLI environment variables](/docs/cli/configuration#environment-variables) をご覧ください。
+- Make sure the latest version of the Ionic CLI is installed. Get the installed version by running `ionic --version`.
+- Make sure the latest Node LTS is installed. See [Node & npm](/docs/installation/environment#node-npm) environment setup.
+- The `--verbose` flag prints debugging messages, which may narrow down the issue.
+- Connection issues may be due to improperly configured proxy settings. See [Using a Proxy](/docs/cli/using-a-proxy) to configure request proxying.
+- The global Ionic CLI configuration directory is `~/.ionic` on all platforms. It can safely be deleted and the Ionic CLI will repopulate it, but all configuration (including user sessions) will be lost. Configure this directory with [CLI environment variables](/docs/cli/configuration#environment-variables).
