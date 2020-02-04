@@ -14,10 +14,12 @@ Ionicアプリは、主にIonic CLI（[command-line-interface](/docs/faq/glossar
 
 ## Ionic CLIをインストール
 
-先に進む前に、[Node.js](/docs/faq/glossary#node)と[npm](/docs/faq/glossary#npm)の最新バージョンがインストールされていることを確認してください。詳細については、[環境構築](/docs/installation/environment)をご覧ください。npmでIonic CLIをグローバルにインストールします。
+Before proceeding, make sure your computer has [Node.js](/docs/faq/glossary#node) installed. See [these instructions](/docs/installation/environment) to set up an environment for Ionic.
+
+Install the Ionic CLI with npm:
 
 ```shell
-$ npm install -g ionic
+$ npm install -g @ionic/cli
 ```
 
 > The `-g` option means _install globally_. When packages are installed globally, `EACCES` permission errors can occur.

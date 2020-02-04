@@ -81,7 +81,7 @@ Ionic CLIは[`ionic generate`](/docs/cli/generate)コマンドでアプリに新
     <command-output>
         <span class="green">?</span> <span class="bold">What would you like to generate? <span class="cyan">page</span></span>
         <br />
-        <span class="green">?</span> <span class="bold">Name/path of <span class="green">page</span>:</span> portfolio
+        <span class="green">?</span> <span class="bold">Name/path of <span class="cyan">page</span>:</span> portfolio
     </command-output>
     <command-cursor blink></command-cursor>
 </command-line>
@@ -91,7 +91,7 @@ Ionic CLIは[`ionic generate`](/docs/cli/generate)コマンドでアプリに新
 <command-line>
     <command-prompt>ionic g page "User Detail"</command-prompt>
     <command-output>
-        &gt; <span class="green">ng generate page "User Detail"</span>
+        &gt; <span class="cyan">ng generate page "User Detail"</span>
         <br />
         <span class="green">CREATE</span> src/app/user-detail/user-detail.module.ts (564 bytes)
         <br />

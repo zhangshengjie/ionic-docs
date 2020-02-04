@@ -7,9 +7,9 @@ nextUrl: '/docs/building/testing'
 
 # Androidでの開発
 
-このガイドでは、[Capacitor](/docs/faq/glossary#capacitor)または[Cordova](/docs/faq/glossary#cordova)を使用して、AndroidシミュレータおよびデバイスにIonicアプリケーションをデプロイする方法について説明します。
+This guide covers how to run and debug Ionic apps on Android emulators and devices using [Capacitor](/docs/faq/glossary#capacitor) or [Cordova](/docs/faq/glossary#cordova).
 
-> Androidデバイスにアプリをデプロイしてデバッグするには、[environment setup](/docs/installation/android) のステップを行う必要があります。
+> To develop for Android, make sure you have followed the [Android Environment Setup](/docs/installation/android).
 
 ## プロジェクト設定
 

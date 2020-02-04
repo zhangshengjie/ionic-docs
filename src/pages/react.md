@@ -105,7 +105,7 @@ Compatible with React version 16.8 and above.
 ## インストール
 
 <command-line>
-    <command-prompt>npm install -g ionic@latest</command-prompt>
+    <command-prompt>npm install -g @ionic/cli</command-prompt>
     <command-prompt>ionic start myApp tabs --type react</command-prompt>
     <br/>
     <command-prompt>ionic serve <command-cursor blink></command-cursor></command-prompt>

@@ -11,12 +11,18 @@ contributors:
 
 Ionic Frameworkをはじめるためには、[Node と npm](#anchor-node-npm)がインストールされている環境が必要です。
 
-もちろん、エディタも必要でしょう:
+もちろん、エディタも必要でしょう。 [VS Code](https://code.visualstudio.com/) をおすすめします。VS Codeは無料で、 batteries-included text editor made by Microsoft.
 
-<ul class="intro">
-  <li><a href="https://ionicframework.com/studio?utm_source=docs&utm_medium=website&utm_campaign=studio%20launch">Ionic Studio</a>: Ionicアプリを高速かつ簡単に開発できます</li>
-  <li><a href="https://code.visualstudio.com/">VS Code</a>: Microsoft製の有名で無料のテキストエディタです</li>
-</ul>
+## Terminal
+
+> Much of Ionic development requires familiarity with the command line. If you're new to the command line, see [this Blog Post](https://ionicframework.com/blog/new-to-the-command-line/) for a quick introduction.
+
+In general, we recommend using the built-in terminals. Many third-party terminals work well with Ionic, but may not be supported.
+
+* For Windows, **Command Prompt** and **PowerShell** are supported. <a href="https://docs.microsoft.com/en-us/windows/wsl/faq" target="_blank">WSL</a> is known to work with Ionic, but may not be supported.
+* For macOS, the built-in **Terminal** app is supported.
+
+Git Bash (from <a href="https://git-scm.com" target="_blank">git-scm.com</a>) does not support TTY interactivity and is **not supported** by Ionic.
 
 ## Node と npm
 

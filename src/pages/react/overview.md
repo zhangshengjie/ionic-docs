@@ -12,7 +12,7 @@ nextUrl: '/docs/react/quickstart'
 最初に、Ionic CLIをインストールします:
 
 ```shell
-$ npm install ionic -g
+$ npm install -g @ionic/cli
 ```
 
 そして、次のコマンドを実行します:
@@ -45,4 +45,4 @@ Ionic ReactプロジェクトはReactプロジェクトそのものようなも�
 
 [Capacitor](https://capacitor.ionicframework.com) は `Ionic React` でつくられたWebアプリを、iOS、Android、ElectronとWebでネイティブに実行するために利用することができる公式のクロスプラットフォームアプリライブラリです。
 
-[Cordova](https://cordova.apache.org/) プラグインでIonic Reactを使用することに関する技術的な制限はありませんが、Capacitorが公式に推奨されています。 現時点では、  [Ionic CLI](/docs/cli) でIonic ReactのCordova統合をサポートする予定はありません。 詳細については、 [こちら](https://capacitor.ionicframework.com/docs/cordova) をご覧ください。
+While there are no known technical limitations to using `Ionic React` with [Cordova](https://cordova.apache.org/) plugins, Capacitor is officially recommended. There are no plans to support a Cordova integration for `Ionic React` in the [Ionic CLI tooling](/docs/cli) at this time. For more details, please [see here](https://capacitor.ionicframework.com/docs/cordova).

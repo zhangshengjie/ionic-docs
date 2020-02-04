@@ -39,7 +39,7 @@ Ionicの以前のバージョンは、ionic自体にカスタムルーターが�
 
 Webテクノロジで構築されたアプリ（Ionicアプリなど）の素晴らしい点は、デスクトップコンピュータ、携帯電話、タブレット、自動車、冷蔵庫など、ほとんどすべてのプラットフォームで実行できることです。Ionicアプリ用のベースとなるコードは、Web標準とこれらのプラットフォーム間で共有される共通のAPIに基づいているため、多くのプラットフォームで機能します。
 
-Ionicの最も一般的な使用例の1つは、<a href="https://www.apple.com/ios/app-store/" target="_blank">App Store</a>と<a href="https://play.google.com/" target="_blank">Play Store</a>の両方からダウンロードできるアプリを作成することです。iOSとAndroidの両方のソフトウェア開発キット（SDK）は、完全なネイティブSDKアクセスを可能にしながら、あらゆるIonicアプリをレンダリングする「Webビュー」を提供します。
+Ionicの最も一般的な使用例の1つは、<a href="https://www.apple.com/ios/app-store/" target="_blank">App Store</a>と<a href="https://play.google.com/" target="_blank">Play Store</a>の両方からダウンロードできるアプリを作成することです。iOSとAndroidの両方のソフトウェア開発キット（SDK）は、完全なネイティブSDKアクセスを可能にしながら、あらゆるIonicアプリをレンダリングする [Web Views](/docs/building/webview) を提供します。
 
 <a href="https://capacitor.ionicframework.com/" target="_blank">Capacitor</a>や<a href="https://cordova.apache.org/" target="_blank">Cordova</a>などのプロジェクトは、IonicアプリにネイティブSDKへのアクセスを許可するためによく使用されます。つまり、開発者は一般的なWeb開発ツールを使用してアプリをすばやく構築しながら、デバイスの加速度計、カメラ、GPSなどのネイティブ機能にアクセスすることができます。
 

@@ -35,7 +35,11 @@ Xcodeを開き、**Window** &raquo; **Devices and Simulators** に移動しま�
 
 ![iOS Simulators](/docs/assets/img/installation/ios-xcode-simulators-setup.png)
 
-## ios-sim & ios-deploy
+## Cordova Setup
+
+Additional setup is required for Cordova to support programmatic builds. This section is not necessary for Capacitor.
+
+### ios-sim & ios-deploy
 
 [`ios-sim`](https://github.com/phonegap/ios-sim) と [`ios-deploy`](https://github.com/phonegap/ios-deploy) は開発中のiOSシミュレータとiOSデバイスにアプリケーションを配備するユーティリティです。それらは [npm](/docs/faq/glossary#npm) を使って、グローバルにインストールすることができます。
 
