@@ -627,7 +627,7 @@ declare namespace LocalJSX {
     'icon'?: (props: any) => JSX.Element;
     'label'?: string;
   }
-  interface DocsFooterAnnouncement extends JSXBase.HTMLAttributes<HTMLDocsFooterAnnouncementElement> {}
+  interface DocsFooterAnnouncement {}
   interface DocsHeader {
     'onToggleClick'?: (e: Event) => void;
   }
@@ -799,6 +799,7 @@ declare module "@stencil/core" {
       'docs-codepen': LocalJSX.DocsCodepen & JSXBase.HTMLAttributes<HTMLDocsCodepenElement>;
       'docs-demo': LocalJSX.DocsDemo & JSXBase.HTMLAttributes<HTMLDocsDemoElement>;
       'docs-dropdown': LocalJSX.DocsDropdown & JSXBase.HTMLAttributes<HTMLDocsDropdownElement>;
+      'docs-footer-announcement': LocalJSX.DocsFooterAnnouncement & JSXBase.HTMLAttributes<HTMLDocsFooterAnnouncementElement>;
       'docs-header': LocalJSX.DocsHeader & JSXBase.HTMLAttributes<HTMLDocsHeaderElement>;
       'docs-item': LocalJSX.DocsItem & JSXBase.HTMLAttributes<HTMLDocsItemElement>;
       'docs-item-list': LocalJSX.DocsItemList & JSXBase.HTMLAttributes<HTMLDocsItemListElement>;
