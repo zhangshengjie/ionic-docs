@@ -16,8 +16,8 @@ Ionicの本来の目標は、HTML、CSS、JavaScriptといったWeb技術を使�
 
 | Platform     | Supported Versions |
 | ------------ | ------------------ |
-| **Android**  | 4.4+               |
-| **iOS**      | 10+                |
+| **Android**  | 5.0+               |
+| **iOS**      | 11+                |
 
 > 最新のプラットフォームの情報については [latest Android stats](https://developer.android.com/about/dashboards/) と [latest iOS stats](https://developer.apple.com/support/app-store/) をご確認ください。
 
@@ -33,3 +33,8 @@ Ionicはモバイルデバイスで正常に動作するだけでなく、ウェ
 | **Safari**  | ✔         |
 | **Edge**    | ✔         |
 | **Firefox** | ✔         |
+| **IE 11**   | **X**     |
+
+
+
+> Check the docs for [Ionic Animations](/docs/utilities/animations#browser-support) and [Ionic Gestures](/docs/utilities/gestures#browser-support) for specific browser support related to those utilities.

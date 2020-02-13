@@ -45,8 +45,7 @@ Ionic Frameworkは<a href="https://opensource.org/licenses/MIT" target="_blank">
 
 ## フレームワークの互換性
 
-過去リリースされたIonicはAngularと密結合でしたが、Ionic v4からは単独のWeb Componentsライブラリとして機能し、Angularのような最新のJavaScriptフレームワークと一緒に利用することができます。
-IonicはReactやVueを含むほとんどのフロントエンドフレームワークで動かすことができますが、いくつかの環境下ではWeb Componentsをすべて機能させるためにshimを利用する必要があります。
+Ionicの過去のリリースはAngularと密結合でしたが、Framework V4は、Angularのような最新のJavaScriptフレームワークと統合することができ、スタンドアロンのWeb Componentライブラリとしても動作するように再設計された。IonicはReactやVueを含むほとんどのフロントエンドフレームワークで使用できますが、Webコンポーネントを完全にサポートするにはshimが必要なフレームワークもあります。
 
 ### JavaScript
 
@@ -76,7 +75,11 @@ v4がWeb標準に移行したことで、Ionicコアはフレームワーク固�
 
 Ionicアプリの開発全体を支援するために、 <a href="https://ionicframework.com/appflow" target="_blank">Ionic Appflow</a> という本番アプリ用の商用アプリプラットフォームを提供しています。これは <strong>オープンソースのフレームワークから分離しています。</strong>
 
+<<<<<<< HEAD
 Ionic Appflowは、開発者とチームがネイティブアプリのビルドをコンパイルし、ダッシュボードからIonicアプリにコードプッシュするのに役立ちます。オプションの有料アップグレードは、ワークフローの自動化、シングルサインオン（SSO）、接続されたサービスおよび統合へのアクセスなどのより高度な機能に利用できます。
+=======
+Ionic Appflow helps developers and teams compile native app builds and deploy live code updates to Ionic apps from a centralized dashboard. Optional paid upgrades are available for more advanced capabilities like workflow automation, single sign-on (SSO) and access to connected services and integrations.
+>>>>>>> 774802f91957cdccb0adc9732113b552dcde946a
 
 Appflowには <a href="https://dashboard.ionicframework.com/signup" target="_blank">Ionic Account</a> が必要で、一部の機能を試したい人のための無料の「スターター」プランが付属しています。
 

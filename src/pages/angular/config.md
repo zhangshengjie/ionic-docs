@@ -43,7 +43,7 @@ import { IonicModule } from '@ionic/angular';
 Ionic Config is not reactive, so it is recommended to use a component's properties when you want to override its default behavior rather than set its config globally.
 
 ```typescript
-import { IonicModule } from '@ionic/angular';
+import { createAnimation, IonicModule } from '@ionic/angular';
 
 @NgModule({
   ...

@@ -31,8 +31,8 @@ Android Studioをインストールしたら起動します。IDEは、Android S
 
 By default, the latest stable SDK Platform is installed, which includes a collection of packages required to target that version of Android.
 
-> To install system images and other minor SDK platform packages, you may need to ensure **Show Package Details** is checked at the bottom of the SDK Manager.
-> <img alt="Android Studio SDK Manager" src="/docs/assets/img/installation/android-studio-sdk.png" />
+To install system images and other minor SDK platform packages, you may need to ensure **Show Package Details** is checked at the bottom of the SDK Manager.
+<img alt="Android Studio SDK Manager" src="/docs/assets/img/installation/android-studio-sdk.png" />
 
 For future reference, the Android SDK can be managed with Android Studio in the **Configure** &raquo; **SDK Manager** menu of the Android Studio welcome screen or **Tools** &raquo; **SDK Manager** inside Android projects.
 
