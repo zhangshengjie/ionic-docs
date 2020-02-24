@@ -83,7 +83,8 @@ const items = {
     'menu-react-navigation': '/docs/react/navigation',
     'menu-react-config': '/docs/react/config',
     'menu-react-platform': '/docs/react/platform',
-    'menu-react-pwa': '/docs/react/pwa'
+    'menu-react-pwa': '/docs/react/pwa',
+    'menu-react-testing': '/docs/react/testing'
 
   },
   'menu-vue': {
@@ -91,6 +92,10 @@ const items = {
     'menu-vue-your-first-app': '/docs/vue/your-first-app',
     'menu-vue-lifecycle': '/docs/vue/lifecycle',
     'menu-vue-navigation': '/docs/vue/navigation'
+  },
+  'menu-utilities': {
+    'menu-utilities-animations': '/docs/utilities/animations',
+    'menu-utilities-gestures': '/docs/utilities/gestures'
   },
   'menu-publishing': {
     'menu-publishing-progressive-web-app': '/docs/publishing/progressive-web-app',

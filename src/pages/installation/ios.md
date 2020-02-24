@@ -41,9 +41,9 @@ Additional setup is required for Cordova to support programmatic builds. This se
 
 ### ios-sim & ios-deploy
 
-[`ios-sim`](https://github.com/phonegap/ios-sim) と [`ios-deploy`](https://github.com/phonegap/ios-deploy) は開発中のiOSシミュレータとiOSデバイスにアプリケーションを配備するユーティリティです。それらは [npm](/docs/faq/glossary#npm) を使って、グローバルにインストールすることができます。
+[`ios-sim`](https://github.com/ios-control/ios-sim) と [`ios-deploy`](https://github.com/ios-control/ios-deploy) は開発中のiOSシミュレータとiOSデバイスにアプリケーションを配備するユーティリティです。 これらは [npm](/docs/faq/glossary#npm) をつかって、グローバルにインストールすることができます。
 
 ```shell
 $ npm install -g ios-sim
-$ npm install -g ios-deploy
+$ brew install ios-deploy
 ```

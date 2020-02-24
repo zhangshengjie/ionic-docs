@@ -52,7 +52,15 @@ CapacitorはAndroid Studioを使用して、シミュレータやデバイス向
 
 ![Android Studio Run Button Area](/docs/assets/img/running/android-studio-run-button-area.png)
 
-## Cordovaで実行する
+### Live reload
+To start a live-reload server run the following command.
+
+```shell
+$ ionic capacitor run android -l --address=YOUR_IP_ADDRESS
+```
+When running on a device make sure the device and your development machine are connected to the same network.
+
+## Running with Cordova
 
 Ionic CLIは、コマンドひとつで、Ionicアプリを作成、コピーし、iOSシミュレータやデバイスにデプロイできます。　`ionic serve`のような[ライブリロード](/docs/faq/glossary#livereload) 機能を利用するために、開発用のサーバを遅延することもできます。
 

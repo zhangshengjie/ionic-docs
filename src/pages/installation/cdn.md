@@ -29,7 +29,7 @@ CDNからフレームワークにアクセスするには、 [jsdelivr](https://
 > これはAngularや他のフレームワークをインストールしません。これにより、フレームワークなしでIonic Frameworkのコアコンポーネントを使用できます。
 
 
-## Angular + Ionic Framework
+## Ionic + Angular
 
 AngularプロジェクトでIonic Frameworkを使用する場合は、 [npm](/docs/faq/glossary#npm) から最新の `@ionic/angular` をインストールしてください。これによって、すべてのIonic Frameworkコンポーネントと、Angularのサービスおよび機能を使うことができます。
 
@@ -39,84 +39,45 @@ $ npm install @ionic/angular@latest --save
 
 新しいIonic Frameworkのリリースがあるたびに、最新バージョンの機能と修正を入手するために [version](/docs/intro/versioning) を更新する必要があります。
 
-
-### CSS
-
-グローバルのスタイルシートファイルを作成し、それを [Angular workspace config](https://angular.io/guide/workspace-config) の `styles` のオブジェクトに追加します。そのファイルに次のインポートを追加します:
-
-```css
-/* Core CSS required for Ionic components to work properly */
-@import "~@ionic/angular/css/core.css";
-
-/* Basic CSS for apps built with Ionic */
-@import "~@ionic/angular/css/normalize.css";
-@import "~@ionic/angular/css/structure.css";
-@import "~@ionic/angular/css/typography.css";
-
-/* Optional CSS utils that can be commented out */
-@import "~@ionic/angular/css/padding.css";
-@import "~@ionic/angular/css/float-elements.css";
-@import "~@ionic/angular/css/text-alignment.css";
-@import "~@ionic/angular/css/text-transformation.css";
-@import "~@ionic/angular/css/flex-utils.css";
-@import "~@ionic/angular/css/display.css";
-```
-
-これらの各ファイルに含まれているスタイルについては、 [Global Stylesheets](../layout/global-stylesheets) を参照してください。
-
-
-## Stencil + Ionic Framework
-
-StencilのプロジェクトでIonic Frameworkを使用する場合は、 [npm](/docs/faq/glossary#npm) から、`@ionic/core` の最新のパッケージをインストールしてください。これは、すべてのIonic Frameworkコンポーネントを内包しています。
+For adding Ionic to an already existing Angular project, use the Angular CLI's `ng add` feature.
 
 ```shell
-$ npm install @ionic/core@latest --save
+$ ng add @ionic/angular
 ```
 
-### JS
+This will add the necessary imports to the `@ionic/angular` package as well as add the styles needed.
 
-`@ionic/core` をアプリのrootファイルでimportしてください:
 
-```typescript
-import '@ionic/core';
+## Ionic + React
+
+To add Ionic to an already existing React project, install the `@ionic/react` and `@ionic/react-router` package.
+
+```sell
+$ npm install @ionic/react
+$ npm install @ionic/react-router
 ```
 
 ### CSS
 
-グローバルのスタイルシートファイルを作成し、 [Stencil Config](https://stenciljs.com/docs/config) の `config` オブジェクトに以下を追記ください。
+To include the necessary CSS in a React project, add the following to the root App component.
 
 ```javascript
-exports.config = {
-  // ...
-
-  globalStyle: 'src/global.css'
-
-  // ...
-};
-```
-
-そのファイルに次のインポートを追加します:
-
-```css
 /* Core CSS required for Ionic components to work properly */
-@import "~@ionic/core/css/core.css";
+import '@ionic/react/css/core.css';
 
 /* Basic CSS for apps built with Ionic */
-@import "~@ionic/core/css/normalize.css";
-@import "~@ionic/core/css/structure.css";
-@import "~@ionic/core/css/typography.css";
+import '@ionic/react/css/normalize.css';
+import '@ionic/react/css/structure.css';
+import '@ionic/react/css/typography.css';
 
 /* Optional CSS utils that can be commented out */
-@import "~@ionic/core/css/padding.css";
-@import "~@ionic/core/css/float-elements.css";
-@import "~@ionic/core/css/text-alignment.css";
-@import "~@ionic/core/css/text-transformation.css";
-@import "~@ionic/core/css/flex-utils.css";
-@import "~@ionic/core/css/display.css";
+import '@ionic/react/css/padding.css';
+import '@ionic/react/css/float-elements.css';
+import '@ionic/react/css/text-alignment.css';
+import '@ionic/react/css/text-transformation.css';
+import '@ionic/react/css/flex-utils.css';
+import '@ionic/react/css/display.css';
 ```
-
-これらの各ファイルに含まれているスタイルについては、 [Global Stylesheets](../layout/global-stylesheets) を参照してください。
-
 
 ## Ionicons CDN
 

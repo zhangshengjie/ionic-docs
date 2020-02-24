@@ -113,7 +113,7 @@ const renderInstallation = (cordova: string, npm: string) => {
       </h2>
       <docs-tabs>
         <docs-tab tab="Community">
-          <command-line slot="コミュニティ">
+          <command-line>
             <command-prompt>{`ionic cordova plugin add ${cordova}`}</command-prompt>
             <command-prompt>{`npm install ${npm}`}</command-prompt>
           </command-line>
@@ -156,6 +156,7 @@ const renderUsage = (usage: any) => {
       <h2 id="usage">
         <a href="#usage">利用方法</a>
       </h2>
+      <p><strong>Using React?</strong> <stencil-route-link url={`/docs/native/community#react`}>See here.</stencil-route-link></p>
       {toHypertext(h, usage)}
     </section>
   );

@@ -118,7 +118,7 @@ Ionic Frameworkは、アプリを構成するために、単一ページレイ�
 
 ```html
 <ion-app>
-  <ion-menu>
+  <ion-menu content-id="main-content">
     <ion-header>
       <ion-toolbar color="primary">
         <ion-title>Menu</ion-title>
@@ -142,7 +142,7 @@ Ionic Frameworkは、アプリを構成するために、単一ページレイ�
     </ion-content>
   </ion-menu>
 
-  <ion-page class="ion-page" main>
+  <ion-page class="ion-page" id="main-content">
     <ion-header>
       <ion-toolbar>
         <ion-buttons slot="start">
@@ -175,8 +175,8 @@ Ionic Frameworkは、アプリを構成するために、単一ページレイ�
 
 ```html
 <ion-app>
-  <ion-split-pane when="sm">
-    <ion-menu>
+  <ion-split-pane when="sm" content-id="main-content">
+    <ion-menu content-id="main-content">
       <ion-header>
         <ion-toolbar color="primary">
           <ion-title>Menu</ion-title>
@@ -200,7 +200,7 @@ Ionic Frameworkは、アプリを構成するために、単一ページレイ�
       </ion-content>
     </ion-menu>
 
-    <div class="ion-page" main>
+    <div class="ion-page" id="main-content">
       <ion-header>
         <ion-toolbar>
           <ion-buttons slot="start">
@@ -222,4 +222,4 @@ Ionic Frameworkは、アプリを構成するために、単一ページレイ�
 </ion-app>
 ```
 
-`main` 属性を持つ要素が常に表示されるメインコンテンツになることに注意が重要です。これには、[ion-nav](/docs/api/nav), [ion-router-outlet](/docs/api/router-outlet), [ion-tabs](/docs/api/tabs) といったいくつかの要素も同様です。
+It's important to note that the element with the `id` matching the `content-id` specified by the split pane will be the main content that is always visible. This can be any element, including an [ion-nav](/docs/api/nav), [ion-router-outlet](/docs/api/router-outlet), or an [ion-tabs](/docs/api/tabs).
