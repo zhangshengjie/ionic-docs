@@ -10,30 +10,30 @@ nextUrl: '/docs/intro/versioning'
 Ionicの本来の目標は、HTML、CSS、JavaScriptといったWeb技術を使用してモバイルアプリを開発することを簡単にすることでした。Webテクノロジーを使用することで、Ionicは、同じコードを使用しながら、幅広いデバイス、オペレーティングシステム、ブラウザで動作します。
 
 
-## モバイル
+## モバイルブラウザ
 
 [スタイルの適用](/docs/intro/concepts#platform-continuity)を追求するために, Ionicは以下のモバイルプラットフォームを完全にサポート、テストしています。:
 
-| Platform     | Supported Versions |
-| ------------ | ------------------ |
-| **Android**  | 5.0+               |
-| **iOS**      | 11+                |
+| Framework | Android | iOS   |
+|:---------:|:-------:|:-----:|
+| Ionic V5  | 5.0+    | 11.0+ |
+| Ionic V4  | 4.4+  | 10.0+ |
 
 > 最新のプラットフォームの情報については [latest Android stats](https://developer.android.com/about/dashboards/) と [latest iOS stats](https://developer.apple.com/support/app-store/) をご確認ください。
 
 
-## デスクトップ
+## デスクトップブラウザ
 
 Ionicはモバイルデバイスで正常に動作するだけでなく、ウェブ技術に基づいているので、デスクトップブラウザでも正常に機能します。デスクトップレイアウトの詳細については、[Cross Platform](/docs/building/cross-platform)をご覧ください。
 
 
-| Browser     | Supported |
-| ----------- | --------- |
-| **Chrome**  | ✔         |
-| **Safari**  | ✔         |
-| **Edge**    | ✔         |
-| **Firefox** | ✔         |
-| **IE 11**   | **X**     |
+| Browser     | Ionic v5 | Ionic V4 |
+|:-----------:|:--------:|:--------:|
+| **Chrome**  | ✔        | ✔        |
+| **Safari**  | ✔        | ✔        |
+| **Edge**    | 79+      | ✔        |
+| **Firefox** | ✔        | ✔        |
+| **IE 11**   | **X**    | ✔        |
 
 
 
