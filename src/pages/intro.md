@@ -62,8 +62,7 @@ Ionicは現在、人気のあるReactライブラリを公式にサポートし�
 
 ### 今後のサポート
 
-今後のリリースでは、他のフレームワークのサポートも予定されています。現在、Vueの公式バインディングが開発中ですが、一部のコンポーネントはこれらのフレームワークの枠組みの外で動作しますす。
-Support for other frameworks are expected in future release. Currently official bindings for Vue are being developed, though some components just work out of the box in those frameworks.
+今後のリリースでは、他のフレームワークのサポートも予定されています。現在、Vueの公式バインディングが開発中ですが、一部のコンポーネントはこれらのフレームワークでそのまま動作します。
 
 ## Ionic Framework v4+
 
