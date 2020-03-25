@@ -56,7 +56,7 @@ CapacitorはAndroid Studioを使用して、シミュレータやデバイス向
 To start a live-reload server run the following command.
 
 ```shell
-$ ionic capacitor run android -l --address=YOUR_IP_ADDRESS
+$ ionic capacitor run android -l --host=YOUR_IP_ADDRESS
 ```
 When running on a device make sure the device and your development machine are connected to the same network.
 

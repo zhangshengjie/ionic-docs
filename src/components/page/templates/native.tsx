@@ -112,13 +112,20 @@ const renderInstallation = (cordova: string, npm: string) => {
         <a href="#installation">インストール</a>
       </h2>
       <docs-tabs>
-        <docs-tab tab="Community">
+        <docs-tab tab="Cordova">
           <command-line>
             <command-prompt>{`ionic cordova plugin add ${cordova}`}</command-prompt>
             <command-prompt>{`npm install ${npm}`}</command-prompt>
           </command-line>
         </docs-tab>
-        <docs-tab tab="エンタープライズ">
+        <docs-tab tab="Capacitor">
+          <command-line>
+            <command-prompt>{`npm install ${cordova}`}</command-prompt>
+            <command-prompt>{`npm install ${npm}`}</command-prompt>
+            <command-prompt>{`ionic cap sync`}</command-prompt>
+          </command-line>
+        </docs-tab>
+        <docs-tab tab="Enterprise">
           <blockquote>Ionic Native Enterprise はIonic Teamが完全にサポートしメンテナンスしているプラグインを利用できます。 &nbsp;
             <a class="btn" href="/docs/enterprise">詳しくみる</a> か、エンタープライズプラグインに興味があれば <a class="btn" href="https://ionicframework.com/sales?product_of_interest=Ionic%20Enterprise%20Engine">連絡ください</a></blockquote>
         </docs-tab>

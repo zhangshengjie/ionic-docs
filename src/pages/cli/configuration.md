@@ -92,24 +92,20 @@ module.exports = function(ctx) {
 
 ## Multi-app Projects
 
-<small><em>Available in CLI 4.3.0+</em></small>
+<small><em>Available in CLI 6.2.0+</em></small>
 
 Ionic CLIは multi-app 構成セットアップをサポートしており、複数のIonicアプリケーションと共有コードが単一のリポジトリ [monorepo](/docs/faq/glossary#monorepo) 内に存在することができます。
 
 ### セットアップステップ
 
-Multi-app projects はIonic CLIの新機能ですが、一部の設定はまだ手動で行う必要があります。
-
 1. Create a directory and initialize a monorepo (see [Project Structure](#project-structure) for full details).
-1. Create an `ionic.config.json` file at the root of the repository with the following contents (see [Config File](#config-file) for full details):
+1. Initialize the monorepo as an Ionic multi-app project. This will create a multi-app `ionic.config.json` file. See [Config File](#config-file) for full details.
 
-    ```json
-    {
-      "projects": {}
-    }
+    ```shell
+    $ ionic init --multi-app
     ```
 
-1. Use `ionic start` within the monorepo to create Ionic apps in a multi-app project (see [Adding an App](#adding-an-app) for full details).
+1. Use `ionic start` to create Ionic apps or `ionic init` to initialize existing apps (see [Adding an App](#adding-an-app) for full details).
 
 ### プロジェクト構成
 
@@ -161,6 +157,10 @@ When a multi-app project is detected, the Ionic CLI will operate under the conte
 
 ### アプリの追加
 
+Apps can be registered in a multi-app project either by using `ionic start` to create new apps or `ionic init` to initialize existing apps.
+
+#### Using `ionic start`
+
 If a multi-app project is detected during `ionic start`, the CLI will add the app configuration to the root `ionic.config.json` file instead of creating a project-specific one.
 
 Dependency installation can be skipped using `--no-deps` if dependencies are hoisted to the root of the monorepo.
@@ -168,6 +168,17 @@ Dependency installation can be skipped using `--no-deps` if dependencies are hoi
 ```shell
 $ cd apps/
 $ ionic start "My New App" --no-deps
+```
+
+#### Using `ionic init`
+
+If an app was created in a way other than `ionic start`, for example by using a prebuilt template, use `ionic init` to register the existing app with the multi-app project.
+
+> Make sure the app doesn't have an existing `ionic.config.json`.
+
+```shell
+$ cd apps/existing-app/
+$ ionic init
 ```
 
 ## 詳細設定
@@ -182,13 +193,13 @@ Pay close attention to the flags supplied to the script by the Ionic CLI. Irregu
 
 Command options can be expressed with environment variables. They are normally set with `--opt=value` syntax. The naming of these environment variables follows a pattern: start with `IONIC_CMDOPTS_`, add the command name (replacing any spaces with underscores), add the option name (replacing any hyphens with underscores), and then uppercase everything. Boolean flags (command-line options that don't take a value) can be set to `1` or `0`. Strip the `--no-` prefix in boolean flags, if it exists (`--no-open` in ionic serve can be expressed with `IONIC_CMDOPTS_SERVE_OPEN=0`, for example).
 
-For example, the command options in `ionic cordova run ios -lc --livereload-port=1234 --address=localhost` can also be expressed with this series of environment variables:
+For example, the command options in `ionic cordova run ios -lc --livereload-port=1234 --host=0.0.0.0` can also be expressed with this series of environment variables:
 
 ```shell
 $ export IONIC_CMDOPTS_CORDOVA_RUN_LIVERELOAD=1
 $ export IONIC_CMDOPTS_CORDOVA_RUN_CONSOLELOGS=1
 $ export IONIC_CMDOPTS_CORDOVA_RUN_LIVERELOAD_PORT=1234
-$ export IONIC_CMDOPTS_CORDOVA_RUN_ADDRESS=localhost
+$ export IONIC_CMDOPTS_CORDOVA_RUN_HOST=0.0.0.0
 ```
 
 If these variables are set in the environment, `ionic cordova build ios` will use new defaults for its options.

@@ -46,7 +46,7 @@ AngularのLife Cycle Eventsに加えて、Ionic Angularには、使用可能な�
 
 ## IonicがPageのLifeをどのように処理するか
 
-Ionic は `<ion-router-outlet />` という router outlet を持っています。. この outlet が Angularの `<router-outlet />` を継承し、さらに拡張して、モバイルデバイスのためのより良い体験を可能にしました。
+Ionic は `<ion-router-outlet />` という router outlet を持っています。この outlet が Angularの `<router-outlet />` を継承し、さらに拡張して、モバイルデバイスのためのより良い体験を可能にしました。
 
 `<ion-router-outlet />` にアプリがラップされることで、Ionicはナビゲーションの扱いを少し変更します。新しいページに遷移すると、Ionicは古いページを既存のDOMに残しますが、ビューから隠して新しいページに移行します。これを行う理由は2つあります:
 
