@@ -10,9 +10,9 @@ nextText: 'Environment Setup'
 nextUrl: '/docs/intro/environment'
 ---
 
-Ionic Framework is an open source UI toolkit for building performant, high-quality mobile and desktop apps using web technologies — HTML, CSS, and JavaScript — with integrations for popular frameworks like <a href="/docs/angular/overview" target="_blank"> Angular</a> and <a href="/react" target="_blank">React</a>.
+Ionic FrameworkはオープンソースのUIツールキットで、HTML、CSS、JavaScriptなどのウェブ技術を使って、<a href="/docs/angular/overview" target="_blank"> Angular</a> や <a href="/react" target="_blank">React</a> といった人気フレームワークと併用することで高性能で高品質なモバイルアプリやデスクトップアプリを作ることができます。
 
-Get started building by <a href="/docs/intro/cli">installing Ionic</a> or following our <a href="/docs/intro/next#build-your-first-app">First App Tutorial</a> to learn the main concepts.
+<a href="/docs/intro/cli">Ionicのインストール</a> や <a href="/docs/intro/next#build-your-first-app">初めての開発</a> を参考に、主な概念を学ぶことができます。
 
 <docs-cards>
   <docs-card header="インストールガイド" href="/docs/intro/cli" icon="/docs/assets/icons/guide-installation-icon.svg" hover-icon="/docs/assets/icons/guide-installation-icon-hover.svg">
@@ -32,90 +32,90 @@ Get started building by <a href="/docs/intro/cli">installing Ionic</a> or follow
   </docs-card>
 </docs-cards>
 
-## Overview
+## 概要
 
-Ionic Framework focuses on the frontend UX and UI interaction of an app — UI controls, interactions, gestures, animations. It's easy to learn, and integrates with other libraries or frameworks, such as <a href="/docs/angular/overview">Angular</a>, <a href="/docs/react/overview">React</a>, or <a href="/docs/vue/overview">Vue</a>. Alternatively, it can be used standalone without any frontend framework using a simple <a href="/docs/intro/cdn">script include</a>. If you’d like to learn more about Ionic Framework before diving in, we <a href="https://youtu.be/p3AN3igqiRc" target="_blank">created a video</a> to walk you through the basics.
-
-
-### One codebase, running everywhere
-
-Ionic is the only mobile app stack that enables web developers to build apps for all major app stores and the mobile web from a single codebase. And with <a href="/docs/theming/platform-styles">Adaptive Styling</a>, Ionic apps look and feel at home on every device.
-
-#### A focus on performance
-
-Ionic is built to perform and behave great on the latest mobile devices with best practices like efficient hardware accelerated transitions, and touch-optimized gestures.
-
-#### Clean, simple, and functional design
-
-Ionic is designed to work and display beautifully on all current mobile devices and platforms. With ready-made components, typography, and a gorgeous (yet extensible) base theme that adapts to each platform, you'll be building in style.
-
-#### Native and Web optimized
-
-Ionic emulates native app UI guidelines and uses native SDKs, bringing the UI standards and device features of native apps together with the full power and flexibility of the open web. Ionic uses Capacitor (or Cordova) to deploy natively, or runs in the browser as a Progressive Web App.
+Ionic Frameworkは、UIコントロール、インタラクション、ジェスチャ、アニメーションなど、アプリのフロントエンドUXとUIインタラクションに焦点を当てています。覚えるのは簡単で、 <a href="/docs/angular/overview">Angular</a>、 <a href="/docs/react/overview">React</a> や <a href="/docs/vue/overview">Vue</a> 上で利用することができます。また、シンプルに<a href="/docs/intro/cdn">scriptタグ</a>に含めて、フレームワークなしでスタンドアロンで利用することもできます。Ionic Frameworkについて詳しく知りたい人のために、私たちは<a href="https://youtu.be/p3AN3igqiRc" target="_blank">基本的な順を説明したビデオ</a>も提供しています。
 
 
-## Goals
+### どこでもひとつのコードで
 
-### Cross-platform
+Ionicは、ウェブ開発者がすべての主要アプリストアとモバイルウェブ用のアプリを単一のコードベースから構築できるすばらしいモバイルアプリスタックです。また、<a href="/docs/theming/platform-styles">Adaptive Styling</a>によって、Ionicアプリはすべてのデバイス上で適切な外観と操作感を提供します。
 
-Build and deploy apps that work across multiple platforms, such as native iOS, Android, desktop, and the web as a Progressive Web App - all with one code base. Write once, run anywhere.
+#### パフォーマンスにフォーカス
 
-### Web Standards-based
+Ionicは、効率的なハードウェアアクセラレーション、タッチに最適化されたジェスチャなどのベストプラクティスにより、最新のモバイルデバイスで優れたパフォーマンスと動作を実現するように設計されています。
 
-Ionic Framework is built on top of reliable, [standardized web technologies](/docs/reference/glossary#web-standards): HTML, CSS, and JavaScript, using modern Web APIs such as Custom Elements and Shadow DOM. Because of this, Ionic components have a stable API, and aren't at the whim of a single platform vendor.
+#### クリーンでシンプル、機能的なデザイン
 
-### Beautiful Design
+Ionicは、現在のすべてのモバイルデバイスおよびプラットフォームで美しく動作し、表示するように設計されています。事前に用意されたコンポーネント、タイポグラフィ、各プラットフォームに対応したすばらしい(まだ拡張可能な)ベーステーマにより、スタイルを構築できます。
 
-Clean, simple, and functional. Ionic Framework is designed to work and display beautifully out-of-the-box across all platforms.
-Start with pre-designed components, typography, interactive paradigms, and a gorgeous (yet extensible) base theme.
+#### ネイティブおよびWebに最適化
 
-### Simplicity
-
-Ionic Framework is built with simplicity in mind, so that creating Ionic apps is enjoyable, easy to learn, and accessible to just about anyone with web development skills.
+IonicはネイティブアプリケーションのUIガイドラインをエミュレートし、ネイティブSDKを使用して、ネイティブアプリのUI標準とデバイス機能を、オープンWebの完全なパワーと柔軟性とともに実現します。IonicはCapacitor(またはCordova)を使ってネイティブにデプロイするか、Progressive Web Appとしてブラウザで実行します。
 
 
-## Framework Compatibility
+## ゴール
 
-While past releases of Ionic were tightly coupled to Angular, version 4.x of the framework was re-engineered to work as a standalone <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components" target="_blank">Web Component</a> library, with integrations for the latest JavaScript frameworks, like Angular. Ionic can be used in most frontend frameworks with success, including React and Vue, though some frameworks need a shim for full Web Component support.
+### クロスプラットフォーム
+
+ネイティブのiOS、Android、デスクトップ、Webなど、複数のプラットフォームで動作するアプリをProgressive Web Appとして、すべて1つのコードベースで開発、デプロイすることができます。一度書けば、どこでも実行できます。
+
+### Web標準
+
+Ionic Frameworkは、Custom ElementsやShadow DOMなどの最新のWeb APIを使用して、信頼性の高い[Web標準テクノロジー](/docs/reference/glossary#web-standards): HTML、CSS、およびJavaScriptの上に構築されています。このため、Ionicコンポーネントは安定したAPIを備えており、単一のプラットフォーム・ベンダーの思い付きではありません。
+
+### 美しいデザインBeautiful Design
+
+クリーンでシンプル、機能的。Ionic Frameworkは全てのプラットフォームで動作し、美しく表示されるように設計されています。
+あらかじめデザインされたコンポーネント、タイポグラフィ、インタラクティブなパラダイム、すばらしい(まだ拡張可能な)基本テーマから始めます。
+
+### シンプル
+
+Ionic Frameworkはシンプルさを念頭に置いて構築されているので、Ionicアプリを作成することは楽しく、簡単に学ぶことができ、ウェブ開発スキルを持っている人なら誰でも簡単にアクセスすることができます。
+
+
+## Frameworkの互換性
+
+Ionicの過去のリリースはAngularと密結合されていましたが、フレームワークのバージョン4.xからはスタンドアロンの<a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components" target="_blank">Web Component</a>ライブラリとして動作するように再設計され、Angularのような最新のJavaScriptフレームワークと併用できるようになりました。IonicはReactやVueを含むほとんどのフロントエンドフレームワークで使用できますが、Webコンポーネントを完全にサポートするにはshimが必要なフレームワークもあります。
 
 ### JavaScript
 
-One of the main goals with moving Ionic Framework to <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components" target="_blank">Web Components</a> was to remove any hard requirement on a single framework to host the components. This made it possible for the core components to work standalone in a web page with just a script tag. While working with frameworks can be great for larger teams and larger apps, it is now possible to use Ionic as a standalone library in a single page even in a context like WordPress.
+Ionic Frameworkを <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components" target="_blank">Web Components</a> に移行する主な目標のひとつは、コンポーネントをホストする単一フレームワークのハード要件を取り除くことだった。これにより、コアコンポーネントは、scriptタグだけでWebページ内でスタンドアロンで動作できるようになりました。フレームワークを使って作業することは大規模なチームや大規模なアプリにとっては素晴らしいことですが、IonicをWordPressのようなコンテキストでも、単一ページのスタンドアロンライブラリとして使用することが可能になりました。
 
 ### Angular
 
-Angular has always been at the center of what makes Ionic great. While the core components have been written to work as a standalone Web Component library, the `@ionic/angular` package makes integration with the Angular ecosystem a breeze. `@ionic/angular` includes all the functionality that Angular developers would expect coming from Ionic 2/3, and integrates with core Angular libraries, like the Angular router.
+Angularは常にIonicの素晴らしさの中心にありました。コアコンポーネントはスタンドアロンのWeb Componentライブラリとして動作するように書かれていますが、 `@ionic/angular` パッケージはAngularエコシステムとの統合を簡単にします。 `@ionic/angular` はIonic 2/3に期待されるすべての機能を含んでおり、AngularルータのようなコアAngularライブラリと統合されています。
 
 ### React
 
-Ionic now has official support for the popular React library. Ionic React lets React developers use their existing web skills to build apps that target iOS, Android, the web, and the desktop. With `@ionic/react`, you can use all the core Ionic components, but in a way that feels like using native React components.
+Ionicは現在、人気のReactライブラリを公式にサポートしている。Ionic Reactを使うと、React開発者は既存のWebスキルを使って、iOS、Android、Web、デスクトップをターゲットにしたアプリを作ることができます。`@ionic/react`を使えば、すべてのコアIonicコンポーネントを、ネイティブなReactコンポーネントを使っているような感覚で使用することができます。
 
-### Future Support
+### 将来的なサポート
 
-Support for other frameworks are expected in a future release. Currently official bindings for Vue are in development, though some components just work out of the box in those frameworks.
+将来のリリースでは他のフレームワークもサポートされる予定です。現在、Vueの公式バインディングは開発中ですが、フレームワークによってはすぐに使えるコンポーネントもあります。
 
 
 ## Ionic CLI
 
-The official [Ionic CLI](/docs/cli), or Command Line Interface, is a tool that quickly scaffolds Ionic apps and provides a number of helpful commands to Ionic developers. In addition to installing and updating Ionic, the CLI comes with a built-in development server, build and debugging tools, and much more. If you are an [Ionic Appflow](#ionic-appflow) member, the CLI can be used to perform cloud builds and deployments, and administer your account.
+公式の [Ionic CLI](/docs/cli) は、Ionicアプリを迅速に構築し、Ionic開発者に多くの役に立つコマンドを提供するツールです。CLIには、Ionicのインストールとアップデートに加えて、組み込みの開発サーバ、ビルドとデバッグのためのツールなどが含まれています。 [Ionic Appflow](#ionic-appflow) のメンバーの場合は、CLIを使用してクラウドの構築と展開を実行し、アカウントを管理できます。
 
 
 ## Ionic Appflow
 
-To help build, deploy, and manage Ionic apps throughout their lifecycle, we offer a commercial service for production apps called <a href="https://ionicframework.com/appflow" target="_blank">Ionic Appflow</a>, which is <strong>separate from the open source Framework.</strong>
+Ionicアプリの構築、デプロイ、ライフサイクルを通じた管理を支援するために、私たちは<strong>オープンソースフレームワークとは分離した</strong>ｍ<a href="https://ionicframework.com/appflow" target="_blank">Ionic Appflow</a>と呼んでいる製品アプリ用の商用サービスを提供しています。
 
-Appflow helps developers and teams compile native app builds and deploy live code updates to Ionic apps from a centralized dashboard. Optional paid upgrades are available for more advanced capabilities like publishing directly to app stores, workflow automation, single sign-on (SSO) and access to connected services and integrations.
+Appflowは、開発者とチームがネイティブアプリのビルドをコンパイルし、一元化されたダッシュボードからIonicアプリにライブコードアップデートをデプロイするのを支援する。アプリストアへの直接公開、ワークフローの自動化、シングルサインオン(SSO)、接続されたサービスや統合へのアクセスなど、より高度な機能を利用するには、オプションの有償アップグレードを利用できます。
 
-Appflow requires an <a href="https://dashboard.ionicframework.com/signup" target="_blank">Ionic Account</a> and comes with a free “Hobby” plan for those interested in playing around with some of its features.
+Appflowには <a href="https://dashboard.ionicframework.com/signup" target="_blank">Ionic Account</a> が必要で、いくつかの機能を試してみたい人は無料の「Hobby」プランが付いています。
 
 
-## Ecosystem
+## エコシステム
 
-Ionic Framework is actively developed and maintained full-time by a core team, and its ecosystem is guided by an international community of developers and contributors fueling its growth and adoption. Developers and companies small and large use Ionic to build and ship amazing apps that run everywhere.
+Ionic Frameworkはコアチームによって積極的に開発され、メンテナンスされており、そのエコシステムはその成長と採用を促進する開発者と貢献者の国際的なコミュニティによって導かれている。大小さまざまな開発者や企業がIonicを使って、どこでも動くすばらしいアプリを作ってリリースしています。
 
-### Join the Community
+### コミュニティに参加する
 
-There are millions of Ionic developers in over 200 countries worldwide. Here are some ways to join:
+Ionicの開発者は世界200か国以上に何百万人もいます。コミュニティへの参加方法をいくつか紹介します:
 
 * <a href="https://forum.ionicframework.com/" target="_blank">Forum:</a> A great place for asking questions and sharing ideas.
 * <a href="https://ionicworldwide.herokuapp.com/" target="_blank">Slack:</a> A lively place for devs to meet and chat in real time.
