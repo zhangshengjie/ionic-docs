@@ -8,7 +8,7 @@ For best results, the splash screen's artwork should roughly fit within a square
 
 `ionic cordova resources` will automatically update your **config.xml** to reflect the changes in the generated images, which Cordova then configures.
 
-This command uses the `cordova-res` [utility](https://github.com/ionic-team/cordova-res) to generate resources locally. You can also login to your Ionic account and use Ionic servers to generate icons and splash screens with `--no-cordova-res`.
+This command uses the `cordova-res` [utility](https://github.com/ionic-team/cordova-res) to generate resources locally.
 
 Cordova reference documentation:
 - Icons: **[https://cordova.apache.org/docs/en/latest/config_ref/images.html](https://cordova.apache.org/docs/en/latest/config_ref/images.html)**

@@ -1,6 +1,6 @@
 {
   "filePath": "src/components/back-button/back-button.tsx",
-  "encapsulation": "scoped",
+  "encapsulation": "shadow",
   "tag": "ion-back-button",
   "readme": "# ion-back-button\n\nThe back button navigates back in the app's history upon click. It is smart enough to know what to render based on the mode and when to show based on the navigation stack.\n\nTo change what is displayed in the back button, use the `text` and `icon` properties.\n\n",
   "docs": "The back button navigates back in the app's history upon click. It is smart enough to know what to render based on the mode and when to show based on the navigation stack.\n\nTo change what is displayed in the back button, use the `text` and `icon` properties.",
@@ -178,9 +178,19 @@
       "docs": "Background of the button when focused with the tab key"
     },
     {
+      "name": "--background-focused-opacity",
+      "annotation": "prop",
+      "docs": "Opacity of the button background when focused with the tab key"
+    },
+    {
       "name": "--background-hover",
       "annotation": "prop",
-      "docs": "Background of the button when hover"
+      "docs": "Background of the button on hover"
+    },
+    {
+      "name": "--background-hover-opacity",
+      "annotation": "prop",
+      "docs": "Opacity of the background on hover"
     },
     {
       "name": "--border-radius",
@@ -200,7 +210,7 @@
     {
       "name": "--color-hover",
       "annotation": "prop",
-      "docs": "Text color of the button when hover"
+      "docs": "Text color of the button on hover"
     },
     {
       "name": "--icon-font-size",

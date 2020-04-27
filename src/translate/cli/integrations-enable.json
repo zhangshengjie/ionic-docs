@@ -4,12 +4,15 @@
     "ionic",
     "integrations"
   ],
-  "summary": "アプリにインテグレーションを追加・有効化します。",
+  "summary": "Add & enable integrations to your app",
   "description": "Integrations, such as Cordova, can be enabled with this command. If the integration has never been added to the project, `ionic integrations enable` will download and add the integration.\n\nIntegrations can be re-added with the `--add` option.",
   "footnotes": [],
   "groups": [],
   "exampleCommands": [],
-  "aliases": [],
+  "aliases": [
+    "ionic integrations en",
+    "ionic integrations add"
+  ],
   "inputs": [
     {
       "name": "name",
@@ -41,7 +44,7 @@
     {
       "name": "quiet",
       "type": "boolean",
-      "summary": "Do not log file operations",
+      "summary": "Less verbose output, ignore integration errors",
       "groups": [],
       "aliases": [],
       "spec": {

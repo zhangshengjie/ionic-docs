@@ -1,2 +1,2 @@
-`ionic capacitor add` は次のことをします:
-- 新しいプラットフォームをプロジェクト内の特定フォルダに作成します(ios, android, or electron)
+`ionic capacitor add` will do the following:
+- Add a new platform specific folder to your project (ios, android, or electron)

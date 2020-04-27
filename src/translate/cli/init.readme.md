@@ -1,3 +1,5 @@
-このコマンドはカレントディレクトリの**ionic.config.json**を初期化します。
+This command will initialize an Ionic app within the current directory. Usually, this means an `ionic.config.json` file is created. If used within a multi-app project, the app is initialized in the root `ionic.config.json`.
 
-`ionic init`はプロジェクト名の入力を促し、プロジェクトのタイプを決定します。`name`引数と`--type`オプションを指定すれば、コマンドラインからこれらの値を指定できます。
+`ionic init` will prompt for a project name and then proceed to determine the type of your project. You can specify the `name` argument and `--type` option to provide these values via command-line.
+
+If the `--multi-app` flag is specified, this command will initialize your project as a multi-app project, allowing for apps within monorepos and unconventional repository structures. See the multi-app [docs](https://ionicframework.com/docs/cli/configuration#multi-app-projects) for details. Once a multi-app project is initialized, you can run `ionic init` again within apps in your project to initialize them.

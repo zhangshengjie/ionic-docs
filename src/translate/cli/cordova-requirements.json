@@ -4,7 +4,7 @@
     "ionic",
     "cordova"
   ],
-  "summary": "すべての要求しているプラットフォームを確認して表示します。",
+  "summary": "Checks and print out all the requirements for platforms",
   "description": "Like running `cordova requirements` directly, but provides friendly checks.",
   "footnotes": [],
   "groups": [],

@@ -4,7 +4,7 @@
     "ionic",
     "cordova"
   ],
-  "summary": "Cordova pluginを管理します。",
+  "summary": "Manage Cordova plugins",
   "description": "Like running `cordova plugin` directly, but provides friendly checks.",
   "footnotes": [],
   "groups": [],

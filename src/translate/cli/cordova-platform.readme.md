@@ -1,1 +1,1 @@
-`cordova platform` を直接実行するのと似ていますが、デフォルトのIonicアイコンとスプラッシュスクリーンリソース(during `add`)を追加し、わかりやすいチェックを提供します。
+Like running `cordova platform` directly, but adds default Ionic icons and splash screen resources (during `add`) and provides friendly checks.

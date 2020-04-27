@@ -1,8 +1,8 @@
-このコマンドはAngular CLIを使用して、`pages`, `components`, `directives`, `services` などのfeatureを生成します。
+This command uses the Angular CLI to generate features such as `pages`, `components`, `directives`, `services`, etc.
 
- - 使用可能な完全なリストについては`npx ng g --help`を使用してください
- - 型のオプションのリストは`npx ng g <type> --help`を使用してください。
+ - For a full list of available types, use `npx ng g --help`
+ - For a list of options for a types, use `npx ng g <type> --help`
 
-任意の数のサブディレクトリ内にネストしたfeatureのパスを指定できます。例えば、`"pages/New Page"`というコマンドを指定すると、**src/app/pages/new-page/**にpageファイルが生成されます。
+You can specify a path to nest your feature within any number of subdirectories. For example, specify a name of `"pages/New Page"` to generate page files at **src/app/pages/new-page/**.
 
-ファイルを変更する前にgeneratorをテストするには、`--dry-run`オプションを使います。
+To test a generator before file modifications are made, use the `--dry-run` option.

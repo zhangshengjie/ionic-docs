@@ -11,8 +11,10 @@
     }
   ],
   "usage": {
-    "javascript": "```html\n<ion-list>\n  <ion-list-header>\n    <ion-label>Items</ion-label>\n  </ion-list-header>\n  <ion-item>Item 1</ion-item>\n  <ion-item>Item 2</ion-item>\n  <ion-item>Item 3</ion-item>\n  <ion-item>Item 4</ion-item>\n  <ion-item>Item 5</ion-item>\n</ion-list>\n```\n",
-    "react": "```tsx\nimport React from 'react';\nimport { IonList, IonItem, IonLabel, IonContent, IonListHeader } from '@ionic/react';\n\nexport const ListHeaderExample: React.FC = () => (\n  <IonContent>\n    <IonList>\n      <IonListHeader>\n        <IonLabel>Items</IonLabel>\n      </IonListHeader>\n      <IonItem>Item 1</IonItem>\n      <IonItem>Item 2</IonItem>\n      <IonItem>Item 3</IonItem>\n      <IonItem>Item 4</IonItem>\n      <IonItem>Item 5</IonItem>\n    </IonList>\n  </IonContent>\n);\n```"
+    "angular": "```html\n<!-- Default List Header -->\n<ion-list-header>\n  <ion-label>List Header</ion-label>\n</ion-list-header>\n\n<!-- List Header with Button -->\n<ion-list-header>\n  <ion-label>New This Week</ion-label>\n  <ion-button>See All</ion-button>\n</ion-list-header>\n\n<!-- List Header with Outline Button -->\n<ion-list-header>\n  <ion-label>New This Week</ion-label>\n  <ion-button fill=\"outline\">See All</ion-button>\n</ion-list-header>\n\n<!-- List Header Full Lines -->\n<ion-list-header lines=\"full\">\n  <ion-label>New This Week</ion-label>\n  <ion-button>See All</ion-button>\n</ion-list-header>\n\n<!-- List Header Inset Lines -->\n<ion-list-header lines=\"inset\">\n  <ion-label>New This Week</ion-label>\n  <ion-button>See All</ion-button>\n</ion-list-header>\n\n<!-- List Headers in Lists -->\n<ion-list>\n  <ion-list-header lines=\"inset\">\n    <ion-label>Recent</ion-label>\n    <ion-button>Clear</ion-button>\n  </ion-list-header>\n  <ion-item lines=\"none\">\n    <ion-label color=\"primary\">\n      <h1>I got you babe</h1>\n    </ion-label>\n  </ion-item>\n</ion-list>\n\n<ion-list>\n  <ion-list-header lines=\"inset\">\n    <ion-label>Trending</ion-label>\n  </ion-list-header>\n  <ion-item>\n    <ion-label color=\"primary\">\n      <h1>harry styles</h1>\n    </ion-label>\n  </ion-item>\n  <ion-item>\n    <ion-label color=\"primary\">\n      <h1>christmas</h1>\n    </ion-label>\n  </ion-item>\n  <ion-item lines=\"none\">\n    <ion-label color=\"primary\">\n      <h1>falling</h1>\n    </ion-label>\n  </ion-item>\n</ion-list>\n```\n",
+    "javascript": "```html\n<!-- Default List Header -->\n<ion-list-header>\n  <ion-label>List Header</ion-label>\n</ion-list-header>\n\n<!-- List Header with Button -->\n<ion-list-header>\n  <ion-label>New This Week</ion-label>\n  <ion-button>See All</ion-button>\n</ion-list-header>\n\n<!-- List Header with Outline Button -->\n<ion-list-header>\n  <ion-label>New This Week</ion-label>\n  <ion-button fill=\"outline\">See All</ion-button>\n</ion-list-header>\n\n<!-- List Header Full Lines -->\n<ion-list-header lines=\"full\">\n  <ion-label>New This Week</ion-label>\n  <ion-button>See All</ion-button>\n</ion-list-header>\n\n<!-- List Header Inset Lines -->\n<ion-list-header lines=\"inset\">\n  <ion-label>New This Week</ion-label>\n  <ion-button>See All</ion-button>\n</ion-list-header>\n\n<!-- List Headers in Lists -->\n<ion-list>\n  <ion-list-header lines=\"inset\">\n    <ion-label>Recent</ion-label>\n    <ion-button>Clear</ion-button>\n  </ion-list-header>\n  <ion-item lines=\"none\">\n    <ion-label color=\"primary\">\n      <h1>I got you babe</h1>\n    </ion-label>\n  </ion-item>\n</ion-list>\n\n<ion-list>\n  <ion-list-header lines=\"inset\">\n    <ion-label>Trending</ion-label>\n  </ion-list-header>\n  <ion-item>\n    <ion-label color=\"primary\">\n      <h1>harry styles</h1>\n    </ion-label>\n  </ion-item>\n  <ion-item>\n    <ion-label color=\"primary\">\n      <h1>christmas</h1>\n    </ion-label>\n  </ion-item>\n  <ion-item lines=\"none\">\n    <ion-label color=\"primary\">\n      <h1>falling</h1>\n    </ion-label>\n  </ion-item>\n</ion-list>\n```\n",
+    "react": "```tsx\nimport React from 'react';\nimport { IonButton, IonContent, IonItem, IonLabel, IonList, IonListHeader } from '@ionic/react';\n\nexport const ListHeaderExample: React.FC = () => (\n  <IonContent>\n    {/*-- Default List Header --*/}\n    <IonListHeader>\n      <IonLabel>List Header</IonLabel>\n    </IonListHeader>\n\n    {/*-- List Header with Button --*/}\n    <IonListHeader>\n      <IonLabel>New This Week</IonLabel>\n      <IonButton>See All</IonButton>\n    </IonListHeader>\n\n    {/*-- List Header with Outline Button --*/}\n    <IonListHeader>\n      <IonLabel>New This Week</IonLabel>\n      <IonButton fill=\"outline\">See All</IonButton>\n    </IonListHeader>\n\n    {/*-- List Header Full Lines --*/}\n    <IonListHeader lines=\"full\">\n      <IonLabel>New This Week</IonLabel>\n      <IonButton>See All</IonButton>\n    </IonListHeader>\n\n    {/*-- List Header Inset Lines --*/}\n    <IonListHeader lines=\"inset\">\n      <IonLabel>New This Week</IonLabel>\n      <IonButton>See All</IonButton>\n    </IonListHeader>\n\n    {/*-- List Headers in Lists --*/}\n    <IonList>\n      <IonListHeader lines=\"inset\">\n        <IonLabel>Recent</IonLabel>\n        <IonButton>Clear</IonButton>\n      </IonListHeader>\n      <IonItem lines=\"none\">\n        <IonLabel color=\"primary\">\n          <h1>I got you babe</h1>\n        </IonLabel>\n      </IonItem>\n    </IonList>\n\n    <IonList>\n      <IonListHeader lines=\"inset\">\n        <IonLabel>Trending</IonLabel>\n      </IonListHeader>\n      <IonItem>\n        <IonLabel color=\"primary\">\n          <h1>harry styles</h1>\n        </IonLabel>\n      </IonItem>\n      <IonItem>\n        <IonLabel color=\"primary\">\n          <h1>christmas</h1>\n        </IonLabel>\n      </IonItem>\n      <IonItem lines=\"none\">\n        <IonLabel color=\"primary\">\n          <h1>falling</h1>\n        </IonLabel>\n      </IonItem>\n    </IonList>\n  </IonContent>\n);\n```\n",
+    "vue": "```html\n<template>\n  <!-- Default List Header -->\n  <ion-list-header>\n    <ion-label>List Header</ion-label>\n  </ion-list-header>\n\n  <!-- List Header with Button -->\n  <ion-list-header>\n    <ion-label>New This Week</ion-label>\n    <ion-button>See All</ion-button>\n  </ion-list-header>\n\n  <!-- List Header with Outline Button -->\n  <ion-list-header>\n    <ion-label>New This Week</ion-label>\n    <ion-button fill=\"outline\">See All</ion-button>\n  </ion-list-header>\n\n  <!-- List Header Full Lines -->\n  <ion-list-header lines=\"full\">\n    <ion-label>New This Week</ion-label>\n    <ion-button>See All</ion-button>\n  </ion-list-header>\n\n  <!-- List Header Inset Lines -->\n  <ion-list-header lines=\"inset\">\n    <ion-label>New This Week</ion-label>\n    <ion-button>See All</ion-button>\n  </ion-list-header>\n\n  <!-- List Headers in Lists -->\n  <ion-list>\n    <ion-list-header lines=\"inset\">\n      <ion-label>Recent</ion-label>\n      <ion-button>Clear</ion-button>\n    </ion-list-header>\n    <ion-item lines=\"none\">\n      <ion-label color=\"primary\">\n        <h1>I got you babe</h1>\n      </ion-label>\n    </ion-item>\n  </ion-list>\n\n  <ion-list>\n    <ion-list-header lines=\"inset\">\n      <ion-label>Trending</ion-label>\n    </ion-list-header>\n    <ion-item>\n      <ion-label color=\"primary\">\n        <h1>harry styles</h1>\n      </ion-label>\n    </ion-item>\n    <ion-item>\n      <ion-label color=\"primary\">\n        <h1>christmas</h1>\n      </ion-label>\n    </ion-item>\n    <ion-item lines=\"none\">\n      <ion-label color=\"primary\">\n        <h1>falling</h1>\n      </ion-label>\n    </ion-item>\n  </ion-list>\n</template>\n```\n"
   },
   "props": [
     {
@@ -25,6 +27,34 @@
       "docsTags": [],
       "values": [
         {
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
+      "optional": true,
+      "required": false
+    },
+    {
+      "name": "lines",
+      "type": "\"full\" | \"inset\" | \"none\" | undefined",
+      "mutable": false,
+      "attr": "lines",
+      "reflectToAttr": false,
+      "docs": "How the bottom border should be displayed on the list header.",
+      "docsTags": [],
+      "values": [
+        {
+          "value": "full",
+          "type": "string"
+        },
+        {
+          "value": "inset",
+          "type": "string"
+        },
+        {
+          "value": "none",
           "type": "string"
         },
         {
@@ -65,9 +95,29 @@
       "docs": "Background of the list header"
     },
     {
+      "name": "--border-color",
+      "annotation": "prop",
+      "docs": "Color of the list header border"
+    },
+    {
+      "name": "--border-style",
+      "annotation": "prop",
+      "docs": "Style of the list header border"
+    },
+    {
+      "name": "--border-width",
+      "annotation": "prop",
+      "docs": "Width of the list header border"
+    },
+    {
       "name": "--color",
       "annotation": "prop",
       "docs": "Color of the list header text"
+    },
+    {
+      "name": "--inner-border-width",
+      "annotation": "prop",
+      "docs": "Width of the inner list header border"
     }
   ],
   "slots": [],

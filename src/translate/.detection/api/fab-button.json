@@ -304,7 +304,12 @@
     {
       "name": "--background-activated",
       "annotation": "prop",
-      "docs": "Background of the button when pressed"
+      "docs": "Background of the button when pressed. Note: setting this will interfere with the Material Design ripple."
+    },
+    {
+      "name": "--background-activated-opacity",
+      "annotation": "prop",
+      "docs": "Opacity of the button background when pressed"
     },
     {
       "name": "--background-focused",
@@ -312,9 +317,19 @@
       "docs": "Background of the button when focused with the tab key"
     },
     {
+      "name": "--background-focused-opacity",
+      "annotation": "prop",
+      "docs": "Opacity of the button background when focused with the tab key"
+    },
+    {
       "name": "--background-hover",
       "annotation": "prop",
       "docs": "Background of the button on hover"
+    },
+    {
+      "name": "--background-hover-opacity",
+      "annotation": "prop",
+      "docs": "Opacity of the button background on hover"
     },
     {
       "name": "--border-color",

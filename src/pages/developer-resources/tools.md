@@ -19,7 +19,7 @@ Angular CLIの機能の詳細
 
 TypeScriptでの作業を素晴らしいものにする機能を調べてください。
 
-### [Glossary](/docs/faq/glossary)
+### [Glossary](/docs/reference/glossary)
 
 Ionicで開発中に利用される一般的な用語の一覧。
 

@@ -1,6 +1,6 @@
-Issuesにはさまざまなタグがあります:
-- **treatable**: `ionic doctor treat` によりIssuesの解決を試みることができます。
-- **ignored**: `ionic doctor check` もしくは `ionic doctor treat` で検出されないように設定します。
-- **explicit-detection**: `ionic doctor check <issue-id>` で特定のIssuesを表示します。
+Issues can have various tags:
+- **treatable**: `ionic doctor treat` can attempt to fix the issue
+- **ignored**: configured not to be detected in `ionic doctor check` or `ionic doctor treat`
+- **explicit-detection**: issue is only detected explicitly with `ionic doctor check <issue-id>`
 
-Issuesを無視するかどうかは、`ionic config set -g doctor.issues.<issue-id>.ignored true/false` を使って設定を変更できます。`<issue-id>` はリストされたIDと一致します。
+You can flip whether an issue is ignored or not by using `ionic config set -g doctor.issues.<issue-id>.ignored true/false`, where `<issue-id>` matches an ID listed with this command.

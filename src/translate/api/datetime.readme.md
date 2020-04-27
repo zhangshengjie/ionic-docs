@@ -57,10 +57,24 @@ datetimeの値を書式付きテキストとして出力する方法を指定し
 | `YYYY, MMMM`          | `2005, June`            |
 | `MMM DD, YYYY HH:mm`  | `Jun 17, 2005 11:06`    |
 
-**Important**: `ion-datetime` は常にユーザーのタイムゾーンに相対的な値を表示します。
+**Important**: `ion-datetime` は常にユーザ環境のデフォルトのタイムゾーンを表示します。
 値 `09:00:00+01:00` が指定された場合、日時コンポーネントでは、
 ユーザーのタイムゾーン・オフセットが `-04:00` であった場合 `04:00:00-04:00` と表示されます。
+To change the display to use a different timezone, use the displayTimezone property described below.
 
+### Display Timezone
+
+The `displayTimezone` property allows you to change the default behavior
+of displaying values relative to the user's local timezone. In addition to "UTC" valid
+time zone values are determined by the browser, and in most cases follow the time zone names
+of the [IANA time zone database](https://www.iana.org/time-zones), such as "Asia/Shanghai",
+"Asia/Kolkata", "America/New_York". In the following example:
+
+```html
+<ion-datetime value="2019-10-01T15:43:40.394Z" display-timezone="utc"></ion-datetime>
+```
+
+The displayed value will not be converted and will be displayed as provided (UTC).
 
 ### Picker Format
 

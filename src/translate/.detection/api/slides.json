@@ -475,6 +475,26 @@
       "name": "--bullet-background-active",
       "annotation": "prop",
       "docs": "Background of the active pagination bullet"
+    },
+    {
+      "name": "--progress-bar-background",
+      "annotation": "prop",
+      "docs": "Background of the pagination progress-bar"
+    },
+    {
+      "name": "--progress-bar-background-active",
+      "annotation": "prop",
+      "docs": "Background of the active pagination progress-bar"
+    },
+    {
+      "name": "--scroll-bar-background",
+      "annotation": "prop",
+      "docs": "Background of the pagination scroll-bar"
+    },
+    {
+      "name": "--scroll-bar-background-active",
+      "annotation": "prop",
+      "docs": "Background of the active pagination scroll-bar"
     }
   ],
   "slots": [],

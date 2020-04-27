@@ -4,7 +4,7 @@
     "ionic",
     "ssh"
   ],
-  "summary": "IonicのSSH public keyを削除します。",
+  "summary": "Delete an SSH public key from Ionic",
   "description": "",
   "footnotes": [],
   "groups": [],

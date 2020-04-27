@@ -2,7 +2,7 @@
   "filePath": "src/components/loading/loading.tsx",
   "encapsulation": "scoped",
   "tag": "ion-loading",
-  "readme": "# ion-loading\n\nAn overlay that can be used to indicate activity while blocking user interaction. The loading indicator appears on top of the app's content, and can be dismissed by the app to resume user interaction with the app. It includes an optional backdrop, which can be disabled by setting `showBackdrop: false` upon creation.\n\n\n### Creating\n\nLoading indicators can be created using a [Loading Controller](../loading-controller). They can be customized by passing loading options in the loading controller's `create()` method. The spinner name should be passed in the `spinner` property. If a value is not passed to `spinner` the loading indicator will use the spinner specified by the platform.\n\n\n### Dismissing\n\nThe loading indicator can be dismissed automatically after a specific amount of time by passing the number of milliseconds to display it in the `duration` of the loading options. To dismiss the loading indicator after creation, call the `dismiss()` method on the loading instance. The `onDidDismiss` function can be called to perform an action after the loading indicator is dismissed.\n\n",
+  "readme": "# ion-loading\n\nAn overlay that can be used to indicate activity while blocking user interaction. The loading indicator appears on top of the app's content, and can be dismissed by the app to resume user interaction with the app. It includes an optional backdrop, which can be disabled by setting `showBackdrop: false` upon creation.\n\n### Dismissing\n\nThe loading indicator can be dismissed automatically after a specific amount of time by passing the number of milliseconds to display it in the `duration` of the loading options. To dismiss the loading indicator after creation, call the `dismiss()` method on the loading instance. The `onDidDismiss` function can be called to perform an action after the loading indicator is dismissed.\n\n",
   "docs": "An overlay that can be used to indicate activity while blocking user interaction. The loading indicator appears on top of the app's content, and can be dismissed by the app to resume user interaction with the app. It includes an optional backdrop, which can be disabled by setting `showBackdrop: false` upon creation.",
   "docsTags": [
     {
@@ -11,10 +11,10 @@
     }
   ],
   "usage": {
-    "angular": "```typescript\nimport { Component } from '@angular/core';\nimport { LoadingController } from '@ionic/angular';\n\n@Component({\n  selector: 'loading-example',\n  templateUrl: 'loading-example.html',\n  styleUrls: ['./loading-example.css']\n})\nexport class LoadingExample {\n  constructor(public loadingController: LoadingController) {}\n\n  async presentLoading() {\n    const loading = await this.loadingController.create({\n      message: 'Hellooo',\n      duration: 2000\n    });\n    await loading.present();\n    \n    const { role, data } = await loading.onDidDismiss();\n    \n    console.log('Loading dismissed!');\n  }\n\n  async presentLoadingWithOptions() {\n    const loading = await this.loadingController.create({\n      spinner: null,\n      duration: 5000,\n      message: 'Please wait...',\n      translucent: true,\n      cssClass: 'custom-class custom-loading'\n    });\n    return await loading.present();\n  }\n}\n```\n",
-    "javascript": "```javascript\nasync function presentLoading() {\n  const loading = document.createElement('ion-loading');\n  loading.message: 'Hellooo',\n  loading.duration: 2000;\n\n  document.body.appendChild(loading);\n  await loading.present();\n\n  const { role, data } = await loading.onDidDismiss();\n\n  console.log('Loading dismissed!');\n}\n\nfunction presentLoadingWithOptions() {\n  const loading = document.createElement('ion-loading');\n  loading.spinner = null;\n  loading.duration = 5000;\n  loading.message = 'Please wait...';\n  loading.translucent = true;\n  loading.cssClass = 'custom-class custom-loading';\n\n  document.body.appendChild(loading);\n  return loading.present();\n}\n```\n",
-    "react": "```tsx\nimport React, { useState } from 'react';\nimport { IonLoading, IonButton, IonContent } from '@ionic/react';\n\nexport const LoadingExample: React.FC = () => {\n  const [showLoading, setShowLoading] = useState(true);\n\n  setTimeout(() => {\n    setShowLoading(false);\n  }, 2000);\n\n  return (\n    <IonContent>\n      <IonButton onClick={() => setShowLoading(true)}>Show Loading</IonButton>\n      <IonLoading\n        isOpen={showLoading}\n        onDidDismiss={() => setShowLoading(false)}\n        message={'Loading...'}\n        duration={5000}\n      />\n    </IonContent>\n  );\n};\n```\n",
-    "vue": "```html\n<template>\n  <IonVuePage :title=\"'Loading'\">\n    <ion-button @click=\"presentLoading\">Show Loading</ion-button>\n    <br />\n    <ion-button @click=\"presentLoadingWithOptions\">Show Loading</ion-button>\n  </IonVuePage>\n</template>\n\n<script>\nexport default {\n  props: {\n    timeout: { type: Number, default: 1000 },\n  },\n  methods: {\n    presentLoading() {\n      return this.$ionic.loadingController\n        .create({\n          message: 'Loading',\n          duration: this.timeout,\n        })\n        .then(l => {\n          setTimeout(function() {\n            l.dismiss()\n          }, this.timeout)\n          return l.present()\n        })\n    },\n    presentLoadingWithOptions() {\n      return this.$ionic.loadingController\n        .create({\n          spinner: null,\n          duration: this.timeout,\n          message: 'Please wait...',\n          translucent: true,\n          cssClass: 'custom-class custom-loading',\n        })\n        .then(l => {\n          setTimeout(function() {\n            l.dismiss()\n          }, this.timeout)\n          return l.present()\n        })\n    },\n  },\n}\n</script>\n```\n"
+    "angular": "```typescript\nimport { Component } from '@angular/core';\nimport { LoadingController } from '@ionic/angular';\n\n@Component({\n  selector: 'loading-example',\n  templateUrl: 'loading-example.html',\n  styleUrls: ['./loading-example.css']\n})\nexport class LoadingExample {\n  constructor(public loadingController: LoadingController) {}\n\n  async presentLoading() {\n    const loading = await this.loadingController.create({\n      message: 'Please wait...',\n      duration: 2000\n    });\n    await loading.present();\n\n    const { role, data } = await loading.onDidDismiss();\n    console.log('Loading dismissed!');\n  }\n\n  async presentLoadingWithOptions() {\n    const loading = await this.loadingController.create({\n      spinner: null,\n      duration: 5000,\n      message: 'Click the backdrop to dismiss early...',\n      translucent: true,\n      cssClass: 'custom-class custom-loading',\n      backdropDismiss: true\n    });\n    await loading.present();\n\n    const { role, data } = await loading.onDidDismiss();\n    console.log('Loading dismissed with role:', role);\n  }\n}\n```\n",
+    "javascript": "```javascript\nasync function presentLoading() {\n  const loading = document.createElement('ion-loading');\n  loading.message = 'Please wait...';\n  loading.duration = 2000;\n\n  document.body.appendChild(loading);\n  await loading.present();\n\n  const { role, data } = await loading.onDidDismiss();\n  console.log('Loading dismissed!');\n}\n\nasync function presentLoadingWithOptions() {\n  const loading = document.createElement('ion-loading');\n\n  loading.spinner = null;\n  loading.duration = 5000;\n  loading.message = 'Click the backdrop to dismiss early...';\n  loading.translucent = true;\n  loading.cssClass = 'custom-class custom-loading';\n  loading.backdropDismiss = true;\n\n  document.body.appendChild(loading);\n  await loading.present();\n\n  const { role, data } = await loading.onDidDismiss();\n  console.log('Loading dismissed with role:', role);\n}\n```\n",
+    "react": "```tsx\nimport React, { useState } from 'react';\nimport { IonLoading, IonButton, IonContent } from '@ionic/react';\n\nexport const LoadingExample: React.FC = () => {\n  const [showLoading, setShowLoading] = useState(true);\n\n  setTimeout(() => {\n    setShowLoading(false);\n  }, 2000);\n\n  return (\n    <IonContent>\n      <IonButton onClick={() => setShowLoading(true)}>Show Loading</IonButton>\n      <IonLoading\n        isOpen={showLoading}\n        onDidDismiss={() => setShowLoading(false)}\n        message={'Please wait...'}\n        duration={5000}\n      />\n    </IonContent>\n  );\n};\n```\n",
+    "vue": "```html\n<template>\n  <IonVuePage :title=\"'Loading'\">\n    <ion-button @click=\"presentLoading\">Show Loading</ion-button>\n    <br />\n    <ion-button @click=\"presentLoadingWithOptions\">Show Loading</ion-button>\n  </IonVuePage>\n</template>\n\n<script>\nexport default {\n  props: {\n    timeout: { type: Number, default: 1000 },\n  },\n  methods: {\n    presentLoading() {\n      return this.$ionic.loadingController\n        .create({\n          message: 'Please wait...',\n          duration: this.timeout,\n        })\n        .then(loading => {\n          setTimeout(function() {\n            loading.dismiss()\n          }, this.timeout)\n          return loading.present()\n        })\n    },\n    presentLoadingWithOptions() {\n      return this.$ionic.loadingController\n        .create({\n          spinner: null,\n          duration: this.timeout,\n          message: 'Click the backdrop to dismiss early...',\n          translucent: true,\n          cssClass: 'custom-class custom-loading',\n          backdropDismiss: true\n        })\n        .then(loading=> {\n          setTimeout(function() {\n            loading.dismiss()\n          }, this.timeout)\n          return loading.present()\n        })\n    },\n  },\n}\n</script>\n```\n"
   },
   "props": [
     {
@@ -92,14 +92,14 @@
     },
     {
       "name": "enterAnimation",
-      "type": "((Animation: Animation, baseEl: any, opts?: any) => Promise<Animation>) | undefined",
+      "type": "((baseEl: any, opts?: any) => Animation) | undefined",
       "mutable": false,
       "reflectToAttr": false,
       "docs": "Animation to use when the loading indicator is presented.",
       "docsTags": [],
       "values": [
         {
-          "type": "((Animation: Animation, baseEl: any, opts?: any) => Promise<Animation>)"
+          "type": "((baseEl: any, opts?: any) => Animation)"
         },
         {
           "type": "undefined"
@@ -127,14 +127,14 @@
     },
     {
       "name": "leaveAnimation",
-      "type": "((Animation: Animation, baseEl: any, opts?: any) => Promise<Animation>) | undefined",
+      "type": "((baseEl: any, opts?: any) => Animation) | undefined",
       "mutable": false,
       "reflectToAttr": false,
       "docs": "Animation to use when the loading indicator is dismissed.",
       "docsTags": [],
       "values": [
         {
-          "type": "((Animation: Animation, baseEl: any, opts?: any) => Promise<Animation>)"
+          "type": "((baseEl: any, opts?: any) => Animation)"
         },
         {
           "type": "undefined"
@@ -359,6 +359,11 @@
     }
   ],
   "styles": [
+    {
+      "name": "--backdrop-opacity",
+      "annotation": "prop",
+      "docs": "Opacity of the backdrop"
+    },
     {
       "name": "--background",
       "annotation": "prop",

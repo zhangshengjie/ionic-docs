@@ -4,12 +4,18 @@
     "ionic",
     "integrations"
   ],
-  "summary": "インテグレーションを無効化します。",
+  "summary": "Disable an integration",
   "description": "Integrations, such as Cordova, can be disabled with this command.",
   "footnotes": [],
   "groups": [],
   "exampleCommands": [],
-  "aliases": [],
+  "aliases": [
+    "ionic integrations dis",
+    "ionic integrations delete",
+    "ionic integrations del",
+    "ionic integrations remove",
+    "ionic integrations rm"
+  ],
   "inputs": [
     {
       "name": "name",

@@ -1,8 +1,8 @@
-`ionic capacitor run` は次のことをします:
-- `ionic build` (もしくは `--livereload` オプションを指定してdevサーバを起動)
-- Webアセットを指定したネイティブプラットフォームにコピー
-- ネイティブプロジェクトのIDEを開きます (iOSではXcode, AndroidではAndroid )
+`ionic capacitor run` will do the following:
+- Perform `ionic build` (or run the dev server from `ionic serve` with the `--livereload` option)
+- Copy web assets into the specified native platform
+- Open the IDE for your native project (Xcode for iOS, Android Studio for Android)
 
-Webアセットと構成がネイティブプロジェクトにコピーされると、ネイティブIDEを使用してデバイスおよびエミュレータ/シミュレータ上でアプリケーションを実行できます。ただし、プログラムによるネイティブプロジェクトの構築と起動はまだサポートされていません。
+Once the web assets and configuration are copied into your native project, the app can run on devices and emulators/simulators using the native IDE. Unfortunately, programmatically building and launching the native project is not yet supported.
 
-AndroidとiOSでは,ブラウザ開発ツールを使ってデバイス上にリモートデバッグを設定することができます。[docs](https://ionicframework.com/docs/developer-resources/developer-tips)をご覧ください。 
+For Android and iOS, you can setup Remote Debugging on your device with browser development tools using these [docs](https://ionicframework.com/docs/developer-resources/developer-tips).

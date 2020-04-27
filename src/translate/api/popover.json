@@ -2,7 +2,7 @@
   "filePath": "src/components/popover/popover.tsx",
   "encapsulation": "scoped",
   "tag": "ion-popover",
-  "readme": "# ion-popover\n\nA Popover is a dialog that appears on top of the current page. It can be used for anything, but generally it is used for overflow actions that don't fit in the navigation bar.\n\n### Creating\n\nPopovers can be created using a [Popover Controller](../popover-controller). They can be customized by passing popover options in the popover controller's create method.\n\n### Presenting\n\nTo present a popover, call the `present` method on a popover instance. In order to position the popover relative to the element clicked, a click event needs to be passed into the options of the the `present` method. If the event is not passed, the popover will be positioned in the center of the viewport.\n\n",
+  "readme": "# ion-popover\n\nA Popover is a dialog that appears on top of the current page. It can be used for anything, but generally it is used for overflow actions that don't fit in the navigation bar.\n\n### Presenting\n\nTo present a popover, call the `present` method on a popover instance. In order to position the popover relative to the element clicked, a click event needs to be passed into the options of the the `present` method. If the event is not passed, the popover will be positioned in the center of the viewport.\n\n",
   "docs": "A Popover is a dialog that appears on top of the current page. It can be used for anything, but generally it is used for overflow actions that don't fit in the navigation bar.",
   "docsTags": [
     {
@@ -117,14 +117,14 @@
     },
     {
       "name": "enterAnimation",
-      "type": "((Animation: Animation, baseEl: any, opts?: any) => Promise<Animation>) | undefined",
+      "type": "((baseEl: any, opts?: any) => Animation) | undefined",
       "mutable": false,
       "reflectToAttr": false,
       "docs": "Animation to use when the popover is presented.",
       "docsTags": [],
       "values": [
         {
-          "type": "((Animation: Animation, baseEl: any, opts?: any) => Promise<Animation>)"
+          "type": "((baseEl: any, opts?: any) => Animation)"
         },
         {
           "type": "undefined"
@@ -168,14 +168,14 @@
     },
     {
       "name": "leaveAnimation",
-      "type": "((Animation: Animation, baseEl: any, opts?: any) => Promise<Animation>) | undefined",
+      "type": "((baseEl: any, opts?: any) => Animation) | undefined",
       "mutable": false,
       "reflectToAttr": false,
       "docs": "Animation to use when the popover is dismissed.",
       "docsTags": [],
       "values": [
         {
-          "type": "((Animation: Animation, baseEl: any, opts?: any) => Promise<Animation>)"
+          "type": "((baseEl: any, opts?: any) => Animation)"
         },
         {
           "type": "undefined"
@@ -334,6 +334,11 @@
     }
   ],
   "styles": [
+    {
+      "name": "--backdrop-opacity",
+      "annotation": "prop",
+      "docs": "Opacity of the backdrop"
+    },
     {
       "name": "--background",
       "annotation": "prop",
