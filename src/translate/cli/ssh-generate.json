@@ -4,7 +4,7 @@
     "ionic",
     "ssh"
   ],
-  "summary": "Ionicのprivate and public SSH キーペアを生成します。",
+  "summary": "Generates a private and public SSH key pair",
   "description": "",
   "footnotes": [],
   "groups": [],

@@ -4,7 +4,7 @@
     "ionic",
     "ssh"
   ],
-  "summary": "IonicにあるSSH public keysをリストします。",
+  "summary": "List your SSH public keys on Ionic",
   "description": "",
   "footnotes": [],
   "groups": [],

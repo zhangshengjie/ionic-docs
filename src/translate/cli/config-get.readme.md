@@ -1,11 +1,11 @@
-このコマンドは、プロジェクトの **./ionic.config.json** から設定を読み取り、表示します。また、`--global`オプションを使用して、グローバルCLIの設定(**~/.ionic/config.json**)上で動作することもできます。
+This command reads and prints configuration values from the project's **./ionic.config.json** file. It can also operate on the global CLI configuration (**~/.ionic/config.json**) using the `--global` option.
 
-ネストされたプロパティの場合は、ネストレベルをドットで区切ります。たとえば、プロパティ名 `integrations.cordova` は、**cordova** プロパティの **integrations** オブジェクトを検索します。
+For nested properties, separate nest levels with dots. For example, the property name `integrations.cordova` will look in the **integrations** object for the **cordova** property.
 
-引数 `property` を指定しないと、config全体が出力されます。
+Without a `property` argument, this command prints out the entire config.
 
-マルチアプリケーションプロジェクトの場合、このコマンドのスコープはデフォルトで現在のプロジェクトに設定されます。プロジェクト構成ファイルのルートで操作するには、`--root` オプションを使用します。
+For multi-app projects, this command is scoped to the current project by default. To operate at the root of the project configuration file instead, use the `--root` option.
 
-このコマンドをプログラムで使用している場合は、`--json`オプションを使用できます。
+If you are using this command programmatically, you can use the `--json` option.
 
-このコマンドは、既知のサニタイズフィールドの設定出力をサニタイズします。(`--json`を使用する場合は無効)
+This command will sanitize config output for known sensitive fields (disabled when using `--json`).

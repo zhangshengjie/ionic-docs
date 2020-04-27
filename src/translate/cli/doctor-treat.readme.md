@@ -1,3 +1,3 @@
-このコマンドは、一般的なissuesを検出して修正しようとします。修正を試みる前に、ステップが表示され、確認プロンプトが表示されます。
+This command detects and attempts to fix common issues. Before a fix is attempted, the steps are printed and a confirmation prompt is displayed.
 
-オプションで `id` 引数を指定して、1つの問題の修正を試みることができます。`ionic doctor list` を使用すると、既知の問題をすべて表示できます。
+Optionally supply the `id` argument to attempt to fix a single issue. Use `ionic doctor list` to list all known issues.

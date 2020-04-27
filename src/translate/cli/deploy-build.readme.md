@@ -1,6 +1,6 @@
-このコマンドはIonic Appflow上にビルドをデプロイします。ビルドの実行中に、リモート・ビルド・ログを端末に出力します。
+This command creates a deploy build on Ionic Appflow. While the build is running, it prints the remote build log to the terminal.
 
-ビルドのカスタマイズ:
--`--environment`と`--channel`オプションは、公開されるビルドで使用する値のグループをカスタマイズできます。
+Customizing the build:
+- The `--environment` and `--channel` options can be used to customize the groups of values exposed to the build.
 
-`--commit`以外のすべてのオプションは、Appflow[Dashboard](https://dashboard.ionicframework.com)内のfull name setupを使って指定することができます。
+Apart from `--commit`, every option can be specified using the full name setup within the Appflow [Dashboard](https://dashboard.ionicframework.com).

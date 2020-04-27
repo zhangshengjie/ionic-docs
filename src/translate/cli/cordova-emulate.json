@@ -4,7 +4,7 @@
     "ionic",
     "cordova"
   ],
-  "summary": "Ionicプロジェクトをシュミレータ/エミュレータ上でエミュレートします。",
+  "summary": "Emulate an Ionic project on a simulator/emulator",
   "description": "Build your app and deploy it to devices and emulators using this command. Optionally specify the `--livereload` option to use the dev server from `ionic serve` for livereload functionality.\n\nThis command will first use `ionic build` to build web assets (or `ionic serve` with the `--livereload` option). Then, `cordova build` is used to compile and prepare your app. Finally, the `native-run` [utility](https://github.com/ionic-team/native-run) is used to run your app on a device. To use Cordova for this process instead, use the `--no-native-run` option.\n\nIf you have multiple devices and emulators, you can target a specific one with the `--target` option. You can list targets with `--list`.\n\nFor Android and iOS, you can setup Remote Debugging on your device with browser development tools using these [docs](https://ionicframework.com/docs/developer-resources/developer-tips).\n\nWhen using `--livereload` with hardware devices, remember that livereload needs an active connection between device and computer. In some scenarios, you may need to host the dev server on an external address using the `--external` option. See these [docs](https://ionicframework.com/docs/cli/livereload) for more information.\n\nJust like with `ionic cordova build`, you can pass additional options to the Cordova CLI using the `--` separator. To pass additional options to the dev server, consider using `ionic serve` separately and using the `--livereload-url` option.",
   "footnotes": [],
   "groups": [],
@@ -35,6 +35,45 @@
   ],
   "options": [
     {
+      "name": "consolelogs",
+      "type": "boolean",
+      "summary": "Print app console logs to the terminal",
+      "groups": [
+        "advanced",
+        "cordova"
+      ],
+      "aliases": [],
+      "spec": {
+        "value": "true/false"
+      }
+    },
+    {
+      "name": "consolelogs-port",
+      "type": "string",
+      "summary": "Use specific port for console logs server",
+      "groups": [
+        "advanced",
+        "cordova"
+      ],
+      "aliases": [],
+      "spec": {
+        "value": "port"
+      }
+    },
+    {
+      "name": "ssl",
+      "type": "boolean",
+      "summary": "Use HTTPS for the dev server",
+      "groups": [
+        "experimental",
+        "cordova"
+      ],
+      "aliases": [],
+      "spec": {
+        "value": "true/false"
+      }
+    },
+    {
       "name": "list",
       "type": "boolean",
       "summary": "List all available targets",
@@ -60,22 +99,32 @@
       }
     },
     {
-      "name": "address",
+      "name": "external",
+      "type": "boolean",
+      "summary": "Host dev server on all network interfaces (i.e. `--host=0.0.0.0`)",
+      "groups": [],
+      "aliases": [],
+      "spec": {
+        "value": "true/false"
+      }
+    },
+    {
+      "name": "host",
       "type": "string",
-      "summary": "Use specific address for the dev server",
-      "default": "0.0.0.0",
+      "summary": "Use specific host for the dev server",
+      "default": "localhost",
       "groups": [
         "advanced"
       ],
       "aliases": [],
       "spec": {
-        "value": "address"
+        "value": "host"
       }
     },
     {
       "name": "port",
       "type": "string",
-      "summary": "Use specific port for HTTP",
+      "summary": "Use specific port for the dev server",
       "default": "8100",
       "groups": [
         "advanced"
@@ -88,6 +137,18 @@
       }
     },
     {
+      "name": "public-host",
+      "type": "string",
+      "summary": "The host used for the browser or web view",
+      "groups": [
+        "advanced"
+      ],
+      "aliases": [],
+      "spec": {
+        "value": "host"
+      }
+    },
+    {
       "name": "livereload",
       "type": "boolean",
       "summary": "Spin up dev server to live-reload www files",
@@ -95,16 +156,6 @@
       "aliases": [
         "l"
       ],
-      "spec": {
-        "value": "true/false"
-      }
-    },
-    {
-      "name": "external",
-      "type": "boolean",
-      "summary": "Host dev server on all network interfaces (i.e. `--address=0.0.0.0`)",
-      "groups": [],
-      "aliases": [],
       "spec": {
         "value": "true/false"
       }
@@ -152,19 +203,6 @@
       "summary": "Output source maps",
       "groups": [
         "advanced",
-        "cordova"
-      ],
-      "aliases": [],
-      "spec": {
-        "value": "true/false"
-      }
-    },
-    {
-      "name": "ssl",
-      "type": "boolean",
-      "summary": "Use HTTPS for the dev server",
-      "groups": [
-        "experimental",
         "cordova"
       ],
       "aliases": [],
@@ -258,9 +296,9 @@
     {
       "name": "native-run",
       "type": "boolean",
-      "summary": "Use `native-run` instead of Cordova for running the app",
+      "summary": "Do not use `native-run` to run the app; use Cordova instead",
+      "default": true,
       "groups": [
-        "experimental",
         "native-run"
       ],
       "aliases": [],
@@ -273,7 +311,6 @@
       "type": "boolean",
       "summary": "Tie the running app to the process",
       "groups": [
-        "experimental",
         "native-run"
       ],
       "aliases": [],
@@ -284,9 +321,9 @@
     {
       "name": "json",
       "type": "boolean",
-      "summary": "Output `--list` targets in JSON",
+      "summary": "Output targets in JSON",
       "groups": [
-        "experimental",
+        "advanced",
         "native-run"
       ],
       "aliases": [],

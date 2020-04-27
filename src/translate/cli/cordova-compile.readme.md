@@ -1,1 +1,1 @@
-`cordova compile` を直接実行するのと似ていますが、わかりやすいチェックを提供します。
+Like running `cordova compile` directly, but provides friendly checks.

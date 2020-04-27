@@ -3,8 +3,8 @@
   "namespace": [
     "ionic"
   ],
-  "summary": "Ionicからログアウトします。",
-  "description": "Remove the Ionic Appflow user token from the CLI config.\n\nLogin again with `ionic login`.\n\nIf you need to create an Ionic Appflow account, use `ionic signup`.",
+  "summary": "Log out of Ionic",
+  "description": "Remove the Ionic user token from the CLI config.\n\nLog in again with `ionic login`.\n\nIf you need to create an Ionic account, use `ionic signup`.",
   "footnotes": [],
   "groups": [],
   "exampleCommands": [],

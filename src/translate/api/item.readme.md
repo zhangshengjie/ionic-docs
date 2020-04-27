@@ -40,7 +40,7 @@ Itemは、コンテンツを配置するために [slots](https://developer.mozi
 
 ### 文字揃え
 
-Itemsはテキストを左揃えにし、テキストがItemsよりも広い場合は省略記号を追加します。テキストを変換するために `<ion-item>` に追加できる属性については、[Utility Attributes Documentation](/docs/layout/css-utilities)を参照してください。
+Itemsはテキストを左揃えにし、テキストがItemsよりも広い場合は省略記号を追加します。テキストを変換するために `<ion-item>` に追加できる属性については、[CSS Utilities Documentation](/docs/layout/css-utilities) を参照してください。
 
 
 ## Inputの強調

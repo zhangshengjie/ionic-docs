@@ -1,3 +1,3 @@
-`ionic capacitor update` は次のことをします:
-- 更新が必要な依存関係など、Capacitorの各ネイティブプロジェクトを更新します。
-- 検出されたCapacitorまたはCordovaプラグインをインストールします。
+`ionic capacitor update` will do the following:
+- Update Capacitor native platform(s) and dependencies
+- Install any discovered Capacitor or Cordova plugins

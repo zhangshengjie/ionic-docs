@@ -2,7 +2,7 @@
   "filePath": "src/components/action-sheet/action-sheet.tsx",
   "encapsulation": "scoped",
   "tag": "ion-action-sheet",
-  "readme": "# ion-action-sheet\n\nAn Action Sheet is a dialog that displays a set of options. It appears on top of the app's content, and must be manually dismissed by the user before they can resume interaction with the app. Destructive options are made obvious in `ios` mode. There are multiple ways to dismiss the action sheet, including tapping the backdrop or hitting the escape key on desktop.\n\n### Creating\n\nAn action sheet can be created by the [Action Sheet Controller](../action-sheet-controller) from an array of `buttons`, with each button including properties for its `text`, and optionally a `handler` and `role`. If a handler returns `false` then the action sheet will not be dismissed. An action sheet can also optionally have a `header` and a `subHeader`.\n\n### Buttons\n\nA button's `role` property can either be `destructive` or `cancel`. Buttons without a role property will have the default look for the platform. Buttons with the `cancel` role will always load as the bottom button, no matter where they are in the array. All other buttons will be displayed in the order they have been added to the `buttons` array. Note: We recommend that `destructive` buttons are always the first button in the array, making them the top button. Additionally, if the action sheet is dismissed by tapping the backdrop, then it will fire the handler from the button with the cancel role.\n\n",
+  "readme": "# ion-action-sheet\n\nAn Action Sheet is a dialog that displays a set of options. It appears on top of the app's content, and must be manually dismissed by the user before they can resume interaction with the app. Destructive options are made obvious in `ios` mode. There are multiple ways to dismiss the action sheet, including tapping the backdrop or hitting the escape key on desktop.\n\n### Buttons\n\nA button's `role` property can either be `destructive` or `cancel`. Buttons without a role property will have the default look for the platform. Buttons with the `cancel` role will always load as the bottom button, no matter where they are in the array. All other buttons will be displayed in the order they have been added to the `buttons` array. Note: We recommend that `destructive` buttons are always the first button in the array, making them the top button. Additionally, if the action sheet is dismissed by tapping the backdrop, then it will fire the handler from the button with the cancel role.\n\n",
   "docs": "An Action Sheet is a dialog that displays a set of options. It appears on top of the app's content, and must be manually dismissed by the user before they can resume interaction with the app. Destructive options are made obvious in `ios` mode. There are multiple ways to dismiss the action sheet, including tapping the backdrop or hitting the escape key on desktop.",
   "docsTags": [
     {
@@ -13,7 +13,7 @@
   "usage": {
     "angular": "```typescript\nimport { Component } from '@angular/core';\nimport { ActionSheetController } from '@ionic/angular';\n\n@Component({\n  selector: 'action-sheet-example',\n  templateUrl: 'action-sheet-example.html',\n  styleUrls: ['./action-sheet-example.css'],\n})\nexport class ActionSheetExample {\n\n  constructor(public actionSheetController: ActionSheetController) {}\n\n  async presentActionSheet() {\n    const actionSheet = await this.actionSheetController.create({\n      header: 'Albums',\n      buttons: [{\n        text: 'Delete',\n        role: 'destructive',\n        icon: 'trash',\n        handler: () => {\n          console.log('Delete clicked');\n        }\n      }, {\n        text: 'Share',\n        icon: 'share',\n        handler: () => {\n          console.log('Share clicked');\n        }\n      }, {\n        text: 'Play (open modal)',\n        icon: 'arrow-dropright-circle',\n        handler: () => {\n          console.log('Play clicked');\n        }\n      }, {\n        text: 'Favorite',\n        icon: 'heart',\n        handler: () => {\n          console.log('Favorite clicked');\n        }\n      }, {\n        text: 'Cancel',\n        icon: 'close',\n        role: 'cancel',\n        handler: () => {\n          console.log('Cancel clicked');\n        }\n      }]\n    });\n    await actionSheet.present();\n  }\n\n}\n```\n",
     "javascript": "```javascript\nasync function presentActionSheet() {\n\n  const actionSheet = document.createElement('ion-action-sheet');\n\n  actionSheet.header = \"Albums\";\n  actionSheet.buttons = [{\n    text: 'Delete',\n    role: 'destructive',\n    icon: 'trash',\n    handler: () => {\n      console.log('Delete clicked');\n    }\n  }, {\n    text: 'Share',\n    icon: 'share',\n    handler: () => {\n      console.log('Share clicked');\n    }\n  }, {\n    text: 'Play (open modal)',\n    icon: 'arrow-dropright-circle',\n    handler: () => {\n      console.log('Play clicked');\n    }\n  }, {\n    text: 'Favorite',\n    icon: 'heart',\n    handler: () => {\n      console.log('Favorite clicked');\n    }\n  }, {\n    text: 'Cancel',\n    icon: 'close',\n    role: 'cancel',\n    handler: () => {\n      console.log('Cancel clicked');\n    }\n  }];\n  document.body.appendChild(actionSheet);\n  return actionSheet.present();\n}\n```\n",
-    "react": "```typescript\nimport React, { useState } from 'react'\nimport { IonActionSheet, IonContent, IonButton } from '@ionic/react';\n\nexport const ActionSheetExample: React.FC = () => {\n\n  const [showActionSheet, setShowActionSheet] = useState(false);\n\n  return (\n    <IonContent>\n      <IonButton onClick={() => setShowActionSheet(true)} expand=\"block\">Show Action Sheet</IonButton>\n      <IonActionSheet\n        isOpen={showActionSheet}\n        onDidDismiss={() => setShowActionSheet(false)}\n        buttons={[{\n          text: 'Delete',\n          role: 'destructive',\n          icon: 'trash',\n          handler: () => {\n            console.log('Delete clicked');\n          }\n        }, {\n          text: 'Share',\n          icon: 'share',\n          handler: () => {\n            console.log('Share clicked');\n          }\n        }, {\n          text: 'Play (open modal)',\n          icon: 'arrow-dropright-circle',\n          handler: () => {\n            console.log('Play clicked');\n          }\n        }, {\n          text: 'Favorite',\n          icon: 'heart',\n          handler: () => {\n            console.log('Favorite clicked');\n          }\n        }, {\n          text: 'Cancel',\n          icon: 'close',\n          role: 'cancel',\n          handler: () => {\n            console.log('Cancel clicked');\n          }\n        }]}\n      >\n      </IonActionSheet>\n    </IonContent>\n\n  );\n\n}\n\n```\n",
+    "react": "```typescript\nimport React, { useState } from 'react'\nimport { IonActionSheet, IonContent, IonButton } from '@ionic/react';\nimport { trash, share, playCircleOutline, heart, close } from 'ionicons/icons';\n\nexport const ActionSheetExample: React.FC = () => {\n\n  const [showActionSheet, setShowActionSheet] = useState(false);\n\n  return (\n    <IonContent>\n      <IonButton onClick={() => setShowActionSheet(true)} expand=\"block\">Show Action Sheet</IonButton>\n      <IonActionSheet\n        isOpen={showActionSheet}\n        onDidDismiss={() => setShowActionSheet(false)}\n        buttons={[{\n          text: 'Delete',\n          role: 'destructive',\n          icon: trash,\n          handler: () => {\n            console.log('Delete clicked');\n          }\n        }, {\n          text: 'Share',\n          icon: share,\n          handler: () => {\n            console.log('Share clicked');\n          }\n        }, {\n          text: 'Play (open modal)',\n          icon: playCircleOutline,\n          handler: () => {\n            console.log('Play clicked');\n          }\n        }, {\n          text: 'Favorite',\n          icon: heart,\n          handler: () => {\n            console.log('Favorite clicked');\n          }\n        }, {\n          text: 'Cancel',\n          icon: close,\n          role: 'cancel',\n          handler: () => {\n            console.log('Cancel clicked');\n          }\n        }]}\n      >\n      </IonActionSheet>\n    </IonContent>\n\n  );\n\n}\n\n```\n",
     "vue": "```html\n<template>\n  <IonVuePage :title=\"'Action Sheet'\">\n    <ion-button @click=\"presentActionSheet\">Show Action Sheet</ion-button>\n  </IonVuePage>\n</template>\n\n<script>\nexport default {\n  methods: {\n    presentActionSheet() {\n      return this.$ionic.actionSheetController\n        .create({\n          header: 'Albums',\n          buttons: [\n            {\n              text: 'Delete',\n              role: 'destructive',\n              icon: 'trash',\n              handler: () => {\n                console.log('Delete clicked')\n              },\n            },\n            {\n              text: 'Share',\n              icon: 'share',\n              handler: () => {\n                console.log('Share clicked')\n              },\n            },\n            {\n              text: 'Play (open modal)',\n              icon: 'arrow-dropright-circle',\n              handler: () => {\n                console.log('Play clicked')\n              },\n            },\n            {\n              text: 'Favorite',\n              icon: 'heart',\n              handler: () => {\n                console.log('Favorite clicked')\n              },\n            },\n            {\n              text: 'Cancel',\n              icon: 'close',\n              role: 'cancel',\n              handler: () => {\n                console.log('Cancel clicked')\n              },\n            },\n          ],\n        })\n        .then(a => a.present())\n    },\n  },\n}\n</script>\n```\n"
   },
   "props": [
@@ -94,14 +94,14 @@
     },
     {
       "name": "enterAnimation",
-      "type": "((Animation: Animation, baseEl: any, opts?: any) => Promise<Animation>) | undefined",
+      "type": "((baseEl: any, opts?: any) => Animation) | undefined",
       "mutable": false,
       "reflectToAttr": false,
       "docs": "Animation to use when the action sheet is presented.",
       "docsTags": [],
       "values": [
         {
-          "type": "((Animation: Animation, baseEl: any, opts?: any) => Promise<Animation>)"
+          "type": "((baseEl: any, opts?: any) => Animation)"
         },
         {
           "type": "undefined"
@@ -148,14 +148,14 @@
     },
     {
       "name": "leaveAnimation",
-      "type": "((Animation: Animation, baseEl: any, opts?: any) => Promise<Animation>) | undefined",
+      "type": "((baseEl: any, opts?: any) => Animation) | undefined",
       "mutable": false,
       "reflectToAttr": false,
       "docs": "Animation to use when the action sheet is dismissed.",
       "docsTags": [],
       "values": [
         {
-          "type": "((Animation: Animation, baseEl: any, opts?: any) => Promise<Animation>)"
+          "type": "((baseEl: any, opts?: any) => Animation)"
         },
         {
           "type": "undefined"
@@ -317,19 +317,84 @@
   ],
   "styles": [
     {
+      "name": "--backdrop-opacity",
+      "annotation": "prop",
+      "docs": "Opacity of the backdrop"
+    },
+    {
       "name": "--background",
       "annotation": "prop",
       "docs": "Background of the action sheet group"
     },
     {
-      "name": "--background-activated",
+      "name": "--button-background",
       "annotation": "prop",
-      "docs": "Background of the action sheet button when pressed"
+      "docs": "Background of the action sheet button"
     },
     {
-      "name": "--background-selected",
+      "name": "--button-background-activated",
+      "annotation": "prop",
+      "docs": "Background of the action sheet button when pressed. Note: setting this will interfere with the Material Design ripple."
+    },
+    {
+      "name": "--button-background-activated-opacity",
+      "annotation": "prop",
+      "docs": "Opacity of the action sheet button background when pressed"
+    },
+    {
+      "name": "--button-background-focused",
+      "annotation": "prop",
+      "docs": "Background of the action sheet button when tabbed to"
+    },
+    {
+      "name": "--button-background-focused-opacity",
+      "annotation": "prop",
+      "docs": "Opacity of the action sheet button background when tabbed to"
+    },
+    {
+      "name": "--button-background-hover",
+      "annotation": "prop",
+      "docs": "Background of the action sheet button on hover"
+    },
+    {
+      "name": "--button-background-hover-opacity",
+      "annotation": "prop",
+      "docs": "Opacity of the action sheet button background on hover"
+    },
+    {
+      "name": "--button-background-selected",
       "annotation": "prop",
       "docs": "Background of the selected action sheet button"
+    },
+    {
+      "name": "--button-background-selected-opacity",
+      "annotation": "prop",
+      "docs": "Opacity of the selected action sheet button background"
+    },
+    {
+      "name": "--button-color",
+      "annotation": "prop",
+      "docs": "Color of the action sheet button"
+    },
+    {
+      "name": "--button-color-activated",
+      "annotation": "prop",
+      "docs": "Color of the action sheet button when pressed"
+    },
+    {
+      "name": "--button-color-focused",
+      "annotation": "prop",
+      "docs": "Color of the action sheet button when tabbed to"
+    },
+    {
+      "name": "--button-color-hover",
+      "annotation": "prop",
+      "docs": "Color of the action sheet button on hover"
+    },
+    {
+      "name": "--button-color-selected",
+      "annotation": "prop",
+      "docs": "Color of the selected action sheet button"
     },
     {
       "name": "--color",
