@@ -79,7 +79,7 @@
     {
       "name": "external",
       "type": "boolean",
-      "summary": "Host dev server on all network interfaces (i.e. `--address=0.0.0.0`)",
+      "summary": "Host dev server on all network interfaces (i.e. `--host=0.0.0.0`)",
       "groups": [],
       "aliases": [],
       "spec": {
@@ -87,22 +87,22 @@
       }
     },
     {
-      "name": "address",
+      "name": "host",
       "type": "string",
-      "summary": "Use specific address for the dev server",
+      "summary": "Use specific host for the dev server",
       "default": "localhost",
       "groups": [
         "advanced"
       ],
       "aliases": [],
       "spec": {
-        "value": "address"
+        "value": "host"
       }
     },
     {
       "name": "port",
       "type": "string",
-      "summary": "Use specific port for HTTP",
+      "summary": "Use specific port for the dev server",
       "default": "8100",
       "groups": [
         "advanced"
@@ -115,16 +115,15 @@
       }
     },
     {
-      "name": "devapp",
-      "type": "boolean",
-      "summary": "Publish DevApp service",
-      "default": false,
+      "name": "public-host",
+      "type": "string",
+      "summary": "The host used for the browser or web view",
       "groups": [
         "advanced"
       ],
       "aliases": [],
       "spec": {
-        "value": "true/false"
+        "value": "host"
       }
     },
     {

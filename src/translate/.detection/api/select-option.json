@@ -25,23 +25,6 @@
       "required": false
     },
     {
-      "name": "selected",
-      "type": "boolean",
-      "mutable": false,
-      "attr": "selected",
-      "reflectToAttr": false,
-      "docs": "If `true`, the element is selected.",
-      "docsTags": [],
-      "default": "false",
-      "values": [
-        {
-          "type": "boolean"
-        }
-      ],
-      "optional": false,
-      "required": false
-    },
-    {
       "name": "value",
       "type": "any",
       "mutable": false,

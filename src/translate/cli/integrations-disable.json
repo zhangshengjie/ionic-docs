@@ -9,7 +9,13 @@
   "footnotes": [],
   "groups": [],
   "exampleCommands": [],
-  "aliases": [],
+  "aliases": [
+    "ionic integrations dis",
+    "ionic integrations delete",
+    "ionic integrations del",
+    "ionic integrations remove",
+    "ionic integrations rm"
+  ],
   "inputs": [
     {
       "name": "name",

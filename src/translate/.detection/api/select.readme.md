@@ -4,8 +4,7 @@ Selects are form controls to select an option, or options, from a set of options
 
 A select should be used with child `<ion-select-option>` elements. If the child option is not given a `value` attribute then its text will be used as the value.
 
-If `value` is set on the `<ion-select>`, the selected option will be chosen based on that value. Otherwise, the `selected` attribute can be used on the `<ion-select-option>`.
-
+If `value` is set on the `<ion-select>`, the selected option will be chosen based on that value.
 
 ## Interfaces
 

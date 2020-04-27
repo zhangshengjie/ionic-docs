@@ -26,14 +26,14 @@
     },
     {
       "name": "animation",
-      "type": "((Animation: Animation, baseEl: any, opts?: any) => Promise<Animation>) | undefined",
+      "type": "((baseEl: any, opts?: any) => Animation) | undefined",
       "mutable": false,
       "reflectToAttr": false,
       "docs": "By default `ion-nav` animates transition between pages based in the mode (ios or material design).\nHowever, this property allows to create custom transition using `AnimateBuilder` functions.",
       "docsTags": [],
       "values": [
         {
-          "type": "((Animation: Animation, baseEl: any, opts?: any) => Promise<Animation>)"
+          "type": "((baseEl: any, opts?: any) => Animation)"
         },
         {
           "type": "undefined"

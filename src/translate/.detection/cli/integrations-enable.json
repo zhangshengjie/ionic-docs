@@ -9,7 +9,10 @@
   "footnotes": [],
   "groups": [],
   "exampleCommands": [],
-  "aliases": [],
+  "aliases": [
+    "ionic integrations en",
+    "ionic integrations add"
+  ],
   "inputs": [
     {
       "name": "name",
@@ -41,7 +44,7 @@
     {
       "name": "quiet",
       "type": "boolean",
-      "summary": "Do not log file operations",
+      "summary": "Less verbose output, ignore integration errors",
       "groups": [],
       "aliases": [],
       "spec": {

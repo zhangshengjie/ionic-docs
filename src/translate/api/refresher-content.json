@@ -13,7 +13,7 @@
       "mutable": true,
       "attr": "pulling-icon",
       "reflectToAttr": false,
-      "docs": "A static icon to display when you begin to pull down",
+      "docs": "A static icon or a spinner to display when you begin to pull down.\nA spinner name can be provided to gradually show tick marks\nwhen pulling down on iOS devices.",
       "docsTags": [],
       "values": [
         {
@@ -121,13 +121,13 @@
   "slots": [],
   "dependents": [],
   "dependencies": [
-    "ion-icon",
-    "ion-spinner"
+    "ion-spinner",
+    "ion-icon"
   ],
   "dependencyGraph": {
     "ion-refresher-content": [
-      "ion-icon",
-      "ion-spinner"
+      "ion-spinner",
+      "ion-icon"
     ]
   }
 }

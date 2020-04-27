@@ -14,7 +14,10 @@
     "ionic config unset --global git.setup",
     "ionic config unset -g interactive"
   ],
-  "aliases": [],
+  "aliases": [
+    "ionic config delete",
+    "ionic config del"
+  ],
   "inputs": [
     {
       "name": "property",

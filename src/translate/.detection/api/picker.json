@@ -119,14 +119,14 @@
     },
     {
       "name": "enterAnimation",
-      "type": "((Animation: Animation, baseEl: any, opts?: any) => Promise<Animation>) | undefined",
+      "type": "((baseEl: any, opts?: any) => Animation) | undefined",
       "mutable": false,
       "reflectToAttr": false,
       "docs": "Animation to use when the picker is presented.",
       "docsTags": [],
       "values": [
         {
-          "type": "((Animation: Animation, baseEl: any, opts?: any) => Promise<Animation>)"
+          "type": "((baseEl: any, opts?: any) => Animation)"
         },
         {
           "type": "undefined"
@@ -154,14 +154,14 @@
     },
     {
       "name": "leaveAnimation",
-      "type": "((Animation: Animation, baseEl: any, opts?: any) => Promise<Animation>) | undefined",
+      "type": "((baseEl: any, opts?: any) => Animation) | undefined",
       "mutable": false,
       "reflectToAttr": false,
       "docs": "Animation to use when the picker is dismissed.",
       "docsTags": [],
       "values": [
         {
-          "type": "((Animation: Animation, baseEl: any, opts?: any) => Promise<Animation>)"
+          "type": "((baseEl: any, opts?: any) => Animation)"
         },
         {
           "type": "undefined"
@@ -319,6 +319,11 @@
     }
   ],
   "styles": [
+    {
+      "name": "--backdrop-opacity",
+      "annotation": "prop",
+      "docs": "Opacity of the backdrop"
+    },
     {
       "name": "--background",
       "annotation": "prop",

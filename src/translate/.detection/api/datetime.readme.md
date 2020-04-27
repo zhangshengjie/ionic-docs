@@ -58,9 +58,24 @@ above can be passed in to the display format in any combination.
 | `YYYY, MMMM`          | `2005, June`            |
 | `MMM DD, YYYY HH:mm`  | `Jun 17, 2005 11:06`    |
 
-**Important**: `ion-datetime` will always display values relative to the user's timezone.
+**Important**: `ion-datetime` will by default display values relative to the user's timezone.
 Given a value of `09:00:00+01:00`, the datetime component will
 display it as `04:00:00-04:00` for users in a `-04:00` timezone offset.
+To change the display to use a different timezone, use the displayTimezone property described below.
+
+### Display Timezone
+
+The `displayTimezone` property allows you to change the default behavior
+of displaying values relative to the user's local timezone. In addition to "UTC" valid
+time zone values are determined by the browser, and in most cases follow the time zone names
+of the [IANA time zone database](https://www.iana.org/time-zones), such as "Asia/Shanghai",
+"Asia/Kolkata", "America/New_York". In the following example:
+
+```html
+<ion-datetime value="2019-10-01T15:43:40.394Z" display-timezone="utc"></ion-datetime>
+```
+
+The displayed value will not be converted and will be displayed as provided (UTC).
 
 
 ### Picker Format

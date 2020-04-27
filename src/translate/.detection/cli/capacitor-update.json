@@ -5,11 +5,9 @@
     "capacitor"
   ],
   "summary": "Update Capacitor native platforms, install Capacitor/Cordova plugins",
-  "description": "`ionic capacitor update` will do the following:\n- Update each Capacitor native project, such as any dependencies that need updating.\n- Install any discovered Capacitor or Cordova plugins.",
+  "description": "`ionic capacitor update` will do the following:\n- Update Capacitor native platform(s) and dependencies\n- Install any discovered Capacitor or Cordova plugins",
   "footnotes": [],
-  "groups": [
-    "beta"
-  ],
+  "groups": [],
   "exampleCommands": [],
   "aliases": [],
   "inputs": [
