@@ -46,7 +46,7 @@ $ npm install -g @ionic/cli native-run cordova-res
 
 > The `-g` option means _install globally_. When packages are installed globally, `EACCES` permission errors can occur.
 >
-> Consider setting up npm to operate globally without elevated permissions. See [Resolving Permission Errors](/docs/faq/tips#resolving-permission-errors) for more information.
+> Consider setting up npm to operate globally without elevated permissions. See [Resolving Permission Errors](/docs/developing/tips#resolving-permission-errors) for more information.
 
 ## アプリの作成
 次に、"Tabs" というアプリテンプレートを使用して Ionic Angular アプリを生成し、Native機能を使うためにCapacitorを追加します。

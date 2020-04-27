@@ -4,6 +4,7 @@ Thanks for your interest in contributing to Ionic's documentation! :tada: Check 
 
 - [Contributing Guide](#contributing-guide)
   - [Development Workflow](#development-workflow)
+  - [Using VS Code on Windows](#using-vs-code-on-windows)
   - [Project Structure](#project-structure)
     - [Directories](#directories)
     - [Page Templates](#page-templates)
@@ -33,6 +34,14 @@ $ npm start
 
 ---
 
+## Using VS Code on Windows
+
+The Ionic docs were originally built in a Mac-based environment, so Mac-focused linting rules apply when committing changes. To contribute on Windows, do the following:
+
+- Configure VS Code to read/save files using line breaks (LF) instead of carriage returns (CRLF). Set it globally by navigating to: Settings -> Text Editor -> Files -> Eol. Set to `\n`.
+- Check that the Git setting `core.autocrlf` is set to `false`: run `git config -l | grep autocrlf`. Switch it to false using: `git config --global core.autocrlf false`.
+- If you've already cloned the `ionic-docs` repo, the files may already be cached as LF. To undo this, you need to clean the cache files of the repository. Run the following (make sure you stage or commit your changes first): `git rm --cached -r .` then `git reset --hard`.
+
 ## Project Structure
 
 Ionic's documentation is built using [Stencil](https://stenciljs.com). The content is written as Markdown or pulled in as JSON data from other Ionic repositories.
@@ -42,11 +51,11 @@ At a high level, the production documentation works like this:
 1. At build time, the `build-pages` script reads the Markdown in `src/pages/` and creates a JSON representation of each page at the same path
    ```
    pages/
-   ├── intro.json
-   └── intro.md
+   ├── index.json
+   └── index.md
    ```
-2. At runtime, the `docs-page` component receives the current path (e.g. `/docs/intro`)
-3. The `docs-page` component fetches and parses the [JSON representation](https://ionicframework.com/docs/pages/intro.json) of that page
+2. At runtime, the `docs-page` component receives the current path (e.g. `/docs`)
+3. The `docs-page` component fetches and parses the [JSON representation](https://ionicframework.com/docs/pages/index.json) of that page
 4. The `docs-page` component renders that data using a [template](https://github.com/ionic-team/ionic-docs/tree/master/src/components/page/templates)
 
 > **Note**: most reference content (e.g. APIs, native plugins, CLI commands) is not stored as Markdown. Those pages are created using data provided by other repositories to the `build-pages` script.
@@ -81,8 +90,8 @@ The [`docs-menu`](https://github.com/ionic-team/ionic-docs/blob/master/src/compo
 The content of the Ionic docs is written as [Markdown](https://commonmark.org/) in `src/pages`. Each Markdown file corresponds to a route.
 
 ```
-/docs/intro             =>  src/pages/intro.md
-/docs/installation/cli  =>  src/pages/installation/cli.md
+/docs/                  =>  src/pages/index.md
+/docs/intro/cli         =>  src/pages/intro/cli.md
 /docs/theming/advanced  =>  src/pages/theming/advanced.md
 /docs/theming           =>  src/pages/theming.md
 ```
@@ -151,7 +160,7 @@ For example, in `src/components/menu/templates/main.tsx`:
 
 ```javascript
 // 'token': 'path'
-'menu-installation-cli': '/docs/installation/cli',
+'menu-intro-cli': '/docs/intro/cli',
 ```
 
 Then, add the token and its translation to each file within the `src/assets/locales` folder:
@@ -160,7 +169,7 @@ For example, in `src/assets/locales/en/messages.json`:
 
 ```javascript
 // 'token': 'translated text'
-"menu-installation-cli": "CLI Installation",
+"menu-intro-cli": "CLI Installation",
 ```
 
 ## Reporting Issues

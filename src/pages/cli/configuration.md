@@ -94,7 +94,7 @@ module.exports = function(ctx) {
 
 <small><em>Available in CLI 6.2.0+</em></small>
 
-Ionic CLIは multi-app 構成セットアップをサポートしており、複数のIonicアプリケーションと共有コードが単一のリポジトリ [monorepo](/docs/faq/glossary#monorepo) 内に存在することができます。
+Ionic CLIは multi-app 構成セットアップをサポートしており、複数のIonicアプリケーションと共有コードが単一のリポジトリ [monorepo](/docs/reference/glossary#monorepo) 内に存在することができます。
 
 ### セットアップステップ
 

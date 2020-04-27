@@ -68,6 +68,7 @@ export namespace Components {
   }
   interface DocsCard {
     'header': string;
+    'hoverIcon': string;
     'href': string;
     'icon': string;
     'iconset': string;
@@ -597,6 +598,7 @@ declare namespace LocalJSX {
   }
   interface DocsCard {
     'header'?: string;
+    'hoverIcon'?: string;
     'href'?: string;
     'icon'?: string;
     'iconset'?: string;
