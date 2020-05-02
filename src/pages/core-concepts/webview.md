@@ -15,11 +15,7 @@ For [Cordova](/docs/reference/glossary#cordova), Ionic maintains a <a href="http
 
 ## Web Viewとは
 
-<<<<<<< HEAD:src/pages/building/webview.md
-Ionicアプリは[Web技術](/docs/faq/glossary#web-standards)をつかって構築され、フルスクリーンでの表示、Webブラウザのすべての機能が使えるWeb Viewを使ってレンダリングされます。
-=======
-Ionic apps are built using [web technologies](/docs/reference/glossary#web-standards) and are rendered using Web Views, which are a full screen and full-powered web browser.
->>>>>>> 6d31e0a3f629654908ff7bf8247752a75dd25cd1:src/pages/core-concepts/webview.md
+Ionicアプリは[Web技術](/docs/reference/glossary#web-standards)をつかって構築され、フルスクリーンでの表示、Webブラウザのすべての機能が使えるWeb Viewを使ってレンダリングされます。
 
 最近のWeb Viewは、カメラ、センサー、GPS、スピーカー、Bluetoothなどのハードウェア機能のための組み込み<a href="https://whatwebcando.today" target="_blank">HTML5 APIs</a>を多数提供していますが、プラットフォーム固有のハードウェアAPIにアクセスする必要がある場合もあります。Ionicアプリでは、通常はJavaScript APIを利用してネイティブプラグインにアクセスしてブリッジする形でハードウェアAPIを利用することができます。
 

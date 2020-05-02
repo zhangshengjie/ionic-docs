@@ -47,10 +47,9 @@ If you would like a fresh project starter, a new project base can be created fro
 
 既存のアプリケーションをIonic 3から4に移行するときは、次の一般的なプロセスをお勧めします。
 
-<<<<<<< HEAD:src/pages/building/migration.md
-1. `blank` スターターを使用して新しいプロジェクトを作成します ([アプリ開発をはじめる](/docs/building/starting)を参照)
+1. `blank` スターターを使用して新しいプロジェクトを作成します ([アプリ開発をはじめる](/docs/developing/starting)を参照)
 1. AngularのServiceを `src/providers` から `src/app/services`にコピーする
-   - サービスの`@Injectable()` デコレーターに`{ providedIn: 'root' }`を含まなければなりません。詳しくは、Angularの[プロバイダー](https://angular.jp/guide/providers)をご覧ください。
+   - サービスの`@Injectable()` デコレーターに`{ providedIn: 'root' }`を含まなければなりません。詳しくは、Angularの[プロバイダー](https://angular.io/guide/providers)をご覧ください。
 1. ディレクトリ構成が変化することを念頭に置いて（`src/components`が`src/app/components`になるなど）、rootに置かれている他のアイテム（Pipe、Componentなど）をコピーします。
 1. グローバルに適用しているSassのスタイルシートを `src/app/app.scss` から `src/global.scss` に移動します。
 1. 次の点に注意しながら、ページごと、または機能ごとにアプリケーションの残りをコピーします。
@@ -59,19 +58,6 @@ If you would like a fresh project starter, a new project base can be created fro
    - RxJSはv5からv6にアップデートされました([RxJSの変更点](#rxjs-changes)を参照)
    - 一部のライフサイクルはAngularのものに置き換える必要があります([ライフサイクルイベント](#lifecycle-events)を参照)
    - マークアップの変更が必要になる場合があります (移行ツールを利用することができます。[マークアップの変更](#markup-changes)をご覧ください)
-=======
-1. Generate a new project using the `blank` starter (see [Starting an App](/docs/developing/starting))
-1. Copy any Angular services from `src/providers` to `src/app/services`
-   - Services should include `{ providedIn: 'root' }` in the `@Injectable()` decorator. For details, please see Angular [provider docs](https://angular.io/guide/providers).
-1. Copy the app's other root-level items (pipes, components, etc) keeping in mind that the directory structure changes from `src/components` to `src/app/components`, etc.
-1. Copy global Sass styling from `src/app/app.scss` to `src/global.scss`
-1. Copy the rest of the application, page by page or feature by feature, keeping the following items in mind:
-   - Emulated Shadow DOM is turned on by default
-   - Page/component Sass should no longer be wrapped in the page/component tag and should use Angular's [`styleUrls`](https://angular.io/api/core/Component#styleUrls) option of the `@Component` decorator
-   - RxJS has been updated from v5 to v6 (see [RxJS Changes](#rxjs-changes))
-   - Certain lifecycle hooks should be replaced by Angular's hooks (see [Lifecycle Events](#lifecycle-events))
-   - Markup changes may be required (migration tool available, see [Markup Changes](#markup-changes))
->>>>>>> 6d31e0a3f629654908ff7bf8247752a75dd25cd1:src/pages/reference/migration.md
 
 多くの場合、Ionic CLIを使用して新しいオブジェクトを生成してからコードをコピーするとうまくいきます。例：`ionic g service weather` は`Weather`というServiceとテストを生成します。その後、必要に応じて少し修正を加えて、コードを古いプロジェクトからコピーします。これは、適切な構造に従っていることを確認するのに役立ちます。また、ユニットテストも生成します。
 

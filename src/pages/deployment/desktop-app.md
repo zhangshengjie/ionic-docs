@@ -5,11 +5,7 @@ contributors:
   - mhartington
 ---
 
-<<<<<<< HEAD:src/pages/publishing/desktop-app.md
-# デスクトップアプリ
-=======
-# Deploying a Desktop App
->>>>>>> 6d31e0a3f629654908ff7bf8247752a75dd25cd1:src/pages/deployment/desktop-app.md
+# デスクトップアプリの開発
 
 Ionicを使ってデスクトップアプリを構築することで、開発者は自分のコードの100%を再利用し、プッシュ通知のようなネイティブデバイスの全機能にアクセスしながら、今までのようにデスクトップアプリをリリースすることができます。このガイドは、Electronに精通していることを前提としており、Electronアプリを構築するための「方法」には触れていません。それらについては <a href="https://electronjs.org/docs/tutorial/first-app" target="_blank">Electron guide</a> を参照ください。
 
