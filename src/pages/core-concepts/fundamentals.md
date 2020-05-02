@@ -12,11 +12,7 @@ Ionicアプリの開発に慣れていない人には、Ionicプロジェクト�
 
 ## UIコンポーネント
 
-<<<<<<< HEAD:src/pages/intro/concepts.md
-Ionic Frameworkは、アプリケーションの構成要素として機能する、再利用可能なUIコンポーネントのライブラリです。Ionicのコンポーネントは、HTML、CSS、JavaScriptを利用した[Web標準](/docs/faq/glossary#web-standards)に基づいて構築されています。コンポーネントは事前に構築されていますが、高度にカスタマイズできるようになるように設計されており、アプリで各コンポーネントを独自に作成できるため、アプリごとにオリジナルの外観を持たせることができます。具体的には、Ionicコンポーネントは、アプリ全体で外観をグローバルに変更するように簡単にテーマを設定できます。外観のカスタマイズの詳細については、[Theming](/docs/theming/basics)を参照してください。
-=======
-Ionic Framework is a library of UI Components, which are reusable elements that serve as the building blocks for an application. Ionic Components are built with [web standards](/docs/reference/glossary#web-standards) using HTML, CSS, and JavaScript. Though the components are pre-built, they're designed from the ground up to be highly customizable so apps can make each component their own, allowing each app to have its own look and feel. More specifically, Ionic components can be easily themed to globally change appearance across an entire app. For more information about customizing the look, please see [Theming](/docs/theming/basics).
->>>>>>> 6d31e0a3f629654908ff7bf8247752a75dd25cd1:src/pages/core-concepts/fundamentals.md
+Ionic Frameworkは、アプリケーションの構成要素として機能する、再利用可能なUIコンポーネントのライブラリです。Ionicのコンポーネントは、HTML、CSS、JavaScriptを利用した[Web標準](/docs/reference/glossary#web-standards)に基づいて構築されています。コンポーネントは事前に構築されていますが、高度にカスタマイズできるようになるように設計されており、アプリで各コンポーネントを独自に作成できるため、アプリごとにオリジナルの外観を持たせることができます。具体的には、Ionicコンポーネントは、アプリ全体で外観をグローバルに変更するように簡単にテーマを設定できます。外観のカスタマイズの詳細については、[Theming](/docs/theming/basics)を参照してください。
 
 
 ## スタイルの適用
@@ -42,11 +38,7 @@ Angularと`@ionic/angular`で構築するアプリは、<a href="https://angular
 
 Webテクノロジで構築されたアプリ（Ionicアプリなど）の素晴らしい点は、デスクトップコンピュータ、携帯電話、タブレット、自動車、冷蔵庫など、ほとんどすべてのプラットフォームで実行できることです。Ionicアプリ用のベースとなるコードは、Web標準とこれらのプラットフォーム間で共有される共通のAPIに基づいているため、多くのプラットフォームで機能します。
 
-<<<<<<< HEAD:src/pages/intro/concepts.md
-Ionicの最も一般的な使用例の1つは、<a href="https://www.apple.com/ios/app-store/" target="_blank">App Store</a>と<a href="https://play.google.com/" target="_blank">Play Store</a>の両方からダウンロードできるアプリを作成することです。iOSとAndroidの両方のソフトウェア開発キット（SDK）は、完全なネイティブSDKアクセスを可能にしながら、あらゆるIonicアプリをレンダリングする [Web Views](/docs/building/webview) を提供します。
-=======
-One of the most common use cases for Ionic is to build an app which can be downloaded from both the <a href="https://www.apple.com/ios/app-store/" target="_blank">App Store</a> and <a href="https://play.google.com/" target="_blank">Play Store</a>. Both iOS and Android software development kits (SDKs) provide [Web Views](/docs/core-concepts/webview) which render any Ionic app, while still allowing for <i>full</i> Native SDK access.
->>>>>>> 6d31e0a3f629654908ff7bf8247752a75dd25cd1:src/pages/core-concepts/fundamentals.md
+Ionicの最も一般的な使用例の1つは、 <a href="https://www.apple.com/ios/app-store/" target="_blank">App Store</a> と <a href="https://play.google.com/" target="_blank">Play Store</a> の両方からダウンロードできるアプリを作成することです。iOSとAndroidの両方のソフトウェア開発キット（SDK）は、完全なネイティブSDKアクセスを可能にしながら、あらゆるIonicアプリをレンダリングする [Web Views](/docs/core-concepts/webview) を提供します。
 
 <a href="https://capacitor.ionicframework.com/" target="_blank">Capacitor</a>や<a href="https://cordova.apache.org/" target="_blank">Cordova</a>などのプロジェクトは、IonicアプリにネイティブSDKへのアクセスを許可するためによく使用されます。つまり、開発者は一般的なWeb開発ツールを使用してアプリをすばやく構築しながら、デバイスの加速度計、カメラ、GPSなどのネイティブ機能にアクセスすることができます。
 

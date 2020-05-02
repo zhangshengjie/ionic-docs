@@ -7,11 +7,7 @@ contributors:
   - zaarheed
 ---
 
-<<<<<<< HEAD:src/pages/publishing/app-store.md
-# app storeでのリリース
-=======
-# iOS App Store Deployment
->>>>>>> 6d31e0a3f629654908ff7bf8247752a75dd25cd1:src/pages/deployment/app-store.md
+# iOS App Storeでの開発
 
 ## 要件
 
