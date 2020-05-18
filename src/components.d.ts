@@ -119,9 +119,8 @@ export namespace Components {
   interface DocsMenuCollapsible {
     'heading': string;
   }
-  interface DocsMenuNative {
-    'category': 'community' | 'premier';
-  }
+  interface DocsMenuEnterprise {}
+  interface DocsMenuNative {}
   interface DocsMenuToggle {}
   interface DocsNav {
     'items': MenuItems;
@@ -345,6 +344,12 @@ declare global {
     new (): HTMLDocsMenuCollapsibleElement;
   };
 
+  interface HTMLDocsMenuEnterpriseElement extends Components.DocsMenuEnterprise, HTMLStencilElement {}
+  var HTMLDocsMenuEnterpriseElement: {
+    prototype: HTMLDocsMenuEnterpriseElement;
+    new (): HTMLDocsMenuEnterpriseElement;
+  };
+
   interface HTMLDocsMenuNativeElement extends Components.DocsMenuNative, HTMLStencilElement {}
   var HTMLDocsMenuNativeElement: {
     prototype: HTMLDocsMenuNativeElement;
@@ -520,6 +525,7 @@ declare global {
     'docs-item-list': HTMLDocsItemListElement;
     'docs-menu': HTMLDocsMenuElement;
     'docs-menu-collapsible': HTMLDocsMenuCollapsibleElement;
+    'docs-menu-enterprise': HTMLDocsMenuEnterpriseElement;
     'docs-menu-native': HTMLDocsMenuNativeElement;
     'docs-menu-toggle': HTMLDocsMenuToggleElement;
     'docs-nav': HTMLDocsNavElement;
@@ -647,9 +653,8 @@ declare namespace LocalJSX {
   interface DocsMenuCollapsible {
     'heading'?: string;
   }
-  interface DocsMenuNative {
-    'category'?: 'community' | 'premier';
-  }
+  interface DocsMenuEnterprise {}
+  interface DocsMenuNative {}
   interface DocsMenuToggle {}
   interface DocsNav {
     'items'?: MenuItems;
@@ -748,6 +753,7 @@ declare namespace LocalJSX {
     'docs-item-list': DocsItemList;
     'docs-menu': DocsMenu;
     'docs-menu-collapsible': DocsMenuCollapsible;
+    'docs-menu-enterprise': DocsMenuEnterprise;
     'docs-menu-native': DocsMenuNative;
     'docs-menu-toggle': DocsMenuToggle;
     'docs-nav': DocsNav;
@@ -807,6 +813,7 @@ declare module "@stencil/core" {
       'docs-item-list': LocalJSX.DocsItemList & JSXBase.HTMLAttributes<HTMLDocsItemListElement>;
       'docs-menu': LocalJSX.DocsMenu & JSXBase.HTMLAttributes<HTMLDocsMenuElement>;
       'docs-menu-collapsible': LocalJSX.DocsMenuCollapsible & JSXBase.HTMLAttributes<HTMLDocsMenuCollapsibleElement>;
+      'docs-menu-enterprise': LocalJSX.DocsMenuEnterprise & JSXBase.HTMLAttributes<HTMLDocsMenuEnterpriseElement>;
       'docs-menu-native': LocalJSX.DocsMenuNative & JSXBase.HTMLAttributes<HTMLDocsMenuNativeElement>;
       'docs-menu-toggle': LocalJSX.DocsMenuToggle & JSXBase.HTMLAttributes<HTMLDocsMenuToggleElement>;
       'docs-nav': LocalJSX.DocsNav & JSXBase.HTMLAttributes<HTMLDocsNavElement>;

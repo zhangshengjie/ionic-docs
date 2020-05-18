@@ -42,7 +42,7 @@ OSがそのようなものを排除することを決定するようなlocalstor
 ionic cordova plugin add cordova-sqlite-storage
 ```
 
-次に、パッケージをインストールします（Ionic V1よりもバージョンが新しい時に可能です）:
+次に、パッケージをインストールします:
 ```bash
 npm install --save @ionic/storage
 ```
