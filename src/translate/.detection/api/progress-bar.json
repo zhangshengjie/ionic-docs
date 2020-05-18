@@ -1,5 +1,5 @@
 {
-  "filePath": "src/components/progress-bar/progress-bar.tsx",
+  "filePath": "./src/components/progress-bar/progress-bar.tsx",
   "encapsulation": "shadow",
   "tag": "ion-progress-bar",
   "readme": "# ion-progress-bar\n\nion-progress-bar is a horizontal progress bar to visualize the progression of an operation and activity. You can choose between two types: `determinate` and `indeterminate`.\n\n## Progress Type\n\n### Determinate\n\nIf the percentage of an operation is known, you should use the determinate type. This is the default type and the progress is represented by the `value` property.\n\nA buffer shows circles as animation to indicate some activity. If the `buffer` property is smaller than 1 you can show the additional buffering progress.\n\n### Indeterminate\n\nIf an operation is in progress and it's not necessary to indicate how long it will take.\n\nIf you add `reversed=\"true\"`, you receive a query which is used to indicate pre-loading.\n",
@@ -133,6 +133,7 @@
   ],
   "methods": [],
   "events": [],
+  "listeners": [],
   "styles": [
     {
       "name": "--background",

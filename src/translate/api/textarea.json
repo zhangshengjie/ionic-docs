@@ -1,5 +1,5 @@
 {
-  "filePath": "src/components/textarea/textarea.tsx",
+  "filePath": "./src/components/textarea/textarea.tsx",
   "encapsulation": "scoped",
   "tag": "ion-textarea",
   "readme": "# ion-textarea\n\nThe textarea component is used for multi-line text input. A native textarea element is rendered inside of the component. The user experience and interactivity of the textarea component is improved by having control over the native textarea.\n\nUnlike the native textarea element, the Ionic textarea does not support loading its value from the inner content. The textarea value should be set in the `value` attribute.\n\nThe textarea component accepts the [native textarea attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/textarea) in addition to the Ionic properties.\n\n\n",
@@ -155,6 +155,98 @@
         }
       ],
       "optional": false,
+      "required": false
+    },
+    {
+      "name": "enterkeyhint",
+      "type": "\"done\" | \"enter\" | \"go\" | \"next\" | \"previous\" | \"search\" | \"send\" | undefined",
+      "mutable": false,
+      "attr": "enterkeyhint",
+      "reflectToAttr": false,
+      "docs": "A hint to the browser for which enter key to display.\nPossible values: `\"enter\"`, `\"done\"`, `\"go\"`, `\"next\"`,\n`\"previous\"`, `\"search\"`, and `\"send\"`.",
+      "docsTags": [],
+      "values": [
+        {
+          "value": "done",
+          "type": "string"
+        },
+        {
+          "value": "enter",
+          "type": "string"
+        },
+        {
+          "value": "go",
+          "type": "string"
+        },
+        {
+          "value": "next",
+          "type": "string"
+        },
+        {
+          "value": "previous",
+          "type": "string"
+        },
+        {
+          "value": "search",
+          "type": "string"
+        },
+        {
+          "value": "send",
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
+      "optional": true,
+      "required": false
+    },
+    {
+      "name": "inputmode",
+      "type": "\"decimal\" | \"email\" | \"none\" | \"numeric\" | \"search\" | \"tel\" | \"text\" | \"url\" | undefined",
+      "mutable": false,
+      "attr": "inputmode",
+      "reflectToAttr": false,
+      "docs": "A hint to the browser for which keyboard to display.\nPossible values: `\"none\"`, `\"text\"`, `\"tel\"`, `\"url\"`,\n`\"email\"`, `\"numeric\"`, `\"decimal\"`, and `\"search\"`.",
+      "docsTags": [],
+      "values": [
+        {
+          "value": "decimal",
+          "type": "string"
+        },
+        {
+          "value": "email",
+          "type": "string"
+        },
+        {
+          "value": "none",
+          "type": "string"
+        },
+        {
+          "value": "numeric",
+          "type": "string"
+        },
+        {
+          "value": "search",
+          "type": "string"
+        },
+        {
+          "value": "tel",
+          "type": "string"
+        },
+        {
+          "value": "text",
+          "type": "string"
+        },
+        {
+          "value": "url",
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
+      "optional": true,
       "required": false
     },
     {
@@ -439,6 +531,7 @@
       "docsTags": []
     }
   ],
+  "listeners": [],
   "styles": [
     {
       "name": "--background",

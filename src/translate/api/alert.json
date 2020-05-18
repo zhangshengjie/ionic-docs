@@ -1,5 +1,5 @@
 {
-  "filePath": "src/components/alert/alert.tsx",
+  "filePath": "./src/components/alert/alert.tsx",
   "encapsulation": "scoped",
   "tag": "ion-alert",
   "readme": "# ion-alert\n\nAn Alert is a dialog that presents users with information or collects information from the user using inputs. An alert appears on top of the app's content, and must be manually dismissed by the user before they can resume interaction with the app. It can also optionally have a `header`, `subHeader` and `message`.\n\n### Buttons\n\nIn the array of `buttons`, each button includes properties for its `text`, and optionally a `handler`. If a handler returns `false` then the alert will not automatically be dismissed when the button is clicked. All buttons will show up in the order they have been added to the `buttons` array from left to right. Note: The right most button (the last one in the array) is the main button.\n\nOptionally, a `role` property can be added to a button, such as `cancel`. If a `cancel` role is on one of the buttons, then if the alert is dismissed by tapping the backdrop, then it will fire the handler from the button with a cancel role.\n\n\n### Inputs\n\nAlerts can also include several different inputs whose data can be passed back to the app. Inputs can be used as a simple way to prompt users for information. Radios, checkboxes and text inputs are all accepted, but they cannot be mixed. For example, an alert could have all radio button inputs, or all checkbox inputs, but the same alert cannot mix radio and checkbox inputs. Do note however, different types of \"text\" inputs can be mixed, such as `url`, `email`, `text`, `textarea` etc. If you require a complex form UI which doesn't fit within the guidelines of an alert then we recommend building the form within a modal instead.\n\n",
@@ -182,13 +182,16 @@
     },
     {
       "name": "message",
-      "type": "string | undefined",
+      "type": "IonicSafeString | string | undefined",
       "mutable": false,
       "attr": "message",
       "reflectToAttr": false,
       "docs": "The main message to be displayed in the alert.\n`message` can accept either plaintext or HTML as a string.\nTo display characters normally reserved for HTML, they\nmust be escaped. For example `<Ionic>` would become\n`&lt;Ionic&gt;`\n\nFor more information: [Security Documentation](https://ionicframework.com/docs/faq/security)",
       "docsTags": [],
       "values": [
+        {
+          "type": "IonicSafeString"
+        },
         {
           "type": "string"
         },
@@ -350,6 +353,7 @@
       "docsTags": []
     }
   ],
+  "listeners": [],
   "styles": [
     {
       "name": "--backdrop-opacity",

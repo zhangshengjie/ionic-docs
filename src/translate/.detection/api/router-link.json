@@ -1,5 +1,5 @@
 {
-  "filePath": "src/components/router-link/router-link.tsx",
+  "filePath": "./src/components/router-link/router-link.tsx",
   "encapsulation": "shadow",
   "tag": "ion-router-link",
   "readme": "# ion-router-link\n\nThe router link component is used for navigating to a specified link. Similar to the browser's anchor tag, it can accept a href for the location, and a direction for the transition animation.\n\n> Note: this component should only be used with vanilla and Stencil JavaScript projects. For Angular projects, use an `<a>` and `routerLink` with the Angular router.\n",
@@ -112,6 +112,7 @@
   ],
   "methods": [],
   "events": [],
+  "listeners": [],
   "styles": [
     {
       "name": "--background",

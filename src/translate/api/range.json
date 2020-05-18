@@ -1,5 +1,5 @@
 {
-  "filePath": "src/components/range/range.tsx",
+  "filePath": "./src/components/range/range.tsx",
   "encapsulation": "shadow",
   "tag": "ion-range",
   "readme": "# ion-range\n\nThe Range slider lets users select from a range of values by moving\nthe slider knob. It can accept dual knobs, but by default one knob\ncontrols the value of the range.\n\n### Range Labels\n\nLabels can be placed on either side of the range by adding the\n`slot=\"start\"` or `slot=\"end\"` to the element. The element doesn't have to\nbe an `ion-label`, it can be added to any element to place it to the\nleft or right of the range.\n\n",
@@ -16,6 +16,30 @@
     {
       "text": "end - Content is placed to the right of the range slider in LTR, and to the left in RTL.",
       "name": "slot"
+    },
+    {
+      "text": "tick - An inactive tick mark.",
+      "name": "part"
+    },
+    {
+      "text": "tick-active - An active tick mark.",
+      "name": "part"
+    },
+    {
+      "text": "pin - The counter that appears above a knob.",
+      "name": "part"
+    },
+    {
+      "text": "knob - The handle that is used to drag the range.",
+      "name": "part"
+    },
+    {
+      "text": "bar - The inactive part of the bar.",
+      "name": "part"
+    },
+    {
+      "text": "bar-active - The active part of the bar.",
+      "name": "part"
     }
   ],
   "usage": {
@@ -286,6 +310,7 @@
       "docsTags": []
     }
   ],
+  "listeners": [],
   "styles": [
     {
       "name": "--bar-background",

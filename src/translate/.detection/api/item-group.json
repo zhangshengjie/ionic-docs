@@ -1,5 +1,5 @@
 {
-  "filePath": "src/components/item-group/item-group.tsx",
+  "filePath": "./src/components/item-group/item-group.tsx",
   "encapsulation": "none",
   "tag": "ion-item-group",
   "readme": "# ion-item-group\n\nItem groups are containers that organize similar items together. They can contain item dividers to divide the items into multiple sections. They can also be used to group sliding items.\n\n\n\n",
@@ -14,6 +14,7 @@
   "props": [],
   "methods": [],
   "events": [],
+  "listeners": [],
   "styles": [],
   "slots": [],
   "dependents": [],

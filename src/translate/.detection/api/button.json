@@ -1,5 +1,5 @@
 {
-  "filePath": "src/components/button/button.tsx",
+  "filePath": "./src/components/button/button.tsx",
   "encapsulation": "shadow",
   "tag": "ion-button",
   "readme": "# ion-button\n\nButtons provide a clickable element, which can be used in forms, or anywhere that needs simple, standard button functionality. They may display text, icons, or both. Buttons can be styled with several attributes to look a specific way.\n\n## Expand\n\nThis attribute lets you specify how wide the button should be. By default, buttons are inline blocks, but setting this attribute will change the button to a full-width block element.\n\n| Value          | Details                                                                      |\n|----------------|------------------------------------------------------------------------------|\n| `block`        | Full-width button with rounded corners.                                      |\n| `full`         | Full-width button with square corners and no border on the left or right.    |\n\n## Fill\n\nThis attributes determines the background and border color of the button. By default, buttons have a solid background unless the button is inside of a toolbar, in which case it has a transparent background.\n\n| Value          | Details                                                                      |\n|----------------|------------------------------------------------------------------------------|\n| `clear`        | Button with a transparent background that resembles a flat button.           |\n| `outline`      | Button with a transparent background and a visible border.                   |\n| `solid`        | Button with a filled background. Useful for buttons in a toolbar.            |\n\n## Size\n\nThis attribute specifies the size of the button. Setting this attribute will change the height and padding of a button.\n\n| Value          | Details                                                                      |\n|----------------|------------------------------------------------------------------------------|\n| `small`        | Button with less height and padding. Default for buttons in an item.         |\n| `default`      | Button with the default height and padding. Useful for buttons in an item.   |\n| `large`        | Button with more height and padding.                                         |\n\n",
@@ -24,14 +24,6 @@
     {
       "text": "end - Content is placed to the right of the button text in LTR, and to the left in RTL.",
       "name": "slot"
-    },
-    {
-      "text": "button - The native button or anchor tag that is rendered.",
-      "name": "part"
-    },
-    {
-      "text": "button-inner - The span inside of the native button or anchor.",
-      "name": "part"
     }
   ],
   "usage": {
@@ -386,6 +378,7 @@
       "docsTags": []
     }
   ],
+  "listeners": [],
   "styles": [
     {
       "name": "--background",

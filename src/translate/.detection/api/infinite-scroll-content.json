@@ -1,5 +1,5 @@
 {
-  "filePath": "src/components/infinite-scroll-content/infinite-scroll-content.tsx",
+  "filePath": "./src/components/infinite-scroll-content/infinite-scroll-content.tsx",
   "encapsulation": "none",
   "tag": "ion-infinite-scroll-content",
   "readme": "# ion-infinite-scroll-content\n\nThe `ion-infinite-scroll-content` component is the default child used by the `ion-infinite-scroll`. It displays an infinite scroll spinner that looks best based on the platform and changes the look depending on the infinite scroll's state. The default spinner can be changed and text can be added by setting the `loadingSpinner` and `loadingText` properties.\n\n## React\n\nThe `ion-infinite-scroll-content` component is not supported in React.\n",
@@ -60,13 +60,16 @@
     },
     {
       "name": "loadingText",
-      "type": "string | undefined",
+      "type": "IonicSafeString | string | undefined",
       "mutable": false,
       "attr": "loading-text",
       "reflectToAttr": false,
       "docs": "Optional text to display while loading.\n`loadingText` can accept either plaintext or HTML as a string.\nTo display characters normally reserved for HTML, they\nmust be escaped. For example `<Ionic>` would become\n`&lt;Ionic&gt;`\n\nFor more information: [Security Documentation](https://ionicframework.com/docs/faq/security)",
       "docsTags": [],
       "values": [
+        {
+          "type": "IonicSafeString"
+        },
         {
           "type": "string"
         },
@@ -80,6 +83,7 @@
   ],
   "methods": [],
   "events": [],
+  "listeners": [],
   "styles": [],
   "slots": [],
   "dependents": [],

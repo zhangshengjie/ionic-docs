@@ -1,5 +1,5 @@
 {
-  "filePath": "src/components/checkbox/checkbox.tsx",
+  "filePath": "./src/components/checkbox/checkbox.tsx",
   "encapsulation": "shadow",
   "tag": "ion-checkbox",
   "readme": "# ion-checkbox\n\nCheckboxes allow the selection of multiple options from a set of options. They appear as checked (ticked) when activated. Clicking on a checkbox will toggle the `checked` property. They can also be checked programmatically by setting the `checked` property.\n\n\n\n",
@@ -8,6 +8,14 @@
     {
       "text": "{\"ios\" | \"md\"} mode - The mode determines which platform styles to use.",
       "name": "virtualProp"
+    },
+    {
+      "text": "container - The container for the checkbox mark.",
+      "name": "part"
+    },
+    {
+      "text": "mark - The checkmark used to indicate the checked state.",
+      "name": "part"
     }
   ],
   "usage": {
@@ -173,6 +181,7 @@
       "docsTags": []
     }
   ],
+  "listeners": [],
   "styles": [
     {
       "name": "--background",

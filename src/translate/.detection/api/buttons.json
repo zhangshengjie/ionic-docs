@@ -1,5 +1,5 @@
 {
-  "filePath": "src/components/buttons/buttons.tsx",
+  "filePath": "./src/components/buttons/buttons.tsx",
   "encapsulation": "scoped",
   "tag": "ion-buttons",
   "readme": "# ion-buttons\n\nThe Buttons component is a container element. Buttons placed in a toolbar should be placed inside of the `<ion-buttons>` element.\n\nThe `<ion-buttons>` element can be positioned inside of the toolbar using a named slot. The below chart has a description of each slot.\n\n| Slot         | Description                                                                                              |\n|--------------|----------------------------------------------------------------------------------------------------------|\n| `secondary`  | Positions element to the `left` of the content in `ios` mode, and directly to the `right` in `md` mode.  |\n| `primary`    | Positions element to the `right` of the content in `ios` mode, and to the far `right` in `md` mode.      |\n| `start`      | Positions to the `left` of the content in LTR, and to the `right` in RTL.                                |\n| `end`        | Positions to the `right` of the content in LTR, and to the `left` in RTL.                                |\n\n",
@@ -32,6 +32,7 @@
   ],
   "methods": [],
   "events": [],
+  "listeners": [],
   "styles": [],
   "slots": [],
   "dependents": [],

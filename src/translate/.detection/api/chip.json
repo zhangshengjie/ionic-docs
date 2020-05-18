@@ -1,5 +1,5 @@
 {
-  "filePath": "src/components/chip/chip.tsx",
+  "filePath": "./src/components/chip/chip.tsx",
   "encapsulation": "shadow",
   "tag": "ion-chip",
   "readme": "# ion-chip\n\nChips represent complex entities in small blocks, such as a contact. A chip can contain several different elements such as avatars, text, and icons.\n",
@@ -77,6 +77,7 @@
   ],
   "methods": [],
   "events": [],
+  "listeners": [],
   "styles": [
     {
       "name": "--background",

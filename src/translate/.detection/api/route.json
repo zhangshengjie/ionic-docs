@@ -1,5 +1,5 @@
 {
-  "filePath": "src/components/route/route.tsx",
+  "filePath": "./src/components/route/route.tsx",
   "encapsulation": "none",
   "tag": "ion-route",
   "readme": "# ion-route\n\nThe route component takes a component and renders it when the Browser URl matches the url property.\n\n> Note: this component should only be used with vanilla and Stencil JavaScript projects. For Angular projects, use [`ion-router-outlet`](../router-outlet) and the Angular router.\n",
@@ -71,6 +71,7 @@
       "docsTags": []
     }
   ],
+  "listeners": [],
   "styles": [],
   "slots": [],
   "dependents": [],

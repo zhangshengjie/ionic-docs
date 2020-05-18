@@ -1,5 +1,5 @@
 {
-  "filePath": "src/components/menu-button/menu-button.tsx",
+  "filePath": "./src/components/menu-button/menu-button.tsx",
   "encapsulation": "shadow",
   "tag": "ion-menu-button",
   "readme": "# ion-menu-button\n\nMenu Button is component that automatically creates the icon and functionality to open a menu on a page.\n\n",
@@ -108,6 +108,20 @@
   ],
   "methods": [],
   "events": [],
+  "listeners": [
+    {
+      "event": "ionMenuChange",
+      "target": "body",
+      "capture": false,
+      "passive": false
+    },
+    {
+      "event": "ionSplitPaneVisible",
+      "target": "body",
+      "capture": false,
+      "passive": false
+    }
+  ],
   "styles": [
     {
       "name": "--background",

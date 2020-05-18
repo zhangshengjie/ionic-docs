@@ -1,5 +1,5 @@
 {
-  "filePath": "src/components/item-option/item-option.tsx",
+  "filePath": "./src/components/item-option/item-option.tsx",
   "encapsulation": "shadow",
   "tag": "ion-item-option",
   "readme": "# ion-item-option\n\nThe option button for an `ion-item-sliding`. Must be placed inside of an `<ion-item-options>`.\nYou can combine the `ionSwipe` event and the `expandable` directive to create a full swipe\naction for the item.\n",
@@ -215,6 +215,7 @@
   ],
   "methods": [],
   "events": [],
+  "listeners": [],
   "styles": [
     {
       "name": "--background",

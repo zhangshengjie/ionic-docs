@@ -1,5 +1,5 @@
 {
-  "filePath": "src/components/item-divider/item-divider.tsx",
+  "filePath": "./src/components/item-divider/item-divider.tsx",
   "encapsulation": "shadow",
   "tag": "ion-item-divider",
   "readme": "# ion-item-divider\n\nItem Dividers are block elements that can be used to separate items in a list. They are similar to list headers, but instead of being placed at the top of a list, they should go in between groups of items.\n",
@@ -89,6 +89,7 @@
   ],
   "methods": [],
   "events": [],
+  "listeners": [],
   "styles": [
     {
       "name": "--background",

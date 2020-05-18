@@ -1,5 +1,5 @@
 {
-  "filePath": "src/components/skeleton-text/skeleton-text.tsx",
+  "filePath": "./src/components/skeleton-text/skeleton-text.tsx",
   "encapsulation": "shadow",
   "tag": "ion-skeleton-text",
   "readme": "# ion-skeleton-text\n\nSkeleton Text is a component for rendering placeholder content. The element will render a gray block at the specified width.\n\n",
@@ -32,6 +32,7 @@
   ],
   "methods": [],
   "events": [],
+  "listeners": [],
   "styles": [
     {
       "name": "--background",

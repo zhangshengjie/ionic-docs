@@ -1,5 +1,5 @@
 {
-  "filePath": "src/components/tab-button/tab-button.tsx",
+  "filePath": "./src/components/tab-button/tab-button.tsx",
   "encapsulation": "shadow",
   "tag": "ion-tab-button",
   "readme": "# ion-tab-button\n\nA tab button is a UI component that is placed inside of a [tab bar](../tab-bar). The tab button can specify the layout of the icon and label and connect to a [tab view](../tab).\n\nSee the [tabs documentation](../tabs) for more details on configuring tabs.\n\n",
@@ -210,6 +210,14 @@
   ],
   "methods": [],
   "events": [],
+  "listeners": [
+    {
+      "event": "ionTabBarChanged",
+      "target": "parent",
+      "capture": false,
+      "passive": false
+    }
+  ],
   "styles": [
     {
       "name": "--background",

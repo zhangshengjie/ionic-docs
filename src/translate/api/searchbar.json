@@ -1,5 +1,5 @@
 {
-  "filePath": "src/components/searchbar/searchbar.tsx",
+  "filePath": "./src/components/searchbar/searchbar.tsx",
   "encapsulation": "scoped",
   "tag": "ion-searchbar",
   "readme": "# ion-searchbar\n\nSearchbars represent a text field that can be used to search through a collection. They can be displayed inside of a toolbar or the main content.\n\nA Searchbar should be used instead of an input to search lists. A clear button is displayed upon entering input in the searchbar's text field. Clicking on the clear button will erase the text field and the input will remain focused. A cancel button can be enabled which will clear the input and lose the focus upon click.\n\n### Keyboard Display\n\n#### Android\n\nBy default, tapping the input will cause the keyboard to appear with a magnifying glass icon on the submit button. You can optionally set the `inputmode` property to `\"search\"`, which will change the icon from a magnifying glass to a carriage return.\n\n#### iOS\n\nBy default, tapping the input will cause the keyboard to appear with the text \"return\" on a gray submit button. You can optionally set the `inputmode` property to `\"search\"`, which will change the text from \"return\" to \"go\", and change the button color from gray to blue. Alternatively, you can wrap the `ion-searchbar` in a `form` element with an `action` property. This will cause the keyboard to appear with a blue submit button that says \"search\".\n\n",
@@ -182,6 +182,50 @@
         }
       ],
       "optional": false,
+      "required": false
+    },
+    {
+      "name": "enterkeyhint",
+      "type": "\"done\" | \"enter\" | \"go\" | \"next\" | \"previous\" | \"search\" | \"send\" | undefined",
+      "mutable": false,
+      "attr": "enterkeyhint",
+      "reflectToAttr": false,
+      "docs": "A hint to the browser for which enter key to display.\nPossible values: `\"enter\"`, `\"done\"`, `\"go\"`, `\"next\"`,\n`\"previous\"`, `\"search\"`, and `\"send\"`.",
+      "docsTags": [],
+      "values": [
+        {
+          "value": "done",
+          "type": "string"
+        },
+        {
+          "value": "enter",
+          "type": "string"
+        },
+        {
+          "value": "go",
+          "type": "string"
+        },
+        {
+          "value": "next",
+          "type": "string"
+        },
+        {
+          "value": "previous",
+          "type": "string"
+        },
+        {
+          "value": "search",
+          "type": "string"
+        },
+        {
+          "value": "send",
+          "type": "string"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
+      "optional": true,
       "required": false
     },
     {
@@ -478,11 +522,17 @@
       "docsTags": []
     }
   ],
+  "listeners": [],
   "styles": [
     {
       "name": "--background",
       "annotation": "prop",
       "docs": "Background of the searchbar input"
+    },
+    {
+      "name": "--border-radius",
+      "annotation": "prop",
+      "docs": "Border radius of the searchbar input"
     },
     {
       "name": "--box-shadow",
