@@ -24,7 +24,7 @@ IonicはAngularが提供するLife Cycle Eventsを取り入れています。最
 | `ngOnInit` | コンポーネントの初期化中に発生します。このイベントを使用して、ローカルメンバーを初期化し、一度だけ実行する必要があるServiceを呼び出すことができます。 |
 | `ngOnDestroy`  | Angularがビューを破棄する直前に発生します。 observables の unsubscribe などのクリーンアップに役立ちます。 |
 
-AngularのComponent Life Cycleイベントの詳細については、それらの [component lifecycle docs](https://angular.io/guide/lifecycle-hooks) をご覧ください。
+AngularのComponent Life Cycleイベントの詳細については、それらの [component lifecycle docs](https://angular.jp/guide/lifecycle-hooks) をご覧ください。
 
 ## IonicのPage Events
 
@@ -84,7 +84,7 @@ export class AuthGuard implements CanActivate {
 { path: 'settings', canActivate: [AuthGuard], loadChildren: '...',  }
 ```
 
-ルートガードの使い方の詳細については、Angularの [router documentation](https://angular.io/guide/router) を参照してください。
+ルートガードの使い方の詳細については、Angularの [router documentation](https://angular.jp/guide/router) を参照してください。
 
 ## Life Cycleメソッドのガイダンス
 

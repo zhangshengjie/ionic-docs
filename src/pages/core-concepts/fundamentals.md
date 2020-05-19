@@ -31,7 +31,7 @@ Ionic Frameworkは、アプリケーションの構成要素として機能す�
 
 Ionicアプリは、このモバイルナビゲーションのアプローチを採用しており、Web開発者が慣れ親しんでいるブラウザスタイルのナビゲーション概念を維持しながら、ネストすることもできる並列ナビゲーション履歴をサポートしています。
 
-Angularと`@ionic/angular`で構築するアプリは、<a href="https://angular.io/guide/router" target="_blank">Angular Router</a>を使用することをお勧めします。これはAngularとIonic 4の組み合わせから使うことができます。
+Angularと`@ionic/angular`で構築するアプリは、<a href="https://angular.jp/guide/router" target="_blank">Angular Router</a>を使用することをお勧めします。これはAngularとIonic 4の組み合わせから使うことができます。
 
 
 ## Nativeアクセス

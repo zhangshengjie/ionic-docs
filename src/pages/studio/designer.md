@@ -29,7 +29,7 @@ Studio finds pages and components by scanning your project looking for Component
 
 <blockquote>
 <p>Since the difference between pages and components is conceptual, Ionic Studio relies on convention to differentiate them. If there are pages missing, make sure each page follows the convention Ionic Studio is expecting:</p>
-<p>The files that represent each page must have the proper suffixes (e.g. <code>.page.ts</code>, <code>.page.html</code>, <code>.page.scss</code>). See the <a href="https://angular.io/guide/styleguide#naming">Angular style guide</a> for additional information about naming conventions.</p>
+<p>The files that represent each page must have the proper suffixes (e.g. <code>.page.ts</code>, <code>.page.html</code>, <code>.page.scss</code>). See the <a href="https://angular.jp/guide/styleguide#naming">Angular style guide</a> for additional information about naming conventions.</p>
 </blockquote>
 
 <figure>

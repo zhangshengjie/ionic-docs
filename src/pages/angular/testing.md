@@ -9,7 +9,7 @@ contributors:
 
 # テスト
 
-Ionic CLI を使用して `@ionic/angular` アプリケーションを生成すると、アプリケーションのユニットテストとエンドツーエンドのテスト用に自動的に準備されます。これは Angular CLI で使われる設定と同じものです。Angular で作られたアプリケーションのテストについての詳細は <a href="https://angular.io/guide/testing" target="_blank">Angular Testing Guide</a> をご参照ください。
+Ionic CLI を使用して `@ionic/angular` アプリケーションを生成すると、アプリケーションのユニットテストとエンドツーエンドのテスト用に自動的に準備されます。これは Angular CLI で使われる設定と同じものです。Angular で作られたアプリケーションのテストについての詳細は <a href="https://angular.jp/guide/testing" target="_blank">Angular Testing Guide</a> をご参照ください。
 
 ## テストの原則
 

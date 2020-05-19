@@ -49,12 +49,12 @@ If you would like a fresh project starter, a new project base can be created fro
 
 1. `blank` スターターを使用して新しいプロジェクトを作成します ([アプリ開発をはじめる](/docs/developing/starting)を参照)
 1. AngularのServiceを `src/providers` から `src/app/services`にコピーする
-   - サービスの`@Injectable()` デコレーターに`{ providedIn: 'root' }`を含まなければなりません。詳しくは、Angularの[プロバイダー](https://angular.io/guide/providers)をご覧ください。
+   - サービスの`@Injectable()` デコレーターに`{ providedIn: 'root' }`を含まなければなりません。詳しくは、Angularの[プロバイダー](https://angular.jp/guide/providers)をご覧ください。
 1. ディレクトリ構成が変化することを念頭に置いて（`src/components`が`src/app/components`になるなど）、rootに置かれている他のアイテム（Pipe、Componentなど）をコピーします。
 1. グローバルに適用しているSassのスタイルシートを `src/app/app.scss` から `src/global.scss` に移動します。
 1. 次の点に注意しながら、ページごと、または機能ごとにアプリケーションの残りをコピーします。
    - Shadow DOMはデフォルトで有効になっています。
-   - PageとComponentのSassは、Page/Component名でくくられなくなり、Angularの`@Component`デコレーターのオプションである[`styleUrls`](https://angular.io/api/core/Component#styleUrls)を利用します。
+   - PageとComponentのSassは、Page/Component名でくくられなくなり、Angularの`@Component`デコレーターのオプションである[`styleUrls`](https://angular.jp/api/core/Component#styleUrls)を利用します。
    - RxJSはv5からv6にアップデートされました([RxJSの変更点](#rxjs-changes)を参照)
    - 一部のライフサイクルはAngularのものに置き換える必要があります([ライフサイクルイベント](#lifecycle-events)を参照)
    - マークアップの変更が必要になる場合があります (移行ツールを利用することができます。[マークアップの変更](#markup-changes)をご覧ください)
@@ -171,7 +171,7 @@ v3からv4で、RxJSはバージョン6に更新されました。これは、�
 
 ## ライフサイクルイベント
 
-v4では、[Angular](https://angular.io/guide/lifecycle-hooks)が提供する一般的なイベントを利用できるようになりました。しかし、場合によっては、遷移してComponentのアニメーションが終了してから発生するイベントを使うことをお勧めします。v3から、`ionViewWillEnter`, `ionViewDidEnter`, `ionViewWillLeave`, `ionViewDidLeave`が移植されました。これらのイベントを利用してして、Ionicの独自のアニメーションシステムとアクションを調整します。
+v4では、[Angular](https://angular.jp/guide/lifecycle-hooks)が提供する一般的なイベントを利用できるようになりました。しかし、場合によっては、遷移してComponentのアニメーションが終了してから発生するイベントを使うことをお勧めします。v3から、`ionViewWillEnter`, `ionViewDidEnter`, `ionViewWillLeave`, `ionViewDidLeave`が移植されました。これらのイベントを利用してして、Ionicの独自のアニメーションシステムとアクションを調整します。
 
 ルート変更中にコンポーネントのアニメーション化が完了したときに発生するイベントにアクセスすることをお勧めします。この場合には、ionViewWillEnter、ionViewDidEnter、ionViewWillLeave、およびionViewDidLeaveV3から移植されてきました。これらのイベントを使用して、Ionicのアニメーションシステムと調整します。
 
@@ -217,7 +217,7 @@ async showAlert() {
 
 ## ナビゲーション
 
-v4では、ナビゲーションが最も多くの変更がありました。`NavController`はオリジナルのものを使わずに、公式のAngular Routerと統合しました。これは、アプリケーション間で一貫したルーティング体験を提供するだけでなく、はるかに信頼性が高くなります。Angularチームのdocsサイトには、ルーターの詳細を網羅した<a href="http://angular.io/guide/router" target="_blank">excellent guide</a>があります。
+v4では、ナビゲーションが最も多くの変更がありました。`NavController`はオリジナルのものを使わずに、公式のAngular Routerと統合しました。これは、アプリケーション間で一貫したルーティング体験を提供するだけでなく、はるかに信頼性が高くなります。Angularチームのdocsサイトには、ルーターの詳細を網羅した<a href="http://angular.jp/guide/router" target="_blank">excellent guide</a>があります。
 
 ユーザーが慣れ親しんでいるプラットフォーム固有のアニメーションを提供するために、`ion-router-outlet`をAngularアプリ用に作成しました。これはAngularの場合と同様に`router-outlet`機能しますが、スタックベースのナビゲーション（tabs）とアニメーションを提供します。
 
@@ -304,7 +304,7 @@ Once the Ionic 1 app is stable, create a new Ionic 4.0 project. The majority of 
 Once the team is comfortable that the Ionic 4.0 app has become stable and has fulfilled a core set of features, you can then shut down the Ionic 1 app.
 
 ### Moving From AngularJS to Angular
-Please reference official [Angular upgrade guide](https://angular.io/guide/upgrade) information.
+Please reference official [Angular upgrade guide](https://angular.jp/guide/upgrade) information.
 
 ### Ionic Changes
 Our Ionic 3.0 to Ionic 4.0 migration sections above may prove to be a useful reference. Generate a new Ionic 4.0 project using the blank starter (see [Starting an App](/docs/developing/starting)). Spend time getting familiar with Ionic 4.0 components. Happy building!
