@@ -1,5 +1,5 @@
 {
-  "filePath": "src/components/card-header/card-header.tsx",
+  "filePath": "./src/components/card-header/card-header.tsx",
   "encapsulation": "shadow",
   "tag": "ion-card-header",
   "readme": "# ion-card-header\n\n`ion-card-header` is a header component for `ion-card`.\n\n",
@@ -72,6 +72,7 @@
   ],
   "methods": [],
   "events": [],
+  "listeners": [],
   "styles": [],
   "slots": [],
   "dependents": [],

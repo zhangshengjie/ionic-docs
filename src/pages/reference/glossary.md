@@ -53,6 +53,11 @@ nextUrl: '/docs/reference/versioning'
     <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS" target="_blank">CORS</a> (Cross-Origin Resource Sharing) は、サーバがクライアントから Web 資産へのアクセスを制御するメカニズムです。See the <a href="/docs/faq/cors">CORS FAQs</a> for more information.</p>
   </section>
 
+  <section id="css-variables">
+    <a href="#css-variables"><h3>CSS Variables</h3></a>
+    <p>You may be familiar with variables from Sass. <a href="https://developers.google.com/web/updates/2016/02/css-variables-why-should-you-care" target="_blank">CSS Variables</a> enable the same functionality but are built into the browser. CSS Variables are available in all evergreen browsers.</p>
+  </section>
+
   <section id="decorators">
     <a href="#decorators"><h3>Decorators</h3></a>
     <p>デコレータは、関数を返す式です。既存の関数を使用して、その動作を拡張できます。TypeScript では、<i>クラス</i> や <i>パラメータ</i> を装飾することもできます。<strong>クラス</strong> を装飾すると、そのコンストラクタの動作がラップおよび拡張されます。つまり、デコレータはコンストラクタが呼び出されるといくつかの機能を追加し、独自のコンストラクタを返します。<strong>パラメータ</strong> を修飾すると、そのパラメータに渡される引数がラップされます。デコレータは、引数がメソッドに渡されると機能を追加し、独自の引数を返します。
@@ -156,14 +161,19 @@ nextUrl: '/docs/reference/versioning'
     <p><a href="https://angular.github.io/protractor/#/" target="_blank">Protractor</a> Angular チームが開発したテストフレームワークです。Protractor は、エンドツーエンドのテストのために、Karma のようなテストランナーと一緒に使うことができます。テストランナーを使用すると、コードの品質を高速かつプログラム的に検証できます。</p>
   </section>
 
-  <section id="css-variables">
-    <a href="#css-variables"><h3>CSS Variables</h3></a>
-    <p>Sass の変数に慣れているかもしれません。<a href="https://developers.google.com/web/updates/2016/02/css-variables-why-should-you-care" target="_blank">CSS 変数</a>は機能の共通化を可能にしますが、ブラウザに組み込まれています。CSS 変数は、すべての evergreen なブラウザで使用できます。 </p>
-  </section>
-
   <section id="sass">
     <a href="#sass"><h3>Sass</h3></a>
     <p>Sass は CSS にコンパイルされるスタイルシート言語で、Ionicで使用されています。Sass は CSS に似ていますが、<a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#variables_" target="_blank">変数</a>、<a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#mixins" target="_blank">ミックスイン</a>、<a href="http://sass-lang.com/documentation/file.SASS_REFERENCE.html#_10" target="_blank">ループ</a>などの追加機能があります。</p>
+  </section>
+
+  <section id="scoped">
+    <a href="#scoped"><h3>Scoped Encapsulation</h3></a>
+    <p>A component that uses scoped encapsulation will automatically scope its CSS by appending each of the styles with a data attribute at run time. Overriding scoped selectors in CSS requires a <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity" target="_blank">higher specificity</a> selector. Scoped components can also be styled using <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables" target="_blank">CSS Custom Properties</a>.</p>
+  </section>
+
+  <section id="shadow">
+    <a href="#shadow"><h3>Shadow DOM</h3></a>
+    <p><a href="https://developers.google.com/web/fundamentals/web-components/shadowdom" target="_blank">Shadow DOM</a> is a native browser solution for DOM and style encapsulation of a component. It shields the component from its surrounding environment. To externally style internal elements of a Shadow DOM component you must use <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables" target="_blank">CSS Custom Properties</a> or <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::part" target="_blank">CSS Shadow Parts</a>.</p>
   </section>
 
   <section id="shim">

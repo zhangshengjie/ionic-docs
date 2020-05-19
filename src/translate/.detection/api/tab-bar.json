@@ -1,5 +1,5 @@
 {
-  "filePath": "src/components/tab-bar/tab-bar.tsx",
+  "filePath": "./src/components/tab-bar/tab-bar.tsx",
   "encapsulation": "shadow",
   "tag": "ion-tab-bar",
   "readme": "# ion-tab-bar\n\nThe tab bar is a UI component that contains a set of [tab buttons](../tab-button). A tab bar must be provided inside of [tabs](../tabs) to communicate with each [tab](../tab).\n\n",
@@ -96,6 +96,20 @@
   ],
   "methods": [],
   "events": [],
+  "listeners": [
+    {
+      "event": "keyboardWillHide",
+      "target": "window",
+      "capture": false,
+      "passive": false
+    },
+    {
+      "event": "keyboardWillShow",
+      "target": "window",
+      "capture": false,
+      "passive": false
+    }
+  ],
   "styles": [
     {
       "name": "--background",

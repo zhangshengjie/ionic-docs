@@ -9,7 +9,7 @@ selectは、子要素`<ion-select-option>`とともに使用する必要があ�
 
 ## インターフェイス
 
-デフォルトでは、select は [AlertController API](../alert-controller) を使ってAlertのオプションのオーバーレイを開きます。インターフェイスを変更して、[ActionSheetController API](../action-sheet-controller)または[PopoverController API](../popover-controller)を使用するには、`action-sheet`または`popover`を`interface`プロパティに渡します。各インタフェースの制限については、他のセクションを参照してください。
+デフォルトでは、select は [ion-alert](../alert) を使ってAlertのオプションのオーバーレイを開きます。インターフェイスを変更して、[ion-action-sheet](../action-sheet) または [ion-popover](../popover) を使用するには、`action-sheet`または`popover`を`interface`プロパティに渡します。各インタフェースの制限については、他のセクションを参照してください。
 
 
 ## 単一選択
@@ -17,11 +17,12 @@ selectは、子要素`<ion-select-option>`とともに使用する必要があ�
 デフォルトでは、selectを使用すると、ユーザは1つのOptionだけを選択できます。Alertのインターフェースでは、Optionのリストがradio button形式で表示されます。action sheetインタフェースは、1つの値選択でのみ使用できます。selectコンポーネントの値は、選択したオプションの値の値を受け取ります。
 
 
-### 複数選択
+## 複数選択
 
 `multiple` 属性を追加して選択すると、複数のOptionを選択できます。複数のOptionを選択できる場合は、checkbox形式のオプションのリストがAlertオーバーレイで表示されます。selectコンポーネントの値は、選択されたすべてのオプション値の配列を受け取ります。
 
 Note: `action-sheet` と `popover` インターフェイスでは、複数選択は動作しません
+
 
 ## Object値について
 
@@ -38,10 +39,10 @@ alertはふたつのボタンをサポートしています: `Cancel` と `OK` �
 
 ## インターフェイスオプション
 
-Since select uses the alert, action sheet and popover interfaces, options can be passed to these components through the `interfaceOptions` property. This can be used to pass a custom header, subheader, css class, and more. 
+Since select uses the alert, action sheet and popover interfaces, options can be passed to these components through the `interfaceOptions` property. This can be used to pass a custom header, subheader, css class, and more.
   
-See the [AlertController API docs](../alert-controller), [ActionSheetController API docs](../action-sheet-controller), and [PopoverController API docs](../popover-controller) for the properties that each interface accepts.
-
-Note: `interfaceOptions` will not override `inputs` or `buttons` with the `alert` interface.
+See the [ion-alert docs](../alert), [ion-action-sheet docs](../action-sheet), and [ion-popover docs](../popover) for the properties that each interface accepts.
+  
+  Note: `interfaceOptions` will not override `inputs` or `buttons` with the `alert` interface.
 
 

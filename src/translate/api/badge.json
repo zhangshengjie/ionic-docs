@@ -1,5 +1,5 @@
 {
-  "filePath": "src/components/badge/badge.tsx",
+  "filePath": "./src/components/badge/badge.tsx",
   "encapsulation": "shadow",
   "tag": "ion-badge",
   "readme": "# ion-badge\n\nBadges are inline block elements that usually appear near another element. Typically they contain a number or other characters. They can be used as a notification that there are additional items associated with an element and indicate how many items there are.\n\n",
@@ -60,6 +60,7 @@
   ],
   "methods": [],
   "events": [],
+  "listeners": [],
   "styles": [
     {
       "name": "--background",

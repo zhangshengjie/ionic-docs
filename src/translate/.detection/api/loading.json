@@ -1,5 +1,5 @@
 {
-  "filePath": "src/components/loading/loading.tsx",
+  "filePath": "./src/components/loading/loading.tsx",
   "encapsulation": "scoped",
   "tag": "ion-loading",
   "readme": "# ion-loading\n\nAn overlay that can be used to indicate activity while blocking user interaction. The loading indicator appears on top of the app's content, and can be dismissed by the app to resume user interaction with the app. It includes an optional backdrop, which can be disabled by setting `showBackdrop: false` upon creation.\n\n### Dismissing\n\nThe loading indicator can be dismissed automatically after a specific amount of time by passing the number of milliseconds to display it in the `duration` of the loading options. To dismiss the loading indicator after creation, call the `dismiss()` method on the loading instance. The `onDidDismiss` function can be called to perform an action after the loading indicator is dismissed.\n\n",
@@ -145,13 +145,16 @@
     },
     {
       "name": "message",
-      "type": "string | undefined",
+      "type": "IonicSafeString | string | undefined",
       "mutable": false,
       "attr": "message",
       "reflectToAttr": false,
       "docs": "Optional text content to display in the loading indicator.",
       "docsTags": [],
       "values": [
+        {
+          "type": "IonicSafeString"
+        },
         {
           "type": "string"
         },
@@ -358,6 +361,7 @@
       "docsTags": []
     }
   ],
+  "listeners": [],
   "styles": [
     {
       "name": "--backdrop-opacity",

@@ -1,10 +1,15 @@
 {
-  "filePath": "src/components/img/img.tsx",
+  "filePath": "./src/components/img/img.tsx",
   "encapsulation": "shadow",
   "tag": "ion-img",
   "readme": "# ion-img\n\nImg is a tag that will lazily load an image when ever the tag is in the viewport. This is extremely useful when generating a large list as images are only loaded when they're visible. The component uses [Intersection Observer](https://caniuse.com/#feat=intersectionobserver) internally, which is supported in most modern browser, but falls back to a `setTimeout` when it is not supported.\n\n",
   "docs": "Img is a tag that will lazily load an image when ever the tag is in the viewport. This is extremely useful when generating a large list as images are only loaded when they're visible. The component uses [Intersection Observer](https://caniuse.com/#feat=intersectionobserver) internally, which is supported in most modern browser, but falls back to a `setTimeout` when it is not supported.",
-  "docsTags": [],
+  "docsTags": [
+    {
+      "text": "image - The inner `img` element.",
+      "name": "part"
+    }
+  ],
   "usage": {
     "angular": "```html\n<ion-list>\n  <ion-item *ngFor=\"let item of items\">\n    <ion-thumbnail slot=\"start\">\n      <ion-img [src]=\"item.src\"></ion-img>\n    </ion-thumbnail>\n    <ion-label>{{item.text}}</ion-label>\n  </ion-item>\n</ion-list>\n```\n",
     "react": "```tsx\nimport React from 'react';\nimport { IonList, IonItem, IonThumbnail, IonImg, IonLabel, IonContent } from '@ionic/react';\n\ntype Item = {\n  src: string;\n  text: string;\n};\nconst items: Item[] = [{ src: 'http://placekitten.com/g/200/300', text: 'a picture of a cat' }];\n\nexport const ImgExample: React.FC = () => (\n  <IonContent>\n    <IonList>\n      {items.map((image, i) => (\n        <IonItem key={i}>\n          <IonThumbnail slot=\"start\">\n            <IonImg src={image.src} />\n          </IonThumbnail>\n          <IonLabel>{image.text}</IonLabel>\n        </IonItem>\n      ))}\n    </IonList>\n  </IonContent>\n);\n```",
@@ -80,6 +85,7 @@
       "docsTags": []
     }
   ],
+  "listeners": [],
   "styles": [],
   "slots": [],
   "dependents": [],

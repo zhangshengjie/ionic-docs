@@ -1,5 +1,5 @@
 {
-  "filePath": "src/components/note/note.tsx",
+  "filePath": "./src/components/note/note.tsx",
   "encapsulation": "shadow",
   "tag": "ion-note",
   "readme": "# ion-note\n\nNotes are text elements generally used as subtitles that provide more information. Notes are styled to appear grey by default. Notes can be used in an item as metadata text.\n\n",
@@ -60,6 +60,7 @@
   ],
   "methods": [],
   "events": [],
+  "listeners": [],
   "styles": [
     {
       "name": "--color",

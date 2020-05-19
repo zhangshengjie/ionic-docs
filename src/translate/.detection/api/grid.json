@@ -1,5 +1,5 @@
 {
-  "filePath": "src/components/grid/grid.tsx",
+  "filePath": "./src/components/grid/grid.tsx",
   "encapsulation": "shadow",
   "tag": "ion-grid",
   "readme": "# ion-grid\n\n\nThe grid is a powerful mobile-first flexbox system for building custom layouts.\n\nIt is composed of three units — a grid, [row(s)](../row) and [column(s)](../col). Columns will expand to fill the row, and will resize to fit additional columns. It is based on a 12 column layout with different breakpoints based on the screen size. The number of columns can be customized using CSS.\n\nSee the [Responsive Grid documentation](/docs/layout/grid) for more information.\n",
@@ -32,6 +32,7 @@
   ],
   "methods": [],
   "events": [],
+  "listeners": [],
   "styles": [
     {
       "name": "--ion-grid-padding",

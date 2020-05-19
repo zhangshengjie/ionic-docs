@@ -1,5 +1,5 @@
 {
-  "filePath": "src/components/header/header.tsx",
+  "filePath": "./src/components/header/header.tsx",
   "encapsulation": "none",
   "tag": "ion-header",
   "readme": "# ion-header\n\nHeader is a parent component that holds the toolbar component.\nIt's important to note that ion-header needs to be the one of the three root elements of a page\n\n\n",
@@ -78,6 +78,7 @@
   ],
   "methods": [],
   "events": [],
+  "listeners": [],
   "styles": [],
   "slots": [],
   "dependents": [],

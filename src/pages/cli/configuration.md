@@ -67,6 +67,24 @@ CLIは、ビルドの前後など、特定のイベント中にスクリプト�
 * `ionic:serve:after`: dev server が終了される前に実行されます
 * `ionic:build:before`: web assetの構築がはじまる前に実行されます
 * `ionic:build:after`: web assetの構築が終了して実行されます。
+* `ionic:capacitor:run:before` : executed on capacitor run before capacitor open is executed
+* `ionic:capacitor:build:before` : executed on capacitor build before capacitor open is executed
+
+The Capacitor hooks are executed after the `ionic:serve` and `ionic:build` hooks. They will only be executed when using the `ionic capacitor build` or `ionic capacitor run` commands. When using a shell script for any of the hooks, several environment variables are set containing context information.
+
+The following example shows the environment variables that are set for the `ionic:capacitor:run:before` and `ionic:capacitor:build:before` hooks.
+
+```shell
+IONIC_CLI_HOOK_CTX_NAME=capacitor:build:before
+IONIC_CLI_HOOK_CTX_BUILD_CORDOVA_ASSETS=true
+IONIC_CLI_HOOK_CTX_BUILD_ENGINE=browser
+IONIC_CLI_HOOK_CTX_BUILD_PROJECT=app
+IONIC_CLI_HOOK_CTX_BUILD_TYPE=angular
+IONIC_CLI_HOOK_CTX_BUILD_VERBOSE=false
+IONIC_CLI_HOOK_CTX_CAPACITOR_APP_ID=io.ionic.starter
+IONIC_CLI_HOOK_CTX_CAPACITOR_APP_NAME=ionic-starter-app
+IONIC_CLI_HOOK_CTX_CAPACITOR_VERBOSE=false
+```
 
 Hooksは `ionic.config.json` で定義することもできます。プロジェクト内でHooksオブジェクトを定義します。各キーはフックの名前(先頭に`ionic:`を付けない)で、値はJavaScriptファイルへのパスまたはパスの配列です。
 

@@ -1,5 +1,5 @@
 {
-  "filePath": "src/components/back-button/back-button.tsx",
+  "filePath": "./src/components/back-button/back-button.tsx",
   "encapsulation": "shadow",
   "tag": "ion-back-button",
   "readme": "# ion-back-button\n\nThe back button navigates back in the app's history upon click. It is smart enough to know what to render based on the mode and when to show based on the navigation stack.\n\nTo change what is displayed in the back button, use the `text` and `icon` properties.\n\n",
@@ -39,7 +39,7 @@
     {
       "name": "defaultHref",
       "type": "string | undefined",
-      "mutable": false,
+      "mutable": true,
       "attr": "default-href",
       "reflectToAttr": false,
       "docs": "The url to navigate back to by default when there is no history.",
@@ -166,6 +166,7 @@
   ],
   "methods": [],
   "events": [],
+  "listeners": [],
   "styles": [
     {
       "name": "--background",

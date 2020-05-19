@@ -1,5 +1,5 @@
 {
-  "filePath": "src/components/list-header/list-header.tsx",
+  "filePath": "./src/components/list-header/list-header.tsx",
   "encapsulation": "shadow",
   "tag": "ion-list-header",
   "readme": "# ion-list-header\n\nListHeader a header component for a list.\nUnlike ItemDivider, ListHeaders are styled to be stand-out from the rest of the list items.\n\n",
@@ -88,6 +88,7 @@
   ],
   "methods": [],
   "events": [],
+  "listeners": [],
   "styles": [
     {
       "name": "--background",
