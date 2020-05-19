@@ -30,7 +30,7 @@ public myUrl: string = 'javascript:alert("oh no!")';
 <a [href]="myUrl">Click Me!</a>
 ```
 
-To learn more about the built-in protections that Angular provides, see the [Angular Security Guide](https://angular.io/guide/security).
+To learn more about the built-in protections that Angular provides, see the [Angular Security Guide](https://angular.jp/guide/security).
 
 ### React
 

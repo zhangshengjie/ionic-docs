@@ -23,5 +23,5 @@ Router OutletでRoutesがレンダリングされた時、アニメーション�
 
 これらのイベントはIonicのアニメーションシステムと連携し、コンポーネントがアニメーションを完成させたときにアプリの挙動を調整するのに使用できる。これらのイベントはAngular独自のイベントシステムに代わるものではなく、追加されたものです。
 
-Router Guardsを扱うために、以前の`ionViewCanEnter` と `ionViewCanLeave`は、フレームワーク特有の同等のものに置き換えられました。Angularには[Router Guards](https://angular.io/guide/router#milestone-5-route-guards)があります。
+Router Guardsを扱うために、以前の`ionViewCanEnter` と `ionViewCanLeave`は、フレームワーク特有の同等のものに置き換えられました。Angularには[Router Guards](https://angular.jp/guide/router#milestone-5-route-guards)があります。
 

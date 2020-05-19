@@ -13,4 +13,4 @@ Ionicは 「Angular 6.0.0以降」 をサポートしています。アップグ
 
 ## Angular Tooling
 
-Ionic4以降では、アプリケーション構築とルーティングのために公式のAngularスタックが使用されているため、あなたのアプリケーションはAngularエコシステムと同じように利用できます。更に独自の機能が必要な場合には、Ionicは`@ionic/angular-toolkit`を提供します。、これは [official Angular CLI](https://angular.io/cli) を構築して統合し、`@ionic/angular` アプリ固有の機能を提供します。
+Ionic4以降では、アプリケーション構築とルーティングのために公式のAngularスタックが使用されているため、あなたのアプリケーションはAngularエコシステムと同じように利用できます。更に独自の機能が必要な場合には、Ionicは`@ionic/angular-toolkit`を提供します。、これは [official Angular CLI](https://angular.jp/cli) を構築して統合し、`@ionic/angular` アプリ固有の機能を提供します。
