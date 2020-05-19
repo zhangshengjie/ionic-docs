@@ -24,7 +24,7 @@ export const link = (item) => {
 
   const prefix = /^\/docs(\/[a-z]{2})?\//;
   const language = l10n.getLocale();
-  const url = language !== 'ja'
+  const url = language !== 'en'
     ? `/docs/${language}/${href.replace(prefix, '')}`
     : href;
 
