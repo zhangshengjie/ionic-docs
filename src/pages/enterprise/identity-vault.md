@@ -1,7 +1,7 @@
 ---
 title: Identity Vault
 template: enterprise-plugin
-version: 4.2.0
+version: 4.2.1
 minor: 4.2.X
 otherVersions:
   - 2.0.X
@@ -1458,6 +1458,8 @@ The options passed the the [IonicNativeAuthPlugin](#ionicnativeauthplugin) when 
 
 If biometric auth fails, allow system pin fallback.
 
+Please note: when Android devices are set to allow system pin fallback, the behavior of the biometrics prompt changes. The OS biometric prompt will not report that biometrics failed nor that the user has been locked out of biometrics. It is only currently possible to know the user either canceled the authentication prompt, or was successful in verifying.
+
 *__default__*: false
 
 ___
@@ -1994,6 +1996,15 @@ The possible values returned by [getAvailableHardware](#identityvault.getavailab
 ___
 
 ## Change Log
+
+
+
+### [4.2.1] (2020-05-27)
+
+
+### Bug Fixes
+
+* **android:** avoid crash on detecting gesture navigation when using hideScreen 
 
 
 
