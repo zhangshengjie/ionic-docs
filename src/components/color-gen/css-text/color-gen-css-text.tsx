@@ -1,4 +1,5 @@
 import { Component, Element, Event, EventEmitter, Prop, State, h } from '@stencil/core';
+
 import { convertCssToColors } from '../parse-css';
 
 @Component({

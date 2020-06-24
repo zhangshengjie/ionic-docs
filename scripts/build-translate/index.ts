@@ -55,6 +55,7 @@ const apply = () => {
       componentsObject.push(componentObject);
     }
     let resource = translateType.resource;
+    // tslint:disable-next-line
     if (translateType.contentsKey) {
       resource[translateType.contentsKey] = componentsObject;
     } else {

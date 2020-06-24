@@ -1,7 +1,8 @@
 // import { components } from '@ionic/docs/core.json';
-import { components } from '../data/translated-api.json';
 import { outputJson } from 'fs-extra';
 import { resolve } from 'path';
+
+import { components } from '../data/translated-api.json';
 
 const OUTPUT_PATH = resolve(
   __dirname,
