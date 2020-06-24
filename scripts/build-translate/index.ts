@@ -63,7 +63,7 @@ const apply = () => {
 
     writeFileSync(process.cwd() + '/scripts/data/translated-' + translateType.type + '.json', JSON.stringify(resource, null, 2), { encoding: 'UTF8' });
   }
-}
+};
 
 const create = () => {
   for (const translateType of translateTypes) {
@@ -100,7 +100,7 @@ const create = () => {
       writeFileSync(files.shadowReadme, ob[translateType.markdown], { encoding: 'UTF8' });
     });
   }
-}
+};
 
 const diff = () => {
   const execSync = require('child_process').execSync;
@@ -118,7 +118,7 @@ const diff = () => {
     }
     execSync('rm structure_' + translateType.type + '.patch');
   }
-}
+};
 
 const _changeNameToVariable = (name: string) => {
   return name
@@ -127,16 +127,16 @@ const _changeNameToVariable = (name: string) => {
     .replace('ionic ', '')
     .replace(/ /g, '-')
     .replace(/\//g, '-');
-}
+};
 
 (async () => {
   if (process.argv[2] === 'apply') {
-    await apply();
+    apply();
   }
   if (process.argv[2] === 'create') {
-    await create();
+    create();
   }
   if (process.argv[2] === 'diff') {
-    await diff();
+    diff();
   }
 })();
