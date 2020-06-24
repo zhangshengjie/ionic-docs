@@ -1,7 +1,7 @@
 import { Component, Prop, h } from '@stencil/core';
 
 import { Page } from '../../definitions';
-import { ForwardArrow } from '../../icons';
+// import { ForwardArrow } from '../../icons';
 
 @Component({
   tag: 'docs-page-footer',
@@ -33,7 +33,7 @@ export class DocsPageFooter {
       new Set([...page.github.contributors || [], ...page.contributors || []])
     );
 
-    const editHref = `https://github.com/ionic-jp/ionic-docs/edit/master/${path}`;
+    // const editHref = `https://github.com/ionic-jp/ionic-docs/edit/master/${path}`;
     const updatedHref = `https://github.com/ionic-jp/ionic-docs/commits/master/${path}`;
     const updatedText = lastUpdated ? new Date(lastUpdated).toISOString().slice(0, 10) : null;
     const contributorHref = (contributor: any) => `${updatedHref}?author=${contributor}`;
@@ -48,7 +48,7 @@ export class DocsPageFooter {
       pagination,
       <div class="page-footer__row">
         {contributors.length > 0 ? <contributor-list contributors={contributors} link={contributorHref}/> : null}
-        <docs-button round href={editHref}>翻訳する <ForwardArrow/></docs-button>
+        {/*<docs-button round href={editHref}>翻訳する <ForwardArrow/></docs-button>*/}
         {updatedText !== null ? <a class="last-updated" href={updatedHref}>Updated {updatedText}</a> : ''}
       </div>
     ];
