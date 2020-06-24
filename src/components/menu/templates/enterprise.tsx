@@ -1,4 +1,5 @@
 import { Component, h } from '@stencil/core';
+
 import { l10n } from '../../../l10n';
 
 @Component({
@@ -39,23 +40,15 @@ export class DocsMenuEnterprise {
             '': {
                 'Auth0': '/docs/enterprise/auth-connect/auth0',
                 'Azure AD B2C': '/docs/enterprise/auth-connect/azure-ad-b2c',
-                'AWS Cognito': '/docs/enterprise/auth-connect/aws-cognito'
+                'AWS Cognito': '/docs/enterprise/auth-connect/aws-cognito',
+                'Okta': '/docs/enterprise/auth-connect/okta'
             },
             'Offline Storage': '/docs/enterprise/offline-storage'
         }
     };
 
     premierPlugins = {
-        'menu-enterprise-integrated-services': {
-            'Apple Payment Pass': '/docs/enterprise/apple-payment-pass',
-            'Auth0': '/docs/enterprise/auth-connect/auth0',
-            'AWS Amplify': '/docs/enterprise/aws-amplify',
-            'AWS Cognito': '/docs/enterprise/auth-connect/aws-cognito',
-            'Azure AD B2C': '/docs/enterprise/auth-connect/azure-ad-b2c',
-            'Couchbase Lite': '/docs/enterprise/couchbase-lite',
-            'mParticle': '/docs/enterprise/mparticle'
-        },
-        'menu-enterprise-common-device-features': {
+        '': {
             'Android Permissions': '/docs/enterprise/android-permissions',
             'App Rate': '/docs/enterprise/app-rate',
             'App Version': '/docs/enterprise/app-version',
@@ -82,6 +75,6 @@ export class DocsMenuEnterprise {
             'Splash Screen': '/docs/enterprise/splashscreen',
             'Status Bar': '/docs/enterprise/statusbar',
             'Vibration': '/docs/enterprise/vibration'
-        },
+        }
     };
 }

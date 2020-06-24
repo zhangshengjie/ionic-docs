@@ -4,7 +4,7 @@ Range sliderを使用すると、sliderのつまみを動かして値の範囲�
 2つのつまみを使用できますが、デフォルトでは、
 1つのつまみで範囲の値を制御します。
 
-### Range Labels
+## Range Labels
 
 要素に `slot="start"` または `slot="end"` を追加すると、
 Labelを範囲の両側に配置できます。

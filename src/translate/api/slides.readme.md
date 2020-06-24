@@ -15,12 +15,12 @@ http://www.idangero.us/
 
 Licensed under MIT
 
-### カスタムアニメーション
+## カスタムアニメーション
 
 デフォルトでは、Ionic slidesは `slide` のスライドアニメーション効果を使用します。カスタムアニメーションは、`options` プロパティを使用して提供できます。他のアニメーションの例を以下に示します。
 
 
-#### Coverflow
+### Coverflow
 
 ```typescript
 const slideOpts = {
@@ -113,7 +113,7 @@ const slideOpts = {
 }
 ```
 
-#### Cube
+### Cube
 
 ```typescript
 const slideOpts = {
@@ -273,7 +273,7 @@ const slideOpts = {
 }
 ```
 
-#### Fade
+### Fade
 
 ```typescript
 const slideOpts = {
@@ -337,7 +337,7 @@ const slideOpts = {
 }
 ```
 
-#### Flip
+### Flip
 
 ```typescript
 const slideOpts = {

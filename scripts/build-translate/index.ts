@@ -1,5 +1,6 @@
-import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'fs';
 import { components } from '@ionic/docs/core.json';
+import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'fs';
+
 import { commands } from '../data/cli.json';
 
 const translateTypes = [
@@ -29,7 +30,7 @@ const translateTypes = [
   }
 ];
 
-async function apply() {
+const apply = () => {
   for (const translateType of translateTypes) {
     const directory = process.cwd() + '/src/translate/' + translateType.type;
     if (!existsSync(directory)) {
@@ -37,10 +38,10 @@ async function apply() {
     }
     let directoryFiles: string[] | any = readdirSync(directory, { encoding: 'UTF8' });
     directoryFiles = directoryFiles
-      .filter(file => {
+      .filter((file: string) => {
         return (/.*\.json$/.test(file) && !file.match(/readme/));
       })
-      .map(file => {
+      .map((file: string) => {
         return directory + '/' + file;
       });
 
@@ -64,9 +65,9 @@ async function apply() {
   }
 }
 
-async function create() {
+const create = () => {
   for (const translateType of translateTypes) {
-    translateType.contents.map(ob => {
+    translateType.contents.map((ob: any) => {
       const key = _changeNameToVariable(ob[translateType.key]);
       const folder = {
         real: process.cwd() + '/src/translate/' + translateType.type + '/',
@@ -101,7 +102,7 @@ async function create() {
   }
 }
 
-async function diff() {
+const diff = () => {
   const execSync = require('child_process').execSync;
   for (const translateType of translateTypes) {
     execSync('git diff src/translate/.detection/' + translateType.type + '/*  > structure_' + translateType.type + '.patch');
@@ -119,7 +120,7 @@ async function diff() {
   }
 }
 
-function _changeNameToVariable(name: string) {
+const _changeNameToVariable = (name: string) => {
   return name
     .replace('ion-', '')
     .replace('@ionic-native/', '')

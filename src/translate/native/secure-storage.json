@@ -9,8 +9,8 @@
     "iOS",
     "Windows"
   ],
-  "repo": "https://github.com/Crypho/cordova-plugin-secure-storage",
+  "repo": "https://github.com/mibrito707/cordova-plugin-secure-storage-echo",
   "cordovaPlugin": {
-    "name": "cordova-plugin-secure-storage"
+    "name": "cordova-plugin-secure-storage-echo"
   }
 }

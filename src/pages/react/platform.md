@@ -5,7 +5,7 @@ nextText: 'Progressive Web Apps in React'
 nextUrl: '/docs/react/pwa'
 ---
 
-# Platformユーティリティ
+# Platform
 
 ## isPlatform
 
@@ -29,4 +29,26 @@ import { getPlatforms } from '@ionic/react';
 getPlatforms(); // iPhoneの場合 ["iphone", "ios", "mobile", "mobileweb"] を返します
 ```
 
+
 使用しているデバイスに応じて、 `getPlatforms` は複数の値を返すことができます。 それぞれの値はプラットフォームに応じて配列で返却されます。たとえば、iPhoneでは、mobile、ios、およびiphoneが返されます。
+
+## Platforms
+
+Below is a table listing all the possible platform values along with corresponding descriptions.
+
+| Platform Name | Description                              |
+|---------------|------------------------------------------|
+| android       | a device running Android                 |
+| capacitor     | a device running Capacitor               |
+| cordova       | a device running Cordova                 |
+| desktop       | a desktop device                         |
+| electron      | a desktop device running Electron        |
+| hybrid        | a device running Capacitor or Cordova    |
+| ios           | a device running iOS                     |
+| ipad          | an iPad device                           |
+| iphone        | an iPhone device                         |
+| mobile        | a mobile device                          |
+| mobileweb     | a web browser running in a mobile device |
+| phablet       | a phablet device                         |
+| pwa           | a PWA app                                |
+| tablet        | a tablet device                          |

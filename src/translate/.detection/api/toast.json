@@ -2,7 +2,7 @@
   "filePath": "./src/components/toast/toast.tsx",
   "encapsulation": "shadow",
   "tag": "ion-toast",
-  "readme": "# ion-toast\n\nA Toast is a subtle notification commonly used in modern applications. It can be used to provide feedback about an operation or to display a system message. The toast appears on top of the app's content, and can be dismissed by the app to resume user interaction with the app.\n\n### Positioning\n\nToasts can be positioned at the top, bottom or middle of the viewport. The position can be passed upon creation. The possible values are `top`, `bottom` and `middle`. If the position is not specified, the toast will be displayed at the bottom of the viewport.\n\n### Dismissing\n\nThe toast can be dismissed automatically after a specific amount of time by passing the number of milliseconds to display it in the `duration` of the toast options. If a button with a role of `\"cancel\"` is added, then that button will dismiss the toast. To dismiss the toast after creation, call the `dismiss()` method on the instance.\n\n",
+  "readme": "# ion-toast\n\nA Toast is a subtle notification commonly used in modern applications. It can be used to provide feedback about an operation or to display a system message. The toast appears on top of the app's content, and can be dismissed by the app to resume user interaction with the app.\n\n## Positioning\n\nToasts can be positioned at the top, bottom or middle of the viewport. The position can be passed upon creation. The possible values are `top`, `bottom` and `middle`. If the position is not specified, the toast will be displayed at the bottom of the viewport.\n\n## Dismissing\n\nThe toast can be dismissed automatically after a specific amount of time by passing the number of milliseconds to display it in the `duration` of the toast options. If a button with a role of `\"cancel\"` is added, then that button will dismiss the toast. To dismiss the toast after creation, call the `dismiss()` method on the instance.\n\n",
   "docs": "A Toast is a subtle notification commonly used in modern applications. It can be used to provide feedback about an operation or to display a system message. The toast appears on top of the app's content, and can be dismissed by the app to resume user interaction with the app.",
   "docsTags": [
     {
@@ -13,7 +13,8 @@
   "usage": {
     "angular": "```typescript\nimport { Component } from '@angular/core';\nimport { ToastController } from '@ionic/angular';\n\n@Component({\n  selector: 'toast-example',\n  templateUrl: 'toast-example.html',\n  styleUrls: ['./toast-example.css'],\n})\nexport class ToastExample {\n\n  constructor(public toastController: ToastController) {}\n\n  async presentToast() {\n    const toast = await this.toastController.create({\n      message: 'Your settings have been saved.',\n      duration: 2000\n    });\n    toast.present();\n  }\n\n  async presentToastWithOptions() {\n    const toast = await this.toastController.create({\n      header: 'Toast header',\n      message: 'Click to Close',\n      position: 'top',\n      buttons: [\n        {\n          side: 'start',\n          icon: 'star',\n          text: 'Favorite',\n          handler: () => {\n            console.log('Favorite clicked');\n          }\n        }, {\n          text: 'Done',\n          role: 'cancel',\n          handler: () => {\n            console.log('Cancel clicked');\n          }\n        }\n      ]\n    });\n    toast.present();\n  }\n\n}\n```\n",
     "javascript": "```javascript\nasync function presentToast() {\n  const toast = document.createElement('ion-toast');\n  toast.message = 'Your settings have been saved.';\n  toast.duration = 2000;\n\n  document.body.appendChild(toast);\n  return toast.present();\n}\n\nasync function presentToastWithOptions() {\n  const toast = document.createElement('ion-toast');\n  toast.header = 'Toast header';\n  toast.message = 'Click to Close';\n  toast.position = 'top';\n  toast.buttons = [\n    {\n      side: 'start',\n      icon: 'star',\n      text: 'Favorite',\n      handler: () => {\n        console.log('Favorite clicked');\n      }\n    }, {\n      text: 'Done',\n      role: 'cancel',\n      handler: () => {\n        console.log('Cancel clicked');\n      }\n    }\n  ];\n\n  document.body.appendChild(toast);\n  return toast.present();\n}\n```\n",
-    "react": "```tsx\nimport React, { useState } from 'react';\nimport { IonToast, IonContent, IonButton } from '@ionic/react';\n\nexport const ToastExample: React.FC = () => {\n  const [showToast1, setShowToast1] = useState(false);\n  const [showToast2, setShowToast2] = useState(false);\n\n  return (\n    <IonContent>\n      <IonButton onClick={() => setShowToast1(true)} expand=\"block\">Show Toast 1</IonButton>\n      <IonButton onClick={() => setShowToast2(true)} expand=\"block\">Show Toast 2</IonButton>\n      <IonToast\n        isOpen={showToast1}\n        onDidDismiss={() => setShowToast1(false)}\n        message=\"Your settings have been saved.\"\n        duration={200}\n      />\n\n      <IonToast\n        isOpen={showToast2}\n        onDidDismiss={() => setShowToast2(false)}\n        message=\"Click to Close\"\n        position=\"top\"\n        buttons={[\n          {\n            side: 'start',\n            icon: 'star',\n            text: 'Favorite',\n            handler: () => {\n              console.log('Favorite clicked');\n            }\n          },\n          {\n            text: 'Done',\n            role: 'cancel',\n            handler: () => {\n              console.log('Cancel clicked');\n            }\n          }\n        ]}\n      />\n    </IonContent>\n  );\n};\n```\n"
+    "react": "```tsx\nimport React, { useState } from 'react';\nimport { IonToast, IonContent, IonButton } from '@ionic/react';\n\nexport const ToastExample: React.FC = () => {\n  const [showToast1, setShowToast1] = useState(false);\n  const [showToast2, setShowToast2] = useState(false);\n\n  return (\n    <IonContent>\n      <IonButton onClick={() => setShowToast1(true)} expand=\"block\">Show Toast 1</IonButton>\n      <IonButton onClick={() => setShowToast2(true)} expand=\"block\">Show Toast 2</IonButton>\n      <IonToast\n        isOpen={showToast1}\n        onDidDismiss={() => setShowToast1(false)}\n        message=\"Your settings have been saved.\"\n        duration={200}\n      />\n\n      <IonToast\n        isOpen={showToast2}\n        onDidDismiss={() => setShowToast2(false)}\n        message=\"Click to Close\"\n        position=\"top\"\n        buttons={[\n          {\n            side: 'start',\n            icon: 'star',\n            text: 'Favorite',\n            handler: () => {\n              console.log('Favorite clicked');\n            }\n          },\n          {\n            text: 'Done',\n            role: 'cancel',\n            handler: () => {\n              console.log('Cancel clicked');\n            }\n          }\n        ]}\n      />\n    </IonContent>\n  );\n};\n```\n",
+    "stencil": "```tsx\nimport { Component, h } from '@stencil/core';\n\nimport { toastController } from '@ionic/core';\n\n@Component({\n  tag: 'toast-example',\n  styleUrl: 'toast-example.css'\n})\nexport class ToastExample {\n  async presentToast() {\n    const toast = await toastController.create({\n      message: 'Your settings have been saved.',\n      duration: 2000\n    });\n    toast.present();\n  }\n\n  async presentToastWithOptions() {\n    const toast = await toastController.create({\n      header: 'Toast header',\n      message: 'Click to Close',\n      position: 'top',\n      buttons: [\n        {\n          side: 'start',\n          icon: 'star',\n          text: 'Favorite',\n          handler: () => {\n            console.log('Favorite clicked');\n          }\n        }, {\n          text: 'Done',\n          role: 'cancel',\n          handler: () => {\n            console.log('Cancel clicked');\n          }\n        }\n      ]\n    });\n    toast.present();\n  }\n\n  render() {\n    return [\n      <ion-content>\n        <ion-button onClick={() => this.presentToast()}>Present Toast</ion-button>\n        <ion-button onClick={() => this.presentToastWithOptions()}>Present Toast: Options</ion-button>\n      </ion-content>\n    ];\n  }\n}\n```"
   },
   "props": [
     {
@@ -295,10 +296,10 @@
     {
       "name": "onDidDismiss",
       "returns": {
-        "type": "Promise<OverlayEventDetail<any>>",
+        "type": "Promise<OverlayEventDetail<T>>",
         "docs": ""
       },
-      "signature": "onDidDismiss() => Promise<OverlayEventDetail<any>>",
+      "signature": "onDidDismiss<T = any>() => Promise<OverlayEventDetail<T>>",
       "parameters": [],
       "docs": "Returns a promise that resolves when the toast did dismiss.",
       "docsTags": []
@@ -306,10 +307,10 @@
     {
       "name": "onWillDismiss",
       "returns": {
-        "type": "Promise<OverlayEventDetail<any>>",
+        "type": "Promise<OverlayEventDetail<T>>",
         "docs": ""
       },
-      "signature": "onWillDismiss() => Promise<OverlayEventDetail<any>>",
+      "signature": "onWillDismiss<T = any>() => Promise<OverlayEventDetail<T>>",
       "parameters": [],
       "docs": "Returns a promise that resolves when the toast will dismiss.",
       "docsTags": []
@@ -453,6 +454,7 @@
     }
   ],
   "slots": [],
+  "parts": [],
   "dependents": [],
   "dependencies": [
     "ion-icon",

@@ -11,6 +11,6 @@
   "cordovaPlugin": {
     "name": "cordova-plugin-ionic-keyboard"
   },
-  "capacitorIncompatible": true,
-  "premierSlug": "keyboard"
+  "premierSlug": "keyboard",
+  "capacitorIncompatible": true
 }

@@ -249,10 +249,10 @@
     {
       "name": "onDidDismiss",
       "returns": {
-        "type": "Promise<OverlayEventDetail<any>>",
+        "type": "Promise<OverlayEventDetail<T>>",
         "docs": ""
       },
-      "signature": "onDidDismiss() => Promise<OverlayEventDetail<any>>",
+      "signature": "onDidDismiss<T = any>() => Promise<OverlayEventDetail<T>>",
       "parameters": [],
       "docs": "Returns a promise that resolves when the picker did dismiss.",
       "docsTags": []
@@ -260,10 +260,10 @@
     {
       "name": "onWillDismiss",
       "returns": {
-        "type": "Promise<OverlayEventDetail<any>>",
+        "type": "Promise<OverlayEventDetail<T>>",
         "docs": ""
       },
-      "signature": "onWillDismiss() => Promise<OverlayEventDetail<any>>",
+      "signature": "onWillDismiss<T = any>() => Promise<OverlayEventDetail<T>>",
       "parameters": [],
       "docs": "Returns a promise that resolves when the picker will dismiss.",
       "docsTags": []
@@ -387,6 +387,7 @@
     }
   ],
   "slots": [],
+  "parts": [],
   "dependents": [],
   "dependencies": [
     "ion-backdrop",

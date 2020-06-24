@@ -14,6 +14,7 @@
     "angular": "```html\n<!-- Default Input -->\n<ion-input></ion-input>\n\n<!-- Input with value -->\n<ion-input value=\"custom\"></ion-input>\n\n<!-- Input with placeholder -->\n<ion-input placeholder=\"Enter Input\"></ion-input>\n\n<!-- Input with clear button when there is a value -->\n<ion-input clearInput value=\"clear me\"></ion-input>\n\n<!-- Number type input -->\n<ion-input type=\"number\" value=\"333\"></ion-input>\n\n<!-- Disabled input -->\n<ion-input value=\"Disabled\" disabled></ion-input>\n\n<!-- Readonly input -->\n<ion-input value=\"Readonly\" readonly></ion-input>\n\n<!-- Inputs with labels -->\n<ion-item>\n  <ion-label>Default Label</ion-label>\n  <ion-input></ion-input>\n</ion-item>\n\n<ion-item>\n  <ion-label position=\"floating\">Floating Label</ion-label>\n  <ion-input></ion-input>\n</ion-item>\n\n<ion-item>\n  <ion-label position=\"fixed\">Fixed Label</ion-label>\n  <ion-input></ion-input>\n</ion-item>\n\n<ion-item>\n  <ion-label position=\"stacked\">Stacked Label</ion-label>\n  <ion-input></ion-input>\n</ion-item>\n```",
     "javascript": "```html\n<!-- Default Input -->\n<ion-input></ion-input>\n\n<!-- Input with value -->\n<ion-input value=\"custom\"></ion-input>\n\n<!-- Input with placeholder -->\n<ion-input placeholder=\"Enter Input\"></ion-input>\n\n<!-- Input with clear button when there is a value -->\n<ion-input clear-input value=\"clear me\"></ion-input>\n\n<!-- Number type input -->\n<ion-input type=\"number\" value=\"333\"></ion-input>\n\n<!-- Disabled input -->\n<ion-input value=\"Disabled\" disabled></ion-input>\n\n<!-- Readonly input -->\n<ion-input value=\"Readonly\" readonly></ion-input>\n\n<!-- Inputs with labels -->\n<ion-item>\n  <ion-label>Default Label</ion-label>\n  <ion-input></ion-input>\n</ion-item>\n\n<ion-item>\n  <ion-label position=\"floating\">Floating Label</ion-label>\n  <ion-input></ion-input>\n</ion-item>\n\n<ion-item>\n  <ion-label position=\"fixed\">Fixed Label</ion-label>\n  <ion-input></ion-input>\n</ion-item>\n\n<ion-item>\n  <ion-label position=\"stacked\">Stacked Label</ion-label>\n  <ion-input></ion-input>\n</ion-item>\n```",
     "react": "```tsx\nimport React, { useState } from 'react';\nimport { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonInput, IonItem, IonLabel, IonList, IonItemDivider } from '@ionic/react';\n\nexport const InputExamples: React.FC = () => {\n\n  const [text, setText] = useState<string>();\n  const [number, setNumber] = useState<number>();\n\n  return (\n    <IonPage>\n      <IonHeader>\n        <IonToolbar>\n          <IonTitle>IonInput Examples</IonTitle>\n        </IonToolbar>\n      </IonHeader>\n      <IonContent>\n        <IonList>\n          <IonItemDivider>Default Input with Placeholder</IonItemDivider>\n          <IonItem>\n            <IonInput value={text} placeholder=\"Enter Input\" onIonChange={e => setText(e.detail.value!)}></IonInput>\n          </IonItem>\n\n          <IonItemDivider>Input with clear button when there is a value</IonItemDivider>\n          <IonItem>\n            <IonInput value={text} placeholder=\"Enter Input\" onIonChange={e => setText(e.detail.value!)} clearInput></IonInput>\n          </IonItem>\n\n          <IonItemDivider>Number type input</IonItemDivider>\n          <IonItem>\n            <IonInput type=\"number\" value={number} placeholder=\"Enter Number\" onIonChange={e => setNumber(parseInt(e.detail.value!, 10))}></IonInput>\n          </IonItem>\n\n          <IonItemDivider>Disabled input</IonItemDivider>\n          <IonItem>\n            <IonInput value={text} disabled></IonInput>\n          </IonItem>\n\n          <IonItemDivider>Readonly input</IonItemDivider>\n          <IonItem>\n            <IonInput value={text} readonly></IonInput>\n          </IonItem>\n\n          <IonItemDivider>Inputs with labels</IonItemDivider>\n\n          <IonItem>\n            <IonLabel>Default Label</IonLabel>\n            <IonInput></IonInput>\n          </IonItem>\n\n          <IonItem>\n            <IonLabel position=\"floating\">Floating Label</IonLabel>\n            <IonInput value={text}></IonInput>\n          </IonItem>\n\n          <IonItem>\n            <IonLabel position=\"fixed\">Fixed Label</IonLabel>\n            <IonInput value={text}></IonInput>\n          </IonItem>\n\n          <IonItem>\n            <IonLabel position=\"stacked\">Stacked Label</IonLabel>\n            <IonInput value={text}> </IonInput>\n          </IonItem>\n        </IonList>\n      </IonContent>\n    </IonPage>\n  );\n};\n```",
+    "stencil": "```tsx\nimport { Component, h } from '@stencil/core';\n\n@Component({\n  tag: 'input-example',\n  styleUrl: 'input-example.css'\n})\nexport class InputExample {\n  render() {\n    return [\n      // Default Input\n      <ion-input></ion-input>,\n\n      // Input with value\n      <ion-input value=\"custom\"></ion-input>,\n\n      // Input with placeholder\n      <ion-input placeholder=\"Enter Input\"></ion-input>,\n\n      // Input with clear button when there is a value\n      <ion-input clearInput value=\"clear me\"></ion-input>,\n\n      // Number type input\n      <ion-input type=\"number\" value=\"333\"></ion-input>,\n\n      // Disabled input\n      <ion-input value=\"Disabled\" disabled></ion-input>,\n\n      // Readonly input\n      <ion-input value=\"Readonly\" readonly></ion-input>,\n\n      // Inputs with labels\n      <ion-item>\n        <ion-label>Default Label</ion-label>\n        <ion-input></ion-input>\n      </ion-item>,\n\n      <ion-item>\n        <ion-label position=\"floating\">Floating Label</ion-label>\n        <ion-input></ion-input>\n      </ion-item>,\n\n      <ion-item>\n        <ion-label position=\"fixed\">Fixed Label</ion-label>\n        <ion-input></ion-input>\n      </ion-item>,\n\n      <ion-item>\n        <ion-label position=\"stacked\">Stacked Label</ion-label>\n        <ion-input></ion-input>\n      </ion-item>\n    ];\n  }\n}\n```",
     "vue": "```html\n<template>\n  <!-- Default Input -->\n  <ion-input></ion-input>\n\n  <!-- Input with value -->\n  <ion-input value=\"custom\"></ion-input>\n\n  <!-- Input with placeholder -->\n  <ion-input placeholder=\"Enter Input\"></ion-input>\n\n  <!-- Input with clear button when there is a value -->\n  <ion-input clear-input value=\"clear me\"></ion-input>\n\n  <!-- Number type input -->\n  <ion-input type=\"number\" value=\"333\"></ion-input>\n\n  <!-- Disabled input -->\n  <ion-input value=\"Disabled\" disabled></ion-input>\n\n  <!-- Readonly input -->\n  <ion-input value=\"Readonly\" readonly></ion-input>\n\n  <!-- Inputs with labels -->\n  <ion-item>\n    <ion-label>Default Label</ion-label>\n    <ion-input></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label position=\"floating\">Floating Label</ion-label>\n    <ion-input></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label position=\"fixed\">Fixed Label</ion-label>\n    <ion-input></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label position=\"stacked\">Stacked Label</ion-label>\n    <ion-input></ion-input>\n  </ion-item>\n</template>\n```"
   },
   "props": [
@@ -55,7 +56,7 @@
     },
     {
       "name": "autocomplete",
-      "type": "\"off\" | \"on\"",
+      "type": "\"on\" | \"off\" | \"name\" | \"honorific-prefix\" | \"given-name\" | \"additional-name\" | \"family-name\" | \"honorific-suffix\" | \"nickname\" | \"email\" | \"username\" | \"new-password\" | \"current-password\" | \"one-time-code\" | \"organization-title\" | \"organization\" | \"street-address\" | \"address-line1\" | \"address-line2\" | \"address-line3\" | \"address-level4\" | \"address-level3\" | \"address-level2\" | \"address-level1\" | \"country\" | \"country-name\" | \"postal-code\" | \"cc-name\" | \"cc-given-name\" | \"cc-additional-name\" | \"cc-family-name\" | \"cc-number\" | \"cc-exp\" | \"cc-exp-month\" | \"cc-exp-year\" | \"cc-csc\" | \"cc-type\" | \"transaction-currency\" | \"transaction-amount\" | \"language\" | \"bday\" | \"bday-day\" | \"bday-month\" | \"bday-year\" | \"sex\" | \"tel\" | \"tel-country-code\" | \"tel-national\" | \"tel-area-code\" | \"tel-local\" | \"tel-extension\" | \"impp\" | \"url\" | \"photo\"",
       "mutable": false,
       "attr": "autocomplete",
       "reflectToAttr": false,
@@ -64,11 +65,219 @@
       "default": "'off'",
       "values": [
         {
+          "value": "on",
+          "type": "string"
+        },
+        {
           "value": "off",
           "type": "string"
         },
         {
-          "value": "on",
+          "value": "name",
+          "type": "string"
+        },
+        {
+          "value": "honorific-prefix",
+          "type": "string"
+        },
+        {
+          "value": "given-name",
+          "type": "string"
+        },
+        {
+          "value": "additional-name",
+          "type": "string"
+        },
+        {
+          "value": "family-name",
+          "type": "string"
+        },
+        {
+          "value": "honorific-suffix",
+          "type": "string"
+        },
+        {
+          "value": "nickname",
+          "type": "string"
+        },
+        {
+          "value": "email",
+          "type": "string"
+        },
+        {
+          "value": "username",
+          "type": "string"
+        },
+        {
+          "value": "new-password",
+          "type": "string"
+        },
+        {
+          "value": "current-password",
+          "type": "string"
+        },
+        {
+          "value": "one-time-code",
+          "type": "string"
+        },
+        {
+          "value": "organization-title",
+          "type": "string"
+        },
+        {
+          "value": "organization",
+          "type": "string"
+        },
+        {
+          "value": "street-address",
+          "type": "string"
+        },
+        {
+          "value": "address-line1",
+          "type": "string"
+        },
+        {
+          "value": "address-line2",
+          "type": "string"
+        },
+        {
+          "value": "address-line3",
+          "type": "string"
+        },
+        {
+          "value": "address-level4",
+          "type": "string"
+        },
+        {
+          "value": "address-level3",
+          "type": "string"
+        },
+        {
+          "value": "address-level2",
+          "type": "string"
+        },
+        {
+          "value": "address-level1",
+          "type": "string"
+        },
+        {
+          "value": "country",
+          "type": "string"
+        },
+        {
+          "value": "country-name",
+          "type": "string"
+        },
+        {
+          "value": "postal-code",
+          "type": "string"
+        },
+        {
+          "value": "cc-name",
+          "type": "string"
+        },
+        {
+          "value": "cc-given-name",
+          "type": "string"
+        },
+        {
+          "value": "cc-additional-name",
+          "type": "string"
+        },
+        {
+          "value": "cc-family-name",
+          "type": "string"
+        },
+        {
+          "value": "cc-number",
+          "type": "string"
+        },
+        {
+          "value": "cc-exp",
+          "type": "string"
+        },
+        {
+          "value": "cc-exp-month",
+          "type": "string"
+        },
+        {
+          "value": "cc-exp-year",
+          "type": "string"
+        },
+        {
+          "value": "cc-csc",
+          "type": "string"
+        },
+        {
+          "value": "cc-type",
+          "type": "string"
+        },
+        {
+          "value": "transaction-currency",
+          "type": "string"
+        },
+        {
+          "value": "transaction-amount",
+          "type": "string"
+        },
+        {
+          "value": "language",
+          "type": "string"
+        },
+        {
+          "value": "bday",
+          "type": "string"
+        },
+        {
+          "value": "bday-day",
+          "type": "string"
+        },
+        {
+          "value": "bday-month",
+          "type": "string"
+        },
+        {
+          "value": "bday-year",
+          "type": "string"
+        },
+        {
+          "value": "sex",
+          "type": "string"
+        },
+        {
+          "value": "tel",
+          "type": "string"
+        },
+        {
+          "value": "tel-country-code",
+          "type": "string"
+        },
+        {
+          "value": "tel-national",
+          "type": "string"
+        },
+        {
+          "value": "tel-area-code",
+          "type": "string"
+        },
+        {
+          "value": "tel-local",
+          "type": "string"
+        },
+        {
+          "value": "tel-extension",
+          "type": "string"
+        },
+        {
+          "value": "impp",
+          "type": "string"
+        },
+        {
+          "value": "url",
+          "type": "string"
+        },
+        {
+          "value": "photo",
           "type": "string"
         }
       ],
@@ -751,6 +960,7 @@
     }
   ],
   "slots": [],
+  "parts": [],
   "dependents": [],
   "dependencies": [],
   "dependencyGraph": {}

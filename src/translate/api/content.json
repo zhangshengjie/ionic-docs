@@ -26,6 +26,7 @@
     "angular": "```html\n<ion-content\n  [scrollEvents]=\"true\"\n  (ionScrollStart)=\"logScrollStart()\"\n  (ionScroll)=\"logScrolling($event)\"\n  (ionScrollEnd)=\"logScrollEnd()\">\n    <h1>Main Content</h1>\n\n    <div slot=\"fixed\">\n      <h1>Fixed Content</h1>\n    </div>\n</ion-content>\n```\n\n",
     "javascript": "```html\n<ion-content>\n  <h1>Main Content</h1>\n\n  <div slot=\"fixed\">\n    <h1>Fixed Content</h1>\n  </div>\n</ion-content>\n```\n\n```javascript\nvar content = document.querySelector('ion-content');\ncontent.scrollEvents = true;\ncontent.addEventListener('ionScrollStart', () => console.log('scroll start'));\ncontent.addEventListener('ionScroll', (ev) => console.log('scroll', ev.detail));\ncontent.addEventListener('ionScrollEnd', () => console.log('scroll end'));\n```\n",
     "react": "```tsx\nimport React from 'react';\nimport { IonContent } from '@ionic/react';\n\nconst ContentExample: React.FC = () => (\n  <IonContent\n    scrollEvents={true}\n    onIonScrollStart={() => {}}\n    onIonScroll={() => {}}\n    onIonScrollEnd={() => {}}>\n      <h1>Main Content</h1>\n\n      <div slot=\"fixed\">\n        <h1>Fixed Content</h1>\n      </div>\n  </IonContent>\n);\n```\n",
+    "stencil": "```tsx\nimport { Component, h } from '@stencil/core';\n\n@Component({\n  tag: 'content-example',\n  styleUrl: 'content-example.css'\n})\nexport class ContentExample {\n  logScrollStart() {\n    console.log('Scroll start');\n  }\n\n  logScrolling(ev) {\n    console.log('Scrolling', ev);\n  }\n\n  logScrollEnd() {\n    console.log('Scroll end');\n  }\n\n  render() {\n    return [\n      <ion-content\n        scrollEvents={true}\n        onIonScrollStart={() => this.logScrollStart()}\n        onIonScroll={(ev) => this.logScrolling(ev)}\n        onIonScrollEnd={() => this.logScrollEnd()}>\n          <h1>Main Content</h1>\n\n          <div slot=\"fixed\">\n            <h1>Fixed Content</h1>\n          </div>\n      </ion-content>\n    ];\n  }\n}\n```\n",
     "vue": "```html\n<template>\n  <ion-content\n    :scrollEvents=\"true\"\n    @ionScrollStart=\"logScrollStart()\"\n    @ionScroll=\"logScrolling($event)\"\n    @ionScrollEnd=\"logScrollEnd()\">\n      <h1>Main Content</h1>\n\n      <div slot=\"fixed\">\n        <h1>Fixed Content</h1>\n      </div>\n  </ion-content>\n</template>\n```\n\n"
   },
   "props": [
@@ -194,7 +195,7 @@
         "type": "Promise<void>",
         "docs": ""
       },
-      "signature": "scrollToPoint(x: number | null | undefined, y: number | null | undefined, duration?: number) => Promise<void>",
+      "signature": "scrollToPoint(x: number | undefined | null, y: number | undefined | null, duration?: number) => Promise<void>",
       "parameters": [],
       "docs": "Scroll to a specified X/Y location in the component.",
       "docsTags": [
@@ -326,6 +327,16 @@
     {
       "name": "fixed",
       "docs": "Should be used for fixed content that should not scroll."
+    }
+  ],
+  "parts": [
+    {
+      "name": "background",
+      "docs": "The background of the content."
+    },
+    {
+      "name": "scroll",
+      "docs": "The scrollable container of the content."
     }
   ],
   "dependents": [],

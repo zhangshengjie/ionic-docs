@@ -1,13 +1,14 @@
 import { Component, Prop, h } from '@stencil/core';
+
 import { Page } from '../../definitions';
-// import { ForwardArrow } from '../../icons';
+import { ForwardArrow } from '../../icons';
 
 @Component({
   tag: 'docs-page-footer',
   styleUrl: 'page-footer.css'
 })
 export class DocsPageFooter {
-  @Prop() page: Page;
+  @Prop() page!: Page | null;
 
   hostData() {
     return {
@@ -18,7 +19,7 @@ export class DocsPageFooter {
   render() {
     const { page } = this;
 
-    if (page == null || !page.github) {
+    if (page === null || !page.github) {
       return null;
     }
 
@@ -32,23 +33,23 @@ export class DocsPageFooter {
       new Set([...page.github.contributors || [], ...page.contributors || []])
     );
 
-    // const editHref = `https://github.com/ionic-jp/ionic-docs/edit/master/${path}`;
+    const editHref = `https://github.com/ionic-jp/ionic-docs/edit/master/${path}`;
     const updatedHref = `https://github.com/ionic-jp/ionic-docs/commits/master/${path}`;
     const updatedText = lastUpdated ? new Date(lastUpdated).toISOString().slice(0, 10) : null;
-    const contributorHref = (contributor) => `${updatedHref}?author=${contributor}`;
+    const contributorHref = (contributor: any) => `${updatedHref}?author=${contributor}`;
 
-    const paggination = (
+    const pagination = (
       page.previousText && page.previousUrl || page.nextText && page.nextUrl
     ) ? <docs-pagination page={page}/> : '';
 
-    // console.log(paggination);
+    // console.log(pagination);
 
     return [
-      paggination,
+      pagination,
       <div class="page-footer__row">
-       {contributors.length ? <contributor-list contributors={contributors} link={contributorHref}/> : null}
-       {/*<docs-button round href={editHref}>翻訳する <ForwardArrow/></docs-button>*/}
-       {updatedText ? <a class="last-updated" href={updatedHref}>Updated {updatedText}</a> : ''}
+        {contributors.length > 0 ? <contributor-list contributors={contributors} link={contributorHref}/> : null}
+        <docs-button round href={editHref}>翻訳する <ForwardArrow/></docs-button>
+        {updatedText !== null ? <a class="last-updated" href={updatedHref}>Updated {updatedText}</a> : ''}
       </div>
     ];
   }
