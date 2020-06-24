@@ -8,7 +8,7 @@ Although router outlet has methods for navigating around, it's recommended to us
 
 
 
-### ライフサイクルHook
+## ライフサイクルHook
 
 Router OutletでRoutesがレンダリングされた時、アニメーションに関連付けられた特定のIonicイベントにアクセスできます。
 
