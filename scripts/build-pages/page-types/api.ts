@@ -1,7 +1,7 @@
-import { components } from '../../data/translated-api.json';
 import fs from 'fs-extra';
 import { join, resolve } from 'path';
 
+import { components } from '../../data/translated-api.json';
 import {
   Page,
   buildPages

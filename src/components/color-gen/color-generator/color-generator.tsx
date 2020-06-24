@@ -64,11 +64,13 @@ export class ColorGenerator {
       name = name.replace(/[\[\]]/g, '\\$&');
       const regex = new RegExp('[?&]' + name + '(=(#[^&]*)|&|#|$)');
       const results = regex.exec(window.location.href);
-      if (!results || !results[2]) return null;
+      // tslint:disable-next-line
+      if (!results || !results[2]) { return null; }
       return decodeURIComponent(results[2].replace(/\+/g, ' '));
     };
 
     this.colors.forEach(c => {
+      // tslint:disable-next-line
       if (getParamColor(c.name.toLocaleLowerCase())) {
         this.onColorChange({
           detail: {
