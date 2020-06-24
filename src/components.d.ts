@@ -92,6 +92,8 @@ export namespace Components {
         "open": () => Promise<void>;
         "toggle": () => Promise<void>;
     }
+    interface DocsFooterAnnouncement {
+    }
     interface DocsHeader {
         "toggleClickFn": (e: Event) => void;
     }
@@ -305,6 +307,12 @@ declare global {
         prototype: HTMLDocsDropdownElement;
         new (): HTMLDocsDropdownElement;
     };
+    interface HTMLDocsFooterAnnouncementElement extends Components.DocsFooterAnnouncement, HTMLStencilElement {
+    }
+    var HTMLDocsFooterAnnouncementElement: {
+        prototype: HTMLDocsFooterAnnouncementElement;
+        new (): HTMLDocsFooterAnnouncementElement;
+    };
     interface HTMLDocsHeaderElement extends Components.DocsHeader, HTMLStencilElement {
     }
     var HTMLDocsHeaderElement: {
@@ -511,6 +519,7 @@ declare global {
         "docs-codepen": HTMLDocsCodepenElement;
         "docs-demo": HTMLDocsDemoElement;
         "docs-dropdown": HTMLDocsDropdownElement;
+        "docs-footer-announcement": HTMLDocsFooterAnnouncementElement;
         "docs-header": HTMLDocsHeaderElement;
         "docs-item": HTMLDocsItemElement;
         "docs-item-list": HTMLDocsItemListElement;
@@ -620,6 +629,7 @@ declare namespace LocalJSX {
         "user": string;
     }
     interface DocsDemo {
+        "onDemoModeChange"?: (event: CustomEvent<any>) => void;
         "source": string;
         "url": string;
     }
@@ -627,6 +637,8 @@ declare namespace LocalJSX {
         "align"?: 'left' | 'right' | 'center';
         "icon"?: (props: any) => JSX.Element;
         "label": string;
+    }
+    interface DocsFooterAnnouncement {
     }
     interface DocsHeader {
         "toggleClickFn": (e: Event) => void;
@@ -747,6 +759,7 @@ declare namespace LocalJSX {
         "docs-codepen": DocsCodepen;
         "docs-demo": DocsDemo;
         "docs-dropdown": DocsDropdown;
+        "docs-footer-announcement": DocsFooterAnnouncement;
         "docs-header": DocsHeader;
         "docs-item": DocsItem;
         "docs-item-list": DocsItemList;
@@ -803,6 +816,7 @@ declare module "@stencil/core" {
             "docs-codepen": LocalJSX.DocsCodepen & JSXBase.HTMLAttributes<HTMLDocsCodepenElement>;
             "docs-demo": LocalJSX.DocsDemo & JSXBase.HTMLAttributes<HTMLDocsDemoElement>;
             "docs-dropdown": LocalJSX.DocsDropdown & JSXBase.HTMLAttributes<HTMLDocsDropdownElement>;
+            "docs-footer-announcement": LocalJSX.DocsFooterAnnouncement & JSXBase.HTMLAttributes<HTMLDocsFooterAnnouncementElement>;
             "docs-header": LocalJSX.DocsHeader & JSXBase.HTMLAttributes<HTMLDocsHeaderElement>;
             "docs-item": LocalJSX.DocsItem & JSXBase.HTMLAttributes<HTMLDocsItemElement>;
             "docs-item-list": LocalJSX.DocsItemList & JSXBase.HTMLAttributes<HTMLDocsItemListElement>;

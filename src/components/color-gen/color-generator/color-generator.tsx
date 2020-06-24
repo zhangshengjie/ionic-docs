@@ -60,7 +60,7 @@ export class ColorGenerator {
 
   componentWillLoad() {
     this.colors = convertCssToColors(this.cssText);
-    const getParamColor = (name) => {
+    const getParamColor = (name: string) => {
       name = name.replace(/[\[\]]/g, '\\$&');
       const regex = new RegExp('[?&]' + name + '(=(#[^&]*)|&|#|$)');
       const results = regex.exec(window.location.href);

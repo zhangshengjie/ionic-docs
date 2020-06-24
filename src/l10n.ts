@@ -28,7 +28,7 @@ export class DocsLocalization {
 
   getLocale = () => this.locale;
 
-  getString = (id: string) => this.bundle[id] || (en as any)[id] || ja[id];
+  getString = (id: string) => this.bundle[id] || (en as any)[id];
 }
 
 export const l10n = new DocsLocalization();

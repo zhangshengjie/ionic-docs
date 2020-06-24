@@ -33,14 +33,14 @@ export class CssText {
     this.showShareConfirmation = true;
 
     const cssEl = this.el.querySelector('#cssText');
-    const cssText = cssEl.textContent || '';
+    const cssText = cssEl?.textContent || '';
     const colors = convertCssToColors(cssText);
     let urlParams = '';
     colors.forEach(c => {
       urlParams = urlParams + c.name.toLocaleLowerCase() + '=' + c.value + '&';
     });
     urlParams = urlParams.slice(0, -1);
-    history.pushState(null, null, '?' + urlParams);
+    history.pushState(null, '', '?' + urlParams);
 
     const el = document.createElement('textarea');
     el.value = location.href;

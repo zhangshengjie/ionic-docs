@@ -8,7 +8,7 @@ export class DocsDemo {
   @Prop() url!: string;
   @Prop() source!: string;
   @State() ionicMode = 'ios';
-  @Event() demoModeChange: EventEmitter;
+  @Event() demoModeChange!: EventEmitter;
 
   iframe!: HTMLIFrameElement;
   iframeLoaded = false;
