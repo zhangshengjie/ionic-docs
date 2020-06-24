@@ -11,22 +11,78 @@ Ionic Configは、アプリ全体でコンポーネントのプロパティを�
 
 ## 使い方
 
-アプリのIonicの初期設定をオーバーライドするには、Ionicコンポーネントをレンダリングする前に、`@ionic/react` から `setupConfig` メソッドをインポートして呼び出します:
+アプリのIonicの初期設定をオーバーライドするには、Ionicコンポーネント (`IonApp`を含めます)をレンダリングする前に、`@ionic/react` から `setupConfig` メソッドをインポートして呼び出します:
 
 ```typescript
 setupConfig({
   rippleEffect: false,
   mode: 'md'
 });
-
-<IonApp>
-  // more components
-</IonApp>
 ```
 
 上記の例では、アプリ全体でマテリアルデザインのリップル効果を無効にし、modeをマテリアルデザインに強制しています。
 
-## Configオプション
+## Per-Platform Config
+
+Ionic Config can also be set on a per-platform basis. For example, this allows you to disable animations if the app is being run in a browser on a potentially slower device. Developers can take advantage of the Platform utilities to accomplish this.
+
+In the following example, we are disabling all animations in our Ionic app only if the app is running in a mobile web browser.
+The `isPlatform()` call returns `true` or `false` based upon the platform that is passed in. See the [Platform Documentation](./platform#platforms) for a list of possible values.
+
+
+```typescript
+import { isPlatform, setupConfig } from '@ionic/react';
+
+setupConfig({
+  animated: !isPlatform('mobileweb')
+});
+```
+
+The next example allows you to set an entirely different configuration based upon the platform, falling back to a default config if no platforms match:
+
+```typescript
+import { isPlatform, setupConfig } from '@ionic/react';
+
+const getConfig = () => {
+  if (isPlatform('hybrid')) {
+    return {
+      backButtonText: 'Previous',
+      tabButtonLayout: 'label-hide'
+    }
+  }
+
+  return {
+    menuIcon: 'ellipsis-vertical'
+  }
+}
+
+setupConfig(getConfig());
+```
+
+Finally, this example allows you to accumulate a config object based upon different platform requirements:
+
+
+```typescript
+import { isPlatform, setupConfig } from '@ionic/react';
+
+const getConfig = () => {
+  let config = {
+    animated: false
+  };
+
+  if (isPlatform('iphone')) {
+    config = {
+      ...config,
+      backButtonText: 'Previous'
+    }
+  }
+
+  return config;
+}
+setupConfig(getConfig());
+```
+
+## Config Options
 
 以下は、Ionicで使用できる設定オプションのリストです。
 

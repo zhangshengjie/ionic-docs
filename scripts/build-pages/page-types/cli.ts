@@ -1,18 +1,16 @@
+import { commands } from '../../data/translated-cli.json';
 import {
   Page,
   buildPages
 } from '../index';
-
 import renderMarkdown from '../markdown-renderer';
-// import { commands } from '../../data/cli.json';
-import { commands } from '../../data/translated-cli.json';
 
 export default {
   title: 'Build CLI pages',
   task: () => buildPages(getCLIPages)
 };
 
-async function getCLIPages(): Promise<Page[]> {
+const getCLIPages = async (): Promise<Page[]> => {
   return commands.map(command => {
     const { name, description, summary, inputs, options, ...rest } = command;
 
@@ -28,14 +26,14 @@ async function getCLIPages(): Promise<Page[]> {
       ...rest
     };
   });
-}
+};
 
-const renderInputs = inputs => inputs.map(input => ({
+const renderInputs = (inputs: any) => inputs.map((input: any) => ({
   ...input,
   summary: renderMarkdown(input.summary),
 }));
 
-const renderOptions = options => options.map(option => ({
+const renderOptions = (options: any) => options.map((option: any) => ({
   ...option,
   summary: renderMarkdown(option.summary),
 }));

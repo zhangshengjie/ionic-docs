@@ -5,12 +5,12 @@ import { Component, Event, EventEmitter, Listen, Prop, State, h } from '@stencil
   styleUrl: 'demo.css'
 })
 export class DocsDemo {
-  @Prop() url: string;
-  @Prop() source: string;
+  @Prop() url!: string;
+  @Prop() source!: string;
   @State() ionicMode = 'ios';
   @Event() demoModeChange: EventEmitter;
 
-  iframe: HTMLIFrameElement;
+  iframe!: HTMLIFrameElement;
   iframeLoaded = false;
   messageQueue: CustomEvent[] = [];
 
@@ -23,8 +23,12 @@ export class DocsDemo {
 
   postMessage({ detail }: CustomEvent) {
     try {
-      this.iframe.contentWindow.postMessage(detail, '*');
-    } catch (e) {} // tslint:disable-line
+      if (this.iframe && this.iframe.contentWindow) {
+        this.iframe.contentWindow.postMessage(detail, '*');
+      }
+    } catch (e) {
+      // ignore
+    }
   }
 
   onIframeLoad = () => {
@@ -39,22 +43,30 @@ export class DocsDemo {
       <div class="docs-demo-mode-toggle">
         {['ios', 'md'].map(mode => (
           <button
-            class={ mode === this.ionicMode ? 'is-selected' : null }
+            class={{
+              'is-selected': mode === this.ionicMode
+            }}
             title={`Toggle ${mode === 'ios' ? 'iOS' : 'Android'} mode`}
-            onClick={() => { this.ionicMode = mode; }}>{mode === 'ios' ? 'iOS' : 'Android'}</button>
+            onClick={() => { this.ionicMode = mode; }}
+          >
+            {mode === 'ios' ? 'iOS' : 'Android'}
+          </button>
         ))}
       </div>
     );
   }
 
   renderSourceLink() {
-    return this.source ?
-      <a href={this.source}
-         class="docs-demo-source"
-         target="_blank"
-         title="Demo Source">
+    return (
+      <a
+        href={this.source}
+        class="docs-demo-source"
+        target="_blank"
+        title="Demo Source"
+      >
         <ion-icon name="open"/> View Source
-      </a> : null;
+      </a>
+    );
   }
 
   renderDevice() {
@@ -74,17 +86,14 @@ export class DocsDemo {
             importance="low"
             onLoad={this.onIframeLoad}
             src={`${this.url}?ionic:mode=${this.ionicMode}`}
-            ref={node => { this.iframe = node as HTMLIFrameElement; }}/>
+            ref={node => { this.iframe = node as HTMLIFrameElement; }}
+          />
         </figure>
       </div>
     );
   }
 
   render() {
-    if (!this.url) {
-      return null;
-    }
-
     return [
       this.renderModeToggle(),
       this.renderDevice(),

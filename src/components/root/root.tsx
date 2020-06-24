@@ -1,5 +1,4 @@
 import '@ionic/core';
-
 import { Build, Component, Event, EventEmitter, State, Watch, h } from '@stencil/core';
 import { LocationSegments, RouterHistory } from '@stencil/router';
 
@@ -8,7 +7,7 @@ import { LocationSegments, RouterHistory } from '@stencil/router';
   styleUrl: 'root.css'
 })
 export class DocsRoot {
-  history: RouterHistory = null;
+  history: RouterHistory | null = null;
 
   @State() isMenuToggled = false;
 
@@ -16,11 +15,11 @@ export class DocsRoot {
 
     if (!this.history) {
       this.history = history;
-      this.history.listen(this.newPage);
+      this.history.listen(this.newPage.bind(this));
     }
   }
 
-  @Event() pageChanged: EventEmitter;
+  @Event() pageChanged!: EventEmitter;
   newPage(location: LocationSegments) {
     (window as any).gtag('config', 'UA-73373181-13', { 'page_path': location.pathname + location.search });
     (window as any).gtag('config', 'UA-44023830-1', { 'page_path': location.pathname + location.search });
@@ -32,10 +31,6 @@ export class DocsRoot {
     if (Build.isBrowser && this.isSmallViewport()) {
       document.body.classList.toggle('scroll-lock', isMenuToggled);
     }
-  }
-
-  constructor() {
-    this.newPage = this.newPage.bind(this);
   }
 
   toggleMenu = () => {
@@ -61,15 +56,18 @@ export class DocsRoot {
     return (
       <stencil-router class={layout}>
         <stencil-route style={{ display: 'none' }} routeRender={this.setHistory}/>
-        <docs-header onToggleClick={this.toggleMenu}/>
-        <docs-menu onToggleClick={this.toggleMenu}/>
-        <stencil-route url="/docs/:page*" routeRender={props => (
-          <docs-page
-            history={props.history}
-            path={`/docs/pages/${props.match.params.page || 'index'}.json`}
-            onClick={this.handlePageClick}/>
-        )}/>
-        {/*<docs-footer-announcement></docs-footer-announcement>*/}
+        <docs-header toggleClickFn={this.toggleMenu}/>
+        <docs-menu toggleClickFn={this.toggleMenu}/>
+        <stencil-route
+          url="/docs/:page*"
+          routeRender={props => (
+            <docs-page
+              history={props.history}
+              path={`/docs/pages/${props.match.params.page || 'index'}.json`}
+              onClick={this.handlePageClick}
+            />
+          )}
+        />
       </stencil-router>
     );
   }

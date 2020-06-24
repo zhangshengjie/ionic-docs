@@ -78,7 +78,7 @@
   "menu-react-lifecycle": "Lifecycle",
   "menu-react-navigation": "Navigation/Routing",
   "menu-react-config": "Config",
-  "menu-react-platform": "Platform Utils",
+  "menu-react-platform": "Platform",
   "menu-react-pwa": "Progressive Web Apps",
   "menu-react-testing": "Testing",
 
@@ -202,6 +202,7 @@
   "menu-appflow-quickstart-overview": "Overview",
   "menu-appflow-quickstart-connect": "Connect your Repo",
   "menu-appflow-quickstart-github": "GitHub",
+  "menu-appflow-quickstart-gitlab": "GitLab",
   "menu-appflow-quickstart-bitbucket": "Bitbucket",
   "menu-appflow-quickstart-bitbucket-server": "Bitbucket Server",
   "menu-appflow-quickstart-ionic-remote": "Ionic Remote",
@@ -228,7 +229,7 @@
   "menu-appflow-destinations-apple": "Apple Appstore",
   "menu-appflow-destinations-google": "Google Play store",
   "menu-appflow-destinations-builds": "Builds/Automations",
-  "menu-appflow-destinations-cli": "Command-line",
+  "menu-appflow-destinations-cli": "Using Ionic CLI",
   "menu-appflow-destinations-manual": "Manual Deploy",
 
   "menu-appflow-package": "Package",

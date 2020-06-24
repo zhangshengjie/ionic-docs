@@ -1,13 +1,12 @@
 import { Component, Element, Event, EventEmitter, Prop, State, h } from '@stencil/core';
 import { convertCssToColors } from '../parse-css';
 
-
 @Component({
   tag: 'color-gen-css-text',
   styleUrl: 'color-gen-css-text.css'
 })
 export class CssText {
-  @Element() el: HTMLElement;
+  @Element() el!: HTMLElement;
 
   @Prop({ mutable: true }) cssText = '';
 
@@ -17,12 +16,12 @@ export class CssText {
 
   @State() showCopyConfirmation = false;
 
-  @Event() cssTextChange: EventEmitter;
+  @Event() cssTextChange!: EventEmitter;
 
-  onCssTextChange(ev: UIEvent) {
+  onCssTextChange(ev: Event) {
     if ((ev.target as HTMLTextAreaElement).value !== this.cssText) {
       const value = (ev.target as HTMLTextAreaElement).value;
-      if (!value.length) return;
+      if (value.length === 0) { return; }
 
       this.cssText = value;
 
@@ -62,7 +61,7 @@ export class CssText {
     this.showCopyConfirmation = true;
 
     const cssEl = this.el.querySelector('#cssText');
-    const cssText = cssEl.textContent || '';
+    const cssText = cssEl && cssEl.textContent || '';
 
     const el = document.createElement('textarea');
     el.value = cssText;
@@ -114,10 +113,9 @@ export class CssText {
           class="css-text__code"
           contentEditable="true"
           spellcheck="false"
-          onClick={function() { this.select(); }}
-          onInput={this.onCssTextChange.bind(this)}
-          innerHTML={this.cssText}>
-        </div>
+          onInput={ev => this.onCssTextChange(ev)}
+          innerHTML={this.cssText}
+        />
       </div>
     ];
   }

@@ -39,7 +39,7 @@ export class MyPage {
 
 #### Platforms
 
-以下は、利用可能なすべての`Platforms`の値とそれに対応する説明をまとめた表です。
+以下は、利用可能なすべての platform の値とそれに対応する説明をまとめた表です。
 
 | Platform Name | Description                              |
 | ------------- | -------------------------------------    |
