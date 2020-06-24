@@ -65,6 +65,24 @@
       "required": false
     },
     {
+      "name": "routerAnimation",
+      "type": "((baseEl: any, opts?: any) => Animation) | undefined",
+      "mutable": false,
+      "reflectToAttr": false,
+      "docs": "When using a router, it specifies the transition animation when navigating to\nanother page using `href`.",
+      "docsTags": [],
+      "values": [
+        {
+          "type": "((baseEl: any, opts?: any) => Animation)"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
+      "optional": false,
+      "required": false
+    },
+    {
       "name": "routerDirection",
       "type": "\"back\" | \"forward\" | \"root\"",
       "mutable": false,
@@ -126,6 +144,7 @@
     }
   ],
   "slots": [],
+  "parts": [],
   "dependents": [],
   "dependencies": [],
   "dependencyGraph": {}

@@ -57,6 +57,24 @@
       "required": false
     },
     {
+      "name": "routerAnimation",
+      "type": "((baseEl: any, opts?: any) => Animation) | undefined",
+      "mutable": false,
+      "reflectToAttr": false,
+      "docs": "The transition animation when navigating to another page.",
+      "docsTags": [],
+      "values": [
+        {
+          "type": "((baseEl: any, opts?: any) => Animation)"
+        },
+        {
+          "type": "undefined"
+        }
+      ],
+      "optional": true,
+      "required": false
+    },
+    {
       "name": "routerDirection",
       "type": "\"back\" | \"forward\" | \"root\"",
       "mutable": false,
@@ -88,6 +106,7 @@
   "listeners": [],
   "styles": [],
   "slots": [],
+  "parts": [],
   "dependents": [],
   "dependencies": [],
   "dependencyGraph": {}

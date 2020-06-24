@@ -4,7 +4,20 @@
   "tag": "ion-menu-button",
   "readme": "# ion-menu-button\n\nMenu Button is component that automatically creates the icon and functionality to open a menu on a page.\n\n",
   "docs": "Menu Button is component that automatically creates the icon and functionality to open a menu on a page.",
-  "docsTags": [],
+  "docsTags": [
+    {
+      "text": "{\"ios\" | \"md\"} mode - The mode determines which platform styles to use.",
+      "name": "virtualProp"
+    },
+    {
+      "text": "native - The native HTML button element that wraps all child elements.",
+      "name": "part"
+    },
+    {
+      "text": "icon - The menu button icon (uses ion-icon).",
+      "name": "part"
+    }
+  ],
   "usage": {},
   "props": [
     {
@@ -74,6 +87,27 @@
         },
         {
           "type": "undefined"
+        }
+      ],
+      "optional": true,
+      "required": false
+    },
+    {
+      "name": "mode",
+      "type": "\"ios\" | \"md\"",
+      "mutable": false,
+      "attr": "mode",
+      "reflectToAttr": false,
+      "docs": "The mode determines which platform styles to use.",
+      "docsTags": [],
+      "values": [
+        {
+          "value": "ios",
+          "type": "string"
+        },
+        {
+          "value": "md",
+          "type": "string"
         }
       ],
       "optional": true,
@@ -190,6 +224,16 @@
     }
   ],
   "slots": [],
+  "parts": [
+    {
+      "name": "icon",
+      "docs": "The menu button icon (uses ion-icon)."
+    },
+    {
+      "name": "native",
+      "docs": "The native HTML button element that wraps all child elements."
+    }
+  ],
   "dependents": [],
   "dependencies": [
     "ion-icon",

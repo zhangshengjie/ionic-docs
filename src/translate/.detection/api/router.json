@@ -62,7 +62,7 @@
         "type": "Promise<boolean>",
         "docs": ""
       },
-      "signature": "push(url: string, direction?: RouterDirection) => Promise<boolean>",
+      "signature": "push(url: string, direction?: RouterDirection, animation?: AnimationBuilder | undefined) => Promise<boolean>",
       "parameters": [],
       "docs": "Navigate to the specified URL.",
       "docsTags": [
@@ -113,6 +113,7 @@
   ],
   "styles": [],
   "slots": [],
+  "parts": [],
   "dependents": [],
   "dependencies": [],
   "dependencyGraph": {}

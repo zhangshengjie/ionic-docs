@@ -21,9 +21,3 @@ this.file.checkDir(this.file.dataDirectory, 'mydir').then(_ => console.log('Dire
  Although most of the plugin code was written when an earlier spec was current: http:
   //www.w3.org/TR/2011/WD-file-system-api-20110419/ It also implements the FileWriter spec : http:
   //dev.w3.org/2009/dap/file-system/file-writer.html
- @interfaces
- IFile
- Entry
- DirectoryEntry
- DirectoryReader
- FileSystem

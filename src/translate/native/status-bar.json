@@ -12,6 +12,6 @@
   "cordovaPlugin": {
     "name": "cordova-plugin-statusbar"
   },
-  "capacitorIncompatible": true,
-  "premierSlug": "statusbar"
+  "premierSlug": "statusbar",
+  "capacitorIncompatible": true
 }
