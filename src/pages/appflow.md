@@ -3,7 +3,7 @@ title: Appflowへようこそ
 tableOfContents: false
 ---
 
-Appflowは、イオン開発チーム向けの継続的インテグレーション（CI）
+Appflowは、Ionic開発チーム向けの継続的インテグレーション（CI）
 および継続的デプロイメント（CD）プラットフォームです。
 Appflowは、開発チームがiOS、Android、およびWebアプリケーションを
 これまでにない速さで継続的に構築およびリリースするのに役立ちます。
