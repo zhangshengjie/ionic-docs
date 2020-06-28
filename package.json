@@ -18,7 +18,7 @@
     "build-pages": "ts-node -P scripts/tsconfig.json scripts/build-pages",
     "build-menus": "ts-node -P scripts/tsconfig.json scripts/build-menus",
     "watch-pages": "ts-node -P scripts/tsconfig.json scripts/watch-pages",
-    "build-case": "git clone https://github.com/ionic-jp/who-use-ionic.git case && cd case && npm install && npm run build && cd .. && mv case/www www/case && rm -rf case && echo '/case/* /case/index.html 200' >> www/_redirects",
+    "build-case": "git clone https://github.com/ionic-jp/who-use-ionic.git case && cd case && npm ci && npm run build && cd .. && mv case/www www/case && rm -rf case && echo '/case/* /case/index.html 200' >> www/_redirects",
     "translate": "ts-node -P scripts/tsconfig.json scripts/build-translate apply",
     "translate:create": "ts-node -P scripts/tsconfig.json scripts/build-translate create && ts-node -P scripts/tsconfig.json scripts/build-translate diff",
     "heroku-postbuild": "npm run build.ci"
@@ -32,6 +32,7 @@
     "express": "^4.16.4",
     "helmet": "^3.23.1",
     "moment": "^2.26.0",
+    "netlify-cli": "^2.54.0",
     "prismic-dom": "^2.2.3",
     "prismic-javascript": "^2.1.5",
     "simple-git": "^2.6.0",
