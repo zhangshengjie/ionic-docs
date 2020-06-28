@@ -1,14 +1,14 @@
 name: CI
-
 on:
   push:
-    branches:
-      - 'master'
-
+    branches: [ master ]
 jobs:
   build:
+
     runs-on: ubuntu-latest
+
     steps:
+      - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: 12.x
@@ -26,19 +26,11 @@ jobs:
       # Lintとテストの実行
       - name: npm install, build, and test
         run: |
-          npm install
+          npm ci
           npm run lint
-          npm run build.ci
-
-      # Who use IonicのClone
-      - name: install who use ionic
-      - uses: actions/checkout@v2
-        with:
-          repository: ionic-jp/who-use-ionic
-          path: who-use-ionic
 
       # ビルドの実行
-      - name: install who use ionic
+      - name: app build
         run: |
           npm run build
           npm run build-case
