@@ -172,8 +172,6 @@ export namespace Components {
     interface HubspotForm {
         "formId": string;
     }
-    interface InternalAd {
-    }
     interface IonicSearch {
         "mobile"?: boolean;
     }
@@ -457,12 +455,6 @@ declare global {
         prototype: HTMLHubspotFormElement;
         new (): HTMLHubspotFormElement;
     };
-    interface HTMLInternalAdElement extends Components.InternalAd, HTMLStencilElement {
-    }
-    var HTMLInternalAdElement: {
-        prototype: HTMLInternalAdElement;
-        new (): HTMLInternalAdElement;
-    };
     interface HTMLIonicSearchElement extends Components.IonicSearch, HTMLStencilElement {
     }
     var HTMLIonicSearchElement: {
@@ -544,7 +536,6 @@ declare global {
         "framework-select": HTMLFrameworkSelectElement;
         "header-mobile-collapse": HTMLHeaderMobileCollapseElement;
         "hubspot-form": HTMLHubspotFormElement;
-        "internal-ad": HTMLInternalAdElement;
         "ionic-search": HTMLIonicSearchElement;
         "layered-colors-select": HTMLLayeredColorsSelectElement;
         "native-ent-install": HTMLNativeEntInstallElement;
@@ -720,8 +711,6 @@ declare namespace LocalJSX {
     interface HubspotForm {
         "formId": string;
     }
-    interface InternalAd {
-    }
     interface IonicSearch {
         "mobile"?: boolean;
     }
@@ -784,7 +773,6 @@ declare namespace LocalJSX {
         "framework-select": FrameworkSelect;
         "header-mobile-collapse": HeaderMobileCollapse;
         "hubspot-form": HubspotForm;
-        "internal-ad": InternalAd;
         "ionic-search": IonicSearch;
         "layered-colors-select": LayeredColorsSelect;
         "native-ent-install": NativeEntInstall;
@@ -841,7 +829,6 @@ declare module "@stencil/core" {
             "framework-select": LocalJSX.FrameworkSelect & JSXBase.HTMLAttributes<HTMLFrameworkSelectElement>;
             "header-mobile-collapse": LocalJSX.HeaderMobileCollapse & JSXBase.HTMLAttributes<HTMLHeaderMobileCollapseElement>;
             "hubspot-form": LocalJSX.HubspotForm & JSXBase.HTMLAttributes<HTMLHubspotFormElement>;
-            "internal-ad": LocalJSX.InternalAd & JSXBase.HTMLAttributes<HTMLInternalAdElement>;
             "ionic-search": LocalJSX.IonicSearch & JSXBase.HTMLAttributes<HTMLIonicSearchElement>;
             "layered-colors-select": LocalJSX.LayeredColorsSelect & JSXBase.HTMLAttributes<HTMLLayeredColorsSelectElement>;
             "native-ent-install": LocalJSX.NativeEntInstall & JSXBase.HTMLAttributes<HTMLNativeEntInstallElement>;
