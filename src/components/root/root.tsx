@@ -24,6 +24,7 @@ export class DocsRoot {
     (window as any).gtag('config', 'UA-73373181-13', { 'page_path': location.pathname + location.search });
     (window as any).gtag('config', 'UA-44023830-1', { 'page_path': location.pathname + location.search });
     this.pageChanged.emit(location);
+    this.updateAds();
   }
 
   @Watch('isMenuToggled')
@@ -31,6 +32,12 @@ export class DocsRoot {
     if (Build.isBrowser && this.isSmallViewport()) {
       document.body.classList.toggle('scroll-lock', isMenuToggled);
     }
+  }
+
+  updateAds = async () => {
+    await customElements.whenDefined('internal-ad');
+    const internalAd = document.querySelector('internal-ad') as any;
+    await internalAd?.update();
   }
 
   toggleMenu = () => {
