@@ -13,11 +13,11 @@ nextUrl: '/docs/developing/scaffolding'
 * [iOSへのデプロイ](/docs/developing/ios)
 * [Androidへのデプロイ](/docs/developing/android)
 
-## Run Locally in a Web Browser
+## ローカルのWebブラウザで実行
 
-One of the most powerful features of Ionic is that the majority of your app development can happen right in a browser on your desktop. With full access to traditional web development tools (Chrome/Safari/Firefox dev tools), you can write code then test/debug it quickly without having to recompile or deploy to a simulator or device.
+Ionicの最も強力な機能の1つは、アプリ開発の大部分がデスクトップ上のブラウザで実行できることです。従来のウェブ開発ツール（Chrome/Safari/Firefox開発ツール）への完全なアクセスにより、コードを記述し、シミュレーターやデバイスに再コンパイルしたりデプロイしたりすることなく、すばやくテスト/デバッグできます。
 
-To do so, run `ionic serve` from the command line in the project's directory:
+これを行うには、コマンドラインで、 `ionic serve` をプロジェクトのディレクトリから実行します:
 
 <command-line>
     <command-prompt>ionic serve</command-prompt>
@@ -40,7 +40,7 @@ To do so, run `ionic serve` from the command line in the project's directory:
     </command-output>
 </command-line>
 
-With `ionic serve` running, continue developing your app. As you save changes, the app reloads with those changes applied.
+`ionic serve` 実行中は、あなたのアプリの開発を続けることができます。変更を保存すると、その変更が適用され、アプリが自動的にリロードされます。
 
-When implementing native functionality, use [Platform Detection](/docs/core-concepts/cross-platform).
-When you're ready to test on a real device, see here for [iOS](/docs/developing/ios) and [Android](/docs/developing/android).
+ネイティブ機能を実装する場合は、 [Platform Detection](/docs/core-concepts/cross-platform) を利用します。
+実際のデバイスでテストする準備ができたら、 [iOS](/docs/developing/ios) と [Android](/docs/developing/android) をご覧ください。
