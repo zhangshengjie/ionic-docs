@@ -1,6 +1,5 @@
+Check out [example with Angular 9.1 & Capacitor 2.1](https://github.com/zendigital/jumio-ionic-demo)
 
-[Jumio mobile-cordova](https://github.com/Jumio/mobile-cordova) Plugin for Ionic
+[Platform Customization](https://github.com/Jumio/mobile-cordova#customization) is possible
 
-Read this for [Platform Customization](https://github.com/Jumio/mobile-cordova#customization) is possible
-
-To get Jumio Cordova working on Android check out this [FAQ](https://github.com/Jumio/mobile-cordova#faq)
+Original source: [Jumio mobile-cordova](https://github.com/Jumio/mobile-cordova) Plugin for Apache Cordova

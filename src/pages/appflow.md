@@ -27,6 +27,10 @@ Appflowは、開発チームがiOS、Android、およびWebアプリケーショ
     <p>導入とパッケージビルドを自動化して、チームがより優れたアップデートを迅速に配布できるようにします。</p>
   </docs-card>
 
+   <docs-card header="Deploy to App Stores" href="/docs/appflow/destinations/intro" icon="/docs/assets/icons/guide-quickstart-icon.png">
+    <p>Publish directly to the iOS App Store and Google Play Store, directly from your cloud dashboard.</p>
+  </docs-card>
+
   <docs-card header="News & Updates" href="https://ionic.zendesk.com/hc/en-us/categories/360000410554-Announcements" icon="/docs/assets/icons/guide-news-icon.png">
     <p>Appflowの最近のアップデートとアナウンスについて学びます。</p>
   </docs-card>

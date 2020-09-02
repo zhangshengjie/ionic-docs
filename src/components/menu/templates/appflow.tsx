@@ -10,6 +10,7 @@ const items = {
     '': {
       'menu-appflow-quickstart-github': '/docs/appflow/quickstart/github',
       'menu-appflow-quickstart-gitlab': '/docs/appflow/quickstart/gitlab',
+      'menu-appflow-quickstart-gitlab-self-managed': '/docs/appflow/quickstart/gitlab-self-managed',
       'menu-appflow-quickstart-bitbucket': '/docs/appflow/quickstart/bitbucket',
       'menu-appflow-quickstart-bitbucket-server': '/docs/appflow/quickstart/bitbucket-server',
       'menu-appflow-quickstart-ionic-remote': '/docs/appflow/quickstart/ionic-remote',
@@ -20,15 +21,18 @@ const items = {
     'menu-appflow-quickstart-package': '/docs/appflow/quickstart/package',
     'menu-appflow-quickstart-automation': '/docs/appflow/quickstart/automation',
     'menu-appflow-quickstart-environment': '/docs/appflow/quickstart/environment',
-    'menu-appflow-quickstart-native-config': '/docs/appflow/quickstart/native-config'
+    'menu-appflow-quickstart-native-config': '/docs/appflow/quickstart/native-config',
+    'menu-appflow-quickstart-troubleshooting': 'https://ionic.zendesk.com/hc/en-us'
   },
   'menu-appflow-deploy': {
     'menu-appflow-deploy-intro': '/docs/appflow/deploy/intro',
     'menu-appflow-deploy-setup': '/docs/appflow/deploy/setup',
     'menu-appflow-deploy-builds': '/docs/appflow/deploy/builds',
     'menu-appflow-deploy-channels': '/docs/appflow/deploy/channels',
+    'menu-appflow-deploy-differentials': '/docs/appflow/deploy/differentials',
     'menu-appflow-deploy-api': '/docs/appflow/deploy/api',
-    'menu-appflow-deploy-cli': '/docs/appflow/deploy/cli'
+    'menu-appflow-deploy-cli': '/docs/appflow/deploy/cli',
+    'menu-appflow-deploy-troubleshooting': 'https://ionic.zendesk.com/hc/en-us/categories/360000409113-Appflow-Live-Update'
   },
   'menu-appflow-destinations': {
     'menu-appflow-destinations-intro': '/docs/appflow/destinations/intro',
@@ -48,7 +52,8 @@ const items = {
     'menu-appflow-package-credentials': '/docs/appflow/package/credentials',
     'menu-appflow-package-adding-credentials': '/docs/appflow/package/adding-credentials',
     'menu-appflow-package-native-configs': '/docs/appflow/package/native-configs',
-    'menu-appflow-package-cli': '/docs/appflow/package/cli'
+    'menu-appflow-package-cli': '/docs/appflow/package/cli',
+    'menu-appflow-package-troubleshooting': 'https://ionic.zendesk.com/hc/en-us/categories/360000410494-Appflow-Builds'
   },
   'menu-appflow-automation': {
     'menu-appflow-automation-intro': '/docs/appflow/automation/intro',
@@ -61,7 +66,9 @@ const items = {
     'menu-appflow-cookbook-phonegap-build': '/docs/appflow/cookbook/phonegap-build-migration',
     'menu-appflow-cookbook-private_git': '/docs/appflow/cookbook/private_git',
     'menu-appflow-cookbook-private_npm_modules': '/docs/appflow/cookbook/private_npm_modules',
+    'menu-appflow-cookbook-private-native-enterprise-keys': '/docs/appflow/cookbook/private-native-enterprise-keys',
     'menu-appflow-cookbook-switch_node_version': '/docs/appflow/cookbook/switch_node_version'
   },
+  'menu-appflow-build-stacks': '/docs/appflow/build-stacks',
   'menu-appflow-devapp': '/docs/appflow/devapp'
 };

@@ -84,6 +84,10 @@ Ionic Frameworkは、アプリを構成するために、単一ページレイ�
 </ion-app>
 ```
 
+### Live examples
+
+You can view a live example of this setup in Angular [here](https://stackblitz.com/edit/ionic-ng-header-footer).
+
 ## Tabs レイアウト
 
 水平に配置された [tabs](/docs/api/tabs) レイアウトを利用すると、ユーザはコンテンツの表示をすばやく切り替えることができます。それぞれのタブは、`ion-router-outlet` もしくは `ion-nav` を利用して静的コンテンツまたはナビゲーションスタックを持つことができます。
@@ -111,6 +115,10 @@ Ionic Frameworkは、アプリを構成するために、単一ページレイ�
   </ion-tabs>
 </ion-app>
 ```
+
+### Live examples
+
+You can view a live example of this setup in Angular [here](https://stackblitz.com/edit/ionic-ng-tabs).
 
 ## Menu レイアウト
 
@@ -164,6 +172,10 @@ Ionic Frameworkは、アプリを構成するために、単一ページレイ�
 
 <ion-menu-controller></ion-menu-controller>
 ```
+
+### Live examples
+
+You can view a live example of this setup in Angular [here](https://stackblitz.com/edit/ionic-ng-menu-layout).
 
 
 ## 分割表示のレイアウト
@@ -223,3 +235,7 @@ Ionic Frameworkは、アプリを構成するために、単一ページレイ�
 ```
 
 It's important to note that the element with the `id` matching the `content-id` specified by the split pane will be the main content that is always visible. This can be any element, including an [ion-nav](/docs/api/nav), [ion-router-outlet](/docs/api/router-outlet), or an [ion-tabs](/docs/api/tabs).
+
+### Live examples
+
+You can view a live example of this setup in Angular [here](https://stackblitz.com/edit/ionic-ng-split-pane).

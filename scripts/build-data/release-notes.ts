@@ -25,14 +25,17 @@ export default {
 // otherwise it may fail silently
 export const getReleases = async () => {
   try {
-    const request = await fetch(url.format({
-      protocol: 'https',
-      hostname: 'api.github.com',
-      pathname: 'repos/ionic-team/ionic/releases',
-      query: {
-        access_token: 'a8d3252e891ac33d83020677eb18e57c01a4e157'
+    const request = await fetch(
+      url.format({
+        protocol: 'https',
+        hostname: 'api.github.com',
+        pathname: 'repos/ionic-team/ionic/releases'
+      }), {
+       headers: {
+          'Authorization': process.env.GITHUB_TOKEN !== undefined ? `token ${process.env.GITHUB_TOKEN}` : ''
+        }
       }
-    }));
+    );
 
     const releases = await request.json();
 

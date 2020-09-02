@@ -16,7 +16,7 @@ contributors:
 Ionic Frameworkは当初から100%オープンソース(MIT)で、今後もオープンソースとして公開されます。開発者は、Ionicのコミュニティメンテナンス戦略を通して、Ionicが彼らのクロスプラットフォームアプリにとって正しい選択であることを保証することができます。Ionicチームは定期的に新しいリリースとバグ修正を提供しており、コミュニティからのプルリクエストを歓迎しています。
 
 ## Framework Maintenance and Support Status
-Given the reality of time and resource restraints as well as the desire to keep innovating in the frontend development space, over time it becomes necessary for the Ionic team to shift focus to newer versions of the Framework. However, Ionic will do everything it can to make the transition to newer versions as smooth as possible. The Ionic team recommends updating to the newest version of the Ionic Framework for the latest features, improvements and stability updates. For more details, consult [the Migration page](docs/reference/migration).
+Given the reality of time and resource restraints as well as the desire to keep innovating in the frontend development space, over time it becomes necessary for the Ionic team to shift focus to newer versions of the Framework. However, Ionic will do everything it can to make the transition to newer versions as smooth as possible. The Ionic team recommends updating to the newest version of the Ionic Framework for the latest features, improvements and stability updates. For more details, consult [the Migration page](/docs/reference/migration).
 
 The current status of each Ionic Framework version is:
 
@@ -51,10 +51,10 @@ The Ionic team has compiled a set of recommendations for using the Ionic Framewo
 
 | Framework     | Cordova                              | Capacitor                |
 |:-------------:|:------------------------------------:|:------------------------:|
-| V5 - Angular  | cordova-android 8.X, cordova-ios 5.X | Latest 1.X               |
-| V5 - React    | Not supported                        | Latest 1.x               |
-| V4 - Angular  | cordova-android 8.X, cordova-ios 5.X | Latest 1.X               |
-| V4 - React    | Not supported                        | Latest 1.x               |
+| V5 - Angular  | cordova-android 8.X, cordova-ios 5.X | Latest 2.X               |
+| V5 - React    | Not supported                        | Latest 2.x               |
+| V4 - Angular  | cordova-android 8.X, cordova-ios 5.X | Latest 2.X               |
+| V4 - React    | Not supported                        | Latest 2.x               |
 | V3            | cordova-android 8.X, cordova-ios 5.X | Not officially supported |
 
 * As iOS and Android (and related tools) are updated, you can expect more updates for Cordova and Capacitor, so it is recommended to stay on the latest version(s) of Cordova and Capacitor.

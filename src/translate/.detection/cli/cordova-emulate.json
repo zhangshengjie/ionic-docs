@@ -30,7 +30,7 @@
     {
       "name": "platform",
       "summary": "The platform to run (e.g. `android`, `ios`)",
-      "required": false
+      "required": true
     }
   ],
   "options": [

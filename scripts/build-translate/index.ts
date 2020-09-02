@@ -36,7 +36,7 @@ const apply = () => {
     if (!existsSync(directory)) {
       continue;
     }
-    let directoryFiles: string[] | any = readdirSync(directory, { encoding: 'UTF8' });
+    let directoryFiles: string[] | any = readdirSync(directory, { encoding: 'utf8' });
     directoryFiles = directoryFiles
       .filter((file: string) => {
         return (/.*\.json$/.test(file) && !file.match(/readme/));
@@ -47,10 +47,10 @@ const apply = () => {
 
     const componentsObject: object[] = [];
     for (const path of directoryFiles) {
-      const componentObject = JSON.parse(readFileSync(path, { encoding: 'UTF8' }));
+      const componentObject = JSON.parse(readFileSync(path, { encoding: 'utf8' }));
       const readmePath = path.replace(/\.json/g, '.readme.md');
       if (existsSync(readmePath)) {
-        componentObject[translateType.markdown] = readFileSync(readmePath, { encoding: 'UTF8' });
+        componentObject[translateType.markdown] = readFileSync(readmePath, { encoding: 'utf8' });
       }
       componentsObject.push(componentObject);
     }
@@ -62,7 +62,7 @@ const apply = () => {
       resource = componentsObject;
     }
 
-    writeFileSync(process.cwd() + '/scripts/data/translated-' + translateType.type + '.json', JSON.stringify(resource, null, 2), { encoding: 'UTF8' });
+    writeFileSync(process.cwd() + '/scripts/data/translated-' + translateType.type + '.json', JSON.stringify(resource, null, 2), { encoding: 'utf8' });
   }
 };
 
@@ -90,15 +90,15 @@ const create = () => {
       }
 
       if (!existsSync(files.real)) {
-        writeFileSync(files.real, JSON.stringify(ob, null, 2), { encoding: 'UTF8' });
+        writeFileSync(files.real, JSON.stringify(ob, null, 2), { encoding: 'utf8' });
       }
 
       if (!existsSync(files.realReadme)) {
-        writeFileSync(files.realReadme, ob[translateType.markdown], { encoding: 'UTF8' });
+        writeFileSync(files.realReadme, ob[translateType.markdown], { encoding: 'utf8' });
       }
 
-      writeFileSync(files.shadow, JSON.stringify(ob, null, 2), { encoding: 'UTF8' });
-      writeFileSync(files.shadowReadme, ob[translateType.markdown], { encoding: 'UTF8' });
+      writeFileSync(files.shadow, JSON.stringify(ob, null, 2), { encoding: 'utf8' });
+      writeFileSync(files.shadowReadme, ob[translateType.markdown], { encoding: 'utf8' });
     });
   }
 };
@@ -109,8 +109,8 @@ const diff = () => {
     execSync('git diff src/translate/.detection/' + translateType.type + '/*  > structure_' + translateType.type + '.patch');
 
     const patchPath = process.cwd() + '/structure_' + translateType.type + '.patch';
-    const patchTxt = readFileSync(patchPath, { encoding: 'UTF8' });
-    writeFileSync(patchPath, patchTxt.replace(/\/\.detection/g, ''), { encoding: 'UTF8' });
+    const patchTxt = readFileSync(patchPath, { encoding: 'utf8' });
+    writeFileSync(patchPath, patchTxt.replace(/\/\.detection/g, ''), { encoding: 'utf8' });
 
     try {
       execSync('patch -p1 < \'structure_' + translateType.type + '.patch\'');

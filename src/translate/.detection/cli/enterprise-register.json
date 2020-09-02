@@ -7,7 +7,9 @@
   "summary": "Register your Product Key with this app",
   "description": "",
   "footnotes": [],
-  "groups": [],
+  "groups": [
+    "paid"
+  ],
   "exampleCommands": [],
   "aliases": [],
   "inputs": [],

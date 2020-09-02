@@ -124,6 +124,109 @@
       "type": "project"
     },
     {
+      "name": "ionic capacitor build",
+      "namespace": [
+        "ionic",
+        "capacitor"
+      ],
+      "summary": "Build an Ionic project for a given platform",
+      "description": "`ionic capacitor build` will do the following:\n- Perform `ionic build`\n- Copy web assets into the specified native platform\n- Open the IDE for your native project (Xcode for iOS, Android Studio for Android)\n\nOnce the web assets and configuration are copied into your native project, you can build your app using the native IDE. Unfortunately, programmatically building the native project is not yet supported.\n\nTo configure your native project, see the common configuration [docs](https://capacitor.ionicframework.com/docs/basics/configuring-your-app) as well as low-level configuration for [iOS](https://capacitor.ionicframework.com/docs/ios/configuration) and [Android](https://capacitor.ionicframework.com/docs/android/configuration).",
+      "footnotes": [],
+      "groups": [
+        "beta"
+      ],
+      "exampleCommands": [
+        "ionic capacitor build ",
+        "ionic capacitor build android",
+        "ionic capacitor build ios"
+      ],
+      "aliases": [],
+      "inputs": [
+        {
+          "name": "platform",
+          "summary": "The platform to build for (e.g. `android`, `ios`)",
+          "required": true
+        }
+      ],
+      "options": [
+        {
+          "name": "build",
+          "type": "boolean",
+          "summary": "Do not invoke Ionic build",
+          "default": true,
+          "groups": [],
+          "aliases": [],
+          "spec": {
+            "value": "true/false"
+          }
+        },
+        {
+          "name": "open",
+          "type": "boolean",
+          "summary": "Do not invoke Capacitor open",
+          "default": true,
+          "groups": [],
+          "aliases": [],
+          "spec": {
+            "value": "true/false"
+          }
+        },
+        {
+          "name": "prod",
+          "type": "boolean",
+          "summary": "Flag to use the `production` configuration",
+          "groups": [
+            "cordova"
+          ],
+          "aliases": [],
+          "spec": {
+            "value": "true/false"
+          }
+        },
+        {
+          "name": "configuration",
+          "type": "string",
+          "summary": "Specify the configuration to use.",
+          "groups": [
+            "advanced",
+            "cordova"
+          ],
+          "aliases": [
+            "c"
+          ],
+          "spec": {
+            "value": "conf"
+          }
+        },
+        {
+          "name": "source-map",
+          "type": "boolean",
+          "summary": "Output source maps",
+          "groups": [
+            "advanced",
+            "cordova"
+          ],
+          "aliases": [],
+          "spec": {
+            "value": "true/false"
+          }
+        },
+        {
+          "name": "watch",
+          "type": "boolean",
+          "summary": "Rebuild when files change",
+          "groups": [
+            "advanced"
+          ],
+          "aliases": [],
+          "spec": {
+            "value": "true/false"
+          }
+        }
+      ],
+      "type": "project"
+    },
+    {
       "name": "ionic capacitor copy",
       "namespace": [
         "ionic",
@@ -238,7 +341,7 @@
         "capacitor"
       ],
       "summary": "Run an Ionic project on a connected device",
-      "description": "`ionic capacitor run` will do the following:\n- Perform `ionic build` (or run the dev server from `ionic serve` with the `--livereload` option)\n- Copy web assets into the specified native platform\n- Open the IDE for your native project (Xcode for iOS, Android Studio for Android)\n\nOnce the web assets and configuration are copied into your native project, the app can run on devices and emulators/simulators using the native IDE. Unfortunately, programmatically building and launching the native project is not yet supported.\n\nFor Android and iOS, you can setup Remote Debugging on your device with browser development tools using these [docs](https://ionicframework.com/docs/developer-resources/developer-tips).",
+      "description": "`ionic capacitor run` will do the following:\n- Perform `ionic build` (or run the dev server from `ionic serve` with the `--livereload` option)\n- Copy web assets into the specified native platform\n- Open the IDE for your native project (Xcode for iOS, Android Studio for Android)\n\nWhen using the `--livereload` option and need to serve to your LAN, a device, or an emulator, use the `--external` option also. Otherwise, the web view tries to access `localhost`.\n\nOnce the web assets and configuration are copied into your native project, the app can run on devices and emulators/simulators using the native IDE. Unfortunately, programmatically building and launching the native project is not yet supported.\n\nFor Android and iOS, you can setup Remote Debugging on your device with browser development tools using these [docs](https://ionicframework.com/docs/developer-resources/developer-tips).",
       "footnotes": [],
       "groups": [
         "beta"
@@ -246,8 +349,8 @@
       "exampleCommands": [
         "ionic capacitor run ",
         "ionic capacitor run android",
-        "ionic capacitor run android -l",
-        "ionic capacitor run ios --livereload",
+        "ionic capacitor run android -l --external",
+        "ionic capacitor run ios --livereload --external",
         "ionic capacitor run ios --livereload-url=http://localhost:8100"
       ],
       "aliases": [],
@@ -302,6 +405,17 @@
           "name": "build",
           "type": "boolean",
           "summary": "Do not invoke Ionic build",
+          "default": true,
+          "groups": [],
+          "aliases": [],
+          "spec": {
+            "value": "true/false"
+          }
+        },
+        {
+          "name": "open",
+          "type": "boolean",
+          "summary": "Do not invoke Capacitor open",
           "default": true,
           "groups": [],
           "aliases": [],
@@ -1045,7 +1159,7 @@
         {
           "name": "platform",
           "summary": "The platform to run (e.g. `android`, `ios`)",
-          "required": false
+          "required": true
         }
       ],
       "options": [
@@ -1654,7 +1768,7 @@
         {
           "name": "platform",
           "summary": "The platform to run (e.g. `android`, `ios`)",
-          "required": false
+          "required": true
         }
       ],
       "options": [
@@ -1967,7 +2081,9 @@
       "summary": "Adds Appflow Deploy to the project",
       "description": "This command adds the Appflow Deploy plugin (`cordova-plugin-ionic`) for both Capacitor and Cordova projects.\n\nFor Capacitor projects it runs all the steps necessary to install the plugin, sync with the native projects and add the configuration to the proper iOS and Android configuration files.\n\nFor Cordova projects it just takes care of running the proper Cordova CLI command with the submitted parameters.",
       "footnotes": [],
-      "groups": [],
+      "groups": [
+        "paid"
+      ],
       "exampleCommands": [
         "ionic deploy add ",
         "ionic deploy add --app-id=abcd1234 --channel-name=\"Master\" --update-method=background",
@@ -2045,7 +2161,9 @@
       "summary": "Create a deploy build on Appflow",
       "description": "This command creates a deploy build on Ionic Appflow. While the build is running, it prints the remote build log to the terminal.\n\nCustomizing the build:\n- The `--environment` and `--channel` options can be used to customize the groups of values exposed to the build.\n\nApart from `--commit`, every option can be specified using the full name setup within the Appflow [Dashboard](https://dashboard.ionicframework.com).",
       "footnotes": [],
-      "groups": [],
+      "groups": [
+        "paid"
+      ],
       "exampleCommands": [
         "ionic deploy build ",
         "ionic deploy build --environment=\"My Custom Environment Name\"",
@@ -2089,6 +2207,110 @@
           }
         }
       ],
+      "type": "project"
+    },
+    {
+      "name": "ionic deploy configure",
+      "namespace": [
+        "ionic",
+        "deploy"
+      ],
+      "summary": "Overrides Appflow Deploy configuration",
+      "description": "This command overrides configuration for the Appflow Deploy plugin (`cordova-plugin-ionic`) in Capacitor projects.\n\nFor Capacitor projects, if the plugin is already installed, it overrides the configuration variables in the native projects.\n\nFor Cordova projects this is not implemented because it is better to reinstall the plugin with the different parameters and let Cordova deal with the changes.",
+      "footnotes": [],
+      "groups": [
+        "paid"
+      ],
+      "exampleCommands": [
+        "ionic deploy configure ",
+        "ionic deploy configure --app-id=abcd1234 --channel-name=\"Master\" --update-method=background",
+        "ionic deploy configure --max-store=2 --min-background-duration=30",
+        "ionic deploy configure --app-id=abcd1234 --channel-name=\"Master\" --update-method=background --max-store=2 --min-background-duration=30",
+        "ionic deploy configure android",
+        "ionic deploy configure ios"
+      ],
+      "aliases": [],
+      "inputs": [
+        {
+          "name": "platform",
+          "summary": "The native platform (e.g. `ios`, `android`)",
+          "required": false
+        }
+      ],
+      "options": [
+        {
+          "name": "app-id",
+          "type": "string",
+          "summary": "Your Appflow app ID",
+          "groups": [],
+          "aliases": [],
+          "spec": {
+            "value": "id"
+          }
+        },
+        {
+          "name": "channel-name",
+          "type": "string",
+          "summary": "The channel to check for updates from",
+          "groups": [],
+          "aliases": [],
+          "spec": {
+            "value": "name"
+          }
+        },
+        {
+          "name": "update-method",
+          "type": "string",
+          "summary": "The update method that dictates the behavior of the plugin",
+          "groups": [],
+          "aliases": [],
+          "spec": {
+            "value": "name"
+          }
+        },
+        {
+          "name": "max-store",
+          "type": "string",
+          "summary": "The maximum number of downloaded versions to store on the device",
+          "groups": [
+            "advanced"
+          ],
+          "aliases": [],
+          "spec": {
+            "value": "quantity"
+          }
+        },
+        {
+          "name": "min-background-duration",
+          "type": "string",
+          "summary": "The minimum duration after which the app checks for an update in the background",
+          "groups": [
+            "advanced"
+          ],
+          "aliases": [],
+          "spec": {
+            "value": "seconds"
+          }
+        }
+      ],
+      "type": "project"
+    },
+    {
+      "name": "ionic deploy manifest",
+      "namespace": [
+        "ionic",
+        "deploy"
+      ],
+      "summary": "Generates a manifest file for the deploy service from a built app directory",
+      "description": "",
+      "footnotes": [],
+      "groups": [
+        "paid"
+      ],
+      "exampleCommands": [],
+      "aliases": [],
+      "inputs": [],
+      "options": [],
       "type": "project"
     },
     {
@@ -2203,7 +2425,9 @@
       "summary": "Register your Product Key with this app",
       "description": "",
       "footnotes": [],
-      "groups": [],
+      "groups": [
+        "paid"
+      ],
       "exampleCommands": [],
       "aliases": [],
       "inputs": [],
@@ -2276,7 +2500,9 @@
       "summary": "Adds/updates the Ionic Appflow git remote to your local Ionic app",
       "description": "This command is used by `ionic link` when Ionic Appflow is used as the git host.\n\n`ionic git remote` will check the local repository for whether or not the git remote is properly set up. This command operates on the **ionic** remote. For advanced configuration, see **Settings** => **Git** in the app settings of the [Dashboard](https://dashboard.ionicframework.com).",
       "footnotes": [],
-      "groups": [],
+      "groups": [
+        "paid"
+      ],
       "exampleCommands": [],
       "aliases": [],
       "inputs": [],
@@ -2506,7 +2732,9 @@
       "summary": "Connect local apps to Ionic",
       "description": "Link apps on Ionic Appflow to local Ionic projects with this command.\n\nIf the `id` argument is excluded, this command will prompt you to select an app from Ionic Appflow.\n\nIonic Appflow uses a git-based workflow to manage app updates. During the linking process, select **GitHub** (recommended) or **Ionic Appflow** as a git host. See our [documentation](https://ionicframework.com/docs/appflow/basics/git) for more information.\n\nUltimately, this command sets the **id** property in **./ionic.config.json**, which marks this app as linked.\n\nIf you are having issues linking, please get in touch with our [Support](https://ion.link/support-request).",
       "footnotes": [],
-      "groups": [],
+      "groups": [
+        "paid"
+      ],
       "exampleCommands": [
         "ionic link ",
         "ionic link a1b2c3d4"
@@ -2528,7 +2756,7 @@
         "ionic"
       ],
       "summary": "Log in to Ionic",
-      "description": "Authenticate with Ionic and retrieve a user token, which is stored in the CLI config. The most secure way to log in is running `ionic login` without arguments, which will prompt you for your credentials.\n\nIf the `IONIC_TOKEN` environment variable is set, the CLI will automatically authenticate you. To retrieve your user token, first use `ionic login`, then print the token by running the `ionic config get -g tokens.user` command.\n\n`ionic login` will also accept `password` through stdin, e.g.: `echo \"<password>\" | ionic login <email>`.\n\nIf you need to create an Ionic account, use `ionic signup`.\n\nYou can reset your password in the [Dashboard](https://dashboard.ionicframework.com/reset-password).\n\nIf you are having issues logging in, please get in touch with our [Support](https://ion.link/support-request).",
+      "description": "Authenticate with Ionic and retrieve a user token, which is stored in the CLI config. The most secure way to log in is running `ionic login` without arguments, which will open a browser where you can submit your credentials.\n\nIf the `IONIC_TOKEN` environment variable is set, the CLI will automatically authenticate you. To retrieve your user token, first use `ionic login <email> <password>` to log in, then use `ionic config get -g tokens.user` to print the token. (**Note**: Tokens retrieved from the browser login are short-lived and not recommended for use with `IONIC_TOKEN`.)\n\n`ionic login` will also accept `password` through stdin, e.g.: `echo \"<password>\" | ionic login <email>`.\n\nIf you need to create an Ionic account, use `ionic signup` or the Ionic [Website](https://ionicframework.com/signup).\n\nYou can reset your password in the [Dashboard](https://dashboard.ionicframework.com/reset-password).\n\nIf you are having issues logging in, please get in touch with our [Support](https://ion.link/support-request).",
       "footnotes": [],
       "groups": [],
       "exampleCommands": [
@@ -2541,12 +2769,12 @@
         {
           "name": "email",
           "summary": "Your email address",
-          "required": true
+          "required": false
         },
         {
           "name": "password",
           "summary": "Your password",
-          "required": true
+          "required": false
         }
       ],
       "options": [],
@@ -2576,7 +2804,9 @@
       "summary": "Create a package build on Appflow",
       "description": "This command creates a package build on Ionic Appflow. While the build is running, it prints the remote build log to the terminal. If the build is successful, it downloads the created app package file in the current directory.\n\nApart from `--commit`, every option can be specified using the full name setup within the [Dashboard](https://dashboard.ionicframework.com).\n\nThe `--security-profile` option is mandatory for any iOS build but not for Android debug builds.\n\nCustomizing the build:\n- The `--environment` and `--native-config` options can be used to customize the groups of values exposed to the build.\n- Override the preferred platform with `--target-platform`. This is useful for building older iOS apps.\n\nDeploying the build to an App Store:\n- The `--destination` option can be used to deliver the app created by the build to the configured App Store. This can be used only together with build type `release` for Android and build types `app-store` or `enterprise` for iOS.",
       "footnotes": [],
-      "groups": [],
+      "groups": [
+        "paid"
+      ],
       "exampleCommands": [
         "ionic package build android debug",
         "ionic package build ios development --security-profile=\"iOS Security Profile Name\"",
@@ -2678,6 +2908,37 @@
           }
         }
       ],
+      "type": "project"
+    },
+    {
+      "name": "ionic package deploy",
+      "namespace": [
+        "ionic",
+        "package"
+      ],
+      "summary": "Deploys a binary to a destination, such as an app store using Appflow",
+      "description": "This command deploys a binary to a destination using Ionic Appflow. While running, the remote log is printed to the terminal.\n\nThe command takes two parameters: the numeric ID of the package build that previously created the binary and the name of the destination where the binary is going to be deployed.\nBoth can be retrieved from the [Dashboard](https://dashboard.ionicframework.com).",
+      "footnotes": [],
+      "groups": [
+        "paid"
+      ],
+      "exampleCommands": [
+        "ionic package deploy 123456789 \"My app store destination\""
+      ],
+      "aliases": [],
+      "inputs": [
+        {
+          "name": "build-id",
+          "summary": "The build id of the desired successful package build",
+          "required": true
+        },
+        {
+          "name": "destination",
+          "summary": "The destination to deploy the build artifact to the app store",
+          "required": true
+        }
+      ],
+      "options": [],
       "type": "project"
     },
     {
