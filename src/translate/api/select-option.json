@@ -18,7 +18,7 @@
       "mutable": false,
       "attr": "disabled",
       "reflectToAttr": false,
-      "docs": "If `true`, the user cannot interact with the select option.",
+      "docs": "If `true`, the user cannot interact with the select option. This property does not apply when `interface=\"action-sheet\"` as `ion-action-sheet` does not allow for disabled buttons.",
       "docsTags": [],
       "default": "false",
       "values": [
