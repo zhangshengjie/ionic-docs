@@ -107,9 +107,9 @@ Accelerate your app development with powerful solutions to common enterprise use
 ### Authentication & Security
 - [Auth Connect](/docs/enterprise/auth-connect)
 - [Identity Vault](/docs/enterprise/identity-vault)
-- [Secure Storage](/docs/enterprise/offline-storage)
+- [Offline Storage](/docs/enterprise/offline-storage)
 
-### Common Device Features
+### Premier Plugins
 - [Android Permissions](/docs/enterprise/android-permissions)
 - [App Rate](/docs/enterprise/app-rate)
 - [App Version](/docs/enterprise/app-version)

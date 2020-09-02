@@ -186,6 +186,10 @@ const UserDetailPage: React.FC<UserDetailPageProps> = ({match}) => {
 
 > Note: TypeScriptインターフェイスを使用して props オブジェクトを厳密に入力する方法に注意してください。 このインターフェースにより、コンポーネント内部でタイプセーフティとコード補完が可能になります。
 
+## Live Example
+
+If you would prefer to get hands on with the concepts and code described above, please checkout our [live example](https://stackblitz.com/edit/ionic-react-routing?file=src/index.tsx) of the topics above on StackBlitz.
+
 ### IonRouterOutlet in a Tabs View
 
 Tabビューで作業する場合、Ionic Reactには、どのビューがどのTabに属しているかを判断する方法が必要です。これは、 `Route` に提供されるパスが正規表現であるという事実を利用することにより実現します。

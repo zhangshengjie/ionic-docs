@@ -28,7 +28,8 @@ export class DocsMenuEnterprise {
         '': {
             'menu-enterprise-home': '/docs/enterprise',
             'menu-native-setup': '/docs/enterprise/setup',
-            'menu-native-community-v-premier': '/docs/enterprise/community-vs-enterprise'
+            'menu-native-community-v-premier': '/docs/enterprise/community-vs-enterprise',
+            'menu-enterprise-troubleshooting': 'https://ionic.zendesk.com/hc/en-us/categories/360004359553-Native-Integration'
         }
     };
 
@@ -39,8 +40,9 @@ export class DocsMenuEnterprise {
             'Auth Connect': '/docs/enterprise/auth-connect',
             '': {
                 'Auth0': '/docs/enterprise/auth-connect/auth0',
-                'Azure AD B2C': '/docs/enterprise/auth-connect/azure-ad-b2c',
                 'AWS Cognito': '/docs/enterprise/auth-connect/aws-cognito',
+                'Azure AD B2C': '/docs/enterprise/auth-connect/azure-ad-b2c',
+                'IdentityServer 4': '/docs/enterprise/auth-connect/identityserver4',
                 'Okta': '/docs/enterprise/auth-connect/okta'
             },
             'Offline Storage': '/docs/enterprise/offline-storage'

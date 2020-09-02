@@ -42,7 +42,6 @@ export class DocsHeader {
           <stencil-route-link url="/docs/appflow">Appflow {section === 'Appflow' ? <Checkmark/> : null}</stencil-route-link>
           <stencil-route-link url="/docs/native">Native {section === 'Native' ? <Checkmark/> : null}</stencil-route-link>
           <stencil-route-link url="/docs/cli">CLI {section === 'CLI' ? <Checkmark/> : null}</stencil-route-link>
-          <stencil-route-link url="/docs/studio">Studio {section === 'Studio' ? <Checkmark/> : null}</stencil-route-link>
         </section>
         <section>
           {link(['Capacitor', 'https://capacitor.ionicframework.com/docs/' ])}
@@ -73,9 +72,9 @@ export class DocsHeader {
       <header>
         <docs-menu-toggle onClick={this.toggleClickFn}/>
 
-        <stencil-route-link url="/docs/">
+        <a href="https://ionicframework.com">
           <Logo class="HeaderLogo"/>
-        </stencil-route-link>
+        </a>
 
         <header-mobile-collapse>
           <nav class="SectionNav">

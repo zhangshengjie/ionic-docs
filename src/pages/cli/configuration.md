@@ -69,10 +69,11 @@ CLIは、ビルドの前後など、特定のイベント中にスクリプト�
 * `ionic:build:after`: web assetの構築が終了して実行されます。
 * `ionic:capacitor:run:before` : executed on capacitor run before capacitor open is executed
 * `ionic:capacitor:build:before` : executed on capacitor build before capacitor open is executed
+* `ionic:capacitor:sync:after`: executed during `ionic capacitor sync` after a sync
 
-The Capacitor hooks are executed after the `ionic:serve` and `ionic:build` hooks. They will only be executed when using the `ionic capacitor build` or `ionic capacitor run` commands. When using a shell script for any of the hooks, several environment variables are set containing context information.
+When using a shell script for any of the hooks, hook context is defined in environment variables prefixed with `IONIC_CLI_HOOK_CTX_`.
 
-The following example shows the environment variables that are set for the `ionic:capacitor:run:before` and `ionic:capacitor:build:before` hooks.
+The following example shows the environment variables that are set for the `ionic:capacitor:build` hook.
 
 ```shell
 IONIC_CLI_HOOK_CTX_NAME=capacitor:build:before
