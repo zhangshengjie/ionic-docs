@@ -86,7 +86,7 @@ Ionic Frameworkは、アプリを構成するために、単一ページレイ�
 
 ### Live examples
 
-You can view a live example of this setup in Angular [here](https://stackblitz.com/edit/ionic-ng-header-footer).
+You can view a live example of this setup in Angular [here](https://stackblitz.com/edit/ionic-ng-header-footer) and for React [here](https://stackblitz.com/edit/ionic-react-head-foot).
 
 ## Tabs レイアウト
 
@@ -118,7 +118,7 @@ You can view a live example of this setup in Angular [here](https://stackblitz.c
 
 ### Live examples
 
-You can view a live example of this setup in Angular [here](https://stackblitz.com/edit/ionic-ng-tabs).
+You can view a live example of this setup in Angular [here](https://stackblitz.com/edit/ionic-ng-tabs) and for React [here](https://stackblitz.com/edit/ionic-react-tab-layout).
 
 ## Menu レイアウト
 
@@ -175,7 +175,7 @@ You can view a live example of this setup in Angular [here](https://stackblitz.c
 
 ### Live examples
 
-You can view a live example of this setup in Angular [here](https://stackblitz.com/edit/ionic-ng-menu-layout).
+You can view a live example of this setup in Angular [here](https://stackblitz.com/edit/ionic-ng-menu-layout) and for React [here](https://stackblitz.com/edit/ionic-react-menu).
 
 
 ## 分割表示のレイアウト
@@ -238,4 +238,4 @@ It's important to note that the element with the `id` matching the `content-id` 
 
 ### Live examples
 
-You can view a live example of this setup in Angular [here](https://stackblitz.com/edit/ionic-ng-split-pane).
+You can view a live example of this setup in Angular [here](https://stackblitz.com/edit/ionic-ng-split-pane) and for React [here](https://stackblitz.com/edit/ionic-react-split-pane).
