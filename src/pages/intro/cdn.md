@@ -37,20 +37,20 @@ AngularプロジェクトでIonic Frameworkを使用する場合は、 [npm](/do
 $ npm install @ionic/angular@latest --save
 ```
 
-新しいIonic Frameworkのリリースがあるたびに、最新バージョンの機能と修正を入手するために [version](/docs/reference/versioning) を更新する必要があります。このバージョンは [updated using npm](/docs/developing/tips#updating-dependencies) から取得することができます。
+新しいIonic Frameworkのリリースがあるたびに、最新バージョンの機能と修正を入手するために [バージョン](/docs/reference/versioning) を更新する必要があります。最新のバージョンは [npmを使ったアップデート](/docs/developing/tips#updating-dependencies) から取得することができます。
 
-For adding Ionic to an already existing Angular project, use the Angular CLI's `ng add` feature.
+Ionicを既存のAngularプロジェクトに追加するには、Angular CLIの `ng add` 機能を使用します。
 
 ```shell
 $ ng add @ionic/angular
 ```
 
-This will add the necessary imports to the `@ionic/angular` package as well as add the styles needed.
+これにより、`@ionic/angular` に必要なパッケージと、必要なスタイルが追加されます。
 
 
 ## Ionic + React
 
-To add Ionic to an already existing React project, install the `@ionic/react` and `@ionic/react-router` package.
+Ionicを既存のReactプロジェクトに追加するには、 `@ionic/react` および `@ionic/react-router` パッケージをインストールします。
 
 ```shell
 $ npm install @ionic/react
@@ -59,7 +59,7 @@ $ npm install @ionic/react-router
 
 ### CSS
 
-To include the necessary CSS in a React project, add the following to the root App component.
+必要なCSSをReactプロジェクトに含めるには、ルートアプリコンポーネントに以下を追加します。
 
 ```javascript
 /* Core CSS required for Ionic components to work properly */

@@ -13,16 +13,16 @@ Ionic Frameworkをはじめるためには、[Node と npm](#anchor-node-npm)が
 
 もちろん、エディタも必要でしょう。[Visual Studio Code](https://code.visualstudio.com/) をおすすめします。[Visual Studio Codeは無料で、 batteries-included text editor made by Microsoft.
 
-## Terminal
+## ターミナル
 
-> Much of Ionic development requires familiarity with the command line. If you're new to the command line, see [this Blog Post](https://ionicframework.com/blog/new-to-the-command-line/) for a quick introduction.
+> Ionic開発の多くは、コマンドラインを利用する必要があります。コマンドラインに慣れていない場合は、[このブログ](https://ionicframework.com/blog/new-to-the-command-line/)で簡単な概要を確認してください。
 
-In general, we recommend using the built-in terminals. Many third-party terminals work well with Ionic, but may not be supported.
+一般的に、OSに最初からついているターミナルの使用をお勧めします。多くのサードパーティ端末はIonicで正常に動作しますが、サポートされていない場合があります。
 
-* For Windows, **Command Prompt** and **PowerShell** are supported. <a href="https://docs.microsoft.com/en-us/windows/wsl/faq" target="_blank">WSL</a> is known to work with Ionic, but may not be supported.
-* For macOS, the built-in **Terminal** app is supported.
+* Windowsでは、 **コマンドプロンプト** と **PowerShell** がサポートされています。<a href="https://docs.microsoft.com/en-us/windows/wsl/faq" target="_blank">WSL</a>はIonicで動作することがわかっていますが、サポートされていない可能性があります。
+* macOSでは、組み込みの **ターミナル** アプリがサポートされています。
 
-Git Bash (from <a href="https://git-scm.com" target="_blank">git-scm.com</a>) does not support TTY interactivity and is **not supported** by Ionic.
+Git Bash（<a href="https://git-scm.com" target="_blank">git-scm.com</a>）はTTY対話機能をサポートしておらず、Ionicはサポートしていません。
 
 ## Node と npm
 
@@ -59,4 +59,4 @@ $ git --version
 
 ### Git GUI
 
-Git is a command-line utility, but there are many [GUI clients](https://git-scm.com/downloads/guis/) available. [GitHub Desktop](https://desktop.github.com/) is recommended, and works well with GitHub.
+Gitはコマンドラインユーティリティですが、利用可能な [GUIクライアント](https://git-scm.com/downloads/guis/) は多数あります。[GitHub Desktop](https://desktop.github.com/)を推奨しており、GitHubとうまく連携します。

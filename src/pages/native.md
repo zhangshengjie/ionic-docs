@@ -3,15 +3,15 @@ title: Native APIs
 tableOfContents: false
 ---
 
-<p class='intro'>Build native-powered app experiences with a collection of open source and premium plugins and integrations that make it easy to add native device functionality to any Ionic app with Capacitor or Cordova.</p>
+<p class='intro'>CapacitorやCordovaを使って、どんなIonicアプリにもネイティブデバイスの機能を簡単に追加できるようにするための、オープンソースのコレクションとプレミアムプラグインと統合します。このことによって、ネイティブパワーのアプリ体験を構築することができます。</p>
 
 <docs-cards class="static-width">
   <docs-card header="Ionic Native Community Plugins" href="/docs/native/community" img="/docs/assets/img/native/community-edition.png">
-    <p>A collection of free Cordova and Capacitor plugins, built and maintained by the community, with TypeScript wrappers and a consistent API and naming convention for easier development.</p>
+    <p>コミュニティによって構築され、維持されている無償のCordovaプラグインとCapacitorプラグインのコレクションで、 TypeScriptラッパーと、開発を容易にするための一貫したAPIと命名規則を備えています。</p>
   </docs-card>
 
   <docs-card header="Ionic Native Enterprise Edition" href="/docs/enterprise" img="/docs/assets/img/native/enterprise-edition.png">
-    <p><a href="https://ionicframework.com/native">Ionic Native Enterprise Edition (EE)</a> is a subscription service that provides premium, supported Capacitor and Cordova plugins, third-party integrations, and pre-built solutions for teams building enterprise-grade apps with Ionic. </p>
+    <p><a href="https://ionicframework.com/native">Ionic Native Enterprise Edition (EE)</a>はプレミアムプランであり、CapacitorおよびCordovaプラグインのサポート、サードパーティの統合、Ionicを使用してエンタープライズグレードのアプリケーションを構築するチームのための事前構築ソリューションを提供するサブスクリプションサービスです。</p>
   </docs-card>
 </docs-cards>
 

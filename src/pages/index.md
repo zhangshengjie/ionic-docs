@@ -124,8 +124,8 @@ Ionicの開発者は世界200か国以上に何百万人もいます。コミュ
 * <a href="https://ionicframework.com/contributors" target="_blank">Content authoring:</a> Write a technical blog or share your story with the Ionic community.
 
 
-## License
+## ライセンス
 
-Ionic Framework is a free and open source project, released under the permissable <a href="https://opensource.org/licenses/MIT" target="_blank">MIT license</a>. This means it can be used in personal or commercial projects for free. MIT is the same license used by such popular projects as jQuery and Ruby on Rails.
+Ionic Frameworkは無料のオープンソースプロジェクトで、<a href="https://opensource.org/licenses/MIT" target="_blank">MITライセンス</a>の下で公開されています。つまり、個人的なプロジェクトや商用プロジェクトで無料で利用できます。MITライセンスは、jQueryやRuby on Railsなどの人気プロジェクトで使用されているのと同じライセンスです。
 
-This documentation content (found in the <a href="https://github.com/ionic-team/ionic-docs" target="_blank">ionic-docs</a> repo) is licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache 2 license</a>.
+このドキュメントコンテンツ(<a href="https://github.com/ionic-team/ionic-docs" target="_blank">Ionic-docsリポジトリ</a>にあります)は、<a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache 2ライセンス</a>でライセンスされています。
