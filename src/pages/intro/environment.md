@@ -11,7 +11,8 @@ contributors:
 
 Ionic Frameworkをはじめるためには、[Node と npm](#anchor-node-npm)がインストールされている環境が必要です。
 
-もちろん、エディタも必要でしょう。[Visual Studio Code](https://code.visualstudio.com/) をおすすめします。[Visual Studio Codeは無料で、 batteries-included text editor made by Microsoft.
+もちろん、エディタも必要でしょう。[Visual Studio Code](https://code.visualstudio.com/) をおすすめします。Visual Studio Codeは
+Microsoft製の無料でとてもパワフルなテキストエディタです。
 
 ## ターミナル
 
@@ -37,19 +38,19 @@ $ node --version
 $ npm --version
 ```
 
-> Permission errors are common on macOS when installing global packages with `npm`. If you get an `EACCES` error, see [Resolving Permission Errors](/docs/developing/tips#resolving-permission-errors).
+> `npm` のグローバルパッケージをインストールする時、パーミッションエラーが起きがちです。 もし `EACCES` エラーがでたら、 [Resolving Permission Errors](/docs/developing/tips#resolving-permission-errors) を確認ください。
 
 ## Git
 
 必須ではありませんが、バージョン管理システムの[Git](/docs/reference/glossary#git)の利用を強くお勧めします。
 
-Git is often accompanied by a Git Host, such as [GitHub](https://github.com/), in which case additional setup is required. Follow the tutorial from the Git Host's documentation to set up Git:
+Gitは [GitHub](https://github.com/) のようなGitホスティングサービスを利用することが多いですが、これらのサービスは最初にサインアップが必要となります。これらのGitホスティングサービスのチュートリアルをご確認ください:
 
 * GitHub: [Set up Git](https://help.github.com/en/articles/set-up-git)
 * GitLab: [Installing Git](https://docs.gitlab.com/ee/topics/git/how_to_install_git)
 * Bitbucket: [Install Git](https://www.atlassian.com/git/tutorials/install-git)
 
-Otherwise, follow the [official installation instructions](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). The command-line utility can be downloaded from the [download page](https://git-scm.com/downloads).
+それ以外の場合は、 [公式のインストール手順](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) をご確認ください。コマンドラインユーティリティは、[download page](https://git-scm.com/downloads) からダウンロードできます。.
 
 インストールできているかを確認するためには、新しいターミナルウィンドウを開いて以下を実行します。
 

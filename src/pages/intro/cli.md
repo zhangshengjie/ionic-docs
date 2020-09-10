@@ -16,7 +16,7 @@ Ionicアプリは、主にIonic CLI（[command-line](/docs/reference/glossary#cl
 
 続行する前に、コンピュータに [Node.js](/docs/reference/glossary#node) がインストールされているかを確認ください。[この説明で](/docs/intro/environment)でIonicをセットアップできる環境を説明しています。
 
-Install the Ionic CLI with npm:
+npmを使って Ionic CLI をインストールします:
 
 ```shell
 $ npm install -g @ionic/cli
