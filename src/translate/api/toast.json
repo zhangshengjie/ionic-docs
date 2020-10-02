@@ -8,13 +8,30 @@
     {
       "text": "{\"ios\" | \"md\"} mode - The mode determines which platform styles to use.",
       "name": "virtualProp"
+    },
+    {
+      "text": "button - Any button element that is displayed inside of the toast.",
+      "name": "part"
+    },
+    {
+      "text": "container - The element that wraps all child elements.",
+      "name": "part"
+    },
+    {
+      "text": "header - The header text of the toast.",
+      "name": "part"
+    },
+    {
+      "text": "message - The body text of the toast.",
+      "name": "part"
     }
   ],
   "usage": {
     "angular": "```typescript\nimport { Component } from '@angular/core';\nimport { ToastController } from '@ionic/angular';\n\n@Component({\n  selector: 'toast-example',\n  templateUrl: 'toast-example.html',\n  styleUrls: ['./toast-example.css'],\n})\nexport class ToastExample {\n\n  constructor(public toastController: ToastController) {}\n\n  async presentToast() {\n    const toast = await this.toastController.create({\n      message: 'Your settings have been saved.',\n      duration: 2000\n    });\n    toast.present();\n  }\n\n  async presentToastWithOptions() {\n    const toast = await this.toastController.create({\n      header: 'Toast header',\n      message: 'Click to Close',\n      position: 'top',\n      buttons: [\n        {\n          side: 'start',\n          icon: 'star',\n          text: 'Favorite',\n          handler: () => {\n            console.log('Favorite clicked');\n          }\n        }, {\n          text: 'Done',\n          role: 'cancel',\n          handler: () => {\n            console.log('Cancel clicked');\n          }\n        }\n      ]\n    });\n    toast.present();\n  }\n\n}\n```\n",
     "javascript": "```javascript\nasync function presentToast() {\n  const toast = document.createElement('ion-toast');\n  toast.message = 'Your settings have been saved.';\n  toast.duration = 2000;\n\n  document.body.appendChild(toast);\n  return toast.present();\n}\n\nasync function presentToastWithOptions() {\n  const toast = document.createElement('ion-toast');\n  toast.header = 'Toast header';\n  toast.message = 'Click to Close';\n  toast.position = 'top';\n  toast.buttons = [\n    {\n      side: 'start',\n      icon: 'star',\n      text: 'Favorite',\n      handler: () => {\n        console.log('Favorite clicked');\n      }\n    }, {\n      text: 'Done',\n      role: 'cancel',\n      handler: () => {\n        console.log('Cancel clicked');\n      }\n    }\n  ];\n\n  document.body.appendChild(toast);\n  return toast.present();\n}\n```\n",
     "react": "```tsx\nimport React, { useState } from 'react';\nimport { IonToast, IonContent, IonButton } from '@ionic/react';\n\nexport const ToastExample: React.FC = () => {\n  const [showToast1, setShowToast1] = useState(false);\n  const [showToast2, setShowToast2] = useState(false);\n\n  return (\n    <IonContent>\n      <IonButton onClick={() => setShowToast1(true)} expand=\"block\">Show Toast 1</IonButton>\n      <IonButton onClick={() => setShowToast2(true)} expand=\"block\">Show Toast 2</IonButton>\n      <IonToast\n        isOpen={showToast1}\n        onDidDismiss={() => setShowToast1(false)}\n        message=\"Your settings have been saved.\"\n        duration={200}\n      />\n\n      <IonToast\n        isOpen={showToast2}\n        onDidDismiss={() => setShowToast2(false)}\n        message=\"Click to Close\"\n        position=\"top\"\n        buttons={[\n          {\n            side: 'start',\n            icon: 'star',\n            text: 'Favorite',\n            handler: () => {\n              console.log('Favorite clicked');\n            }\n          },\n          {\n            text: 'Done',\n            role: 'cancel',\n            handler: () => {\n              console.log('Cancel clicked');\n            }\n          }\n        ]}\n      />\n    </IonContent>\n  );\n};\n```\n",
-    "stencil": "```tsx\nimport { Component, h } from '@stencil/core';\n\nimport { toastController } from '@ionic/core';\n\n@Component({\n  tag: 'toast-example',\n  styleUrl: 'toast-example.css'\n})\nexport class ToastExample {\n  async presentToast() {\n    const toast = await toastController.create({\n      message: 'Your settings have been saved.',\n      duration: 2000\n    });\n    toast.present();\n  }\n\n  async presentToastWithOptions() {\n    const toast = await toastController.create({\n      header: 'Toast header',\n      message: 'Click to Close',\n      position: 'top',\n      buttons: [\n        {\n          side: 'start',\n          icon: 'star',\n          text: 'Favorite',\n          handler: () => {\n            console.log('Favorite clicked');\n          }\n        }, {\n          text: 'Done',\n          role: 'cancel',\n          handler: () => {\n            console.log('Cancel clicked');\n          }\n        }\n      ]\n    });\n    toast.present();\n  }\n\n  render() {\n    return [\n      <ion-content>\n        <ion-button onClick={() => this.presentToast()}>Present Toast</ion-button>\n        <ion-button onClick={() => this.presentToastWithOptions()}>Present Toast: Options</ion-button>\n      </ion-content>\n    ];\n  }\n}\n```"
+    "stencil": "```tsx\nimport { Component, h } from '@stencil/core';\n\nimport { toastController } from '@ionic/core';\n\n@Component({\n  tag: 'toast-example',\n  styleUrl: 'toast-example.css'\n})\nexport class ToastExample {\n  async presentToast() {\n    const toast = await toastController.create({\n      message: 'Your settings have been saved.',\n      duration: 2000\n    });\n    toast.present();\n  }\n\n  async presentToastWithOptions() {\n    const toast = await toastController.create({\n      header: 'Toast header',\n      message: 'Click to Close',\n      position: 'top',\n      buttons: [\n        {\n          side: 'start',\n          icon: 'star',\n          text: 'Favorite',\n          handler: () => {\n            console.log('Favorite clicked');\n          }\n        }, {\n          text: 'Done',\n          role: 'cancel',\n          handler: () => {\n            console.log('Cancel clicked');\n          }\n        }\n      ]\n    });\n    toast.present();\n  }\n\n  render() {\n    return [\n      <ion-content>\n        <ion-button onClick={() => this.presentToast()}>Present Toast</ion-button>\n        <ion-button onClick={() => this.presentToastWithOptions()}>Present Toast: Options</ion-button>\n      </ion-content>\n    ];\n  }\n}\n```",
+    "vue": "```html\n<template>\n  <ion-page>\n    <ion-content class=\"ion-padding\">\n      <ion-button @click=\"openToast\">Open Toast</ion-button>\n      <ion-button @click=\"openToastOptions\">Open Toast: Options</ion-button>\n    </ion-content>\n  </ion-page>\n</template>\n\n<script>\nimport { IonButton, IonContent, IonPage, toastController } from '@ionic/vue';\n\nexport default {\n  components: { IonButton, IonContent, IonPage },\n  methods: {\n    async openToast() {\n      const toast = await toastController\n        .create({\n          message: 'Your settings have been saved.',\n          duration: 2000\n        })\n      return toast.present();\n    },\n    async openToastOptions() {\n      const toast = await toastController\n        .create({\n          header: 'Toast header',\n          message: 'Click to Close',\n          position: 'top',\n          buttons: [\n            {\n              side: 'start',\n              icon: 'star',\n              text: 'Favorite',\n              handler: () => {\n                console.log('Favorite clicked');\n              }\n            }, {\n              text: 'Done',\n              role: 'cancel',\n              handler: () => {\n                console.log('Cancel clicked');\n              }\n            }\n          ]\n        })\n      return toast.present();\n    },\n  },\n}\n</script>\n```\n\nDevelopers can also use this component directly in their template:\n\n```html\n<template>\n  <ion-button @click=\"setOpen(true)\">Show Toast</ion-button>\n  <ion-toast\n    :is-open=\"isOpenRef\"\n    message=\"Your settings have been saved.\"\n    :duration=\"2000\"\n    @onDidDismiss=\"setOpen(false)\"\n  >\n  </ion-toast>\n</template>\n\n<script>\nimport { IonToast, IonButton } from '@ionic/vue';\nimport { defineComponent, ref } from 'vue';\n\nexport default defineComponent({\n  components: { IonToast, IonButton },\n  setup() {\n    const isOpenRef = ref(false);\n    const setOpen = (state: boolean) => isOpenRef.value = state;\n    \n    return { isOpenRef, setOpen }\n  }\n});\n</script>\n```\n"
   },
   "props": [
     {
@@ -454,7 +471,24 @@
     }
   ],
   "slots": [],
-  "parts": [],
+  "parts": [
+    {
+      "name": "button",
+      "docs": "Any button element that is displayed inside of the toast."
+    },
+    {
+      "name": "container",
+      "docs": "The element that wraps all child elements."
+    },
+    {
+      "name": "header",
+      "docs": "The header text of the toast."
+    },
+    {
+      "name": "message",
+      "docs": "The body text of the toast."
+    }
+  ],
   "dependents": [],
   "dependencies": [
     "ion-icon",

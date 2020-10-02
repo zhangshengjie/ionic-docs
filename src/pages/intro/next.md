@@ -20,7 +20,7 @@ Ionicアプリの構築中に使用する予定のJavaScriptフレームワー�
     <p>ReactでIonicアプリを構築するための基本を素早く理解するための完全なガイド。</p>
   </docs-card>
 
-  <docs-card class="disabled" header="Start with Vue (soon)" href="" icon="/docs/assets/icons/logo-vue-icon.png">
+  <docs-card header="Start with Vue" href="/docs/vue/your-first-app" icon="/docs/assets/icons/logo-vue-icon.png">
     <p>A complete guide to get you up to speed with the basics of building Ionic apps with Vue.</p>
   </docs-card>
 </docs-cards>

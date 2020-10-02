@@ -7,6 +7,8 @@ nextUrl: '/docs/vue/your-first-app'
 
 # Ionic Vue Quickstart
 
+> Ionic Vue is currently in development. Information in this guide is subject to change.
+
 ## What is Ionic Framework?
 
 First off, if you're new here, welcome! Ionic Framework is a free and open source component library for building apps that run on iOS, Android, Electron, and the Web. Write your app once using familiar technologies (HTML, CSS, JavaScript) and deploy to any platform.
@@ -17,19 +19,21 @@ In this guide, we will go over the basics of both Vue and Ionic Framework, inclu
 
 ## Creating a project with the Ionic CLI
 
-To begin, let's install the latest version of the Ionic CLI.
+To begin, let's install a pre-release version of the Ionic CLI.
 
 
 ```shell
-npm install -g @ionic/cli
+npm install -g @ionic/cli@testing
 ```
 
 From here, the global command `ionic` will allow for the creation of a Vue project with Ionic Framework and any other dependencies. To create a new project, run the following command:
 
 ```shell
-ionic start myApp blank --type=vue
+ionic start myApp blank --type vue --tag vue-beta
 cd myApp
 ```
+
+> Using `--tag` allows you to download the latest beta version of an Ionic Vue starter. This will not be needed once Ionic Vue ships.
 
 From here, we run `ionic serve` and have our project running in the browser.
 
@@ -313,9 +317,7 @@ Looking at our code, we have a special attribute called slot. This is key for le
 
 Let's look at another component from Ionic Framework, FAB. Floating Action Buttons are a nice way to provide a main action that is elevated from the rest of an app. For this FAB, we will need three components: a FAB, a FAB Button, and an Icon.
 
-```typescript
-import { add } from 'ionicons/icons';
-
+```html
 <ion-content>
   <ion-list>
   ...
@@ -323,18 +325,34 @@ import { add } from 'ionicons/icons';
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button>
-      <ion-icon icon={add}></ion-icon>
+      <ion-icon :icon="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
 
 </ion-content>
+
+<script>
+import { add } from 'ionicons/icons';
+
+...
+
+export default defineComponent({
+  name: 'Home',
+  ...,
+  setup() {
+    return {
+      add
+    }
+  }
+})
+</script>
 ```
 
 On our main `IonFab`, we are setting its positioning with the vertical and horizontal attributes. We are also setting the render location to "fixed" with the slot attribute. This will tell `IonFab` to render outside of the scrollable content in `IonContent`.
 
-Now let's wire up a click handler to this. WWhen clicking the FAB button, we want to navigate to a new page (which we will create in a moment). To do this, we will need to get access to Vue Router's navigation API. This can be done by importing `useRouter` from the `vue-router` package.
+Now let's wire up a click handler to this. When clicking the FAB button, we want to navigate to a new page (which we will create in a moment). To do this, we will need to get access to Vue Router's navigation API. This can be done by importing `useRouter` from the `vue-router` package.
 
-```typescript
+```html
 import { add } from 'ionicons/icons';
 
 <ion-content>
@@ -344,7 +362,7 @@ import { add } from 'ionicons/icons';
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button @click="() => router.push('/new')">
-      <ion-icon icon={add}></ion-icon>
+      <ion-icon :icon="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
 
@@ -368,7 +386,10 @@ export default defineComponent({
     IonToolbar
   },
   setup() {
-    return { router: useRouter() }
+    return {
+      router: useRouter(),
+      add
+    }
   }
 });
 </script>
@@ -390,7 +411,7 @@ Now that we have the pieces in place to navigate in our app, we need to create a
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
 import Home from '@/views/Home.vue'
-import NewItem from '@views/NewItem.vue';
+import NewItem from '@/views/NewItem.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -420,7 +441,7 @@ With our router now having an entry for the route `/new`, we will create the com
 
 Let's fill the `NewItem.vue` file with some placeholder content for the moment.
 
-```typescript
+```html
 <template>
   <ion-page>
     <ion-header>
@@ -501,7 +522,7 @@ Additional details can be found [here](https://capacitor.ionicframework.com/docs
 
 Next, check out [all the APIs](https://capacitor.ionicframework.com/docs/apis) that are available. There is some great features, including the [Camera API](https://capacitor.ionicframework.com/docs/apis/camera). We can implement photo capture functionality in just a few lines of code:
 
-```typescript
+```html
 <template>
   <ion-page>
     <ion-header>

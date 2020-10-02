@@ -123,6 +123,7 @@ export namespace Components {
     }
     interface DocsPage {
         "history": RouterHistory;
+        "isServer"?: boolean;
         "path": string;
     }
     interface DocsPageFooter {
@@ -660,6 +661,7 @@ declare namespace LocalJSX {
     }
     interface DocsPage {
         "history": RouterHistory;
+        "isServer"?: boolean;
         "path": string;
     }
     interface DocsPageFooter {

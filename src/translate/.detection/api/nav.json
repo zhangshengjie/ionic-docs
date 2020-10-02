@@ -209,7 +209,7 @@
         "type": "Promise<boolean>",
         "docs": ""
       },
-      "signature": "insertPages(insertIndex: number, insertComponents: NavComponent[], opts?: NavOptions | null | undefined, done?: TransitionDoneFn | undefined) => Promise<boolean>",
+      "signature": "insertPages(insertIndex: number, insertComponents: NavComponent[] | NavComponentWithProps[], opts?: NavOptions | null | undefined, done?: TransitionDoneFn | undefined) => Promise<boolean>",
       "parameters": [],
       "docs": "Inserts an array of components into the navigation stack at the specified index.\nThe last component in the array will become instantiated as a view, and animate\nin to become the active view.",
       "docsTags": [
@@ -357,7 +357,7 @@
         "type": "Promise<boolean>",
         "docs": ""
       },
-      "signature": "setPages(views: any[], opts?: NavOptions | null | undefined, done?: TransitionDoneFn | undefined) => Promise<boolean>",
+      "signature": "setPages(views: NavComponent[] | NavComponentWithProps[], opts?: NavOptions | null | undefined, done?: TransitionDoneFn | undefined) => Promise<boolean>",
       "parameters": [],
       "docs": "Set the views of the current navigation stack and navigate to the last view.\nBy default animations are disabled, but they can be enabled by passing options\nto the navigation controller. Navigation parameters can also be passed to the\nindividual pages in the array.",
       "docsTags": [

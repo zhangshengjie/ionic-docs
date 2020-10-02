@@ -75,7 +75,6 @@ export class DocsRoot {
             />
           )}
         />
-        <docs-footer-announcement></docs-footer-announcement>
       </stencil-router>
     );
   }
