@@ -15,7 +15,7 @@
     "javascript": "```html\n<!-- Default Input -->\n<ion-input></ion-input>\n\n<!-- Input with value -->\n<ion-input value=\"custom\"></ion-input>\n\n<!-- Input with placeholder -->\n<ion-input placeholder=\"Enter Input\"></ion-input>\n\n<!-- Input with clear button when there is a value -->\n<ion-input clear-input value=\"clear me\"></ion-input>\n\n<!-- Number type input -->\n<ion-input type=\"number\" value=\"333\"></ion-input>\n\n<!-- Disabled input -->\n<ion-input value=\"Disabled\" disabled></ion-input>\n\n<!-- Readonly input -->\n<ion-input value=\"Readonly\" readonly></ion-input>\n\n<!-- Inputs with labels -->\n<ion-item>\n  <ion-label>Default Label</ion-label>\n  <ion-input></ion-input>\n</ion-item>\n\n<ion-item>\n  <ion-label position=\"floating\">Floating Label</ion-label>\n  <ion-input></ion-input>\n</ion-item>\n\n<ion-item>\n  <ion-label position=\"fixed\">Fixed Label</ion-label>\n  <ion-input></ion-input>\n</ion-item>\n\n<ion-item>\n  <ion-label position=\"stacked\">Stacked Label</ion-label>\n  <ion-input></ion-input>\n</ion-item>\n```",
     "react": "```tsx\nimport React, { useState } from 'react';\nimport { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonInput, IonItem, IonLabel, IonList, IonItemDivider } from '@ionic/react';\n\nexport const InputExamples: React.FC = () => {\n\n  const [text, setText] = useState<string>();\n  const [number, setNumber] = useState<number>();\n\n  return (\n    <IonPage>\n      <IonHeader>\n        <IonToolbar>\n          <IonTitle>IonInput Examples</IonTitle>\n        </IonToolbar>\n      </IonHeader>\n      <IonContent>\n        <IonList>\n          <IonItemDivider>Default Input with Placeholder</IonItemDivider>\n          <IonItem>\n            <IonInput value={text} placeholder=\"Enter Input\" onIonChange={e => setText(e.detail.value!)}></IonInput>\n          </IonItem>\n\n          <IonItemDivider>Input with clear button when there is a value</IonItemDivider>\n          <IonItem>\n            <IonInput value={text} placeholder=\"Enter Input\" onIonChange={e => setText(e.detail.value!)} clearInput></IonInput>\n          </IonItem>\n\n          <IonItemDivider>Number type input</IonItemDivider>\n          <IonItem>\n            <IonInput type=\"number\" value={number} placeholder=\"Enter Number\" onIonChange={e => setNumber(parseInt(e.detail.value!, 10))}></IonInput>\n          </IonItem>\n\n          <IonItemDivider>Disabled input</IonItemDivider>\n          <IonItem>\n            <IonInput value={text} disabled></IonInput>\n          </IonItem>\n\n          <IonItemDivider>Readonly input</IonItemDivider>\n          <IonItem>\n            <IonInput value={text} readonly></IonInput>\n          </IonItem>\n\n          <IonItemDivider>Inputs with labels</IonItemDivider>\n\n          <IonItem>\n            <IonLabel>Default Label</IonLabel>\n            <IonInput></IonInput>\n          </IonItem>\n\n          <IonItem>\n            <IonLabel position=\"floating\">Floating Label</IonLabel>\n            <IonInput value={text}></IonInput>\n          </IonItem>\n\n          <IonItem>\n            <IonLabel position=\"fixed\">Fixed Label</IonLabel>\n            <IonInput value={text}></IonInput>\n          </IonItem>\n\n          <IonItem>\n            <IonLabel position=\"stacked\">Stacked Label</IonLabel>\n            <IonInput value={text}> </IonInput>\n          </IonItem>\n        </IonList>\n      </IonContent>\n    </IonPage>\n  );\n};\n```",
     "stencil": "```tsx\nimport { Component, h } from '@stencil/core';\n\n@Component({\n  tag: 'input-example',\n  styleUrl: 'input-example.css'\n})\nexport class InputExample {\n  render() {\n    return [\n      // Default Input\n      <ion-input></ion-input>,\n\n      // Input with value\n      <ion-input value=\"custom\"></ion-input>,\n\n      // Input with placeholder\n      <ion-input placeholder=\"Enter Input\"></ion-input>,\n\n      // Input with clear button when there is a value\n      <ion-input clearInput value=\"clear me\"></ion-input>,\n\n      // Number type input\n      <ion-input type=\"number\" value=\"333\"></ion-input>,\n\n      // Disabled input\n      <ion-input value=\"Disabled\" disabled></ion-input>,\n\n      // Readonly input\n      <ion-input value=\"Readonly\" readonly></ion-input>,\n\n      // Inputs with labels\n      <ion-item>\n        <ion-label>Default Label</ion-label>\n        <ion-input></ion-input>\n      </ion-item>,\n\n      <ion-item>\n        <ion-label position=\"floating\">Floating Label</ion-label>\n        <ion-input></ion-input>\n      </ion-item>,\n\n      <ion-item>\n        <ion-label position=\"fixed\">Fixed Label</ion-label>\n        <ion-input></ion-input>\n      </ion-item>,\n\n      <ion-item>\n        <ion-label position=\"stacked\">Stacked Label</ion-label>\n        <ion-input></ion-input>\n      </ion-item>\n    ];\n  }\n}\n```",
-    "vue": "```html\n<template>\n  <!-- Default Input -->\n  <ion-input></ion-input>\n\n  <!-- Input with value -->\n  <ion-input value=\"custom\"></ion-input>\n\n  <!-- Input with placeholder -->\n  <ion-input placeholder=\"Enter Input\"></ion-input>\n\n  <!-- Input with clear button when there is a value -->\n  <ion-input clear-input value=\"clear me\"></ion-input>\n\n  <!-- Number type input -->\n  <ion-input type=\"number\" value=\"333\"></ion-input>\n\n  <!-- Disabled input -->\n  <ion-input value=\"Disabled\" disabled></ion-input>\n\n  <!-- Readonly input -->\n  <ion-input value=\"Readonly\" readonly></ion-input>\n\n  <!-- Inputs with labels -->\n  <ion-item>\n    <ion-label>Default Label</ion-label>\n    <ion-input></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label position=\"floating\">Floating Label</ion-label>\n    <ion-input></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label position=\"fixed\">Fixed Label</ion-label>\n    <ion-input></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label position=\"stacked\">Stacked Label</ion-label>\n    <ion-input></ion-input>\n  </ion-item>\n</template>\n```"
+    "vue": "```html\n<template>\n  <!-- Default Input -->\n  <ion-input></ion-input>\n\n  <!-- Input with value -->\n  <ion-input value=\"custom\"></ion-input>\n\n  <!-- Input with placeholder -->\n  <ion-input placeholder=\"Enter Input\"></ion-input>\n\n  <!-- Input with clear button when there is a value -->\n  <ion-input clear-input value=\"clear me\"></ion-input>\n\n  <!-- Number type input -->\n  <ion-input type=\"number\" value=\"333\"></ion-input>\n\n  <!-- Disabled input -->\n  <ion-input value=\"Disabled\" disabled></ion-input>\n\n  <!-- Readonly input -->\n  <ion-input value=\"Readonly\" readonly></ion-input>\n\n  <!-- Inputs with labels -->\n  <ion-item>\n    <ion-label>Default Label</ion-label>\n    <ion-input></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label position=\"floating\">Floating Label</ion-label>\n    <ion-input></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label position=\"fixed\">Fixed Label</ion-label>\n    <ion-input></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label position=\"stacked\">Stacked Label</ion-label>\n    <ion-input></ion-input>\n  </ion-item>\n</template>\n\n<script>\nimport { IonLabel, IonInput, IonItem } from '@ionic/vue';\nimport { defineComponent } from 'vue';\n\nexport default defineComponent({\n  components: { IonLabel, IonInput, IonItem }\n});\n</script>\n```"
   },
   "props": [
     {
@@ -769,7 +769,7 @@
     },
     {
       "name": "type",
-      "type": "\"date\" | \"email\" | \"number\" | \"password\" | \"search\" | \"tel\" | \"text\" | \"time\" | \"url\"",
+      "type": "\"date\" | \"datetime-local\" | \"email\" | \"month\" | \"number\" | \"password\" | \"search\" | \"tel\" | \"text\" | \"time\" | \"url\" | \"week\"",
       "mutable": false,
       "attr": "type",
       "reflectToAttr": false,
@@ -782,7 +782,15 @@
           "type": "string"
         },
         {
+          "value": "datetime-local",
+          "type": "string"
+        },
+        {
           "value": "email",
+          "type": "string"
+        },
+        {
+          "value": "month",
           "type": "string"
         },
         {
@@ -811,6 +819,10 @@
         },
         {
           "value": "url",
+          "type": "string"
+        },
+        {
+          "value": "week",
           "type": "string"
         }
       ],
@@ -864,14 +876,14 @@
       },
       "signature": "setFocus() => Promise<void>",
       "parameters": [],
-      "docs": "Sets focus on the specified `ion-input`. Use this method instead of the global\n`input.focus()`.",
+      "docs": "Sets focus on the native `input` in `ion-input`. Use this method instead of the global\n`input.focus()`.",
       "docsTags": []
     }
   ],
   "events": [
     {
       "event": "ionBlur",
-      "detail": "void",
+      "detail": "FocusEvent",
       "bubbles": true,
       "cancelable": true,
       "composed": true,
@@ -889,7 +901,7 @@
     },
     {
       "event": "ionFocus",
-      "detail": "void",
+      "detail": "FocusEvent",
       "bubbles": true,
       "cancelable": true,
       "composed": true,
