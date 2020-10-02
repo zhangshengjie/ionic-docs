@@ -61,7 +61,7 @@ export class DocsHeader {
       </div> : null,
       ['Native'].indexOf(section) > -1 ? <div class="SectionNav-tabs">
       <stencil-route-link url="/docs/native" urlMatch={['/docs/native']}>{l10n.getString('header-native-community')}</stencil-route-link>
-      <stencil-route-link url="/docs/enterprise" urlMatch={['/docs/enterprise']}>{l10n.getString('header-native-enterprise')}</stencil-route-link>
+      <stencil-route-link url="/docs/enterprise/community-vs-enterprise" urlMatch={['/docs/enterprise/community-vs-enterprise']}>{l10n.getString('header-native-enterprise')}</stencil-route-link>
     </div> : null,
     ];
   }
@@ -112,7 +112,7 @@ export class DocsHeader {
               </section>
               <section>
                 <a href="https://forum.ionicframework.com/" target="_blank">Forum</a>
-                <a href="http://ionicworldwide.herokuapp.com/" target="_blank">Slack</a>
+                <a href="https://ionicworldwide.herokuapp.com/" target="_blank">Slack</a>
                 <a href="https://spectrum.chat/ionic" target="_blank">Spectrum</a>
                 <a href="https://www.meetup.com/topics/ionic-framework/" target="_blank">Meetups</a>
               </section>

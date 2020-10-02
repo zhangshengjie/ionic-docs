@@ -131,14 +131,14 @@ import { RouterModule } from '@angular/router';
   ...
   RouterModule.forRoot([
     { path: '', redirectTo: 'login', pathMatch: 'full' },
-    { path: 'login', loadChildren: './login/login.module#LoginModule' },
-    { path: 'detail', loadChildren: './detail/detail.module#DetailModule' }
+    { path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginModule) },
+    { path: 'detail', loadChildren: () => import('./detail/detail.module').then(m => m.DetailModule) }
   ])
   ],
 })
 ```
 
-`loadChildren` プロパティは `component` プロパティと似ていますが、文字列でモジュールを直接参照します。ただしこれを行うには、Componentごとにモジュールを作成する必要があります。
+`loadChildren` プロパティはコンポーネントの代わりにネイティブインポートを直接仕様してモジュールを参照する方法です。ただしこれを行うには、コンポーネントごとにモジュールを作成する必要があります。
 
 
 ```typescript
@@ -181,7 +181,7 @@ const routes: Routes = [
         children: [
           {
             path: '',
-            loadChildren: '../tab1/tab1.module#Tab1PageModule'
+            loadChildren: () => import('../tab1/tab1.module').then(m => m.Tab1PageModule)
           }
         ]
       },
