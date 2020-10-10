@@ -35,6 +35,10 @@ Appflowは、開発チームがiOS、Android、およびWebアプリケーショ
     <p>Appflowの最近のアップデートとアナウンスについて学びます。</p>
   </docs-card>
 
+  <docs-card header="Jenkins, GitHub Actions, & GitLab CI" href="/docs/appflow/cookbook/integrate-ci" icon="/docs/assets/icons/guide-faq-icon.png">
+    <p>Find out how to use Appflow with you existing CI/CD pipeline.</p>
+  </docs-card>
+
   <docs-card header="Package FAQ" href="https://ionic.zendesk.com/hc/en-us/categories/360000410494-Package" icon="/docs/assets/icons/guide-faq-icon.png">
     <p>ネイティブバイナリの構築に関してよく寄せられる質問への回答を調べます。</p>
   </docs-card>
