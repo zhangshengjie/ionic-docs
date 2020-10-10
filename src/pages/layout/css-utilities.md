@@ -15,7 +15,7 @@ Ionic Frameworは、テキストの順番を入れ替えたり、要素の配置
 
 <blockquote>
   <p>
-    If your app was not started using an available Ionic Framework starter, the stylesheets listed in the <a href="./global-stylesheets#optional">optional section of the global stylesheets</a> will need to be included in order for these styles to work.
+    使用可能なIonic Frameworkスターターを使用してアプリケーションを起動していない場合、これらのスタイルを機能させるには、  <a href="./global-stylesheets#optional">グローバルスタイルシートのオプションセクション</a> にリストされているスタイルシートを含める必要があります。
   </p>
 </blockquote>
 
@@ -136,7 +136,7 @@ All of the text classes listed above have additional classes to modify the text 
 
 ### Float要素
 
-CSSプロパティのfloatは、テキストとインライン要素を囲んだ要素がそのコンテナの左側または右側に沿って配置することを指定します。 This way, the element is taken from the normal flow of the web page, though still remaining a part of the flow, contrary to absolute positioning.
+CSSプロパティのfloatは、テキストとインライン要素を囲んだ要素がそのコンテナの左側または右側に沿って配置することを指定します。 以下のように要素はウェブページのコードと異なった順に表示されます。
 
 ```html
 <ion-grid>
@@ -165,11 +165,11 @@ CSSプロパティのfloatは、テキストとインライン要素を囲んだ
 | `.ion-float-end`   | `float: left` / `float: right`  | The same as `float-right` if direction is left-to-right and `float-left` if direction is right-to-left.   |
 
 
-### Responsive Float Classes
+### レスポンシブなFloatクラス
 
-All of the float classes listed above have additional classes to modify the float based on the screen size. Instead of `float-` in each class, use `float-{breakpoint}-` to only use the class on specific screen sizes, where `{breakpoint}` is one of the breakpoint names listed in [Ionic Breakpoints](#ionic-breakpoints).
+上記のすべてのfloatクラスには、画面サイズに基づいて `float` を変更するための追加クラスがあります。特定の画面サイズでのみクラスを使用する場合は、各クラスで `float-` の代わりに`float-{breakpoint}-` を使用します。 `{breakpoint}` は、[Ionic Breakpoints](#ionic-breakpoints)にリストされているブレークポイント名の1つです。
 
-The table below shows the default behavior, where `{modifier}` is any of the following: `left`, `right`, `start`, or `end`, as they are described above.
+次の表に、デフォルトの動作を示します。 `{modifier}` は、前述のように `left`, `right`, `start`, `end` のいずれかです。
 
 | Class                       | Description                                                         |
 |-----------------------------|---------------------------------------------------------------------|
@@ -179,9 +179,9 @@ The table below shows the default behavior, where `{modifier}` is any of the fol
 | `.ion-float-lg-{modifier}`  | Applies the modifier to the element when `min-width: 992px`.        |
 | `.ion-float-xl-{modifier}`  | Applies the modifier to the element when `min-width: 1200px`.       |
 
-## Element Display
+## 要素の表示
 
-The display CSS property determines if an element should be visible or not. The element will still be in the DOM, but not rendered, if it is hidden.
+display CSSプロパティは、要素を表示するかどうかを決定します。要素はDOM内に残りますが、非表示の場合はレンダリングされません。
 
 ```html
 <ion-grid>
@@ -206,9 +206,9 @@ The display CSS property determines if an element should be visible or not. The 
 |---------------|---------------------------------|-----------------------------------------------------------------------------------------------------------|
 | `.ion-hide`   | `display: none`                 | The element will be hidden.
 
-### Responsive Display Attributes
+### ResponsiveなDisplay属性
 
-There are also additional classes to modify the visibility based on the screen size. Instead of just `.ion-hide` for all screen sizes, use `.ion-hide-{breakpoint}-{dir}` to only use the class on specific screen sizes, where `{breakpoint}` is one of the breakpoint names listed in [Ionic Breakpoints](#ionic-breakpoints), and `{dir}` is whether the element should be hidden on all screen sizes above (`up`) or below (`down`) the specified breakpoint.
+画面サイズに基づいて表示を変更するクラスもあります。ただ `.ion-hide` ではなく `.ion-hide-{breakpoint}-{dir}` という特定の画面サイズでのみクラスを使用します。{breakpoint}は、[Ionic Breakpoints](#ionic-breakpoints)にリストされているブレークポイント名の1つです。 `{dir}` は、指定されたブレークポイントの上 (`up`) または下 (`down`) のすべての画面サイズで要素を非表示にするかどうかです。
 
 | Class                  | Description                                                                                                    |
 |------------------------|--------------------------------------------------------------------------------------------------------------|
@@ -636,9 +636,9 @@ Marginエリアは、隣り合う要素とのスペースを広げるために�
 | `.ion-align-self-stretch`  | `align-self: stretch`    | Item is stretched to fill the container.                                            |
 | `.ion-align-self-auto`     | `align-self: auto`       | Item is positioned according to the parent's `align-items` value.                   |
 
-## Border Display
+## Borderの表示
 
-The border display CSS property determines if the border should be visible or not. The property can be applied to the ion-header and the ion-footer.
+border display CSSプロパティは、borderを表示するかどうかを指定します。このプロパティは、 `ion-header` と` ion-footer` に適用できます。
 
 ```html
 <ion-header class="ion-no-border">
@@ -659,9 +659,9 @@ The border display CSS property determines if the border should be visible or no
 |--------------------|-----------------------------------------------------------------------------------------------------------|
 | `.ion-no-border`  |  The element will have no border.
 
-## Ionic Breakpoints
+## Ionicのブレイクポイント
 
-Ionic uses breakpoints in media queries in order to style an application differently based on the screen size. The following breakpoint names are used in the utility classes listed above, where the class will apply when the width is met.
+Ionicは、画面サイズに基づいてアプリケーションのスタイルを変えるために、メディアクエリでブレークポイントを使用します。次のブレークポイント名は、上記のユーティリティークラスで使用され、幅が一致したときにクラスが適用されます。
 
 | Breakpoint Name  | Width       |
 |------------------|-------------|

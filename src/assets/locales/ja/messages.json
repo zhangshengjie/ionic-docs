@@ -29,8 +29,8 @@
   "menu-developing-ios": "iOSでの開発",
   "menu-developing-android": "Androidでの開発",
   "menu-developing-tips": "開発者向けのヒント",
-  "menu-developing-hardware-back-button": "Hardware Back Button",
-  "menu-developing-keyboard": "Keyboard",
+  "menu-developing-hardware-back-button": "ハードウェアの戻るボタン",
+  "menu-developing-keyboard": "キーボード",
 
   "menu-layout": "レイアウト",
   "menu-layout-structure": "構造",
