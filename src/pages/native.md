@@ -10,8 +10,8 @@ tableOfContents: false
     <p>コミュニティによって構築され、維持されている無償のCordovaプラグインとCapacitorプラグインのコレクションで、 TypeScriptラッパーと、開発を容易にするための一貫したAPIと命名規則を備えています。</p>
   </docs-card>
 
-  <docs-card header="Ionic Native Enterprise Edition" href="/docs/enterprise" img="/docs/assets/img/native/enterprise-edition.png">
-    <p><a href="https://ionicframework.com/native">Ionic Native Enterprise Edition (EE)</a>はプレミアムプランであり、CapacitorおよびCordovaプラグインのサポート、サードパーティの統合、Ionicを使用してエンタープライズグレードのアプリケーションを構築するチームのための事前構築ソリューションを提供するサブスクリプションサービスです。</p>
+  <docs-card header="Ionic Native Enterprise Edition" href="/docs/enterprise/community-vs-enterprise" img="/docs/assets/img/native/enterprise-edition.png">
+    <p>CapacitorとCordovaプラグイン、サードパーティプラグインを利用するチームのための事前構築ソリューションを提供するサブスクリプションサービスです。</p>
   </docs-card>
 </docs-cards>
 

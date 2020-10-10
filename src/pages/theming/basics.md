@@ -35,7 +35,7 @@ Ionicコンポーネントは、 <a href="https://developer.mozilla.org/en-US/do
 
 ## CSS Shadow Parts
 
-CSS Shadow Parts were added to make it easier to fully customize Ionic Framework Shadow components. In the past, components that use <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM" target="_blank" rel="noopener noreferrer">Shadow DOM</a> were unable to have elements inside of their shadow tree styled directly. With the addition of Shadow parts, there is no longer a need for CSS variables for every property on an inner element of a Shadow component. For more information on customizing Ionic Framework components using parts, see the [CSS Shadow Parts](/docs/theming/css-shadow-parts) guide.
+CSS Shadow Partsが追加され、Ionic Framework Shadowコンポーネントの完全なカスタマイズが容易になりました。これまで、 <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM" target="_blank" rel="noopener noreferrer">Shadow DOM</a> を使用するコンポーネントは、シャドウ・ツリー内の要素を直接スタイル設定できませんでした。Shadow Partsが追加されたため、Shadowコンポーネントの内部要素のすべてのプロパティーにCSS変数を使用する必要がなくなりました。パーツを使用したIonic Frameworkコンポーネントのカスタマイズの詳細については、[CSS Shadow Parts](/docs/theming/css-shadow-parts)ガイドを参照してください。
 
 ## Branding
 

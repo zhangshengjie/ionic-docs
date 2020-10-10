@@ -9,69 +9,69 @@ contributors:
 
 # 開発者向けのヒント
 
-## Resolving Permission Errors
+## Permission Errors の解決
 
-`EACCES` permission errors can occur when packages are installed globally. If this is the case, npm may need to be set up to operate without elevated permissions.
+パッケージをグローバルにインストールすると、 `EACCES` パーミッションエラーが発生する可能性があります。このような場合は、管理者権限なしで動作するようにnpmを設定する必要があります。
 
-> Using `sudo` with npm is **not recommended** because it can lead to further complications.
+> `sudo` とnpmの併用は、さらなる問題を引き起こす可能性があるため、推奨されません。 
 
-This guide offers two options for resolving permission issues. See the [npm docs](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally) for full documentation and additional options.
+このガイドには、パーミッションの問題を解決するための2つのオプションがあります。詳細なドキュメントと追加オプションについては、[npm docs](https://docs.npmjs.com/resolving-eacces-permissions-errors-when-installing-packages-globally)を参照してください。
 
 ### Option 1
 
-The best way to avoid permission issues is to reinstall NodeJS and npm using a node version manager.
+権限の問題を回避する最善の方法は、 node version manager を使用してNodeJSとnpmを再インストールすることです。
 
-This guide will document [nvm](https://github.com/nvm-sh/nvm) installation and usage. See the [nvm docs](https://github.com/nvm-sh/nvm#installation-and-update) for full documentation. See the [npm docs](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm#using-a-node-version-manager-to-install-nodejs-and-npm) for additional options and instructions for Windows.
+このガイドでは、 [nvm](https://github.com/nvm-sh/nvm) のインストールと使用方法について説明します。完全なドキュメントについては、  [nvm docs](https://github.com/nvm-sh/nvm#installation-and-update) for full documentation. See the [npm docs](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm#using-a-node-version-manager-to-install-nodejs-and-npm) を参照してください。Windowsの追加オプションと手順については、npmのドキュメントを参照してください。
 
-1. Install nvm.
+1. nvmのインストール
 
     ```shell
     $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
     ```
 
-1. New terminals will now use nvm. To verify, open a new terminal and run the following. If something prints, the installation was successful.
+1. 新しい端末はnvmを使うようになります。確認するには、新しいターミナルを開き、次のコマンドを実行します。何かが表示されれば、インストールは成功です。
 
     ```shell
     $ command -v nvm
     ```
 
-1. To download and install the latest LTS release of NodeJS, run:
+1. NodeJSの最新のLTSリリースをダウンロードしてインストールするには、次のコマンドを実行します:
 
     ```shell
     $ nvm install --lts
     ```
 
-1. Set the newly installed NodeJS as the default environment:
+1. 新しくインストールしたNodeJSをデフォルト環境として設定します:
 
     ```shell
     $ nvm alias default lts/*
     ```
 
-1. New terminals will now use the nvm-controlled NodeJS. To verify:
+1. 新しい端末はnvmコントロールのNodeJSを使うようになりました:
 
     ```shell
     $ node -v  # will print the version installed above
     $ which npm  # will print a path somewhere within the ~/.nvm folder
     ```
 
-Global packages will now be installed in the `~/.nvm` directory, so permission errors should no longer occur as long as `npm` is used _without_ `sudo`.
+グローバルパッケージが `~/.nvm` にインストールされます。 `sudo` なしで `npm` を使用している限り、パーミッションエラーは発生しません。
 
 ### Option 2
 
-<small><em>Does not apply to Windows</em></small>
+<small><em>Windowsでは利用できません</em></small>
 
-Change the owner of npm's directories to the current user:
+npmのディレクトリの所有者を現在のユーザに変更します:
 
 ```shell
 $ sudo chown -R $(whoami) /usr/local/{lib/node_modules,bin,share}
 $ sudo chown -R $(whoami) ~/.npm ~/.npmrc
 ```
 
-Since these global directories are no longer owned by `root`, packages can be installed globally _without_ `sudo`.
+これらのグローバルディレクトリは `root` が所有しなくなったため、 `sudo` を使用せずにパッケージをグローバルにインストールできます。
 
 ## 依存モジュールの更新
 
-To update an [npm](https://www.npmjs.com/) dependency, run the following, where `<package-name>` is the package to update:
+[npm](https://www.npmjs.com/) dependencyをアップデートするためには、`<package-name>` をアップデートしたいパッケージ名に変更して以下を実行します:
 
 ```shell
 $ npm install <package-name>@<version|latest> --save
@@ -106,7 +106,7 @@ function myBrokenFunction() {
 }
 ```
 
-When an app runs, it will pause at this function. From there, the developer tools can be used to run pieces of JavaScript, line by line, and inspect where exactly the function breaks.
+アプリが起動すると、この機能で一時停止します。その後、開発者ツールを使用して、JavaScriptを1行ずつ実行し、関数が正確にどこで中断するかを調べることができます。
 
 ## モードの変更
 
