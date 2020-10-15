@@ -10,23 +10,23 @@ nextUrl: '/docs/vue/your-first-app'
 
 ## Vueバージョンサポート
 
-Ionic Vue is built on top of Vue 3.0.0. If you've built an app with early versions of Ionic Vue, you'll want to upgrade to the latest release and upgrade your Vue dependencies.
+Ionic VueはVue 3.0.0上に構築されています。Ionic Vueの初期バージョンでアプリを構築している場合は、最新のリリースにアップグレードして、Vueの依存関係をアップグレードしてください。
 
 ## Vueツール
 
-Ionic Vue projects ship with the same tooling as regular Vue CLI projects. Meaning you'll be building with the Vue CLI and all of it's features. In addition, starter projects also ship with few features enabled by default, like Routing and TypeScript support.
+Ionic Vueプロジェクトには通常のVue CLIプロジェクトと同じツールが付属しています。つまり、Vue CLIとそのすべての機能を使って構築することになりま。VueのデフォルトテンプレートにはルーティングやTypeScriptのサポートなど、デフォルトで有効になっている機能がほとんどありませんが、Ionic Vueはそれらをデフォルトで有効にしています。
 
 ## Native Tooling
 
-[Capacitor](https://capacitor.ionicframework.com) is the official cross-platform app runtime used to make your `Ionic Vue` web app run natively on iOS, Android, and the web.
+[Capacitor](https://capacitor.ionicframework.com) は、Ionic VueウェブアプリをiOS、Android、ウェブ上でネイティブに動作させるための公式クロスプラットフォームアプリライブラリです。
 
-While there are no known technical limitations to using `Ionic Vue` with [Cordova](https://cordova.apache.org/) plugins, Capacitor is officially recommended. There are no plans to support a Cordova integration for `Ionic Vue` in the [Ionic CLI tooling](/docs/cli) at this time. For more details, please [see here](https://capacitor.ionicframework.com/docs/cordova).
+[Cordova](https://cordova.apache.org/) とCordovaプラグインでIonic Vueを使用する際の技術的な制限はありませんが、Capacitorが公式に推奨されています。現時点では、[Ionic CLIツール](/docs/cli) ツールでIonic VueのCordova統合をサポートする計画はない。詳細は [こちら](https://capacitor.ionicframework.com/docs/cordova) をご覧ください。
 
-## From the Community
+## コミュニティからの情報
 
 - [Using Vue.js with Ionic & Capacitor](https://dev.to/aaronksaunders/using-vue-js-v3-beta-with-ionic-components-capacitor-plugins-2b6f) - Aaron Saunders
 
-## Installation
+## インストール
 
 <command-line>
     <command-prompt>npm install -g @ionic/cli</command-prompt>
@@ -39,16 +39,16 @@ While there are no known technical limitations to using `Ionic Vue` with [Cordov
 ## Resources
 
 <docs-cards>
-  <docs-card header="Getting Started" href="/docs/vue/your-first-app" icon="/docs/assets/icons/feature-component-actionsheet-icon.png">
-    <p>Learn the fundamentals you need to know to start building amazing apps with Ionic Framework.</p>
+  <docs-card header="はじめ方" href="/docs/vue/your-first-app" icon="/docs/assets/icons/feature-component-actionsheet-icon.png">
+    <p>Ionic Frameworkを使用して素晴らしいアプリケーションを構築するために必要な基礎を学習します。</p>
   </docs-card>
 
-  <docs-card header="Navigation" href="/docs/vue/navigation" icon="/docs/assets/icons/feature-component-navigation-icon.png">
-    <p>Learn the basics of navigation inside your app with Ionic and Vue Router</p>
+  <docs-card header="ナビゲーション" href="/docs/vue/navigation" icon="/docs/assets/icons/feature-component-navigation-icon.png">
+    <p>IonicとVueルータを使ったアプリ内ナビゲーションの基本を学びます</p>
   </docs-card>
 
-  <docs-card header="Lifecycle" href="/docs/vue/lifecycle" icon="/docs/assets/icons/feature-guide-components-icon.png">
-    <p>Learn about using Ionic lifecycle events in class components and with hooks</p>
+  <docs-card header="ライフサイクル" href="/docs/vue/lifecycle" icon="/docs/assets/icons/feature-guide-components-icon.png">
+    <p>クラスコンポーネントとフックでのIonicライフサイクルイベントの使用方法</p>
   </docs-card>
 
 
