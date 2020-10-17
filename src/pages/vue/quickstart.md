@@ -9,7 +9,7 @@ nextUrl: '/docs/vue/your-first-app'
 
 ## Ionic Frameworkとは
 
-まず、ここに来たばかりの人を歓迎します！Ionic Frameworkは、 iOS, Android, Electron, Web上で動作するアプリを構築するための、無償でオープンソースのコンポーネントライブラですだ。使い慣れたテクノロジ(HTML、CSS、JavaScript)を使用してアプリケーションを一度作成したら、任意のプラットフォームに展開することができます。
+まず、ここに来たばかりの人を歓迎します！Ionic Frameworkは、 iOS, Android, Electron, Web上で動作するアプリを構築するための、無償でオープンソースのコンポーネントライブラリです。使い慣れたテクノロジ(HTML、CSS、JavaScript)を使用してアプリケーションを一度作成したら、任意のプラットフォームに展開することができます。
 
 UIコンポーネントに加えて、Ionic Frameworkは新しいアプリを作るためのコマンドラインツールを提供し、サポートしている様々なプラットフォームにデプロイすることができます。
 
@@ -35,7 +35,7 @@ cd myApp
 
 ## Vueコンポーネントの確認
 
-アプリケーションのベースは `src` ディレクトリにあり、メインのエントリポイントは `main.ts` になります。エディタでプロジェクトを開き、`main。ts` を確認すると、次のように表示されます:
+アプリケーションのベースは `src` ディレクトリにあり、メインのエントリポイントは `main.ts` になります。エディタでプロジェクトを開き、`main.ts` を確認すると、次のように表示されます:
 
 ```ts
 import { createApp } from 'vue';
@@ -621,7 +621,7 @@ UIコンポーネントやナビゲーションなど、Ionic Vueアプリの基
 ionic integrations enable capacitor
 ```
 
-次んい、プロジェクトをビルドしてから利用するプラットフォームを選択します:
+次に、プロジェクトをビルドしてから利用するプラットフォームを選択します:
 
 ```shell
 ionic build
@@ -638,7 +638,7 @@ ionic cap open android
 
 詳細は [こちら](https://capacitor.ionicframework.com/docs/getting-started/with-ionic) をご覧ください。
 
-次い、 [すべての利用可能なAPIs](https://capacitor.ionicframework.com/docs/apis) を確認します。[Camera API](https://capacitor.ionicframework.com/docs/apis/camera) を含むすばらしい機能があります。以下の数行のコードでカメラ機能を実装することができます￥:
+次に、 [すべての利用可能なAPIs](https://capacitor.ionicframework.com/docs/apis) を確認します。[Camera API](https://capacitor.ionicframework.com/docs/apis/camera) を含むすばらしい機能があります。以下の数行のコードでカメラ機能を実装することができます￥:
 
 ```html
 <template>
