@@ -5,21 +5,21 @@ nextText: 'Config'
 nextUrl: '/docs/vue/config'
 ---
 
-# Vue Navigation
+# Vueナビゲーション
 
-This guide covers how routing works in an app built with Ionic and Vue.
+このガイドでは、IonicとVueで構築されたアプリでルーティングがどのように機能するかについて説明します。
 
-The `IonRouterOutlet` component uses the popular [Vue Router](https://router.vuejs.org/) library under the hood. With Ionic and Vue Router, you can create multi-page apps with rich page transitions.
+`IonRouterOutlet` コンポーネントは、内部で一般的な [Vue Router](https://router.vuejs.org/) ライブラリを使用します。IonicとVue Routerを使えば、リッチなページ遷移を持つマルチページアプリを作ることができます。
 
-Everything you know about routing using Vue Router carries over into Ionic Vue. Let's take a look at the basics of an Ionic Vue app and how routing works with it.
+Vue Routerを使ったルーティングについて知っていることはすべてIonic Vueに引き継がれます。Ionic Vueアプリの基本とルーティングの仕組みを見てみましょう。
 
-## A Brief Note
+## 簡単なメモ
 
-While reading this guide, you may notice that most of these concepts are very similar to the concepts found in Vue Router without Ionic Framework. You observation would be correct! Ionic Vue leverages the best parts of Vue Router to make the transition to building apps with Ionic Framework as seamless as possible. As a result, we recommend relying on Vue Router features as much as possible rather than trying to build your own routing solutions.
+このガイドを読むと、これらの概念のほとんどが、Ionic Frameworkを使用しないVueルータに見られる概念と非常によく似ていることがわかります。あなたの意見は正しいでしょう!Ionic VueはVue Routerの長所を活用して、Ionic Frameworkを使ったアプリ構築への移行を可能な限りシームレスにしています。そのため、独自のルーティングソリューションを構築するよりも、可能な限りVueルータの機能に依存することをお勧めします。
 
-## A Simple Route
+## 簡単なRoute
 
-Here is a sample routing configuration that defines a single route to the "/home" URL. When you visit "/home", the route renders the `HomePage` component.
+次に示すのは、 "/home" URLへの単一のルートを定義するルーティング設定の例です。 "/home" にアクセスすると、ルートによって `HomePage`  コンポーネントがレンダリングされます。
 
 **router/index.ts**
 
@@ -44,11 +44,11 @@ const router = createRouter({
 export default router;
 ```
 
-On the app's initial load, the app will render the `HomePage` component as that is what is configured here.
+アプリケーションが最初にロードされると、 `HomePage` コンポーネントがここで設定したとおりに表示されます。
 
-## Handling Redirects
+## リダイレクトの設定
 
-What if we wanted to land a different path on our initial load? For this, we can use router redirects. Redirects work the same way that a typical route object does, but just includes some different keys:
+最初ロードされたパスに別のパスを設定したい場合はどうすればよいでしょうか。これには、ルータリダイレクトを使用できます。リダイレクトは通常のルートオブジェクトと同じように機能しますが、いくつかの異なるキーが含まれています。
 
 ```typescript
 const routes: Array<RouteRecordRaw> = [
@@ -64,11 +64,11 @@ const routes: Array<RouteRecordRaw> = [
 ]
 ```
 
-In our redirect, we look for the index path of our app. Then if we load that, we redirect to the `home` route.
+このリダイレクトでは、最初にインデックスのパスが参照されます。そして、 `home` routeにリダイレクトしてロードを行います。
 
-## Navigating to Different Routes
+## 頃なるRoutesへのナビゲーション
 
-This is all great, but how does one actually navigate to a route? For this, we can use the `router-link` property. Let's create a new routing setup:
+これは素晴らしいことですが、実際にルートにナビゲートするにはどうすればよいのでしょうか。これには、 `router-link` プロパティを使用できます。新しいルーティング設定を作成します:
 
 ```typescript
 const routes: Array<RouteRecordRaw> = [
@@ -89,12 +89,12 @@ const routes: Array<RouteRecordRaw> = [
 ]
 ```
 
-Say we start on the `home` route, and we want to add a button that takes us to the `detail` route. We can do this using the following HTML to navigate to the `detail` route:
+`home` routeで開始し、`detail` routeに移動するボタンを追加するとします。`detail` routeに移動するには、次のHTMLを使用します:
 ```html
 <ion-button router-link="/detail">Go to detail</ion-button>
 ```
 
-We can also programatically navigate in our app by using the router API:
+また、ルーターAPIを使用して、プログラムでアプリケーション内を移動することもできます:
 
 ```typescript
 <template>
@@ -125,11 +125,11 @@ We can also programatically navigate in our app by using the router API:
 </script>
 ```
 
-Both options provide the same navigation mechanism, just fitting different use cases.
+どちらのオプションも同じナビゲーション機構を提供し、異なるユースケースに対応します。
 
-## Lazy Loading Routes
+## 遅延読み込みRoute
 
-The current way our routes are setup makes it so they are included in the same initial chunk when loading the app, which is not always ideal. Instead, we can set up our routes so that components are loaded as they are needed:
+現在のrouteの設定方法では、アプリをロードするときに同じ初期チャンクに含まれるようになっているが、これは必ずしも理想的ではありません。代わりに、必要に応じてコンポーネントがロードされるようにrouteを設定できます。
 
 ```typescript
 const routes: Array<RouteRecordRaw> = [
@@ -149,8 +149,7 @@ const routes: Array<RouteRecordRaw> = [
   }
 ]
 ```
-
-Here, we have the same setup as before only this time `DetailPage` has been replaced with an import call. This will result in the `DetailPage` component no longer being part of the chunk that is requested on application load.
+ここでは、以前と同じ設定になっていますが、今回は `DetailPage` がimport callに置き換えられました。これにより、アプリケーションのロード時に要求されたチャンクに `DetailPage` コンポーネントが含まれなくなります。
 
 ## Shared URLs versus Nested Routes
 

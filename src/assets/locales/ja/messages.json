@@ -63,7 +63,7 @@
   "menu-angular-config": "Config",
   "menu-angular-platform": "Platform",
   "menu-angular-testing": "テスト",
-  "menu-angular-storage": "Storage",
+  "menu-angular-storage": "ストレージ",
   "menu-angular-performance": "Performance",
   "menu-angular-pwa": "Progressive Web Apps",
 
@@ -86,7 +86,7 @@
 
   "menu-vue": "Vue",
   "menu-vue-overview": "概要",
-  "menu-vue-quickstart": "Quickstart",
+  "menu-vue-quickstart": "クイックスタート",
   "menu-vue-your-first-app": "Build Your First App",
   "menu-vue-yfa-taking-photos": "Taking Photos",
   "menu-vue-yfa-saving-photos": "Saving Photos",
@@ -94,8 +94,8 @@
   "menu-vue-yfa-adding-mobile": "Adding Mobile",
   "menu-vue-yfa-deploying-mobile": "Deploying Mobile",
   "menu-vue-yfa-live-reload": "Live Reload",
-  "menu-vue-lifecycle": "Lifecycle",
-  "menu-vue-navigation": "Navigation/Routing",
+  "menu-vue-lifecycle": "ライフサイクル",
+  "menu-vue-navigation": "ナビゲーション",
   "menu-vue-config": "Config",
   "menu-vue-platform": "Platform",
   "menu-vue-pwa": "Progressive Web Apps",
