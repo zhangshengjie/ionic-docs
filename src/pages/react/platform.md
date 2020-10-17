@@ -34,7 +34,7 @@ getPlatforms(); // iPhoneの場合 ["iphone", "ios", "mobile", "mobileweb"] を�
 
 ## Platforms
 
-Below is a table listing all the possible platform values along with corresponding descriptions.
+次の表に、使用可能なすべてのプラットフォーム値とその説明を示します。
 
 | Platform Name | Description                              |
 |---------------|------------------------------------------|

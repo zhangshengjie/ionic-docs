@@ -7,11 +7,11 @@ nextUrl: '/docs/vue/platform'
 
 # Config
 
-Ionic Config provides a way to change the properties of components globally across an app. It can set the app mode, tab button layout, animations, and more.
+Ionic Configは、アプリケーション全体にわたってコンポーネントのプロパティをグローバルに変更する方法を提供します。Ionic Configは、アプリのモード、タブボタンのレイアウト、アニメーションなどを設定できます。
 
-## Global Config
+## グローバル設定
 
-To override the initial Ionic config for the app, provide your config object as an additional parameter when installing the `IonicVue` plugin:
+アプリケーションの初期のIonic Configを上書きするには、IonicVueプラグインのインストール時に追加パラメータとしてConfigオブジェクトを指定します。
 
 ```typescript
 createApp(App)
@@ -21,7 +21,7 @@ createApp(App)
   })
 ```
 
-In the above example, we are disabling the Material Design ripple effect across the app, as well as forcing the mode to be Material Design.
+上の例では、Material Designのリップル効果を無効にし、モードをMaterial Designにしています。
 
 ## Per-Platform Config
 
