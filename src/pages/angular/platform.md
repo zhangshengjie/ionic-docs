@@ -105,7 +105,7 @@ export class MyPage {
 
 ### `pause`
 
-The `pause` event emits when the native platform puts the application into the background, typically when the user switches to a different application. This event emits when a Cordova/Capacitor app is put into the background but doesn't fire in a standard web browser.
+`pause` イベントは、ネイティブ・プラットフォームがアプリケーションをバックグラウンドに置いたとき、通常はユーザーが別のアプリケーションに切り替えたときに発生します。このイベントは、Cordova/Capacitorアプリケーションがバックグラウンドに置かれたときに発生しますが、標準的なWebブラウザでは発生しません。
 
 #### Usage
 
@@ -117,7 +117,7 @@ this.platform.pause.subscribe(async () => {
 
 ### `resize`
 
-The `resize` event emits when the browser window has changed dimensions. This could be from a browser window being physically resized, or from a device changing orientation.
+`resize` イベントは、ブラウザウィンドウの寸法が変更されたときに発生します。これは、ブラウザーウィンドウが物理的にサイズ変更されている場合や、デバイスの向きが変わっている場合に発生します。
 
 #### Usage
 
@@ -129,7 +129,7 @@ this.platform.resize.subscribe(async () => {
 
 ### `resume`
 
-The `resume` event fires when the native platform pulls the application out from the background. This event emits when a Cordova/Capacitor app comes out from the background but doesn't fire in a standard web browser.
+`resume` イベントは、ネイティブプラットフォームがバックグラウンドからアプリケーションを引き出したときに発生します。このイベントは、Cordova/Capacitorアプリがバックグラウンドから出てきても、標準的なWebブラウザで起動しない場合に発生します。
 
 #### Usage
 
