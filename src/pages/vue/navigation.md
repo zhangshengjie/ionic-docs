@@ -151,13 +151,13 @@ const routes: Array<RouteRecordRaw> = [
 ```
 ここでは、以前と同じ設定になっていますが、今回は `DetailPage` がimport callに置き換えられました。これにより、アプリケーションのロード時に要求されたチャンクに `DetailPage` コンポーネントが含まれなくなります。
 
-## Shared URLs versus Nested Routes
+## 共有URLとネストされたルート
 
-A common point of confusion when setting up routing is deciding between shared URLs or nested routes. This part of the guide will explain both and help you decide which one to use.
+ルーティングを設定する際の一般的な混乱点は、共有URLまたはネストされたrouteのどちらかを決定することです。ガイドのこの部分では、両方について説明し、どちらを使用するかを決定するのに役立ちます。
 
-### Shared URLs
+### 共有URL
 
-Shared URLs is a route configuration where routes have pieces of the URL in common. The following is an example of a shared URL configuration:
+共有URLは、ルートが共通のURLの一部を持つルート設定です。共有URL設定の例を次に示します:
 
 ```typescript
 const routes: Array<RouteRecordRaw> = [
@@ -172,11 +172,11 @@ const routes: Array<RouteRecordRaw> = [
 ];
 ```
 
-The above routes are considered "shared" because they reuse the `dashboard` piece of the URL.
+上記のルートは、URLの `dashboard` 部分を再利用するため、 "shared" と見なされます。
 
-### Nested Routes
+### ネストされたRoute
 
-Nested Routes is a route configuration where routes are listed as children of other routes. The following is an example of a nested route configuration:
+Nested Routesは、ルートが他のルートの子としてリストされるルート設定です。ネストされたルート設定の例を次に示します:
 
 ```typescript
 const routes: Array<RouteRecordRaw> = [
@@ -197,21 +197,21 @@ const routes: Array<RouteRecordRaw> = [
 ];
 ```
 
-The above routes are nested because they are in the `children` array of the parent route. Notice that the parent route renders the `DashboardRouterOutlet` component. When you nest routes, you need to render another instance of `ion-router-outlet`.
+上記のルートは、親ルートの `children` 配列にあるため、ネストされています。親ルートが `DashboardRouterOutlet` コンポーネントをレンダリングしていることに注目してください。ルートをネストする場合は、 `ion-router-outlet` の別のインスタンスをレンダリングする必要があります。
 
-### Which one should I choose?
+### どちらを選ぶべきか
 
-Shared URLs are great when you want to transition from page A to page B while preserving the relationship between the two pages in the URL. In our previous example, a button on the `/dashboard` page could transition to the `/dashboard/stats` page. The relationship between the two pages is preserved because of a) the page transition and b) the url.
+共有URLは、URLの2つのページ間の関係を維持しながら、ページAからページBに遷移する場合に便利です。前述の例では、 `/dashboard` ページのボタンで `/dashboard/stats` ページに移行できます。2つのページ間の関係は、a) ページの遷移とb) URLによって維持されます。
 
-Nested routes are mostly useful when you need to render content in outlet A while also rendering sub-content inside of a nested outlet B. The most common use case you will run into is tabs. When you load up a tabs Ionic starter application, you will see `ion-tab-bar` and `ion-tabs` components rendered in the first `ion-router-outlet`. The `ion-tabs` component renders another `ion-router-outlet` which is responsible for rendering the contents of each tab.
+ネストされたルートは、コンセントAのコンテンツをレンダリングする必要がある場合、およびネストされたコンセントBの内部のサブコンテンツをレンダリングする必要がある場合に便利です。最も一般的な使用例は、タブです。Ionicスターターアプリのタブをロードすると、最初の `ion-router-outlet` で `ion-tab-bar`  および `ion-tabs` コンポーネントがレンダリングされます。`ion-tabs` コンポーネントは、各タブの内容をレンダリングする別の 「イオンルータ出力」 をレンダリングします。
 
-There are very few use cases in which nested routes make sense in mobile applications. When in doubt, use the shared URL route configuration. We strongly caution against using nested routing in contexts other than tabs as it can quickly make navigating your app confusing.
+モバイルアプリケーションでネストされたルートが意味をなすユースケースはほとんどありません。疑わしい場合は、共有URLルート設定を使用します。ネストされたルーティングをタブ以外のコンテキストで使用すると、アプリのナビゲーションが混乱する可能性があるため、使用しないように強く注意しています。
 
-> The exception to this rule is when working with children of tabs. See [Child Routes within Tabs](#child-routes-within-tabs) for more information.
+> 例外は、タブの子を操作する場合です。詳しくは [Child Routes within Tabs](#child-routes-within-tabs) をご覧ください。
 
-## Working with Tabs
+## タブの操作
 
-When working with tabs, Ionic Vue needs a way to know which view belongs to which tab. The `IonTabs` component comes in handy here, but let's look at what the routing setup for this looks like:
+タブを操作する場合、Ionic Vueはどのビューがどのタブに属しているかを知る方法を必要とします。ここでは `IonTabs` コンポーネントが便利ですが、この場合のルーティング設定を見てみましょう:
 
 ```typescript
 const routes: Array<RouteRecordRaw> = [
@@ -244,9 +244,9 @@ const routes: Array<RouteRecordRaw> = [
 ]
 ```
 
-Here, our `tabs` path loads a `Tabs` component. We provide each tab as a route object inside of the `children` array. In this example, we call the path `tabs`, but this can be customized. 
+ここで、 `tabs` パスは `Tabs` コンポーネントをロードします。各タブは、 `children` 配列内のルートオブジェクトとして提供されます。この例では、パスを `tabs` としていますがこれはカスタマイズできます。
 
-Let's start by taking a look at our `Tabs` component:
+まず、 `Tabs` コンポーネントをみていきましょう:
 
 ```typescript
 <template>
@@ -292,13 +292,13 @@ export default {
 </script>
 ```
 
-If you have worked with Ionic Framework before, this should feel familiar. We create an `ion-tabs` component, and provide an `ion-tab-bar`. The `ion-tab-bar` provides and `ion-tab-button` components, each with a `tab` property that is associated with its corresponding tab in the router config.
+以前にIonic Frameworkを使ったことがある人なら、このことをよく知っているはずです。`ion-tabs` コンポーネントを作成し、 `ion-tab-bar` を提供します。`ion-tab-bar` は `ion-tab-button` コンポーネントを提供し、それぞれにルータの設定の対応するタブに関連付けられた `tab` プロパティがあります。
 
-### Child Routes within Tabs
+### タブ内の子ルート
 
-Previously, we discussed that most routes should be written with a shared URL configuration. The exception to this rule is when adding child routes to tabs. The reason for this is if we wrote the child routes at the same level as the tab routes, Ionic Vue would not be able to differentiate between a child page and a root tab page.
+先程、ほとんどの経路は共有URL設定で書かれるべきだと論じました。この規則の例外は、子ルートをタブに追加する場合です。これは、タブルートと同じレベルに子ルートを記述した場合、Ionic Vueは子ページとルートタブページを区別できないためです。
 
-As a result, when adding child routes to tabs you should always write them as nested routes. Ionic Vue handles the internal logic so that you do not need to add an additional `IonRouterOutlet`:
+そのため、子ルートをタブに追加する場合は、常にネストされたルートとして記述する必要があります。Ionic Vueは内部ロジックを処理するため、 `IonRouterOutlet` を追加する必要はありません:
 
 ```typescript
 const routes: Array<RouteRecordRaw> = [
@@ -337,17 +337,17 @@ const routes: Array<RouteRecordRaw> = [
 ]
 ```
 
-The example above defines the `/tabs/tab1/child` route as a child of the `/tabs/tab1` route.
+上記の例では、`/tabs/tab 1/child` ルートを `/tabs/tab1` ルートの子として定義しています。
 
 ## IonRouterOutlet
 
-The `IonRouterOutlet` component provides a container to render your views in. It is similar to the `RouterView` component found in other Vue applications except that `IonRouterOutlet` can render multiple pages in the DOM in the same outlet. When a component is rendered in `IonRouterOutlet` we consider this to be an Ionic Framework "page". The router outlet container controls the transition animation between the pages as well as controls when a page is created and destroyed. This helps maintain the state between the views when switching back and forth between them.
+`IonRouterOutlet` コンポーネントは、ビューをレンダリングするためのコンテナを提供します。これは他のVueアプリケーションに見られる `RouterView` コンポーネントに似ていますが、 `IonRouterOutlet` は同じアウトレット内のDOMで複数のページをレンダリングできるという点が異なります。コンポーネントが `IonRouterOutlet` でレンダリングされる場合、これはIonic Framework "Page"と見なされます。ルーター・アウトレット・コンテナーは、ページ間の遷移アニメーションを制御するだけでなく、ページがいつ作成および破棄されるかを制御します。これにより、ビューを切り替えるときにビュー間の状態を維持することができます。
 
-Nothing should be provided inside of `IonRouterOutlet` when setting it up in your template. While `IonRouterOutlet` can be nested in child components, we caution against it as it typically makes navigation in apps confusing. See [Shared URLs versus Nested Routes](#shared-urls-versus-nested-routes) for more information.
+テンプレートで設定する際に、 `IonRouterOutlet` の内部には何も指定しないでください。`IonRouterOutlet` は子コンポーネントにネストすることができますが、通常はアプリケーション内のナビゲーションが混乱するため注意が必要です。詳細については、[Shared URLs versus Nested Routes](#shared-urls-versus-nested-routes) を参照してください。
 
-## Accessing the IonRouter Instance
+## IonRouter インスタンスへのアクセス
 
-There may be a few use cases where you need to get access to the `IonRouter` instance from within your Vue application. For example, you might want to know if you are at the root page of the application when a user presses the hardware back button on Android. For use cases like these, you can inject the `IonRouter` dependency into your component:
+Vueアプリケーション内から  `IonRouter` インスタンスにアクセスする必要があるユースケースがいくつかあるかもしれません。例えば、Androidでユーザーがハードウェアの 「戻る」 ボタンを押したときに、アプリケーションのルート・ページにいるかどうかを知ることができます。このようなユースケースでは、コンポーネントに `IonRouter` 依存関係を注入できます。
 
 ```typescript
 import { useIonRouter } from '@ionic/vue';
@@ -364,9 +364,9 @@ export default {
 }
 ```
 
-## URL Parameters
+## URLパラメーター
 
-Let's expand upon our original routing example to show how we can use URL parameters:
+元のルーティング例を拡張して、URLパラメータの使用方法を示します:
 
 ```typescript
 const routes: Array<RouteRecordRaw> = [
@@ -387,9 +387,9 @@ const routes: Array<RouteRecordRaw> = [
 ]
 ```
 
-Notice that we have now added `:id` to the end of our `detail` path string. URL parameters are dynamic portions of our route paths. When the user navigates to a URL such as `/details/1` the "1" is saved to a parameter named "id" which can be accessed in the component when the route renders.
+ここで、 `detail` パス文字列の最後に `:id` を追加したことに注意してください。URLパラメータは、ルートパスの動的な部分です。ユーザーが `/details/1` などのURLに移動すると、 "1" が "id" という名前のパラメータに保存され、ルートのレンダリング時にコンポーネントでアクセスできるようになります。
 
-Let's look at how to use it in our component:
+コンポーネントでの使用方法を見てみましょう。
 
 ```typescript
 <template>
@@ -429,19 +429,19 @@ export default defineComponent({
 </script>
 ```
 
-Our `route` variable contains an instance of the current route. It also contains any parameters we have passed in. We can obtain the `id` parameter from here and display it on the screen.
+`route` 変数には、現在のルートのインスタンスが含まれます。また、渡されたパラメータも含まれます。ここから `id` パラメータを取得して画面に表示できます。
 
-## Router History
+## ルーター履歴
 
-Vue Router ships with a configurable history mode. Let's look at the different options and why you might want to use each one.
+Vueルータには設定可能な履歴モードが付属しています。さまざまなオプションと、それぞれを使用する理由について説明します。
 
-* `createWebHistory`: This option creates an HTML5 history. It leverages the History API to achieve URL navigation without a page reload. This is the most common history mode for single page applications. When in doubt, use `createWebHistory`.
+* `createWebHistory`: このオプションはHTML 5ヒストリを作成します。History APIを利用して、ページをリロードせずにURLナビゲーションを実現している。これは、単一ページアプリケーションで最も一般的な履歴モードです。疑わしい場合は、 `createWebHistory` を使用します。
 
-* `createWebHashHistory`: This option adds a hash (`#`) to your URL. This is useful for web applications with no host or when you do not have full control over the server routes. Search engines sometimes ignore hash fragments, so you should use `createWebHistory` instead if SEO is important for your application.
+* `createWebHashHistory`: このオプションは、ハッシュ (`#`) をURLに追加します。これは、ホストがないWebアプリケーションや、サーバールートを完全に制御できない場合に便利です。検索エンジンはハッシュの断片を無視することがあるので、SEOがあなたのアプリケーションにとって重要であるなら、代わりに `createWebHistory` を使うべきです。
 
-* `createMemoryHistory`: This option creates an in-memory based history. This is mainly used to handle server-side rendering (SSR).
+* `createMemoryHistory`: このオプションは、インメモリベースのヒストリを作成します。これは主にサーバ側レンダリング (SSR) を処理するために使用されます。
 
-## More Information
+## より多くの情報を得るために
 
-For more info on routing in Vue using Vue Router, check out their docs at http://router.vuejs.org/.
+Vueルータを使ったVueでのルーティングの詳細については、 http://router.vuejs.org/ のドキュメントをご覧ください。
 
