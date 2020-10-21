@@ -144,7 +144,7 @@ my-component::part(container):last-child {
 }
 ```
 
-### パーツの連鎖
+### Partの連鎖
 
 `::part()` 疑似要素は、追加の `::part()` に一致しません。
 
