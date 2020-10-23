@@ -13,7 +13,7 @@ nextUrl: '/docs/react/your-first-app'
 
 UIコンポーネントに加えて、Ionic Frameworkは新しいアプリを作るためのコマンドラインツールを提供し、サポートしている様々なプラットフォームにデプロイすることができます。
 
-このガイドでは、Ionic Framework特有の機能を含め、VueとIonic Frameworkの基本について説明します。Reactに精通している方は、ガイドを楽しみ、Ionic Frameworkについて新しいことを学んでください。どちらにも詳しくない方はご安心ください!このガイドでは、基本的なことを説明し、アプリケーションを起動して実行するのに十分な情報を提供します。
+このガイドでは、Ionic Framework特有の機能を含め、ReactとIonic Frameworkの基本について説明します。Reactに精通している方は、ガイドを楽しみ、Ionic Frameworkについて新しいことを学んでください。どちらにも詳しくない方はご安心ください!このガイドでは、基本的なことを説明し、アプリケーションを起動して実行するのに十分な情報を提供します。
 
 ## Ionic CLIを使ったプロジェクト新規作成
 
@@ -23,7 +23,7 @@ UIコンポーネントに加えて、Ionic Frameworkは新しいアプリを作
 npm install -g @ionic/cli
 ```
 
-これによって使えるようになった、グローバルコマンド `ionic` によって、Ionic Frameworkと他の依存関係を持つVueプロジェクトを作成することができます。新しいプロジェクトを作成するには、次のコマンドを実行します。
+これによって使えるようになった、グローバルコマンド `ionic` によって、Ionic Frameworkと他の依存関係を持つReactプロジェクトを作成することができます。新しいプロジェクトを作成するには、次のコマンドを実行します。
 
 ```shell
 ionic start myApp blank --type=react
