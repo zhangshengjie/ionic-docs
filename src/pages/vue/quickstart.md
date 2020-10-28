@@ -634,19 +634,19 @@ export default defineComponent({
 
 `main.ts` で `addIcons` 関数を利用すると、アイコンをグローバルに登録し、キーとして文字列で指定することができます。この場合、 `Home` コンポーネントでキーでアイコンを参照します。
 
-## Optimizing Your Build
+## ビルドの最適化
 
-Vue gives you several tools to fine tune your application. This section will cover the options that are most relevant to Ionic Framework.
+Vueには、アプリケーションを調整するためのツールがいくつか用意されています。このセクションでは、Ionic Frameworkに最も関連するオプションについて説明します。
 
-### Local Component Registration (Recommended)
+### ローカルコンポーネント登録 (推奨)
 
-By default, Ionic Framework components are registered locally. With local registration, these components are imported and provided to each Vue component you want to use them in. This is the recommended approach as it allows lazy loading and treeshaking to work properly with Ionic Framework components.
+デフォルトでは、Ionic Frameworkコンポーネントはローカルに登録されます。ローカルでの登録では、これらのコンポーネントはそれぞれのVueコンポーネントにインポートされ、提供されます。これは、遅延読み込みとツリーの共有がIonic Frameworkコンポーネントで正しく動作するため、推奨される方法です。
 
-The one downside to this approach is that it may be tedious to re-import your Ionic Framework components multiple times. However, we feel that the performance benefits you receive in exchange are worth it.
+この方法の1つの欠点は、Ionic Frameworkコンポーネントを何度もインポートし直すのが面倒なことです。しかし、その見返りとして得られるパフォーマンス上のメリットには価値があると考えています。
 
-Also note that locally registered components are not available in subcomponents. You will need to re-import the Ionic Framework components you would like to use in your subcomponent.
+また、ローカルに登録されたコンポーネントはサブコンポーネントでは使用できません。サブコンポーネントで使用するためには、Ionic Frameworkコンポーネントを再インポートする必要があります。
 
-Let's take a look at how local component registration works:
+ローカルコンポーネント登録の仕組みを見てみましょう:
 
 ```html
 <template>
@@ -668,19 +668,19 @@ export default defineComponent({
 </script>
 ```
 
-In the example above, we are using the `IonPage` and `IonContent` components. To use them, we first import them from `@ionic/vue`. Then, we provide them to our Vue component in the `components` option. From there, we can use the components in our template.
+上の例では、 `IonPage` コンポーネントと `IonContent` コンポーネントを使用しています。これらを使用するには、まず `@ionic/vue` からインポートします。次に、これらを `components` オプションでVueコンポーネントに提供します。これによって、テンプレートのコンポーネントを使用できます。
 
-Note that since we are registering these components locally, neither `IonPage` nor `IonContent` will be available in `Subcomponent` unless we register them there as well.
+> Note これらのコンポーネントはローカルに登録しているため、 `Subcomponent` では（登録しない限り） `IonPage` と `IonContent` は使用できません。
 
-For more information, see the <a href="https://v3.vuejs.org/guide/component-registration.html#local-registration" target="_blank" rel="noopener noreferrer">Local Registration Vue Documentation</a>.
+詳細については、<a href="https://v3.vuejs.org/guide/component-registration.html#local-registration" target="_blank" rel="noopener noreferrer">Local Registration Vue Documentation</a> のマニュアルを参照してください。
 
-### Global Component Registration
+### グローバルコンポーネント登録
 
-The other option for registering components is to use global registration. Global registration involves importing the components you want to use in `main.ts` and calling the `component` method on your Vue app instance.
+コンポーネントを登録するためのもう1つのオプションは、グローバル登録を使用することです。グローバル登録には、 `main.ts` で使用するコンポーネントをインポートし、Vueアプリインスタンスで`component` メソッドを呼び出すことが含まれます。
 
-While this makes it easier to add Ionic Framework components to your Vue app, global registration often is not ideal. To quote the Vue documentation: "If you're using a build system like Webpack, globally registering all components means that even if you stop using a component, it could still be included in your final build. This unnecessarily increases the amount of JavaScript your users have to download".
+これにより、VueアプリにIonic Frameworkコンポーネントを追加するのは簡単になりますが、グローバル登録は理想的ではありません。Vueのドキュメントを引用すると、「Webpackなどのビルドシステムを使用している場合、すべてのコンポーネントをグローバルに登録すると、コンポーネントの使用を停止しても、最終ビルドに含めることができます。これにより、ユーザーがダウンロードしなければならないJavaScriptの量が不必要に増加します」とあります。
 
-Let's take a look at how global component registration works:
+グローバルコンポーネント登録の仕組みを見てみましょう:
 
 **main.ts**
 ```typescript
@@ -714,15 +714,15 @@ export default defineComponent({
 </script>
 ```
 
-In the example above, we are using the `IonPage` and `IonContent` components. To use them, we first import them from `@ionic/vue` in `main.ts`. From there, we call the `component` method on our app instance and pass it the tag name as well as the component definition. After we do that, we can use the components in the rest of our application without having to import them into each Vue component.
+上の例では、 `IonPage` コンポーネントと `IonPage` コンポーネントを使用しています。これらを使用するには、まず `main.ts` の `@ionic/vue` からインポートします。次に、appインスタンスで `component` メソッドを呼び出し、タグ名とコンポーネント定義を渡します。これを行うと、各Vueコンポーネントにコンポーネントをインポートしなくても、アプリケーションの残りの部分でコンポーネントを使用できます。
 
-For more information, see the <a href="https://v3.vuejs.org/guide/component-registration.html#global-registration" target="_blank" rel="noopener noreferrer">Global Registration Vue Documentation</a>.
+詳細については、<a href="https://v3.vuejs.org/guide/component-registration.html#global-registration" target="_blank" rel="noopener noreferrer">Global Registration Vue Documentation</a> のドキュメントを参照してください。
 
-### Prefetching Application JavaScript
+### JavaScriptのプリフェッチ
 
-By default, the Vue CLI will automatically generate prefetch hints for the JavaScript in your application. Prefetching utiltizes the browser idle time to download documents that the user might visit in the near future. When the user visits a page that requires the prefetched document, it can be served quickly from the browser's cache.
+デフォルトでは、Vue CLIはアプリケーション内のJavaScriptのプリフェッチ・ヒントを自動的に生成します。プリフェッチでは、ブラウザのアイドル時間を利用して、ユーザーが近い将来にアクセスする可能性のある文書をダウンロードします。ユーザーがプリフェッチされたドキュメントを必要とするページにアクセスすると、ブラウザのキャッシュからすぐに提供できます。
 
-Prefetching consumes bandwidth, so if you have a large app, you may want to disable it. You can do this by modifying or creating your `vue.config.js` file:
+プリフェッチは帯域幅を消費するため、大規模なアプリケーションを使用している場合は無効にすることをお勧めします。これを行うには、`vue.config.js`ファイルを変更または作成します:
 
 **vue.config.js**
 ```js
@@ -733,7 +733,7 @@ module.exports = {
 }
 ```
 
-The configuration above will prevent all files from being prefetched and, instead, will be loaded when they are needed. You can also select certain chunks to prefetch. Check out the <a href="https://cli.vuejs.org/guide/html-and-static-assets.html#prefetch" target="_blank" rel="noopener noreferrer">Vue CLI Docs on Prefetching</a> for more examples.
+上記の構成では、すべてのファイルがプリフェッチされず、必要なときにロードされます。プリフェッチするチャンクを選択することもできます。その他の例については、 <a href="https://cli.vuejs.org/guide/html-and-static-assets.html#prefetch" target="_blank" rel="noopener noreferrer">Vue CLI Docs on Prefetching</a> を参照してください。
 
 ## ネイティブアプリとしてビルド
 
