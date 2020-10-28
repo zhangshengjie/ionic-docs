@@ -33,6 +33,29 @@ cd myApp
 
 これで、 `ionic serve` を実行することによって、プロジェクトをブラウザで実行することができます。
 
+## TypeScript と JavaScript のどちらで構築するかを選べます
+
+私たちはTypeScriptが大好きで、スケールさせるアプリを構築するための素晴らしいツールだと確信しています。とはいえ、Vueコミュニティがいかにシンプルさを重視しているかは、ツールや言語などでわかっています。実際、そもそもVueに興味を持ったのはそのおかげかもしれません。シンプルに開始し、必要に応じてスケールアップします。
+
+したがって、TypeScriptの代わりにJavaScriptを使うことができます。Ionic Vueアプリケーションを生成したら、次の手順を実行してください。
+
+1. TypeScriptの依存を削除:
+
+```shell
+npm uninstall --save typescript @types/jest @typescript-eslint/eslint-plugin @typescript-eslint/parser @vue/cli-plugin-typescript @vue/eslint-config-typescript
+```
+
+2. すべての `.ts` ファイルの拡張子を `.js` にします。blank Ionic Vueアプリでは、 `router/index.ts` と `main.ts` が該当します。
+
+3. `@vue/typescript/recommended` と `@typescript-eslint/no-explicit-any: ‘off’, ` を `.eslintrc.js` から削除します。
+
+4. `router/index.js` から `Array<RouteRecordRaw>` を削除します。
+
+5. `shims-vue.d.ts`ファイルを削除します。
+
+6. Vueコンポーネントにある `script` タグから `lang="ts"` を削除します。blank Ionic Vueアプリの場合、 `App.vue` と `views/Home.vue` が該当します。
+
+
 ## Vueコンポーネントの確認
 
 アプリケーションのベースは `src` ディレクトリにあり、メインのエントリポイントは `main.ts` になります。エディタでプロジェクトを開き、`main.ts` を確認すると、次のように表示されます:
@@ -47,7 +70,7 @@ import router from './router';
 const app = createApp(App)
   .use(IonicVue)
   .use(router);
-  
+
 router.isReady().then(() => {
   app.mount('#app');
 });
@@ -89,7 +112,7 @@ scriptに書かれているimportのグループを分解してみていきま�
 import { IonApp, IonRouterOutlet } from '@ionic/vue';
 ```
 
-Vueでコンポーネントを使用するには、最初にコンポーネントをインポートする必要があります。したがって、Ionic Frameworkの場合、ButtonやCardを使用するときはいつでもインポートに追加する必要があります。 `App` コンポーネントの場合は、 `IonApp` と `IonRouterOutlet` を使用します。
+Vueでコンポーネントを使用するには、最初にコンポーネントをインポートする必要があります。したがって、Ionic Frameworkの場合、ButtonやCardを使用するときはいつでもインポートに追加する必要があります。 `App` コンポーネントの場合は、 `IonApp` と `IonRouterOutlet` を使用します。 You can also register components globally if you find yourself importing the same components repeatedly. This comes with performance tradeoffs that we cover in [Optimizing Your App](#optimizing-your-app).
 
 次に、テンプレートを見てみましょう。
 
@@ -192,14 +215,14 @@ const routes: Array<RouteRecordRaw> = [
         <ion-title>Blank</ion-title>
       </ion-toolbar>
     </ion-header>
-    
+
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
           <ion-title size="large">Blank</ion-title>
         </ion-toolbar>
       </ion-header>
-    
+
       <div id="container">
         <strong>Ready to create an app?</strong>
         <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
@@ -227,7 +250,7 @@ export default defineComponent({
 <style scoped>
 #container {
   text-align: center;
-  
+
   position: absolute;
   left: 0;
   right: 0;
@@ -243,9 +266,9 @@ export default defineComponent({
 #container p {
   font-size: 16px;
   line-height: 22px;
-  
+
   color: #8c8c8c;
-  
+
   margin: 0;
 }
 
@@ -578,7 +601,7 @@ import { addIcons } from 'ionicons';
 import { heart } from 'ionicons/icons';
 
 addIcons({
-  'heart': heart 
+  'heart': heart
 });
 ```
 
@@ -610,7 +633,108 @@ export default defineComponent({
 ```
 
 `main.ts` で `addIcons` 関数を利用すると、アイコンをグローバルに登録し、キーとして文字列で指定することができます。この場合、 `Home` コンポーネントでキーでアイコンを参照します。
- 
+
+## ビルドの最適化
+
+Vueには、アプリケーションを調整するためのツールがいくつか用意されています。このセクションでは、Ionic Frameworkに最も関連するオプションについて説明します。
+
+### ローカルコンポーネント登録 (推奨)
+
+デフォルトでは、Ionic Frameworkコンポーネントはローカルに登録されます。ローカルでの登録では、これらのコンポーネントはそれぞれのVueコンポーネントにインポートされ、提供されます。これは、遅延読み込みとツリーの共有がIonic Frameworkコンポーネントで正しく動作するため、推奨される方法です。
+
+この方法の1つの欠点は、Ionic Frameworkコンポーネントを何度もインポートし直すのが面倒なことです。しかし、その見返りとして得られるパフォーマンス上のメリットには価値があると考えています。
+
+また、ローカルに登録されたコンポーネントはサブコンポーネントでは使用できません。サブコンポーネントで使用するためには、Ionic Frameworkコンポーネントを再インポートする必要があります。
+
+ローカルコンポーネント登録の仕組みを見てみましょう:
+
+```html
+<template>
+  <ion-page>
+    <ion-content>
+      <Subcomponent></Subcomponent>
+    </ion-content>
+  </ion-page>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+import { IonContent, IonPage } from '@ionic/vue';
+import Subcomponent from '@/components/Subcomponent.vue';
+
+export default defineComponent({
+  components: { IonContent, IonPage, Subcomponent }
+});
+</script>
+```
+
+上の例では、 `IonPage` コンポーネントと `IonContent` コンポーネントを使用しています。これらを使用するには、まず `@ionic/vue` からインポートします。次に、これらを `components` オプションでVueコンポーネントに提供します。これによって、テンプレートのコンポーネントを使用できます。
+
+> Note これらのコンポーネントはローカルに登録しているため、 `Subcomponent` では（登録しない限り） `IonPage` と `IonContent` は使用できません。
+
+詳細については、<a href="https://v3.vuejs.org/guide/component-registration.html#local-registration" target="_blank" rel="noopener noreferrer">Local Registration Vue Documentation</a> のマニュアルを参照してください。
+
+### グローバルコンポーネント登録
+
+コンポーネントを登録するためのもう1つのオプションは、グローバル登録を使用することです。グローバル登録には、 `main.ts` で使用するコンポーネントをインポートし、Vueアプリインスタンスで`component` メソッドを呼び出すことが含まれます。
+
+これにより、VueアプリにIonic Frameworkコンポーネントを追加するのは簡単になりますが、グローバル登録は理想的ではありません。Vueのドキュメントを引用すると、「Webpackなどのビルドシステムを使用している場合、すべてのコンポーネントをグローバルに登録すると、コンポーネントの使用を停止しても、最終ビルドに含めることができます。これにより、ユーザーがダウンロードしなければならないJavaScriptの量が不必要に増加します」とあります。
+
+グローバルコンポーネント登録の仕組みを見てみましょう:
+
+**main.ts**
+```typescript
+import { IonContent, IonicVue, IonPage } from '@ionic/vue';
+
+const app = createApp(App)
+  .use(IonicVue)
+  .use(router);
+
+app.component('ion-content', IonContent);
+app.component('ion-page', IonPage);
+```
+
+**MyComponent.vue**
+```html
+<template>
+  <ion-page>
+    <ion-content>
+      <Subcomponent></Subcomponent>
+    </ion-content>
+  </ion-page>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+import Subcomponent from '@/components/Subcomponent.vue';
+
+export default defineComponent({
+  components: { Subcomponent }
+});
+</script>
+```
+
+上の例では、 `IonPage` コンポーネントと `IonPage` コンポーネントを使用しています。これらを使用するには、まず `main.ts` の `@ionic/vue` からインポートします。次に、appインスタンスで `component` メソッドを呼び出し、タグ名とコンポーネント定義を渡します。これを行うと、各Vueコンポーネントにコンポーネントをインポートしなくても、アプリケーションの残りの部分でコンポーネントを使用できます。
+
+詳細については、<a href="https://v3.vuejs.org/guide/component-registration.html#global-registration" target="_blank" rel="noopener noreferrer">Global Registration Vue Documentation</a> のドキュメントを参照してください。
+
+### JavaScriptのプリフェッチ
+
+デフォルトでは、Vue CLIはアプリケーション内のJavaScriptのプリフェッチ・ヒントを自動的に生成します。プリフェッチでは、ブラウザのアイドル時間を利用して、ユーザーが近い将来にアクセスする可能性のある文書をダウンロードします。ユーザーがプリフェッチされたドキュメントを必要とするページにアクセスすると、ブラウザのキャッシュからすぐに提供できます。
+
+プリフェッチは帯域幅を消費するため、大規模なアプリケーションを使用している場合は無効にすることをお勧めします。これを行うには、`vue.config.js`ファイルを変更または作成します:
+
+**vue.config.js**
+```js
+module.exports = {
+  chainWebpack: config => {
+    config.plugins.delete('prefetch')
+  }
+}
+```
+
+上記の構成では、すべてのファイルがプリフェッチされず、必要なときにロードされます。プリフェッチするチャンクを選択することもできます。その他の例については、 <a href="https://cli.vuejs.org/guide/html-and-static-assets.html#prefetch" target="_blank" rel="noopener noreferrer">Vue CLI Docs on Prefetching</a> を参照してください。
+
 ## ネイティブアプリとしてビルド
 
 UIコンポーネントやナビゲーションなど、Ionic Vueアプリの基本的な部分はすでに完成しています。Ionic Frameworkのコンポーネントの素晴らしいところは、iOS、Android、PWAを含むどこでも動作することです。モバイル、デスクトップ、その他にもデプロイするために、Ionicのクロスプラットフォームライブラリ [Capacitor](https://capacitor.ionicframework.com) を使用することができます。一貫性のあるWebに特化したAPIセットを提供することで、 Web標準をサポートするプラットフォーム上の豊富なネイティブデバイス機能にアクセスしながら、アプリケーションを可能な限りWeb標準に近づけることが可能になります。
@@ -684,10 +808,10 @@ export default defineComponent({
         allowEditing: true,
         resultType: CameraResultType.Uri
       });
-      
+
       imageSrc.value = image.webPath;
     }
-    
+
     return {
       photo: imageSrc,
       takePhoto
