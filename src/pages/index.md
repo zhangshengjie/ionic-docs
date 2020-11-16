@@ -10,7 +10,7 @@ nextText: 'Environment Setup'
 nextUrl: '/docs/intro/environment'
 ---
 
-Ionic FrameworkはオープンソースのUIツールキットで、HTML、CSS、JavaScriptなどのウェブ技術を使って、<a href="/docs/angular/overview" target="_blank"> Angular</a> や <a href="/react" target="_blank">React</a> といった人気フレームワークと併用することで高性能で高品質なモバイルアプリやデスクトップアプリを作ることができます。
+Ionic FrameworkはオープンソースのUIツールキットで、HTML、CSS、JavaScriptなどのウェブ技術を使って、<a href="/docs/angular/overview" target="_blank"> Angular</a> や <a href="/react" target="_blank">React</a> 、 <a href="/docs/vue/overview">Vue</a> といった人気フレームワークと併用することで高性能で高品質なモバイルアプリやデスクトップアプリを作ることができます。
 
 <a href="/docs/intro/cli">Ionicのインストール</a> や <a href="/docs/intro/next#build-your-first-app">初めての開発</a> を参考に、主な概念を学ぶことができます。
 
@@ -41,15 +41,15 @@ Ionic Frameworkは、UIコントロール、インタラクション、ジェス
 
 Ionicは、ウェブ開発者がすべての主要アプリストアとモバイルウェブ用のアプリを単一のコードベースから構築できるすばらしいモバイルアプリスタックです。また、<a href="/docs/theming/platform-styles">Adaptive Styling</a>によって、Ionicアプリはすべてのデバイス上で適切な外観と操作感を提供します。
 
-#### パフォーマンスにフォーカス
+### パフォーマンスにフォーカス
 
 Ionicは、効率的なハードウェアアクセラレーション、タッチに最適化されたジェスチャなどのベストプラクティスにより、最新のモバイルデバイスで優れたパフォーマンスと動作を実現するように設計されています。
 
-#### クリーンでシンプル、機能的なデザイン
+### クリーンでシンプル、機能的なデザイン
 
 Ionicは、現在のすべてのモバイルデバイスおよびプラットフォームで美しく動作し、表示するように設計されています。事前に用意されたコンポーネント、タイポグラフィ、各プラットフォームに対応したすばらしい(まだ拡張可能な)ベーステーマにより、スタイルを構築できます。
 
-#### ネイティブおよびWebに最適化
+### ネイティブおよびWebに最適化
 
 IonicはネイティブアプリケーションのUIガイドラインをエミュレートし、ネイティブSDKを使用して、ネイティブアプリのUI標準とデバイス機能を、オープンWebの完全なパワーと柔軟性とともに実現します。IonicはCapacitor(またはCordova)を使ってネイティブにデプロイするか、Progressive Web Appとしてブラウザで実行します。
 
