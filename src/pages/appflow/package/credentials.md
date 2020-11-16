@@ -34,7 +34,7 @@ memberships](https://developer.apple.com/support/compare-memberships/).
 
 Every app must register an ID with Apple.
 
-* Navigate to [Certificates, Identifiers & Profiles › Identifiers › App IDs](https://developer.apple.com/account/ios/identifier/bundle) in the [Apple Developer Center](https://developer.apple.com/account) and register a new App ID.
+* Navigate to [Certificates, IDs & Profiles › Identifiers](https://developer.apple.com/account/resources/identifiers/list) in the [Apple Developer Center](https://developer.apple.com/account) and register a new App ID.
 
 ![iOS App id](/docs/assets/img/appflow/ss-profiles-ios-app-id.png)
 
@@ -42,9 +42,9 @@ Every app must register an ID with Apple.
 
 ### Device Registration
 
-Devices must be explicitly registered with Apple for sending push notifications during development.
+Devices must be explicitly registered with Apple for development.
 
-* Navigate to [Certificates, Identifiers & Profiles › Devices › All](https://developer.apple.com/account/ios/device/) in the [Apple Developer Center](https://developer.apple.com/account) and register a new Device.
+* Navigate to [Certificates, IDs & Profiles › Devices](https://developer.apple.com/account/resources/devices/list) in the [Apple Developer Center](https://developer.apple.com/account) and register a new Device.
 
 ![iOS Register Device](/docs/assets/img/appflow/ss-profiles-ios-device-register-1.png)
 
@@ -77,17 +77,18 @@ $ openssl genrsa -out keyname.key 2048
 $ openssl req -new -key keyname.key -out CertificateSigningRequest.certSigningRequest
 ```
 
-### iOS App Certificate & Provisioning Profile
+### iOS App Certificate & Provisioning Profile(s)
 
 Before you can generate App Certificates & Provisioning Profiles, you'll need to [register your app and any devices, and obtain a `.certSigningRequest`](#ios-setup).
 
 App Certificates & Provisioning Profiles are for signing your app and giving it access to certain devices.
 
+
 #### Certificate
 
 There are two types of Apple certificates: development and production. We'll guide you through generating signing certificates with a development certificate.
 
-* Navigate to [Certificates, Identifiers & Profiles › Certificates › Development](https://developer.apple.com/account/ios/certificate/development) in the [Apple Developer Center](https://developer.apple.com/account) and create a new certificate. Under Development, select iOS App Development.
+* Navigate to [Certificates, IDs & Profiles › Certificates](https://developer.apple.com/account/resources/certificates/list) in the [Apple Developer Center](https://developer.apple.com/account) and create a new certificate. Under Development, select iOS App Development.
 
 ![iOS Cert](/docs/assets/img/appflow/ss-profiles-ios-cert-1.png)
 
@@ -124,7 +125,7 @@ $ openssl pkcs12 -export -inkey keyname.key -in ios_development.cer.pem -out Cer
 
 Provisioning profiles give your app access to be installed, or *provisioned*, on specific devices. For iOS App Development provisioning profiles, devices are selected manually.
 
-* Navigate to [Certificates, Identifiers & Profiles › Provisioning Profiles › Development](https://developer.apple.com/account/ios/profile/limited) in the [Apple Developer Center](https://developer.apple.com/account) and create a new provisioning profile.
+* Navigate to [Certificates, IDs & Profiles › Profiles](https://developer.apple.com/account/resources/profiles/list) in the [Apple Developer Center](https://developer.apple.com/account) and create a new provisioning profile.
 
 ![iOS Provisioning Profile](/docs/assets/img/appflow/ss-profiles-ios-pp-1.png)
 
@@ -133,3 +134,12 @@ Provisioning profiles give your app access to be installed, or *provisioned*, on
 * Select the certificate you generated.
 * Select any and all development devices.
 * Download the `.mobileprovision` file, which is your provisioning profile file.
+
+#### Multiple Provisioning Profiles
+For apps that have extensions and require multiple provisioning profiles (apps with watch apps for example), these are the requirements to build them in AppFlow:
+
+* Multiple profiles are only supported for [Capacitor](https://capacitor.ionicframework.com) apps
+* That there is one project, one workspace, and one scheme that are all named the same
+* One certificate is used for all provisioning profiles (and that is the certificate for the app in Appflow)
+* Each extension is a separate target
+* WidgetKit for app widgets is only supported on Xcode 12 or newer
