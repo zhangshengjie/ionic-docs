@@ -20,7 +20,7 @@ Ionic Frameworkはアプリで使えるいくつかのライフサイクルメ�
 | `ionViewWillLeave` | コンポーネントを離脱するアニメーションがはじまる時に発火します。  |
 | `ionViewDidLeave`  | コンポーネントを離脱するアニメーションが終了した時に発火します。 |
 
-ライフサイクルメソッドはVueコンポーネントからアクセスすることができます:
+ライフサイクルメソッドはVueコンポーネントのルートにある関数として、Vueコンポーネントからアクセスすることができます:
 
 ```typescript
 import { IonPage } from '@ionic/vue';
@@ -28,19 +28,17 @@ import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'Home',
-  methods: {
-    ionViewDidEnter() {
-      console.log('Home page did enter');
-    },
-    ionViewDidLeave() {
-      console.log('Home page did leave');
-    },
-    ionViewWillEnter() {
-      console.log('Home page will enter');
-    },
-    ionViewWillLeave() {
-      console.log('Home page will leave');
-    }
+  ionViewDidEnter() {
+    console.log('Home page did enter');
+  },
+  ionViewDidLeave() {
+    console.log('Home page did leave');
+  },
+  ionViewWillEnter() {
+    console.log('Home page will enter');
+  },
+  ionViewWillLeave() {
+    console.log('Home page will leave');
   },
   components: {
     IonPage
