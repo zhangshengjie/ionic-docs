@@ -109,9 +109,17 @@ export class DocsHeader {
 
           <nav class="UtilNav">
             <ionic-search></ionic-search>
+            <a href="https://zenn.dev/topics/ionic" target="_blank">
+              <span class="lg-only">Zenn</span>
+              <span class="sm-only">Zenn <ForwardArrow class="Dropdown-arrow"/></span>
+            </a>
+            <a href="https://ionicframework.jp/case/" target="_blank">
+              <span class="lg-only">事例</span>
+              <span class="sm-only">事例 <ForwardArrow class="Dropdown-arrow"/></span>
+            </a>
             <docs-dropdown label={getString('header-community')} align="right">
               <section>
-                <a href="https://ionicframework.com/community" target="_blank">Community Hub</a>
+                <a href="https://ionicframework.com/community" target="_blank">世界のコミュニティ</a>
               </section>
               <section>
                 <a href="https://ionic-jp.herokuapp.com/" target="_blank">Slack（日本）</a>
@@ -137,7 +145,7 @@ export class DocsHeader {
                 <a href="https://ionicframework.com/advisory" target="_blank">Enterprise Advisory</a>
               </section>
             </docs-dropdown>
-            <docs-dropdown icon={Translation} align="right" label="Translations" class="label-sm-only">
+            <docs-dropdown icon={Translation} align="right" label="翻訳" class="label-sm-only">
               <section>
                 <a href="https://ionicframework.com/en/docs/" target="_blank">English</a>
                 <a href="https://ionicframework.com/jp/docs/" class="link-active">
@@ -148,7 +156,7 @@ export class DocsHeader {
                 </a>
               </section>
               <section>
-                <a href="https://ionicframework.com/translate" target="_blank">Translate</a>
+                <a href="https://ionicframework.com/translate" target="_blank">翻訳に協力する</a>
               </section>
               {/* WIP Languages - included for pre-rendering, but hidden */}
               <div style={{ display: 'none' }}>
@@ -158,14 +166,6 @@ export class DocsHeader {
                 <a href="/docs/es">Spanish</a>
               </div>
             </docs-dropdown>
-            <a href="https://ionicframework.jp/case/" target="_blank">
-              <span class="lg-only">事例</span>
-              <span class="sm-only">事例 <ForwardArrow class="Dropdown-arrow"/></span>
-            </a>
-            <a href="https://github.com/ionic-jp/ionic-docs" target="_blank">
-              <span class="lg-only">翻訳に協力</span>
-              <span class="sm-only">翻訳に協力 <ForwardArrow class="Dropdown-arrow"/></span>
-            </a>
             <a href="https://github.com/ionic-team/ionic" target="_blank">
               <ion-icon name="logo-github" class="lg-only"></ion-icon>
               <span class="sm-only">GitHub <ForwardArrow class="Dropdown-arrow"/></span>
