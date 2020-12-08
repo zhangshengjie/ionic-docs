@@ -75,6 +75,7 @@ module.exports = {
       trackingID: 'UA-44023830-8',
     },
   },
+  themes: ['@ionic-internal/docusaurus-theme'],
   presets: [
     [
       '@docusaurus/preset-classic',
