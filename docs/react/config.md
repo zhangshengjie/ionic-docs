@@ -1,11 +1,7 @@
 ---
-previousText: 'Navigation'
-previousUrl: '/docs/react/navigation'
-nextText: 'Platform'
-nextUrl: '/docs/react/platform'
+title: Config
 ---
 
-# Config
 
 Ionic Config provides a way to change the properties of components globally across an app. It can set the app mode, tab button layout, animations, and more.
 

@@ -1,11 +1,7 @@
 ---
-previousText: 'CSS Variables'
-previousUrl: '/docs/theming/css-variables'
-nextText: 'Colors'
-nextUrl: '/docs/theming/colors'
+title: CSS Shadow Parts
 ---
 
-# CSS Shadow Parts
 
 CSS Shadow Parts allow developers to style CSS properties on an element inside of a shadow tree. This is extremely useful in customizing Ionic Framework <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM" target="_blank" rel="noopener noreferrer">Shadow DOM</a> components.
 

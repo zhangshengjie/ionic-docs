@@ -1,21 +1,17 @@
 ---
-previousText: 'Creating a Photo Gallery with Device Storage'
-previousUrl: '/docs/developer-resources/guides/first-app-v3/creating-photo-gallery-device-storage'
-nextText: 'Realtime App Updates with Appflow Live Deploys'
-nextUrl: '/docs/developer-resources/guides/first-app-v3/realtime-updates-ionic-deploy'
+title: Make It Your Own! Ionic Theming
 ---
 
-# Make It Your Own! Ionic Theming
 
 Previously, we converted our single use Camera app into an epic photo gallery. Now, let’s explore how to make the photo gallery our own with Ionic theming. The visual design of the app is incredibly important - fortunately, Ionic provides a lot for us out-of-the-box. You can find the code for this in [the “part 3” folder](https://github.com/ionic-team/photo-gallery-tutorial-ionic3/tree/master/part3) on GitHub.
 
 Ionic has five default colors, defined as Sass variables, that can be used to change the color of its UI components:
 
-![v3-theming](/docs/assets/img/guides/first-app-v3/v3-theming.png)
+![v3-theming](/img/guides/first-app-v3/v3-theming.png)
 
 You can customize each color further by supplying a base and contract property. Base acts as the background color and contrast acts as the text color for most components. This provides much more flexible control over your styles:
 
-![v3-theming-colors](/docs/assets/img/guides/first-app-v3/v3-themeColors.png)
+![v3-theming-colors](/img/guides/first-app-v3/v3-themeColors.png)
 
 You can find these colors defined in `src/theme/variables.scss`.
 
@@ -29,7 +25,7 @@ $colors: (
 
 But wait, there’s more! Ionic automatically provides platform specific styles based on the device the application is running on, giving that native look and feel your users are used to:
 
-![ios and android comparison](/docs/assets/img/guides/first-app-v3/ion-lab-comparison.png)
+![ios and android comparison](/img/guides/first-app-v3/ion-lab-comparison.png)
 
 In our app, this is clearly visible in how the header and the icons are styled.
 
@@ -47,7 +43,7 @@ imports: [
 
 Now, the iOS version of our app has a Material Design skin!
 
-![ios and android comparison](/docs/assets/img/guides/first-app-v3/ion-lab-md-styling.png)
+![ios and android comparison](/img/guides/first-app-v3/ion-lab-md-styling.png)
 
 Creating gorgeous-looking Ionic apps is easy with Sass variables and platform-specific styling. You now have everything you need to get started with Ionic. Go forth and build great apps!
 

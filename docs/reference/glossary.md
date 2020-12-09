@@ -1,9 +1,7 @@
 ---
-nextText: 'Versioning'
-nextUrl: '/docs/reference/versioning'
+title: Glossary
 ---
 
-# Glossary
 
 <div id="what-is">
 

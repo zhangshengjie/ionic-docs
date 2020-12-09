@@ -1,9 +1,7 @@
 ---
-nextText: 'Build Your First App'
-nextUrl: '/docs/angular/your-first-app'
+title: Ionic Angular Overview
+sidebar_label: Overview
 ---
-
-# Ionic Angular Overview
 
 `@ionic/angular` combines the core Ionic experience with the tooling and APIs that are tailored to Angular Developers.
 

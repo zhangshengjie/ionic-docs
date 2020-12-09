@@ -1,8 +1,6 @@
 ---
-previousText: 'Progressive Web Apps'
-previousUrl: '/docs/vue/pwa'
+title: Testing
 ---
 
-# Testing
 
 Coming Soon!

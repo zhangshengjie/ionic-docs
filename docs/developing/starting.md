@@ -1,15 +1,14 @@
 ---
-nextText: 'Previewing'
-nextUrl: '/docs/developing/previewing'
+title: Starting an App
+sidebar_label: Starting
 contributors:
   - dwieeb
 ---
 
-# Starting an App
 
 Starting a new Ionic app is incredibly simple. From the command line, run the `ionic start` command and the CLI will handle the rest.
 
-<command-line>
+```
     <command-prompt>ionic start</command-prompt>
     <command-output>
         <br />
@@ -21,7 +20,7 @@ Starting a new Ionic app is incredibly simple. From the command line, run the `i
         <br />
         <span class="bold green">?</span> <span class="bold">Project name:</span> <command-cursor blink></command-cursor><br />
     </command-output>
-</command-line>
+```
 
 The Ionic CLI will display prompts asking for the new project's name and which template to use. These details can be provided as command arguments:
 

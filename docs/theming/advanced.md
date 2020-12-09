@@ -1,16 +1,13 @@
 ---
+title: Advanced Theming
+sidebar_label: Advanced
 initialTab: 'preview'
 inlineHtmlPreviews: true
-previousText: 'Themes'
-previousUrl: '/docs/theming/themes'
-nextText: 'Color Generator'
-nextUrl: '/docs/theming/color-generator'
 contributors:
   - brandyscarney
   - marcjulian
 ---
 
-# Advanced Theming
 
 CSS-based theming enables apps to customize the colors quickly by loading a CSS file or changing a few CSS property values.
 

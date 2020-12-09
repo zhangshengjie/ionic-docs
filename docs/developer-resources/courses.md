@@ -1,13 +1,9 @@
 ---
-previousText: 'Books'
-previousUrl: '/docs/developer-resources/books'
-nextText: 'Guides'
-nextUrl: '/docs/developer-resources/guides'
+title: Courses
 contributors:
   - walkingriver
 ---
 
-# Courses
 
 ### [Elite Ionic](https://www.joshmorony.com/elite/)
 

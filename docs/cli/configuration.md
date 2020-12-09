@@ -1,8 +1,8 @@
 ---
+title: Configuration
 
 ---
 
-# Configuration
 
 ## Files
 

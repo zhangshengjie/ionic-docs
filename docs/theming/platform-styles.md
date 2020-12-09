@@ -1,14 +1,10 @@
 ---
+title: Platform Styles
 disableHtmlPreviews: true
-previousText: 'Theming Basics'
-previousUrl: '/docs/theming/basics'
-nextText: 'CSS Variables'
-nextUrl: '/docs/theming/css-variables'
 contributors:
   - brandyscarney
 ---
 
-# Platform Styles
 
 Ionic provides platform specific styles based on the device the application is running on. Styling the components to match the device guidelines allows the application to be written once but look and feel native to the user depending on where it is accessed.
 

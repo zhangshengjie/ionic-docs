@@ -1,8 +1,8 @@
 ---
+title: Working with Code
 
 ---
 
-# Working with Code
 
 Ionic Studio works alongside your code editor of choice to enable more complex development workflows
 that go beyond Studio's UI development features.
@@ -13,7 +13,7 @@ To launch your Studio app project in your editor of choice, navigate to the Desi
 the Project -> Open in Editor menu bar item may be used.
 
 <figure>
-  <img alt="New Feature Button" src="/docs/assets/img/studio/2/ss-designer-index.png" />
+  <img alt="New Feature Button" src="/img/studio/2/ss-designer-index.png" />
 </figure>
 
 ## Configuring your Editor

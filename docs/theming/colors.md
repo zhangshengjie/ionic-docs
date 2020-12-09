@@ -1,13 +1,9 @@
 ---
+title: Colors
 initialTab: 'preview'
 inlineHtmlPreviews: true
-previousText: 'CSS Shadow Parts'
-previousUrl: '/docs/theming/css-shadow-parts'
-nextText: 'Themes'
-nextUrl: '/docs/theming/themes'
 ---
 
-# Colors
 
 Ionic has nine default colors that can be used to change the color of many components. Each color is actually a collection of multiple properties, including a `shade` and `tint`, used throughout Ionic.
 

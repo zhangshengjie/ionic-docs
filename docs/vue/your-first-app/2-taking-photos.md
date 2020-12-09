@@ -1,11 +1,8 @@
 ---
-previousText: 'Your First App'
-previousUrl: '/docs/vue/your-first-app'
-nextText: 'Saving Photos on Filesystem'
-nextUrl: '/docs/vue/your-first-app/3-saving-photos'
+title: Taking Photos with the Camera
+sidebar_label: Taking Photos
 ---
 
-# Taking Photos with the Camera
 
 Now for the fun part - adding the ability to take photos with the device’s camera using the Capacitor [Camera API](https://capacitor.ionicframework.com/docs/apis/camera). We’ll begin with building it for the web, then make some small tweaks to make it work on mobile (iOS and Android).
 
@@ -82,7 +79,7 @@ export default  {
 
 Save the file, and if you’re not already, restart the development server in your browser by running `ionic serve`. On the Photo Gallery tab, click the Camera button. If your computer has a webcam of any sort, a modal window appears. Take a selfie!
 
-![Camera API on the web](/docs/assets/img/guides/first-app-cap-ng/camera-web.png)
+![Camera API on the web](/img/guides/first-app-cap-ng/camera-web.png)
 
 _(Your selfie is probably much better than mine)_
 

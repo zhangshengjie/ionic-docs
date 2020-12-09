@@ -1,8 +1,8 @@
 ---
+title: Native iOS & Android
 
 ---
 
-# Native iOS & Android
 
 Utilizing native functionality in your app may require additional setup, including:
 

@@ -1,11 +1,7 @@
 ---
-previousText: 'Developer Tips'
-previousUrl: '/docs/developing/tips'
-nextText: 'Courses'
-nextUrl: '/docs/developer-resources/courses'
+title: Books
 ---
 
-# Books
 
 ### [Learn Ionic 4 From Scratch](https://leanpub.com/learnionic4fromscratch)
 

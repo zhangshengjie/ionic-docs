@@ -1,11 +1,8 @@
 ---
-previousText: 'Lifecycle'
-previousUrl: '/docs/vue/lifecycle'
-nextText: 'Config'
-nextUrl: '/docs/vue/config'
+title: Vue Navigation
+sidebar_label: Navigation/Routing
 ---
 
-# Vue Navigation
 
 This guide covers how routing works in an app built with Ionic and Vue.
 

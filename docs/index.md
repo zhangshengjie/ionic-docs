@@ -1,36 +1,38 @@
 ---
 title: Ionic Framework
+sidebar_label: Overview
+slug: /
 meta:
-  image: /docs/assets/img/meta/open-graph.png
+  image: /img/meta/open-graph.png
   description: Ionic is the app platform for web developers. Build amazing mobile, web, and desktop apps all with one shared code base and open web standards
-tableOfContents: false
+hide_table_of_contents: true
 demoUrl: https://ionic-docs-demo.herokuapp.com/
 demoSourceUrl: https://github.com/ionic-team/docs-demo
-nextText: 'Environment Setup'
-nextUrl: '/docs/intro/environment'
 ---
+import DocsCard from '@site/src/components/DocsCard';
+import DocsCards from '@site/src/components/DocsCards';
 
 Ionic Framework is an open source UI toolkit for building performant, high-quality mobile and desktop apps using web technologies — HTML, CSS, and JavaScript — with integrations for popular frameworks like <a href="/docs/angular/overview"> Angular</a>, <a href="/react">React</a>, and <a href="/docs/vue/overview">Vue</a>.
 
 Get started building by <a href="/docs/intro/cli">installing Ionic</a> or following our <a href="/docs/intro/next#build-your-first-app">First App Tutorial</a> to learn the main concepts.
 
-<docs-cards>
-  <docs-card header="Installation Guide" href="/docs/intro/cli" icon="/docs/assets/icons/guide-installation-icon.svg" hover-icon="/docs/assets/icons/guide-installation-icon-hover.svg">
+<DocsCards>
+  <DocsCard header="Installation Guide" href="/docs/intro/cli" icon="/icons/guide-installation-icon.svg" hover-icon="/icons/guide-installation-icon-hover.svg">
     <p>Step-by-step guides to setting up your system and installing the framework.</p>
-  </docs-card>
+  </DocsCard>
 
-  <docs-card header="UI Components" href="/docs/components" icon="/docs/assets/icons/guide-components-icon.svg" hover-icon="/docs/assets/icons/guide-components-icon-hover.svg">
+  <DocsCard header="UI Components" href="/docs/components" icon="/icons/guide-components-icon.svg" hover-icon="/icons/guide-components-icon-hover.svg">
     <p>Dive into Ionic Framework's beautifully designed UI component library.</p>
-  </docs-card>
+  </DocsCard>
 
-  <docs-card header="Native Functionality" href="/docs/native" icon="/docs/assets/icons/guide-native-icon.svg" hover-icon="/docs/assets/icons/guide-native-icon-hover.svg">
+  <DocsCard header="Native Functionality" href="/docs/native" icon="/icons/guide-native-icon.svg" hover-icon="/icons/guide-native-icon-hover.svg">
     <p>Integrate native device plugins, like Bluetooth, Maps, HealthKit, and more.</p>
-  </docs-card>
+  </DocsCard>
 
-  <docs-card header="Theming" href="/docs/theming/basics" icon="/docs/assets/icons/guide-theming-icon.svg" hover-icon="/docs/assets/icons/guide-theming-icon-hover.svg">
+  <DocsCard header="Theming" href="/docs/theming/basics" icon="/icons/guide-theming-icon.svg" hover-icon="/icons/guide-theming-icon-hover.svg">
     <p>Learn to easily customize and modify your Ionic app's visual design to fit your brand.</p>
-  </docs-card>
-</docs-cards>
+  </DocsCard>
+</DocsCards>
 
 ## Overview
 

@@ -1,11 +1,7 @@
 ---
-previousText: 'Support Policy'
-previousUrl: '/docs/reference/support'
-nextText: 'Migration'
-nextUrl: '/docs/reference/migration'
+title: Browser Support
 ---
 
-# Browser Support
 
 Ionic's earliest goal was to make it easy to develop mobile apps using web technologies like HTML, CSS, and JavaScript. Because of this foundation in web technologies, Ionic can run anywhere the web runs — iOS, Android, browsers, PWAs, and more.
 

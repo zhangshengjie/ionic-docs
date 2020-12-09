@@ -1,11 +1,8 @@
 ---
-previousText: 'Taking Photos'
-previousUrl: '/docs/angular/your-first-app/2-taking-photos'
-nextText: 'Loading Photos on Filesystem'
-nextUrl: '/docs/angular/your-first-app/4-loading-photos'
+title: Saving Photos to the Filesystem
+sidebar_label: Saving Photos
 ---
 
-# Saving Photos to the Filesystem
 
 We’re now able to take multiple photos and display them in a photo gallery on the second tab of our app. These photos, however, are not currently being stored permanently, so when the app is closed, they will be deleted.
 

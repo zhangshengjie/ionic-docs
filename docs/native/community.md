@@ -1,6 +1,6 @@
 ---
 title: Ionic Native Community
-tableOfContents: false
+hide_table_of_contents: true
 ---
 
 Ionic Native Community is a collection of TypeScript wrappers for open source Cordova and Capacitor plugins that make it easy to add native functionality to any Ionic app.
@@ -114,7 +114,7 @@ export class PhotoService {
 
 React apps must use Capacitor to build native mobile apps. However, Ionic Native (and therefore, Cordova plugins) can still be used.
 
-<command-line>
+```
   <div>// Install Core library (once per project)</div>
   <command-prompt>npm install @ionic-native/core</command-prompt>
   <br />
@@ -126,7 +126,7 @@ React apps must use Capacitor to build native mobile apps. However, Ionic Native
   <br/>
   <div>// Update native platform project(s) to include newly added plugin</div>
   <command-prompt>ionic cap sync</command-prompt>
-</command-line>
+```
 
 Import the plugin object then use its static methods: 
 

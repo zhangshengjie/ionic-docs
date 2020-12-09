@@ -1,13 +1,12 @@
 ---
-previousText: 'Browser Support'
-previousUrl: '/docs/reference/browser-support'
+title: Migration Guide
+sidebar_label: Migration
 contributors:
   - mhartington
   - kensodemann
   - elylucas
 ---
 
-# Migration Guide
 
 
 ## Migrating from Ionic 4.x to Ionic 5.x

@@ -1,11 +1,7 @@
 ---
-previousText: ''
-previousUrl: ''
-nextText: 'Config'
-nextUrl: '/docs/utilities/config'
+title: Animations
 ---
 
-# Animations
 
 ## Overview
 

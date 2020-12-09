@@ -1,9 +1,7 @@
 ---
-previousText: 'Storage'
-previousUrl: '/docs/angular/storage'
+title: Angular Performance
+sidebar_label: Performance
 ---
-
-# Angular Performance
 
 ## From the Ionic Team
 

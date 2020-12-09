@@ -1,11 +1,8 @@
 ---
-previousText: 'Your First App'
-previousUrl: '/docs/react/your-first-app'
-nextText: 'Navigation'
-nextUrl: '/docs/react/navigation'
+title: React Lifecycle
+sidebar_label: Lifecycle
 ---
 
-# React Lifecycle
 
 This guide discusses how to use the Ionic Lifecycle events in an Ionic React application.
 

@@ -1,11 +1,7 @@
 ---
-previousText: 'Your First Ionic App'
-previousUrl: '/docs/developer-resources/guides/first-app-v4/your-first-app'
-nextText: 'Creating a Photo Gallery'
-nextUrl: '/docs/developer-resources/guides/first-app-v4/creating-photo-gallery-device-storage'
+title: Android, iOS, and the Camera - Oh My!
 ---
 
-# Android, iOS, and the Camera - Oh My!
 
 Previously, we got an Ionic app up and running locally in a web browser. Now, let’s get it onto your iOS or Android device, then start building the photo gallery feature.
 

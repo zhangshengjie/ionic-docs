@@ -1,14 +1,11 @@
 ---
-previousText: 'Environment Setup'
-previousUrl: '/docs/intro/environment'
-nextText: 'Packages & CDN'
-nextUrl: '/docs/intro/cdn'
+title: Installing Ionic
+sidebar_label: CLI Installation
 contributors:
   - rtpHarry
   - dwieeb
 ---
 
-# Installing Ionic
 
 Ionic apps are created and developed primarily through the Ionic [command-line](/docs/reference/glossary#cli) utility. The Ionic CLI is the preferred method of installation, as it offers a wide range of dev tools and help options along the way. It is also the main tool through which to run the app and connect it to other services, such as Ionic Appflow.
 
@@ -41,7 +38,7 @@ Create an Ionic app using one of the pre-made app templates, or a blank one to s
 $ ionic start myApp tabs
 ```
 
-![start app thumbnails](/docs/assets/img/installation/start-app-thumbnails.png)
+![start app thumbnails](/img/installation/start-app-thumbnails.png)
 
 
 To learn more about starting Ionic apps, see the [Starting Guide](/docs/developing/starting).

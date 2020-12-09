@@ -1,15 +1,11 @@
 ---
-previousText: 'Release Notes'
-previousUrl: '/docs/reference/release-notes'
-nextText: 'Browser Support'
-nextUrl: '/docs/reference/browser-support'
+title: Support Policy
 contributors:
   - dotNetkow
   - mhartington
   - bryplano
 ---
 
-# Support Policy
 
 ## Community Maintenance
 

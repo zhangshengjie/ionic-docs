@@ -1,13 +1,8 @@
 ---
-previousText: 'Overview'
-previousUrl: '/docs'
-nextText: 'CLI Installation'
-nextUrl: '/docs/intro/cli'
+title: Environment Setup
 contributors:
   - rtpHarry
 ---
-
-# Environment Setup
 
 To get started with Ionic Framework, the only requirement is a [Node & npm](#node-npm) environment.
 

@@ -1,11 +1,8 @@
 ---
-previousText: 'Lifecycle'
-previousUrl: '/docs/react/lifecycle'
-nextText: 'Config'
-nextUrl: '/docs/react/config'
+title: React Navigation
+sidebar_label: Navigation/Routing
 ---
 
-# React Navigation
 
 This guide covers how routing works in an app built with Ionic and React.
 

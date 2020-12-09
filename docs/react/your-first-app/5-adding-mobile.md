@@ -1,11 +1,8 @@
 ---
-previousText: 'Loading Photos on Filesystem'
-previousUrl: '/docs/react/your-first-app/4-loading-photos'
-nextText: 'Deploying Mobile'
-nextUrl: '/docs/react/your-first-app/6-deploying-mobile'
+title: Adding Mobile
+sidebar_label: Adding Mobile
 ---
 
-# Adding Mobile
 
 Our photo gallery app won’t be complete until it runs on iOS, Android, and the web - all using one codebase. All it takes is some small logic changes to support mobile platforms, installing some native tooling, then running the app on a device. Let’s go!
 

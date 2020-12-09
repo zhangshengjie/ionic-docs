@@ -1,14 +1,11 @@
 ---
-previousText: 'Web View'
-previousUrl: '/docs/core-concepts/webview'
-nextText: ''
-nextUrl: ''
+title: Progressive Web Apps
+sidebar_label: What are PWAs?
 contributors:
   - perrygovier
   - mhartington
 ---
 
-# Progressive Web Apps
 
 <!-- TOC goes here -->
 

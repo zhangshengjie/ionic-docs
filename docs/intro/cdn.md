@@ -1,14 +1,10 @@
 ---
-previousText: 'CLI Installation'
-previousUrl: '/docs/intro/cli'
-nextText: 'Next Steps'
-nextUrl: '/docs/intro/next'
+title: Ionic Packages
+sidebar_label: Packages & CDN
 contributors:
   - brandyscarney
   - rtpHarry
 ---
-
-# Ionic Packages
 
 Ionic provides different packages that can be used to quickly get started using Ionic Framework or Ionicons in a test environment, Angular, any other framework, or none at all.
 

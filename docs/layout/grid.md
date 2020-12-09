@@ -1,15 +1,11 @@
 ---
+title: Responsive Grid
 initialTab: 'preview'
 inlineHtmlPreviews: true
-previousText: 'Structure'
-previousUrl: '/docs/layout/structure'
-nextText: 'Global Stylesheets'
-nextUrl: '/docs/layout/global-stylesheets'
 contributors:
   - brandyscarney
 ---
 
-# Responsive Grid
 
 The grid is a powerful mobile-first flexbox system for building custom layouts. It is composed of three units — a [grid](/docs/api/grid), [row(s)](/docs/api/row) and [column(s)](/docs/api/col). Columns will expand to fill their row, and will resize to fit additional columns. It is based on a 12 column layout with different breakpoints based on the screen size. The number of columns can be customized using CSS.
 
@@ -434,9 +430,9 @@ All columns can be vertically aligned inside of a row by adding different classe
     </ion-col>
     <ion-col>
       <div>
-        4 of 4 <br>
-        # <br>
-        # <br>
+        4 of 4 
+        # 
+        # 
         #
       </div>
     </ion-col>
@@ -460,9 +456,9 @@ All columns can be vertically aligned inside of a row by adding different classe
     </ion-col>
     <ion-col>
       <div>
-        4 of 4 <br>
-        # <br>
-        # <br>
+        4 of 4 
+        # 
+        # 
         #
       </div>
     </ion-col>
@@ -486,9 +482,9 @@ All columns can be vertically aligned inside of a row by adding different classe
     </ion-col>
     <ion-col>
       <div>
-        4 of 4 <br>
-        # <br>
-        # <br>
+        4 of 4 
+        # 
+        # 
         #
       </div>
     </ion-col>
@@ -518,9 +514,9 @@ Columns can also align themselves differently than other columns by adding the a
     </ion-col>
     <ion-col>
       <div>
-        4 of 4 <br>
-        # <br>
-        # <br>
+        4 of 4 
+        # 
+        # 
         #
       </div>
     </ion-col>

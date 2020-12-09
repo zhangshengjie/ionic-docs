@@ -1,13 +1,10 @@
 ---
-previousText: ''
-previousUrl: ''
-nextText: 'Android Play Store'
-nextUrl: '/docs/deployment/play-store'
+title: iOS App Store Deployment
+sidebar_label: iOS App Store
 contributors:
   - zaarheed
 ---
 
-# iOS App Store Deployment
 
 ## Requirements
 

@@ -1,13 +1,9 @@
 ---
-previousText: 'Build Errors'
-previousUrl: '/docs/troubleshooting/build'
-nextText: 'Native Errors'
-nextUrl: '/docs/troubleshooting/native'
+title: Runtime Issues
 contributors:
   - brandyscarney
 ---
 
-# Runtime Issues
 
 ## Blank App
 

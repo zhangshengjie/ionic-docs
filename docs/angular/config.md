@@ -1,14 +1,9 @@
 ---
-previousText: 'Navigation/Routing'
-previousUrl: '/docs/angular/navigation'
-nextText: 'Platform'
-nextUrl: '/docs/angular/platform'
+title: Config
 contributors:
   - liamdebeasi
   - mhartington
 ---
-
-# Config
 
 Ionic Config provides a way to change the properties of components globally across an app. It can set the app mode, tab button layout, animations, and more.
 

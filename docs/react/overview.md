@@ -1,9 +1,7 @@
 ---
-nextText: 'Quickstart'
-nextUrl: '/docs/react/quickstart'
+title: Ionic React Overview
 ---
 
-# Ionic React Overview
 
 `@ionic/react` combines the core Ionic experience with the tooling and APIs that are tailored to React Developers. 
 

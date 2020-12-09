@@ -1,11 +1,8 @@
 ---
-previousText: 'Your First App'
-previousUrl: '/docs/vue/your-first-app'
-nextText: 'Navigation'
-nextUrl: '/docs/vue/navigation'
+title: Vue Lifecycle
+sidebar_label: Lifecycle
 ---
 
-# Vue Lifecycle
 
 This guide discusses how to use the Ionic Framework Lifecycle events in an Ionic Vue application.
 

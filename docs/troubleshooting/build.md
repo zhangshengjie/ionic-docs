@@ -1,14 +1,10 @@
 ---
-previousText: 'Remote Debugging'
-previousUrl: '/docs/troubleshooting/debugging'
-nextText: 'Runtime Errors'
-nextUrl: '/docs/troubleshooting/runtime'
+title: Build Errors
 disableHtmlPreviews: true
 contributors:
   - brandyscarney
 ---
 
-# Build Errors
 
 
 ## Common mistakes

@@ -1,10 +1,6 @@
 ---
-previousText: 'CSS Utilities'
-previousUrl: '/docs/layout/css-utilities'
-nextText: 'Theming'
-nextUrl: '/docs/theming/basics'
+title: RTL Support
 ---
 
-# RTL Support
 
 TODO: add stuff here

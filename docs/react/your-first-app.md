@@ -1,11 +1,8 @@
 ---
-previousText: 'Quickstart'
-previousUrl: '/docs/react/quickstart'
-nextText: 'Taking Photos'
-nextUrl: '/docs/react/your-first-app/2-taking-photos'
+title: 'Your First Ionic App: React'
+sidebar_label: Build Your First App
 ---
 
-# Your First Ionic App: React
 
 The great thing about Ionic is that with one codebase, you can build for any platform using just HTML, CSS, and JavaScript. Follow along as we learn the fundamentals of Ionic app development by creating a realistic app step by step.
 
@@ -103,7 +100,7 @@ And voilà! Your Ionic app is now running in a web browser. Most of your app can
 
 There are three tabs. Click on the Tab2 tab. It’s a blank canvas, aka the perfect spot to transform into a Photo Gallery. The Ionic CLI features Live Reload, so when you make changes and save them, the app is updated immediately!
 
-![Before and after going through this tutorial](/docs/assets/img/guides/react/first-app/live-reload.gif)
+![Before and after going through this tutorial](/img/guides/react/first-app/live-reload.gif)
 
 Open `/src/pages/Tab2.tsx`. We see:
 

@@ -1,13 +1,9 @@
 ---
-previousText: 'Lifecycle'
-previousUrl: '/docs/angular/lifecycle'
-nextText: 'Config'
-nextUrl: '/docs/angular/config'
+title: Angular Navigation
+sidebar_label: Navigation/Routing
 contributors:
   - mhartington
 ---
-
-# Angular Navigation
 
 This guide covers how routing works in an app built with Ionic and Angular.
 

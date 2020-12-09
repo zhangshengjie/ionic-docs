@@ -1,11 +1,8 @@
 ---
-previousText: 'Guides'
-previousUrl: '/docs/developer-resources/guides'
-nextText: 'Tools'
-nextUrl: '/docs/developer-resources/tools'
+title: Community Posts
+sidebar_label: Posts
 ---
 
-# Community Posts
 
 ### [What's new in Ionic 5 - Migration and Free Starter](https://ionicthemes.com/tutorials/about/ionic5-tutorial-migration-and-starter)
 

@@ -1,11 +1,8 @@
 ---
-previousText: 'Saving Photos on Filesystem'
-previousUrl: '/docs/vue/your-first-app/3-saving-photos'
-nextText: 'Adding Mobile'
-nextUrl: '/docs/vue/your-first-app/5-adding-mobile'
+title: Loading Photos from the Filesystem
+sidebar_label: Loading Photos
 ---
 
-# Loading Photos from the Filesystem
 
 We’ve implemented photo taking and saving to the filesystem. There’s one last piece of functionality missing: the photos are stored in the filesystem, but we need a way to save pointers to each file so that they can be displayed again in the photo gallery.
 

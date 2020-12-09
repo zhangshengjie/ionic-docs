@@ -1,9 +1,7 @@
 ---
-previousText: 'Hardware Back Button'
-previousUrl: '/docs/developing/hardware-back-button'
+title: Keyboard
 ---
 
-# Keyboard
 
 Customizing and accounting for the presence of an on-screen keyboard are two common roadblocks developers face when building mobile apps and PWAs. This guide will provide an introduction to the various tools available for managing the on-screen keyboard in your application.
 

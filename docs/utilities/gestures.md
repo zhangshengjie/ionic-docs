@@ -1,11 +1,7 @@
 ---
-previousText: ''
-previousUrl: ''
-nextText: 'Platform'
-nextUrl: '/docs/utilities/platform'
+title: Gestures
 ---
 
-# Gestures
 
 ## Overview
 

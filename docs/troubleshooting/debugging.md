@@ -1,11 +1,7 @@
 ---
-previousText: ''
-previousUrl: ''
-nextText: 'Build Errors'
-nextUrl: '/docs/troubleshooting/build'
+title: Debugging
 ---
 
-# Debugging
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/akh6V6Yw1lw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

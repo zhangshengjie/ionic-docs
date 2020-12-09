@@ -1,8 +1,8 @@
 ---
+title: Live Reload
 
 ---
 
-# Live Reload
 
 One option that can boost productivity when building Ionic apps is **Live Reload** (or **live-reload**). When active, Live Reload will reload the browser or [Web View](/docs/core-concepts/webview) when changes in the app are detected. This is particularly useful for developing using hardware devices.
 

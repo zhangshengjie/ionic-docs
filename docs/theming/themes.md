@@ -1,13 +1,9 @@
 ---
+title: Themes
 initialTab: 'preview'
 inlineHtmlPreviews: true
-previousText: 'Colors'
-previousUrl: '/docs/theming/colors'
-nextText: 'Dark Mode'
-nextUrl: '/docs/theming/dark-mode'
 ---
 
-# Themes
 
 Ionic provides several global variables that are used throughout components to change the default theme of an entire application. [Application Colors](#application-colors) are useful to change the look of most of the Ionic components, and [Stepped Colors](#stepped-colors) are used as variations in some of the Ionic components.
 

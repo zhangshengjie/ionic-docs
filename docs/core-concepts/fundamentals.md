@@ -1,11 +1,8 @@
 ---
-previousText: ''
-previousUrl: ''
-nextText: 'Cross Platform'
-nextUrl: '/docs/core-concepts/cross-platform'
+title: Core Concepts
+sidebar_label: Fundamentals
 ---
 
-# Core Concepts
 
 For those completely new to Ionic app development, it can be helpful to get a high-level understanding of the core philosophy, concepts, and tools behind the project. Before diving into complex topics, we'll cover the basics of what Ionic Framework is, and how it works.
 

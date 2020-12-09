@@ -1,13 +1,9 @@
 ---
+title: Dark Mode
 initialTab: 'preview'
 inlineHtmlPreviews: true
-previousText: 'Themes'
-previousUrl: '/docs/theming/themes'
-nextText: 'Advanced Theming'
-nextUrl: '/docs/theming/advanced'
 ---
 
-# Dark Mode
 
 Ionic makes it easy to change the themes of your app, including supporting dark color schemes. With growing support for dark mode in native apps, developers are now looking to add it to their apps to support user preferences.
 
@@ -134,7 +130,7 @@ color-scheme: light dark;
 
 | Default scrollbar | Scrollbar with `color-scheme` |
 | ----------------- | ----------------------------- |
-| <figure><img alt="Application without color-scheme" src="/docs/assets/img/theming/color-scheme-light.png" /></figure> | <figure><img alt="Application with color-scheme" src="/docs/assets/img/theming/color-scheme-dark.png" /></figure> |
+| <figure><img alt="Application without color-scheme" src="/img/theming/color-scheme-light.png" /></figure> | <figure><img alt="Application with color-scheme" src="/img/theming/color-scheme-dark.png" /></figure> |
 
 For more information regarding `color-scheme` please see https://web.dev/color-scheme/.
 

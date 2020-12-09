@@ -1,11 +1,7 @@
 ---
-previousText: 'Testing'
-previousUrl: '/docs/angular/testing'
-nextText: 'Performance'
-nextUrl: '/docs/angular/performance'
+title: Data Storage
+sidebar_label: Storage
 ---
-
-# Data Storage
 
 There are variety of options available for storing data within an Ionic app.
 
@@ -129,7 +125,7 @@ options to pass to LocalForage.
 Possible driver options are: ['sqlite', 'indexeddb', 'websql', 'localstorage'] and the
 default is that exact ordering.
 
-<br><br>
+
 
 
 
@@ -141,7 +137,7 @@ default is that exact ordering.
 Get the name of the driver being used.
 
 
-<br><br>
+
 
 
 
@@ -153,7 +149,7 @@ __Returns:__ Returns a promise that resolves when the store is cleared
 
 
 
-<br><br>
+
 
 
 
@@ -166,7 +162,7 @@ __Returns:__ Returns a promise that resolves when the iteration has finished.
 
 
 <h4>Parameters</h4>
-<dl><dt><h5>iteratorCallback</h5></dt><dd>a callback of the form (value, key, iterationNumber)</dd></dl><br><br>
+<dl><dt><h5>iteratorCallback</h5></dt><dd>a callback of the form (value, key, iterationNumber)</dd></dl>
 
 
 
@@ -179,7 +175,7 @@ __Returns:__ Returns a promise with the value of the given key
 
 
 <h4>Parameters</h4>
-<dl><dt><h5>key</h5><strong>Type:</strong> <code>string</code></dt><dd>the key to identify this value</dd></dl><br><br>
+<dl><dt><h5>key</h5><strong>Type:</strong> <code>string</code></dt><dd>the key to identify this value</dd></dl>
 
 
 
@@ -191,7 +187,7 @@ __Returns:__ Returns a promise that resolves with the keys in the store.
 
 
 
-<br><br>
+
 
 
 
@@ -203,7 +199,7 @@ __Returns:__ Returns a promise that resolves with the number of keys stored.
 
 
 
-<br><br>
+
 
 
 
@@ -215,7 +211,7 @@ __Returns:__ Returns a promise that resolves when the store is ready
 
 
 
-<br><br>
+
 
 
 
@@ -228,7 +224,7 @@ __Returns:__ Returns a promise that resolves when the value is removed
 
 
 <h4>Parameters</h4>
-<dl><dt><h5>key</h5><strong>Type:</strong> <code>string</code></dt><dd>the key to identify this value</dd></dl><br><br>
+<dl><dt><h5>key</h5><strong>Type:</strong> <code>string</code></dt><dd>the key to identify this value</dd></dl>
 
 
 
@@ -241,4 +237,4 @@ __Returns:__ Returns a promise that resolves when the key and value are set
 
 
 <h4>Parameters</h4>
-<dl><dt><h5>key</h5><strong>Type:</strong> <code>string</code></dt><dd>the key to identify this value</dd><dt><h5>value</h5><strong>Type:</strong> <code>any</code></dt><dd>the value for this key</dd></dl><br><br>
+<dl><dt><h5>key</h5><strong>Type:</strong> <code>string</code></dt><dd>the key to identify this value</dd><dt><h5>value</h5><strong>Type:</strong> <code>any</code></dt><dd>the value for this key</dd></dl>

@@ -1,8 +1,6 @@
 ---
-
+title: Ionic CLI
 ---
-
-# Ionic CLI
 
 The Ionic command-line interface ([CLI](/docs/reference/glossary#cli)) is the go-to tool for developing Ionic apps.
 

@@ -1,14 +1,9 @@
 ---
-previousText: ''
-previousUrl: ''
-nextText: ''
-nextUrl: ''
+title: Security
 disableHtmlPreviews: true
 contributors:
   - liamdebeasi
 ---
-
-# Security
 
 ## Sanitizing User Input
 

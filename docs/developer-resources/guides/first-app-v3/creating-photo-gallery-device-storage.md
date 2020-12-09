@@ -1,11 +1,7 @@
 ---
-previousText: 'Android, iOS, and the Camera - Oh My!'
-previousUrl: '/docs/developer-resources/guides/first-app-v3/ios-android-camera'
-nextText: 'Theming'
-nextUrl: '/docs/developer-resources/guides/first-app-v3/theming'
+title: Creating a Photo Gallery with Device Storage
 ---
 
-# Creating a Photo Gallery with Device Storage
 
 Last time, we successfully added the Camera plugin to the About page of our Tabs app. Currently, the photo is replaced each time a new one is taken. What if we wanted to display multiple photos together? Let’s create a photo gallery. You can follow along with the complete code for this in [the part 2 folder](https://github.com/ionic-team/photo-gallery-tutorial-ionic3/tree/master/part2) on GitHub.
 
