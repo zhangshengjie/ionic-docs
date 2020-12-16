@@ -1,11 +1,9 @@
-import { Component, h } from '@stencil/core';
+import React from 'react';
 
-@Component({
-  tag: 'docs-cards',
-  styleUrl: 'cards.css'
-})
-export class DocsCards {
-  render() {
-    return <slot/>;
-  }
+import './cards.css';
+
+function DocsCards(props): JSX.Element {
+  return <docs-cards class={props.className}>{props.children}</docs-cards>;
 }
+
+export default DocsCards;
