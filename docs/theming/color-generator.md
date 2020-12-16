@@ -1,7 +1,7 @@
 ---
 title: Color Generator
 hideTOC: true
-demoUrl: '/docs/pages/theming/color-generator/index.html'
+demoUrl: /docs/demos/color-generator/index.html
 contributors:
   - brandyscarney
   - kevinports
