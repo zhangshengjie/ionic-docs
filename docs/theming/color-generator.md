@@ -1,6 +1,6 @@
 ---
 title: Color Generator
-hideTOC: true
+hide_table_of_contents: true
 demoUrl: /docs/demos/color-generator/index.html
 contributors:
   - brandyscarney
