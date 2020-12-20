@@ -10,7 +10,7 @@ tableOfContents: false
     <p>コミュニティによって構築され、維持されている無償のCordovaプラグインとCapacitorプラグインのコレクションで、 TypeScriptラッパーと、開発を容易にするための一貫したAPIと命名規則を備えています。</p>
   </docs-card>
 
-  <docs-card header="Ionic Native Enterprise Edition" href="/docs/enterprise/community-vs-enterprise" img="/docs/assets/img/native/enterprise-edition.png">
+  <docs-card header="Ionic Native Enterprise Edition" href="https://ionic.io/docs" img="/docs/assets/img/native/enterprise-edition.png">
     <p>CapacitorとCordovaプラグイン、サードパーティプラグインを利用するチームのための事前構築ソリューションを提供するサブスクリプションサービスです。</p>
   </docs-card>
 </docs-cards>

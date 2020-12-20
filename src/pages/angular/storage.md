@@ -11,7 +11,9 @@ Ionicアプリ内にデータを保存するためのさまざまなオプショ
 
 ## Ionicオフラインストレージ
 
-[Ionic Offline Storage](/docs/enterprise/offline-storage) は、iOSとAndroidで動作するクロスプラットフォームデータストレージシステムです。安全(デバイス上で暗号化)で高パフォーマンスなIonicアプリにオフラインストレージを簡単に追加でき、高度なNoSQLデータクエリを提供することができます。
+[Ionic Offline Storage](https://ionic.io/docs/offline-storage) は、iOSとAndroidで利用できるクロスプラットフォームなデータストレージシステムです。
+安全な（デバイスで暗号化された）Ionicアプリにオフラインストレージを簡単に追加できます。
+パフォーマンスが高く、高度なNoSQLデータクエリを提供します。
 
 複雑でデータ駆動型のアプリ、機密データを管理するアプリ、信頼性の低いセルサービス/インターネット接続のエリアで使用するアプリを開発するチームのために作られました。興味あるなら、[こちらからはじめてください。](https://ionicframework.com/offline-storage#get-started)
 
