@@ -384,7 +384,7 @@
       "mutable": false,
       "attr": "debounce",
       "reflectToAttr": false,
-      "docs": "Set the amount of time, in milliseconds, to wait to trigger the `ionChange` event after each keystroke.",
+      "docs": "Set the amount of time, in milliseconds, to wait to trigger the `ionChange` event after each keystroke. This also impacts form bindings such as `ngModel` or `v-model`.",
       "docsTags": [],
       "default": "0",
       "values": [
