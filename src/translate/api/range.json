@@ -75,7 +75,7 @@
       "mutable": false,
       "attr": "debounce",
       "reflectToAttr": false,
-      "docs": "How long, in milliseconds, to wait to trigger the\n`ionChange` event after each change in the range value.",
+      "docs": "How long, in milliseconds, to wait to trigger the\n`ionChange` event after each change in the range value.\nThis also impacts form bindings such as `ngModel` or `v-model`.",
       "docsTags": [],
       "default": "0",
       "values": [

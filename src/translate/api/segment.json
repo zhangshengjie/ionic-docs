@@ -93,6 +93,23 @@
       "required": false
     },
     {
+      "name": "swipeGesture",
+      "type": "boolean",
+      "mutable": false,
+      "attr": "swipe-gesture",
+      "reflectToAttr": false,
+      "docs": "If `true`, users will be able to swipe between segment buttons to activate them.",
+      "docsTags": [],
+      "default": "true",
+      "values": [
+        {
+          "type": "boolean"
+        }
+      ],
+      "optional": false,
+      "required": false
+    },
+    {
       "name": "value",
       "type": "null | string | undefined",
       "mutable": true,

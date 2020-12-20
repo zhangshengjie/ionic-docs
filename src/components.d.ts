@@ -112,8 +112,6 @@ export namespace Components {
     interface DocsMenuCollapsible {
         "heading": string;
     }
-    interface DocsMenuEnterprise {
-    }
     interface DocsMenuNative {
     }
     interface DocsMenuToggle {
@@ -170,25 +168,14 @@ export namespace Components {
     interface HeaderMobileCollapse {
         "darkMode": boolean;
     }
-    interface HubspotForm {
-        "formId": string;
-    }
     interface IonicSearch {
         "mobile"?: boolean;
     }
     interface LayeredColorsSelect {
     }
-    interface NativeEntInstall {
-        "capacitorSlug"?: string | null;
-        "pluginId"?: string;
-        "variables"?: string;
-    }
     interface NewColorGenerator {
     }
     interface SteppedColorGenerator {
-    }
-    interface WistiaVideo {
-        "videoId": string;
     }
 }
 declare global {
@@ -342,12 +329,6 @@ declare global {
         prototype: HTMLDocsMenuCollapsibleElement;
         new (): HTMLDocsMenuCollapsibleElement;
     };
-    interface HTMLDocsMenuEnterpriseElement extends Components.DocsMenuEnterprise, HTMLStencilElement {
-    }
-    var HTMLDocsMenuEnterpriseElement: {
-        prototype: HTMLDocsMenuEnterpriseElement;
-        new (): HTMLDocsMenuEnterpriseElement;
-    };
     interface HTMLDocsMenuNativeElement extends Components.DocsMenuNative, HTMLStencilElement {
     }
     var HTMLDocsMenuNativeElement: {
@@ -450,12 +431,6 @@ declare global {
         prototype: HTMLHeaderMobileCollapseElement;
         new (): HTMLHeaderMobileCollapseElement;
     };
-    interface HTMLHubspotFormElement extends Components.HubspotForm, HTMLStencilElement {
-    }
-    var HTMLHubspotFormElement: {
-        prototype: HTMLHubspotFormElement;
-        new (): HTMLHubspotFormElement;
-    };
     interface HTMLIonicSearchElement extends Components.IonicSearch, HTMLStencilElement {
     }
     var HTMLIonicSearchElement: {
@@ -468,12 +443,6 @@ declare global {
         prototype: HTMLLayeredColorsSelectElement;
         new (): HTMLLayeredColorsSelectElement;
     };
-    interface HTMLNativeEntInstallElement extends Components.NativeEntInstall, HTMLStencilElement {
-    }
-    var HTMLNativeEntInstallElement: {
-        prototype: HTMLNativeEntInstallElement;
-        new (): HTMLNativeEntInstallElement;
-    };
     interface HTMLNewColorGeneratorElement extends Components.NewColorGenerator, HTMLStencilElement {
     }
     var HTMLNewColorGeneratorElement: {
@@ -485,12 +454,6 @@ declare global {
     var HTMLSteppedColorGeneratorElement: {
         prototype: HTMLSteppedColorGeneratorElement;
         new (): HTMLSteppedColorGeneratorElement;
-    };
-    interface HTMLWistiaVideoElement extends Components.WistiaVideo, HTMLStencilElement {
-    }
-    var HTMLWistiaVideoElement: {
-        prototype: HTMLWistiaVideoElement;
-        new (): HTMLWistiaVideoElement;
     };
     interface HTMLElementTagNameMap {
         "code-color": HTMLCodeColorElement;
@@ -518,7 +481,6 @@ declare global {
         "docs-item-list": HTMLDocsItemListElement;
         "docs-menu": HTMLDocsMenuElement;
         "docs-menu-collapsible": HTMLDocsMenuCollapsibleElement;
-        "docs-menu-enterprise": HTMLDocsMenuEnterpriseElement;
         "docs-menu-native": HTMLDocsMenuNativeElement;
         "docs-menu-toggle": HTMLDocsMenuToggleElement;
         "docs-nav": HTMLDocsNavElement;
@@ -536,13 +498,10 @@ declare global {
         "file-tree-file": HTMLFileTreeFileElement;
         "framework-select": HTMLFrameworkSelectElement;
         "header-mobile-collapse": HTMLHeaderMobileCollapseElement;
-        "hubspot-form": HTMLHubspotFormElement;
         "ionic-search": HTMLIonicSearchElement;
         "layered-colors-select": HTMLLayeredColorsSelectElement;
-        "native-ent-install": HTMLNativeEntInstallElement;
         "new-color-generator": HTMLNewColorGeneratorElement;
         "stepped-color-generator": HTMLSteppedColorGeneratorElement;
-        "wistia-video": HTMLWistiaVideoElement;
     }
 }
 declare namespace LocalJSX {
@@ -650,8 +609,6 @@ declare namespace LocalJSX {
     interface DocsMenuCollapsible {
         "heading": string;
     }
-    interface DocsMenuEnterprise {
-    }
     interface DocsMenuNative {
     }
     interface DocsMenuToggle {
@@ -710,25 +667,14 @@ declare namespace LocalJSX {
     interface HeaderMobileCollapse {
         "darkMode"?: boolean;
     }
-    interface HubspotForm {
-        "formId": string;
-    }
     interface IonicSearch {
         "mobile"?: boolean;
     }
     interface LayeredColorsSelect {
     }
-    interface NativeEntInstall {
-        "capacitorSlug"?: string | null;
-        "pluginId"?: string;
-        "variables"?: string;
-    }
     interface NewColorGenerator {
     }
     interface SteppedColorGenerator {
-    }
-    interface WistiaVideo {
-        "videoId": string;
     }
     interface IntrinsicElements {
         "code-color": CodeColor;
@@ -756,7 +702,6 @@ declare namespace LocalJSX {
         "docs-item-list": DocsItemList;
         "docs-menu": DocsMenu;
         "docs-menu-collapsible": DocsMenuCollapsible;
-        "docs-menu-enterprise": DocsMenuEnterprise;
         "docs-menu-native": DocsMenuNative;
         "docs-menu-toggle": DocsMenuToggle;
         "docs-nav": DocsNav;
@@ -774,13 +719,10 @@ declare namespace LocalJSX {
         "file-tree-file": FileTreeFile;
         "framework-select": FrameworkSelect;
         "header-mobile-collapse": HeaderMobileCollapse;
-        "hubspot-form": HubspotForm;
         "ionic-search": IonicSearch;
         "layered-colors-select": LayeredColorsSelect;
-        "native-ent-install": NativeEntInstall;
         "new-color-generator": NewColorGenerator;
         "stepped-color-generator": SteppedColorGenerator;
-        "wistia-video": WistiaVideo;
     }
 }
 export { LocalJSX as JSX };
@@ -812,7 +754,6 @@ declare module "@stencil/core" {
             "docs-item-list": LocalJSX.DocsItemList & JSXBase.HTMLAttributes<HTMLDocsItemListElement>;
             "docs-menu": LocalJSX.DocsMenu & JSXBase.HTMLAttributes<HTMLDocsMenuElement>;
             "docs-menu-collapsible": LocalJSX.DocsMenuCollapsible & JSXBase.HTMLAttributes<HTMLDocsMenuCollapsibleElement>;
-            "docs-menu-enterprise": LocalJSX.DocsMenuEnterprise & JSXBase.HTMLAttributes<HTMLDocsMenuEnterpriseElement>;
             "docs-menu-native": LocalJSX.DocsMenuNative & JSXBase.HTMLAttributes<HTMLDocsMenuNativeElement>;
             "docs-menu-toggle": LocalJSX.DocsMenuToggle & JSXBase.HTMLAttributes<HTMLDocsMenuToggleElement>;
             "docs-nav": LocalJSX.DocsNav & JSXBase.HTMLAttributes<HTMLDocsNavElement>;
@@ -830,13 +771,10 @@ declare module "@stencil/core" {
             "file-tree-file": LocalJSX.FileTreeFile & JSXBase.HTMLAttributes<HTMLFileTreeFileElement>;
             "framework-select": LocalJSX.FrameworkSelect & JSXBase.HTMLAttributes<HTMLFrameworkSelectElement>;
             "header-mobile-collapse": LocalJSX.HeaderMobileCollapse & JSXBase.HTMLAttributes<HTMLHeaderMobileCollapseElement>;
-            "hubspot-form": LocalJSX.HubspotForm & JSXBase.HTMLAttributes<HTMLHubspotFormElement>;
             "ionic-search": LocalJSX.IonicSearch & JSXBase.HTMLAttributes<HTMLIonicSearchElement>;
             "layered-colors-select": LocalJSX.LayeredColorsSelect & JSXBase.HTMLAttributes<HTMLLayeredColorsSelectElement>;
-            "native-ent-install": LocalJSX.NativeEntInstall & JSXBase.HTMLAttributes<HTMLNativeEntInstallElement>;
             "new-color-generator": LocalJSX.NewColorGenerator & JSXBase.HTMLAttributes<HTMLNewColorGeneratorElement>;
             "stepped-color-generator": LocalJSX.SteppedColorGenerator & JSXBase.HTMLAttributes<HTMLSteppedColorGeneratorElement>;
-            "wistia-video": LocalJSX.WistiaVideo & JSXBase.HTMLAttributes<HTMLWistiaVideoElement>;
         }
     }
 }

@@ -327,12 +327,12 @@
   "events": [],
   "listeners": [
     {
-      "event": "ionStyle",
+      "event": "ionColor",
       "capture": false,
       "passive": false
     },
     {
-      "event": "click",
+      "event": "ionStyle",
       "capture": false,
       "passive": false
     }

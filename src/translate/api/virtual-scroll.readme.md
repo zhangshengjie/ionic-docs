@@ -97,3 +97,11 @@ IonicはDOM全体を分解して再構築します。
 これらの関数はデータセット内のすべてのレコードに対して呼び出されるため、
 パフォーマンスコストが高いことを確認してください。
 
+## React
+
+The Virtual Scroll component is not supported in React.
+
+## Vue
+
+`ion-virtual-scroll` is not supported in Vue. We plan on integrating with existing community-driven solutions for virtual scroll in the near future. Follow our [GitHub issue thread](https://github.com/ionic-team/ionic-framework/issues/17887) for the latest updates.
+
